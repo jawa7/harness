@@ -54,11 +54,36 @@ produces the spec only — building it is a separate, later effort.
 - [Context-length policy](issues/03-context-length-policy.md) — recommend 32K target (Qwen2.5-Coder's native trained max; mlx-lm has no YaRN, so higher isn't real). `qwen_agent.py` currently has **no context-window config at all** — it lives invisibly in the external LM Studio server, which is documented to silently fall back to as little as 2,048 tokens for MLX models it can't read metadata for. Confirmed via real `usage.prompt_tokens` across 126 runs: repo-context transcripts hit 5-11K tokens by turn 16 and are still climbing. Cites Liu et al. 2023 (Lost in the Middle), NVIDIA RULER, Qwen2.5-Coder Technical Report. See [findings](research/03-context-length-policy.md).
 - **New bug surfaced during 03's research, not previously known**: the `loc-25-3b-20260813T140000Z` run (3B model) shows all 24/24 samples `crashed: "HTTPError: HTTP Error 400: Bad Request"` with `turns: 0` — the very first API call failed, before the model ever got to respond. `summarize.py`'s `classify_failure` has no category for "crashed before any turn" and silently buckets it as `prose-only` (its fallback when `tool_calls` is empty), so the comparison report shows "0% pass, all prose-only" instead of surfacing an outright request failure. This is a harness/tooling bug (miscategorization), not a model-behavior bug — added to the separate outside-map bugfix task alongside the fake-prose-edit and identical-retry-loop bugs (see Notes).
 
+- [Unstuck-behavior decision](issues/04-unstuck-behavior-decision.md) — adopt
+  all four candidates, each re-scoped against the real `qwen_agent.py` code:
+  (1) widen the already-existing-but-unwired `normalize_content_tool_calls()`
+  into an Albatross-style prose/code-fence detector and wire it into
+  `run_once` (currently only wired into chat mode); (2) give `run_command`
+  the same hard-stop `write_file`'s `stuck_repeating` already has, instead of
+  only a soft advisory the model can ignore; (3) one unified
+  harness-maintained plan/tried-state (an `update_plan`-style tool), serving
+  both self-decomposition and "what's been tried" memory as the same
+  mechanism — not RAG, not a second model; (4) a pluggable, on-demand
+  second-opinion model (local gemma e2b/e4b, reusing the `gemma_review.py`
+  precedent of a second model at the same LM Studio endpoint; and cloud
+  gpt-oss-20b via OpenRouter's free tier) invoked only when 1-3 don't resolve
+  a stuck state — scoped as an escalation for novel/context-specific
+  dead-ends a fixed rule can't describe, not a first responder. Self-authored
+  ephemeral sub-harness gets its own line but resolves to "no new capability
+  needed" — `run_command`+`write_file` already permit scratch scripts within
+  the existing whitelist; only a system-prompt nudge + pre-`finish` cleanup
+  convention is missing. See [full answer](issues/04-unstuck-behavior-decision.md#answer).
+
 ## Not yet specified
 
-- Exact implementation architecture for whichever unstuck-mechanism(s)
-  [[04-unstuck-behavior-decision]] selects — deferred to a follow-on "build"
+- Exact implementation architecture for the four mechanisms
+  [[04-unstuck-behavior-decision]] selected — deferred to a follow-on "build"
   effort once this map's spec is locked.
+- OpenRouter/gpt-oss-20b backend: whether automated eval runs are ever
+  allowed to hit it unattended (free-tier rate-limit risk to an eval batch)
+  or it stays opt-in/manual-only — flagged in 04's answer, not yet decided;
+  pin down in [[06-assemble-design-spec]] or defer explicitly to the build
+  effort.
 - Final priority/sequencing of which improvements ship first — resolved in
   [[06-assemble-design-spec]] once 03–05 are answered.
 
