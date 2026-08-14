@@ -3,7 +3,7 @@
   "fix-off-by-one-bug": {"kind": "isolated", "verify": "{python} -m pytest -q"},
   "add-cli-flag": {"kind": "isolated", "verify": "{python} -m pytest -q"},
   "refactor-for-testability": {"kind": "isolated", "verify": "{python} {suite_root}/checks/verify_refactor.py"},
-  "write-tests-for-untested-module": {"kind": "isolated", "verify": "{python} -m pytest -q --cov=pricing --cov-fail-under=100"},
+  "write-tests-for-untested-module": {"kind": "isolated", "verify": "{python} {suite_root}/checks/verify_meaningful_tests.py"},
   "follow-existing-pattern": {"kind": "repo-context", "verify": "{python} {suite_root}/checks/verify_archive_task.py"},
   "fix-bug-with-context": {"kind": "repo-context", "verify": "{python} -m pytest -q"},
   "extend-without-breaking-invariant": {"kind": "repo-context", "verify": "{python} -m pytest -q"}

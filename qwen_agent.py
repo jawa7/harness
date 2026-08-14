@@ -533,10 +533,40 @@ def _unescape_if_flattened(content: str) -> str:
     return content
 
 
+def _looks_like_test_file(rel_path: str) -> bool:
+    posix_path = Path(rel_path).as_posix()
+    name = Path(posix_path).name
+    return name.startswith("test_") or name.endswith("_test.py") or "tests" in Path(posix_path).parts[:-1]
+
+
+def _count_assertions(content: str) -> int:
+    """Rough proxy for 'this file makes real checks' -- counts assert statements and
+    pytest.raises/unittest assert* calls. ponytail: regex over the source text, not an
+    AST walk -- can be fooled by assert inside a string/comment, but cheaply catches the
+    actual attack demonstrated against this harness: a test that calls the code under
+    test in a try/except with no assertion, satisfying a coverage gate while checking
+    nothing. Upgrade to ast-based counting if that proves not to be enough."""
+    return len(re.findall(r"\bassert\b|\bpytest\.raises\b|\bself\.assert\w+\(", content))
+
+
 def tool_write_file(workdir: Path, args: dict) -> dict:
     path = resolve_safe_path(workdir, args["path"])
     path.parent.mkdir(parents=True, exist_ok=True)
     content = _unescape_if_flattened(args["content"])
+    if _looks_like_test_file(args["path"]) and path.is_file():
+        old_assertions = _count_assertions(path.read_text(encoding="utf-8", errors="replace"))
+        new_assertions = _count_assertions(content)
+        if new_assertions < old_assertions:
+            return {
+                "status": "error",
+                "message": (
+                    f"refusing to write '{args['path']}': it currently has {old_assertions} "
+                    f"assertion(s) (assert/pytest.raises), your replacement has only "
+                    f"{new_assertions}. Tests are the source of truth for verification -- you "
+                    "cannot weaken them to make your own code pass. Non-assertion edits (e.g. "
+                    "removing an xfail marker) are fine as long as the assertion count doesn't drop."
+                ),
+            }
     path.write_text(content, encoding="utf-8")
     result = {"status": "ok", "path": str(path.relative_to(workdir.resolve())), "bytes_written": len(content)}
     if content != args["content"]:

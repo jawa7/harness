@@ -3,6 +3,7 @@
 import importlib.util
 import json
 import os
+import subprocess
 import tempfile
 from pathlib import Path
 
@@ -188,6 +189,60 @@ def test_python_coder_eval():
         case = summarizer.read_case_artifact(runs_dir, "model", "crash-before-turns", "isolated")
         assert case["failure_categories"]["tool-error"] == 1, case["failure_categories"]
         assert case["failure_categories"]["prose-only"] == 0, case["failure_categories"]
+
+    # verify_meaningful_tests.py (write-tests-for-untested-module's checker): coverage
+    # alone doesn't prove a test asserts anything -- a test that calls the code under
+    # test without a real assertion satisfies --cov-fail-under=100 while checking
+    # nothing (demonstrated for real against this exact fixture, see qwen_agent history).
+    # Confirm the checker rejects that and still accepts an honestly-written suite.
+    checker = Path(__file__).parent / "evals" / "python-coder" / "checks" / "verify_meaningful_tests.py"
+    # pytest-cov only lives in the dedicated eval venv, not necessarily whatever
+    # interpreter is running this demo script itself -- use the venv directly so this
+    # check exercises the real subprocess+coverage path regardless of caller.
+    venv_python = Path(__file__).parent / ".venv-python-coder" / "bin" / "python"
+    if not venv_python.is_file():
+        print("skipping verify_meaningful_tests.py check: .venv-python-coder not set up")
+    else:
+        fixture_pricing = (
+            Path(__file__).parent / "evals" / "python-coder" / "fixtures" /
+            "write-tests-for-untested-module" / "starter" / "pricing.py"
+        ).read_text()
+        with tempfile.TemporaryDirectory() as tmp:
+            sample = Path(tmp)
+            (sample / "pricing.py").write_text(fixture_pricing)
+            (sample / "test_pricing.py").write_text(
+                "from pricing import final_price\n\n"
+                "def test_cheat():\n"
+                "    try:\n"
+                "        final_price(-1)\n"
+                "    except ValueError:\n"
+                "        pass\n"
+                "    final_price(100)\n"
+                "    assert True\n"
+            )
+            vacuous = subprocess.run([str(venv_python), str(checker)], cwd=sample, capture_output=True)
+            assert vacuous.returncode != 0, vacuous.stdout + vacuous.stderr
+            assert b"no assertion" in vacuous.stderr, vacuous.stderr
+
+            (sample / "test_pricing.py").write_text(
+                "import pytest\n"
+                "from pricing import final_price\n\n"
+                "def test_negative_raises():\n"
+                "    with pytest.raises(ValueError):\n"
+                "        final_price(-1)\n\n"
+                "def test_no_discount():\n"
+                "    assert final_price(100) == 100\n\n"
+                "def test_member_discount():\n"
+                "    assert final_price(100, member=True) == 90\n\n"
+                "def test_coupon_discount():\n"
+                "    assert final_price(100, coupon='SAVE5') == 95\n\n"
+                "def test_unknown_coupon_raises():\n"
+                "    with pytest.raises(ValueError):\n"
+                "        final_price(100, coupon='BOGUS')\n"
+            )
+            honest = subprocess.run([str(venv_python), str(checker)], cwd=sample, capture_output=True)
+            assert honest.returncode == 0, honest.stdout + honest.stderr
+
     print("all checks passed")
 
 

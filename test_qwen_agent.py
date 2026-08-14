@@ -116,6 +116,33 @@ def demo():
         assert "note" not in result2, result2
         assert (workdir / "t2.py").read_text() == normal
 
+    # tool_write_file: refuses to weaken an existing test file (fewer assert/
+    # pytest.raises than it already has) -- coverage/pytest passing proves nothing if
+    # the model can just delete the checks. Demonstrated for real: a vacuous
+    # try/except-wrapped call with no assertion satisfies --cov-fail-under=100.
+    with tempfile.TemporaryDirectory() as tmp:
+        workdir = Path(tmp)
+        original = (
+            "import pytest\n\n"
+            "def test_a():\n    assert 1 == 1\n\n"
+            "def test_b():\n    with pytest.raises(ValueError):\n        raise ValueError\n"
+        )
+        (workdir / "test_thing.py").write_text(original)
+        gutted = qwen_agent.tool_write_file(workdir, {"path": "test_thing.py", "content": "def test_a():\n    pass\n"})
+        assert gutted["status"] == "error", gutted
+        assert "refusing to write" in gutted["message"] and "2 assertion" in gutted["message"], gutted
+        assert (workdir / "test_thing.py").read_text() == original, "must not be modified on refusal"
+
+        # A non-assertion edit (e.g. removing an xfail marker) doesn't drop the count -> allowed.
+        renamed = original.replace("def test_a():", "@pytest.mark.slow\ndef test_a():")
+        kept = qwen_agent.tool_write_file(workdir, {"path": "test_thing.py", "content": renamed})
+        assert kept["status"] == "ok", kept
+        assert (workdir / "test_thing.py").read_text() == renamed
+
+        # A brand-new test file (nothing to weaken relative to) is never blocked.
+        fresh = qwen_agent.tool_write_file(workdir, {"path": "test_new.py", "content": "def test_x():\n    pass\n"})
+        assert fresh["status"] == "ok", fresh
+
     # normalize_content_tool_calls: strict JSON dialect (existing behavior).
     allowed = {"write_file", "finish"}
     calls = normalize_content_tool_calls(
