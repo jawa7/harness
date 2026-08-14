@@ -43,6 +43,7 @@ def seed_samples(case_id: str, destination: Path, samples: int) -> None:
 
 def command_for(
     case_id: str, model: str, samples: int, output: Path, base_url: str, recovery_turns: int = 0,
+    enable_web_access: bool = False,
 ) -> list[str]:
     verify = CASES[case_id]["verify"].format(suite_root=ROOT, python=sys.executable)
     command = [
@@ -59,6 +60,11 @@ def command_for(
     ]
     if recovery_turns:
         command.extend(["--recovery-turns", str(recovery_turns)])
+    # ponytail: off by default -- these fixtures are synthetic and stdlib-only, so
+    # there's nothing for the model to look up; opt in only when testing against a
+    # task that actually needs outside documentation. Requires TAVILY_API_KEY.
+    if enable_web_access:
+        command.append("--enable-web-access")
     return command
 
 
@@ -79,6 +85,7 @@ def main() -> None:
     parser.add_argument("--recovery-turns", type=int, default=0, help="Opt in to bounded post-verification repair turns for each harness sample")
     parser.add_argument("--base-url", default="http://localhost:1234/v1")
     parser.add_argument("--output-dir")
+    parser.add_argument("--enable-web-access", action="store_true", help="Give the model web_search/web_fetch alongside run_command. Requires TAVILY_API_KEY.")
     args = parser.parse_args()
     if args.list:
         print("\n".join(CASES))
@@ -99,7 +106,10 @@ def main() -> None:
     except ValueError as exc:
         parser.error(str(exc))
     raise SystemExit(subprocess.run(
-        command_for(args.case, args.model, args.samples, output, args.base_url, args.recovery_turns),
+        command_for(
+            args.case, args.model, args.samples, output, args.base_url, args.recovery_turns,
+            enable_web_access=args.enable_web_access,
+        ),
         env=harness_environment(),
     ).returncode)
 

@@ -90,6 +90,12 @@ def test_python_coder_eval():
     assert "--recovery-turns" not in command
     recovery_command = runner.command_for("follow-existing-pattern", "qwen2.5-coder-7b-instruct-mlx", 3, Path("/tmp/run"), "http://localhost:1234/v1", recovery_turns=2)
     assert recovery_command[-2:] == ["--recovery-turns", "2"]
+    # --enable-web-access is opt-in (off by default): these fixtures are synthetic
+    # and stdlib-only, so there is nothing to look up unless explicitly requested.
+    assert "--enable-web-access" not in command
+    web_command = runner.command_for("follow-existing-pattern", "qwen2.5-coder-7b-instruct-mlx", 3, Path("/tmp/run"), "http://localhost:1234/v1", enable_web_access=True)
+    assert "--enable-web-access" in web_command
+    assert "--enable-run-command" in web_command, "web access must not replace run_command"
     assert any("verify_archive_task.py" in part for part in command)
     assert runner.sys.executable in command
     environment = runner.harness_environment()

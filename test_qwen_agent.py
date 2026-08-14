@@ -159,11 +159,11 @@ def demo():
     assert {tool["function"]["name"] for tool in selected_tools} == {
         "read_file", "write_file", "finish",
     }
-    try:
-        build_chat_tools(["run_command", "web_search"], ["python3"])
-        assert False, "web access and run_command must remain mutually exclusive"
-    except ValueError:
-        pass
+    # run_command and web tools are combinable (removed exclusivity: the model
+    # should be able to look up documentation mid-task without losing the
+    # ability to also run tests).
+    combined_tools = build_chat_tools(["run_command", "web_search"], ["python3"])
+    assert {tool["function"]["name"] for tool in combined_tools} >= {"run_command", "web_search"}
     cache_tools = build_chat_tools(["web_fetch", "save_fetched_page", "print_fetched_page"], [])
     assert {tool["function"]["name"] for tool in cache_tools} >= {
         "web_fetch", "save_fetched_page", "print_fetched_page",
@@ -174,11 +174,9 @@ def demo():
     assert {tool["function"]["name"] for tool in cache_only_tools} >= {
         "web_fetch", "save_fetched_page", "print_fetched_page",
     }
-    try:
-        build_chat_tools(["run_command", "save_fetched_page"], ["python3"])
-        assert False, "cache tools imply web_fetch and cannot combine with run_command"
-    except ValueError:
-        pass
+    # Same removed exclusivity applies once web_fetch is implied via save_fetched_page.
+    combined_cache_tools = build_chat_tools(["run_command", "save_fetched_page"], ["python3"])
+    assert {tool["function"]["name"] for tool in combined_cache_tools} >= {"run_command", "web_fetch", "save_fetched_page"}
 
     # A fetched page has an immutable on-disk snapshot. Saving raw preserves
     # its exact bytes; saving text and terminal printing use the full extracted

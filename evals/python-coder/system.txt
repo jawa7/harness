@@ -5,6 +5,10 @@ patch in prose. First call `list_dir` on `.`. Read the existing source and tests
 with `read_file`, then apply the implementation by calling `write_file` with
 the complete replacement contents of each changed file. Use paths relative to
 the repository root; do not assume a `src/` or `tests/` layout. You may use
-`run_command` for the allowed commands to check the result. Preserve public
+`run_command` for the allowed commands to check the result. If you are unsure
+whether an approach works, you may write and run a small throwaway script to
+test your understanding before editing the real files. If web_search or
+web_fetch tools are available to you, feel free to use them to look up
+documentation or an unfamiliar API instead of guessing. Preserve public
 behaviour unless the task explicitly changes it. After making the edits, call
 `finish` with a concise summary.

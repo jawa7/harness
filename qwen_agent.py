@@ -13,13 +13,15 @@ tests, a render script, etc.) mid-loop. update_plan lets the model declare
 subtasks and record failed attempts; its latest call is re-shown to the model
 every turn as a compact reminder, separate from the raw growing transcript.
 
---enable-web-access switches to a dedicated restricted mode (write_file,
-read_file, list_dir, finish, web_search, web_fetch — no run_command, not
-combined with the normal mode's tools) for gathering real material from the
-web. web_search calls the Tavily API (requires TAVILY_API_KEY in the
-environment, checked before the run starts). web_fetch downloads a URL and
-returns its text content (HTML stripped to plain text), capped in size.
-Mutually exclusive with --reviewer-mode.
+--enable-web-access adds web_search and web_fetch on top of whatever tools
+are already active (including run_command, if --enable-run-command is also
+set) so the model can look up unfamiliar library/API documentation mid-task
+instead of only guessing from training data. web_search calls the Tavily API
+(requires TAVILY_API_KEY in the environment, checked before the run starts).
+web_fetch downloads a URL and returns its text content (HTML stripped to
+plain text), capped in size. Mutually exclusive with --reviewer-mode only
+(reviewer mode is deliberately read-only single-criterion grading, which
+web browsing doesn't fit).
 
 Self-certification isn't trusted: if --verify-command is set, the harness
 itself re-runs that command after a model completion and overrides success if
@@ -333,9 +335,13 @@ using the same path, as that overwrites the first output. Explain results clearl
 user request is complete. Before calling finish, check the user's requested
 deliverables: required item count, URLs, dates, and file paths. If their source
 URLs or details are already in tool results, include them in the final answer
-without making another web request. Never output a bare JSON array shaped like tool calls
-as prose: such a response is interpreted as a tool request by compatibility
-adapters."""
+without making another web request. If web_search or web_fetch tools are available
+to you, feel free to use them to look up documentation or an unfamiliar API when
+you're unsure, not only when the user supplies a URL. If run_command and write_file
+are both available, you may write and run a small throwaway script to test your
+understanding before editing the real files. Never output a bare JSON array shaped
+like tool calls as prose: such a response is interpreted as a tool request by
+compatibility adapters."""
 CHAT_WEB_POLICY_PROMPT = """Tool policy: when the current user message contains one or more URLs,
 call web_fetch for every supplied URL before calling web_search. Use web_search
 only after each supplied URL fetch failed. If a supplied URL fetch succeeds, stop
@@ -936,8 +942,6 @@ def build_chat_tools(selected_names: list[str], allowed_bins: list[str]) -> list
     # advertise cache-only tools that are impossible to use.
     if {"save_fetched_page", "print_fetched_page"} & selected:
         selected.add("web_fetch")
-    if "run_command" in selected and ({"web_search", "web_fetch"} & selected):
-        raise ValueError("run_command cannot be combined with web_search or web_fetch")
 
     tools = [tool for tool in TOOLS if tool["function"]["name"] in selected | {"finish"}]
     if "run_command" in selected:
@@ -1724,9 +1728,6 @@ def _choose_chat_tools() -> tuple[list[str], list[str]]:
         if "page_cache" in selected:
             selected.remove("page_cache")
             selected.extend(["web_fetch", "save_fetched_page", "print_fetched_page"])
-        if "run_command" in selected and ({"web_search", "web_fetch"} & set(selected)):
-            print("run_command cannot be combined with web tools. Choose again.")
-            continue
         break
 
     allowed_bins = []
@@ -2315,7 +2316,7 @@ def main():
     ap.add_argument("--max-tokens", type=int, default=8000, help="Some models (e.g. reasoning models) burn thousands of tokens on reasoning_content before ever emitting a tool call — too low a cap causes a silent truncated stall")
     ap.add_argument("--reviewer-mode", action="store_true", help="Restrict tools to read_file/list_dir/write_verdict/finish — no write_file, so a reviewer can't mutate the file it's grading")
     ap.add_argument("--enable-run-command", action="store_true", help="Give the model a run_command tool to self-check its work (tests, render scripts). Not available in --reviewer-mode.")
-    ap.add_argument("--enable-web-access", action="store_true", help="Dedicated restricted mode: write_file/read_file/list_dir/finish/web_search/web_fetch, no run_command. Requires TAVILY_API_KEY in the environment. Mutually exclusive with --reviewer-mode.")
+    ap.add_argument("--enable-web-access", action="store_true", help="Add web_search/web_fetch tools, combinable with --enable-run-command. Requires TAVILY_API_KEY in the environment. Mutually exclusive with --reviewer-mode.")
     ap.add_argument("--allowed-commands", default="pytest,python3,node,npm,bd", help="Comma-separated list of binaries run_command is allowed to invoke")
     ap.add_argument("--command-timeout", type=int, default=60, help="Seconds before a run_command call is killed")
     ap.add_argument("--verify-command", default=None, help="Command the HARNESS (not the model) re-runs after a model completion. Nonzero exit overrides the model's claim — the model's own claim of success is never trusted alone.")
@@ -2357,12 +2358,12 @@ def main():
 
     if args.enable_web_access:
         check_tavily_key_or_die()
+
+    tools = list(REVIEWER_TOOLS if args.reviewer_mode else TOOLS)
+    if args.enable_run_command and not args.reviewer_mode:
+        tools.append(make_run_command_tool(allowed_bins))
     if args.enable_web_access:
-        tools = list(WEB_TOOLS)
-    else:
-        tools = list(REVIEWER_TOOLS if args.reviewer_mode else TOOLS)
-        if args.enable_run_command and not args.reviewer_mode:
-            tools.append(make_run_command_tool(allowed_bins))
+        tools.extend([WEB_SEARCH_TOOL, WEB_FETCH_TOOL])
     allowed_tool_names = {t["function"]["name"] for t in tools}
 
     top_workdir = Path(args.workdir)
