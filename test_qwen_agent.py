@@ -76,7 +76,7 @@ def _tool_response(name, arguments, call_id="call_1"):
     }
 
 
-def _run_once_with_responses(workdir, responses, verify_command, recovery_turns=0, captured_messages=None, tools=TOOLS, **run_options):
+def _run_once_with_responses(workdir, responses, verify_command, recovery_turns=0, captured_messages=None, tools=TOOLS, max_turns=3, **run_options):
     """Run a canned model transcript, including optional post-verification recovery."""
     remaining = iter(responses)
     original = qwen_agent.call_model
@@ -92,7 +92,7 @@ def _run_once_with_responses(workdir, responses, verify_command, recovery_turns=
             workdir=workdir, system_prompt="sys", task_prompt="task",
             tools=tools, allowed_tool_names={t["function"]["name"] for t in tools},
             allowed_bins=["python3"], model="fake-model", base_url="http://unused",
-            temperature=0.0, max_tokens=100, max_turns=3, command_timeout=5,
+            temperature=0.0, max_tokens=100, max_turns=max_turns, command_timeout=5,
             verify_command=verify_command, verify_timeout=5, log_basename="harness-log",
             recovery_turns=recovery_turns, **run_options,
         )
@@ -921,6 +921,32 @@ def demo():
         # Stopped right after the 2nd identical failure -> the 3rd canned response
         # (finish) was never reached, proving the turn budget wasn't burned.
         assert len(captured_messages) == 2, captured_messages
+
+    # ...but a real write_file edit in between two failures of the same command resets
+    # the streak: this is ordinary fix-then-verify iteration, not the model failing to
+    # adapt. Observed for real (loc-25 20260814T113503Z, extend-without-breaking-invariant
+    # sample 1): 3 genuine edits interleaved with 3 failing `pytest -q` runs used to be
+    # indistinguishable from truly repeating the same thing unchanged.
+    with tempfile.TemporaryDirectory() as tmp:
+        workdir = Path(tmp)
+        captured_messages = []
+        command_tools = [*TOOLS, qwen_agent.make_run_command_tool(["python3"])]
+        fail_cmd = "python3 -c 'import sys; sys.exit(1)'"
+        result = _run_once_with_responses(
+            workdir,
+            [
+                _tool_response("run_command", {"command": fail_cmd}, "run_1"),
+                _tool_response("write_file", {"path": "a.txt", "content": "attempt 1"}, "w_1"),
+                _tool_response("run_command", {"command": fail_cmd}, "run_2"),
+                _tool_response("write_file", {"path": "a.txt", "content": "attempt 2"}, "w_2"),
+                _tool_response("run_command", {"command": fail_cmd}, "run_3"),
+                _tool_response("finish", {"summary": "gave up but wasn't hard-stopped"}, "finish"),
+            ],
+            None, captured_messages=captured_messages, tools=command_tools,
+            repeated_command_failure_threshold=2, max_turns=6,
+        )
+        assert result["finished"] and not result["crashed"], result
+        assert len(captured_messages) == 6, "must not have been hard-stopped early"
 
     # update_plan: latest plan is re-shown as a trailing reminder on every later
     # request (DESIGN.md Tier 1 item 3), but never accumulates in the stored

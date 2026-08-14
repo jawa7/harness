@@ -1987,7 +1987,9 @@ def run_once(
     finish_summary = None
     crashed = None
     repeat_tracker = {}  # path -> (last_content_hash, consecutive_count)
-    command_failure_counts = {}  # exact command -> consecutive failed invocations
+    command_failure_counts = {}  # exact command -> failures seen with no edit in between
+    edit_counter = 0  # bumped on every successful write_file -- see command_last_edit_seen
+    command_last_edit_seen = {}  # exact command -> edit_counter value as of its last failure
     stuck_repeating = False
     stuck_command = None  # the exact command that hit repeated_command_failure_threshold
     fetched_urls = set()  # urls that actually went through a successful web_fetch call
@@ -2061,7 +2063,7 @@ def run_once(
     def run_agent_phase(turn_limit: int, phase: str) -> bool:
         """Run one bounded model phase and return whether it reached a completion."""
         nonlocal finished, finish_summary, crashed, stuck_repeating, stuck_command, completion_kind
-        nonlocal total_model_turns, recovery_attempts, current_plan
+        nonlocal total_model_turns, recovery_attempts, current_plan, edit_counter
         for phase_turn in range(1, turn_limit + 1):
             total_model_turns += 1
             if phase == "recovery":
@@ -2185,25 +2187,39 @@ def run_once(
                     if count >= REPEAT_THRESHOLD:
                         stuck_repeating = True
                     mentioned_urls.update(extract_urls(fn_args["content"]))
+                    if result.get("status") == "ok":
+                        edit_counter += 1
 
                 if fn_name == "run_command":
                     command = fn_args.get("command", "")
                     command_failed = result.get("status") != "ok" or result.get("exit_code") != 0
                     if command_failed:
-                        failures = command_failure_counts.get(command, 0) + 1
-                        command_failure_counts[command] = failures
+                        # A write_file that actually succeeded since this exact command last
+                        # failed is a genuine adaptation attempt -- the streak toward the hard
+                        # stop only builds when the SAME check reruns with NOTHING changed in
+                        # between, not every time an ordinary fix-then-verify loop fails again
+                        # (observed for real: 3 real edits interleaved with 3 failing `pytest -q`
+                        # runs was previously indistinguishable from truly not adapting).
+                        if command_last_edit_seen.get(command) != edit_counter:
+                            command_failure_counts[command] = 1
+                            command_last_edit_seen[command] = edit_counter
+                        else:
+                            command_failure_counts[command] = command_failure_counts.get(command, 0) + 1
+                        failures = command_failure_counts[command]
                         if failures >= repeated_command_failure_threshold:
                             result["repeat_failure_feedback"] = (
-                                f"This exact command has failed {failures} consecutive times in cwd "
-                                f"{workdir.resolve()}. Do not run it again unchanged. Next action: "
-                                "inspect the current directory with list_dir (and relevant files with read_file), "
-                                "then adjust the command or the work."
+                                f"This exact command has failed {failures} times in cwd "
+                                f"{workdir.resolve()} with no file changes in between. Do not run it "
+                                "again unchanged. Next action: inspect the current directory with "
+                                "list_dir (and relevant files with read_file), then adjust the command "
+                                "or the work."
                             )
                             # Hard stop, matching write_file's stuck_repeating: the model isn't
                             # adapting to the advisory above, so stop burning turn budget on it.
                             stuck_command = command
                     else:
                         command_failure_counts.pop(command, None)
+                        command_last_edit_seen.pop(command, None)
 
                 if fn_name == "web_fetch" and result.get("status") == "ok" and result.get("url"):
                     fetched_urls.add(result["url"].rstrip(_URL_TRAILING_PUNCT))
@@ -2227,9 +2243,9 @@ def run_once(
                 return False
             if stuck_command:
                 crashed = (
-                    f"ran the exact same failing command {repeated_command_failure_threshold} times in a "
-                    f"row despite failing feedback each time — model is not adapting, stopping "
-                    f"early instead of burning the rest of the turn budget: {stuck_command}"
+                    f"ran the exact same failing command {repeated_command_failure_threshold} times with "
+                    f"no file changes in between despite failing feedback each time — model is not "
+                    f"adapting, stopping early instead of burning the rest of the turn budget: {stuck_command}"
                 )
                 print(f"{stderr_prefix}[{phase} turn {phase_turn}] {crashed}", file=sys.stderr)
                 return False
