@@ -1,7 +1,7 @@
 # Assemble design spec
 
 Type: task
-Status: open
+Status: claimed
 Blocked by: 03, 04, 05
 
 ## Question
