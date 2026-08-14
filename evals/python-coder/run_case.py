@@ -51,7 +51,11 @@ def command_for(
         "--workdir", str(output), "--system", str(ROOT / "system.txt"),
         "--task", str(ROOT / "fixtures" / case_id / "task.txt"),
         "--model", model, "--base-url", base_url, "--max-turns", "16",
-        "--enable-run-command", "--allowed-commands", f"pytest,python3,rg,{sys.executable}",
+        # "python" alongside "python3": observed the model reach for the bare "python"
+        # form when told it may run a throwaway script (system.txt), which the venv's
+        # own bin/python symlink resolves to the same interpreter as python3 -- was
+        # rejected outright before, producing a dead-end loop instead of a working run.
+        "--enable-run-command", "--allowed-commands", f"pytest,python3,python,rg,{sys.executable}",
         "--verify-command", verify, "--samples", str(samples),
         # Repo-context coding runs opt in to the harness's metadata-only
         # preflight: local models otherwise repeatedly assume every test suite
