@@ -21,6 +21,7 @@ from qwen_agent import (
     trim_chat_messages, run_chat_turn, cache_fetched_page, save_fetched_page,
     print_fetched_page, resolve_cached_fetch, MAX_WEB_REQUESTS_PER_CHAT_TURN,
     workspace_inventory, build_workspace_bootstrap, normalize_content_tool_calls,
+    build_handoff_note, write_handoff_note, HANDOFF_FILENAME,
 )
 
 
@@ -251,6 +252,63 @@ def demo():
         loaded = load_chat_session(session["path"])
         assert loaded["config"]["model"] == "fake-model"
         assert loaded["messages"][-1]["content"] == "hello"
+
+    # workspace_bootstrap=True (DESIGN.md Tier 3: repo-map/navigation, reusing the
+    # same mechanism run_once already has via --bootstrap-workspace-context) seeds
+    # the file inventory as the session's first message.
+    with tempfile.TemporaryDirectory() as tmp:
+        sessions_dir = Path(tmp)
+        workdir = sessions_dir / "work"
+        workdir.mkdir()
+        (workdir / "main.py").write_text("pass")
+        session = create_chat_session(
+            sessions_dir=sessions_dir, name="bootstrapped", model="fake-model",
+            base_url="http://localhost:1234/v1", workdir=workdir,
+            system_prompt="You are helpful.", selected_tools=["read_file"],
+            allowed_bins=[], max_turns=3, context_messages=2, workspace_bootstrap=True,
+        )
+        assert len(session["messages"]) == 1
+        assert "main.py" in session["messages"][0]["content"]
+        assert session["messages"][0]["role"] == "user"
+
+    # build_handoff_note: mechanical extraction, no model call needed.
+    handoff_source = [
+        {"role": "user", "content": "add a login endpoint"},
+        {"role": "assistant", "content": "", "tool_calls": [
+            {"function": {"name": "read_file", "arguments": json.dumps({"path": "app.py"})}},
+        ]},
+        {"role": "tool", "content": "{}"},
+        {"role": "assistant", "content": "Added the endpoint, tests pass.", "tool_calls": [
+            {"function": {"name": "write_file", "arguments": json.dumps({"path": "app.py", "content": "..."})}},
+        ]},
+    ]
+    note = build_handoff_note(handoff_source)
+    assert "add a login endpoint" in note
+    assert "app.py" in note
+    assert "Added the endpoint, tests pass." in note
+    assert build_handoff_note([]) == "HANDOFF FROM PREVIOUS SESSION (harness-generated; for context only)\n"
+
+    # Full round-trip: a handoff written for one session on a workdir is picked up
+    # as the first message of the NEXT session created on that same workdir.
+    with tempfile.TemporaryDirectory() as tmp:
+        sessions_dir = Path(tmp)
+        workdir = sessions_dir / "work"
+        workdir.mkdir()
+        write_handoff_note(workdir, handoff_source)
+        assert (workdir / HANDOFF_FILENAME).is_file()
+        next_session = create_chat_session(
+            sessions_dir=sessions_dir, name="continuation", model="fake-model",
+            base_url="http://localhost:1234/v1", workdir=workdir,
+            system_prompt="You are helpful.", selected_tools=["read_file"],
+            allowed_bins=[], max_turns=3, context_messages=2,
+        )
+        assert len(next_session["messages"]) == 1
+        assert next_session["messages"][0]["role"] == "user"
+        assert "add a login endpoint" in next_session["messages"][0]["content"]
+        # write_handoff_note on an empty transcript (e.g. immediate /exit) is a no-op,
+        # so it never clobbers a previous session's still-useful note with nothing.
+        write_handoff_note(workdir, [])
+        assert "add a login endpoint" in (workdir / HANDOFF_FILENAME).read_text()
 
     # A chat turn reuses the existing tool dispatch but keeps its messages so
     # the next terminal prompt can continue the same conversation.

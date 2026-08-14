@@ -349,6 +349,10 @@ DEFAULT_CHAT_CONTEXT_MESSAGES = 20
 # alone doesn't protect against one large read_file result blowing the budget.
 DEFAULT_CHAT_CONTEXT_TOKENS = 20000
 DEFAULT_CHAT_MAX_TURNS = 10
+# DESIGN.md Tier 3: written at chat-session exit, read back in at the next new
+# session's start on the same workdir -- lives in the repo itself (Albatross
+# continue.md style), not in the harness's own sessions_dir.
+HANDOFF_FILENAME = ".harness-handoff.md"
 REPEATED_CHAT_TOOL_CALL_THRESHOLD = 3
 LOOP_RECOVERY_EVIDENCE_CHARS = 6000
 CHAT_SESSION_VERSION = 1
@@ -1037,6 +1041,52 @@ def _chat_session_slug(name: str) -> str:
     return slug
 
 
+def build_handoff_note(messages: list[dict]) -> str:
+    """Compact, mechanically-derived note for the next session on this same repo:
+    the last request, files touched, and the agent's own last response (which in
+    practice already narrates what it did/was doing). No extra model call needed
+    to author a summary -- deterministic extraction from the already-saved
+    transcript, matching DESIGN.md Tier 3's "small, no new infrastructure" framing.
+    """
+    files_touched = []
+    seen_paths = set()
+    last_user = None
+    last_assistant_content = None
+    for message in messages:
+        role = message.get("role")
+        if role == "user":
+            last_user = message.get("content") or ""
+        elif role == "assistant":
+            content = message.get("content") or ""
+            if content:
+                last_assistant_content = content
+            for call in message.get("tool_calls") or []:
+                function = call.get("function", {})
+                if function.get("name") not in ("write_file", "read_file"):
+                    continue
+                try:
+                    path = json.loads(function.get("arguments") or "{}").get("path")
+                except json.JSONDecodeError:
+                    path = None
+                if path and path not in seen_paths:
+                    seen_paths.add(path)
+                    files_touched.append(path)
+    lines = ["HANDOFF FROM PREVIOUS SESSION (harness-generated; for context only)", ""]
+    if last_user:
+        lines += ["Last request:", last_user, ""]
+    if files_touched:
+        lines += ["Files touched (read or written, in order):", *(f"- {p}" for p in files_touched), ""]
+    if last_assistant_content:
+        lines += ["Agent's last note:", last_assistant_content, ""]
+    return "\n".join(lines)
+
+
+def write_handoff_note(workdir: Path, messages: list[dict]) -> None:
+    if not messages:
+        return
+    (workdir / HANDOFF_FILENAME).write_text(build_handoff_note(messages), encoding="utf-8")
+
+
 def _chat_history_markdown(messages: list[dict]) -> str:
     lines = ["# Chat history", ""]
     for message in messages:
@@ -1080,6 +1130,7 @@ def create_chat_session(
     sessions_dir: Path | str, name: str, model: str, base_url: str, workdir: Path | str,
     system_prompt: str, selected_tools: list[str], allowed_bins: list[str], max_turns: int,
     context_messages: int, context_tokens: int = DEFAULT_CHAT_CONTEXT_TOKENS,
+    workspace_bootstrap: bool = False, workspace_inventory_limit: int = DEFAULT_WORKSPACE_INVENTORY_LIMIT,
 ) -> dict:
     sessions_dir = Path(sessions_dir)
     sessions_dir.mkdir(parents=True, exist_ok=True)
@@ -1092,6 +1143,23 @@ def create_chat_session(
     workdir = Path(workdir).expanduser().resolve()
     workdir.mkdir(parents=True, exist_ok=True)
     now = datetime.now(timezone.utc).isoformat()
+
+    # DESIGN.md Tier 3: pick up where the last session on this same repo left off,
+    # and (opt-in) orient the model with a metadata-only file inventory before its
+    # first message -- the same bounded, no-embeddings mechanism run_once already
+    # uses via --bootstrap-workspace-context, just reused here instead of rebuilt.
+    initial_messages = []
+    handoff_path = workdir / HANDOFF_FILENAME
+    if handoff_path.is_file():
+        handoff_text = handoff_path.read_text(encoding="utf-8").strip()
+        if handoff_text:
+            initial_messages.append({"role": "user", "content": handoff_text})
+    if workspace_bootstrap:
+        initial_messages.append({
+            "role": "user",
+            "content": build_workspace_bootstrap(workdir, workspace_inventory_limit),
+        })
+
     session = {
         "version": CHAT_SESSION_VERSION,
         "name": name.strip(),
@@ -1112,7 +1180,7 @@ def create_chat_session(
             "max_tokens": 8000,
             "command_timeout": 60,
         },
-        "messages": [],
+        "messages": initial_messages,
         "path": str(path),
     }
     save_chat_session(session)
@@ -1581,6 +1649,19 @@ def _prompt_int(prompt: str, default: int, minimum: int = 1) -> int:
         return value
 
 
+def _prompt_yes_no(prompt: str, default: bool) -> bool:
+    hint = "Y/n" if default else "y/N"
+    while True:
+        raw = input(f"{prompt} [{hint}]: ").strip().lower()
+        if not raw:
+            return default
+        if raw in ("y", "yes"):
+            return True
+        if raw in ("n", "no"):
+            return False
+        print("Please enter y or n.")
+
+
 def _choose_chat_model(base_url: str) -> str:
     try:
         models = fetch_available_models(base_url)
@@ -1671,6 +1752,9 @@ def _create_chat_session_interactively(sessions_dir: Path, base_url: str) -> dic
         model = _choose_chat_model(base_url)
     default_workdir = str(Path.cwd())
     workdir = input(f"Working directory [{default_workdir}]: ").strip() or default_workdir
+    workspace_bootstrap = _prompt_yes_no(
+        "Show a file inventory of the working directory before the model's first message", True,
+    )
     while True:
         prompt_file = input("Custom system-prompt file (blank = built-in prompt): ").strip()
         if not prompt_file:
@@ -1689,6 +1773,7 @@ def _create_chat_session_interactively(sessions_dir: Path, base_url: str) -> dic
         sessions_dir=sessions_dir, name=name, model=model, base_url=base_url, workdir=workdir,
         system_prompt=system_prompt, selected_tools=selected_tools, allowed_bins=allowed_bins,
         max_turns=max_turns, context_messages=context_messages, context_tokens=context_tokens,
+        workspace_bootstrap=workspace_bootstrap,
     )
 
 
@@ -1739,12 +1824,14 @@ def run_chat_session(session: dict) -> None:
             user_input = input("\nyou> ").strip()
         except (EOFError, KeyboardInterrupt):
             save_chat_session(session)
+            write_handoff_note(workdir, session["messages"])
             print("\nSession saved.")
             return
         if not user_input:
             continue
         if user_input == "/exit":
             save_chat_session(session)
+            write_handoff_note(workdir, session["messages"])
             print("Session saved.")
             return
         if user_input == "/help":
