@@ -344,6 +344,10 @@ web source, stop web browsing and answer from the material already collected; st
 what could not be verified. At most 12 web_search/web_fetch calls are allowed per
 user request. web_search takes one concise query of at most 300 characters."""
 DEFAULT_CHAT_CONTEXT_MESSAGES = 20
+# Leaves headroom under a 32K context for the system/policy prompt and one completion
+# (default max_tokens=8000) -- see DESIGN.md Tier 2 item 1: the message-count window
+# alone doesn't protect against one large read_file result blowing the budget.
+DEFAULT_CHAT_CONTEXT_TOKENS = 20000
 DEFAULT_CHAT_MAX_TURNS = 10
 REPEATED_CHAT_TOOL_CALL_THRESHOLD = 3
 LOOP_RECOVERY_EVIDENCE_CHARS = 6000
@@ -945,13 +949,30 @@ def build_chat_tools(selected_names: list[str], allowed_bins: list[str]) -> list
     return tools
 
 
-def trim_chat_messages(messages: list[dict], max_messages: int) -> list[dict]:
+def _estimate_tokens(message: dict) -> int:
+    """Rough ~4-chars-per-token estimate. No tokenizer dependency -- this is a soft
+    safety budget for trim_chat_messages, not exact accounting."""
+    chars = len(message.get("content") or "")
+    for call in message.get("tool_calls") or []:
+        chars += len(call.get("function", {}).get("arguments") or "")
+    return chars // 4
+
+
+def _group_tokens(group: list[dict]) -> int:
+    return sum(_estimate_tokens(m) for m in group)
+
+
+def trim_chat_messages(messages: list[dict], max_messages: int, max_tokens: int = None) -> list[dict]:
     """Return a rolling context without leaving tool calls orphaned.
 
     A model tool-call and its ``tool`` result must travel together. Therefore the
     unit of trimming is a user turn (one user message plus all subsequent
     assistant/tool messages), rather than blindly slicing the raw protocol list.
     A single tool-heavy turn may be larger than the soft limit.
+
+    ``max_tokens``, if given, is a second, independent budget checked alongside the
+    message-count window -- message count alone doesn't catch one large read_file
+    result blowing the budget while still counting as a single message.
     """
     if max_messages <= 0:
         return []
@@ -967,6 +988,7 @@ def trim_chat_messages(messages: list[dict], max_messages: int) -> list[dict]:
     if current:
         groups.append(current)
     kept = []
+    kept_tokens = 0
     for group in reversed(groups):
         # A current tool-heavy turn can exceed the whole window by itself. Keep
         # its user request and only the most recent complete tool exchange(s),
@@ -985,14 +1007,26 @@ def trim_chat_messages(messages: list[dict], max_messages: int) -> list[dict]:
             if current_exchange:
                 exchanges.append(current_exchange)
             kept_responses = []
+            kept_responses_tokens = 0
+            budget = max_tokens - _estimate_tokens(user_message) if max_tokens is not None else None
             for exchange in reversed(exchanges):
-                if kept_responses and 1 + len(exchange) + len(kept_responses) > max_messages:
+                exchange_tokens = _group_tokens(exchange)
+                if kept_responses and (
+                    1 + len(exchange) + len(kept_responses) > max_messages
+                    or (budget is not None and kept_responses_tokens + exchange_tokens > budget)
+                ):
                     break
                 kept_responses = exchange + kept_responses
+                kept_responses_tokens += exchange_tokens
             return [user_message, *kept_responses]
-        if kept and len(group) + len(kept) > max_messages:
+        group_tokens = _group_tokens(group)
+        if kept and (
+            len(group) + len(kept) > max_messages
+            or (max_tokens is not None and kept_tokens + group_tokens > max_tokens)
+        ):
             break
         kept = group + kept
+        kept_tokens += group_tokens
     return kept
 
 
@@ -1045,7 +1079,7 @@ def load_chat_session(path: Path | str) -> dict:
 def create_chat_session(
     sessions_dir: Path | str, name: str, model: str, base_url: str, workdir: Path | str,
     system_prompt: str, selected_tools: list[str], allowed_bins: list[str], max_turns: int,
-    context_messages: int,
+    context_messages: int, context_tokens: int = DEFAULT_CHAT_CONTEXT_TOKENS,
 ) -> dict:
     sessions_dir = Path(sessions_dir)
     sessions_dir.mkdir(parents=True, exist_ok=True)
@@ -1073,6 +1107,7 @@ def create_chat_session(
             "allowed_bins": list(allowed_bins),
             "max_turns": max_turns,
             "context_messages": context_messages,
+            "context_tokens": context_tokens,
             "temperature": 0.4,
             "max_tokens": 8000,
             "command_timeout": 60,
@@ -1205,7 +1240,7 @@ def normalize_content_tool_calls(content: str, allowed_tool_names: set[str]) -> 
 def run_chat_turn(
     messages: list[dict], system_prompt: str, workdir: Path, tools: list, allowed_bins: list,
     model: str, base_url: str, temperature: float, max_tokens: int, max_turns: int,
-    command_timeout: int, context_messages: int, fetch_cache_dir: Path = None,
+    command_timeout: int, context_messages: int, context_tokens: int = None, fetch_cache_dir: Path = None,
 ) -> dict:
     """Run one interactive user request and return the updated complete transcript."""
     transcript = list(messages)
@@ -1223,7 +1258,7 @@ def run_chat_turn(
         prompt = policy_system_prompt
         if recovery_instruction:
             prompt += f"\n\n{recovery_instruction}"
-        return [{"role": "system", "content": prompt}] + trim_chat_messages(transcript, context_messages)
+        return [{"role": "system", "content": prompt}] + trim_chat_messages(transcript, context_messages, context_tokens)
 
     context = build_context()
     allowed_tool_names = {tool["function"]["name"] for tool in tools}
@@ -1649,10 +1684,11 @@ def _create_chat_session_interactively(sessions_dir: Path, base_url: str) -> dic
     selected_tools, allowed_bins = _choose_chat_tools()
     max_turns = _prompt_int("Maximum agent turns per message", DEFAULT_CHAT_MAX_TURNS)
     context_messages = _prompt_int("Rolling context message limit", DEFAULT_CHAT_CONTEXT_MESSAGES)
+    context_tokens = _prompt_int("Rolling context token budget (rough estimate)", DEFAULT_CHAT_CONTEXT_TOKENS)
     return create_chat_session(
         sessions_dir=sessions_dir, name=name, model=model, base_url=base_url, workdir=workdir,
         system_prompt=system_prompt, selected_tools=selected_tools, allowed_bins=allowed_bins,
-        max_turns=max_turns, context_messages=context_messages,
+        max_turns=max_turns, context_messages=context_messages, context_tokens=context_tokens,
     )
 
 
@@ -1740,6 +1776,7 @@ def run_chat_session(session: dict) -> None:
             temperature=config.get("temperature", 0.4), max_tokens=config.get("max_tokens", 8000),
             max_turns=config["max_turns"], command_timeout=config.get("command_timeout", 60),
             context_messages=config["context_messages"],
+            context_tokens=config.get("context_tokens", DEFAULT_CHAT_CONTEXT_TOKENS),
             fetch_cache_dir=fetch_cache_dir,
         )
         session["messages"] = prefix + result["messages"]

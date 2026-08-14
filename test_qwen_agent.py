@@ -220,6 +220,22 @@ def demo():
     ]
     assert trim_chat_messages(long_turn, 3) == [long_turn[0], *long_turn[-2:]]
 
+    # Token-aware trimming (DESIGN.md Tier 2 item 1): a second, independent budget
+    # catches what message-count trimming alone misses -- an older group that still
+    # fits the message-count window gets dropped anyway once it blows the token budget.
+    token_transcript = [
+        {"role": "user", "content": "old " + "a" * 400},
+        {"role": "assistant", "content": "old reply"},
+        {"role": "user", "content": "new " + "b" * 400},
+        {"role": "assistant", "content": "new reply"},
+    ]
+    assert trim_chat_messages(token_transcript, 10, max_tokens=120) == token_transcript[2:]
+    # A generous budget changes nothing vs. message-count-only behavior.
+    assert trim_chat_messages(token_transcript, 10, max_tokens=10_000) == token_transcript
+    # The oversized-single-turn branch still forces at least the most recent exchange
+    # through even under a near-zero token budget -- never returns an empty context.
+    assert trim_chat_messages(long_turn, 3, max_tokens=1) == [long_turn[0], *long_turn[-2:]]
+
     # Sessions persist configuration and the complete transcript separately
     # from the rolling context sent to the model.
     with tempfile.TemporaryDirectory() as tmp:
