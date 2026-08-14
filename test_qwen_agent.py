@@ -20,7 +20,7 @@ from qwen_agent import (
     build_chat_tools, create_chat_session, load_chat_session, save_chat_session,
     trim_chat_messages, run_chat_turn, cache_fetched_page, save_fetched_page,
     print_fetched_page, resolve_cached_fetch, MAX_WEB_REQUESTS_PER_CHAT_TURN,
-    workspace_inventory, build_workspace_bootstrap,
+    workspace_inventory, build_workspace_bootstrap, normalize_content_tool_calls,
 )
 
 
@@ -100,6 +100,43 @@ def _run_once_with_responses(workdir, responses, verify_command, recovery_turns=
 
 
 def demo():
+    # normalize_content_tool_calls: strict JSON dialect (existing behavior).
+    allowed = {"write_file", "finish"}
+    calls = normalize_content_tool_calls(
+        json.dumps([{"name": "finish", "arguments": {"summary": "ok"}}]), allowed,
+    )
+    assert len(calls) == 1 and calls[0]["function"]["name"] == "finish", calls
+
+    # normalize_content_tool_calls: markdown-fence dialect, path via first-line comment.
+    calls = normalize_content_tool_calls(
+        "Here's the fix.\n\n```python\n# out.txt\nhello\n```\n", allowed,
+    )
+    assert len(calls) == 1, calls
+    assert calls[0]["function"]["name"] == "write_file", calls
+    args = json.loads(calls[0]["function"]["arguments"])
+    assert args == {"path": "out.txt", "content": "hello\n"}, args
+
+    # normalize_content_tool_calls: markdown-fence dialect, path named in preceding prose.
+    calls = normalize_content_tool_calls(
+        "Now, let's update `tests/test_report.py`.\n\n```python\nimport pytest\n```\n", allowed,
+    )
+    assert len(calls) == 1, calls
+    args = json.loads(calls[0]["function"]["arguments"])
+    assert args["path"] == "tests/test_report.py", args
+
+    # normalize_content_tool_calls: no fence, no synthesis.
+    assert normalize_content_tool_calls("Just some prose, no code.", allowed) == []
+
+    # normalize_content_tool_calls: a fence with no resolvable path is left alone
+    # rather than guessed at (e.g. an inline example snippet, not a file write).
+    assert normalize_content_tool_calls("```python\nprint('hi')\n```\n", allowed) == []
+
+    # normalize_content_tool_calls: write_file not available in this session ->
+    # never synthesize a call to a tool the model isn't allowed to use.
+    assert normalize_content_tool_calls(
+        "```python\n# out.txt\nhello\n```\n", {"finish"},
+    ) == []
+
     # Interactive chat: the tools the user did not select must not be sent to
     # the model. finish is internal to the chat loop and is always available.
     selected_tools = build_chat_tools(["read_file", "write_file"], [])
@@ -746,8 +783,11 @@ def demo():
         assert "test_greet.py" in first_request[-1]["content"], first_request
         assert "read-only harness configuration" in first_request[-1]["content"], first_request
 
-    # Repeatedly failing the exact same command produces explicit, logged model
-    # feedback with the actual cwd and an instruction to inspect before retrying.
+    # Repeatedly failing the exact same command hard-stops the phase instead of
+    # burning the rest of the turn budget — the fix for the identical-retry-loop
+    # bug: run_command previously only got a soft, ignorable repeat_failure_feedback
+    # advisory (still attached to the failing result below), with no hard stop the
+    # way write_file's stuck_repeating already has.
     with tempfile.TemporaryDirectory() as tmp:
         workdir = Path(tmp)
         captured_messages = []
@@ -757,14 +797,16 @@ def demo():
             [
                 _tool_response("run_command", {"command": "python3 -c 'import sys; sys.exit(1)'"}, "run_1"),
                 _tool_response("run_command", {"command": "python3 -c 'import sys; sys.exit(1)'"}, "run_2"),
-                _tool_response("finish", {"summary": "stopped retrying"}, "finish"),
+                _tool_response("finish", {"summary": "would have kept going"}, "finish"),
             ],
             None, captured_messages=captured_messages, tools=command_tools,
             repeated_command_failure_threshold=2,
         )
-        assert result["finished"], result
-        feedback = json.loads(captured_messages[2][-1]["content"])["repeat_failure_feedback"]
-        assert str(workdir.resolve()) in feedback and "list_dir" in feedback, feedback
+        assert not result["finished"], result
+        assert "python3 -c" in result["crashed"] and "not adapting" in result["crashed"], result
+        # Stopped right after the 2nd identical failure -> the 3rd canned response
+        # (finish) was never reached, proving the turn budget wasn't burned.
+        assert len(captured_messages) == 2, captured_messages
 
     # run_once: model calls finish(), --verify-command passes -> finished, no crash.
     # This is the "sample passed" case the --samples aggregation loop relies on.
@@ -795,6 +837,39 @@ def demo():
         artifact = json.loads((workdir / "harness-log.json").read_text())
         assert artifact["initial_failure"]["cause"] == "no_tool_prose", artifact
         assert artifact["recovery"]["enabled"] is False, artifact
+
+    # Bug fix: a "fake edit" response — the model describes an edit and prints a
+    # fenced code block instead of calling write_file — gets synthesized into a
+    # real write_file call rather than falling through to no_tool_prose. This is
+    # the exact failure shape observed in the loc-25 repo-context eval runs
+    # (prose + ```python fence, never a real tool call).
+    with tempfile.TemporaryDirectory() as tmp:
+        workdir = Path(tmp)
+        fake_edit_content = (
+            "Let's update the file.\n\n"
+            "```python\n# out.txt\nhello\n```\n"
+        )
+        result = _run_once_with_responses(
+            workdir,
+            [
+                {"choices": [{"finish_reason": "stop", "message": {"content": fake_edit_content}}]},
+                _tool_response("finish", {"summary": "done"}),
+            ],
+            "python3 -c \"import pathlib,sys; sys.exit(0 if pathlib.Path('out.txt').read_text() == 'hello\\n' else 1)\"",
+        )
+        assert result["finished"] is True and result["crashed"] is None, result
+        assert (workdir / "out.txt").read_text() == "hello\n", (workdir / "out.txt").read_text()
+
+    # A prose response with no fenced code block still falls through to
+    # no_tool_prose — the fallback only fires when there's something shaped like
+    # a file write to synthesize, not for arbitrary explanatory text.
+    with tempfile.TemporaryDirectory() as tmp:
+        result = _run_once_with_responses(
+            Path(tmp),
+            [{"choices": [{"finish_reason": "stop", "message": {"content": "I looked at the code but made no changes."}}]}],
+            "python3 -c 'import sys; sys.exit(1)'",
+        )
+        assert not result["finished"] and result["initial_failure"]["cause"] == "no_tool_prose", result
 
     # Calling finish before any edit also remains an initial verifier failure;
     # recovery is deliberately disabled by default.

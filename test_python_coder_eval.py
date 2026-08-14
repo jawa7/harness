@@ -169,6 +169,19 @@ def test_python_coder_eval():
             pass
         else:
             raise AssertionError("malformed sample log was accepted")
+    # Bug fix: an outright API/harness crash before any model turn completed
+    # (e.g. HTTPError from a context-length-exceeded request — turns: [] in the
+    # artifact) must not be mislabeled as prose-only just because there are no
+    # tool calls to inspect either way; it's a request failure, not the model
+    # faking an edit in prose.
+    with tempfile.TemporaryDirectory() as tmp:
+        runs_dir = Path(tmp)
+        write_native_artifact(runs_dir, "crash-before-turns", "model", [
+            {"turns": [], "crashed": "HTTPError: HTTP Error 400: Bad Request"},
+        ])
+        case = summarizer.read_case_artifact(runs_dir, "model", "crash-before-turns", "isolated")
+        assert case["failure_categories"]["tool-error"] == 1, case["failure_categories"]
+        assert case["failure_categories"]["prose-only"] == 0, case["failure_categories"]
     print("all checks passed")
 
 

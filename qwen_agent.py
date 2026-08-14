@@ -1036,43 +1036,100 @@ def fetch_available_models(base_url: str) -> list[str]:
     return sorted(models)
 
 
-def normalize_content_tool_calls(content: str, allowed_tool_names: set[str]) -> list[dict]:
-    """Accept the strict JSON tool-call dialect emitted by some local models.
+_CONTENT_CODE_FENCE_RE = re.compile(r"```[ \t]*[A-Za-z0-9_+-]*\r?\n(.*?)```", re.DOTALL)
+_CONTENT_FENCE_PATH_COMMENT_RE = re.compile(r"^\s*#\s*([\w./-]+\.[A-Za-z0-9_]+)\s*$")
+_CONTENT_INLINE_PATH_RE = re.compile(r"`([\w./-]+\.[A-Za-z0-9_]+)`")
 
-    This is deliberately narrow: only a non-empty JSON array whose items have
-    exactly the ``name``/``arguments``/optional-``id`` shape, with every name
-    enabled in this session, becomes a call. Any other text remains user-facing
-    assistant content and is never executed.
+
+def _content_fence_write_file_calls(content: str) -> list[dict]:
+    """Albatross-style fallback: a model that fake-edits by printing a fenced code
+    block (with the target path as its own first-line comment, or named in the prose
+    immediately before the fence) instead of calling ``write_file``. Only fires when
+    every fence in the message resolves to a path — a mix of "some fences look like
+    file writes, others don't" is more likely prose showing example snippets than a
+    genuine batch of edits, so it's left alone rather than guessed at.
+
+    # ponytail: all-or-nothing per message, not per fence — a real edit sharing a
+    # message with one unrelated example snippet synthesizes nothing at all and
+    # falls through to no_tool_prose. Upgrade to per-fence resolution if that
+    # mixed-content shape shows up in real transcripts.
+    """
+    fences = list(_CONTENT_CODE_FENCE_RE.finditer(content))
+    if not fences:
+        return []
+    calls = []
+    for index, match in enumerate(fences, start=1):
+        body = match.group(1)
+        if not body.strip():
+            return []
+        first_line = body.splitlines()[0]
+        path_match = _CONTENT_FENCE_PATH_COMMENT_RE.match(first_line)
+        if path_match:
+            path = path_match.group(1)
+            # Drop the marker line itself — it names the destination, it isn't part
+            # of the file's intended content (and could break non-comment syntax).
+            body = body[len(first_line):].lstrip("\r\n")
+            if not body.strip():
+                return []
+        else:
+            preceding = content[max(0, match.start() - 200):match.start()]
+            inline_matches = _CONTENT_INLINE_PATH_RE.findall(preceding)
+            if not inline_matches:
+                return []
+            path = inline_matches[-1]
+        calls.append({
+            "type": "function", "id": f"content-tool-{index}",
+            "function": {
+                "name": "write_file",
+                "arguments": json.dumps({"path": path, "content": body}, ensure_ascii=False),
+            },
+        })
+    return calls
+
+
+def normalize_content_tool_calls(content: str, allowed_tool_names: set[str]) -> list[dict]:
+    """Synthesize real tool calls out of a model's fake-edit prose response.
+
+    Two dialects, tried in order: (1) the strict JSON tool-call array some local
+    models emit instead of a native tool call — a non-empty JSON array whose items
+    have exactly the ``name``/``arguments``/optional-``id`` shape, with every name
+    enabled in this session; (2) markdown-fenced code blocks with a resolvable target
+    path (see `_content_fence_write_file_calls`), the shape actually observed in
+    repo-context eval failures (prose description + ```python fence, never a real
+    write_file call). Any other text remains user-facing assistant content and is
+    never executed.
     """
     if not isinstance(content, str):
         return []
     try:
         items = json.loads(content)
     except json.JSONDecodeError:
+        items = None
+    if isinstance(items, list) and items:
+        calls = []
+        allowed_keys = {"name", "arguments", "id"}
+        for index, item in enumerate(items, start=1):
+            if not isinstance(item, dict) or set(item) - allowed_keys:
+                return []
+            name = item.get("name")
+            arguments = item.get("arguments")
+            if not isinstance(name, str) or name not in allowed_tool_names or not isinstance(arguments, dict):
+                return []
+            try:
+                encoded_arguments = json.dumps(arguments, ensure_ascii=False)
+            except (TypeError, ValueError):
+                return []
+            call_id = item.get("id")
+            if call_id is not None and not isinstance(call_id, str):
+                return []
+            calls.append({
+                "type": "function", "id": call_id or f"content-tool-{index}",
+                "function": {"name": name, "arguments": encoded_arguments},
+            })
+        return calls
+    if "write_file" not in allowed_tool_names:
         return []
-    if not isinstance(items, list) or not items:
-        return []
-    calls = []
-    allowed_keys = {"name", "arguments", "id"}
-    for index, item in enumerate(items, start=1):
-        if not isinstance(item, dict) or set(item) - allowed_keys:
-            return []
-        name = item.get("name")
-        arguments = item.get("arguments")
-        if not isinstance(name, str) or name not in allowed_tool_names or not isinstance(arguments, dict):
-            return []
-        try:
-            encoded_arguments = json.dumps(arguments, ensure_ascii=False)
-        except (TypeError, ValueError):
-            return []
-        call_id = item.get("id")
-        if call_id is not None and not isinstance(call_id, str):
-            return []
-        calls.append({
-            "type": "function", "id": call_id or f"content-tool-{index}",
-            "function": {"name": name, "arguments": encoded_arguments},
-        })
-    return calls
+    return _content_fence_write_file_calls(content)
 
 
 def run_chat_turn(
@@ -1707,6 +1764,7 @@ def run_once(
     repeat_tracker = {}  # path -> (last_content_hash, consecutive_count)
     command_failure_counts = {}  # exact command -> consecutive failed invocations
     stuck_repeating = False
+    stuck_command = None  # the exact command that hit repeated_command_failure_threshold
     fetched_urls = set()  # urls that actually went through a successful web_fetch call
     mentioned_urls = set()  # urls the model wrote into any write_file content
     total_model_turns = 0
@@ -1775,7 +1833,7 @@ def run_once(
 
     def run_agent_phase(turn_limit: int, phase: str) -> bool:
         """Run one bounded model phase and return whether it reached a completion."""
-        nonlocal finished, finish_summary, crashed, stuck_repeating, completion_kind
+        nonlocal finished, finish_summary, crashed, stuck_repeating, stuck_command, completion_kind
         nonlocal total_model_turns, recovery_attempts
         for phase_turn in range(1, turn_limit + 1):
             total_model_turns += 1
@@ -1795,6 +1853,16 @@ def run_once(
             })
 
             tool_calls = message.get("tool_calls") or []
+            if not tool_calls:
+                synthesized_calls = normalize_content_tool_calls(message.get("content", ""), allowed_tool_names)
+                if synthesized_calls:
+                    print(
+                        f"{stderr_prefix}[{phase} turn {phase_turn}] synthesized "
+                        f"{len(synthesized_calls)} tool call(s) from fake-edit prose content.",
+                        file=sys.stderr,
+                    )
+                    tool_calls = message["tool_calls"] = synthesized_calls
+                    message["content"] = ""
             if not tool_calls:
                 if finish_reason == "length":
                     # Truncated mid-generation (e.g. burned the budget on reasoning_content)
@@ -1893,6 +1961,9 @@ def run_once(
                                 "inspect the current directory with list_dir (and relevant files with read_file), "
                                 "then adjust the command or the work."
                             )
+                            # Hard stop, matching write_file's stuck_repeating: the model isn't
+                            # adapting to the advisory above, so stop burning turn budget on it.
+                            stuck_command = command
                     else:
                         command_failure_counts.pop(command, None)
 
@@ -1913,6 +1984,14 @@ def run_once(
                     f"wrote byte-identical content to '{path_key}' {REPEAT_THRESHOLD} times in a "
                     f"row despite failing feedback each time — model is not adapting, stopping "
                     f"early instead of burning the rest of the turn budget"
+                )
+                print(f"{stderr_prefix}[{phase} turn {phase_turn}] {crashed}", file=sys.stderr)
+                return False
+            if stuck_command:
+                crashed = (
+                    f"ran the exact same failing command {repeated_command_failure_threshold} times in a "
+                    f"row despite failing feedback each time — model is not adapting, stopping "
+                    f"early instead of burning the rest of the turn budget: {stuck_command}"
                 )
                 print(f"{stderr_prefix}[{phase} turn {phase_turn}] {crashed}", file=sys.stderr)
                 return False

@@ -112,6 +112,12 @@ def classify_failure(sample: dict, log: dict) -> str:
     normalized_crash = crash.lower()
 
     if not calls:
+        if not turns and crash:
+            # A crash before any model turn completed (e.g. an HTTPError from a
+            # context-length-exceeded request, turns: []) is a request/harness
+            # failure, not the model faking an edit in prose — don't bury it under
+            # prose-only just because there are no tool calls to look at either way.
+            return TOOL_ERROR
         return PROSE_ONLY
     command_calls = [call_arguments(call) for call in calls if call_name(call) == "run_command"]
     if any(count > 1 for count in Counter(command_calls).values()):
