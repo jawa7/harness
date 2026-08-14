@@ -74,6 +74,20 @@ produces the spec only — building it is a separate, later effort.
   the existing whitelist; only a system-prompt nudge + pre-`finish` cleanup
   convention is missing. See [full answer](issues/04-unstuck-behavior-decision.md#answer).
 
+- [Persistent-memory decision](issues/05-persistent-memory-decision.md) —
+  split into three axes the original question conflated. (1) Cross-eval-sample
+  and cross-task memory: explicitly out of scope — sample isolation is what
+  makes `evals/python-coder`'s N-samples-per-case comparable. (2) Same-repo
+  cross-session continuity (real, non-eval usage): add a lightweight
+  Albatross/LocalHarness-style handoff note (done / in-progress / decisions /
+  next steps / key files) on top of the already-existing
+  `save_chat_session`/`load_chat_session` — not RAG. (3) Big real repos that
+  don't fit in 32K: repo-map/file-tree navigation first (Aider- and
+  moatless-tools-style, no embeddings, cheaper, already proven at scale),
+  full embeddings-based RAG stays a documented upgrade path gated behind a
+  concrete trigger, not built now. See
+  [full answer](issues/05-persistent-memory-decision.md#answer).
+
 ## Not yet specified
 
 - Exact implementation architecture for the four mechanisms
@@ -84,7 +98,10 @@ produces the spec only — building it is a separate, later effort.
   or it stays opt-in/manual-only — flagged in 04's answer, not yet decided;
   pin down in [[06-assemble-design-spec]] or defer explicitly to the build
   effort.
-- Final priority/sequencing of which improvements ship first — resolved in
-  [[06-assemble-design-spec]] once 03–05 are answered.
+- Concrete trigger condition for the embeddings-RAG upgrade path from
+  [[05-persistent-memory-decision]] (e.g., a repo-map size threshold) — not
+  pinned down yet, no real usage has hit it.
+- Final priority/sequencing of which improvements ship first — now
+  unblocked, ready for [[06-assemble-design-spec]].
 
 ## Out of scope
