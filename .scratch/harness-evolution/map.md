@@ -88,20 +88,25 @@ produces the spec only — building it is a separate, later effort.
   concrete trigger, not built now. See
   [full answer](issues/05-persistent-memory-decision.md#answer).
 
+- [Assemble design spec](issues/06-assemble-design-spec.md) — written to
+  [`DESIGN.md`](DESIGN.md) at the repo root. Five tiers in build order:
+  Tier 0 (context-window config + `call_model()` error handling), Tier 1
+  (the three unstuck mechanisms from 04 — the direct fix for the 0%
+  repo-context rate), Tier 2 (token-aware context trimming), Tier 3
+  (same-repo handoff artifact + repo-map navigation from 05), Tier 4
+  (explicitly deferred: pluggable second-opinion model,
+  self-authored-harness prompt tweak, full embeddings RAG). This is the
+  map's destination artifact — **the map is now closed**, no open tickets
+  remain.
+
 ## Not yet specified
 
-- Exact implementation architecture for the four mechanisms
-  [[04-unstuck-behavior-decision]] selected — deferred to a follow-on "build"
-  effort once this map's spec is locked.
-- OpenRouter/gpt-oss-20b backend: whether automated eval runs are ever
-  allowed to hit it unattended (free-tier rate-limit risk to an eval batch)
-  or it stays opt-in/manual-only — flagged in 04's answer, not yet decided;
-  pin down in [[06-assemble-design-spec]] or defer explicitly to the build
-  effort.
 - Concrete trigger condition for the embeddings-RAG upgrade path from
   [[05-persistent-memory-decision]] (e.g., a repo-map size threshold) — not
-  pinned down yet, no real usage has hit it.
-- Final priority/sequencing of which improvements ship first — now
-  unblocked, ready for [[06-assemble-design-spec]].
+  pinned down yet, no real usage has hit it. Left for the build effort or a
+  future map.
+- Whether automated eval runs may ever hit the OpenRouter/gpt-oss-20b
+  backend from [[04-unstuck-behavior-decision]] unattended, or it stays
+  opt-in/manual-only — same, left for the build effort.
 
 ## Out of scope
