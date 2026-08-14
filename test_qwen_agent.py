@@ -808,6 +808,38 @@ def demo():
         # (finish) was never reached, proving the turn budget wasn't burned.
         assert len(captured_messages) == 2, captured_messages
 
+    # update_plan: latest plan is re-shown as a trailing reminder on every later
+    # request (DESIGN.md Tier 1 item 3), but never accumulates in the stored
+    # transcript -- exactly one reminder present each time, holding the newest text.
+    with tempfile.TemporaryDirectory() as tmp:
+        workdir = Path(tmp)
+        captured_messages = []
+        result = _run_once_with_responses(
+            workdir,
+            [
+                _tool_response("update_plan", {"plan": "1. [ ] step one"}, "plan_1"),
+                _tool_response(
+                    "update_plan",
+                    {"plan": "1. [x] step one\n2. [ ] step two -- tried X, failed: Y"},
+                    "plan_2",
+                ),
+                _tool_response("finish", {"summary": "done"}, "finish"),
+            ],
+            None, captured_messages=captured_messages,
+        )
+        assert result["finished"], result
+        assert len(captured_messages) == 3, captured_messages
+        # No plan recorded yet for the very first request.
+        assert not any("current plan" in m.get("content", "") for m in captured_messages[0]), captured_messages[0]
+        turn2, turn3 = captured_messages[1], captured_messages[2]
+        turn2_reminders = [m for m in turn2 if "current plan" in m.get("content", "")]
+        turn3_reminders = [m for m in turn3 if "current plan" in m.get("content", "")]
+        assert len(turn2_reminders) == 1 and "step one" in turn2_reminders[0]["content"], turn2
+        assert len(turn3_reminders) == 1 and "step two -- tried X, failed: Y" in turn3_reminders[0]["content"], turn3
+        assert turn3_reminders[0] == turn3[-1], "reminder must be the last (most recent) message"
+        log = json.loads((workdir / "harness-log.json").read_text())
+        assert "step two" in log["final_plan"], log["final_plan"]
+
     # run_once: model calls finish(), --verify-command passes -> finished, no crash.
     # This is the "sample passed" case the --samples aggregation loop relies on.
     with tempfile.TemporaryDirectory() as tmp:

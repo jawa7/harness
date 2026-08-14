@@ -7,9 +7,11 @@ calls for real (sandboxed to --workdir), feed results back, repeat until the
 model calls finish(), returns plain text with no tool call, or --max-turns
 is hit.
 
-Tools: write_file, read_file, list_dir, finish, and optionally run_command
-(--enable-run-command) for the model to self-check its work (run tests, a
-render script, etc.) mid-loop.
+Tools: write_file, read_file, list_dir, update_plan, finish, and optionally
+run_command (--enable-run-command) for the model to self-check its work (run
+tests, a render script, etc.) mid-loop. update_plan lets the model declare
+subtasks and record failed attempts; its latest call is re-shown to the model
+every turn as a compact reminder, separate from the raw growing transcript.
 
 --enable-web-access switches to a dedicated restricted mode (write_file,
 read_file, list_dir, finish, web_search, web_fetch — no run_command, not
@@ -127,6 +129,33 @@ TOOLS = [
                 "type": "object",
                 "properties": {"path": {"type": "string"}},
                 "required": [],
+            },
+        },
+    },
+    {
+        "type": "function",
+        "function": {
+            "name": "update_plan",
+            "description": (
+                "Declare or update your plan: the remaining subtasks and what you've already tried "
+                "and why it failed. Always send the FULL current plan, not a diff — this call replaces "
+                "your previous plan entirely. It stays visible to you on every later turn, so use it "
+                "instead of retrying an approach you've already recorded as failed."
+            ),
+            "parameters": {
+                "type": "object",
+                "properties": {
+                    "plan": {
+                        "type": "string",
+                        "description": (
+                            "Free-text plan: subtasks with status (done/pending), and any failed "
+                            "attempts with why they failed. E.g. '1. [x] add validate() to models.py\\n"
+                            "2. [ ] wire validate() into cli.py -- tried importing from service.py, "
+                            "ImportError: no service module here, use models.py directly\\n3. [ ] run tests'"
+                        ),
+                    },
+                },
+                "required": ["plan"],
             },
         },
     },
@@ -1785,6 +1814,7 @@ def run_once(
     verification_results = []
     recovery_attempts = 0
     recovery_turn_limit_reached = False
+    current_plan = ""  # model's latest update_plan call, re-shown to it every turn (see call_model call site)
 
     def write_logs():
         log_json = workdir / f"{log_basename}.json"
@@ -1794,6 +1824,7 @@ def run_once(
                 "unverified_urls": sorted(mentioned_urls - fetched_urls),
                 "initial_failure": initial_failure,
                 "verification_results": verification_results,
+                "final_plan": current_plan,
                 "recovery": {
                     "enabled": recovery_turns > 0,
                     "turn_limit": recovery_turns,
@@ -1846,7 +1877,7 @@ def run_once(
     def run_agent_phase(turn_limit: int, phase: str) -> bool:
         """Run one bounded model phase and return whether it reached a completion."""
         nonlocal finished, finish_summary, crashed, stuck_repeating, stuck_command, completion_kind
-        nonlocal total_model_turns, recovery_attempts
+        nonlocal total_model_turns, recovery_attempts, current_plan
         for phase_turn in range(1, turn_limit + 1):
             total_model_turns += 1
             if phase == "recovery":
@@ -1855,7 +1886,15 @@ def run_once(
                 f"{stderr_prefix}[{phase} turn {phase_turn}/{turn_limit}] calling {model}...",
                 file=sys.stderr,
             )
-            body = call_model(base_url, model, messages, temperature, max_tokens, tools)
+            # current_plan is re-shown fresh each turn rather than stored in `messages`, so it
+            # stays a single compact reminder instead of one more entry in a growing transcript.
+            call_messages = messages
+            if current_plan:
+                call_messages = messages + [{
+                    "role": "user",
+                    "content": f"[Your current plan, from your last update_plan call]\n{current_plan}",
+                }]
+            body = call_model(base_url, model, call_messages, temperature, max_tokens, tools)
             choice = body["choices"][0]
             message = choice["message"]
             finish_reason = choice.get("finish_reason")
@@ -1916,6 +1955,9 @@ def run_once(
                         finished = True
                         finish_summary = fn_args.get("summary", "")
                         completion_kind = "finish"
+                    elif fn_name == "update_plan":
+                        current_plan = fn_args.get("plan", "")
+                        result = {"status": "ok"}
                     elif fn_name == "run_command":
                         try:
                             result = execute_command(workdir, fn_args.get("command", ""), allowed_bins, command_timeout)
