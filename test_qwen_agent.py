@@ -100,6 +100,21 @@ def _run_once_with_responses(workdir, responses, verify_command, recovery_turns=
 
 
 def demo():
+    # tool_write_file: undoes the escaped-newline-instead-of-real-newline bug (whole
+    # file collapsed onto one line) only when there are zero real newlines to begin with.
+    with tempfile.TemporaryDirectory() as tmp:
+        workdir = Path(tmp)
+        flattened = "import pytest\\n\\ndef test_x():\\n    assert True"
+        result = qwen_agent.tool_write_file(workdir, {"path": "t.py", "content": flattened})
+        assert result["status"] == "ok" and "note" in result, result
+        assert (workdir / "t.py").read_text() == "import pytest\n\ndef test_x():\n    assert True"
+
+        # Already has a real newline -> left alone even with a literal backslash-n present too.
+        normal = "line one has an escape \\n inside\nline two"
+        result2 = qwen_agent.tool_write_file(workdir, {"path": "t2.py", "content": normal})
+        assert "note" not in result2, result2
+        assert (workdir / "t2.py").read_text() == normal
+
     # normalize_content_tool_calls: strict JSON dialect (existing behavior).
     allowed = {"write_file", "finish"}
     calls = normalize_content_tool_calls(

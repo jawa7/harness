@@ -498,11 +498,40 @@ def _targets_verify_script(workdir: Path, write_path: str, verify_command: str) 
     return False
 
 
+def _unescape_if_flattened(content: str) -> str:
+    """Undo a JSON-encoding mistake observed repeatedly from this model class: instead of
+    a real newline in write_file's content, it emits the two literal characters backslash+n
+    (the whole file collapses onto one line, e.g. 'import pytest\\n\\ndef test_x():...') --
+    reliably a SyntaxError for source files, and the model doesn't self-correct within the
+    turn budget (see loc-25 20260814T095256Z run, write-tests-for-untested-module: 0/3, all
+    three samples hit stuck_repeating on this exact pattern).
+
+    Only fires when content has ZERO real newlines but several literal \\n -- a normally
+    formatted file mixes real line breaks with the occasional intentional \\n inside a
+    string literal, so that case is always left untouched. ponytail: blanket
+    replace-everywhere, not a per-language parser that would spare a literal \\n legitimately
+    embedded in a one-line file -- that input was already a guaranteed SyntaxError before this
+    ran, so this can only make it better or leave it equally broken, never regress a case that
+    would otherwise have worked. Upgrade to a real parser only if that rarer case is ever seen.
+    """
+    if "\n" not in content and content.count("\\n") >= 2:
+        return content.replace("\\n", "\n").replace("\\t", "\t")
+    return content
+
+
 def tool_write_file(workdir: Path, args: dict) -> dict:
     path = resolve_safe_path(workdir, args["path"])
     path.parent.mkdir(parents=True, exist_ok=True)
-    path.write_text(args["content"], encoding="utf-8")
-    return {"status": "ok", "path": str(path.relative_to(workdir.resolve())), "bytes_written": len(args["content"])}
+    content = _unescape_if_flattened(args["content"])
+    path.write_text(content, encoding="utf-8")
+    result = {"status": "ok", "path": str(path.relative_to(workdir.resolve())), "bytes_written": len(content)}
+    if content != args["content"]:
+        result["note"] = (
+            "your content had zero real newlines but multiple literal backslash-n sequences -- "
+            "looks like escaped line breaks meant to be actual newlines, so the harness converted "
+            "them before writing. Send real newlines directly next time, not escaped ones."
+        )
+    return result
 
 
 def tool_read_file(workdir: Path, args: dict) -> dict:
