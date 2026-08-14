@@ -1,0 +1,84 @@
+{
+  "samples": [
+    {
+      "finished": true,
+      "crashed": null,
+      "finish_summary": "Added the `archive_task` method to the `TaskService` class in the `service.py` file. The implementation follows the conventions of logging, raising errors for missing tasks, and ensuring that archived tasks are excluded from the project rollup. All tests passed.",
+      "turns_used": 7,
+      "unverified_urls": [],
+      "initial_failure": null,
+      "verification_results": [
+        {
+          "phase": "initial",
+          "completion_kind": "finish",
+          "passed": true,
+          "result": {
+            "status": "ok",
+            "exit_code": 0,
+            "stdout": "......                                                                   [100%]\n6 passed in 0.01s\n",
+            "stderr": ""
+          }
+        }
+      ],
+      "recovery_attempts": 0,
+      "recovery_turn_limit_reached": false,
+      "sample": 1,
+      "workdir": "samples/sample-1",
+      "passed": true
+    },
+    {
+      "finished": true,
+      "crashed": null,
+      "finish_summary": "Added `TaskService.archive_task(task_id)` method to archive a task and exclude it from the project rollup. The method raises `NotFoundError` if the task does not exist and logs the archival action.",
+      "turns_used": 6,
+      "unverified_urls": [],
+      "initial_failure": null,
+      "verification_results": [
+        {
+          "phase": "initial",
+          "completion_kind": "finish",
+          "passed": true,
+          "result": {
+            "status": "ok",
+            "exit_code": 0,
+            "stdout": "......                                                                   [100%]\n6 passed in 0.01s\n",
+            "stderr": ""
+          }
+        }
+      ],
+      "recovery_attempts": 0,
+      "recovery_turn_limit_reached": false,
+      "sample": 2,
+      "workdir": "samples/sample-2",
+      "passed": true
+    },
+    {
+      "finished": true,
+      "crashed": null,
+      "finish_summary": "Added `archive_task` method to `TaskService` class. Updated `project_rollup` method to exclude archived tasks. Added logging for archival actions. Ensured that the implementation passes all tests.",
+      "turns_used": 4,
+      "unverified_urls": [],
+      "initial_failure": null,
+      "verification_results": [
+        {
+          "phase": "initial",
+          "completion_kind": "finish",
+          "passed": true,
+          "result": {
+            "status": "ok",
+            "exit_code": 0,
+            "stdout": "......                                                                   [100%]\n6 passed in 0.01s\n",
+            "stderr": ""
+          }
+        }
+      ],
+      "recovery_attempts": 0,
+      "recovery_turn_limit_reached": false,
+      "sample": 3,
+      "workdir": "samples/sample-3",
+      "passed": true
+    }
+  ],
+  "passed_count": 3,
+  "total": 3
+}
