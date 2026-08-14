@@ -49,6 +49,7 @@ import secrets
 import shlex
 import subprocess
 import sys
+import urllib.error
 import urllib.request
 from datetime import datetime, timezone
 from html.parser import HTMLParser
@@ -838,8 +839,19 @@ def call_model(base_url: str, model: str, messages: list, temperature: float, ma
         headers={"Content-Type": "application/json"},
         method="POST",
     )
-    with urllib.request.urlopen(req, timeout=300) as resp:
-        return json.loads(resp.read().decode("utf-8"))
+    try:
+        with urllib.request.urlopen(req, timeout=300) as resp:
+            return json.loads(resp.read().decode("utf-8"))
+    except urllib.error.HTTPError as e:
+        # LM Studio's error body names the actual cause (e.g. context-length
+        # exceeded, unknown model) — surface it instead of the bare "HTTP Error
+        # 400", which told nothing about why the request was rejected.
+        body = e.read().decode("utf-8", errors="replace")
+        try:
+            body = json.loads(body)["error"]["message"]
+        except (json.JSONDecodeError, KeyError, TypeError):
+            pass
+        raise RuntimeError(f"HTTP {e.code} from {base_url}/chat/completions: {body}") from None
 
 
 def build_chat_tools(selected_names: list[str], allowed_bins: list[str]) -> list:
