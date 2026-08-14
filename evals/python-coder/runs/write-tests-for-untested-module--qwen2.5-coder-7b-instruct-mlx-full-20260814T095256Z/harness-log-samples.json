@@ -1,0 +1,48 @@
+{
+  "samples": [
+    {
+      "finished": false,
+      "crashed": "wrote byte-identical content to 'test_pricing.py' 3 times in a row despite failing feedback each time \u2014 model is not adapting, stopping early instead of burning the rest of the turn budget",
+      "finish_summary": null,
+      "turns_used": 7,
+      "unverified_urls": [],
+      "initial_failure": null,
+      "verification_results": [],
+      "recovery_attempts": 0,
+      "recovery_turn_limit_reached": false,
+      "sample": 1,
+      "workdir": "samples/sample-1",
+      "passed": false
+    },
+    {
+      "finished": false,
+      "crashed": "wrote byte-identical content to 'test_pricing.py' 3 times in a row despite failing feedback each time \u2014 model is not adapting, stopping early instead of burning the rest of the turn budget",
+      "finish_summary": null,
+      "turns_used": 7,
+      "unverified_urls": [],
+      "initial_failure": null,
+      "verification_results": [],
+      "recovery_attempts": 0,
+      "recovery_turn_limit_reached": false,
+      "sample": 2,
+      "workdir": "samples/sample-2",
+      "passed": false
+    },
+    {
+      "finished": false,
+      "crashed": "wrote byte-identical content to 'test_pricing.py' 3 times in a row despite failing feedback each time \u2014 model is not adapting, stopping early instead of burning the rest of the turn budget",
+      "finish_summary": null,
+      "turns_used": 7,
+      "unverified_urls": [],
+      "initial_failure": null,
+      "verification_results": [],
+      "recovery_attempts": 0,
+      "recovery_turn_limit_reached": false,
+      "sample": 3,
+      "workdir": "samples/sample-3",
+      "passed": false
+    }
+  ],
+  "passed_count": 0,
+  "total": 3
+}

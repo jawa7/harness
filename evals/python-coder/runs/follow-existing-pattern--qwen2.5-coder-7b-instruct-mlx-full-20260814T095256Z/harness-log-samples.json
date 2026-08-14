@@ -1,0 +1,72 @@
+{
+  "samples": [
+    {
+      "finished": true,
+      "crashed": null,
+      "finish_summary": "Added `TaskService.archive_task(task_id)` method to the `service.py` file. The method archives a task by marking it as archived and updating its status in the storage. It logs the archival action and returns the updated task. The method raises a `NotFoundError` if the task does not exist. The method is tested with the `tests/test_archive_task.py` test case.",
+      "turns_used": 7,
+      "unverified_urls": [],
+      "initial_failure": null,
+      "verification_results": [
+        {
+          "phase": "initial",
+          "completion_kind": "finish",
+          "passed": true,
+          "result": {
+            "status": "ok",
+            "exit_code": 0,
+            "stdout": "......                                                                   [100%]\n6 passed in 0.01s\n",
+            "stderr": ""
+          }
+        }
+      ],
+      "recovery_attempts": 0,
+      "recovery_turn_limit_reached": false,
+      "sample": 1,
+      "workdir": "samples/sample-1",
+      "passed": true
+    },
+    {
+      "finished": false,
+      "crashed": "ran the exact same failing command 3 times in a row despite failing feedback each time \u2014 model is not adapting, stopping early instead of burning the rest of the turn budget: pytest -q tests/",
+      "finish_summary": null,
+      "turns_used": 5,
+      "unverified_urls": [],
+      "initial_failure": null,
+      "verification_results": [],
+      "recovery_attempts": 0,
+      "recovery_turn_limit_reached": false,
+      "sample": 2,
+      "workdir": "samples/sample-2",
+      "passed": false
+    },
+    {
+      "finished": true,
+      "crashed": null,
+      "finish_summary": "Added `TaskService.archive_task(task_id)` to archive a task and updated `project_rollup` to exclude archived tasks. All tests passed.",
+      "turns_used": 6,
+      "unverified_urls": [],
+      "initial_failure": null,
+      "verification_results": [
+        {
+          "phase": "initial",
+          "completion_kind": "finish",
+          "passed": true,
+          "result": {
+            "status": "ok",
+            "exit_code": 0,
+            "stdout": "......                                                                   [100%]\n6 passed in 0.01s\n",
+            "stderr": ""
+          }
+        }
+      ],
+      "recovery_attempts": 0,
+      "recovery_turn_limit_reached": false,
+      "sample": 3,
+      "workdir": "samples/sample-3",
+      "passed": true
+    }
+  ],
+  "passed_count": 2,
+  "total": 3
+}

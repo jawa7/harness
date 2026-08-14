@@ -1,0 +1,72 @@
+{
+  "samples": [
+    {
+      "finished": false,
+      "crashed": "ran the exact same failing command 3 times in a row despite failing feedback each time \u2014 model is not adapting, stopping early instead of burning the rest of the turn budget: pytest -q",
+      "finish_summary": null,
+      "turns_used": 8,
+      "unverified_urls": [],
+      "initial_failure": null,
+      "verification_results": [],
+      "recovery_attempts": 0,
+      "recovery_turn_limit_reached": false,
+      "sample": 1,
+      "workdir": "samples/sample-1",
+      "passed": false
+    },
+    {
+      "finished": true,
+      "crashed": null,
+      "finish_summary": "Implemented `LRUCache` in `lru_cache.py` with methods `get(key)` and `put(key, value)`. Added a capacity check to raise `ValueError` for capacities below one. The implementation maintains the order of keys using `OrderedDict`, ensuring that every successful `get` and `put` makes the key most recently used, and evicts the least recently used key when the cache is full.",
+      "turns_used": 4,
+      "unverified_urls": [],
+      "initial_failure": null,
+      "verification_results": [
+        {
+          "phase": "initial",
+          "completion_kind": "finish",
+          "passed": true,
+          "result": {
+            "status": "ok",
+            "exit_code": 0,
+            "stdout": "...                                                                      [100%]\n3 passed in 0.01s\n",
+            "stderr": ""
+          }
+        }
+      ],
+      "recovery_attempts": 0,
+      "recovery_turn_limit_reached": false,
+      "sample": 2,
+      "workdir": "samples/sample-2",
+      "passed": true
+    },
+    {
+      "finished": true,
+      "crashed": null,
+      "finish_summary": "Implemented `LRUCache` in `lru_cache.py`. All tests passed.",
+      "turns_used": 5,
+      "unverified_urls": [],
+      "initial_failure": null,
+      "verification_results": [
+        {
+          "phase": "initial",
+          "completion_kind": "finish",
+          "passed": true,
+          "result": {
+            "status": "ok",
+            "exit_code": 0,
+            "stdout": "...                                                                      [100%]\n3 passed in 0.01s\n",
+            "stderr": ""
+          }
+        }
+      ],
+      "recovery_attempts": 0,
+      "recovery_turn_limit_reached": false,
+      "sample": 3,
+      "workdir": "samples/sample-3",
+      "passed": true
+    }
+  ],
+  "passed_count": 2,
+  "total": 3
+}
