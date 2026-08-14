@@ -1,0 +1,729 @@
+[
+  {
+    "model": "websailor-3b",
+    "case": "live-czech-sports-10",
+    "status": "fail",
+    "aggregate": {
+      "status": "fail",
+      "passed": false,
+      "successes": 0,
+      "runs": 3
+    },
+    "completed_runs": 3,
+    "inconclusive_runs": 0,
+    "repetitions": 3,
+    "judge_overlaps_target": true,
+    "attempts": [
+      {
+        "repetition": 1,
+        "retry": 1,
+        "target_url": null,
+        "outcome": "completed",
+        "deterministic": {
+          "passed": false,
+          "failures": [
+            "answer contains 0 URLs; expected at least 10",
+            "answer contains 0 URLs; expected exactly 10",
+            "answer contains 0 dates; expected at least 10"
+          ],
+          "web_requests": 5,
+          "unique_sources": 12,
+          "output_urls": 0,
+          "output_dates": 0
+        },
+        "judge": {
+          "relevance": 0,
+          "completeness": 0,
+          "sources": 0,
+          "limitations": 5,
+          "average": 1.25,
+          "rationale": "The answer does not provide any Czech-language sports articles, URLs, or dates as requested. It only repeats the task's requirements without executing the search or citing any sources. The deterministic checks confirm zero output URLs and dates, indicating failure to fulfill the task.",
+          "passed": false
+        }
+      },
+      {
+        "repetition": 2,
+        "retry": 1,
+        "target_url": null,
+        "outcome": "completed",
+        "deterministic": {
+          "passed": false,
+          "failures": [
+            "answer contains 0 URLs; expected at least 10",
+            "answer contains 0 URLs; expected exactly 10",
+            "answer contains 0 dates; expected at least 10"
+          ],
+          "web_requests": 5,
+          "unique_sources": 12,
+          "output_urls": 0,
+          "output_dates": 0
+        },
+        "judge": {
+          "relevance": 0,
+          "completeness": 0,
+          "sources": 0,
+          "limitations": 5,
+          "average": 1.25,
+          "rationale": "The answer does not provide any Czech-language sports articles, URLs, or dates as requested. It only repeats the task's requirements without executing the search or citing any sources. The deterministic checks confirm zero output URLs and dates, indicating failure to fulfill the task.",
+          "passed": false
+        }
+      },
+      {
+        "repetition": 3,
+        "retry": 1,
+        "target_url": null,
+        "outcome": "completed",
+        "deterministic": {
+          "passed": false,
+          "failures": [
+            "answer contains 0 URLs; expected at least 10",
+            "answer contains 0 URLs; expected exactly 10",
+            "answer contains 0 dates; expected at least 10"
+          ],
+          "web_requests": 5,
+          "unique_sources": 12,
+          "output_urls": 0,
+          "output_dates": 0
+        },
+        "judge": {
+          "relevance": 0,
+          "completeness": 0,
+          "sources": 0,
+          "limitations": 5,
+          "average": 1.25,
+          "rationale": "The answer does not provide any Czech-language sports articles, URLs, or dates as requested. It only repeats the task's requirements without executing the search or citing any sources. The deterministic checks confirm zero output URLs and dates, indicating failure to fulfill the task.",
+          "passed": false
+        }
+      }
+    ]
+  },
+  {
+    "model": "websailor-3b",
+    "case": "live-page-cache",
+    "status": "fail",
+    "aggregate": {
+      "status": "fail",
+      "passed": false,
+      "successes": 0,
+      "runs": 3
+    },
+    "completed_runs": 3,
+    "inconclusive_runs": 0,
+    "repetitions": 3,
+    "judge_overlaps_target": true,
+    "attempts": [
+      {
+        "repetition": 1,
+        "retry": 1,
+        "target_url": "https://huggingface.co/Qwen/Qwen3.5-0.8B",
+        "outcome": "completed",
+        "deterministic": {
+          "passed": false,
+          "failures": [
+            "expected file was not created: model-card.raw",
+            "expected file was not created: model-card.txt"
+          ],
+          "web_requests": 1,
+          "unique_sources": 1,
+          "output_urls": 0,
+          "output_dates": 0
+        },
+        "judge": {
+          "relevance": 9,
+          "completeness": 7,
+          "sources": 4,
+          "limitations": 5,
+          "average": 6.25,
+          "rationale": "The answer addresses the task of fetching and saving model card data (relevance 9), but deterministic checks indicate files were not created (completeness 7). No specific URLs are cited despite referencing Hugging Face (sources 4). The answer lacks acknowledgment of file-saving failures (limitations 5).",
+          "passed": false
+        }
+      },
+      {
+        "repetition": 2,
+        "retry": 1,
+        "target_url": "https://huggingface.co/Qwen/Qwen3.5-0.8B",
+        "outcome": "completed",
+        "deterministic": {
+          "passed": false,
+          "failures": [
+            "expected file was not created: model-card.raw",
+            "expected file was not created: model-card.txt"
+          ],
+          "web_requests": 1,
+          "unique_sources": 1,
+          "output_urls": 0,
+          "output_dates": 0
+        },
+        "judge": {
+          "relevance": 9,
+          "completeness": 6,
+          "sources": 2,
+          "limitations": 7,
+          "average": 6.0,
+          "rationale": "The answer claims task completion but deterministic checks show file creation failures. The response mentions saving files without citing specific URLs (sources score low). Tool_trace indicates success but actual file outputs aren't verified. The answer addresses the task (relevance) but lacks concrete evidence of output files (completeness). Limitations aren't explicitly stated despite discrepancies between tool outputs and file existence.",
+          "passed": false
+        }
+      },
+      {
+        "repetition": 3,
+        "retry": 1,
+        "target_url": "https://huggingface.co/Qwen/Qwen3.5-0.8B",
+        "outcome": "completed",
+        "deterministic": {
+          "passed": false,
+          "failures": [
+            "expected file was not created: model-card.raw",
+            "expected file was not created: model-card.txt"
+          ],
+          "web_requests": 1,
+          "unique_sources": 1,
+          "output_urls": 0,
+          "output_dates": 0
+        },
+        "judge": {
+          "relevance": 5,
+          "completeness": 4,
+          "sources": 0,
+          "limitations": 3,
+          "average": 3.0,
+          "rationale": "The answer claims task completion but the deterministic checks show file creation failures. The response lacks cited sources and does not address the actual tool trace discrepancies. While it mentions saving files, the system logs indicate those files were not created.",
+          "passed": false
+        }
+      }
+    ]
+  },
+  {
+    "model": "websailor-3b",
+    "case": "live-topic-research",
+    "status": "fail",
+    "aggregate": {
+      "status": "fail",
+      "passed": false,
+      "successes": 0,
+      "runs": 3
+    },
+    "completed_runs": 3,
+    "inconclusive_runs": 0,
+    "repetitions": 3,
+    "judge_overlaps_target": true,
+    "attempts": [
+      {
+        "repetition": 1,
+        "retry": 1,
+        "target_url": null,
+        "outcome": "completed",
+        "deterministic": {
+          "passed": false,
+          "failures": [
+            "answer contains 0 URLs; expected at least 3"
+          ],
+          "web_requests": 9,
+          "unique_sources": 12,
+          "output_urls": 0,
+          "output_dates": 0
+        },
+        "judge": {
+          "relevance": 8,
+          "completeness": 5,
+          "sources": 0,
+          "limitations": 3,
+          "average": 4.0,
+          "rationale": "The answer attempted to research the topic using web searches but failed to include any URLs or citations in the final output. While it addressed the task's general scope, the lack of sources and specific findings makes it incomplete. The deterministic check failure confirms no URLs were provided, which is critical for validating claims.",
+          "passed": false
+        }
+      },
+      {
+        "repetition": 2,
+        "retry": 1,
+        "target_url": null,
+        "outcome": "completed",
+        "deterministic": {
+          "passed": false,
+          "failures": [
+            "answer contains 0 URLs; expected at least 3"
+          ],
+          "web_requests": 9,
+          "unique_sources": 12,
+          "output_urls": 0,
+          "output_dates": 0
+        },
+        "judge": {
+          "relevance": 8,
+          "completeness": 5,
+          "sources": 0,
+          "limitations": 3,
+          "average": 4.0,
+          "rationale": "The answer attempted to research the topic using web searches but failed to include any URLs or citations in the final output. While it addressed the task's general scope, the lack of sources and specific findings makes it incomplete. The deterministic check failure confirms no URLs were provided, which is critical for validating claims.",
+          "passed": false
+        }
+      },
+      {
+        "repetition": 3,
+        "retry": 1,
+        "target_url": null,
+        "outcome": "completed",
+        "deterministic": {
+          "passed": false,
+          "failures": [
+            "answer contains 0 URLs; expected at least 3"
+          ],
+          "web_requests": 9,
+          "unique_sources": 12,
+          "output_urls": 0,
+          "output_dates": 0
+        },
+        "judge": {
+          "relevance": 8,
+          "completeness": 5,
+          "sources": 0,
+          "limitations": 3,
+          "average": 4.0,
+          "rationale": "The answer attempted to research the topic using web searches but failed to include any URLs or citations in the final output. While it addressed the task's general scope, the lack of sources and specific findings makes it incomplete. The deterministic check failure confirms no URLs were provided, which is critical for validating claims.",
+          "passed": false
+        }
+      }
+    ]
+  },
+  {
+    "model": "websailor-3b",
+    "case": "live-url-summary",
+    "status": "pass",
+    "aggregate": {
+      "status": "pass",
+      "passed": true,
+      "successes": 3,
+      "runs": 3
+    },
+    "completed_runs": 3,
+    "inconclusive_runs": 0,
+    "repetitions": 3,
+    "judge_overlaps_target": true,
+    "attempts": [
+      {
+        "repetition": 1,
+        "retry": 1,
+        "target_url": "https://huggingface.co/Qwen/Qwen3.5-0.8B",
+        "outcome": "completed",
+        "deterministic": {
+          "passed": true,
+          "failures": [],
+          "web_requests": 1,
+          "unique_sources": 1,
+          "output_urls": 0,
+          "output_dates": 0
+        },
+        "judge": {
+          "relevance": 10,
+          "completeness": 10,
+          "sources": 8,
+          "limitations": 10,
+          "average": 9.5,
+          "rationale": "The answer fully addresses the task by summarizing the Hugging Face page's content, including model features, benchmarks, technical details, and deployment options. It explicitly states the absence of code examples/instructions, ensuring completeness and honesty about limitations. The source is tied to the fetched URL (though not cited explicitly), and the answer acknowledges missing information without overreaching.",
+          "passed": true
+        }
+      },
+      {
+        "repetition": 2,
+        "retry": 1,
+        "target_url": "https://huggingface.co/Qwen/Qwen3.5-0.8B",
+        "outcome": "completed",
+        "deterministic": {
+          "passed": true,
+          "failures": [],
+          "web_requests": 1,
+          "unique_sources": 1,
+          "output_urls": 0,
+          "output_dates": 0
+        },
+        "judge": {
+          "relevance": 10,
+          "completeness": 10,
+          "sources": 8,
+          "limitations": 10,
+          "average": 9.5,
+          "rationale": "The answer fully addresses the task by summarizing the Hugging Face page's content, including model features, benchmarks, technical details, and deployment options. It explicitly states the absence of code examples/instructions, ensuring completeness and honesty about limitations. The source is tied to the fetched URL (though not cited explicitly), and the answer acknowledges missing information without overreaching.",
+          "passed": true
+        }
+      },
+      {
+        "repetition": 3,
+        "retry": 1,
+        "target_url": "https://huggingface.co/Qwen/Qwen3.5-0.8B",
+        "outcome": "completed",
+        "deterministic": {
+          "passed": true,
+          "failures": [],
+          "web_requests": 1,
+          "unique_sources": 1,
+          "output_urls": 0,
+          "output_dates": 0
+        },
+        "judge": {
+          "relevance": 10,
+          "completeness": 10,
+          "sources": 5,
+          "limitations": 9,
+          "average": 8.5,
+          "rationale": "The answer directly addresses the task by summarizing the provided URL's content (Qwen3.5-0.8B model documentation) without external searches, covering technical details, benchmarks, and integration guides. Completeness is high as it captures all requested aspects. Sources score is low because the summary lacks explicit citations to the original URL (which isn't included in the answer). Limitations are minimal as it honestly states reliance on a single source and acknowledges potential gaps in specific details.",
+          "passed": true
+        }
+      }
+    ]
+  },
+  {
+    "model": "qwen/qwen3-8b",
+    "case": "live-czech-sports-10",
+    "status": "fail",
+    "aggregate": {
+      "status": "fail",
+      "passed": false,
+      "successes": 0,
+      "runs": 3
+    },
+    "completed_runs": 3,
+    "inconclusive_runs": 0,
+    "repetitions": 3,
+    "judge_overlaps_target": true,
+    "attempts": [
+      {
+        "repetition": 1,
+        "retry": 1,
+        "target_url": null,
+        "outcome": "completed",
+        "deterministic": {
+          "passed": false,
+          "failures": [
+            "answer contains 0 URLs; expected at least 10",
+            "answer contains 0 URLs; expected exactly 10",
+            "answer contains 0 dates; expected at least 10"
+          ],
+          "web_requests": 2,
+          "unique_sources": 5,
+          "output_urls": 0,
+          "output_dates": 0
+        },
+        "judge": {
+          "relevance": 7,
+          "completeness": 4,
+          "sources": 0,
+          "limitations": 8,
+          "average": 4.75,
+          "rationale": "The answer attempts to list Czech sports articles but lacks URLs, dates, and proper citations. While it addresses the task's general intent, critical elements like publication dates, URLs, and source verification are missing. The deterministic checks confirm these deficiencies, impacting completeness and sources scores. Limitations are partially addressed by noting some sources are English-focused but not explicitly stated.",
+          "passed": false
+        }
+      },
+      {
+        "repetition": 2,
+        "retry": 1,
+        "target_url": null,
+        "outcome": "completed",
+        "deterministic": {
+          "passed": false,
+          "failures": [
+            "answer contains 1 URLs; expected at least 10",
+            "answer contains 1 URLs; expected exactly 10",
+            "answer contains 0 dates; expected at least 10"
+          ],
+          "web_requests": 3,
+          "unique_sources": 5,
+          "output_urls": 1,
+          "output_dates": 0
+        },
+        "judge": {
+          "relevance": 7,
+          "completeness": 6,
+          "sources": 4,
+          "limitations": 8,
+          "average": 6.25,
+          "rationale": "The answer provides 10 articles but all cite a single source (NewsNow) with unclear language. While it addresses the task's quantity, the lack of unique sources and potential non-Czech content reduces reliability. The note acknowledges language uncertainty, but the deterministic checks failed due to URL and date inconsistencies.",
+          "passed": false
+        }
+      },
+      {
+        "repetition": 3,
+        "retry": 1,
+        "target_url": null,
+        "outcome": "completed",
+        "deterministic": {
+          "passed": false,
+          "failures": [
+            "answer contains 5 URLs; expected at least 10",
+            "answer contains 5 URLs; expected exactly 10",
+            "answer contains 0 dates; expected at least 10"
+          ],
+          "web_requests": 2,
+          "unique_sources": 5,
+          "output_urls": 5,
+          "output_dates": 0
+        },
+        "judge": {
+          "relevance": 8,
+          "completeness": 6,
+          "sources": 5,
+          "limitations": 7,
+          "average": 6.5,
+          "rationale": "The answer provides 10 articles but cites only 5 unique URLs, with several placeholders (e.g., 'https://www.newsnow.com/...') and incomplete links. Some articles lack explicit Czech-language verification, and dates are missing. While the task is addressed, source credibility and date accuracy are inconsistent.",
+          "passed": false
+        }
+      }
+    ]
+  },
+  {
+    "model": "qwen/qwen3-8b",
+    "case": "live-page-cache",
+    "status": "pass",
+    "aggregate": {
+      "status": "pass",
+      "passed": true,
+      "successes": 3,
+      "runs": 3
+    },
+    "completed_runs": 3,
+    "inconclusive_runs": 0,
+    "repetitions": 3,
+    "judge_overlaps_target": true,
+    "attempts": [
+      {
+        "repetition": 1,
+        "retry": 1,
+        "target_url": "https://huggingface.co/Qwen/Qwen3.5-0.8B",
+        "outcome": "completed",
+        "deterministic": {
+          "passed": true,
+          "failures": [],
+          "web_requests": 1,
+          "unique_sources": 1,
+          "output_urls": 1,
+          "output_dates": 0
+        },
+        "judge": {
+          "relevance": 10,
+          "completeness": 9,
+          "sources": 10,
+          "limitations": 10,
+          "average": 9.75,
+          "rationale": "The answer directly addresses the task by confirming the saved files (model-card.raw and model-card.txt) from the specified Hugging Face URL. The cited evidence matches the source URL, and the tool_trace confirms successful execution without missing information or limitations.",
+          "passed": true
+        }
+      },
+      {
+        "repetition": 2,
+        "retry": 1,
+        "target_url": "https://huggingface.co/Qwen/Qwen3.5-0.8B",
+        "outcome": "completed",
+        "deterministic": {
+          "passed": true,
+          "failures": [],
+          "web_requests": 1,
+          "unique_sources": 1,
+          "output_urls": 1,
+          "output_dates": 0
+        },
+        "judge": {
+          "relevance": 10,
+          "completeness": 10,
+          "sources": 10,
+          "limitations": 10,
+          "average": 10.0,
+          "rationale": "The answer directly addresses the task by confirming both raw and text files were saved as requested. It references the correct Hugging Face URL in the cited evidence. All tool statuses are 'ok' (no failures), and no limitations or missing information are reported.",
+          "passed": true
+        }
+      },
+      {
+        "repetition": 3,
+        "retry": 1,
+        "target_url": "https://huggingface.co/Qwen/Qwen3.5-0.8B",
+        "outcome": "completed",
+        "deterministic": {
+          "passed": true,
+          "failures": [],
+          "web_requests": 1,
+          "unique_sources": 1,
+          "output_urls": 1,
+          "output_dates": 0
+        },
+        "judge": {
+          "relevance": 10,
+          "completeness": 9,
+          "sources": 10,
+          "limitations": 10,
+          "average": 9.75,
+          "rationale": "The answer directly addresses the task by confirming the saved files (model-card.raw and model-card.txt) as requested. The cited Hugging Face URL matches the target page, and the excerpt confirms model card content. No limitations or missing information are reported since the task was completed successfully with no errors indicated in the tool trace.",
+          "passed": true
+        }
+      }
+    ]
+  },
+  {
+    "model": "qwen/qwen3-8b",
+    "case": "live-topic-research",
+    "status": "pass",
+    "aggregate": {
+      "status": "pass",
+      "passed": true,
+      "successes": 3,
+      "runs": 3
+    },
+    "completed_runs": 3,
+    "inconclusive_runs": 0,
+    "repetitions": 3,
+    "judge_overlaps_target": true,
+    "attempts": [
+      {
+        "repetition": 1,
+        "retry": 1,
+        "target_url": null,
+        "outcome": "completed",
+        "deterministic": {
+          "passed": true,
+          "failures": [],
+          "web_requests": 1,
+          "unique_sources": 5,
+          "output_urls": 4,
+          "output_dates": 0
+        },
+        "judge": {
+          "relevance": 10,
+          "completeness": 9,
+          "sources": 10,
+          "limitations": 9,
+          "average": 9.5,
+          "rationale": "The answer directly addresses the task by analyzing benefits (privacy, cost-efficiency) and limitations (tool use variability, evaluation gaps). Sources are explicitly tied to claims (e.g., Docker blog for control/privacy, ARXIV for tool-calling limitations). However, some claims (e.g., Qwen model performance) rely on specific models/frameworks, and the evaluation of 'model variability' could be more nuanced. Sources are credible and directly referenced, but one link (https://www.jdhodges.com/blog/...) may lack accessibility verification.",
+          "passed": true
+        }
+      },
+      {
+        "repetition": 2,
+        "retry": 1,
+        "target_url": null,
+        "outcome": "completed",
+        "deterministic": {
+          "passed": true,
+          "failures": [],
+          "web_requests": 1,
+          "unique_sources": 5,
+          "output_urls": 4,
+          "output_dates": 0
+        },
+        "judge": {
+          "relevance": 10,
+          "completeness": 9,
+          "sources": 10,
+          "limitations": 9,
+          "average": 9.5,
+          "rationale": "The answer directly addresses the task by analyzing benefits (privacy, cost-efficiency) and limitations (tool use variability, evaluation gaps). Sources are explicitly tied to claims (e.g., Docker blog for control/privacy, ARXIV for tool-calling limitations). However, some claims (e.g., Qwen model performance) rely on specific models/frameworks, and the evaluation of 'model variability' could be more nuanced. Sources are credible and directly referenced, but one link (https://www.jdhodges.com/blog/...) may lack accessibility verification.",
+          "passed": true
+        }
+      },
+      {
+        "repetition": 3,
+        "retry": 1,
+        "target_url": null,
+        "outcome": "completed",
+        "deterministic": {
+          "passed": true,
+          "failures": [],
+          "web_requests": 1,
+          "unique_sources": 5,
+          "output_urls": 4,
+          "output_dates": 0
+        },
+        "judge": {
+          "relevance": 10,
+          "completeness": 9,
+          "sources": 10,
+          "limitations": 9,
+          "average": 9.5,
+          "rationale": "The answer directly addresses the task by analyzing benefits (privacy, cost-efficiency) and limitations (tool use variability, evaluation gaps). Sources are explicitly tied to claims (e.g., Docker blog for control/privacy, ARXIV for tool-calling limitations). However, some claims (e.g., Qwen model performance) rely on specific models/frameworks, and the evaluation of 'model variability' could be more nuanced. Sources are credible and directly referenced, but one link (https://www.jdhodges.com/blog/...) may lack accessibility verification.",
+          "passed": true
+        }
+      }
+    ]
+  },
+  {
+    "model": "qwen/qwen3-8b",
+    "case": "live-url-summary",
+    "status": "fail",
+    "aggregate": {
+      "status": "fail",
+      "passed": false,
+      "successes": 1,
+      "runs": 3
+    },
+    "completed_runs": 3,
+    "inconclusive_runs": 0,
+    "repetitions": 3,
+    "judge_overlaps_target": true,
+    "attempts": [
+      {
+        "repetition": 1,
+        "retry": 1,
+        "target_url": "https://huggingface.co/Qwen/Qwen3.5-0.8B",
+        "outcome": "completed",
+        "deterministic": {
+          "passed": true,
+          "failures": [],
+          "web_requests": 1,
+          "unique_sources": 1,
+          "output_urls": 0,
+          "output_dates": 0
+        },
+        "judge": {
+          "relevance": 10,
+          "completeness": 9,
+          "sources": 5,
+          "limitations": 2,
+          "average": 6.5,
+          "rationale": "The answer is highly relevant as it directly addresses the task of summarizing the Hugging Face model page. It is mostly complete, covering key features and use cases, but omits specific benchmark details. Sources are not explicitly cited in the answer despite using the fetched URL. Limitations include potential incompleteness and lack of direct citation links.",
+          "passed": false
+        }
+      },
+      {
+        "repetition": 2,
+        "retry": 1,
+        "target_url": "https://huggingface.co/Qwen/Qwen3.5-0.8B",
+        "outcome": "completed",
+        "deterministic": {
+          "passed": true,
+          "failures": [],
+          "web_requests": 1,
+          "unique_sources": 1,
+          "output_urls": 0,
+          "output_dates": 0
+        },
+        "judge": {
+          "relevance": 10,
+          "completeness": 9,
+          "sources": 5,
+          "limitations": 2,
+          "average": 6.5,
+          "rationale": "The answer is highly relevant as it directly addresses the task of summarizing the Hugging Face model page. It is mostly complete, covering key features and use cases, but omits specific benchmark details. Sources are not explicitly cited in the answer despite using the fetched URL. Limitations include potential incompleteness and lack of direct citation links.",
+          "passed": false
+        }
+      },
+      {
+        "repetition": 3,
+        "retry": 1,
+        "target_url": "https://huggingface.co/Qwen/Qwen3.5-0.8B",
+        "outcome": "completed",
+        "deterministic": {
+          "passed": true,
+          "failures": [],
+          "web_requests": 1,
+          "unique_sources": 1,
+          "output_urls": 0,
+          "output_dates": 0
+        },
+        "judge": {
+          "relevance": 10,
+          "completeness": 9,
+          "sources": 6,
+          "limitations": 5,
+          "average": 7.5,
+          "rationale": "The answer addresses the task by summarizing the model's features, parameters, and use cases from the fetched URL. It is comprehensive but lacks specific citations to the source URL. The absence of explicit sourcing and potential gaps in coverage (e.g., missing benchmarks) are limitations.",
+          "passed": true
+        }
+      }
+    ]
+  }
+]

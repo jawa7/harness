@@ -1,0 +1,1 @@
+`Storage.update()` is corrupting a task when called by `TaskService.complete_task()`: callers pass partial changes, but the stored task loses fields that were not passed. Investigate the relevant call sites (including bulk import) and fix the bug without breaking full-record updates. Do not modify tests.

@@ -1,0 +1,9 @@
+{
+  "relevance": 3,
+  "completeness": 2,
+  "sources": 0,
+  "limitations": 7,
+  "average": 3.0,
+  "rationale": "The answer acknowledges the inability to find authoritative sources on reliable tool calling but fails to provide any URLs or citations. Relevance is low as it doesn't fulfill the task of identifying a source. Completeness is minimal due to lack of actionable information. Sources score zero because no references are provided. Limitations are addressed honestly by explaining search gaps, though the response could have explicitly stated its inability to locate sources.",
+  "passed": false
+}

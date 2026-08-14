@@ -1,0 +1,13 @@
+Build $task_name — content-population run of an already-accepted design.
+This is NOT a new design — populate it with different real content. Write
+it to $output_file using write_file.
+
+Design tokens (colors and font stacks) ARE fixed — use these exact values,
+they are a deliberate design decision, not yours to change:
+$design_tokens
+
+Content for this run (use this real content, not the design's original
+placeholder example):
+$content_fields
+
+$skeleton_html

@@ -1,0 +1,15 @@
+{
+  "relevance": 10,
+  "completeness": 5,
+  "sources": 2,
+  "limitations": 0,
+  "dimensions": [
+    "relevance",
+    "completeness",
+    "sources",
+    "limitations"
+  ],
+  "average": 4.25,
+  "rationale": "Answer provides exactly 10 articles as requested (relevance: 10). However, all entries cite the same URL (sources: 2) and only two distinct dates (completeness: 5). No limitations are acknowledged despite the single URL issue.",
+  "passed": false
+}

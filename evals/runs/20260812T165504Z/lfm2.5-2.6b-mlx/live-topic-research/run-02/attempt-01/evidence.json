@@ -1,0 +1,186 @@
+{
+  "cited_urls": [
+    "https://magazine.sebastianraschka.com/p/state-of-llms-2025",
+    "https://www.docker.com/blog/local-llm-tool-calling-a-practical-evaluation",
+    "https://www.nature.com/articles/s41598-025-06469-w",
+    "https://www.promptquorum.com/power-local-llm/best-local-models-tool-calling-2026"
+  ],
+  "cited_sources": [
+    {
+      "url": "https://magazine.sebastianraschka.com/p/state-of-llms-2025",
+      "title": "The State Of LLMs 2025: Progress, Problems, and Predictions",
+      "excerpt": "To wrap things up, I think if there is one meta-lesson from 2025, it is that progress in LLMs is less about a single breakthrough, and improvements are being made on multiple fronts via multiple independent levers. This includes architecture tweaks, data quality improvements, reasoning training, inference scaling, tool calling, and more.\n\nAt the same time, evaluation remains hard, benchmarks are imperfect, and good judgment about when and how to use these systems is still essential. [...] At the",
+      "tool": "web_search"
+    },
+    {
+      "url": "https://www.docker.com/blog/local-llm-tool-calling-a-practical-evaluation",
+      "title": "Tool Calling with Local LLMs: A Practical Evaluation - Docker",
+      "excerpt": "Skip to content\n\nSign In\n\n# Tool Calling with Local LLMs: A Practical Evaluation\n\nPosted Jun 30, 2025\n\nProfile pic of Ignasi Lopez Luna\n\nIgnasi Lopez Luna\n\n## Which local model should I use for tool calling? [...] Qwen models dominate: Even the 8B version of Qwen3 outperformed any other local model\n Reasoning = latency: Higher-accuracy models take longer, often significantly.\n\nTool calling is core to almost every real-world GenAI application. Whether you’re building agents or creating agentic wo",
+      "tool": "web_search"
+    },
+    {
+      "url": "https://www.nature.com/articles/s41598-025-06469-w",
+      "title": "A study on classification based concurrent API calls and ...",
+      "excerpt": "### Similar content being viewed by others\n\n### Capable language models can outgrow the benefits of collaboration\n\nArticle\nOpen access\n24 July 2026\n\n### Industrial applications of large language models\n\nArticle\nOpen access\n21 April 2025\n\n### AI language model rivals expert ethicist in perceived moral expertise\n\nArticle\nOpen access\n03 February 2025\n\n## Introduction",
+      "tool": "web_search"
+    },
+    {
+      "url": "https://www.promptquorum.com/power-local-llm/best-local-models-tool-calling-2026",
+      "title": "Best Local Models for Tool Calling in 2026: Benchmarks & ...",
+      "excerpt": "Trois catégories de modèles qui échouent en tool calling : modèles sub-7B produisent des appels malformés sur les tches multi-étapes ; modèles sans entraînement tool calling paraphrasent les appels en prose ; quantisation Q3/Q2 dégrade la fiabilité outil avant la qualité chat — Q4\\_K\\_M est le seuil de production. [...] Trois catégories de modèles qui échouent en tool calling : modèles sub-7B produisent des appels malformés sur les tches multi-étapes ; modèles sans entraînement tool calling para",
+      "tool": "web_search"
+    }
+  ],
+  "available_sources": [
+    {
+      "url": "https://magazine.sebastianraschka.com/p/state-of-llms-2025",
+      "title": "The State Of LLMs 2025: Progress, Problems, and Predictions",
+      "excerpt": "To wrap things up, I think if there is one meta-lesson from 2025, it is that progress in LLMs is less about a single breakthrough, and improvements are being made on multiple fronts via multiple independent levers. This includes architecture tweaks, data quality improvements, reasoning training, inference scaling, tool calling, and more.\n\nAt the same time, evaluation remains hard, benchmarks are imperfect, and good judgment about when and how to use these systems is still essential. [...] At the",
+      "tool": "web_search"
+    },
+    {
+      "url": "https://www.emergentmind.com/topics/multi-turn-tool-calling-llms",
+      "title": "Multi-Turn Tool-Calling LLMs: Advances & Challenges",
+      "excerpt": "In summary, the current state of multi-turn tool-calling LLMs is characterized by rapid progress in dataset construction, algorithm design, system integration, and multifaceted evaluation, with outstanding challenges in temporal alignment, robustness to erroneous assertions, long-context scalability, and effective agentic planning (Yin et al., 10 Mar 2025, Kate et al., 30 Apr 2025, Cheng et al., 27 Oct 2025, Xu et al., 28 Oct 2025, Waqas et al., 29 Nov 2025). Developing reliable, real-world [...",
+      "tool": "web_search"
+    },
+    {
+      "url": "https://arxiv.org/html/2605.00737v1",
+      "title": "A Framework to Assess and Optimize LLM Tool Calling - arXiv",
+      "excerpt": "To Call or Not to Call:A Framework to Assess and Optimize LLM Tool Calling\nReport GitHub Issue\n×\nTitle:\nContent selection saved. Describe the issue below:\nDescription:\nSubmit without GitHub\nSubmit in GitHub\narXiv is now an independent nonprofit!\nLearn more\n×\nBack to arXiv\nWhy HTML?\nReport Issue\nBack to Abstract\nDownload PDF\nAbstract\n1\nIntroduction\n2\nRelated Work\n3\nOperating Frameworks for Assessing and Optimizing Tool Calling\nProblem Setup\nEvaluating Tool Calling Decisions\n4\nExperiments and Findings\n4.1\nNeed and Utility\n4.2\nCost and Affordability\n4.3\nThe Controller Framework\n5\nConcluding Discussion\n6\nDisclosure of LLM use in Research\nReferences\nA\nExperimental Setup\nA.1\nModels\nOpen-source models.\nA.2\nTask and Dataset\nA.2.1\nMain: Entity Task Dataset Construction\nInvivoQuery Task Dataset.\nA.2.2\nBFCL Task Dataset\nA.3\nScoring\nA.3.1\nEntity and InvivoQuery task\nClaim Extraction and Verification Prompts.\n(1) Claim Extraction.\n(2) Claim Verification.\nA.3.2\nBFCL Scorer\nA.4\nAgentic Tool-Use Framework\nA.4.1\nStage 1: Tool decision.\nThe self-awareness setup.\nThe no-tool setup.\nThe\nAlways Tool\nsetup.\nPerceived need prompts\nCost-Aware Tool Description Variants\n(1) Explicit Budget (No Implicit Calculation Required).\n(2) Implicit Budget (Requires Internal Calculation).\nBudget-Aware Setting.\nStage 2: Response generation.\nA.5\nWeb-Search Backend\nGoogle Search via SerpAPI.\nPerplexity Search.\nA.6\nThe Controller Framework\nB\nHuman Alignment with the LLM-as-Judge Evaluation\nC\nExample of True Negative Utility\nEntity: Sky Blue\nD\nAdditional Entity Task Results\nD.1\nNormative Lens\nD.2\nDescriptive Lens\nD.",
+      "tool": "web_search",
+      "fetch_id": "fetch-20260812T173953Z-fd530b",
+      "cache_path": "evals/runs/20260812T165504Z/lfm2.5-2.6b-mlx/live-topic-research/run-02/attempt-01/fetches/fetch-20260812T173953Z-fd530b/text.txt"
+    },
+    {
+      "url": "https://www.docker.com/blog/local-llm-tool-calling-a-practical-evaluation",
+      "title": "Tool Calling with Local LLMs: A Practical Evaluation - Docker",
+      "excerpt": "Skip to content\n\nSign In\n\n# Tool Calling with Local LLMs: A Practical Evaluation\n\nPosted Jun 30, 2025\n\nProfile pic of Ignasi Lopez Luna\n\nIgnasi Lopez Luna\n\n## Which local model should I use for tool calling? [...] Qwen models dominate: Even the 8B version of Qwen3 outperformed any other local model\n Reasoning = latency: Higher-accuracy models take longer, often significantly.\n\nTool calling is core to almost every real-world GenAI application. Whether you’re building agents or creating agentic wo",
+      "tool": "web_search"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=vdUxBDulv1M",
+      "title": "LLM Tool Calling EXPLAINED! - The Power Behind AI Agents",
+      "excerpt": "you're going to be asking a question let's say did Donald Trump won 2024\npresidential election in your large language model with uh with AMA with\nyour local large language model if you don't have access to the internet you\nwill see that the large language model will be giving you an answer saying I\ndon't have the context of a224 due to the cut off of the training dates this\nis happening because of the large language model always responds to the [...] # LLM Tool Calling EXPLAINED! - The Power Beh",
+      "tool": "web_search"
+    },
+    {
+      "url": "https://dev.to/docteurrs/calling-code-with-local-llm-is-a-hoax-2n51",
+      "title": "Calling code with local LLM is a hoax - DEV Community",
+      "excerpt": "On the dark side:\n\n Tool calling still isn't working!\n Human input doesn't always trigger\n Low consistency with infinite loops\n Bugs\n Soooooo many prompts to write\n\n## Available chat mechanisms you can use\n\nThere are \"sequential\" and \"hierarchical\". Sequential will allow your LLMs to go through the tasks in the order you choose. Hierarchical on the other side will create a ghost agent that automatically decides which one of your agents should be triggered using its description. [...] AutoGen cle",
+      "tool": "web_search"
+    },
+    {
+      "url": "https://www.jdhodges.com/blog/local-llms-on-tool-calling-2026-pt1-local-lm",
+      "title": "I Tested 13 Local LLMs on Tool Calling | 2026 Eval Results",
+      "excerpt": "I Tested 13 Local LLMs on Tool Calling | 2026 Eval Results\nSkip to content\nJ.D. Hodges\nEvery man has a story, this is my story.\nBlogging since 1999.\nHome\nAsk J.D.\nGadgets and Tech\nSolar System Monitor\nI Tested 13 Local LLMs on Tool Calling: March 2026\nThursday, 2026.03.19\nJ.D. H.\nLeave a comment\nI built a deterministic eval harness and tested 13 local LLMs on tool calling (function calling) to find out which models work decently well for agentic tasks. The result that surprised me most: a 3.4 GB model scored higher than everything else I tested, including models five times its size.\nIf you’re running a local AI stack with Open WebUI, LM Studio, or any OpenAI-compatible frontend, tool calling is one of the key features that enables agentic behavior. It lets models call functions like checking weather, sending emails, or setting reminders instead of just generating text. But not every model handles it well, and the popular benchmarks don’t always reflect what you’ll get when serving models through a local inference server like LM Studio.\nSo I ran 13 models through 40 test cases across five categories. No LLM-as-judge, no random vibes, just schema-aware pass/fail scoring with deterministic and reproducible results.\nThe Setup\nHardware:\nAMD AI Max+ 395 with 128 GB unified RAM (about 96 GB allocatable to GPU). All models served through LM Studio v0.4.6 using Q4_K_M quantization over the OpenAI-compatible API. One exception: Gemma 3 4B QAT used Google’s pre-quantized Q4_0, since the whole point of QAT is that the model was trained specifically for that quantization level.\nThe eval",
+      "tool": "web_search",
+      "fetch_id": "fetch-20260812T173923Z-899c3d",
+      "cache_path": "evals/runs/20260812T165504Z/lfm2.5-2.6b-mlx/live-topic-research/run-02/attempt-01/fetches/fetch-20260812T173923Z-899c3d/text.txt"
+    },
+    {
+      "url": "https://forums.developer.nvidia.com/t/toolery-0-1-0-a-deterministic-tool-calling-benchmark-for-local-llms/371794",
+      "title": "Toolery 0.1.0 - a deterministic tool-calling benchmark for local LLMs - DGX Spark / GB10 Projects - NVIDIA Developer Forums",
+      "excerpt": "One last thing worth pointing you at: the Profiles tab. That’s where it gets genuinely handy instead of staring at a wall of numbers, you can pick a local LLM based on what you actually need it for. It rebalances the weighting across capabilities depending on the job, so a model tuned for agentic coding bubbles up for one profile and a tidy structured-output workhorse wins for another. Saves you the mental gymnastics of deciding which columns matter today. [...] image\n\nThe part I find most usefu",
+      "tool": "web_search"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=sI6P20KueUA",
+      "title": "Should Developers Learn to Run Local LLMs?",
+      "excerpt": "have really good harnesses and orchestrations around the local model like Deep Seek from and there's several others, you might be able to get exactly what you need or more than you need in terms of application. So, depends, you know, the local model, the advantage there is that security in theory cuz you don't you know, you got to make sure things are locked down in those local models, but you have much you have total control, right? You control it. It's open source. And the other advantage, [..",
+      "tool": "web_search"
+    },
+    {
+      "url": "https://iternal.ai/llm-selection-guide",
+      "title": "LLM Comparison 2026: 30+ Models Benchmarked & Ranked",
+      "excerpt": "### 2.3 Benchmark Limitations & Saturation\n\nCritical understanding: Benchmarks are indicators, not guarantees. [...] Key frameworks:\n\n   DeepEval -- 50+ research-backed metrics including G-Eval, hallucination detection, answer relevancy, task completion\n   Langfuse -- LLM-as-judge integration with production tracing\n   Arize Phoenix -- Open-source evaluation with hallucination-specific judges\n   Amazon Bedrock Model Evaluation -- Managed LLM-as-judge on AWS\n\n### 8.3 A/B Testing Frameworks [...] ",
+      "tool": "web_search"
+    },
+    {
+      "url": "https://www.confident-ai.com/blog/llm-agent-evaluation-complete-guide",
+      "title": "LLM Agent Evaluation Metrics in 2026: Tool Calling, Task ...",
+      "excerpt": "Plan Adherence is most useful when your agent has an explicit intended workflow, such as debugging, customer support escalation, research, data analysis, or code generation. It tells you whether the agent stayed on track, not just whether it eventually produced an answer.\n\n## Evaluating Agent Outcomes [...] + LLM Agent Evaluation vs LLM Evaluation\n+ LLM Agent Evaluation vs RAG Evaluation\n+ What Makes LLM Agents Hard to Evaluate?\n+ What Are the Types of LLM Agent Evaluation?\n\n LLM Agent Evaluatio",
+      "tool": "web_search"
+    },
+    {
+      "url": "https://www.instaclustr.com/education/open-source-ai/top-7-open-source-llms-for-2026",
+      "title": "Top 7 open source LLMs for 2026",
+      "excerpt": "Related content: Read our guide to open source databases\n\n## Benefits of using open source LLMs\n\nOpen source large language models offer several advantages: [...] ### 2. Google Gemma 4\n\nGemma 4 is a family of open models derived from Gemini research, aiming to maximize performance relative to model size while remaining efficient enough for local deployment. It includes multiple model sizes ranging from edge devices to workstation-scale systems, and supports multimodal reasoning, multilingual tas",
+      "tool": "web_search"
+    },
+    {
+      "url": "https://blog.promptlayer.com/llm-agents-vs-function-calling",
+      "title": "LLM Agent vs Function Calling: Key Differences & Use Cases",
+      "excerpt": "LLM Agent vs Function Calling: Key Differences & Use Cases\nPlatform\n-- Prompt Management\n-- Evaluations\n-- Observability\n-- Dataset Management\n-- Prompt Chaining\nDocs\nBlog\nCase Studies\nCareers\nLog in\nContact Us\nContact Us\nLog In\nBack\nLLM Agents vs. Function Calling: An Analysis of Techniques\nBy\nJonathan Pedoeem\nMar 13, 2025\nllm agent vs function calling\nAs LLMs are adopted across industries, it has become crucial to let them interact with real-world systems and perform tasks beyond simple text generation. Two primary methods address this need: LLM Agents and Function Calling.\nIn short, LLM Agents are modular AI systems designed for complex, multi-step reasoning with memory and planning, while Function Calling is a simpler pattern for structured interactions between LLMs and predefined external functions, tools, or APIs.\nThis article provides a comprehensive comparison of these techniques, examining their core concepts, strengths, weaknesses, use cases, and technical underpinnings.\nTable of Contents\nWhat are LLM Agents?\nWhat is Function Calling?\nAdvantages and Disadvantages of LLM Agents\nAdvantages and Disadvantages of Function Calling\nUse Cases and Applications\nTechnical Distinctions and Comparison\nConclusion\nWhat are LLM Agents?\nLLM Agents are sophisticated AI systems built upon the foundation of large language models. They are designed to perform complex tasks that necessitate sequential reasoning. Unlike traditional AI systems that react to single prompts, LLM agents can think ahead, remember past interactions, and utilize external tools to adapt their responses based on",
+      "tool": "web_search",
+      "fetch_id": "fetch-20260812T173954Z-9a3027",
+      "cache_path": "evals/runs/20260812T165504Z/lfm2.5-2.6b-mlx/live-topic-research/run-02/attempt-01/fetches/fetch-20260812T173954Z-9a3027/text.txt"
+    },
+    {
+      "url": "https://www.adaline.ai/blog/understanding-llms-and-tool-calling",
+      "title": "Understanding LLMs and Tool Calling | Adaline",
+      "excerpt": "## Parallel tool execution techniques\n\n### Understanding LLMCompiler\n\nLLMCompiler is a framework that optimizes orchestration of parallel function calling with LLMs. It automatically identifies which tasks can be performed in parallel and which are interdependent, addressing key limitations in traditional sequential execution models. [...] Accuracy: Intermediate results can affect the LLM's flow in sequential models\n Speed: Parallel execution provides significant latency improvements (up to 3.7x",
+      "tool": "web_search"
+    },
+    {
+      "url": "https://christianjmills.com/posts/mastering-llms-course-notes/conference-talk-019",
+      "title": "Conference Talk 19: Fine Tuning LLMs for Function Calling – Christian Mills",
+      "excerpt": "+ JSON Schema:\n    - Advantages: Better suited for complex, nested parameter types; easier to enforce schema with constraint generation; compatible with OpenAI APIs.\n    - Disadvantages: Potentially more challenging for LLMs to generate compared to Python syntax. [...] Options:\n  + Python Syntax: Generate function calls using Python function call signature syntax.\n  + JSON Schema: Generate JSON structures describing the function name and parameters.\n Trade-offs:\n  + Python Syntax:\n    - Advantag",
+      "tool": "web_search"
+    },
+    {
+      "url": "https://mbrenndoerfer.com/writing/function-calling-llm-structured-tools",
+      "title": "Function Calling: Structured Tool Use for LLMs - Interactive | Michael Brenndoerfer",
+      "excerpt": "Out:\n\nVisualization\n\nGrouped bar chart comparing latency in seconds for sequential versus parallel execution across 1 to 5 function calls. Sequential latency grows linearly while parallel latency grows much more slowly. [...] Latency comparison between parallel and sequential execution strategies for multiple independent function calls. Sequential latency grows linearly at 1.2 seconds per call, while parallel latency grows much more slowly due to concurrent execution. For five independent calls,",
+      "tool": "web_search"
+    },
+    {
+      "url": "https://arxiv.org/html/2603.22862v2",
+      "title": "The Evolution of Tool Use in LLM Agents: From Single-Tool Call to Multi-Tool Orchestration",
+      "excerpt": "To address the cumulative delays and inefficiencies caused by sequential execution in long-chain multi-tool calls, parallel execution (233) has become a key optimization direction. Its core idea is to decompose tasks, identify subtasks with no interdependencies, and execute them simultaneously. SoT (124) accelerates inference by expanding multiple skeleton branches in parallel instead of following a fully sequential decoding pattern. At the tool level, LLMCompiler (78) explicitly plans task [...",
+      "tool": "web_search"
+    },
+    {
+      "url": "https://www.nature.com/articles/s41598-025-06469-w",
+      "title": "A study on classification based concurrent API calls and ...",
+      "excerpt": "### Similar content being viewed by others\n\n### Capable language models can outgrow the benefits of collaboration\n\nArticle\nOpen access\n24 July 2026\n\n### Industrial applications of large language models\n\nArticle\nOpen access\n21 April 2025\n\n### AI language model rivals expert ethicist in perceived moral expertise\n\nArticle\nOpen access\n03 February 2025\n\n## Introduction",
+      "tool": "web_search"
+    },
+    {
+      "url": "https://www.promptquorum.com/power-local-llm/best-local-models-tool-calling-2026",
+      "title": "Best Local Models for Tool Calling in 2026: Benchmarks & ...",
+      "excerpt": "Trois catégories de modèles qui échouent en tool calling : modèles sub-7B produisent des appels malformés sur les tches multi-étapes ; modèles sans entraînement tool calling paraphrasent les appels en prose ; quantisation Q3/Q2 dégrade la fiabilité outil avant la qualité chat — Q4\\_K\\_M est le seuil de production. [...] Trois catégories de modèles qui échouent en tool calling : modèles sub-7B produisent des appels malformés sur les tches multi-étapes ; modèles sans entraînement tool calling para",
+      "tool": "web_search"
+    },
+    {
+      "url": "/goto?url=CAESegHuR6pNSnYAe39pHB0naUjLJFfUcVdN1hhudAVw-fiK9AnfYK4S1kaup7ZB7gGsztV9FgmqCY9E_j2PRo-YkCxBVslFoS5XOUUELybxDjUqL6pTm2Hddp7sQQJdX_yzw0Tv06J8GcfmarRXaifUSnMeIyav_AxEinl_",
+      "title": "Function Calling with Local LLMs",
+      "excerpt": "Oct 30, 2024 — One of the main advantages of local LLMs is their ability to perform programming tasks, like data handling or making API calls. call out of the",
+      "tool": "web_search"
+    },
+    {
+      "url": "/goto?url=CAESdAHuR6pNncc2j7ipugn1Q54oEHuFE0fFMrR7ER8cULq9JssRDhDx2TdyMeoyybaeKRY-6gQx4Q5hXFVQIOgd3f5QnDyxep6mwimGnBHSp_i5Zc0wxMlvu7bsM8MSsndXwE-lC19cA7SHEvaU6ZYNWG3kc3_a",
+      "title": "LLM Agent vs Function Calling: Key Differences & Use Cases",
+      "excerpt": "Mar 13, 2025 — Disadvantages: Limited Memory: : Agents can generate factually incorrect or nonsensical information. Disadvantages: Predefined API Integration",
+      "tool": "web_search"
+    },
+    {
+      "url": "/goto?url=CAESewHuR6pNKsGNbMbSPbTpoErjtrI2T5_N-KhuQt665ZwH0pI752mthAtVm_XKQPEdHYOWYBCpJcnSFKrSebJeYUzZChnJVu_0j0dx_FCW-yfBKekMf_GfnBJWFpzidY6uINFby_DzpRhW-5Xnam_J3TNfUG340Wk3CQOp7Q%3D%3D",
+      "title": "Function Calling with Open-Source LLMs",
+      "excerpt": "Sep 11, 2024 — # While open-source LLMs offer advantages in terms of flexibility and customization, you may find it difficult to implement function calling",
+      "tool": "web_search"
+    },
+    {
+      "url": "/goto?url=CAESfwHuR6pNAkP1tAPyVodehentyoRfgZn6ULYrcdOo-o-NxtRQrprPee9axLeGzl0rz0GT0w8YwneyKvu4N2gF7oK80pn_dJWEPVmI3g3akT2ylW274cG3MNyW7SHYfj8M2DjqlCYlKZl-N0p_ynl3tK6guXcThLOIB1LS0igDqBQ%3D",
+      "title": "Function Calling with Local LLMs",
+      "excerpt": "Embracing local LLMs with function calling is not just about saving costs — it's about gaining independence and flexibility in how you deploy ...Read more",
+      "tool": "web_search"
+    },
+    {
+      "url": "/goto?url=CAESngEB7keqTb8c3R7cM17WVJUayTaMuUApRbRLcrf7veQobYIH5-xr934k1ifxm4fWvrUcu8KTiWRnde-b6vMfuUcgqDU08KFL-Nys4IZ_gcgtw9vCZqyd_iWamCLLqs5EmXEQmFKV3ySPE5AakZRQYWZJIK_bDdNtK9PLsdxjIPMgXcANOXsjW-BGc0hIYpcqUJkCvO8Bvg579opqPem8Tg%3D%3D",
+      "title": "Function Calling in LLMs – Real Use Cases and Value?",
+      "excerpt": "I'm still trying to make sense of function calling in LLMs. Has anyone found a use case where this functionality provides significant value?",
+      "tool": "web_search"
+    }
+  ]
+}

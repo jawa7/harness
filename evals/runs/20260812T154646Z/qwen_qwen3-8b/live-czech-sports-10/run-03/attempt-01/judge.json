@@ -1,0 +1,9 @@
+{
+  "relevance": 8,
+  "completeness": 6,
+  "sources": 5,
+  "limitations": 7,
+  "average": 6.5,
+  "rationale": "The answer provides 10 articles but cites only 5 unique URLs, with several placeholders (e.g., 'https://www.newsnow.com/...') and incomplete links. Some articles lack explicit Czech-language verification, and dates are missing. While the task is addressed, source credibility and date accuracy are inconsistent.",
+  "passed": false
+}

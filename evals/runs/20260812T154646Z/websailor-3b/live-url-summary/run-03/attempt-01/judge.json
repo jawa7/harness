@@ -1,0 +1,9 @@
+{
+  "relevance": 10,
+  "completeness": 10,
+  "sources": 5,
+  "limitations": 9,
+  "average": 8.5,
+  "rationale": "The answer directly addresses the task by summarizing the provided URL's content (Qwen3.5-0.8B model documentation) without external searches, covering technical details, benchmarks, and integration guides. Completeness is high as it captures all requested aspects. Sources score is low because the summary lacks explicit citations to the original URL (which isn't included in the answer). Limitations are minimal as it honestly states reliance on a single source and acknowledges potential gaps in specific details.",
+  "passed": true
+}

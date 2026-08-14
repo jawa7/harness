@@ -1,0 +1,9 @@
+{
+  "relevance": 10,
+  "completeness": 9,
+  "sources": 10,
+  "limitations": 8,
+  "average": 9.25,
+  "rationale": "The answer directly addresses the task by providing a relevant source on tool calling best practices. It cites one specific URL and explains key points from the source, fulfilling the request for a reliable tool calling reference. However, it does not explicitly acknowledge potential limitations (e.g., the source's scope or accessibility), which slightly reduces its completeness score. The cited Medium article is a valid, publicly available source, ensuring strong sourcing credibility.",
+  "passed": true
+}

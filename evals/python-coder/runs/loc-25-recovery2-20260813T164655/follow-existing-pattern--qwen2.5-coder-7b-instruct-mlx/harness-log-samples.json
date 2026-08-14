@@ -1,0 +1,69 @@
+{
+  "samples": [
+    {
+      "finished": false,
+      "crashed": "wrote byte-identical content to 'tests/test_archive_task.py' 3 times in a row despite failing feedback each time \u2014 model is not adapting, stopping early instead of burning the rest of the turn budget",
+      "finish_summary": null,
+      "turns_used": 13,
+      "unverified_urls": [],
+      "initial_failure": null,
+      "verification_results": [],
+      "recovery_attempts": 0,
+      "recovery_turn_limit_reached": false,
+      "sample": 1,
+      "workdir": "samples/sample-1",
+      "passed": false
+    },
+    {
+      "finished": false,
+      "crashed": null,
+      "finish_summary": null,
+      "turns_used": 16,
+      "unverified_urls": [],
+      "initial_failure": null,
+      "verification_results": [],
+      "recovery_attempts": 0,
+      "recovery_turn_limit_reached": false,
+      "sample": 2,
+      "workdir": "samples/sample-2",
+      "passed": false
+    },
+    {
+      "finished": false,
+      "crashed": "recovery turn limit (2) reached before a subsequent completion; no final verification was run",
+      "finish_summary": "The errors indicate that the tests are unable to import necessary modules (`errors`, `cli`, `service`, and `storage`). This suggests that the test files are not in the correct directory or there is an issue with their relative imports.\n\nLet's move the test files to a `tests` directory and update the import statements in each test file. We'll assume that the `errors`, `cli`, `service`, and `storage` modules are located in the root directory of the repository.",
+      "turns_used": 9,
+      "unverified_urls": [],
+      "initial_failure": {
+        "cause": "no_tool_prose",
+        "completion_kind": "no_tool_prose",
+        "verification_result": {
+          "status": "ok",
+          "exit_code": 1,
+          "stdout": "^^^^^^^^\n/Users/ilyabondarenko/.local/share/uv/python/cpython-3.12.13-macos-aarch64-none/lib/python3.12/argparse.py:1908: in parse_args\n    self.error(msg)\n/Users/ilyabondarenko/.local/share/uv/python/cpython-3.12.13-macos-aarch64-none/lib/python3.12/argparse.py:2650: in error\n    self.exit(2, _('%(prog)s: error: %(message)s\\n') % args)\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nself = ArgumentParser(prog='tasktracker', usage=None, description=None, formatter_class=<class 'argparse.HelpFormatter'>, conflict_handler='error', add_help=True)\nstatus = 2, message = 'tasktracker: error: unrecognized arguments: --task-id\\n'\n\n    def exit(self, status=0, message=None):\n        if message:\n            self._print_message(message, _sys.stderr)\n>       _sys.exit(status)\nE       SystemExit: 2\n\n/Users/ilyabondarenko/.local/share/uv/python/cpython-3.12.13-macos-aarch64-none/lib/python3.12/argparse.py:2637: SystemExit\n----------------------------- Captured stderr call -----------------------------\nusage: tasktracker [-h] [create]\ntasktracker: error: unrecognized arguments: --task-id\n_______________________________ test_create_task _______________________________\n\n    def test_create_task():\n        task_service = TaskService(None)\n>       task = task_service.create_task('project1', 'task1')\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n\ntests/test_service.py:11: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nself = <service.TaskService object at 0x10b47f5f0>, project_id = 'project1'\ntitle = 'task1', description = ''\n\n    def create_task(self, project_id, title, description=\"\"):\n        if not title.strip():\n            raise ValidationError(\"title must not be blank\")\n>       task = self.storage.create(Task(None, project_id, title.strip(), description))\n               ^^^^^^^^^^^^^^^^^^^\nE       AttributeError: 'NoneType' object has no attribute 'create'\n\nservice.py:16: AttributeError\n______________________________ test_complete_task ______________________________\n\n    def test_complete_task():\n        task_service = TaskService(None)\n>       task = task_service.create_task('project1', 'task1')\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n\ntests/test_service.py:17: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nself = <service.TaskService object at 0x10b4bce30>, project_id = 'project1'\ntitle = 'task1', description = ''\n\n    def create_task(self, project_id, title, description=\"\"):\n        if not title.strip():\n            raise ValidationError(\"title must not be blank\")\n>       task = self.storage.create(Task(None, project_id, title.strip(), description))\n               ^^^^^^^^^^^^^^^^^^^\nE       AttributeError: 'NoneType' object has no attribute 'create'\n\nservice.py:16: AttributeError\n_________________________________ test_storage _________________________________\n\n    def test_storage():\n>       storage = Storage()\n                  ^^^^^^^^^\nE       TypeError: Storage.__init__() missing 1 required positional argument: 'path'\n\ntests/test_storage.py:10: TypeError\n_______________________________ test_bulk_import _______________________________\n\n    def test_bulk_import():\n>       storage = Storage()\n                  ^^^^^^^^^\nE       TypeError: Storage.__init__() missing 1 required positional argument: 'path'\n\ntests/test_storage.py:18: TypeError\n=========================== short test summary info ============================\nFAILED tests/test_archive_task.py::test_archive_task - AttributeError: 'NoneT...\nFAILED tests/test_cli.py::test_main - SystemExit: 2\nFAILED tests/test_service.py::test_create_task - AttributeError: 'NoneType' o...\nFAILED tests/test_service.py::test_complete_task - AttributeError: 'NoneType'...\nFAILED tests/test_storage.py::test_storage - TypeError: Storage.__init__() mi...\nFAILED tests/test_storage.py::test_bulk_import - TypeError: Storage.__init__(...\n6 failed, 1 passed in 0.05s\n",
+          "stderr": ""
+        }
+      },
+      "verification_results": [
+        {
+          "phase": "initial",
+          "completion_kind": "no_tool_prose",
+          "passed": false,
+          "result": {
+            "status": "ok",
+            "exit_code": 1,
+            "stdout": "^^^^^^^^\n/Users/ilyabondarenko/.local/share/uv/python/cpython-3.12.13-macos-aarch64-none/lib/python3.12/argparse.py:1908: in parse_args\n    self.error(msg)\n/Users/ilyabondarenko/.local/share/uv/python/cpython-3.12.13-macos-aarch64-none/lib/python3.12/argparse.py:2650: in error\n    self.exit(2, _('%(prog)s: error: %(message)s\\n') % args)\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nself = ArgumentParser(prog='tasktracker', usage=None, description=None, formatter_class=<class 'argparse.HelpFormatter'>, conflict_handler='error', add_help=True)\nstatus = 2, message = 'tasktracker: error: unrecognized arguments: --task-id\\n'\n\n    def exit(self, status=0, message=None):\n        if message:\n            self._print_message(message, _sys.stderr)\n>       _sys.exit(status)\nE       SystemExit: 2\n\n/Users/ilyabondarenko/.local/share/uv/python/cpython-3.12.13-macos-aarch64-none/lib/python3.12/argparse.py:2637: SystemExit\n----------------------------- Captured stderr call -----------------------------\nusage: tasktracker [-h] [create]\ntasktracker: error: unrecognized arguments: --task-id\n_______________________________ test_create_task _______________________________\n\n    def test_create_task():\n        task_service = TaskService(None)\n>       task = task_service.create_task('project1', 'task1')\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n\ntests/test_service.py:11: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nself = <service.TaskService object at 0x10b47f5f0>, project_id = 'project1'\ntitle = 'task1', description = ''\n\n    def create_task(self, project_id, title, description=\"\"):\n        if not title.strip():\n            raise ValidationError(\"title must not be blank\")\n>       task = self.storage.create(Task(None, project_id, title.strip(), description))\n               ^^^^^^^^^^^^^^^^^^^\nE       AttributeError: 'NoneType' object has no attribute 'create'\n\nservice.py:16: AttributeError\n______________________________ test_complete_task ______________________________\n\n    def test_complete_task():\n        task_service = TaskService(None)\n>       task = task_service.create_task('project1', 'task1')\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n\ntests/test_service.py:17: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nself = <service.TaskService object at 0x10b4bce30>, project_id = 'project1'\ntitle = 'task1', description = ''\n\n    def create_task(self, project_id, title, description=\"\"):\n        if not title.strip():\n            raise ValidationError(\"title must not be blank\")\n>       task = self.storage.create(Task(None, project_id, title.strip(), description))\n               ^^^^^^^^^^^^^^^^^^^\nE       AttributeError: 'NoneType' object has no attribute 'create'\n\nservice.py:16: AttributeError\n_________________________________ test_storage _________________________________\n\n    def test_storage():\n>       storage = Storage()\n                  ^^^^^^^^^\nE       TypeError: Storage.__init__() missing 1 required positional argument: 'path'\n\ntests/test_storage.py:10: TypeError\n_______________________________ test_bulk_import _______________________________\n\n    def test_bulk_import():\n>       storage = Storage()\n                  ^^^^^^^^^\nE       TypeError: Storage.__init__() missing 1 required positional argument: 'path'\n\ntests/test_storage.py:18: TypeError\n=========================== short test summary info ============================\nFAILED tests/test_archive_task.py::test_archive_task - AttributeError: 'NoneT...\nFAILED tests/test_cli.py::test_main - SystemExit: 2\nFAILED tests/test_service.py::test_create_task - AttributeError: 'NoneType' o...\nFAILED tests/test_service.py::test_complete_task - AttributeError: 'NoneType'...\nFAILED tests/test_storage.py::test_storage - TypeError: Storage.__init__() mi...\nFAILED tests/test_storage.py::test_bulk_import - TypeError: Storage.__init__(...\n6 failed, 1 passed in 0.05s\n",
+            "stderr": ""
+          }
+        }
+      ],
+      "recovery_attempts": 2,
+      "recovery_turn_limit_reached": true,
+      "sample": 3,
+      "workdir": "samples/sample-3",
+      "passed": false
+    }
+  ],
+  "passed_count": 0,
+  "total": 3
+}

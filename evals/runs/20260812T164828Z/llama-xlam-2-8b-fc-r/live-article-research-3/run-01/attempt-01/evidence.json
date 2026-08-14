@@ -1,0 +1,36 @@
+{
+  "cited_urls": [],
+  "cited_sources": [],
+  "available_sources": [
+    {
+      "url": "https://www.docker.com/blog/local-llm-tool-calling-a-practical-evaluation",
+      "title": "Tool Calling with Local LLMs: A Practical Evaluation - Docker",
+      "excerpt": "Jul 30, 2026\n\n  #### The Future of Agentic AI Depends on Openness and Trust. That’s Why Docker Is Joining Nvidia’s Open Secure AI Alliance.\n\n  Docker joins NVIDIA’s Open Secure AI Alliance to help build the security, governance, and trust frameworks that agentic AI systems demand.\n\n  \n\n  Tushar Jain\n\n  Read now\n Aug 4, 2026\n\n  #### The Software Supply Chain Is Under Siege. Devs Are Still the First Line of Defense [...] Skip to content\n\nSign In\n\n# Tool Calling with Local LLMs: A Practical Evaluat",
+      "tool": "web_search"
+    },
+    {
+      "url": "https://www.promptquorum.com/power-local-llm/best-local-models-tool-calling-2026",
+      "title": "Best Local Models for Tool Calling in 2026: Benchmarks & ...",
+      "excerpt": "PromptQuorum\n\nCompare ToolsFeaturesHow It WorksFAQBlogPrompt EngineeringLocal LLMsPower Local LLMPrompt BitesSmart HomeBalcony SolarTry Beta\n\nAccueil/LLM locaux avancés/Meilleurs modèles locaux pour Tool Calling en 2026 : Benchmarks et comparaison\n\nLocal AI Agents & Tool Use\n\n# Meilleurs modèles locaux pour Tool Calling en 2026 : Benchmarks et comparaison\n\n·12 min de lecture·Par Hans Kuepper · Fondateur de PromptQuorum, outil de dispatch multi-modèle · PromptQuorum\n\nLire en: [...] Lire en:\n\n🇺🇸en",
+      "tool": "web_search"
+    },
+    {
+      "url": "https://machinelearningmastery.com/mastering-llm-tool-calling-the-complete-framework-for-connecting-models-to-the-real-world",
+      "title": "Mastering LLM Tool Calling: The Complete Framework for Connecting Models to the Real World - MachineLearningMastery.com",
+      "excerpt": "### Navigation\n\nMachineLearningMastery.com\n\nMaking developers awesome at machine learning\n\nMaking developers awesome at machine learning\n\nClick to Take the FREE Crash-Course\n\n# Mastering LLM Tool Calling: The Complete Framework for Connecting Models to the Real World\n\nBy Vinod Chugani on January 7, 2026 in Language Models  0 [...] In this article, you will learn a practical, three-pillar framework for connecting large language models to external tools so your agents can read data, compute on it,",
+      "tool": "web_search"
+    },
+    {
+      "url": "https://www.nature.com/articles/d41586-025-03891-y",
+      "title": "Large language models are biased — local initiatives are fighting for change | Nature",
+      "excerpt": "doi: \n\nThis article is part of Nature Outlook: Robotics and artificial intelligence, a supplement produced with financial support from FII Institute. Nature maintains full independence in all editorial decisions related to the content. About this content.\n\n### Updates & Corrections\n\n Correction 28 November 2025: An earlier version of this story misspelt the name of Andrés Carvallo.\n\n## References\n\n1. Mpho, P. Nature Africa  (2025). [...] Article \n   PubMed \n   Google Scholar\n2. Fleisig, E. et al",
+      "tool": "web_search"
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Large_language_model",
+      "title": "Large language model",
+      "excerpt": "30. ↑ Yu, Shaoyun; Gu, Chanyuan; Huang, Kexin; Li, Ping (23 May 2024). \"Predicting the next sentence (not word) in large language models: What model-brain alignment tells us about discourse comprehension\". Science \"Science (journal)\"). 10 (21) eadn7744. Bibcode \"Bibcode (identifier)\"):2024SciA...10N7744Y. doi \"Doi (identifier)\"):10.1126/sciadv.adn7744. PMC \"PMC (identifier)\") 11114233. PMID \"PMID (identifier)\") 38781343. [...] 62. 1 2 Metz, Cade (20 December 2024). \"OpenAI Unveils New A.I. That ",
+      "tool": "web_search"
+    }
+  ]
+}

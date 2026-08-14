@@ -1,0 +1,1 @@
+Extend `greet.py` with a `--shout` argparse flag. With the flag, print the normal greeting in uppercase. Without it, preserve the current output. Keep the command-line interface otherwise unchanged and do not modify tests.

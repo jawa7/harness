@@ -1,0 +1,15 @@
+{
+  "relevance": 10,
+  "completeness": 8,
+  "sources": 5,
+  "limitations": 5,
+  "dimensions": [
+    "relevance",
+    "completeness",
+    "sources",
+    "limitations"
+  ],
+  "average": 7.0,
+  "rationale": "Answer provides 10 articles as requested (relevance:10), but all URLs are identical (sources:5) and lacks individual article links (completeness:8). Limitations not addressed due to uniform URL citation (limitations:5).",
+  "passed": true
+}

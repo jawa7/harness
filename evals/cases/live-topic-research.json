@@ -1,0 +1,7 @@
+{
+  "id": "live-topic-research",
+  "modes": ["live"],
+  "task": "Research the benefits and limitations of local tool-calling language models. Provide a short conclusion, key findings, and source URLs for each claim.",
+  "tools": ["web_search", "web_fetch"],
+  "checks": {"required_tools": ["web_search"], "min_output_urls": 3}
+}

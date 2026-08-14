@@ -1,0 +1,7 @@
+Research question: what is Anthropic's Claude Code, in 2-3 sentences?
+
+Use web_search to find at least one real source, use web_fetch on the most
+relevant result to read its actual content (don't rely on the search
+snippet alone), then write your findings to findings.md using write_file.
+findings.md must contain: a 2-3 sentence answer, and the URL(s) you
+actually fetched. Then call finish().

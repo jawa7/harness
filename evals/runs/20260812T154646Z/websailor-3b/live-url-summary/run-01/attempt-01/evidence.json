@@ -1,0 +1,13 @@
+{
+  "cited_urls": [],
+  "cited_sources": [],
+  "available_sources": [
+    {
+      "url": "https://huggingface.co/Qwen/Qwen3.5-0.8B",
+      "tool": "web_fetch",
+      "fetch_id": "fetch-20260812T155414Z-1d4e4d",
+      "excerpt": "Qwen/Qwen3.5-0.8B · Hugging Face\nHugging Face\nModels\nDatasets\nSpaces\nBuckets\nnew\nDocs\nEnterprise\nPricing\nWebsite\nTasks\nHuggingChat\nCollections\nLanguages\nOrganizations\nCommunity\nBlog\nPosts\nDaily Papers\nHardware\nLearn\nDiscord\nForum\nGitHub\nSolutions\nTeam & Enterprise\nHugging Face PRO\nEnterprise Support\nInference Providers\nInference Endpoints\nStorage Buckets\nLog In\nSign Up\nQwen\n/\nQwen3.5-0.8B\nlike\n658\nFollow\nQwen\n96k\nImage-Text-to-Text\nTransformers\nSafetensors\nqwen3_5\nconversational\nEval Results\nLicense:\napache-2.0\nModel card\nFiles\nFiles and versions\nxet\nCommunity\n21\nDeploy\nCopy to bucket\nnew\nUse this model\nInstructions to use Qwen/Qwen3.5-0.8B with libraries, inference providers, notebooks, and local apps. Follow these links to get started.\nLibraries\nTransformers\nHow to use Qwen/Qwen3.5-0.8B with Transformers:\n# Use a pipeline as a high-level helper\nfrom transformers import pipeline\n\npipe = pipeline(\"image-text-to-text\", model=\"Qwen/Qwen3.5-0.8B\")\nmessages = [\n    {\n        \"role\": \"user\",\n        \"content\": [\n            {\"type\": \"image\", \"url\": \"https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/p-blog/candy.JPG\"},\n            {\"type\": \"text\", \"text\": \"What animal is on the candy?\"}\n        ]\n    },\n]\npipe(text=messages)\n# Load model directly\nfrom transformers import AutoProcessor, AutoModelForMultimodalLM\n\nprocessor = AutoProcessor.from_pretrained(\"Qwen/Qwen3.5-0.8B\")\nmodel = AutoModelForMultimodalLM.from_pretrained(\"Qwen/Qwen3.5-0.8B\", device_map=\"auto\")\nmessages = [\n    {\n        \"role\": \"user\",\n        \"content\": [\n            {\"type\": \"image\",",
+      "cache_path": "evals/runs/20260812T154646Z/websailor-3b/live-url-summary/run-01/attempt-01/fetches/fetch-20260812T155414Z-1d4e4d/text.txt"
+    }
+  ]
+}

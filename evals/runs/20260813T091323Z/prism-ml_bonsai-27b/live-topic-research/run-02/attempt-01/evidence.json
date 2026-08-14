@@ -1,0 +1,50 @@
+{
+  "cited_urls": [],
+  "cited_sources": [],
+  "available_sources": [
+    {
+      "url": "https://arxiv.org/html/2605.00737v1",
+      "title": "A Framework to Assess and Optimize LLM Tool Calling",
+      "excerpt": "To Call or Not to Call:A Framework to Assess and Optimize LLM Tool Calling\nReport GitHub Issue\n×\nTitle:\nContent selection saved. Describe the issue below:\nDescription:\nSubmit without GitHub\nSubmit in GitHub\narXiv is now an independent nonprofit!\nLearn more\n×\nBack to arXiv\nWhy HTML?\nReport Issue\nBack to Abstract\nDownload PDF\nAbstract\n1\nIntroduction\n2\nRelated Work\n3\nOperating Frameworks for Assessing and Optimizing Tool Calling\nProblem Setup\nEvaluating Tool Calling Decisions\n4\nExperiments and Findings\n4.1\nNeed and Utility\n4.2\nCost and Affordability\n4.3\nThe Controller Framework\n5\nConcluding Discussion\n6\nDisclosure of LLM use in Research\nReferences\nA\nExperimental Setup\nA.1\nModels\nOpen-source models.\nA.2\nTask and Dataset\nA.2.1\nMain: Entity Task Dataset Construction\nInvivoQuery Task Dataset.\nA.2.2\nBFCL Task Dataset\nA.3\nScoring\nA.3.1\nEntity and InvivoQuery task\nClaim Extraction and Verification Prompts.\n(1) Claim Extraction.\n(2) Claim Verification.\nA.3.2\nBFCL Scorer\nA.4\nAgentic Tool-Use Framework\nA.4.1\nStage 1: Tool decision.\nThe self-awareness setup.\nThe no-tool setup.\nThe\nAlways Tool\nsetup.\nPerceived need prompts\nCost-Aware Tool Description Variants\n(1) Explicit Budget (No Implicit Calculation Required).\n(2) Implicit Budget (Requires Internal Calculation).\nBudget-Aware Setting.\nStage 2: Response generation.\nA.5\nWeb-Search Backend\nGoogle Search via SerpAPI.\nPerplexity Search.\nA.6\nThe Controller Framework\nB\nHuman Alignment with the LLM-as-Judge Evaluation\nC\nExample of True Negative Utility\nEntity: Sky Blue\nD\nAdditional Entity Task Results\nD.1\nNormative Lens\nD.2\nDescriptive Lens\nD.",
+      "tool": "web_search",
+      "fetch_id": "fetch-20260813T100032Z-337f64",
+      "cache_path": "evals/runs/20260813T091323Z/prism-ml_bonsai-27b/live-topic-research/run-02/attempt-01/fetches/fetch-20260813T100032Z-337f64/text.txt"
+    },
+    {
+      "url": "https://www.docker.com/blog/local-llm-tool-calling-a-practical-evaluation",
+      "title": "Tool Calling with Local LLMs: A Practical Evaluation",
+      "excerpt": "| Model | F1 Score |\n --- |\n| gpt-4 | 0.974 |\n| qwen3:14B-Q4\\_K\\_M | 0.971 |\n| qwen3:14B-Q6\\_K | 0.943 |\n| claude-3-haiku-20240307 | 0.933 |\n| qwen3:8B-F16 | 0.933 |\n| qwen3:8B-Q4\\_K\\_M | 0.919 |\n| gpt-3.5-turbo | 0.899 |\n| gpt-4o | 0.857 |\n| gpt-4o-mini | 0.852 |\n| claude-3-5-sonnet-20241022 | 0.851 |\n| llama3.1:8B-F16 | 0.835 |\n| qwen2.5:14B-Q4\\_K\\_M | 0.812 |\n| claude-3-opus-20240229 | 0.794 |\n| llama3.1:8B-Q4\\_K\\_M | 0.793 |\n| qwen2.5:7B-Q4\\_K\\_M | 0.753 |\n| gemma3:4B | 0.733 | [...] | llama",
+      "tool": "web_search"
+    },
+    {
+      "url": "https://discuss.huggingface.co/t/tool-function-calling-abilities-of-llms-that-are-used-locally-pulled-through-ollama/165277",
+      "title": "Tool/Function calling abilities of LLM's that are used locally ...",
+      "excerpt": "Thanks in advance\n\nIf you are using Ollama directly without any Agent framework, the models that support tool calling are limited, and there seems to be an issue that is not a bug.\n\nAs a workaround, you could use Ollama through external Agent frameworks.\n\n### Related topics",
+      "tool": "web_search"
+    },
+    {
+      "url": "https://substack.com/home/post/p-167344254",
+      "title": "Tool Calling Is Not a Solved Problem - by Jae Li",
+      "excerpt": "In the past few weeks, I have been experimenting with ReAct and CodeAct agent patterns. And patterns have practical limitations in practice. For ReAct, because tool calling behaviors vary across LLM providers, it is hard to guarantee consistent ReAct behaviors across LLM models. For CodeAct, while the idea of writing code to replace JSON schema sounds appealing, the reality is that many CodeAct agents are built on top of the existing infrastructure of JSON tool calls. [...] CodeAct posits that t",
+      "tool": "web_search"
+    },
+    {
+      "url": "https://www.promptquorum.com/power-local-llm/best-local-models-tool-calling-2026",
+      "title": "Best Local Models for Tool Calling in 2026: Benchmarks & ...",
+      "excerpt": "Modèles sous-7B. Llama 3.2 1B, Llama 3.2 3B, Phi-3 Mini, Gemma 2 2B — tous émettent des appels d'outils mal formés au-delà des tches triviales single-step. Acceptable pour la classification de triage (\"c'est cet e-mail un support client / ventes / spam\") où la sortie est un court string ; pas acceptable pour plans multi-étapes. [...] Trois catégories de modèles qui échouent en tool calling : modèles sub-7B produisent des appels malformés sur les tches multi-étapes ; modèles sans entraînement too",
+      "tool": "web_search"
+    },
+    {
+      "url": "https://www.xda-developers.com/biggest-local-llm-machine-useless-cant-call-single-tool-how-many-parameters",
+      "title": "The biggest local LLM on your machine is useless if it can't call a single tool, no matter how many parameters it has",
+      "excerpt": "But here's where it gets interesting: that 7B floor is more likely to be a training gap. We've already seen that off-the-shelf generic small models are inconsistent at tool calling, like with Llama 3.2 3B scoring well in Docker's shopping cart test but failing to invoke a tool even once in a more complex ReAct agent setup. Below 7B, it seems like you're taking a gamble on whether your agent framework and task complexity happen to align with what the model can handle... except for a notable [...]",
+      "tool": "web_search"
+    },
+    {
+      "url": "https://community.n8n.io/t/tool-calling-chain-with-local-ollama-models-7b-14b-2nd-tool-never-executed/280320?tl=en",
+      "title": "Tool calling chain with local Ollama models (7b/14b) - 2nd tool never executed - Questions - n8n Community",
+      "excerpt": "1. \\\\Context pressure\\\\ — after Tool 1’s output, the model has more tokens to track, and 7B models struggle to maintain the tool-calling format consistently across multiple turns\n\n2. \\\\Tool-calling fine-tuning depth\\\\ — 32B models like qwen2.5:32b have more robust instruction-following for structured outputs across multiple rounds\n\n## Practical workarounds\n\n### 1. Break into sequential sub-agents (most reliable) [...] | Topic |  | Replies | Views | Activity |\n ---  --- \n| Ollama and ToolAgent  Q",
+      "tool": "web_search"
+    }
+  ]
+}

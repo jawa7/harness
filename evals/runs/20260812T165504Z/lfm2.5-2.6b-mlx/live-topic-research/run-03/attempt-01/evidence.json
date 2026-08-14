@@ -1,0 +1,134 @@
+{
+  "cited_urls": [
+    "https://arxiv.org/html/2605.00737v1",
+    "https://www.docker.com/blog/local-llm-tool-calling-a-practical-evaluation"
+  ],
+  "cited_sources": [
+    {
+      "url": "https://arxiv.org/html/2605.00737v1",
+      "title": "A Framework to Assess and Optimize LLM Tool Calling - arXiv",
+      "excerpt": "Today, we lack principled ways to assess the quality of tool calling decisions made by LLM agents.\nMost evaluations are coarse-grained—they test whether tool calling improves the aggregate accuracy (Yao et al., 2023; Qian et al., 2025; Feng et al., 2025)—and overlook finer-grained aspects of performance.\nThe lack of such assessments makes it difficult to investigate principled approaches to enhance (improve) agentic decisions to call tools. [...] al., 2024; Singh et al., 2025; Qian et al., 2025;",
+      "tool": "web_search"
+    },
+    {
+      "url": "https://www.docker.com/blog/local-llm-tool-calling-a-practical-evaluation",
+      "title": "Tool Calling with Local LLMs: A Practical Evaluation - Docker",
+      "excerpt": "Local LLM Tool Calling: Which LLM Should You Use? | DockerTool Calling with Local LLMs: A Practical Evaluation | Docker\nSkip to content\nProducts\nAI and Agents\nDocker Sandboxes\nNew\nIsolated environments for coding agents\nAI Governance\nNew\nGovern agents and Claws across every team\nGordon\nNew\nYour AI Agent across Docker\nDocker Model Runner\nLocal-first LLM inference made easy\nDocker MCP Catalog and Toolkit\nConnect and manage MCP tools\nApplication Security\nDocker Hardened Images\nShip with secure, enterprise-ready images\nDocker Scout\nSimplify the software supply chain\nApplication Development\nDocker Desktop\nContainerize your applications\nDocker Hub\nDiscover and share container images\nDocker Offload\nBreak free of local constraints\nSupport\nDevelopers\nDocumentation\nFind guides for Docker products\nGetting Started\nLearn the Docker basics\nResources\nSearch a library of helpful materials\nTraining\nSkill up your Docker knowledge\nExtensions SDK\nCreate and share your own extensions\nCommunity\nConnect with other Docker developers\nOpen Source\nExplore open source projects\nPreview Program\nHelp shape the future of Docker\nCustomer Stories\nGet inspired with customer stories\nGet the latest Docker news\nPricing\nYearly\nMonthly\nDocker Personal\n$0\n$0\nFor individual developers who need the essential tools to build and deploy containers.\nGet started\nGet started\nDocker Pro\n$11\n$9\nper user/month\nFor individual professionals who require more advanced features and additional resources.\nBuy now\nBuy now\nMOST POPULAR\nDocker Team\n$16\n$15\nper user/month\nFor small teams that need collaborative tools to make working to",
+      "tool": "web_search",
+      "fetch_id": "fetch-20260812T174346Z-bfeb4e",
+      "cache_path": "evals/runs/20260812T165504Z/lfm2.5-2.6b-mlx/live-topic-research/run-03/attempt-01/fetches/fetch-20260812T174346Z-bfeb4e/text.txt"
+    }
+  ],
+  "available_sources": [
+    {
+      "url": "https://magazine.sebastianraschka.com/p/state-of-llms-2025",
+      "title": "The State Of LLMs 2025: Progress, Problems, and Predictions",
+      "excerpt": "To wrap things up, I think if there is one meta-lesson from 2025, it is that progress in LLMs is less about a single breakthrough, and improvements are being made on multiple fronts via multiple independent levers. This includes architecture tweaks, data quality improvements, reasoning training, inference scaling, tool calling, and more.\n\nAt the same time, evaluation remains hard, benchmarks are imperfect, and good judgment about when and how to use these systems is still essential. [...] The op",
+      "tool": "web_search"
+    },
+    {
+      "url": "https://www.emergentmind.com/topics/multi-turn-tool-calling-llms",
+      "title": "Multi-Turn Tool-Calling LLMs: Advances & Challenges",
+      "excerpt": "In summary, the current state of multi-turn tool-calling LLMs is characterized by rapid progress in dataset construction, algorithm design, system integration, and multifaceted evaluation, with outstanding challenges in temporal alignment, robustness to erroneous assertions, long-context scalability, and effective agentic planning (Yin et al., 10 Mar 2025, Kate et al., 30 Apr 2025, Cheng et al., 27 Oct 2025, Xu et al., 28 Oct 2025, Waqas et al., 29 Nov 2025). Developing reliable, real-world [...",
+      "tool": "web_search"
+    },
+    {
+      "url": "https://arxiv.org/html/2605.00737v1",
+      "title": "A Framework to Assess and Optimize LLM Tool Calling - arXiv",
+      "excerpt": "Today, we lack principled ways to assess the quality of tool calling decisions made by LLM agents.\nMost evaluations are coarse-grained—they test whether tool calling improves the aggregate accuracy (Yao et al., 2023; Qian et al., 2025; Feng et al., 2025)—and overlook finer-grained aspects of performance.\nThe lack of such assessments makes it difficult to investigate principled approaches to enhance (improve) agentic decisions to call tools. [...] al., 2024; Singh et al., 2025; Qian et al., 2025;",
+      "tool": "web_search"
+    },
+    {
+      "url": "https://www.docker.com/blog/local-llm-tool-calling-a-practical-evaluation",
+      "title": "Tool Calling with Local LLMs: A Practical Evaluation - Docker",
+      "excerpt": "Local LLM Tool Calling: Which LLM Should You Use? | DockerTool Calling with Local LLMs: A Practical Evaluation | Docker\nSkip to content\nProducts\nAI and Agents\nDocker Sandboxes\nNew\nIsolated environments for coding agents\nAI Governance\nNew\nGovern agents and Claws across every team\nGordon\nNew\nYour AI Agent across Docker\nDocker Model Runner\nLocal-first LLM inference made easy\nDocker MCP Catalog and Toolkit\nConnect and manage MCP tools\nApplication Security\nDocker Hardened Images\nShip with secure, enterprise-ready images\nDocker Scout\nSimplify the software supply chain\nApplication Development\nDocker Desktop\nContainerize your applications\nDocker Hub\nDiscover and share container images\nDocker Offload\nBreak free of local constraints\nSupport\nDevelopers\nDocumentation\nFind guides for Docker products\nGetting Started\nLearn the Docker basics\nResources\nSearch a library of helpful materials\nTraining\nSkill up your Docker knowledge\nExtensions SDK\nCreate and share your own extensions\nCommunity\nConnect with other Docker developers\nOpen Source\nExplore open source projects\nPreview Program\nHelp shape the future of Docker\nCustomer Stories\nGet inspired with customer stories\nGet the latest Docker news\nPricing\nYearly\nMonthly\nDocker Personal\n$0\n$0\nFor individual developers who need the essential tools to build and deploy containers.\nGet started\nGet started\nDocker Pro\n$11\n$9\nper user/month\nFor individual professionals who require more advanced features and additional resources.\nBuy now\nBuy now\nMOST POPULAR\nDocker Team\n$16\n$15\nper user/month\nFor small teams that need collaborative tools to make working to",
+      "tool": "web_search",
+      "fetch_id": "fetch-20260812T174346Z-bfeb4e",
+      "cache_path": "evals/runs/20260812T165504Z/lfm2.5-2.6b-mlx/live-topic-research/run-03/attempt-01/fetches/fetch-20260812T174346Z-bfeb4e/text.txt"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=vdUxBDulv1M",
+      "title": "LLM Tool Calling EXPLAINED! - The Power Behind AI Agents 🤖",
+      "excerpt": "# LLM Tool Calling EXPLAINED! - The Power Behind AI Agents 🤖\n## Execute Automation\n118000 subscribers\n58 likes\n\n### Description\n3761 views\nPosted: 26 Feb 2025\nEver wondered how AI agents can browse the web, call APIs, and automate tasks? It’s all thanks to Tool Calling! 🚀 In this video, we’ll break down how LLMs use external tools to perform real-world actions, making them smarter and more useful than ever. \n\nStay tuned for a hands-on demo with Playwright and Local LLM with LangChain. [...] you'",
+      "tool": "web_search"
+    },
+    {
+      "url": "https://dev.to/docteurrs/calling-code-with-local-llm-is-a-hoax-2n51",
+      "title": "Calling code with local LLM is a hoax - DEV Community",
+      "excerpt": "On the dark side:\n\n Tool calling still isn't working!\n Human input doesn't always trigger\n Low consistency with infinite loops\n Bugs\n Soooooo many prompts to write\n\n## Available chat mechanisms you can use\n\nThere are \"sequential\" and \"hierarchical\". Sequential will allow your LLMs to go through the tasks in the order you choose. Hierarchical on the other side will create a ghost agent that automatically decides which one of your agents should be triggered using its description. [...] AutoGen cle",
+      "tool": "web_search"
+    },
+    {
+      "url": "https://www.jdhodges.com/blog/local-llms-on-tool-calling-2026-pt1-local-lm",
+      "title": "I Tested 13 Local LLMs on Tool Calling | 2026 Eval Results",
+      "excerpt": "If you’re running a local AI stack with Open WebUI, LM Studio, or any OpenAI-compatible frontend, tool calling is one of the key features that enables agentic behavior. It lets models call functions like checking weather, sending emails, or setting reminders instead of just generating text. But not every model handles it well, and the popular benchmarks don’t always reflect what you’ll get when serving models through a local inference server like LM Studio. [...] 1. Tool Selection: Pick the corr",
+      "tool": "web_search"
+    },
+    {
+      "url": "https://forums.developer.nvidia.com/t/toolery-0-1-0-a-deterministic-tool-calling-benchmark-for-local-llms/371794",
+      "title": "Toolery 0.1.0 - a deterministic tool-calling benchmark for local LLMs - DGX Spark / GB10 Projects - NVIDIA Developer Forums",
+      "excerpt": "One last thing worth pointing you at: the Profiles tab. That’s where it gets genuinely handy instead of staring at a wall of numbers, you can pick a local LLM based on what you actually need it for. It rebalances the weighting across capabilities depending on the job, so a model tuned for agentic coding bubbles up for one profile and a tidy structured-output workhorse wins for another. Saves you the mental gymnastics of deciding which columns matter today. [...] image\n\nThe part I find most usefu",
+      "tool": "web_search"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=sI6P20KueUA",
+      "title": "Should Developers Learn to Run Local LLMs?",
+      "excerpt": "have really good harnesses and orchestrations around the local model like Deep Seek from and there's several others, you might be able to get exactly what you need or more than you need in terms of application. So, depends, you know, the local model, the advantage there is that security in theory cuz you don't you know, you got to make sure things are locked down in those local models, but you have much you have total control, right? You control it. It's open source. And the other advantage, [..",
+      "tool": "web_search"
+    },
+    {
+      "url": "https://www.sitepoint.com/definitive-guide-local-llms-2026-privacy-tools-hardware",
+      "title": "Guide to Local LLMs in 2026: Privacy, Tools & Hardware",
+      "excerpt": "Strengths: Fully open source (licensed under AGPLv3) and extensible. Cross-platform. Combines a usable GUI with a local API server. Active community developing extensions. Aligns with the values of developers who prefer auditable, open tooling.\n\nLimitations: Electron-based architecture adds overhead. The inference engine is less performant than vLLM for high-throughput scenarios. The ecosystem, while growing, is younger and smaller than Ollama's. [...] Limitations: Batched inference and concurre",
+      "tool": "web_search"
+    },
+    {
+      "url": "https://app.stationx.net/articles/best-local-llm",
+      "title": "Best Local LLM in August 2026 (Updated Monthly Methodology)",
+      "excerpt": "Function calling and tool use — for agent workflows, browser automation, API orchestration.\n Writing and editing — the best local LLM for writing is judged on instruction-following, style preservation, and length control, not raw benchmark scores.\n Roleplay and red-team simulation — the best local LLM for roleplay needs to engage with adversarial scenarios without breaking character or refusing. [...] The 4-source toolkit: LMSYS Chatbot Arena for human preference, the capability triad (LiveBench",
+      "tool": "web_search"
+    },
+    {
+      "url": "https://www.ayautomate.com/blog/best-local-llm-tools-2026",
+      "title": "8 Best Local LLM Tools 2026: Free, Ranked by Use Case",
+      "excerpt": "Updated July 2026\n\n## 8 Best Local LLM Tools to Run LLMs Locally in 2026\n\nThe best local LLM stack in 2026 splits by job: Ollama for developers who want a model behind a local API in one command, LM Studio for the most polished desktop GUI, GPT4All for document chat on modest hardware, vLLM for high-throughput production serving, and llama.cpp as the engine layer with the deepest control. Jan, LocalAI, and Open WebUI cover offline privacy, OpenAI-compatible backends, and shared team chat. [...] ",
+      "tool": "web_search"
+    },
+    {
+      "url": "https://blog.promptlayer.com/llm-agents-vs-function-calling",
+      "title": "LLM Agent vs Function Calling: Key Differences & Use Cases",
+      "excerpt": "## Advantages and Disadvantages of Function Calling\n\nAdvantages: [...] This article provides a comprehensive comparison of these techniques, examining their core concepts, strengths, weaknesses, use cases, and technical underpinnings.\n\nTable of Contents\n\n What are LLM Agents?\n What is Function Calling?\n Advantages and Disadvantages of LLM Agents\n Advantages and Disadvantages of Function Calling\n Use Cases and Applications\n Technical Distinctions and Comparison\n Conclusion\n\n## What are LLM Agents",
+      "tool": "web_search"
+    },
+    {
+      "url": "https://www.adaline.ai/blog/understanding-llms-and-tool-calling",
+      "title": "Understanding LLMs and Tool Calling | Adaline",
+      "excerpt": "## Parallel tool execution techniques\n\n### Understanding LLMCompiler\n\nLLMCompiler is a framework that optimizes orchestration of parallel function calling with LLMs. It automatically identifies which tasks can be performed in parallel and which are interdependent, addressing key limitations in traditional sequential execution models. [...] Accuracy: Intermediate results can affect the LLM's flow in sequential models\n Speed: Parallel execution provides significant latency improvements (up to 3.7x",
+      "tool": "web_search"
+    },
+    {
+      "url": "https://christianjmills.com/posts/mastering-llms-course-notes/conference-talk-019",
+      "title": "Conference Talk 19: Fine Tuning LLMs for Function Calling – Christian Mills",
+      "excerpt": "+ JSON Schema:\n    - Advantages: Better suited for complex, nested parameter types; easier to enforce schema with constraint generation; compatible with OpenAI APIs.\n    - Disadvantages: Potentially more challenging for LLMs to generate compared to Python syntax. [...] Options:\n  + Python Syntax: Generate function calls using Python function call signature syntax.\n  + JSON Schema: Generate JSON structures describing the function name and parameters.\n Trade-offs:\n  + Python Syntax:\n    - Advantag",
+      "tool": "web_search"
+    },
+    {
+      "url": "https://mbrenndoerfer.com/writing/function-calling-llm-structured-tools",
+      "title": "Function Calling: Structured Tool Use for LLMs - Interactive | Michael Brenndoerfer",
+      "excerpt": "Out:\n\nVisualization\n\nGrouped bar chart comparing latency in seconds for sequential versus parallel execution across 1 to 5 function calls. Sequential latency grows linearly while parallel latency grows much more slowly. [...] Latency comparison between parallel and sequential execution strategies for multiple independent function calls. Sequential latency grows linearly at 1.2 seconds per call, while parallel latency grows much more slowly due to concurrent execution. For five independent calls,",
+      "tool": "web_search"
+    },
+    {
+      "url": "https://arxiv.org/html/2603.22862v2",
+      "title": "The Evolution of Tool Use in LLM Agents: From Single-Tool Call to Multi-Tool Orchestration",
+      "excerpt": "To address the cumulative delays and inefficiencies caused by sequential execution in long-chain multi-tool calls, parallel execution (233) has become a key optimization direction. Its core idea is to decompose tasks, identify subtasks with no interdependencies, and execute them simultaneously. SoT (124) accelerates inference by expanding multiple skeleton branches in parallel instead of following a fully sequential decoding pattern. At the tool level, LLMCompiler (78) explicitly plans task [...",
+      "tool": "web_search"
+    },
+    {
+      "url": "https://www.promptquorum.com/power-local-llm/best-local-models-tool-calling-2026",
+      "title": "Best Local Models for Tool Calling in 2026: Benchmarks & ...",
+      "excerpt": "📍 En une phrase\n\nTool Calling est la compétence côté LLM d'émettre du JSON structuré nommant un outil et fournissant des arguments correspondant à son schéma ; MCP, les outils OpenAI et le XML Cline sont des expressions de format fil de la même compétence.\n\n💬 En termes simples [...] ## Qu'est-ce que le Tool Calling pour les modèles locaux\n\nTool Calling est le modèle qui émet du JSON structuré nommant un outil et ses arguments — la capacité côté LLM qui transforme un modèle de chat en agent. MCP,",
+      "tool": "web_search"
+    }
+  ]
+}

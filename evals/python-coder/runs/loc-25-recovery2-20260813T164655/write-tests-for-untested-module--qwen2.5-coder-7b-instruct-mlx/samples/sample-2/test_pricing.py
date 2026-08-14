@@ -1,0 +1,3 @@
+import pytest
+from pricing import final_price
+def test_final_price_negative_cents():\n    with pytest.raises(ValueError):\n        final_price(-1)\ndef test_final_price_no_discount():\n    assert final_price(100) == 100\ndef test_final_price_member_discount():\n    assert final_price(100, member=True) == 90\ndef test_final_price_save5_coupon():\n    assert final_price(100, coupon="SAVE5") == 95\ndef test_final_price_unknown_coupon():\n    with pytest.raises(ValueError):\n        final_price(100, coupon="UNKNOWN")

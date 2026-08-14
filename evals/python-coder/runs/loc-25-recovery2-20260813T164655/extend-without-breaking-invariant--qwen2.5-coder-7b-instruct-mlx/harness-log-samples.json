@@ -1,0 +1,101 @@
+{
+  "samples": [
+    {
+      "finished": false,
+      "crashed": "recovery turn limit (2) reached before a subsequent completion; no final verification was run",
+      "finish_summary": "Extended `TaskService.create_task()` to accept an optional `tags` argument. Updated the `Task` model to include a `tags` field. Updated storage logic to handle the `tags` field correctly. Added tests to ensure that the new functionality works as expected.",
+      "turns_used": 5,
+      "unverified_urls": [],
+      "initial_failure": {
+        "cause": "verification_failed",
+        "completion_kind": "finish",
+        "verification_result": {
+          "status": "ok",
+          "exit_code": 2,
+          "stdout": "\n==================================== ERRORS ====================================\n_ ERROR collecting evals/python-coder/runs/loc-25-recovery2-20260813T164655/extend-without-breaking-invariant--qwen2.5-coder-7b-instruct-mlx/samples/sample-1/tests/test_task_tags.py _\nImportError while importing test module '/Users/ilyabondarenko/.claude/scripts/qwen-harness/evals/python-coder/runs/loc-25-recovery2-20260813T164655/extend-without-breaking-invariant--qwen2.5-coder-7b-instruct-mlx/samples/sample-1/tests/test_task_tags.py'.\nHint: make sure your test modules/packages have valid Python names.\nTraceback:\n/Users/ilyabondarenko/.local/share/uv/python/cpython-3.12.13-macos-aarch64-none/lib/python3.12/importlib/__init__.py:90: in import_module\n    return _bootstrap._gcd_import(name[level:], package, level)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\ntests/test_task_tags.py:2: in <module>\n    from service import TaskService, Storage\nE   ImportError: cannot import name 'Storage' from 'service' (/Users/ilyabondarenko/.claude/scripts/qwen-harness/evals/python-coder/runs/loc-25-recovery2-20260813T164655/extend-without-breaking-invariant--qwen2.5-coder-7b-instruct-mlx/samples/sample-1/service.py)\n=========================== short test summary info ============================\nERROR tests/test_task_tags.py\n!!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!\n1 error in 0.05s\n",
+          "stderr": ""
+        }
+      },
+      "verification_results": [
+        {
+          "phase": "initial",
+          "completion_kind": "finish",
+          "passed": false,
+          "result": {
+            "status": "ok",
+            "exit_code": 2,
+            "stdout": "\n==================================== ERRORS ====================================\n_ ERROR collecting evals/python-coder/runs/loc-25-recovery2-20260813T164655/extend-without-breaking-invariant--qwen2.5-coder-7b-instruct-mlx/samples/sample-1/tests/test_task_tags.py _\nImportError while importing test module '/Users/ilyabondarenko/.claude/scripts/qwen-harness/evals/python-coder/runs/loc-25-recovery2-20260813T164655/extend-without-breaking-invariant--qwen2.5-coder-7b-instruct-mlx/samples/sample-1/tests/test_task_tags.py'.\nHint: make sure your test modules/packages have valid Python names.\nTraceback:\n/Users/ilyabondarenko/.local/share/uv/python/cpython-3.12.13-macos-aarch64-none/lib/python3.12/importlib/__init__.py:90: in import_module\n    return _bootstrap._gcd_import(name[level:], package, level)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\ntests/test_task_tags.py:2: in <module>\n    from service import TaskService, Storage\nE   ImportError: cannot import name 'Storage' from 'service' (/Users/ilyabondarenko/.claude/scripts/qwen-harness/evals/python-coder/runs/loc-25-recovery2-20260813T164655/extend-without-breaking-invariant--qwen2.5-coder-7b-instruct-mlx/samples/sample-1/service.py)\n=========================== short test summary info ============================\nERROR tests/test_task_tags.py\n!!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!\n1 error in 0.05s\n",
+            "stderr": ""
+          }
+        }
+      ],
+      "recovery_attempts": 2,
+      "recovery_turn_limit_reached": true,
+      "sample": 1,
+      "workdir": "samples/sample-1",
+      "passed": false
+    },
+    {
+      "finished": false,
+      "crashed": "wrote byte-identical content to 'tasks.json' 3 times in a row despite failing feedback each time \u2014 model is not adapting, stopping early instead of burning the rest of the turn budget",
+      "finish_summary": null,
+      "turns_used": 6,
+      "unverified_urls": [],
+      "initial_failure": null,
+      "verification_results": [],
+      "recovery_attempts": 0,
+      "recovery_turn_limit_reached": false,
+      "sample": 2,
+      "workdir": "samples/sample-2",
+      "passed": false
+    },
+    {
+      "finished": false,
+      "crashed": "--verify-command failed after recovery: {'status': 'ok', 'exit_code': 5, 'stdout': '\\nno tests ran in 0.01s\\n', 'stderr': ''}",
+      "finish_summary": "All test files are present in the `tests` directory. Let's ensure that the `cli`, `errors`, `models`, and `service` modules are correctly imported in each test file.\n\n1. **Update `test_cli.py`**:\n   ```python\n   from cli import build_parser, main\n   import pytest\n   ```\n\n2. **Update `test_service.py`**:\n   ```python\n   from errors import ValidationError\n   from models import Task\n   from service import TaskService\n   import pytest\n   ```\n\n3. **Update `test_storage.py`**:\n   ```python\n   from models import Task\n   from storage import Storage\n   import pytest\n   ```\n\n4. **Update `test_task_tags.py`**:\n   ```python\n   from service import TaskService\n   import pytest\n   ```\n\nLet's apply these changes:",
+      "turns_used": 16,
+      "unverified_urls": [],
+      "initial_failure": {
+        "cause": "no_tool_prose",
+        "completion_kind": "no_tool_prose",
+        "verification_result": {
+          "status": "ok",
+          "exit_code": 5,
+          "stdout": "\nno tests ran in 0.01s\n",
+          "stderr": ""
+        }
+      },
+      "verification_results": [
+        {
+          "phase": "initial",
+          "completion_kind": "no_tool_prose",
+          "passed": false,
+          "result": {
+            "status": "ok",
+            "exit_code": 5,
+            "stdout": "\nno tests ran in 0.01s\n",
+            "stderr": ""
+          }
+        },
+        {
+          "phase": "recovery",
+          "completion_kind": "no_tool_prose",
+          "passed": false,
+          "result": {
+            "status": "ok",
+            "exit_code": 5,
+            "stdout": "\nno tests ran in 0.01s\n",
+            "stderr": ""
+          }
+        }
+      ],
+      "recovery_attempts": 2,
+      "recovery_turn_limit_reached": false,
+      "sample": 3,
+      "workdir": "samples/sample-3",
+      "passed": false
+    }
+  ],
+  "passed_count": 0,
+  "total": 3
+}

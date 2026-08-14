@@ -1,0 +1,1394 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Best Local LLM in August 2026 (Updated Monthly Methodology)</title>
+<meta name="description" content="Discover the best local LLM for your use case with 4 verified sources — leaderboards, communities, and the 10-minute monthly check. Methodology, not picks.">
+<link rel="canonical" href="https://app.stationx.net/articles/best-local-llm">
+
+<!-- Open Graph -->
+<meta property="og:type" content="article">
+<meta property="og:title" content="Best Local LLM in August 2026 (Updated Monthly Methodology)">
+<meta property="og:description" content="Discover the best local LLM for your use case with 4 verified sources — leaderboards, communities, and the 10-minute monthly check. Methodology, not picks.">
+<meta property="og:url" content="https://app.stationx.net/articles/best-local-llm">
+<meta property="og:image" content="https://app.stationx.net/public/og/articles/best-local-llm.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Best Local LLM in August 2026 (Updated Monthly Methodology)">
+<meta property="og:locale" content="en_GB">
+<meta property="og:site_name" content="StationX">
+<meta property="article:published_time" content="2026-05-18">
+<meta property="article:modified_time" content="2026-08-12">
+<meta name="author" content="Nathan House">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Best Local LLM in August 2026 (Updated Monthly Methodology)">
+<meta name="twitter:description" content="Discover the best local LLM for your use case with 4 verified sources — leaderboards, communities, and the 10-minute monthly check. Methodology, not picks.">
+<meta name="twitter:image" content="https://app.stationx.net/public/og/articles/best-local-llm.jpg">
+<meta name="twitter:site" content="@gotostationx">
+<meta name="twitter:creator" content="@GotoNathan">
+
+<!-- Favicon -->
+<link rel="icon" type="image/png" sizes="32x32" href="/public/favicon.ico">
+
+<!-- Google Tag Manager -->
+<script nonce="PM73emRCfxQtR34kvUJtgw==">(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;var n=f.querySelector('[nonce]');
+if(n)j.setAttribute('nonce',n.nonce||n.getAttribute('nonce'));f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-M4LNH5C');</script>
+
+<!-- StationX Attribution Tracking -->
+<script nonce="PM73emRCfxQtR34kvUJtgw==">
+(function(){try{
+var D=".stationx.net",AID="sx_aid",ATTR="sx_attr",API="https://app.stationx.net/api/hit/event",HINT="https://app.stationx.net/api/hit/identify-hint";
+function gc(n){var m=document.cookie.match(new RegExp("(?:^|; )"+n+"=([^;]*)"));return m?decodeURIComponent(m[1]):null;}
+function sc(n,v,d){document.cookie=n+"="+encodeURIComponent(v)+"; expires="+new Date(Date.now()+d*864e5).toUTCString()+"; domain="+D+"; path=/; SameSite=Lax; Secure";}
+function post(u,p){if(navigator.sendBeacon){navigator.sendBeacon(u,new Blob([p],{type:"application/json"}));}else{fetch(u,{method:"POST",headers:{"Content-Type":"application/json"},body:p,keepalive:true,mode:"cors",credentials:"omit"}).catch(function(){});}}
+var aid=gc(AID);
+if(!aid){var b=new Uint8Array(16);crypto.getRandomValues(b);aid="a_"+Array.from(b).map(function(x){return x.toString(16).padStart(2,"0");}).join("");sc(AID,aid,730);}
+var url=new URL(location.href),r=url.searchParams.get("r"),sxid=url.searchParams.get("sx_id"),attr=null,lp=0;
+if(sxid&&!/^[0-9]{1,10}$/.test(sxid))sxid=null;
+try{var raw=gc(ATTR);if(raw)attr=JSON.parse(raw);}catch(e){}
+if(!attr){attr={r:r||null,landing_path:location.pathname,ts_landing:Date.now(),referrer:(document.referrer||"").slice(0,512)||null};sc(ATTR,JSON.stringify(attr),90);lp=1;}
+else if(r&&!attr.r){attr.r=r;sc(ATTR,JSON.stringify(attr),90);}
+if(r||sxid){if(r)url.searchParams.delete("r");if(sxid)url.searchParams.delete("sx_id");history.replaceState(null,"",url.pathname+(url.search?url.search:"")+url.hash);}
+if(/(?:^|; )sx_optout=1/.test(document.cookie))return;
+var pv={event_type:"page_view",anonymous_id:aid,short_code:(attr&&attr.r)||null,path:location.pathname,ts:Date.now()};
+if(lp){pv.lp=1;pv.ref=(document.referrer||"").slice(0,512)||null;var uc=url.searchParams.get("utm_content");if(uc)pv.uc=uc.slice(0,64);}
+post(API,JSON.stringify(pv));
+if(sxid)post(HINT,JSON.stringify({anonymous_id:aid,sx_id:sxid}));
+}catch(e){}})();
+</script>
+
+<!-- Preconnect third-party origins -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://www.googletagmanager.com">
+<link rel="preconnect" href="https://www.google-analytics.com">
+<link rel="preconnect" href="https://www.stationx.net">
+<link rel="preconnect" href="https://unpkg.com" crossorigin>
+
+<!-- Fonts: Nunito Sans (StationX blog match) -->
+<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,400;0,700;0,800;1,400;1,800&display=swap" rel="stylesheet">
+
+<!-- Tailwind + DaisyUI (production build) -->
+<link rel="stylesheet" href="/public/style.css">
+
+<!-- StationX article typography (scoped to .article-content only) -->
+<style>
+  /* Navbar — match the WP menu type exactly (measured live 2026-07-02):
+     Nunito Sans 17px/400 uppercase top-level, 18px/400 dropdown, #10334a */
+  .navbar .menu { font-family: 'Nunito Sans', sans-serif; }
+  .navbar-center .menu > li > a,
+  .navbar-center .menu > li > details > summary { font-size: 17px; font-weight: 400; color: #10334a; }
+  .navbar-center .menu details > ul a { font-size: 18px; font-weight: 400; color: #10334a; }
+  /* Article content area — Nunito Sans matching StationX blog */
+  .article-content { max-width: 800px; margin: 0 auto; font-family: 'Nunito Sans', sans-serif; font-size: 18px; line-height: 1.8; color: #393939; }
+  .article-content p { margin-bottom: 1.5em; font-size: 18px; }
+  .article-content table { font-size: 18px; }
+  .article-content table th { font-size: 16px; }
+  .article-content li { font-size: 18px; }
+  .article-content .text-base { font-size: 18px !important; }
+  .article-content .text-sm { font-size: 16px !important; }
+  .article-content h1, .article-content h2, .article-content h3, .article-content h4 { font-family: 'Nunito Sans', sans-serif; font-weight: 800; color: #10334a; }
+  .article-content h1 { font-size: 40px; line-height: 1.4em; }
+  .article-content h2 { font-size: 34px; line-height: 1.3em; margin-top: 3rem; margin-bottom: 1.5rem; }
+  .article-content h3 { font-size: 25px; line-height: 1.3em; }
+  .article-content h4 { font-size: 24px; line-height: 1.2em; }
+  .article-content a { color: #2882bd; }
+  .article-content a:hover { color: #03a9f4; }
+  .sx-cta-btn { display: inline-block; background-color: #f87171; color: #ffffff !important; font-weight: 700; padding: 14px 32px; border-radius: 8px; font-size: 17px; text-decoration: none !important; transition: background-color 0.2s, transform 0.2s; cursor: pointer; }
+  .sx-cta-btn:hover { background-color: #ef4444 !important; transform: scale(1.03); color: #ffffff !important; }
+  .sx-voucher-btn:hover { background: #b91c1c !important; transform: scale(1.05); }
+  .article-content img[data-zoomable] { cursor: zoom-in; transition: opacity 0.2s; }
+  .article-content img[data-zoomable]:hover { opacity: 0.9; }
+  /* <picture> for in-body diagrams: stay inside the 800px text column, centred. */
+  .article-content picture { display: block; width: 100%; margin: 2rem auto; text-align: center; }
+  .article-content picture img { display: block; margin: 0 auto; max-width: 100%; height: auto; }
+  .sx-zoom-overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.85); z-index: 9999; display: flex; align-items: center; justify-content: center; cursor: zoom-out; padding: 20px; opacity: 0; transition: opacity 0.2s; }
+  .sx-zoom-overlay.active { opacity: 1; }
+  .sx-zoom-overlay img { max-width: 95vw; max-height: 90vh; object-fit: contain; border-radius: 8px; box-shadow: 0 8px 32px rgba(0,0,0,0.5); }
+  @media (max-width: 768px) {
+    .article-content h1 { font-size: 28px; }
+    .article-content h2 { font-size: 25px; }
+    .article-content h3 { font-size: 20px; }
+  }
+</style>
+
+<!-- HTMX -->
+<!-- HTMX must load synchronously (blocking) — official docs: "Loading htmx asynchronously is unreliable" -->
+<script nonce="PM73emRCfxQtR34kvUJtgw==" src="https://unpkg.com/htmx.org@2.0.4" integrity="sha384-HGfztofotfshcF7+8n44JQL2oJmowVChPTg48S+jvZoztPfvwD79OC/LTtG6dMp+" crossorigin="anonymous"></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"StationX","url":"https://www.stationx.net","logo":"https://app.stationx.net/public/stationx-logo.svg","sameAs":["https://www.linkedin.com/company/stationx","https://www.youtube.com/c/+StationxNet","https://twitter.com/gotostationx","https://www.instagram.com/goto.stationx/","https://www.tiktok.com/@nathan.stationx","https://www.facebook.com/pages/Station-X/1631192847101094"]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"StationX","url":"https://app.stationx.net","potentialAction":{"@type":"SearchAction","target":"https://www.google.com/search?q=site:app.stationx.net+{search_term_string}","query-input":"required name=search_term_string"}}</script>
+</head>
+<body class="min-h-screen bg-base-100 text-base-content flex flex-col">
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M4LNH5C"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+
+<div class="bg-white border-b border-gray-200 px-4 lg:px-8">
+  <div class="navbar py-4 mx-auto" style="max-width: 1200px; padding-left: 0; padding-right: 0;">
+  <div class="navbar-start">
+    <div class="dropdown">
+      <div tabindex="0" role="button" class="btn btn-ghost lg:hidden" aria-label="Open menu">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
+      </div>
+      <ul tabindex="0" class="menu menu-sm dropdown-content bg-base-100 rounded-box z-50 mt-3 w-64 p-2 shadow-lg">
+        <li>
+          <details>
+            <summary class="text-[#3b82f6]">TRAINING</summary>
+            <ul>
+              <li><a href="/ai-masters">AI-Driven Security Engineering</a></li>
+              <li><a href="/book">FREE Book: The New Way to Do Security</a></li>
+              <li><a href="https://www.stationx.net/topic/information-security-courses-bundles/">Online Courses</a></li>
+            </ul>
+          </details>
+        </li>
+        <li><a href="/articles">ARTICLES</a></li>
+        <li><a href="https://www.stationx.net/comptia-voucher/">EXAM VOUCHERS</a></li>
+        <li>
+          <details>
+            <summary class="text-[#3b82f6]">RESOURCES</summary>
+            <ul>
+              <li><a href="https://ready.stationx.net/">Are You Cut Out for Cyber?</a></li>
+              <li><a href="https://shop.stationx.net/" target="_blank" rel="noopener noreferrer">StationX T-Shirts</a></li>
+              <li><a href="https://jobzonerisk.com/" target="_blank" rel="noopener noreferrer">Will AI Replace You?</a></li>
+              <li><a href="/tools/cybersecurity-roadmap">Cyber Security Roadmap</a></li>
+              <li><a href="https://www.stationx.net/canary/">Canary Tokens</a></li>
+              <li><a href="https://www.stationx.net/newsletters/">Newsletter</a></li>
+              <li><a href="https://www.stationx.net/blog/">Blog</a></li>
+            </ul>
+          </details>
+        </li>
+        <li><a href="/auth/teachable" data-sx-signin>SIGN IN</a></li>
+        <li class="hidden" data-sx-account><a href="/account">ACCOUNT</a></li>
+      </ul>
+    </div>
+    <a href="https://www.stationx.net" class="flex items-center">
+      <img src="/public/stationx-logo.svg" alt="StationX" style="width: 200px; height: 37px;">
+    </a>
+  </div>
+
+  <div class="navbar-center hidden lg:flex">
+    <ul class="menu menu-horizontal gap-0 text-base tracking-normal">
+      <li>
+        <details>
+          <summary class="uppercase" data-nav-href="https://www.stationx.net/topic/information-security-courses-bundles/">Training</summary>
+          <ul class="bg-base-100 rounded-box z-50 min-w-max p-2 shadow-2xl border border-gray-200 text-base normal-case whitespace-nowrap">
+            <li><a href="/ai-masters">AI-Driven Security Engineering</a></li>
+            <li><a href="/book">FREE Book: The New Way to Do Security</a></li>
+            <li><a href="https://www.stationx.net/topic/information-security-courses-bundles/">Online Courses</a></li>
+          </ul>
+        </details>
+      </li>
+      <li><a href="/articles" class="uppercase">Articles</a></li>
+      <li><a href="https://www.stationx.net/comptia-voucher/" class="uppercase">Exam Vouchers</a></li>
+      <li>
+        <details>
+          <summary class="uppercase">Resources</summary>
+          <ul class="bg-base-100 rounded-box z-50 min-w-max p-2 shadow-2xl border border-gray-200 text-base normal-case whitespace-nowrap">
+            <li><a href="https://ready.stationx.net/">Are You Cut Out for Cyber?</a></li>
+              <li><a href="https://shop.stationx.net/" target="_blank" rel="noopener noreferrer">StationX T-Shirts</a></li>
+            <li><a href="https://jobzonerisk.com/" target="_blank" rel="noopener noreferrer">Will AI Replace You?</a></li>
+            <li><a href="/tools/cybersecurity-roadmap">Cyber Security Roadmap</a></li>
+            <li><a href="https://www.stationx.net/canary/">Canary Tokens</a></li>
+            <li><a href="https://www.stationx.net/newsletters/">Newsletter</a></li>
+            <li><a href="https://www.stationx.net/blog/">Blog</a></li>
+          </ul>
+        </details>
+      </li>
+      <li data-sx-signin><a href="/auth/teachable" class="uppercase">Sign In</a></li>
+      <li class="hidden" data-sx-account><a href="/account" class="uppercase">Account</a></li>
+    </ul>
+  </div>
+
+  <div class="navbar-end">
+    <a href="/ai-masters?cta_src=app&cta_p=header-menu" class="sx-cta-btn" style="font-size: 16px; font-weight: 800; line-height: 1; padding: 15px 45px; border-radius: 4px; background-color: #FF5959; text-transform: uppercase;">MEMBERSHIP</a>
+  </div>
+  </div>
+</div>
+
+<!-- Main content -->
+<main class="flex-1 max-w-7xl mx-auto w-full px-4 py-8">
+
+<div class="hidden lg:flex fixed right-4 top-1/2 -translate-y-1/2 z-20 flex-col items-center" style="width:48px">
+  <div class="text-center mb-2">
+    <div class="text-lg font-bold text-slate-700 leading-tight">2340</div>
+    <div class="text-[10px] font-semibold text-slate-400 uppercase tracking-wider">Shares</div>
+  </div>
+  <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fapp.stationx.net%2Farticles%2Fbest-local-llm" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center w-11 h-11 transition-opacity hover:opacity-80" style="background:#0077B5" aria-label="Share on LinkedIn">
+    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="white"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+  </a>
+  <a href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fapp.stationx.net%2Farticles%2Fbest-local-llm&text=Stop%20chasing%20'top%205%20local%20LLMs'%20lists.%20Here%20are%20the%204%20sources%20that%20beat%20any%20of%20them%3A" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center w-11 h-11 transition-opacity hover:opacity-80" style="background:#000" aria-label="Share on X">
+    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="white"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+  </a>
+  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fapp.stationx.net%2Farticles%2Fbest-local-llm" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center w-11 h-11 transition-opacity hover:opacity-80" style="background:#4267B2" aria-label="Share on Facebook">
+    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="white"><path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"/></svg>
+  </a>
+  <a href="https://www.reddit.com/submit?url=https%3A%2F%2Fapp.stationx.net%2Farticles%2Fbest-local-llm&title=Stop%20chasing%20'top%205%20local%20LLMs'%20lists.%20Here%20are%20the%204%20sources%20that%20beat%20any%20of%20them%3A" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center w-11 h-11 transition-opacity hover:opacity-80" style="background:#FF4500" aria-label="Share on Reddit">
+    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="white"><path d="M12 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0zm5.01 4.744c.688 0 1.25.561 1.25 1.249a1.25 1.25 0 0 1-2.498.056l-2.597-.547-.8 3.747c1.824.07 3.48.632 4.674 1.488.308-.309.73-.491 1.207-.491.968 0 1.754.786 1.754 1.754 0 .716-.435 1.333-1.01 1.614a3.111 3.111 0 0 1 .042.52c0 2.694-3.13 4.87-7.004 4.87-3.874 0-7.004-2.176-7.004-4.87 0-.183.015-.366.043-.534A1.748 1.748 0 0 1 4.028 12c0-.968.786-1.754 1.754-1.754.463 0 .898.196 1.207.49 1.207-.883 2.878-1.43 4.744-1.487l.885-4.182a.342.342 0 0 1 .14-.197.35.35 0 0 1 .238-.042l2.906.617a1.214 1.214 0 0 1 1.108-.701zM9.25 12C8.561 12 8 12.562 8 13.25c0 .687.561 1.248 1.25 1.248.687 0 1.248-.561 1.248-1.249 0-.688-.561-1.249-1.249-1.249zm5.5 0c-.687 0-1.248.561-1.248 1.25 0 .687.561 1.248 1.249 1.248.688 0 1.249-.561 1.249-1.249 0-.687-.562-1.249-1.25-1.249zm-5.466 3.99a.327.327 0 0 0-.231.094.33.33 0 0 0 0 .463c.842.842 2.484.913 2.961.913.477 0 2.105-.056 2.961-.913a.361.361 0 0 0 .029-.463.33.33 0 0 0-.464 0c-.547.533-1.684.73-2.512.73-.828 0-1.979-.196-2.512-.73a.326.326 0 0 0-.232-.095z"/></svg>
+  </a>
+  <a href="/cdn-cgi/l/email-protection#9aa5e9eff8f0fff9eea7d8ffe9eebfa8aad6f5f9fbf6bfa8aad6d6d7bfa8aaf3f4bfa8aadbeffdefe9eebfa8aaa8aaa8acbfa8aab2cfeafefbeefffebfa8aad7f5f4eef2f6e3bfa8aad7ffeef2f5fef5f6f5fde3b3bcf8f5fee3a7c9eef5eabfa8aaf9f2fbe9f3f4fdbfa8aabdeef5eabfa8aaafbfa8aaf6f5f9fbf6bfa8aad6d6d7e9bdbfa8aaf6f3e9eee9b4bfa8aad2ffe8ffbfa8aafbe8ffbfa8aaeef2ffbfa8aaaebfa8aae9f5efe8f9ffe9bfa8aaeef2fbeebfa8aaf8fffbeebfa8aafbf4e3bfa8aaf5fcbfa8aaeef2fff7bfa9dbbfaadbbfaadbf2eeeeeae9bfa9dbbfa8dcbfa8dcfbeaeab4e9eefbeef3f5f4e2b4f4ffeebfa8dcfbe8eef3f9f6ffe9bfa8dcf8ffe9eeb7f6f5f9fbf6b7f6f6f7" class="flex items-center justify-center w-11 h-11 transition-opacity hover:opacity-80" style="background:#6b7280" aria-label="Share via Email">
+    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+  </a>
+  <button data-copy-url="https://app.stationx.net/articles/best-local-llm" id="ss-copy" class="flex items-center justify-center w-11 h-11 transition-opacity hover:opacity-80 cursor-pointer border-0" style="background:#94a3b8" aria-label="Copy link">
+    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="transition:color .2s"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+  </button>
+</div>
+<button data-share-title="Best Local LLM in August 2026 (Updated Monthly Methodology)" data-share-text="Stop chasing &#39;top 5 local LLMs&#39; lists. Here are the 4 sources that beat any of them:" data-share-url="https://app.stationx.net/articles/best-local-llm" class="lg:hidden fixed bottom-6 right-6 z-20 w-14 h-14 rounded-full shadow-lg flex items-center justify-center transition-transform hover:scale-105 active:scale-95" style="background:#0077B5" aria-label="Share this page">
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
+</button>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script nonce="PM73emRCfxQtR34kvUJtgw==">
+document.addEventListener('click',function(e){var b=e.target.closest('[data-copy-url]');if(b){if(navigator.clipboard){navigator.clipboard.writeText(b.dataset.copyUrl).then(function(){var s=b.querySelector('svg');s.style.color='#22c55e';setTimeout(function(){s.style.color='white'},1500)}).catch(function(){console.warn('Clipboard write failed')})}return}var m=e.target.closest('[data-share-url]');if(m&&navigator.share){navigator.share({title:m.dataset.shareTitle,text:m.dataset.shareText,url:m.dataset.shareUrl}).catch(function(e){if(e.name!=='AbortError')console.warn('Share failed:',e)})}});
+</script>
+<article class="article-content">
+
+  <nav class="text-sm text-base-content/40 mb-6"><a href="/" class="hover:text-base-content transition-colors">Home</a><span class="mx-1.5">/</span><a href="/articles" class="hover:text-base-content transition-colors">Articles</a><span class="mx-1.5">/</span><span class="text-base-content/70">Best Local LLM August 2026</span></nav>
+
+  <h1 class="mb-4 leading-tight text-center">Best Local LLM in August 2026 (Updated Monthly Methodology)</h1>
+
+  <div class="flex flex-wrap items-center justify-center gap-3 text-sm text-base-content/50 mb-8">
+  <time>August 2026</time><span class="w-1 h-1 rounded-full bg-base-content/30"></span>11 min read<span class="w-1 h-1 rounded-full bg-base-content/30"></span>By Nathan House
+</div>
+
+  <img src="/public/og/articles/best-local-llm.jpg" alt="Best Local LLM in August 2026 — Updated Monthly Methodology" width="1200" height="630" class="w-full aspect-[1200/630] object-cover rounded-lg mb-8">
+
+  <p>If you've gone looking for the <strong>best local LLM</strong> and ended up reading three "top 5 models for 2026" articles that contradict each other, you're not alone. The honest answer is that no listicle can keep up. Open-weight models ship weekly, leaderboards re-rank monthly, and half the benchmarks you'll see quoted in vendor blog posts no longer measure what they claim to.</p>
+
+  <p>So this article doesn't name a single "best" model. Instead, it gives you something that won't go stale: a method for finding the right local LLM for <em>your</em> use case, today and every month after. We'll cover how to read benchmarks honestly, the four sources serious practitioners actually monitor, the licence trap that costs companies real money, a brief note for security professionals on uncensored models, and a ten-minute check you can run on the first of every month.</p>
+
+  <p>I run Claude Opus 4.7 as my daily driver and fall back to local models for privacy-sensitive work and to keep my own students from being locked out by an API bill. The framework below is what I actually use. Let's get into it.</p>
+
+  
+<nav class="bg-white border border-slate-200 rounded-xl p-6 mb-10" aria-label="Table of contents">
+  <h2 class="text-lg font-bold mb-4" style="color:#10334a; margin-top:0">Table of Contents</h2>
+  <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-8">
+      <a href="#freshness" class="flex items-baseline gap-2 py-1.5 text-base hover:underline" style="color:#2882bd">
+        <span class="font-mono text-sm" style="color:#808285; min-width:1.5rem">01</span>
+        <span>The Freshness Problem</span>
+      </a>
+      <a href="#use-case" class="flex items-baseline gap-2 py-1.5 text-base hover:underline" style="color:#2882bd">
+        <span class="font-mono text-sm" style="color:#808285; min-width:1.5rem">02</span>
+        <span>Start With Your Use Case, Not the Model</span>
+      </a>
+      <a href="#benchmarks" class="flex items-baseline gap-2 py-1.5 text-base hover:underline" style="color:#2882bd">
+        <span class="font-mono text-sm" style="color:#808285; min-width:1.5rem">03</span>
+        <span>The Benchmarks That Actually Predict Real-World Performance</span>
+      </a>
+      <a href="#sources" class="flex items-baseline gap-2 py-1.5 text-base hover:underline" style="color:#2882bd">
+        <span class="font-mono text-sm" style="color:#808285; min-width:1.5rem">04</span>
+        <span>The 4 Sources Every Serious Practitioner Monitors</span>
+      </a>
+      <a href="#honest" class="flex items-baseline gap-2 py-1.5 text-base hover:underline" style="color:#2882bd">
+        <span class="font-mono text-sm" style="color:#808285; min-width:1.5rem">05</span>
+        <span>How to Read Benchmarks Honestly</span>
+      </a>
+      <a href="#licence" class="flex items-baseline gap-2 py-1.5 text-base hover:underline" style="color:#2882bd">
+        <span class="font-mono text-sm" style="color:#808285; min-width:1.5rem">06</span>
+        <span>The Licence Trap</span>
+      </a>
+      <a href="#uncensored" class="flex items-baseline gap-2 py-1.5 text-base hover:underline" style="color:#2882bd">
+        <span class="font-mono text-sm" style="color:#808285; min-width:1.5rem">07</span>
+        <span>The Uncensored Question</span>
+      </a>
+      <a href="#monthly-check" class="flex items-baseline gap-2 py-1.5 text-base hover:underline" style="color:#2882bd">
+        <span class="font-mono text-sm" style="color:#808285; min-width:1.5rem">08</span>
+        <span>The 10-Minute Monthly Check</span>
+      </a>
+      <a href="#principles" class="flex items-baseline gap-2 py-1.5 text-base hover:underline" style="color:#2882bd">
+        <span class="font-mono text-sm" style="color:#808285; min-width:1.5rem">09</span>
+        <span>What Never Changes</span>
+      </a>
+      <a href="#faq" class="flex items-baseline gap-2 py-1.5 text-base hover:underline" style="color:#2882bd">
+        <span class="font-mono text-sm" style="color:#808285; min-width:1.5rem">10</span>
+        <span>FAQ</span>
+      </a>
+  </div>
+</nav>
+
+  <!-- ════════════════════════════════════════════════════════════ -->
+  <!-- The freshness problem                                       -->
+  <!-- ════════════════════════════════════════════════════════════ -->
+
+  <h2 id="freshness">The Freshness Problem (Why This Article Isn't a "Top 5" List)</h2>
+
+  <p>The reason <strong>best local LLM models</strong> lists go stale so fast isn't laziness — it's physics. In 2025 alone, the open-weight frontier moved from Llama 3 70B being a credible coding assistant to the Qwen 3 family matching mid-tier closed frontier performance. Then DeepSeek V3 broke the price-per-token curve. Then everyone re-released their flagships with reasoning modes. A "top 5" written in January is honest fiction by April.</p>
+
+  <p>The freshness problem isn't only about new releases either. The benchmarks themselves degrade. A test set leaks into training data. Vendors fine-tune on benchmark-shaped questions. A leaderboard's methodology becomes gameable, and within months the top of the ranking is dominated by models tuned to ace the test rather than the work. We'll come back to this in the section on reading benchmarks honestly.</p>
+
+  <p>So the lasting question isn't <em>"which model is best right now"</em>. It's <em>"how do I know what's best, today, for the work I'm doing"</em>. That's what the rest of this guide is for.</p>
+
+  <!-- ════════════════════════════════════════════════════════════ -->
+  <!-- Use case first                                              -->
+  <!-- ════════════════════════════════════════════════════════════ -->
+
+  
+<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,400;6..12,700;6..12,800;6..12,900&family=JetBrains+Mono:wght@500;600;700&display=swap" rel="stylesheet">
+<div class="sx-capture" data-sx-capture hidden
+     data-exp="article-capture-v1" data-srcbase="best-local-llm" data-slot="1"
+     data-variants='["a","b","c"]' data-copy='{"a":{"pre":"The shift that&#39;s quietly ","hl":"resetting cyber security careers","post":"."},"b":{"pre":"What they don&#39;t tell you about ","hl":"cyber security careers in the AI era","post":"."},"c":{"pre":"AI isn&#39;t ending cyber security careers. ","hl":"It&#39;s changing who gets ahead","post":"."}}'
+     style="max-width:52rem;margin:2.5rem auto;padding:1.5rem;border:1px solid #e2e8f0;border-radius:1rem;background:#f4f6fb;color:#0f172a;font-family:'Nunito Sans',-apple-system,BlinkMacSystemFont,'Segoe UI',system-ui,sans-serif;box-shadow:0 10px 30px -12px rgba(15,23,42,.18);display:flex;flex-wrap:wrap;gap:1.5rem;align-items:center">
+  <div style="flex:1 1 13rem;min-width:12rem;order:0">
+    <h3 class="sx-capture-h" style="margin:0 0 1rem;font-size:clamp(1.7rem,3.2vw,2.2rem);font-weight:900;line-height:1.15;letter-spacing:-.015em;color:#0f172a"></h3>
+    <form class="sx-capture-form" method="post" action="/api/book/request" style="display:flex;flex-direction:column;gap:.7rem">
+      <input type="hidden" name="source" value="best-local-llm">
+      <input type="hidden" name="exp" value="article-capture-v1">
+      <input type="hidden" name="variant" value="">
+      <input type="hidden" name="consent" value="yes">
+      <input type="text" name="first_name" autocomplete="given-name" placeholder="First name"
+        style="width:100%;padding:.8rem .9rem;border:1px solid #cbd5e1;border-radius:.6rem;background:#fff;color:#0f172a;font-size:1rem;font-family:inherit">
+      <input type="email" name="email" required autocomplete="email" placeholder="you@email.com"
+        style="width:100%;padding:.8rem .9rem;border:1px solid #cbd5e1;border-radius:.6rem;background:#fff;color:#0f172a;font-size:1rem;font-family:inherit">
+      <p class="sx-email-suggest" hidden style="margin:-.3rem 0 0;font-size:.82rem;color:#64748b">Did you mean <button type="button" class="sx-email-fix" style="background:none;border:0;padding:0;font-family:inherit;font-size:.82rem;font-weight:800;color:#2563eb;cursor:pointer;text-decoration:underline"></button>?</p>
+      <button type="submit" class="sx-capture-btn"
+        style="padding:.85rem 1rem;border:0;border-radius:.6rem;background:#4054e6;color:#fff;font-family:inherit;font-weight:800;font-size:1.05rem;cursor:pointer">Send me the book →</button>
+      <p style="margin:.35rem 0 0;font-size:.78rem;line-height:1.45;color:#64748b;text-align:center">By submitting you'll get the book + occasional related emails. Unsubscribe anytime. <a href="/book/privacy" style="color:#4054e6">Privacy</a>.</p>
+    </form>
+  </div>
+  <div class="sx-cover" style="flex:0 0 auto;order:1;position:relative;width:420px;max-width:70vw;aspect-ratio:1024/1536;margin:0 auto;border-radius:.5rem;overflow:hidden;cursor:pointer;box-shadow:0 8px 24px -8px rgba(15,23,42,.35);transition:transform .4s cubic-bezier(.2,.7,.2,1),box-shadow .4s">
+    <img src="/book/public/cover-final.webp" alt="Become the Cyber Security Expert the AI Era Demands"
+         width="200" height="300" loading="lazy"
+         style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block">
+    <canvas class="sx-cover-rain" aria-hidden="true" style="position:absolute;inset:0;z-index:2;pointer-events:none;mix-blend-mode:screen;opacity:0;transition:opacity .45s ease"></canvas>
+  </div>
+</div>
+<script>
+(function(){
+  function __sxFnv(str){var h=2166136261;for(var i=0;i<str.length;i++){h^=str.charCodeAt(i);h=Math.imul(h,16777619);}return h>>>0;}
+function __sxHashUnit(seed,value){var n=__sxFnv(""+__sxFnv(seed+value));return (n%10000)/10000;}
+function __sxAssign(key,aid,ids){if(!ids.length)return "a";if(!aid)return ids[0];var s=__sxHashUnit(key,aid);var c=0,share=1/ids.length;for(var i=0;i<ids.length;i++){c+=share;if(s<c)return ids[i];}return ids[ids.length-1];}
+  function __sxCaptureInit(root){
+  if(!root || !root.hasAttribute || !root.hasAttribute('data-sx-capture')) return;
+  var BASE = root.getAttribute('data-sx-base') || '';
+  // Hide for signed-in members (they already have the book / are paying). The non-httpOnly
+  // session_present=1 cookie is the signed-in UI-hint the navbar + Master's-ad CTA use
+  // (set in auth/teachable.ts; the real gate is the httpOnly session). Remove the whole
+  // embed; the script does nothing else.
+  if(document.cookie.split(';').some(function(x){return x.trim().indexOf('session_present=1')===0;})){
+    root.remove();
+    return;
+  }
+  var EXP = root.getAttribute('data-exp') || '';
+  var IDS; try{ IDS = JSON.parse(root.getAttribute('data-variants')); }catch(_){ IDS = ['a','b','c']; }
+  var COPY; try{ COPY = JSON.parse(root.getAttribute('data-copy')); }catch(_){ COPY = {}; }
+  var SRCBASE = root.getAttribute('data-srcbase') || 'article';
+  function aid(){
+    var m = document.cookie.match(/(?:^|;\s*)sx_aid=(a_[a-f0-9]{32})/);
+    if(m) return m[1];
+    var h=''; try{ var b=new Uint8Array(16); crypto.getRandomValues(b); for(var i=0;i<16;i++){h+=b[i].toString(16).padStart(2,'0');} }
+    catch(_){ for(var j=0;j<32;j++){ h+=Math.floor(Math.random()*16).toString(16); } }
+    return 'a_'+h;
+  }
+  // ONE anon id per page, shared by every embed (adversarial review P1): without
+  // this cache, cookieless visitors mint a fresh random id per embed → the two
+  // auto-injected slots bucket to DIFFERENT arms and cross-contaminate the A/B
+  // (exposure credits slot 1's arm, a slot-2 conversion credits another).
+  var AID = window.__sxAid || (window.__sxAid = aid());
+  var V = __sxAssign(EXP, AID, IDS);
+  var c = COPY[V] || COPY[IDS[0]] || {pre:'',hl:'',post:''};
+  // Build the headline as text + a highlighted <span> WITHOUT innerHTML (each part via
+  // textContent — XSS-safe). The .hl span mirrors the /book page highlight (blue accent).
+  // If the copy failed to resolve (e.g. data-copy JSON.parse failure → empty headline),
+  // keep the embed HIDDEN rather than reveal a headless form. Data is first-party so this
+  // is near-impossible, but staying hidden degrades safer than a blank-heading card.
+  if(!((c.pre||'') + (c.hl||'') + (c.post||'')).trim()){ return; }
+  var h = root.querySelector('.sx-capture-h');
+  h.textContent = '';
+  h.appendChild(document.createTextNode(c.pre || ''));
+  if(c.hl){ var sp = document.createElement('span'); sp.textContent = c.hl; sp.style.color = '#2563eb'; h.appendChild(sp); }
+  h.appendChild(document.createTextNode(c.post || ''));
+  var form = root.querySelector('.sx-capture-form');
+  form.querySelector('input[name=variant]').value = V;
+  form.querySelector('input[name=source]').value = (SRCBASE + '-' + V).slice(0,64);
+  if(BASE){ form.action = BASE + '/api/book/request'; }
+  // Fetch-submit with an INLINE success message (fixes the raw-JSON landing the native
+  // POST produced — /api/book/request always returns JSON). Adversarial review P4/P10
+  // (2026-07-02): the native form.submit() fallback fires ONLY on network-layer
+  // rejection (fetch never got a response) — NEVER after a response arrived, else a
+  // non-JSON body (rate-limiter 429 text, CF 5xx HTML) would re-POST a processed
+  // submission (duplicate lead) and navigate cold traffic to a raw error page. A
+  // received-but-unparseable body: r.ok → show generic success (the lead IS captured);
+  // !r.ok → inline error + re-enable. No window.fetch at all → don't intercept.
+  var sending = false;
+  form.addEventListener('submit', function(ev){
+    if(!window.fetch) return; // ancient env: native POST (pre-change behaviour)
+    ev.preventDefault();
+    // Disabling the button is NOT enough: pressing Enter in a text field fires a
+    // submit event directly on the FORM, bypassing the button entirely. Two quick
+    // Enters therefore fired two POSTs (verified: 2 rapid submits -> 2 fetches),
+    // minting a duplicate lead and a second book email. The flag is the real guard;
+    // the button state is only the visible half of it.
+    if(sending) return;
+    sending = true;
+    var btn = form.querySelector('.sx-capture-btn');
+    if(btn){ btn.disabled = true; btn.textContent = 'Sending…'; }
+    function handle(r){
+      return r.json().catch(function(){ return null; }).then(function(d){
+        if(r.ok){
+          var p = document.createElement('p');
+          p.textContent = (d && d.message) || 'Check your inbox — your book link is on its way.';
+          p.setAttribute('style','margin:.4rem 0 0;font-weight:800;font-size:1.05rem;line-height:1.4;color:#0f766e');
+          form.hidden = true;
+          form.parentElement.appendChild(p);
+        } else {
+          // Re-arm: this attempt is over and the visitor must be able to retry.
+          sending = false;
+          if(btn){ btn.disabled = false; btn.textContent = 'Send me the book →'; }
+          var e = form.querySelector('.sx-capture-err');
+          if(!e){ e = document.createElement('p'); e.className='sx-capture-err'; e.setAttribute('style','margin:.35rem 0 0;font-size:.85rem;font-weight:700;color:#b91c1c'); form.appendChild(e); }
+          e.textContent = (d && (d.error || d.message)) || 'Something went wrong — please check the email address and try again.';
+        }
+      });
+    }
+    // The accept:application/json header is REQUIRED, not decorative:
+    // /api/book/request is content-negotiated (gate.ts wantsJson) and answers a 303
+    // to /book/thanks for anything that does not explicitly ask for JSON. fetch's
+    // default Accept is star-slash-star, so WITHOUT this header the embed follows a
+    // redirect it was never written for — and cross-origin (the WP widget) the
+    // redirect TARGET carries no ACAO for www, so the promise REJECTS and lands in
+    // the form.submit() fallback below, re-POSTing an already-processed signup:
+    // duplicate lead, duplicate book email, visitor navigated off the article.
+    // Accept is a CORS-safelisted header and this value has no unsafe bytes, so it
+    // adds no preflight. (NB: no backticks in this file — it is a template literal.)
+    fetch((BASE || '') + '/api/book/request', { method:'POST', body:new FormData(form), credentials:'include', headers:{ 'accept':'application/json' } })
+      .then(handle, function(){
+        // Re-arm BEFORE the native fallback. form.submit() normally navigates, so
+        // this rarely shows in a real browser — it bites when the navigation is
+        // blocked or deferred (in-app webview, beforeunload, aborted navigation),
+        // leaving the visitor on a form that can never be submitted again: a lead
+        // lost silently, invisible server-side. The book form (gate.ts) re-arms on
+        // its equivalent path; the two scripts must not diverge here.
+        sending = false;
+        form.submit();
+      })
+      // A throw inside handle() (a DOM error while rendering the panel) would
+      // otherwise leave the guard stuck with no fallback at all.
+      .catch(function(){ sending = false; });
+  });
+  root.removeAttribute('hidden');
+  // Matrix code-rain over the cover (hover) + click-to-focus the first field — ported
+  // verbatim from the /book landing page. Scoped to THIS embed's root so multiple
+  // embeds never collide. Respects prefers-reduced-motion. Self-contained IIFE.
+  (function(){
+    var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var cover = root.querySelector('.sx-cover');
+    var canvas = root.querySelector('.sx-cover-rain');
+    if(cover){
+      // click the book → focus First name (scroll first if the form is stacked below)
+      cover.addEventListener('click', function(){
+        var first = root.querySelector('input[name=first_name]') || root.querySelector('input[name=email]');
+        if(!first) return;
+        var stacked = window.matchMedia('(max-width: 640px)').matches;
+        if(stacked){ form.scrollIntoView({behavior:'smooth',block:'center'}); setTimeout(function(){ first.focus({preventScroll:true}); }, 420); }
+        else { first.focus(); }
+      });
+      cover.addEventListener('mouseenter', function(){ cover.style.transform='translateY(-4px)'; });
+      cover.addEventListener('mouseleave', function(){ cover.style.transform=''; });
+    }
+    if(reduce || !cover || !canvas || !canvas.getContext) { if(canvas) canvas.style.display='none'; }
+    else {
+      var ctx = canvas.getContext('2d');
+      var DPR = Math.min(window.devicePixelRatio || 1, 2);
+      var W=0,H=0,COLS=0,ROWS=0,FS=15,raf=null,last=0,running=false;
+      var STEP_MS=90,TAIL=9;
+      var GLYPHS='アイウエオカキクケコサシスセソタチツテトナニヌネノ0123456789'.split('');
+      var streams=[];
+      function rint(n){ return Math.floor(Math.random()*n); }
+      function newStream(col){ return {col:col,head:-rint(TAIL+3),gap:1+rint(3)}; }
+      function seedStream(col){ return {col:col,head:rint(ROWS+TAIL),gap:1+rint(3)}; }
+      function size(){
+        var r=cover.getBoundingClientRect(); W=r.width; H=r.height;
+        if(W<2||H<2) return;
+        canvas.width=Math.round(W*DPR); canvas.height=Math.round(H*DPR);
+        ctx.setTransform(DPR,0,0,DPR,0,0);
+        ctx.font=FS+'px "JetBrains Mono", monospace'; ctx.textBaseline='top';
+        COLS=Math.floor(W/FS); ROWS=Math.ceil(H/FS)+TAIL;
+        streams=[];
+        for(var c=0;c<COLS;c++) if(Math.random()<0.55) streams.push(seedStream(c));
+      }
+      function paint(){
+        ctx.clearRect(0,0,W,H);
+        for(var s=0;s<streams.length;s++){
+          var st=streams[s], x=st.col*FS;
+          for(var t=0;t<TAIL;t++){
+            var rowi=st.head-t;
+            if(rowi<0||rowi>ROWS) continue;
+            var a=(1-t/TAIL)*0.5; if(t===0) a=0.85;
+            ctx.fillStyle='rgba(125,211,252,'+a.toFixed(3)+')';
+            ctx.fillText(GLYPHS[(st.col*7+rowi)%GLYPHS.length], x, rowi*FS);
+          }
+          st.head+=1;
+          if(st.head-TAIL>ROWS+st.gap*2) streams[s]=newStream(st.col);
+        }
+      }
+      function loop(ts){ if(!running) return; if(!last) last=ts; if(ts-last>=STEP_MS){ last=ts; paint(); } raf=requestAnimationFrame(loop); }
+      function start(){ if(running) return; running=true; last=0; canvas.style.opacity='0.6'; size(); paint(); raf=requestAnimationFrame(loop); }
+      function stop(){ running=false; if(raf) cancelAnimationFrame(raf); raf=null; canvas.style.opacity='0'; ctx.clearRect(0,0,W,H); }
+      cover.addEventListener('mouseenter', start);
+      cover.addEventListener('mouseleave', stop);
+      window.addEventListener('resize', function(){ if(running) size(); }, {passive:true});
+    }
+  })();
+  // Email typo suggester ("Did you mean gmail.com?") — ported verbatim from /book
+  // (mailcheck / Sift3). Pure client-side UX; the server still validates. Scoped to root.
+  (function(){
+    var DOMAINS = ['gmail.com','googlemail.com','outlook.com','hotmail.com','live.com',
+      'msn.com','yahoo.com','ymail.com','icloud.com','me.com','aol.com','proton.me',
+      'protonmail.com','gmx.com','zoho.com','mail.com','yandex.com'];
+    var SLD = ['gmail','googlemail','outlook','hotmail','live','msn','yahoo','ymail',
+      'icloud','me','aol','proton','protonmail','gmx','zoho','mail','yandex'];
+    var TLD = ['com','com.au','com.tw','ca','co.nz','co.uk','de','fr','it','ru','net',
+      'org','edu','gov','io','co','me','biz','info','dev','app'];
+    var THRESHOLD = 2;
+    function sift3(s1,s2){
+      if(!s1) return s2?s2.length:0;
+      if(!s2) return s1.length;
+      var c=0,o1=0,o2=0,lcs=0,max=5;
+      while((c+o1<s1.length)&&(c+o2<s2.length)){
+        if(s1.charAt(c+o1)===s2.charAt(c+o2)) lcs++;
+        else { o1=0;o2=0; for(var i=0;i<max;i++){ if((c+i<s1.length)&&s1.charAt(c+i)===s2.charAt(c)){o1=i;break;} if((c+i<s2.length)&&s1.charAt(c)===s2.charAt(c+i)){o2=i;break;} } }
+        c++;
+      }
+      return (s1.length+s2.length)/2 - lcs;
+    }
+    function closest(item,list){
+      if(!item) return null;
+      if(list.indexOf(item)!==-1) return item;
+      var best=null,bestDist=THRESHOLD+1;
+      for(var i=0;i<list.length;i++){ var d=sift3(item,list[i]); if(d<bestDist){bestDist=d;best=list[i];} }
+      return bestDist<=THRESHOLD ? best : null;
+    }
+    function suggest(email){
+      email=(email||'').trim().toLowerCase();
+      var at=email.lastIndexOf('@');
+      if(at<1) return null;
+      var local=email.slice(0,at), domain=email.slice(at+1);
+      if(!domain||domain.indexOf('.')===-1) return null;
+      var d=closest(domain,DOMAINS);
+      if(d&&d!==domain) return local+'@'+d;
+      var dot=domain.indexOf('.');
+      var sld=domain.slice(0,dot), tld=domain.slice(dot+1);
+      var sFix=closest(sld,SLD)||sld, tFix=closest(tld,TLD)||tld;
+      var fixed=sFix+'.'+tFix;
+      if(fixed!==domain) return local+'@'+fixed;
+      return null;
+    }
+    var input=form.querySelector('input[name=email]');
+    var box=root.querySelector('.sx-email-suggest');
+    var btn=root.querySelector('.sx-email-fix');
+    if(!input||!box||!btn) return;
+    function checkEmail(){ var s=suggest(input.value); if(s){ btn.textContent=s; box.hidden=false; } else { box.hidden=true; } }
+    input.addEventListener('blur', checkEmail);
+    input.addEventListener('input', function(){ if(!box.hidden) checkEmail(); });
+    btn.addEventListener('click', function(){ input.value=btn.textContent; box.hidden=true; input.focus(); });
+  })();
+  // Exposure fires ONCE PER EXPERIMENT PER PAGE (window-level registry), not per
+  // embed — with 2+ embeds of the same experiment on one article (auto-inject +
+  // hand-placed tokens), a per-embed flag would double-count exposures and deflate
+  // the measured conversion rate. Same visitor, same page, same arm = one exposure.
+  var XG = window.__sxExposed = window.__sxExposed || {};
+  // sx_optout objection (ICO DUAA): render/serve the lead form as normal, but
+  // fire NO analytics beacons for an opted-out visitor. Gates exposure + seen.
+  if(!XG[EXP] && !/(?:^|; )sx_optout=1/.test(document.cookie)){
+    XG[EXP] = true;
+    var body = JSON.stringify({ event_type:'capture_exposure', anonymous_id:AID, ts:Date.now(), attribution:{ exp:EXP, variant:V } });
+    try {
+      // Cross-site (WP): NEVER sendBeacon — beacons are always credentials:'include'
+      // and a JSON Blob forces a CORS preflight; /api/track/* CORS has no
+      // Allow-Credentials, so the browser drops the POST while sendBeacon still
+      // returns true (it only means "queued") — every WP exposure silently lost
+      // (adversarial review P2, 2026-07-02). fetch with credentials:'omit' passes
+      // the existing CORS. Same-origin (app pages): sendBeacon as before.
+      if(BASE){
+        fetch(BASE+'/api/hit/event',{method:'POST',headers:{'Content-Type':'application/json'},body:body,keepalive:true,mode:'cors',credentials:'omit'}).catch(function(){});
+      } else {
+        var ok = navigator.sendBeacon && navigator.sendBeacon(location.origin+'/api/hit/event', new Blob([body],{type:'application/json'}));
+        if(!ok){ fetch(location.origin+'/api/hit/event',{method:'POST',headers:{'Content-Type':'application/json'},body:body,keepalive:true,mode:'cors',credentials:'omit'}).catch(function(){}); }
+      }
+    } catch(_){}
+  }
+  // Per-embed SEEN beacon — MRC viewable-impression rule: >=50% of the embed's
+  // pixels in the viewport, tab in focus, for >=1 CONTINUOUS second (the dwell
+  // excludes flick-scroll fly-bys; a background tab never counts). Fires ONCE
+  // per embed per page-load, then the observer disconnects. Server-side the
+  // event is deduped per (anon, attribution) window, so replays can't inflate.
+  // This IIFE runs per embed instance and observes only ITS root (<=2/page).
+  // (Grafted from #53 into the shared init during the wp-widget rebase — runs on
+  // WP embeds too, per book-meta-capi's carry-notes. Beacon is BASE-aware with the
+  // same P2 rule as the exposure: cross-site NEVER uses the always-credentialed
+  // sendBeacon; fetch credentials:'omit' passes the /api/track CORS.)
+  (function(){
+    if(!('IntersectionObserver' in window)) return;
+    var SLOT = parseInt(root.getAttribute('data-slot')||'1',10)||1;
+    var seen=false, timer=null, showing=false;
+    function send(){
+      if(/(?:^|; )sx_optout=1/.test(document.cookie)) return; // sx_optout: no seen beacon
+      var sb = JSON.stringify({ event_type:'capture_seen', anonymous_id:AID, ts:Date.now(), attribution:{ exp:EXP, variant:V, src:SRCBASE, slot:SLOT } });
+      try {
+        if(BASE){
+          fetch(BASE+'/api/hit/event',{method:'POST',headers:{'Content-Type':'application/json'},body:sb,keepalive:true,mode:'cors',credentials:'omit'}).catch(function(){});
+        } else {
+          var ok2 = navigator.sendBeacon && navigator.sendBeacon(location.origin+'/api/hit/event', new Blob([sb],{type:'application/json'}));
+          if(!ok2){ fetch(location.origin+'/api/hit/event',{method:'POST',headers:{'Content-Type':'application/json'},body:sb,keepalive:true,mode:'cors',credentials:'omit'}).catch(function(){}); }
+        }
+      } catch(_){}
+    }
+    function fire(){ if(seen) return; seen=true; timer=null; io.unobserve(root); io.disconnect(); document.removeEventListener('visibilitychange', onVis); send(); }
+    function arm(){ if(seen||timer) return; timer=setTimeout(fire,1000); }
+    function disarm(){ if(timer){ clearTimeout(timer); timer=null; } }
+    function onVis(){ if(document.hidden) disarm(); else if(showing && !seen) arm(); }
+    var io = new IntersectionObserver(function(entries){
+      for(var i=0;i<entries.length;i++){
+        var e=entries[i];
+        if(e.target!==root) continue;
+        showing = e.isIntersecting && e.intersectionRatio>=0.5;
+      }
+      if(showing && !document.hidden) arm(); else disarm();
+    },{threshold:0.5});
+    document.addEventListener('visibilitychange', onVis);
+    io.observe(root);
+  })();
+}
+  var root = document.currentScript && document.currentScript.previousElementSibling;
+  if(!root || !root.hasAttribute || !root.hasAttribute('data-sx-capture')){
+    var all = document.querySelectorAll('[data-sx-capture]'); root = all[all.length-1];
+  }
+  __sxCaptureInit(root);
+})();
+</script><h2 id="use-case">Start With Your Use Case, Not the Model</h2>
+
+  <p>The single most common mistake — and I see it constantly with my students — is treating "best local LLM" as one question. It isn't. There are at least seven sub-questions hiding inside it, and the answer is different for each:</p>
+
+  <ul>
+    <li><strong>Agentic coding</strong> (e.g. running through Aider or Claude Code with a local backend) — large reasoning matters more than raw token speed.</li>
+    <li><strong>Code completion and explanation</strong> — fast, small models that fit in your editor's context budget often beat bigger slower ones.</li>
+    <li><strong>General reasoning and study help</strong> — accuracy on multi-step problems, hallucination resistance.</li>
+    <li><strong>Long-context RAG</strong> (e.g. searching across documentation) — the actual usable context window, not the marketed one.</li>
+    <li><strong>Function calling and tool use</strong> — for agent workflows, browser automation, API orchestration.</li>
+    <li><strong>Writing and editing</strong> — the best local LLM for writing is judged on instruction-following, style preservation, and length control, not raw benchmark scores.</li>
+    <li><strong>Roleplay and red-team simulation</strong> — the best local LLM for roleplay needs to engage with adversarial scenarios without breaking character or refusing.</li>
+  </ul>
+
+  <p>If you're picking the <strong>best local LLM for coding</strong>, the answer is genuinely different from the answer for long-context RAG. Decide what you're actually using the model for <em>before</em> you open a leaderboard. Otherwise you'll be misled by an overall ranking that averages across tasks you don't care about.</p>
+
+  <picture>
+  <source type="image/avif" srcset="/public/articles/best-local-llm/decision-tree-md.avif 720w, /public/articles/best-local-llm/decision-tree-lg.avif 1200w" sizes="(max-width: 768px) 720px, 1200px">
+  <source type="image/webp" srcset="/public/articles/best-local-llm/decision-tree-md.webp 720w, /public/articles/best-local-llm/decision-tree-lg.webp 1200w" sizes="(max-width: 768px) 720px, 1200px">
+  <img data-zoomable src="/public/articles/best-local-llm/decision-tree.png" alt="Decision tree mapping each use case to the benchmark that actually predicts performance for it" width="2560" height="1440" loading="lazy" class="w-full rounded-lg my-8">
+</picture>
+
+  <p>A quick test I give my students: write down the three tasks you'll use the model for this week. Not next quarter — this week. That's the use case you're optimising for.</p>
+
+  <!-- ════════════════════════════════════════════════════════════ -->
+  <!-- Benchmarks by use case                                      -->
+  <!-- ════════════════════════════════════════════════════════════ -->
+
+  <h2 id="benchmarks">The Benchmarks That Actually Predict Real-World Performance</h2>
+
+  <p>Once you've named the use case, the next question is which <strong>local LLM benchmarks</strong> actually correlate with the work. This is where most articles go wrong. They cite whatever number the vendor put in the model card. The vendor cited it because it was flattering. You need to know which benchmarks are still informative and which are decorative.</p>
+
+  <p>Here's the use-case-to-benchmark map I actually use, all verified active as of May 2026:</p>
+
+  <div class="overflow-x-auto my-8 rounded-lg border border-slate-200">
+    <table class="w-full border-collapse" style="min-width: 550px">
+      <thead class="bg-slate-100">
+        <tr class="border-b-2 border-slate-200"><th class="py-3 px-4 text-sm font-bold text-slate-500 uppercase tracking-wider text-left">Use case</th><th class="py-3 px-4 text-sm font-bold text-slate-500 uppercase tracking-wider text-left">Benchmarks worth checking</th><th class="py-3 px-4 text-sm font-bold text-slate-500 uppercase tracking-wider text-left">Where they live</th></tr>
+      </thead>
+      <tbody><tr class="bg-white border-b border-slate-100"><td class="py-3 px-4 text-base font-medium text-slate-900 text-left ">Agentic coding</td><td class="py-3 px-4 text-base text-slate-700 text-left ">SWE-Bench Verified, SWE-Bench Pro, Aider Polyglot</td><td class="py-3 px-4 text-base text-slate-700 text-left "><a href="https://www.swebench.com" rel="noopener" class="link link-primary">swebench.com</a>, <a href="https://aider.chat/docs/leaderboards" rel="noopener" class="link link-primary">aider.chat</a></td></tr><tr class="bg-slate-50 border-b border-slate-100"><td class="py-3 px-4 text-base font-medium text-slate-900 text-left ">Code completion / short tasks</td><td class="py-3 px-4 text-base text-slate-700 text-left ">LiveCodeBench, BigCodeBench</td><td class="py-3 px-4 text-base text-slate-700 text-left "><a href="https://livecodebench.github.io" rel="noopener" class="link link-primary">livecodebench.github.io</a></td></tr><tr class="bg-white border-b border-slate-100"><td class="py-3 px-4 text-base font-medium text-slate-900 text-left ">Reasoning</td><td class="py-3 px-4 text-base text-slate-700 text-left ">GPQA Diamond, MMLU-Pro, MATH, AIME</td><td class="py-3 px-4 text-base text-slate-700 text-left "><a href="https://artificialanalysis.ai" rel="noopener" class="link link-primary">artificialanalysis.ai</a>, <a href="https://www.vellum.ai/llm-leaderboard" rel="noopener" class="link link-primary">vellum.ai</a></td></tr><tr class="bg-slate-50 border-b border-slate-100"><td class="py-3 px-4 text-base font-medium text-slate-900 text-left ">Long context</td><td class="py-3 px-4 text-base text-slate-700 text-left ">RULER</td><td class="py-3 px-4 text-base text-slate-700 text-left "><a href="https://github.com/NVIDIA/RULER" rel="noopener" class="link link-primary">github.com/NVIDIA/RULER</a></td></tr><tr class="bg-white border-b border-slate-100"><td class="py-3 px-4 text-base font-medium text-slate-900 text-left ">Function calling / tools</td><td class="py-3 px-4 text-base text-slate-700 text-left ">BFCL (Berkeley Function-Calling Leaderboard)</td><td class="py-3 px-4 text-base text-slate-700 text-left "><a href="https://gorilla.cs.berkeley.edu/leaderboard.html" rel="noopener" class="link link-primary">gorilla.cs.berkeley.edu</a></td></tr><tr class="bg-slate-50 border-b border-slate-100"><td class="py-3 px-4 text-base font-medium text-slate-900 text-left ">Multilingual</td><td class="py-3 px-4 text-base text-slate-700 text-left ">Flores, MGSM</td><td class="py-3 px-4 text-base text-slate-700 text-left "><a href="https://artificialanalysis.ai" rel="noopener" class="link link-primary">artificialanalysis.ai</a></td></tr><tr class="bg-white border-b border-slate-100"><td class="py-3 px-4 text-base font-medium text-slate-900 text-left ">Vision</td><td class="py-3 px-4 text-base text-slate-700 text-left ">MMMU, MathVista</td><td class="py-3 px-4 text-base text-slate-700 text-left "><a href="https://artificialanalysis.ai" rel="noopener" class="link link-primary">artificialanalysis.ai</a></td></tr><tr class="bg-slate-50 border-b border-slate-100"><td class="py-3 px-4 text-base font-medium text-slate-900 text-left ">Embeddings (for RAG)</td><td class="py-3 px-4 text-base text-slate-700 text-left ">MTEB</td><td class="py-3 px-4 text-base text-slate-700 text-left "><a href="https://huggingface.co/spaces/mteb/leaderboard" rel="noopener" class="link link-primary">huggingface.co/spaces/mteb/leaderboard</a></td></tr><tr class="bg-white border-b border-slate-100"><td class="py-3 px-4 text-base font-medium text-slate-900 text-left ">Instruction following</td><td class="py-3 px-4 text-base text-slate-700 text-left ">IFEval, WildBench</td><td class="py-3 px-4 text-base text-slate-700 text-left "><a href="https://livebench.ai" rel="noopener" class="link link-primary">livebench.ai</a></td></tr></tbody>
+    </table>
+  </div>
+
+  <p>A few benchmarks you'll see cited that are now functionally dead: <strong>HellaSwag</strong>, <strong>bare HumanEval</strong>, and naïve <strong>Needle-in-a-Haystack</strong> long-context tests. All three are saturated, contaminated, or both. If a vendor's headline number is HumanEval, they're picking the friendliest reading they can find. Look at LiveCodeBench or BigCodeBench instead. RULER replaced Needle-in-a-Haystack for honest long-context evaluation in 2024 — anyone still quoting "1M context, 99% on NIAH" in 2026 is selling you something.</p>
+
+  <picture>
+  <source type="image/avif" srcset="/public/articles/best-local-llm/dead-vs-alive-md.avif 720w, /public/articles/best-local-llm/dead-vs-alive-lg.avif 1200w" sizes="(max-width: 768px) 720px, 1200px">
+  <source type="image/webp" srcset="/public/articles/best-local-llm/dead-vs-alive-md.webp 720w, /public/articles/best-local-llm/dead-vs-alive-lg.webp 1200w" sizes="(max-width: 768px) 720px, 1200px">
+  <img data-zoomable src="/public/articles/best-local-llm/dead-vs-alive.png" alt="Dead vs alive benchmarks — HellaSwag, bare HumanEval and naive Needle-in-Haystack on the left versus SWE-Bench Verified, LiveBench and RULER on the right" width="2560" height="1440" loading="lazy" class="w-full rounded-lg my-8">
+</picture>
+
+  <p>The single highest-signal coding score is <strong>SWE-Bench Verified</strong> for agentic work and <strong>Aider Polyglot</strong> for editor-style code generation. They're contamination-resistant because the test sets are refreshed and the tasks involve real GitHub issues, not toy problems.</p>
+
+  <!-- ════════════════════════════════════════════════════════════ -->
+  <!-- 4-source toolkit                                            -->
+  <!-- ════════════════════════════════════════════════════════════ -->
+
+  <h2 id="sources">The 4 Sources Every Serious Practitioner Monitors</h2>
+
+  <p>Here's the toolkit. Four sources, ranked by signal-to-noise. Together they take about ten minutes to skim once a month, which is the maintenance budget I think is reasonable for someone who actually wants to keep up.</p>
+
+  <picture>
+  <source type="image/avif" srcset="/public/articles/best-local-llm/four-sources-md.avif 720w, /public/articles/best-local-llm/four-sources-lg.avif 1200w" sizes="(max-width: 768px) 720px, 1200px">
+  <source type="image/webp" srcset="/public/articles/best-local-llm/four-sources-md.webp 720w, /public/articles/best-local-llm/four-sources-lg.webp 1200w" sizes="(max-width: 768px) 720px, 1200px">
+  <img data-zoomable src="/public/articles/best-local-llm/four-sources.png" alt="The 4-source toolkit grid — LMSYS Arena, the capability triad, r/LocalLLaMA and your 20-prompt private eval" width="2560" height="1440" loading="lazy" class="w-full rounded-lg my-8">
+</picture>
+
+  <h3>1. LMSYS Chatbot Arena (lmarena.ai) — Human Preference</h3>
+
+  <p>Real users blind-test models head-to-head and vote on the winner. The result is an Elo score that captures something benchmarks can't: how a model actually feels to use. It's noisy at the top (Elo is sensitive to who's voting that week) but excellent for spotting genuine shifts in capability. Filter to "open" models to see the local-runnable picture.</p>
+
+  <p>Best for: sanity-checking benchmark claims, catching new releases that are <em>actually</em> good versus paper-good.</p>
+
+  <h3>2. The Capability Triad — LiveBench, Aider Polyglot, SWE-Bench Verified</h3>
+
+  <p>These three are the contamination-resistant capability benchmarks. LiveBench refreshes tasks monthly so models can't be pre-trained on the test. Aider Polyglot tests editor-style coding across languages. SWE-Bench Verified is the gold standard for agentic coding. Take a top-5 from each, look for models that appear in all three.</p>
+
+  <p>If a model crushes one benchmark and is missing from the others, that's a tell. It's been optimised for the visible scoreboard. The triad rewards genuine capability.</p>
+
+  <h3>3. r/LocalLLaMA — The <em>Best Local LLM Reddit</em> Answer</h3>
+
+  <p>The community that actually runs these models on real hardware. You will learn things here that benchmarks can't tell you: which models break at certain quantisation levels, which ones are unusable on Apple Silicon, which "small enough to run locally" claims are honest and which require a server farm. The signal-to-noise is higher than any other forum I'm aware of for this topic.</p>
+
+  <p>Skim the weekly "best models" megathreads. Search for your specific hardware. The community is opinionated, sometimes wrong, but always informed.</p>
+
+  <h3>4. Your Own 20-Prompt Private Eval</h3>
+
+  <p>This is the only ungameable source. Pick 20 prompts you actually use — five from your real work, five edge cases, five "easy" prompts that should always pass, five from your last failure mode. Save them in a text file. Run them against any model you're considering, side by side with your current default. Score them yourself.</p>
+
+  <p>I will say this directly: I trust the output of a 20-prompt private eval more than any leaderboard. The ten minutes it takes is the single highest-leverage piece of LLM evaluation work you can do.</p>
+
+  <p>Honourable mentions worth knowing: <strong>Artificial Analysis</strong> (artificialanalysis.ai) for price-and-speed comparisons across hosted endpoints; <strong>MTEB</strong> for embeddings specifically; <strong>BFCL</strong> for function calling specifically; <strong>Vellum</strong> and <strong>Onyx</strong> as current open-weight aggregators. Use these when you're going deep on one dimension — the four sources above are the monthly skim. Onyx in particular runs the <strong>best self-hosted AI model</strong> leaderboard if you want a self-hosted-only view.</p>
+
+  <!-- ════════════════════════════════════════════════════════════ -->
+  <!-- Honest critique                                             -->
+  <!-- ════════════════════════════════════════════════════════════ -->
+
+  <h2 id="honest">How to Read Benchmarks Honestly (and Which Ones Are Dead)</h2>
+
+  <p>A few rules I'd hand to anyone evaluating models, especially my students:</p>
+
+  <p><strong>Vendor benchmarks are marketing</strong>. If the only source for a claim is the vendor's blog post, treat it as marketing until corroborated by an independent leaderboard. This applies to closed and open-source models equally.</p>
+
+  <p><strong>Contamination is endemic</strong>. If a benchmark has been around for more than 18 months, assume some training data overlap with the test set. This is why LiveBench's monthly refresh, and SWE-Bench Verified's curated approach, matter so much.</p>
+
+  <p><strong>Benchmaxxing is real</strong>. "Benchmaxxing" is the practice of fine-tuning a model to maximise a specific benchmark's score, often at the cost of general capability. You spot it by looking for the gap between a model's benchmark score and its LMSYS Arena rank. A wide gap, especially with the model scoring well on a contamination-prone benchmark, is a tell.</p>
+
+  <p><strong>The HuggingFace OpenLLM Leaderboard is no longer authoritative</strong>. Both v1 and v2 have been retired. If a source you're reading still treats it as current in 2026, the source is out of date. Vellum, Onyx, and Artificial Analysis now fill that aggregator gap.</p>
+
+  <p><strong>Why leaderboards diverge</strong>: different benchmarks measure different things, weight them differently, and have different contamination profiles. A model topping one leaderboard and ranking mid-tier on another usually means the truth is somewhere in the middle. Triangulate, don't rely on one source.</p>
+
+  <!-- ════════════════════════════════════════════════════════════ -->
+  <!-- Licence trap                                                -->
+  <!-- ════════════════════════════════════════════════════════════ -->
+
+  <h2 id="licence">The Licence Trap — Open-Weight ≠ Commercial-OK</h2>
+
+  <p>This is the section that has saved me from more than one expensive mistake.</p>
+
+  <p><strong>Open-weight does not mean commercial-use is permitted</strong>. It means the weights are downloadable. The licence is a separate question, and several of the most popular "open-source" models have restrictions that bite hard when you try to use them in a product.</p>
+
+  <p>Examples to be aware of:</p>
+
+  <ul>
+    <li><strong>MiniMax</strong> models ship with restrictions on competitive use and certain commercial deployments.</li>
+    <li><strong>Llama 4</strong> uses a custom community licence with a monthly active user cap (700M) — fine for most, but check.</li>
+    <li><strong>Modified-MIT</strong> licences are increasingly common and may include attribution or use restrictions that standard MIT does not.</li>
+    <li><strong>Cohere Command-R+</strong> is non-commercial weights only — the API is a different licence.</li>
+  </ul>
+
+  <picture>
+  <source type="image/avif" srcset="/public/articles/best-local-llm/licence-check-md.avif 720w, /public/articles/best-local-llm/licence-check-lg.avif 1200w" sizes="(max-width: 768px) 720px, 1200px">
+  <source type="image/webp" srcset="/public/articles/best-local-llm/licence-check-md.webp 720w, /public/articles/best-local-llm/licence-check-lg.webp 1200w" sizes="(max-width: 768px) 720px, 1200px">
+  <img data-zoomable src="/public/articles/best-local-llm/licence-check.png" alt="The 60-second licence check — open the model page, read the licence file itself, check the commercial-use clause and the use restrictions, then ship or pick another model" width="2560" height="1440" loading="lazy" class="w-full rounded-lg my-8">
+</picture>
+
+  <p>The 60-second check that saves you a legal review later:</p>
+
+  <ol>
+    <li>Open the model's HuggingFace page.</li>
+    <li>Find the licence field.</li>
+    <li>Read the licence file <em>itself</em> — not the model card's summary.</li>
+    <li>Look specifically for use restrictions (commercial, military, competitive), attribution requirements, and acceptable use clauses.</li>
+    <li>If you're deploying in a product, get a lawyer to confirm. If you're using it for personal work or study, you're almost certainly fine, but check anyway.</li>
+  </ol>
+
+  <p>The cost of getting this wrong is being asked to remove a model from production after launch. The cost of checking is one minute.</p>
+
+  <!-- ════════════════════════════════════════════════════════════ -->
+  <!-- Uncensored                                                  -->
+  <!-- ════════════════════════════════════════════════════════════ -->
+
+  
+<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,400;6..12,700;6..12,800;6..12,900&family=JetBrains+Mono:wght@500;600;700&display=swap" rel="stylesheet">
+<div class="sx-capture" data-sx-capture hidden
+     data-exp="article-capture-v1" data-srcbase="best-local-llm-mid" data-slot="2"
+     data-variants='["a","b","c"]' data-copy='{"a":{"pre":"The shift that&#39;s quietly ","hl":"resetting cyber security careers","post":"."},"b":{"pre":"What they don&#39;t tell you about ","hl":"cyber security careers in the AI era","post":"."},"c":{"pre":"AI isn&#39;t ending cyber security careers. ","hl":"It&#39;s changing who gets ahead","post":"."}}'
+     style="max-width:52rem;margin:2.5rem auto;padding:1.5rem;border:1px solid #e2e8f0;border-radius:1rem;background:#f4f6fb;color:#0f172a;font-family:'Nunito Sans',-apple-system,BlinkMacSystemFont,'Segoe UI',system-ui,sans-serif;box-shadow:0 10px 30px -12px rgba(15,23,42,.18);display:flex;flex-wrap:wrap;gap:1.5rem;align-items:center">
+  <div style="flex:1 1 13rem;min-width:12rem;order:0">
+    <h3 class="sx-capture-h" style="margin:0 0 1rem;font-size:clamp(1.7rem,3.2vw,2.2rem);font-weight:900;line-height:1.15;letter-spacing:-.015em;color:#0f172a"></h3>
+    <form class="sx-capture-form" method="post" action="/api/book/request" style="display:flex;flex-direction:column;gap:.7rem">
+      <input type="hidden" name="source" value="best-local-llm-mid">
+      <input type="hidden" name="exp" value="article-capture-v1">
+      <input type="hidden" name="variant" value="">
+      <input type="hidden" name="consent" value="yes">
+      <input type="text" name="first_name" autocomplete="given-name" placeholder="First name"
+        style="width:100%;padding:.8rem .9rem;border:1px solid #cbd5e1;border-radius:.6rem;background:#fff;color:#0f172a;font-size:1rem;font-family:inherit">
+      <input type="email" name="email" required autocomplete="email" placeholder="you@email.com"
+        style="width:100%;padding:.8rem .9rem;border:1px solid #cbd5e1;border-radius:.6rem;background:#fff;color:#0f172a;font-size:1rem;font-family:inherit">
+      <p class="sx-email-suggest" hidden style="margin:-.3rem 0 0;font-size:.82rem;color:#64748b">Did you mean <button type="button" class="sx-email-fix" style="background:none;border:0;padding:0;font-family:inherit;font-size:.82rem;font-weight:800;color:#2563eb;cursor:pointer;text-decoration:underline"></button>?</p>
+      <button type="submit" class="sx-capture-btn"
+        style="padding:.85rem 1rem;border:0;border-radius:.6rem;background:#4054e6;color:#fff;font-family:inherit;font-weight:800;font-size:1.05rem;cursor:pointer">Send me the book →</button>
+      <p style="margin:.35rem 0 0;font-size:.78rem;line-height:1.45;color:#64748b;text-align:center">By submitting you'll get the book + occasional related emails. Unsubscribe anytime. <a href="/book/privacy" style="color:#4054e6">Privacy</a>.</p>
+    </form>
+  </div>
+  <div class="sx-cover" style="flex:0 0 auto;order:1;position:relative;width:420px;max-width:70vw;aspect-ratio:1024/1536;margin:0 auto;border-radius:.5rem;overflow:hidden;cursor:pointer;box-shadow:0 8px 24px -8px rgba(15,23,42,.35);transition:transform .4s cubic-bezier(.2,.7,.2,1),box-shadow .4s">
+    <img src="/book/public/cover-final.webp" alt="Become the Cyber Security Expert the AI Era Demands"
+         width="200" height="300" loading="lazy"
+         style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block">
+    <canvas class="sx-cover-rain" aria-hidden="true" style="position:absolute;inset:0;z-index:2;pointer-events:none;mix-blend-mode:screen;opacity:0;transition:opacity .45s ease"></canvas>
+  </div>
+</div>
+<script>
+(function(){
+  function __sxFnv(str){var h=2166136261;for(var i=0;i<str.length;i++){h^=str.charCodeAt(i);h=Math.imul(h,16777619);}return h>>>0;}
+function __sxHashUnit(seed,value){var n=__sxFnv(""+__sxFnv(seed+value));return (n%10000)/10000;}
+function __sxAssign(key,aid,ids){if(!ids.length)return "a";if(!aid)return ids[0];var s=__sxHashUnit(key,aid);var c=0,share=1/ids.length;for(var i=0;i<ids.length;i++){c+=share;if(s<c)return ids[i];}return ids[ids.length-1];}
+  function __sxCaptureInit(root){
+  if(!root || !root.hasAttribute || !root.hasAttribute('data-sx-capture')) return;
+  var BASE = root.getAttribute('data-sx-base') || '';
+  // Hide for signed-in members (they already have the book / are paying). The non-httpOnly
+  // session_present=1 cookie is the signed-in UI-hint the navbar + Master's-ad CTA use
+  // (set in auth/teachable.ts; the real gate is the httpOnly session). Remove the whole
+  // embed; the script does nothing else.
+  if(document.cookie.split(';').some(function(x){return x.trim().indexOf('session_present=1')===0;})){
+    root.remove();
+    return;
+  }
+  var EXP = root.getAttribute('data-exp') || '';
+  var IDS; try{ IDS = JSON.parse(root.getAttribute('data-variants')); }catch(_){ IDS = ['a','b','c']; }
+  var COPY; try{ COPY = JSON.parse(root.getAttribute('data-copy')); }catch(_){ COPY = {}; }
+  var SRCBASE = root.getAttribute('data-srcbase') || 'article';
+  function aid(){
+    var m = document.cookie.match(/(?:^|;\s*)sx_aid=(a_[a-f0-9]{32})/);
+    if(m) return m[1];
+    var h=''; try{ var b=new Uint8Array(16); crypto.getRandomValues(b); for(var i=0;i<16;i++){h+=b[i].toString(16).padStart(2,'0');} }
+    catch(_){ for(var j=0;j<32;j++){ h+=Math.floor(Math.random()*16).toString(16); } }
+    return 'a_'+h;
+  }
+  // ONE anon id per page, shared by every embed (adversarial review P1): without
+  // this cache, cookieless visitors mint a fresh random id per embed → the two
+  // auto-injected slots bucket to DIFFERENT arms and cross-contaminate the A/B
+  // (exposure credits slot 1's arm, a slot-2 conversion credits another).
+  var AID = window.__sxAid || (window.__sxAid = aid());
+  var V = __sxAssign(EXP, AID, IDS);
+  var c = COPY[V] || COPY[IDS[0]] || {pre:'',hl:'',post:''};
+  // Build the headline as text + a highlighted <span> WITHOUT innerHTML (each part via
+  // textContent — XSS-safe). The .hl span mirrors the /book page highlight (blue accent).
+  // If the copy failed to resolve (e.g. data-copy JSON.parse failure → empty headline),
+  // keep the embed HIDDEN rather than reveal a headless form. Data is first-party so this
+  // is near-impossible, but staying hidden degrades safer than a blank-heading card.
+  if(!((c.pre||'') + (c.hl||'') + (c.post||'')).trim()){ return; }
+  var h = root.querySelector('.sx-capture-h');
+  h.textContent = '';
+  h.appendChild(document.createTextNode(c.pre || ''));
+  if(c.hl){ var sp = document.createElement('span'); sp.textContent = c.hl; sp.style.color = '#2563eb'; h.appendChild(sp); }
+  h.appendChild(document.createTextNode(c.post || ''));
+  var form = root.querySelector('.sx-capture-form');
+  form.querySelector('input[name=variant]').value = V;
+  form.querySelector('input[name=source]').value = (SRCBASE + '-' + V).slice(0,64);
+  if(BASE){ form.action = BASE + '/api/book/request'; }
+  // Fetch-submit with an INLINE success message (fixes the raw-JSON landing the native
+  // POST produced — /api/book/request always returns JSON). Adversarial review P4/P10
+  // (2026-07-02): the native form.submit() fallback fires ONLY on network-layer
+  // rejection (fetch never got a response) — NEVER after a response arrived, else a
+  // non-JSON body (rate-limiter 429 text, CF 5xx HTML) would re-POST a processed
+  // submission (duplicate lead) and navigate cold traffic to a raw error page. A
+  // received-but-unparseable body: r.ok → show generic success (the lead IS captured);
+  // !r.ok → inline error + re-enable. No window.fetch at all → don't intercept.
+  var sending = false;
+  form.addEventListener('submit', function(ev){
+    if(!window.fetch) return; // ancient env: native POST (pre-change behaviour)
+    ev.preventDefault();
+    // Disabling the button is NOT enough: pressing Enter in a text field fires a
+    // submit event directly on the FORM, bypassing the button entirely. Two quick
+    // Enters therefore fired two POSTs (verified: 2 rapid submits -> 2 fetches),
+    // minting a duplicate lead and a second book email. The flag is the real guard;
+    // the button state is only the visible half of it.
+    if(sending) return;
+    sending = true;
+    var btn = form.querySelector('.sx-capture-btn');
+    if(btn){ btn.disabled = true; btn.textContent = 'Sending…'; }
+    function handle(r){
+      return r.json().catch(function(){ return null; }).then(function(d){
+        if(r.ok){
+          var p = document.createElement('p');
+          p.textContent = (d && d.message) || 'Check your inbox — your book link is on its way.';
+          p.setAttribute('style','margin:.4rem 0 0;font-weight:800;font-size:1.05rem;line-height:1.4;color:#0f766e');
+          form.hidden = true;
+          form.parentElement.appendChild(p);
+        } else {
+          // Re-arm: this attempt is over and the visitor must be able to retry.
+          sending = false;
+          if(btn){ btn.disabled = false; btn.textContent = 'Send me the book →'; }
+          var e = form.querySelector('.sx-capture-err');
+          if(!e){ e = document.createElement('p'); e.className='sx-capture-err'; e.setAttribute('style','margin:.35rem 0 0;font-size:.85rem;font-weight:700;color:#b91c1c'); form.appendChild(e); }
+          e.textContent = (d && (d.error || d.message)) || 'Something went wrong — please check the email address and try again.';
+        }
+      });
+    }
+    // The accept:application/json header is REQUIRED, not decorative:
+    // /api/book/request is content-negotiated (gate.ts wantsJson) and answers a 303
+    // to /book/thanks for anything that does not explicitly ask for JSON. fetch's
+    // default Accept is star-slash-star, so WITHOUT this header the embed follows a
+    // redirect it was never written for — and cross-origin (the WP widget) the
+    // redirect TARGET carries no ACAO for www, so the promise REJECTS and lands in
+    // the form.submit() fallback below, re-POSTing an already-processed signup:
+    // duplicate lead, duplicate book email, visitor navigated off the article.
+    // Accept is a CORS-safelisted header and this value has no unsafe bytes, so it
+    // adds no preflight. (NB: no backticks in this file — it is a template literal.)
+    fetch((BASE || '') + '/api/book/request', { method:'POST', body:new FormData(form), credentials:'include', headers:{ 'accept':'application/json' } })
+      .then(handle, function(){
+        // Re-arm BEFORE the native fallback. form.submit() normally navigates, so
+        // this rarely shows in a real browser — it bites when the navigation is
+        // blocked or deferred (in-app webview, beforeunload, aborted navigation),
+        // leaving the visitor on a form that can never be submitted again: a lead
+        // lost silently, invisible server-side. The book form (gate.ts) re-arms on
+        // its equivalent path; the two scripts must not diverge here.
+        sending = false;
+        form.submit();
+      })
+      // A throw inside handle() (a DOM error while rendering the panel) would
+      // otherwise leave the guard stuck with no fallback at all.
+      .catch(function(){ sending = false; });
+  });
+  root.removeAttribute('hidden');
+  // Matrix code-rain over the cover (hover) + click-to-focus the first field — ported
+  // verbatim from the /book landing page. Scoped to THIS embed's root so multiple
+  // embeds never collide. Respects prefers-reduced-motion. Self-contained IIFE.
+  (function(){
+    var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var cover = root.querySelector('.sx-cover');
+    var canvas = root.querySelector('.sx-cover-rain');
+    if(cover){
+      // click the book → focus First name (scroll first if the form is stacked below)
+      cover.addEventListener('click', function(){
+        var first = root.querySelector('input[name=first_name]') || root.querySelector('input[name=email]');
+        if(!first) return;
+        var stacked = window.matchMedia('(max-width: 640px)').matches;
+        if(stacked){ form.scrollIntoView({behavior:'smooth',block:'center'}); setTimeout(function(){ first.focus({preventScroll:true}); }, 420); }
+        else { first.focus(); }
+      });
+      cover.addEventListener('mouseenter', function(){ cover.style.transform='translateY(-4px)'; });
+      cover.addEventListener('mouseleave', function(){ cover.style.transform=''; });
+    }
+    if(reduce || !cover || !canvas || !canvas.getContext) { if(canvas) canvas.style.display='none'; }
+    else {
+      var ctx = canvas.getContext('2d');
+      var DPR = Math.min(window.devicePixelRatio || 1, 2);
+      var W=0,H=0,COLS=0,ROWS=0,FS=15,raf=null,last=0,running=false;
+      var STEP_MS=90,TAIL=9;
+      var GLYPHS='アイウエオカキクケコサシスセソタチツテトナニヌネノ0123456789'.split('');
+      var streams=[];
+      function rint(n){ return Math.floor(Math.random()*n); }
+      function newStream(col){ return {col:col,head:-rint(TAIL+3),gap:1+rint(3)}; }
+      function seedStream(col){ return {col:col,head:rint(ROWS+TAIL),gap:1+rint(3)}; }
+      function size(){
+        var r=cover.getBoundingClientRect(); W=r.width; H=r.height;
+        if(W<2||H<2) return;
+        canvas.width=Math.round(W*DPR); canvas.height=Math.round(H*DPR);
+        ctx.setTransform(DPR,0,0,DPR,0,0);
+        ctx.font=FS+'px "JetBrains Mono", monospace'; ctx.textBaseline='top';
+        COLS=Math.floor(W/FS); ROWS=Math.ceil(H/FS)+TAIL;
+        streams=[];
+        for(var c=0;c<COLS;c++) if(Math.random()<0.55) streams.push(seedStream(c));
+      }
+      function paint(){
+        ctx.clearRect(0,0,W,H);
+        for(var s=0;s<streams.length;s++){
+          var st=streams[s], x=st.col*FS;
+          for(var t=0;t<TAIL;t++){
+            var rowi=st.head-t;
+            if(rowi<0||rowi>ROWS) continue;
+            var a=(1-t/TAIL)*0.5; if(t===0) a=0.85;
+            ctx.fillStyle='rgba(125,211,252,'+a.toFixed(3)+')';
+            ctx.fillText(GLYPHS[(st.col*7+rowi)%GLYPHS.length], x, rowi*FS);
+          }
+          st.head+=1;
+          if(st.head-TAIL>ROWS+st.gap*2) streams[s]=newStream(st.col);
+        }
+      }
+      function loop(ts){ if(!running) return; if(!last) last=ts; if(ts-last>=STEP_MS){ last=ts; paint(); } raf=requestAnimationFrame(loop); }
+      function start(){ if(running) return; running=true; last=0; canvas.style.opacity='0.6'; size(); paint(); raf=requestAnimationFrame(loop); }
+      function stop(){ running=false; if(raf) cancelAnimationFrame(raf); raf=null; canvas.style.opacity='0'; ctx.clearRect(0,0,W,H); }
+      cover.addEventListener('mouseenter', start);
+      cover.addEventListener('mouseleave', stop);
+      window.addEventListener('resize', function(){ if(running) size(); }, {passive:true});
+    }
+  })();
+  // Email typo suggester ("Did you mean gmail.com?") — ported verbatim from /book
+  // (mailcheck / Sift3). Pure client-side UX; the server still validates. Scoped to root.
+  (function(){
+    var DOMAINS = ['gmail.com','googlemail.com','outlook.com','hotmail.com','live.com',
+      'msn.com','yahoo.com','ymail.com','icloud.com','me.com','aol.com','proton.me',
+      'protonmail.com','gmx.com','zoho.com','mail.com','yandex.com'];
+    var SLD = ['gmail','googlemail','outlook','hotmail','live','msn','yahoo','ymail',
+      'icloud','me','aol','proton','protonmail','gmx','zoho','mail','yandex'];
+    var TLD = ['com','com.au','com.tw','ca','co.nz','co.uk','de','fr','it','ru','net',
+      'org','edu','gov','io','co','me','biz','info','dev','app'];
+    var THRESHOLD = 2;
+    function sift3(s1,s2){
+      if(!s1) return s2?s2.length:0;
+      if(!s2) return s1.length;
+      var c=0,o1=0,o2=0,lcs=0,max=5;
+      while((c+o1<s1.length)&&(c+o2<s2.length)){
+        if(s1.charAt(c+o1)===s2.charAt(c+o2)) lcs++;
+        else { o1=0;o2=0; for(var i=0;i<max;i++){ if((c+i<s1.length)&&s1.charAt(c+i)===s2.charAt(c)){o1=i;break;} if((c+i<s2.length)&&s1.charAt(c)===s2.charAt(c+i)){o2=i;break;} } }
+        c++;
+      }
+      return (s1.length+s2.length)/2 - lcs;
+    }
+    function closest(item,list){
+      if(!item) return null;
+      if(list.indexOf(item)!==-1) return item;
+      var best=null,bestDist=THRESHOLD+1;
+      for(var i=0;i<list.length;i++){ var d=sift3(item,list[i]); if(d<bestDist){bestDist=d;best=list[i];} }
+      return bestDist<=THRESHOLD ? best : null;
+    }
+    function suggest(email){
+      email=(email||'').trim().toLowerCase();
+      var at=email.lastIndexOf('@');
+      if(at<1) return null;
+      var local=email.slice(0,at), domain=email.slice(at+1);
+      if(!domain||domain.indexOf('.')===-1) return null;
+      var d=closest(domain,DOMAINS);
+      if(d&&d!==domain) return local+'@'+d;
+      var dot=domain.indexOf('.');
+      var sld=domain.slice(0,dot), tld=domain.slice(dot+1);
+      var sFix=closest(sld,SLD)||sld, tFix=closest(tld,TLD)||tld;
+      var fixed=sFix+'.'+tFix;
+      if(fixed!==domain) return local+'@'+fixed;
+      return null;
+    }
+    var input=form.querySelector('input[name=email]');
+    var box=root.querySelector('.sx-email-suggest');
+    var btn=root.querySelector('.sx-email-fix');
+    if(!input||!box||!btn) return;
+    function checkEmail(){ var s=suggest(input.value); if(s){ btn.textContent=s; box.hidden=false; } else { box.hidden=true; } }
+    input.addEventListener('blur', checkEmail);
+    input.addEventListener('input', function(){ if(!box.hidden) checkEmail(); });
+    btn.addEventListener('click', function(){ input.value=btn.textContent; box.hidden=true; input.focus(); });
+  })();
+  // Exposure fires ONCE PER EXPERIMENT PER PAGE (window-level registry), not per
+  // embed — with 2+ embeds of the same experiment on one article (auto-inject +
+  // hand-placed tokens), a per-embed flag would double-count exposures and deflate
+  // the measured conversion rate. Same visitor, same page, same arm = one exposure.
+  var XG = window.__sxExposed = window.__sxExposed || {};
+  // sx_optout objection (ICO DUAA): render/serve the lead form as normal, but
+  // fire NO analytics beacons for an opted-out visitor. Gates exposure + seen.
+  if(!XG[EXP] && !/(?:^|; )sx_optout=1/.test(document.cookie)){
+    XG[EXP] = true;
+    var body = JSON.stringify({ event_type:'capture_exposure', anonymous_id:AID, ts:Date.now(), attribution:{ exp:EXP, variant:V } });
+    try {
+      // Cross-site (WP): NEVER sendBeacon — beacons are always credentials:'include'
+      // and a JSON Blob forces a CORS preflight; /api/track/* CORS has no
+      // Allow-Credentials, so the browser drops the POST while sendBeacon still
+      // returns true (it only means "queued") — every WP exposure silently lost
+      // (adversarial review P2, 2026-07-02). fetch with credentials:'omit' passes
+      // the existing CORS. Same-origin (app pages): sendBeacon as before.
+      if(BASE){
+        fetch(BASE+'/api/hit/event',{method:'POST',headers:{'Content-Type':'application/json'},body:body,keepalive:true,mode:'cors',credentials:'omit'}).catch(function(){});
+      } else {
+        var ok = navigator.sendBeacon && navigator.sendBeacon(location.origin+'/api/hit/event', new Blob([body],{type:'application/json'}));
+        if(!ok){ fetch(location.origin+'/api/hit/event',{method:'POST',headers:{'Content-Type':'application/json'},body:body,keepalive:true,mode:'cors',credentials:'omit'}).catch(function(){}); }
+      }
+    } catch(_){}
+  }
+  // Per-embed SEEN beacon — MRC viewable-impression rule: >=50% of the embed's
+  // pixels in the viewport, tab in focus, for >=1 CONTINUOUS second (the dwell
+  // excludes flick-scroll fly-bys; a background tab never counts). Fires ONCE
+  // per embed per page-load, then the observer disconnects. Server-side the
+  // event is deduped per (anon, attribution) window, so replays can't inflate.
+  // This IIFE runs per embed instance and observes only ITS root (<=2/page).
+  // (Grafted from #53 into the shared init during the wp-widget rebase — runs on
+  // WP embeds too, per book-meta-capi's carry-notes. Beacon is BASE-aware with the
+  // same P2 rule as the exposure: cross-site NEVER uses the always-credentialed
+  // sendBeacon; fetch credentials:'omit' passes the /api/track CORS.)
+  (function(){
+    if(!('IntersectionObserver' in window)) return;
+    var SLOT = parseInt(root.getAttribute('data-slot')||'1',10)||1;
+    var seen=false, timer=null, showing=false;
+    function send(){
+      if(/(?:^|; )sx_optout=1/.test(document.cookie)) return; // sx_optout: no seen beacon
+      var sb = JSON.stringify({ event_type:'capture_seen', anonymous_id:AID, ts:Date.now(), attribution:{ exp:EXP, variant:V, src:SRCBASE, slot:SLOT } });
+      try {
+        if(BASE){
+          fetch(BASE+'/api/hit/event',{method:'POST',headers:{'Content-Type':'application/json'},body:sb,keepalive:true,mode:'cors',credentials:'omit'}).catch(function(){});
+        } else {
+          var ok2 = navigator.sendBeacon && navigator.sendBeacon(location.origin+'/api/hit/event', new Blob([sb],{type:'application/json'}));
+          if(!ok2){ fetch(location.origin+'/api/hit/event',{method:'POST',headers:{'Content-Type':'application/json'},body:sb,keepalive:true,mode:'cors',credentials:'omit'}).catch(function(){}); }
+        }
+      } catch(_){}
+    }
+    function fire(){ if(seen) return; seen=true; timer=null; io.unobserve(root); io.disconnect(); document.removeEventListener('visibilitychange', onVis); send(); }
+    function arm(){ if(seen||timer) return; timer=setTimeout(fire,1000); }
+    function disarm(){ if(timer){ clearTimeout(timer); timer=null; } }
+    function onVis(){ if(document.hidden) disarm(); else if(showing && !seen) arm(); }
+    var io = new IntersectionObserver(function(entries){
+      for(var i=0;i<entries.length;i++){
+        var e=entries[i];
+        if(e.target!==root) continue;
+        showing = e.isIntersecting && e.intersectionRatio>=0.5;
+      }
+      if(showing && !document.hidden) arm(); else disarm();
+    },{threshold:0.5});
+    document.addEventListener('visibilitychange', onVis);
+    io.observe(root);
+  })();
+}
+  var root = document.currentScript && document.currentScript.previousElementSibling;
+  if(!root || !root.hasAttribute || !root.hasAttribute('data-sx-capture')){
+    var all = document.querySelectorAll('[data-sx-capture]'); root = all[all.length-1];
+  }
+  __sxCaptureInit(root);
+})();
+</script><h2 id="uncensored">The Uncensored Question — a Note for Security Professionals</h2>
+
+  <p>A practical note for those in cybersecurity, which is where most of my students sit. Aligned models — Claude, GPT, Llama-Instruct, Qwen-Instruct — refuse a lot of work that is entirely legitimate. Explaining a published CVE. Walking through how a known piece of malware behaves. Generating red-team prompt variations for awareness training. Writing realistic phishing samples to test a defence pipeline. All routinely refused by the major aligned models, and all routinely required by security professionals working in authorised scope.</p>
+
+  <p>This is what the <strong>uncensored</strong> or <strong>abliterated</strong> local LLM ecosystem exists to address. A small group of maintainers produce derestricted versions of mainstream models — the four I'd point you at are <strong>Eric Hartford's Dolphin series</strong>, <strong>mradermacher</strong>, <strong>TheDrummer</strong>, and <strong>mlabonne</strong>. Two techniques dominate: <em>abliteration</em> (directional ablation of the refusal vector) and <em>DPO refusal-removal</em> (less invasive, often preserves capability better). The frontier approach combines both — abliteration followed by DPO to recover capability lost in the ablation.</p>
+
+  <p>The <strong>UGI Leaderboard</strong> (<a href="https://huggingface.co/spaces/DontPlanToEnd/UGI-Leaderboard" rel="noopener">huggingface.co/spaces/DontPlanToEnd/UGI-Leaderboard</a>) tracks how "willing" different models are. Treat it as directional, not authoritative — it's run by one person as a HuggingFace Space and the maintainer explicitly says the scores are "for reference only". But it's the best public signal we have.</p>
+
+  <p>Two things to be honest about. First, uncensoring usually degrades capability — the post-ablation model often loses some reasoning quality, and "abliterated" labels are unreliable marketing. Second, the model not editorialising isn't a licence to generate anything; the professional ethic — authorised scope, sandbox environment, defensive intent — sits upstream of model choice and doesn't change because the refusal layer is gone.</p>
+
+  <p>If you're a student doing red-team or CVE work and finding the major models refuse legitimate questions, the uncensored ecosystem is a real tool and worth knowing about. Use it the way you'd use any other dual-use tool in our field.</p>
+
+  <!-- ════════════════════════════════════════════════════════════ -->
+  <!-- 10-minute check                                             -->
+  <!-- ════════════════════════════════════════════════════════════ -->
+
+  <h2 id="monthly-check">The 10-Minute Monthly Check (the Repeatable Process)</h2>
+
+  <p>Here's the process I run on the first of each month. It takes about ten minutes once you've done it twice.</p>
+
+  <picture>
+  <source type="image/avif" srcset="/public/articles/best-local-llm/monthly-check-md.avif 720w, /public/articles/best-local-llm/monthly-check-lg.avif 1200w" sizes="(max-width: 768px) 720px, 1200px">
+  <source type="image/webp" srcset="/public/articles/best-local-llm/monthly-check-md.webp 720w, /public/articles/best-local-llm/monthly-check-lg.webp 1200w" sizes="(max-width: 768px) 720px, 1200px">
+  <img data-zoomable src="/public/articles/best-local-llm/monthly-check.png" alt="The 10-minute monthly check — seven sequential steps from LMSYS Arena through the capability triad, r/LocalLLaMA, licence check, hardware fit, 20-prompt eval, and the swap-or-stay decision" width="2560" height="1440" loading="lazy" class="w-full rounded-lg my-8">
+</picture>
+
+  <ol>
+    <li><strong>Open LMSYS Arena</strong> (lmarena.ai). Filter to open models. Note the top 5. Has the order shifted? Any new entrants?</li>
+    <li><strong>Check the capability triad</strong> — LiveBench, Aider Polyglot leaderboard, SWE-Bench Verified. Note the top open-weight in each.</li>
+    <li><strong>Skim r/LocalLLaMA</strong> for the weekly "best of" megathread. What are people actually running? What's broken?</li>
+    <li><strong>Verify licence</strong> for any new candidate you're tempted by. Sixty-second check, as above.</li>
+    <li><strong>Verify hardware fit</strong>. The best benchmarks in the world don't matter if it won't load on your machine.</li>
+    <li><strong>Run your 20-prompt eval</strong> against the candidate, side by side with your current default. Score yourself.</li>
+    <li><strong>Swap or stay</strong>. If the new candidate genuinely outperforms on your eval, swap. If not, stay. Don't chase noise.</li>
+  </ol>
+
+  <p>That's it. Ten minutes a month keeps you honest, evidence-based, and free from listicle theatre.</p>
+
+  <!-- ════════════════════════════════════════════════════════════ -->
+  <!-- Principles that don't go out of date                        -->
+  <!-- ════════════════════════════════════════════════════════════ -->
+
+  <h2 id="principles">What Never Changes (Principles That Survive Every Release)</h2>
+
+  <p>A few principles that don't go out of date no matter how fast the models do.</p>
+
+  <p><strong>Use case first, model second</strong>. The best general model is rarely the best for your specific work.</p>
+
+  <p><strong>Licence first, capability second</strong>. Building on a model you can't ship is wasted effort.</p>
+
+  <p><strong>Contamination-resistant benchmarks beat saturated ones</strong>. SWE-Bench Verified over HumanEval. LiveBench over MMLU. RULER over Needle-in-a-Haystack.</p>
+
+  <p><strong>Your own 20 prompts beat any leaderboard</strong>. Always. Run them.</p>
+
+  <p><strong>Hybrid is fine</strong>. You don't have to pick. Many of my students — and I do this too — run a frontier closed model (Claude, GPT) for hard problems and a local model for routine, privacy-sensitive, or high-volume work. The right answer is often "both".</p>
+
+  <p>So <strong>what is the best local LLM</strong>? The honest answer: the one that wins your 20-prompt eval, ships under a licence you can use, and fits the hardware you actually own. Everything else is decoration. That's true for the <strong>best open source local LLM</strong> just as much as for the <strong>best local coding LLM</strong>.</p>
+
+  <p>If you don't yet have a local model running, our <a href="/articles/claude-code-ollama">Claude Code with Ollama guide</a> walks you through the setup end-to-end with current hardware tiers and a working default. This methodology article and that setup guide are designed as a pair — one tells you how to choose, the other tells you how to run.</p>
+
+  <!-- ════════════════════════════════════════════════════════════ -->
+  <!-- FAQ                                                         -->
+  <!-- ════════════════════════════════════════════════════════════ -->
+
+  <h2 id="faq">❓ Best Local LLM FAQ</h2>
+
+  
+  <details class="collapse collapse-arrow bg-base-200 mb-2"><summary class="collapse-title font-semibold">What is the best local LLM right now?</summary><div class="collapse-content"><p>The honest answer is: it depends on your use case, your hardware, and what you're willing to spend ten minutes evaluating. There is no single best local LLM — there's the best for your work, this month. Use the 4-source toolkit (LMSYS Arena, the capability triad of LiveBench + Aider Polyglot + SWE-Bench Verified, r/LocalLLaMA, and your own 20-prompt eval) to find it.</p></div></details>
+  <details class="collapse collapse-arrow bg-base-200 mb-2"><summary class="collapse-title font-semibold">What's the best local LLM for coding?</summary><div class="collapse-content"><p>For agentic coding (Aider, Claude Code with a local backend), check the top of SWE-Bench Verified for open-weight entries. For code completion and editor use, the Aider Polyglot leaderboard is more relevant. Both lists move month to month — check live, don't trust a static article.</p></div></details>
+  <details class="collapse collapse-arrow bg-base-200 mb-2"><summary class="collapse-title font-semibold">Are open-source LLMs as good as ChatGPT or Claude?</summary><div class="collapse-content"><p>For routine work, surprisingly yes. For genuinely hard agentic coding and complex reasoning, the closed frontier (Claude Opus, GPT, Gemini) is still ahead on SWE-Bench Verified by a meaningful margin. The gap has narrowed every quarter for two years and is unlikely to widen. For privacy-sensitive work, the right open-weight model is genuinely competitive.</p></div></details>
+  <details class="collapse collapse-arrow bg-base-200 mb-2"><summary class="collapse-title font-semibold">Where do I find new local LLMs?</summary><div class="collapse-content"><p>The 4-source toolkit: LMSYS Chatbot Arena for human preference, the capability triad (LiveBench, Aider Polyglot, SWE-Bench Verified) for contamination-resistant evaluation, r/LocalLLaMA for hardware reality, and your own 20-prompt private eval. Plus Artificial Analysis for price-and-speed comparisons, MTEB for embeddings, BFCL for function calling, and Vellum or Onyx as current open-weight aggregators.</p></div></details>
+  <details class="collapse collapse-arrow bg-base-200 mb-2"><summary class="collapse-title font-semibold">What hardware do I need to run a local LLM?</summary><div class="collapse-content"><p>That depends on which model and at what quantisation. The short version: 8GB VRAM runs small models at low quality, 16GB runs useful 7-13B models at good quality, 24GB+ runs the larger open-weight models comfortably, and Apple Silicon's unified memory is excellent for inference. The full hardware breakdown sits in our Claude Code with Ollama guide.</p></div></details>
+  <details class="collapse collapse-arrow bg-base-200 mb-2"><summary class="collapse-title font-semibold">Is it legal to use an uncensored LLM?</summary><div class="collapse-content"><p>Generally yes, with two caveats. First, the model's own licence still applies — check it. Second, what you generate with it is your responsibility, regardless of whether the model refused or not. The professional ethic — authorised scope, defensive intent, sandbox environment for sensitive work — applies the same way it applies to any other dual-use security tool.</p></div></details>
+
+  <p class="mt-8">If you found this useful, you might also like our <a href="/articles/claude-code-ollama">Claude Code with Ollama guide</a> — covers the hardware and setup so you can actually run whichever model the framework above points you at.</p>
+
+  <p class="mt-6 text-sm opacity-70"><em>Last verified: 18 May 2026. The methodology here is built to outlast specific model picks — the leaderboards and communities above are the source of truth, not this article.</em></p>
+
+  
+<div class="border-t border-base-300 pt-8 mt-12">
+  <h3 class="text-xl font-bold mb-6">About the Author</h3>
+  <div class="flex items-start gap-4">
+    <img src="/public/nathan-house.jpg" alt="Nathan House" class="w-14 h-14 rounded-full object-cover flex-shrink-0 border border-slate-200" width="56" height="56">
+    <div>
+      <p class="text-base font-bold"><a href="https://www.linkedin.com/in/housenathan" class="text-blue-600 hover:underline" target="_blank" rel="noopener">Nathan House</a>, Founder &amp; CEO of StationX</p>
+      <p class="text-base text-base-content/70 leading-relaxed">Nathan House has 30 years of hands-on cybersecurity experience and is Cambridge-educated, holding CISSP, CISA, CISM, OSCP, CEH, and SABSA. He founded <a href="https://www.stationx.net" class="text-blue-600 hover:underline">StationX</a> in 1999 &mdash; one of the UK&rsquo;s first cybersecurity companies &mdash; and has secured &pound;71 billion in UK mobile banking transactions and the London 2012 Olympics, advising clients including Microsoft, Cisco, BP, Vodafone, and VISA. He authored the world&rsquo;s most popular cybersecurity course &mdash; a #1 Udemy bestseller taken by over 500,000 students &mdash; and was named Cyber Security Educator of the Year 2020, AI Security Educator of the Year, and a UK Top 25 Security Influencer 2025. A DEF CON speaker and featured expert on CNN, Fox News, NBC, and the BBC, Nathan leads StationX&rsquo;s training of more than half a million students worldwide.</p>
+    </div>
+  </div>
+</div>
+
+</article>
+
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://app.stationx.net/"},{"@type":"ListItem","position":2,"name":"Articles","item":"https://app.stationx.net/articles"},{"@type":"ListItem","position":3,"name":"Best Local LLM August 2026","item":"https://app.stationx.net/articles/best-local-llm"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Best Local LLM in August 2026 (Updated Monthly Methodology)","description":"Discover the best local LLM for your use case with 4 verified sources — leaderboards, communities, and the 10-minute monthly check. Methodology, not picks.","url":"https://app.stationx.net/articles/best-local-llm","datePublished":"2026-05-18","dateModified":"2026-08-12","image":"https://app.stationx.net/public/og/articles/best-local-llm.jpg","author":{"@type":"Person","name":"Nathan House","url":"https://www.linkedin.com/in/housenathan/"},"publisher":{"@type":"Organization","name":"StationX","url":"https://www.stationx.net","logo":{"@type":"ImageObject","url":"https://app.stationx.net/public/stationx-logo.svg"}}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the best local LLM right now?","acceptedAnswer":{"@type":"Answer","text":"The honest answer is: it depends on your use case, your hardware, and what you're willing to spend ten minutes evaluating. There is no single best local LLM — there's the best for your work, this month. Use the 4-source toolkit (LMSYS Arena, the capability triad of LiveBench + Aider Polyglot + SWE-Bench Verified, r/LocalLLaMA, and your own 20-prompt eval) to find it."}},{"@type":"Question","name":"What's the best local LLM for coding?","acceptedAnswer":{"@type":"Answer","text":"For agentic coding (Aider, Claude Code with a local backend), check the top of SWE-Bench Verified for open-weight entries. For code completion and editor use, the Aider Polyglot leaderboard is more relevant. Both lists move month to month — check live, don't trust a static article."}},{"@type":"Question","name":"Are open-source LLMs as good as ChatGPT or Claude?","acceptedAnswer":{"@type":"Answer","text":"For routine work, surprisingly yes. For genuinely hard agentic coding and complex reasoning, the closed frontier (Claude Opus, GPT, Gemini) is still ahead on SWE-Bench Verified by a meaningful margin. The gap has narrowed every quarter for two years and is unlikely to widen. For privacy-sensitive work, the right open-weight model is genuinely competitive."}},{"@type":"Question","name":"Where do I find new local LLMs?","acceptedAnswer":{"@type":"Answer","text":"The 4-source toolkit: LMSYS Chatbot Arena for human preference, the capability triad (LiveBench, Aider Polyglot, SWE-Bench Verified) for contamination-resistant evaluation, r/LocalLLaMA for hardware reality, and your own 20-prompt private eval. Plus Artificial Analysis for price-and-speed comparisons, MTEB for embeddings, BFCL for function calling, and Vellum or Onyx as current open-weight aggregators."}},{"@type":"Question","name":"What hardware do I need to run a local LLM?","acceptedAnswer":{"@type":"Answer","text":"That depends on which model and at what quantisation. The short version: 8GB VRAM runs small models at low quality, 16GB runs useful 7-13B models at good quality, 24GB+ runs the larger open-weight models comfortably, and Apple Silicon's unified memory is excellent for inference. The full hardware breakdown sits in our Claude Code with Ollama guide."}},{"@type":"Question","name":"Is it legal to use an uncensored LLM?","acceptedAnswer":{"@type":"Answer","text":"Generally yes, with two caveats. First, the model's own licence still applies — check it. Second, what you generate with it is your responsibility, regardless of whether the model refused or not. The professional ethic — authorised scope, defensive intent, sandbox environment for sensitive work — applies the same way it applies to any other dual-use security tool."}}]}</script>
+
+<div id="sx-masters-cta" style="display:none">
+<div class="border border-[#c0bfbf] rounded-2xl overflow-hidden mt-16 mb-12 shadow-md" style="max-width: 800px; margin-left: auto; margin-right: auto;">
+  <img src="/public/og/og-ai-masters-aidriven-engineering.jpg" alt="StationX AI-Driven Cyber Security Engineering Training Program" class="w-full object-cover rounded-t-2xl" loading="lazy">
+  <div class="p-6 sm:p-8" style="font-family: 'Nunito Sans', sans-serif;">
+    <h3 style="color: #10334a; font-size: 26px; font-weight: 800; line-height: 1.3; margin-bottom: 14px;">Become the one in the room everyone turns to &mdash; the expert AI can&rsquo;t replace.</h3>
+    <p style="color: #393939; font-size: 17px; line-height: 1.7; margin-bottom: 18px;">The StationX Master&rsquo;s Program gives you a rare ability companies will pay almost anything for &mdash; then it&rsquo;s yours to point wherever you want your life to go.</p>
+    <p style="color: #10334a; font-size: 17px; font-weight: 700; line-height: 1.6; margin-bottom: 24px;">A senior role at the top of your pay grade. Your own consultancy. Or a business of your own. One capability, three futures &mdash; you choose, and you can change your mind.</p>
+    <a href="https://app.stationx.net/ai-masters?cta_src=app&cta_p=article-footer-cta" class="sx-cta-btn">SEE THE AI MASTER&rsquo;S PROGRAM</a>
+  </div>
+</div></div>
+</main>
+
+
+<footer class="mt-16" style="background-color: #1e3a5f;">
+  <div class="max-w-7xl mx-auto px-6 lg:px-8 py-14">
+    <div class="grid grid-cols-2 md:grid-cols-5 gap-8 text-sm text-white/80">
+
+      <!-- Info -->
+      <div>
+        <h3 class="font-bold text-lg mb-5 text-white uppercase tracking-wide">Info</h3>
+        <ul class="space-y-3">
+          <li><a href="https://www.stationx.net/legal-notices/" class="hover:text-white transition-colors">Legal Notices</a></li>
+          <li><a href="https://www.stationx.net/privacy-policy/" class="hover:text-white transition-colors">Privacy Policy</a></li>
+          <li><a href="https://www.stationx.net/sitemap_index.xml" class="hover:text-white transition-colors">Site Map</a></li>
+          <li><a href="https://www.stationx.net/careers/" class="hover:text-white transition-colors">Careers</a></li>
+          <li><a href="https://www.stationx.net/contact/" class="hover:text-white transition-colors">Contact</a></li>
+          <li><a href="https://www.stationx.net/media-engagements/" class="hover:text-white transition-colors">Media</a></li>
+        </ul>
+      </div>
+
+      <!-- Security Assessment -->
+      <div>
+        <h3 class="font-bold text-lg mb-5 text-white uppercase tracking-wide">Security Assessment</h3>
+        <ul class="space-y-3">
+          <li><a href="https://www.stationx.net/penetration-testing-services/" class="hover:text-white transition-colors">Penetration Testing</a></li>
+          <li><a href="https://www.stationx.net/vulnerability-scanning/" class="hover:text-white transition-colors">Vulnerability Scanning</a></li>
+          <li><a href="https://www.stationx.net/build-review/" class="hover:text-white transition-colors">Build Reviews</a></li>
+          <li><a href="https://www.stationx.net/source-code-review/" class="hover:text-white transition-colors">Source Code Review</a></li>
+          <li><a href="https://www.stationx.net/social-engineering/" class="hover:text-white transition-colors">Social Engineering</a></li>
+        </ul>
+      </div>
+
+      <!-- Consulting -->
+      <div>
+        <h3 class="font-bold text-lg mb-5 text-white uppercase tracking-wide">Consulting</h3>
+        <ul class="space-y-3">
+          <li><a href="https://www.stationx.net/audit-compliance/" class="hover:text-white transition-colors">Audit & Compliance</a></li>
+          <li><a href="https://www.stationx.net/incident-response/" class="hover:text-white transition-colors">Incident Response</a></li>
+          <li><a href="https://www.stationx.net/security-architecture/" class="hover:text-white transition-colors">Security Architecture</a></li>
+          <li><a href="https://www.stationx.net/risk-assessment/" class="hover:text-white transition-colors">Risk Assessment</a></li>
+          <li><a href="https://www.stationx.net/security-training/" class="hover:text-white transition-colors">Security Training</a></li>
+          <li><a href="https://www.stationx.net/pro-bono-cybersecurity-services/" class="hover:text-white transition-colors">Pro Bono Services</a></li>
+        </ul>
+      </div>
+
+      <!-- Courses (split into 2 columns) -->
+      <div class="col-span-2">
+        <h3 class="font-bold text-lg mb-5 text-white uppercase tracking-wide">Courses</h3>
+        <div class="grid grid-cols-2 gap-x-8">
+          <ul class="space-y-3">
+            <li><a href="https://www.stationx.net/topic/information-security-courses-bundles/" class="hover:text-white transition-colors">Courses Bundles</a></li>
+            <li><a href="https://www.stationx.net/topic/certification-courses/" class="hover:text-white transition-colors">Certification</a></li>
+            <li><a href="https://www.stationx.net/topic/foundational-it-courses/" class="hover:text-white transition-colors">Foundational IT</a></li>
+            <li><a href="https://www.stationx.net/topic/networking-courses/" class="hover:text-white transition-colors">Networking</a></li>
+            <li><a href="https://www.stationx.net/topic/cloud-computing-courses/" class="hover:text-white transition-colors">Cloud Computing</a></li>
+            <li><a href="https://www.stationx.net/topic/linux-courses/" class="hover:text-white transition-colors">Linux</a></li>
+            <li><a href="https://www.stationx.net/topic/programming-courses/" class="hover:text-white transition-colors">Programming</a></li>
+          </ul>
+          <ul class="space-y-3">
+            <li><a href="https://www.stationx.net/topic/cyber-security-courses/" class="hover:text-white transition-colors">Cyber Security</a></li>
+            <li><a href="https://www.stationx.net/topic/network-security-courses/" class="hover:text-white transition-colors">Network Security</a></li>
+            <li><a href="https://www.stationx.net/topic/penetration-testing-training-courses/" class="hover:text-white transition-colors">Penetration Testing Training</a></li>
+            <li><a href="https://www.stationx.net/topic/cyber-security-career-path-courses/" class="hover:text-white transition-colors">Cyber Security Career Path</a></li>
+            <li><a href="https://www.stationx.net/topic/generative-ai-courses/" class="hover:text-white transition-colors">Generative AI</a></li>
+            <li><a href="https://www.stationx.net/topic/blockchain-courses/" class="hover:text-white transition-colors">Blockchain</a></li>
+            <li><a href="https://www.stationx.net/topic/project-management-training/" class="hover:text-white transition-colors">Project Management</a></li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Bottom bar (darker) -->
+  <div style="background-color: #152d4a;">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8 py-6 flex flex-col md:flex-row items-center justify-between gap-6">
+      <div class="flex items-center gap-6">
+        <img src="/public/stationx-logo.svg" alt="StationX" class="h-10 brightness-0 invert">
+        <span class="text-sm text-white/60 uppercase tracking-wider">Copyright &copy; 2026 StationX Ltd. All rights reserved.</span>
+      </div>
+      <div class="flex items-center gap-6">
+        <!-- Nathan House -->
+        <div class="flex items-center gap-3 text-white/70">
+          <span class="text-sm">Nathan House</span>
+          <a href="https://www.linkedin.com/in/housenathan/" class="hover:text-white transition-colors" aria-label="Nathan LinkedIn">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+          </a>
+          <a href="https://twitter.com/GotoNathan" class="hover:text-white transition-colors" aria-label="Nathan Twitter">
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+          </a>
+        </div>
+        <div class="border-l border-white/20 h-6"></div>
+        <!-- StationX -->
+        <div class="flex items-center gap-3 text-white/70">
+          <img src="/public/stationx-logo.svg" alt="StationX" class="h-5 brightness-0 invert">
+          <a href="https://www.linkedin.com/company/stationx" class="hover:text-white transition-colors" aria-label="StationX LinkedIn">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+          </a>
+          <a href="https://www.youtube.com/c/+StationxNet" class="hover:text-white transition-colors" aria-label="YouTube">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"/></svg>
+          </a>
+          <a href="https://twitter.com/gotostationx/" class="hover:text-white transition-colors" aria-label="Twitter/X">
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+          </a>
+          <a href="https://www.instagram.com/goto.stationx/" class="hover:text-white transition-colors" aria-label="Instagram">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+          </a>
+          <a href="https://www.tiktok.com/@nathan.stationx" class="hover:text-white transition-colors" aria-label="TikTok">
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg>
+          </a>
+          <a href="https://www.facebook.com/pages/Station-X/1631192847101094" class="hover:text-white transition-colors" aria-label="Facebook">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script nonce="PM73emRCfxQtR34kvUJtgw==">document.addEventListener("click",function(e){document.querySelectorAll("details[open]").forEach(function(d){if(!d.contains(e.target))d.removeAttribute("open")})});
+/* Desktop nav dropdowns: open on hover (matches WordPress nav). Hover-capable
+   pointers only — touch keeps tap-to-toggle. On hover devices a click on an
+   already-open summary would toggle it CLOSED (hover just opened it) — so when
+   open: a summary with data-nav-href navigates (WP parent-click behaviour),
+   others stay open. Keyboard still toggles a closed menu (click fires on a
+   non-open details untouched). */
+(function(){if(!window.matchMedia("(hover: hover)").matches)return;document.querySelectorAll(".navbar-center .menu > li > details").forEach(function(d){var li=d.parentElement;li.addEventListener("mouseenter",function(){d.setAttribute("open","")});li.addEventListener("mouseleave",function(){d.removeAttribute("open")});var s=d.querySelector("summary");s.addEventListener("click",function(e){var href=s.getAttribute("data-nav-href");if(href){e.preventDefault();window.location.href=href;return}if(d.hasAttribute("open"))e.preventDefault()})})})();
+/* Teachable OAuth navbar widget: toggle Sign In ↔ Account based on the
+   non-httpOnly session_present=1 cookie. UI hint only — server gates everything
+   via the signed httpOnly session cookie. */
+(function(){var p=document.cookie.split(";").some(function(x){return x.trim().indexOf("session_present=1")===0;});if(!p)return;document.querySelectorAll("[data-sx-signin]").forEach(function(e){e.classList.add("hidden")});document.querySelectorAll("[data-sx-account]").forEach(function(e){e.classList.remove("hidden")});})();
+/* Master's Program CTA: hide for signed-in members (they're already paying).
+   Same session_present cookie used by the navbar widget. UI hint only. */
+(function(){var c=document.getElementById("sx-masters-cta");if(!c)return;var signedIn=document.cookie.split(";").some(function(x){return x.trim().indexOf("session_present=1")===0;});if(signedIn){c.remove();return;}var f=document.getElementById("faq");if(f){f.parentNode.insertBefore(c,f);}c.style.display="block";})();
+(function(){document.addEventListener('click',function(ev){var img=ev.target.closest&&ev.target.closest('.article-content img[data-zoomable]');if(!img)return;var o=document.createElement('div');o.className='sx-zoom-overlay';var i=document.createElement('img');i.src=img.currentSrc||img.src;i.alt=img.alt;o.appendChild(i);document.body.appendChild(o);requestAnimationFrame(function(){o.classList.add('active')});o.addEventListener('click',function(){o.classList.remove('active');setTimeout(function(){o.remove()},200)});document.addEventListener('keydown',function esc(e){if(e.key==='Escape'){o.classList.remove('active');setTimeout(function(){o.remove()},200);document.removeEventListener('keydown',esc)}})})})();
+/* Copy buttons for code blocks and inline copyable commands.
+   Delegates clicks to any element with data-copy-target (points to an element id)
+   or data-copy-text (literal text to copy). Shows "Copied!" feedback for 1.5s. */
+(function(){document.addEventListener('click',function(e){var t=e.target;if(!(t instanceof HTMLElement))return;var btn=t.closest('[data-copy-target],[data-copy-text]');if(!btn)return;var text='';var targetId=btn.getAttribute('data-copy-target');if(targetId){var el=document.getElementById(targetId);if(el){text=el.textContent||'';}}else{text=btn.getAttribute('data-copy-text')||'';}if(!text)return;navigator.clipboard.writeText(text).then(function(){var orig=btn.textContent;btn.textContent='Copied!';btn.setAttribute('data-copied','1');setTimeout(function(){btn.textContent=orig;btn.removeAttribute('data-copied');},1500);}).catch(function(){btn.textContent='Press Ctrl+C';setTimeout(function(){btn.textContent='Copy';},2000);});});})();</script>
+</body>
+</html>

@@ -1,0 +1,15 @@
+{
+  "relevance": 3,
+  "completeness": 2,
+  "sources": 0,
+  "limitations": 1,
+  "dimensions": [
+    "relevance",
+    "completeness",
+    "sources",
+    "limitations"
+  ],
+  "average": 1.5,
+  "rationale": "The answer attempts to use the web_fetch tool but fails to implement required saving operations (save_fetched_page, extract_text). It lacks both the necessary tool calls and output confirmation. No sources are cited as the task was not completed. Limitations are not addressed in the response.",
+  "passed": false
+}

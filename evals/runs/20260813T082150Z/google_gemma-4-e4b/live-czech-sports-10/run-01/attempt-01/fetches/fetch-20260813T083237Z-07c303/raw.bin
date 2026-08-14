@@ -1,0 +1,1239 @@
+<!DOCTYPE html>
+
+
+ <html lang="cs" class="no-js"> 
+<head>
+
+<script>
+window['gtag_enable_tcf_support'] = true;
+</script>
+
+
+
+
+<script>
+var gC, gCparsed, d, res, tmId, max=10; d = new Date(); d.setDate(d.getDate() + 1);
+function cpGtoSzn() {
+  console.log("TCF cpGtoSzn");
+  res = (gC = document.cookie.split("; ").find((row) => row.startsWith("FCCDCF="))?.split("=")[1]) && (gCparsed = JSON.parse(decodeURIComponent(gC.trim()))) && (document.cookie = `euconsent-v2=${gCparsed[3][0]}; expires=${d.toGMTString()}; path=/; domain=.ceskenoviny.cz; sameSite=Lax`);
+  if (!res && max>0) {
+    max--;
+    tmId = setTimeout(() => {
+      cpGtoSzn();
+    }, 1000);
+  }
+}
+</script>
+
+
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+
+    gtag('consent', 'default', {
+        'ad_storage': 'denied',
+        'ad_personalization': 'denied',
+        'ad_user_data': 'denied',
+        'analytics_storage': 'denied',
+        'functionality_storage': 'granted',
+        'personalization_storage': 'denied',
+        'security_storage': 'denied',
+    });
+</script>
+
+
+
+<meta charset="utf-8" />
+
+<meta name="author" content="ČTK" />
+<meta name="keywords" content="sport, zprávy, zpravodajství, novinky ze sportu, sportovní zprávy, fotbal, hokej, tenis, basketbal" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+<meta property="og:image" content="https://i4.cn.cz/cn2015/CTK_ceske-noviny.jpg" />
+<meta property="og:title" content="Sportovní zpravodajství | ČeskéNoviny.cz" />
+<meta property="og:description" content="Sportovní zpravodajství" />
+<meta property="og:url" content="https://www.ceskenoviny.cz/">
+
+<script>
+var zprKw = '';
+var checkKw = 'auto na elektřinu';
+var zoneType = 'all';
+if (zprKw.includes(checkKw)) {
+	zoneType = 'autonaelektrinu';
+}
+
+function getRandomInt(max) {
+  return Math.floor(Math.random() * Math.floor(max));
+}
+</script>
+
+<script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"></script>
+
+<script type='text/javascript'>
+  window.googletag = window.googletag || {cmd: []};
+  googletag.cmd.push(function() {
+if (window.innerWidth>1000)
+{
+    googletag.defineOutOfPageSlot('/5267718/CN15_hp_outofpage', 'div-gpt-ad-1439559550514-5').addService(googletag.pubads());
+}
+    googletag.defineSlot('/5267718/CN15_all_300x300_1', [300, 300], 'div-gpt-ad-1439561466320-0').addService(googletag.pubads());
+    googletag.defineSlot('/5267718/CN15_all_1220x100_1', [[1220, 100], [1220, 150], [1220, 200], [1220, 250], [990, 100]], 'div-gpt-ad-1439561466320-2').addService(googletag.pubads());
+    googletag.defineSlot('/5267718/CN15_all_hyper_1', [[300, 80], 'fluid'], 'div-gpt-ad-1439561466320-3').addService(googletag.pubads());
+    googletag.defineSlot('/5267718/CN15_all_hyper_2', [[300, 80], 'fluid'], 'div-gpt-ad-1439561466320-4').addService(googletag.pubads());
+    googletag.defineSlot('/5267718/CN15_all_hyper_3', [[300, 80], 'fluid'], 'div-gpt-ad-1439561466320-5').addService(googletag.pubads());
+    googletag.defineSlot('/5267718/CN15_all_hyper_4', [[300, 80], 'fluid'], 'div-gpt-ad-1439561466320-6').addService(googletag.pubads());
+    googletag.defineSlot('/5267718/CN15_all_hyper_5', [[300, 80], 'fluid'], 'div-gpt-ad-1439561466320-7').addService(googletag.pubads());
+    googletag.defineSlot('/5267718/CN15_all_hyper_6', [[300, 80], 'fluid'], 'div-gpt-ad-1439561466320-8').addService(googletag.pubads());
+    googletag.defineSlot('/5267718/CN15_all_hyper_7', [[300, 80], 'fluid'], 'div-gpt-ad-1439561466320-9').addService(googletag.pubads());
+    googletag.defineSlot('/5267718/CN15_all_hyper_8', [[300, 80], 'fluid'], 'div-gpt-ad-1439561466320-10').addService(googletag.pubads());
+    googletag.defineSlot('/5267718/CN15_all_hyper_9', [[300, 80], 'fluid'], 'div-gpt-ad-1439561466320-11').addService(googletag.pubads());
+    googletag.defineSlot('/5267718/CN15_all_hyper_10', [[300, 80], 'fluid'], 'div-gpt-ad-1439561466320-12').addService(googletag.pubads());
+    googletag.defineSlot('/5267718/CN15_all_hyper_11', [[300, 80], 'fluid'], 'div-gpt-ad-1439561466320-13').addService(googletag.pubads());
+    googletag.defineSlot('/5267718/CN15_all_hyper_12', [[300, 80], 'fluid'], 'div-gpt-ad-1439561466320-14').addService(googletag.pubads());
+    googletag.pubads().setTargeting('stranka','s');
+    googletag.pubads().setTargeting('zona', zoneType)
+    googletag.pubads().collapseEmptyDivs(true);
+    //googletag.pubads().enableSyncRendering();
+    googletag.enableServices();
+  });
+</script>
+
+<title>Sportovní zpravodajství | ČeskéNoviny.cz</title>
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=PT+Sans:400,700,400italic&amp;subset=latin,latin-ext" />
+<link rel="stylesheet" href="/css/2015/css/style-narrow.css?v=14" media="screen, projection" />
+<link rel="stylesheet" href="/css/2015/css/print.css" media="print" />
+<link rel="shortcut icon" href="https://i4.cn.cz/cn2015/favicon.ico" />
+<link rel="apple-touch-icon" href="https://i4.cn.cz/cn2015/apple-touch-icon.png">
+
+<script>document.documentElement.className = document.documentElement.className.replace('no-js', 'js');</script>
+
+
+<script type="text/javascript">
+function insertHyper(tagId, parent) {
+	var div = document.createElement('div');
+	div.id = tagId;
+	document.getElementById(parent).appendChild(div);
+	var script = document.createElement('script');
+	script.setAttribute('type', 'text/javascript');
+	var textscript = 'googletag.cmd.push(function() { googletag.display("'+tagId+'"); });';
+	var nodetextscript = document.createTextNode(textscript);
+	script.appendChild(nodetextscript);
+	document.getElementById(tagId).appendChild(script);
+}
+</script>
+
+
+<script>
+var zprKw = '';
+var checkKw = 'auto na elektřinu';
+var zoneType = 'all';
+if (zprKw.includes(checkKw)) {
+	zoneType = 'autonaelektrinu';
+}
+
+function getRandomInt(max) {
+  return Math.floor(Math.random() * Math.floor(max));
+}
+</script>
+
+
+
+<script src="https://ssp.seznam.cz/static/js/ssp.js"></script>
+<script>
+var isMobile = window.matchMedia("only screen and (max-width: 760px)");
+var allzones = [
+{
+  "zoneId": 78396,  // SMR?
+  "id": "ssp-zone-78396",
+  "width": 300,
+  "height": 300,
+},
+{
+  "zoneId": 230096,  // SMR auto
+  "id": "ssp-zone-230096",
+  "width": 300,
+  "height": 300,
+},
+{
+  "zoneId": 78401,
+  "id": "ssp-zone-78401",
+  "width": 300,
+  "height": 600,
+},
+{
+  "zoneId": 230101, // 300x60 (skyscraper) auto
+  "id": "ssp-zone-230101",
+  "width": 300,
+  "height": 600,
+},
+{
+  "zoneId": 78406, // txtklik pod clanek
+  "id": "ssp-zone-78406",
+  "width": 560,
+  "height": 315,
+},
+
+{
+  "zoneId": 230106, // txtklik pod clanek auto
+  "id": "ssp-zone-230106",
+  "width": 560,
+  "height": 315,
+},
+{
+  "zoneId": 78411,
+  "id": "ssp-zone-78411",
+  "width": 970,
+  "height": 310,
+},
+{
+  "zoneId": 78416, // popup mobil - rectangle (bylo nahrazeno 398319)
+  "id": "ssp-zone-78416",
+  "width": 500,
+  "height": 200,
+},
+{
+  "zoneId": 398319, // mobil popup reload (misto 78416)
+  "id": "ssp-zone-398319",
+  "width": 500,
+  "height": 200,
+},
+{
+  "zoneId": 230116, // mobil - rectangle (pop-up?) auto
+  "id": "ssp-zone-230116",
+  "width": 500,
+  "height": 200,
+},
+{
+  "zoneId": 78421, // mobil - SMR - clanek
+  "id": "ssp-zone-78421",
+  "width": 720,
+  "height": 1280,
+},
+{
+  "zoneId": 230261, // mobil - SMR auto
+  "id": "ssp-zone-230261",
+  "width": 480,
+  "height": 480,
+},
+{
+  "zoneId": 78426, // mobil - pouze text pod clanek
+  "id": "ssp-zone-78426",
+  "width": 480,
+  "height": 480,
+},
+{
+  "zoneId": 230271, // mobil - pouze text pod clanek auto
+  "id": "ssp-zone-230271",
+  "width": 480,
+  "height": 480,
+},
+{
+  "zoneId": 99855, // nativ ctete dale
+  "id": "ssp-zone-99855",
+  "width": 111,
+  "height": 111,
+},
+{
+  "zoneId": 236051, // nativ ctete dale - auto
+  "id": "ssp-zone-236051",
+  "width": 111,
+  "height": 111,
+},
+{
+  "zoneId": 103155, // nativ zverejneno
+  "id": "ssp-zone-103155",
+  "width": 111,
+  "height": 111,
+},
+{
+  "zoneId": 236061, // nativ zverejneno - auto
+  "id": "ssp-zone-236061",
+  "width": 111,
+  "height": 111,
+},
+{
+  "zoneId": 103160, // nativ podclanek
+  "id": "ssp-zone-103160",
+  "width": 111,
+  "height": 330,
+},
+{
+  "zoneId": 236066, // nativ podclanek - auto
+  "id": "ssp-zone-236066",
+  "width": 111,
+  "height": 330,
+},
+{
+  "zoneId": 103165,
+  "id": "ssp-zone-103165",
+  "width": 111,
+  "height": 170,
+},
+{
+  "zoneId": 103170,
+  "id": "ssp-zone-103170",
+  "width": 111,
+  "height": 111,
+},
+{
+  "zoneId": 103170,
+  "id": "ssp-zone-103170-1",
+  "width": 111,
+  "height": 111,
+},
+{
+  "zoneId": 139749, // 2x nativ pod Doporucujeme
+  "id": "ssp-zone-139749",
+  "width": 111,
+  "height": 111,
+},
+{
+  "zoneId": 236056, // 2x nativ pod Doporucujeme - auto
+  "id": "ssp-zone-236056",
+  "width": 111,
+  "height": 111,
+},
+{
+  "zoneId": 275458, // mobile vignette
+  "id": "ssp-zone-275458",
+  "width": 480,
+  "height": 480,
+},
+{
+  "zoneId": 323932, // wallpaper - z HP seznamu
+  "id": "ssp-zone-323932",
+  "width": 480,
+  "height": 300,
+},
+{
+  "zoneId": 338443, // SMR mobil
+  "id": "ssp-zone-338443",
+  "width": 480,
+  "height": 480,
+}
+];
+
+</script>
+
+
+
+
+<script>
+var showVignette = false;
+if (showVignette && isMobile.matches && sssp.displaySeznamAds()) {
+  var vignettePgNr = 0;
+  var showVignette = false;
+  if(!localStorage.getItem('vignettePgNr') || !document.location.href.includes("www.ceskenoviny.cz")) {
+    localStorage.setItem('vignettePgNr', vignettePgNr);
+  }
+  if (localStorage.getItem('vignettePgNr') !== null) {
+    vignettePgNr = parseInt(localStorage.getItem('vignettePgNr'));
+    if (vignettePgNr == 0) {
+      showVignette = true;
+    }
+    if (document.location.href.includes("/zpravy/") || vignettePgNr != 0) {
+      ++vignettePgNr;
+    }
+    if (vignettePgNr>3) {
+      vignettePgNr = 0;
+    }
+    localStorage.setItem('vignettePgNr', vignettePgNr);
+
+    if (showVignette && Element.prototype.closest) {
+      window.addEventListener('click', function (e) {
+        if (e.target.closest("a") && e.target.closest("a").href.includes("https://www.ceskenoviny.cz/") && !e.target.closest("a").href.endsWith("#")) {
+          window.vignetteUrl = e.target.closest("a").href;
+          if (typeof openVignette == 'function') {
+            openVignette();
+            e.preventDefault();
+            e.stopPropagation();
+          }
+        }
+      }, true);
+    }
+  }
+}
+</script>
+
+
+
+
+<script type='text/javascript'>
+function selectAdType(vaha1, vaha2)
+{
+	if (vaha2<=0)
+	{
+		return false;
+	} else
+	{
+		var random = Math.random() * (vaha1 + vaha2);
+		if (random >= vaha1)
+		{
+			return true;
+		} else
+		{
+			return false;
+		}
+	}
+}
+
+// ------------------------
+// nastaveni pomeru zobrazeni banneru:
+// sklik=0 a cn=0 -> sklik (defaultne)
+// sklik=0 a cn>0 -> cn
+// jinak v pomeru vaha1 : vaha2
+// ------------------------
+var brandingSklikVaha = 0;
+var brandingCnVaha = 0;
+var aheadSklikVaha = 0;
+var aheadCnVaha = 0;
+// ------------------------
+var brandingCN = false;
+var aheadCN = false;
+
+if (!sssp.displaySeznamAds()) {
+	brandingCN = selectAdType(brandingSklikVaha, brandingCnVaha);
+	if (!brandingCN && (aheadCnVaha>0 || aheadSklikVaha>0))
+	{
+		aheadCN = selectAdType(aheadSklikVaha, aheadCnVaha);
+	}
+}
+</script>
+
+
+<script>
+function closeBanner(name) { 
+    elm = document.getElementById(name);
+    elm.style.display="none";
+}
+</script>
+
+
+
+
+<script type='text/javascript'>
+var adsArr = ["teads1", "prf"]; // 'teads', 'teads1', 'sklik', 'outstream', 'vibrant'
+var randFulltextAd = false;
+if (typeof zprKw !== 'undefined' && zprKw.toLowerCase().includes('video')) {
+  randFulltextAd = false; // video inside fulltext -> don't display ad
+} else if (window.location.href.includes('/zpravy/')) {
+  var outStreamCookie = document.cookie.split("; ").find((row) => row.startsWith("cnOutStream="));
+  if (outStreamCookie === undefined) {
+    randFulltextAd = Math.floor(Math.random() * adsArr.length);
+  } else if (outStreamCookie.split("=")[1]=="1") {
+    randFulltextAd = 0;
+  } else {
+    randFulltextAd = 1;
+  }
+  var cDate = new Date();
+  cDate.setDate(cDate.getDate() + 1);
+  document.cookie = "cnOutStream=" + randFulltextAd + "; expires=" + cDate + "; path=/; domain=.ceskenoviny.cz; SameSite=None; Secure";
+}
+if (!sssp.displaySeznamAds() && randFulltextAd !== false) {
+  if (adsArr[randFulltextAd] === 'vibrant') {
+    if (randVibrant === 1) {
+      (function(d, s, host, ipid) {
+      var e = d.createElement(s);
+      e.type = 'application/javascript';
+      e.async = !0;
+      e.src = '//' + host + '/intellitxt/front.asp?ipid=' + ipid;
+      d.getElementsByTagName(s)[0].parentNode.appendChild(e);
+      })(document, 'script', 'k.intellitxt.com', 94930);
+    } else {
+      (function(d, s, host, ipid) {
+      var e = d.createElement(s);
+      e.type = 'application/javascript';
+      e.async = !0;
+      e.src = '//' + host + '/intellitxt/front.asp?ipid=' + ipid;
+      d.getElementsByTagName(s)[0].parentNode.appendChild(e);
+      })(document, 'script', 'k.intellitxt.com', 31856);
+    }
+    // vibrant not ekon.
+  }
+}
+</script>
+
+
+ <script async src="https://www.googletagmanager.com/gtag/js?id=G-D0GSTB7FEZ"></script> <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-D0GSTB7FEZ'); </script>
+
+
+
+
+
+
+<script async src="https://cdn.performax.cz/yi/adsbypx/px_autoads.js?aab=ulite"></script>
+<link rel="stylesheet" href="https://cdn.performax.cz/yi/adsbypx/px_autoads.css"/>
+
+</head>
+
+<body class="page-subpage">
+
+<style>
+    #mother{max-width:1030px;}
+    #ahead{min-width:970px;display:flex;align-items:center;justify-content:center;height:210px;margin:9px auto;}
+    @media (max-width:990px){#ahead{display:none;}}
+    @media (max-width:479px){.crossroad-grid li > .box-offer-300x250{margin-left:auto; margin-right:auto;}}
+    .box-offer-mob-perex {max-width:100%; height:300px;}
+    @media (max-width:759px){.box-offer-mob-perex{ height:auto; max-height:600px;}}
+    /* #mobFullPerexBan, */ #textFullBan, #nativPodclanek, #nativPodclanek1, .box-offer-300x250 .inner, .box-offer-300x600 .inner, .box-offer-fulltext-900x100 .inner {min-height:300px; /* height:300px; */}
+    .fotogal-link-nahledy {padding-bottom:10px;}
+    .fotogal-link-nahledy a.a-img-fotogallery {text-decoration: none;}
+    div#articlebody p { overflow-wrap: break-word; margin-top: 15px; }
+</style>
+<div id="ahead" class="px-ads px-ads--leaderboard">
+
+<script src="https://cdn.performax.cz/px2/flexo.js?1" async></script>
+<div id="PX_23591_169591797433369"></div>
+
+
+<script type='text/javascript'>
+if (sssp.displaySeznamAds() && !isMobile.matches) {
+    var div = document.getElementById('PX_23591_169591797433369');
+    div.innerHTML = '<div id="ssp-zone-78391"></div>';
+}
+</script>
+
+</div>
+
+<div id="mother" class="px-main-content">
+
+<p id="menu-accessibility">
+<a title="Přejít k obsahu (Klávesová zkratka: Alt + 2)" accesskey="2" href="#main">Přejít k obsahu</a>
+<span class="hide">|</span>
+<a href="#menu-main">Přejít k hlavnímu menu</a>
+<span class="hide">|</span>
+<a href="#form-search">Přejít k vyhledávání</a>
+</p>
+
+<div id="header">
+<div class="row">
+<h1 id="logo">
+<a href="/" class="icon icon-logo">
+<span class="vhide">České noviny</span>
+</a>
+</h1>
+
+<div id="menu-main" class="toggle-open">
+<p class="title">
+<a href="#" data-target="#menu-main">
+<span class="icon icon-menu"></span>
+<span class="name">Menu</span>
+</a>
+</p>
+<ul class="reset s">
+<li class="home">
+<a href="/" class="homepage" title="Úvod">
+<span class="icon icon-home"></span>
+<span class="name">Úvod</span>
+</a>
+</li>
+<li><a href="/cr/" class="cr">ČR</a></li>
+<li><a href="/svet/" class="svet">Svět</a></li>
+<li><a href="/ekonomika/" class="ekonomika">Ekonomika</a></li>
+<li><a href="/kultura/" class="kultura">Kultura</a></li>
+<li><a href="/sport/" class="sport">Sport</a></li>
+<li><a href="/magazin/" class="magazin">Magazín</a></li>
+<li><a href="/special/" class="special">Speciál</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="menu-sub">
+	<div class="wrap">
+		<p class="title upper"><a href="/sport/" class="active">Sport</a>:</p>
+		<ul class="reset">
+			<li><a href="/ms-fotbal/"><b>MS ve fotbale</b></a></li>
+			<li><a href="/fotbal/">Fotbal</a></li>
+			<li><a href="/hokej/">Hokej</a></li>
+			
+			
+			<li><a href="/tenis/">Tenis</a></li>
+			
+			<li><a href="/tema/tour/5400">Tour de France</a></li>
+		</ul>
+
+
+
+	</div>
+</div>
+
+<div id="main">
+
+
+
+<div class="crossroad-grid">
+<div class="header">
+<h1 class="title-main">Sportovní zpravodajství</h1>
+<div class="btn-wrap">
+<a href="/sluzby/rss/sport.php" class="btn btn-m btn-icon-before">
+<span>
+<span class="icon icon-rss"></span>
+RSS
+</span>
+</a>
+</div>
+</div>
+
+
+
+
+
+
+<ul class="reset list">
+<li class="list-item grid-sizer">
+<a href="/zpravy/beachvolejbalistky-pavelkovy-vyhraly-na-me-i-podruhe-a-jsou-primo-v-osmifinale/2861478" class='inner inner-img priorita3'><p class="img"><img src="https://i3.cn.cz/3/1779893516_P2026052706848.jpg"  /><span class="tag blue">13.08.2026 09:53</span><span class="overlay" data-klice='Evropa-Sport-volejbal-plážový'></span></p>
+<div class="content"><h3 class="title">Beachvolejbalistky Pavelkovy vyhrály na ME i podruhé a jsou přímo v osmifinále</h3></div></a>
+</li>
+<li class="list-item"><a href="/zpravy/rallyeovy-sampionat-pokracuje-ve-zline-kopecky-se-pokusi-ozivit-sance-na-titul/2861474" class='inner inner-img priorita3'><p class="img"><img src="https://i3.cn.cz/3/1783866009_P2026071204164.jpeg"  /><span class="tag blue">13.08.2026 09:38</span><span class="overlay" data-klice='ČR-Evropa-Sport-motorismus-Zlín-rallye-OTVÍRÁK'></span></p>
+<div class="content"><h3 class="title">Rallyeový šampionát pokračuje ve Zlíně, Kopecký se pokusí oživit šance na titul</h3></div></a></li><li class="list-item"><a href="/zpravy/messi-se-po-smrti-otce-vratil-na-hriste-miami-k-uspechu-v-poharu-nepomohl/2861466" class='inner inner-img priorita3'><p class="img"><img src="https://i3.cn.cz/3/1786605301_P2026081302349.jpg"  /><span class="tag blue">13.08.2026 09:13</span><span class="overlay" data-klice='Sport-fotbal-Messi-Leagues Cup'></span></p>
+<div class="content"><h3 class="title">Messi se po smrti otce vrátil na hřiště, Miami k úspěchu v poháru nepomohl</h3></div></a></li>
+
+
+<li class="list-item">
+<div id="hyperbox1" class="inner crossroad-light">
+
+
+<div id='div-gpt-ad-1439561466320-3' style=''>
+<script type='text/javascript'>
+if (!sssp.displaySeznamAds()) {
+ googletag.cmd.push(function() { googletag.display('div-gpt-ad-1439561466320-3'); });
+}
+</script>
+</div>
+
+
+
+<div id='div-gpt-ad-1439561466320-4' style=''>
+<script type='text/javascript'>
+if (!sssp.displaySeznamAds()) {
+ googletag.cmd.push(function() { googletag.display('div-gpt-ad-1439561466320-4'); });
+}
+</script>
+</div>
+
+
+
+<div id='div-gpt-ad-1439561466320-5' style=''>
+<script type='text/javascript'>
+if (!sssp.displaySeznamAds()) {
+ googletag.cmd.push(function() { googletag.display('div-gpt-ad-1439561466320-5'); });
+}
+</script>
+</div>
+
+
+
+<div id='div-gpt-ad-1439561466320-6' style=''>
+<script type='text/javascript'>
+if (!sssp.displaySeznamAds()) {
+ googletag.cmd.push(function() { googletag.display('div-gpt-ad-1439561466320-6'); });
+}
+</script>
+</div>
+
+
+</div>
+<span class="info">Reklama</span>
+
+<script type="text/javascript">
+if (sssp.displaySeznamAds()) {
+    // SMR mobil clanek
+    var div = document.getElementById('div-gpt-ad-1439561466320-3');
+    div.innerHTML = '<div style="margin: 0 0 0 20px;"><div id="ssp-zone-78421"></div></div>';	
+}
+</script>
+
+</li>
+
+
+<li class="list-item"><a href="/zpravy/tenistka-siniakova-si-v-torontu-zahraje-o-38-deblovy-titul-kariery/2861451" class='inner inner-img priorita3'><p class="img"><img src="https://i3.cn.cz/3/1786599630_P2026081301892.jpg"  /><span class="tag blue">13.08.2026 07:57</span><span class="overlay" data-klice='Sport-tenis-Toronto-Montreal'></span></p>
+<div class="content"><h3 class="title">Tenistka Siniaková si v Torontu zahraje o 38. deblový titul kariéry</h3></div></a></li>
+
+
+
+<li class="list-item">
+<div id="hyperbox2" class="inner crossroad-light">
+
+
+<div id='div-gpt-ad-1439561466320-7' style=''>
+<script type='text/javascript'>
+//if (!im.displaySeznamAdvert()) {
+if (!sssp.displaySeznamAds()) {
+ googletag.cmd.push(function() { googletag.display('div-gpt-ad-1439561466320-7'); });
+}
+</script>
+</div>
+
+
+
+<div id='div-gpt-ad-1439561466320-8' style=''>
+<script type='text/javascript'>
+//if (!im.displaySeznamAdvert()) {
+if (!sssp.displaySeznamAds()) {
+ googletag.cmd.push(function() { googletag.display('div-gpt-ad-1439561466320-8'); });
+}
+</script>
+</div>
+
+
+
+<div id='div-gpt-ad-1439561466320-9' style=''>
+<script type='text/javascript'>
+//if (!im.displaySeznamAdvert()) {
+if (!sssp.displaySeznamAds()) {
+ googletag.cmd.push(function() { googletag.display('div-gpt-ad-1439561466320-9'); });
+}
+</script>
+</div>
+
+
+
+<div id='div-gpt-ad-1439561466320-10' style=''>
+<script type='text/javascript'>
+//if (!im.displaySeznamAdvert()) {
+if (!sssp.displaySeznamAds()) {
+ googletag.cmd.push(function() { googletag.display('div-gpt-ad-1439561466320-10'); });
+}
+</script>
+</div>
+
+
+</div>
+<span class="info">Reklama</span>
+<script>
+if (sssp.displaySeznamAds()) {
+    var el = document.getElementById("hyperbox2");
+    el.closest(".list-item").style.height = 0;
+}
+</script>
+</li>
+
+
+
+
+
+<li class="list-item"><a href="/zpravy/fotbaliste-jablonce-chteji-v-rize-stvrdit-postup-do-4-predkola-konferencni-ligy/2861232" class='inner inner-img priorita2'><p class="img"><img src="https://i3.cn.cz/3/1786038913_P2026080606502.jpeg"  /><span class="tag blue">13.08.2026 06:15</span><span class="overlay" data-klice='Sport-fotbal-OTVÍRÁK-Riga-3. předkolo-Jablonec nad Nisou-Konferenční'></span></p>
+<div class="content"><h3 class="title">Fotbalisté Jablonce chtějí v Rize stvrdit postup do 4. předkola Konferenční ligy</h3></div></a></li><li class="list-item"><a href="/zpravy/fotbaliste-hradce-kralove-se-proti-besiktasi-v-predkole-el-pokusi-o-obrat/2861162" class='inner inner-img priorita2'><p class="img"><img src="https://i3.cn.cz/3/1786043309_P2026080606449.jpeg"  /><span class="tag blue">13.08.2026 06:14</span><span class="overlay" data-klice='Sport-fotbal-Hradec Králové-OTVÍRÁK-Evropská-Besiktas-3. předkolo'></span></p>
+<div class="content"><h3 class="title">Fotbalisté Hradce Králové se proti Besiktasi v předkole EL pokusí o obrat</h3></div></a></li><li class="list-item"><a href="/zpravy/ctvrtkarka-manuel-a-ostepar-vadlejch-budou-na-me-bojovat-o-finale/2861424" class='inner inner-img priorita2'><p class="img"><img src="https://i3.cn.cz/3/1786281614_P2026080902491.jpeg"  /><span class="tag blue">13.08.2026 01:02</span><span class="overlay" data-klice='Evropa-Sport-atletika-OTVÍRÁK'></span></p>
+<div class="content"><h3 class="title">Čtvrtkařka Manuel a oštěpař Vadlejch budou na ME bojovat o finále</h3></div></a></li><li class="list-item"><a href="/zpravy/plavkyne-seemanova-bude-na-me-utocit-na-treti-zlato-na-200-metru/2861423" class='inner inner-img priorita2'><p class="img"><img src="https://i3.cn.cz/3/1786553524_P2026081206192.jpg"  /><span class="tag blue">13.08.2026 01:01</span><span class="overlay" data-klice='Evropa-Sport-plavání-OTVÍRÁK'></span></p>
+<div class="content"><h3 class="title">Plavkyně Seemanová bude na ME útočit na třetí zlato na 200 metrů</h3></div></a></li><li class="list-item"><a href="/zpravy/horejs-ukazali-jsme-si-ze-jsme-konkurenceschopni-mame-na-to-rvat-se-o-postup/2861417" class='inner inner-img priorita3'><p class="img"><img src="https://i3.cn.cz/3/1785938270_P2026080505157.jpeg"  /><span class="tag blue">12.08.2026 23:25</span><span class="overlay" data-klice='Sport-fotbal-Hradec Králové-Evropská-Besiktas-3. předkolo-Horejš'></span></p>
+<div class="content"><h3 class="title">Horejš: Ukázali jsme si, že jsme konkurenceschopní, máme na to rvát se o postup</h3></div></a></li>
+
+
+<li class="list-item" style="height: 350px;">
+<div class="inner inner-offer box-offer box-offer-300x250">
+<div class="inner">
+
+<script src="https://cdn.performax.cz/px2/flexo.js?1" async></script>
+<div id="PX_23687_58502944150520"></div>
+
+
+<script src="https://cdn.performax.cz/px2/flexo.js?1" async></script>
+<div id="PX_23669_624091412952282"></div>
+
+
+<script type='text/javascript'>
+if (sssp.displaySeznamAds()) {
+    var div = document.getElementById('PX_23687_58502944150520');
+    if ((isMobile.matches)) {
+        div.innerHTML = '<div id="ssp-zone-338443"></div>';
+    } else {
+        div.innerHTML = '<div id="ssp-zone-78396"></div>';
+    }
+}
+</script>
+
+</div>
+<span class="info">Reklama</span>
+</div>
+</li>
+
+<li class="list-item"><a href="/zpravy/fotbaliste-psg-obhajili-superpohar-porazili-aston-villu/2860849" class='inner inner-img priorita2'><p class="img"><img src="https://i3.cn.cz/3/1786569242_P2026081208699.jpg"  /><span class="tag blue">12.08.2026 23:14</span><span class="overlay" data-klice='Sport-fotbal-UEFA-Superpohár'></span></p>
+<div class="content"><h3 class="title">Fotbalisté PSG obhájili Superpohár, porazili Aston Villu</h3></div></a></li><li class="list-item"><a href="/zpravy/slovenka-zapletalova-ma-zlato-z-me-desetibojar-strasky-je-prubezne-osmy/2861029" class='inner inner-img priorita3'><p class="img"><img src="https://i3.cn.cz/3/1786567214_P2026081208407.jpg"  /><span class="tag blue">12.08.2026 23:17</span><span class="overlay" data-klice='Evropa-Sport-atletika'></span></p>
+<div class="content"><h3 class="title">Slovenka Zapletalová má zlato z ME, desetibojař Stráský je průběžně osmý</h3></div></a></li><li class="list-item"><a href="/zpravy/kozel-musime-si-dat-do-hlavy-ze-stav-je-00-pulka-prace-nas-stale-jeste-ceka/2861379" class='inner inner-img priorita3'><p class="img"><img src="https://i3.cn.cz/3/1785948553_P2026080507045.jpg"  /><span class="tag blue">12.08.2026 20:39</span><span class="overlay" data-klice='Sport-fotbal-Riga-3. předkolo-Kozel-Jablonec nad Nisou-Konferenční'></span></p>
+<div class="content"><h3 class="title">Kozel: Musíme si dát do hlavy, že stav je 0:0, půlka práce nás stále ještě čeká</h3></div></a></li><li class="list-item"><a href="/zpravy/znakar-cejka-skoncil-na-me-paty-seemanova-vyhrala-semifinale-na-dvoustovce-/2861027" class='inner inner-img priorita3'><p class="img"><img src="https://i3.cn.cz/3/1786553541_P2026081206193.jpg"  /><span class="tag blue">12.08.2026 20:18</span><span class="overlay" data-klice='Evropa-Sport-plavání'></span></p>
+<div class="content"><h3 class="title">Znakař Čejka skončil na ME pátý, Seemanová vyhrála semifinále na dvoustovce </h3></div></a></li><li class="list-item"><a href="/zpravy/fotbalisty-sparty-opustil-kapitan-haraslin-zamiril-do-saudske-arabie-/2859647" class='inner inner-img priorita2'><p class="img"><img src="https://i3.cn.cz/3/1784811159_P2026072305056.jpeg"  /><span class="tag blue">12.08.2026 19:01</span><span class="overlay" data-klice='Sport-fotbal-první-Sparta-Saúdská Arábie-Haraslín- al'></span></p>
+<div class="content"><h3 class="title">Fotbalisty Sparty opustil kapitán Haraslín, zamířil do Saúdské Arábie </h3></div></a></li>
+
+
+<li class="list-item" style="height: 350px;">
+<div class="inner inner-offer box-offer box-offer-300x250">
+<div class="inner">
+
+<script src="https://cdn.performax.cz/px2/flexo.js?1" async></script>
+<div id="PX_23678_262516945845714"></div>
+
+
+<script src="https://cdn.performax.cz/px2/flexo.js?1" async></script>
+<div id="PX_23660_949528127365407"></div>
+<script>
+if (sssp.displaySeznamAds()) {
+    var el = document.getElementById("PX_23660_949528127365407");
+    el.closest(".list-item").style.height = 0;
+}
+</script>
+
+</div>
+<span class="info">Reklama</span>
+</div>
+</li>
+
+
+
+
+<li class="list-item"><a href="/zpravy/beachvolejbalove-me-zahajily-vyhrou-jen-pavelkovy-a-svozilova-se-stochlovou/2860706" class='inner inner-img priorita3'><p class="img"><img src="https://i3.cn.cz/3/1779975240_P2026052805943.jpg"  /><span class="tag blue">12.08.2026 17:48</span><span class="overlay" data-klice='Evropa-Sport-volejbal-plážový-OTVÍRÁK'></span></p>
+<div class="content"><h3 class="title">Beachvolejbalové ME zahájily výhrou jen Pavelkovy a Svozilová se Štochlovou</h3></div></a></li><li class="list-item"><a href="/zpravy/fotbalovy-kanonyr-messi-po-smrti-otce-pochybuje-o-dalsi-kariere/2861304" class='inner inner-img priorita3'><p class="img"><img src="https://i3.cn.cz/3/1784501866_P2026072000712.jpg"  /><span class="tag blue">12.08.2026 16:36</span><span class="overlay" data-klice='Argentina-Sport-lidé-fotbal-Messi'></span></p>
+<div class="content"><h3 class="title">Fotbalový kanonýr Messi po smrti otce pochybuje o další kariéře</h3></div></a></li><li class="list-item"><a href="/zpravy/francouzska-media-ocenila-obrat-lyonu-proti-sparte-i-trenera-fonsecu/2861138" class='inner inner-img priorita3'><p class="img"><img src="https://i3.cn.cz/3/1785873914_P2026080406508.jpeg"  /><span class="tag blue">12.08.2026 11:42</span><span class="overlay" data-klice='Sport-fotbal-Liga mistrů-TISK-komentáře-Sparta-Lyon-3. předkolo-AUDIO'></span></p>
+<div class="content"><h3 class="title">Francouzská média ocenila obrat Lyonu proti Spartě i trenéra Fonsecu</h3></div></a></li><li class="list-item"><a href="/zpravy/sparta-prisla-o-moznost-ziskat-temer-pul-miliardy-korun/2861107" class='inner inner-img priorita2'><p class="img"><img src="https://i3.cn.cz/3/1786480277_03.jpg"  /><span class="tag blue">12.08.2026 10:45</span><span class="overlay" data-klice='Sport-fotbal-Liga mistrů-Sparta-ekonomika'></span></p>
+<div class="content"><h3 class="title">Sparta přišla o možnost získat téměř půl miliardy korun</h3></div></a></li><li class="list-item"><a href="/zpravy/ceska-liga-udelala-na-deniu-dobry-dojem-z-jeho-angazma-ma-radost-i-de-la-fuente/2861088" class='inner inner-img priorita3'><p class="img"><img src="https://i3.cn.cz/3/1786289307_P2026080903089.jpeg"  /><span class="tag blue">12.08.2026 10:07</span><span class="overlay" data-klice='ČR-Sport-fotbal-reprezentace-Denia'></span></p>
+<div class="content"><h3 class="title">Česká liga udělala na Deniu dobrý dojem, z jeho angažmá má radost i De la Fuente</h3></div></a></li>
+
+
+
+ 
+<li class="list-item" style="height: 350px"><span class="info">Reklama</span>
+	<div style="margin: 0 0 0 20px;">
+		<div id="ssp-zone-103170"></div>
+	</div>
+</li>
+
+
+
+<li class="list-item"><a href="/zpravy/mensik-ve-ctvrtfinale-v-montrealu-na-sheltona-nestacil-uhral-jen-ctyri-gamy/2860659" class='inner inner-img priorita3'><p class="img"><img src="https://i3.cn.cz/3/1786508911_P2026081201820.jpg"  /><span class="tag blue">12.08.2026 07:37</span><span class="overlay" data-klice='Sport-tenis-Toronto-Montreal'></span></p>
+<div class="content"><h3 class="title">Menšík ve čtvrtfinále v Montrealu na Sheltona nestačil, uhrál jen čtyři gamy</h3></div></a></li><li class="list-item"><a href="/zpravy/-suchomel-je-skoda-ze-pribeh-s-dobrym-zacatkem-uz-v-prvnim-polocase-skoncil/2860582" class='inner inner-img priorita3'><p class="img"><img src="https://i3.cn.cz/3/1786482584_04.jpg"  /><span class="tag blue">12.08.2026 05:46</span><span class="overlay" data-klice='Sport-fotbal-Liga mistrů-Sparta-Lyon-3. předkolo-AUDIO'></span></p>
+<div class="content"><h3 class="title"> Suchomel: Je škoda, že příběh s dobrým začátkem už v prvním poločase skončil</h3></div></a></li><li class="list-item"><a href="/zpravy/rozhodla-kvalita-v-zakonceni-rekl-priske-a-naznacil-prichod-posil/2860573" class='inner inner-img priorita3'><p class="img"><img src="https://i3.cn.cz/3/1785873916_P2026080406474.jpeg"  /><span class="tag blue">12.08.2026 05:44</span><span class="overlay" data-klice='Sport-fotbal-Liga mistrů-Sparta-Lyon-3. předkolo-Priske'></span></p>
+<div class="content"><h3 class="title">Rozhodla kvalita v zakončení, řekl Priske a naznačil příchod posil</h3></div></a></li>
+
+<li class="list-item">
+<div class="inner inner-offer box-offer box-offer-300x600" style="height:320px !important;">
+<div class="inner">
+
+
+<div id='div-gpt-ad-1439561466320-0' style='width:300px; height:300px'>
+<script type='text/javascript'>
+if (!sssp.displaySeznamAds()) {
+	googletag.cmd.push(function() { googletag.display('div-gpt-ad-1439561466320-0'); });
+} else {
+	//spozice['div-gpt-ad-1439561466320-0'] = 'smr';
+	var div = document.getElementById('div-gpt-ad-1439561466320-0');
+	div.innerHTML = '<div id="ssp-zone-78396"></div>';
+}
+</script>
+</div>
+
+
+</div>
+<span class="info">Reklama</span>
+</div>
+</li>
+
+<li class="list-item"><a href="/zpravy/sparta-prohrala-v-oslabeni-odvetu-v-lyonu-03-a-prisla-o-ligu-mistru/2860374" class='inner inner-img priorita2'><p class="img"><img src="https://i3.cn.cz/3/1786480122_02.jpg"  /><span class="tag blue">12.08.2026 00:21</span><span class="overlay" data-klice='Sport-fotbal-Liga mistrů-OTVÍRÁK-Sparta-Lyon-3. předkolo'></span></p>
+<div class="content"><h3 class="title">Sparta prohrála v oslabení odvetu v Lyonu 0:3 a přišla o Ligu mistrů</h3></div></a></li>
+
+
+
+<li class="list-item" style="height: 350px;">
+    <div class="inner inner-offer box-offer box-offer-300x250">
+        <div class="inner">
+            
+            <div id="PX_23663_836587942555293"></div>
+            <script src="https://cdn.performax.cz/px2/flexo.js?1" async></script>
+            
+            
+            <script src="https://cdn.performax.cz/px2/flexo.js?1" async></script>
+            <div id="PX_23696_231507209042208"></div>
+            
+            
+            <script type="text/javascript">
+            if (sssp.displaySeznamAds()) {
+                // Nativ box
+                var div = document.getElementById('PX_23663_836587942555293');
+                div.innerHTML = '<span class="info">Reklama</span><div style="margin: 0 0 0 20px;"><div id="ssp-zone-103170-1"></div></div>';	
+            }
+            </script>
+            
+        </div>
+        <span class="info">Reklama</span>
+    </div>
+</li>
+
+
+<li class="list-item"><a href="/zpravy/souperem-fotbalistu-plzne-ve-4-predkole-evropske-ligy-bude-cz-belehrad/2860995" class='inner inner-img priorita2'><p class="img"><img src="https://i3.cn.cz/3/1769362188_fotbal3.jpg"  /><span class="tag blue">11.08.2026 22:42</span><span class="overlay" data-klice='Sport-fotbal-Liga mistrů-FLEŠ-3. předkolo-FOTO'></span></p>
+<div class="content"><h3 class="title">Soupeřem fotbalistů Plzně ve 4. předkole Evropské ligy bude CZ Bělehrad</h3></div></a></li><li class="list-item"><a href="/zpravy/hokejiste-trince-hradce-olomouce-a-sparty-vstoupili-do-pripravy-vyhrami/2860953" class='inner inner-img priorita3'><p class="img"><img src="https://i3.cn.cz/3/1786469954_P2026081105787.jpeg"  /><span class="tag blue">11.08.2026 21:35</span><span class="overlay" data-klice='Sport-hokej-extraliga-příprava-FOTO'></span></p>
+<div class="content"><h3 class="title">Hokejisté Třince, Hradce, Olomouce a Sparty vstoupili do přípravy výhrami</h3></div></a></li><li class="list-item"><a href="/zpravy/cesta-na-me-byla-trnita-pripustil-obhajce-osteparskeho-titulu-vadlejch/2860951" class='inner inner-img priorita3'><p class="img"><img src="https://i3.cn.cz/3/1779010670_P2026051702509.jpg"  /><span class="tag blue">11.08.2026 19:25</span><span class="overlay" data-klice='Evropa-Sport-atletika-FOTO-Vadlejch'></span></p>
+<div class="content"><h3 class="title">Cesta na ME byla trnitá, připustil obhájce oštěpařského titulu Vadlejch</h3></div></a></li><li class="list-item"><a href="/zpravy/nedved-prednesl-analyzu-k-ms-o-103-stranach-na-hracich-videl-mentalni-unavu/2860924" class='inner inner-img priorita3'><p class="img"><img src="https://i3.cn.cz/3/1779982661_P2026052807288.jpg"  /><span class="tag blue">11.08.2026 17:37</span><span class="overlay" data-klice='Sport-fotbal-reprezentace-výkonný-AUDIO-FAČR'></span></p>
+<div class="content"><h3 class="title">Nedvěd přednesl analýzu k MS o 103 stranách, na hráčích viděl mentální únavu</h3></div></a></li><li class="list-item"><a href="/zpravy/uefa-chce-aby-se-system-videorozhodcich-vratil-ke-korenum/2860890" class='inner inner-img priorita3'><p class="img"><img src="https://i3.cn.cz/3/1574454293_P201911221045901.jpg"  /><span class="tag blue">11.08.2026 16:30</span><span class="overlay" data-klice='Sport-fotbal-rozhodčí-UEFA-VAR'></span></p>
+<div class="content"><h3 class="title">UEFA chce, aby se systém videorozhodčích vrátil ke kořenům</h3></div></a></li><li class="list-item"><a href="/zpravy/prekazkari-kolomaznik-a-stefko-jsou-partaci-z-atletiky-i-mediciny-behaji-stejne/2860839" class='inner inner-img priorita3'><p class="img"><img src="https://i3.cn.cz/3/1786451084_P2026081103753.jpeg"  /><span class="tag blue">11.08.2026 14:23</span><span class="overlay" data-klice='Evropa-Sport-atletika-kvalifikace-Kolomazník-FOTO-Štefko'></span></p>
+<div class="content"><h3 class="title">Překážkáři Kolomazník a Štefko jsou parťáci z atletiky i medicíny, běhají stejně</h3></div></a></li><li class="list-item"><a href="/zpravy/kladivar-myslyvcuk-skoncil-na-me-ctvrty-stefela-neuspel-v-kvalifikaci/2860639" class='inner inner-img priorita2'><p class="img"><img src="https://i3.cn.cz/3/1786477611_P2026081106840.jpeg"  /><span class="tag blue">11.08.2026 22:58</span><span class="overlay" data-klice='Evropa-Sport-atletika-OTVÍRÁK'></span></p>
+<div class="content"><h3 class="title">Kladivář Myslyvčuk skončil na ME čtvrtý, Štefela neuspěl v kvalifikaci</h3></div></a></li><li class="list-item"><a href="/zpravy/brankar-vindahl-zamiril-ze-sparty-na-hostovani-do-sampdorie-janov/2860787" class='inner inner-img priorita2'><p class="img"><img src="https://i3.cn.cz/3/1786445029_P2026081103029.jpeg"  /><span class="tag blue">11.08.2026 12:43</span><span class="overlay" data-klice='Itálie-Sport-fotbal-druhá-FLEŠ-Sampdoria-FOTO-Vindahl'></span></p>
+<div class="content"><h3 class="title">Brankář Vindahl zamířil ze Sparty na hostování do Sampdorie Janov</h3></div></a></li><li class="list-item"><a href="/zpravy/sadek-nechtel-verejne-hodnotit-pozici-kouce-hyskeho-od-tymu-ihned-ceka-zlepseni/2860772" class='inner inner-img priorita3'><p class="img"><img src="https://i3.cn.cz/3/1785003121_P2026072505064.jpg"  /><span class="tag blue">11.08.2026 12:13</span><span class="overlay" data-klice='Sport-fotbal-Plzeň-první-Šádek'></span></p>
+<div class="content"><h3 class="title">Šádek nechtěl veřejně hodnotit pozici kouče Hyského, od týmu ihned čeká zlepšení</h3></div></a></li><li class="list-item"><a href="/zpravy/temer-60-procent-sportovnich-klubu-pozoruje-u-deti-nizsi-odolnost-vuci-stresu/2860744" class='inner inner-img priorita3'><p class="img"><img src="https://i3.cn.cz/3/1498214369_P201706230473001.jpg"  /><span class="tag blue">11.08.2026 11:22</span><span class="overlay" data-klice='Sport-sporty-děti-průzkum-ČUS'></span></p>
+<div class="content"><h3 class="title">Téměř 60 procent sportovních klubů pozoruje u dětí nižší odolnost vůči stresu</h3></div></a></li>
+
+</ul>
+
+
+<p class="center">
+<a href="/ajax-new.php" class="btn infinite-crossroad" use-ajax-post="true" data-ajax-post-data="&lbrace;&quot;action&quot;&colon;&quot;nextSeznam&quot;&comma;&quot;format&quot;&colon;&quot;CN15&lowbar;perex&lowbar;box&lowbar;li&quot;&comma;&quot;count&quot;&colon;&quot;16&quot;&comma;&quot;idseznam&quot;&colon;&quot;598&quot;&comma;&quot;start&quot;&colon;&quot;34&quot;&rcub;">
+<span>Všechny zprávy</span>
+</a>
+</p>
+</div>
+</div>
+
+<div id="box-weather" class="toggle-open">
+				<p class="title">
+					<a href="#" data-target="/pocasi/">
+  <span class="icon icon-weather-01"></span>
+    28°C					</a>
+				</p>
+				<div class="box">
+					<div class="inner">
+						<form action="?">
+							<p class="btn-row">
+								<span class="inp-fix inp-icon-before">
+									<input type="text" name="weather-search" id="weather-search" class="inp-text" value="Praha" />
+								</span>
+								<button type="submit" class="btn btn-icon" title="Vyhledat">
+									<span class="icon icon-search"></span>
+								</button>
+							</p>
+						</form>
+						<div class="content">
+  <p class="date">Dnes je čtvrtek 13. srpna 2026</p>
+  <div class="weather">
+    <span class="label">
+      Očekáváme v 09:00
+      <strong class="temperature">23°C</strong>
+    </span>
+    <span class="icon icon-weather-01"></span>
+  </div>						</div>
+					</div>
+					<p class="btn-wrap">
+						<a href="/pocasi/" class="btn btn-block">
+							<span>Celá předpověď</span>
+						</a>
+					</p>
+				</div>
+			</div>
+
+<form action="/vyhledavani/" id="form-search" class="toggle-open" method="post">
+
+<fieldset>
+<h2 class="title" title="Vyhledávání">
+<label for="search" class="icon icon-search" data-target="#form-search">
+<span class="vhide">Vyhledávání</span>
+</label>
+</h2>
+
+<div class="box">
+<p class="btn-row">
+<span class="inp-fix inp-icon-before">
+<input type="text" name="aquery[summary]" id="search" class="inp-text" />
+<span class="icon icon-search"></span>
+</span>
+<button type="submit" class="btn">
+<span>OK</span>							</button>
+</p>
+</div>
+
+</fieldset>
+</form>
+
+
+<div id="footer">
+<div class="dt">
+<p class="copyrights">
+<span class="icon icon-ctk"></span>
+ISSN: 1213-5003 <br/>&copy; Copyright 13.08.2026 ČTK
+</p>
+<p class="mailem">
+<a href="/mailem/" class="btn"><span>Zprávy ČTK mailem</span></a>
+</p>
+<ul class="menu reset">
+<li style="width:auto"><a href="/reklama/">Reklama</a><span class="mobile-hide"></li>
+<li style="width:auto"><a href="/o-nas/">O nás</a></li>
+<li style="width:auto"><a href="/podminky_uziti/">Podmínky užití</a></li>
+<li style="width:auto"><a href="/pr/">PR</a></li>
+<li style="width:auto"><a href="/kontakt-ceske-noviny-ctk/">Kontakt</a></li>
+<li style="width:auto"><a href="/rss/">RSS</a></li>
+<li style="width:auto"><a href="#" id="open-cmp-btn">Cookies</a>
+<script>
+document.getElementById('open-cmp-btn').addEventListener('click', function (event) {
+event.preventDefault();
+event.stopPropagation();
+googlefc.callbackQueue.push(googlefc.showRevocationMessage);
+})
+</script>
+</li>
+<li style="width:auto"><a href="https://www.ctk.cz/politicka-reklama/">Politická reklama</a></li>
+<li style="width:auto"><a href="https://www.ctk.cz/oou/">Os. údaje</a></li>
+</ul>
+<p class="apps">
+<a href="https://itunes.apple.com/cz/app/id407750926?mt=8" class="appstore"><span class="vhide">Zdarma v AppStore</span></a>
+<a href="https://play.google.com/store/apps/details?id=cz.ctk" class="googleplay"><span class="vhide">Zdarma na Google play</span></a>
+</p>
+<p class="social">
+<a href="https://www.facebook.com/CTK.cz" class="icon icon-facebook" title="Facebook"><span class="vhide">Facebook</span></a>
+<a href="https://twitter.com/ceskenoviny_cz" class="icon icon-twitter" title="X (Twitter)"><span class="vhide">X</span></a>
+<a href="https://www.youtube.com/user/CTKvideozpravy/feed" class="icon icon-youtube" title="YouTube"><span class="vhide">YouTube</span></a>
+</p>
+<p class="up">
+<a href="#" class="slide-link">Nahoru</a>
+</p>
+</div>
+</div>
+
+<div id="menu-other">
+<ul class="reset">
+<li><a href="https://www.ctk.cz">Web ČTK</a></li>
+<li><a href="https://ib.ctk.cz/">Infobanka</a></li>
+<li><a href="https://www.profimedia.cz/editorial">Fotobanka</a></li>
+<li><a href="https://ib.ctk.cz/cs/video?utm_source=cn.cz&utm_medium=cn.cz_top-lista&utm_campaign=VDB-promo">Videobanka</a></li>
+<li><a href="https://ib.ctk.cz/cs/infographics?utm_source=cn.cz&utm_medium=cn.cz_top-lista&utm_campaign=GRB-promo">Infografika</a></li>
+<li><a href="https://www.ctk.cz/sluzby/presscentrum/">PressCentrum</a></li>
+<li><a href="https://akademie.ctk.cz/?utm_source=cn.cz&utm_medium=cn.cz_top-lista&utm_campaign=Akademie-promo">Akademie ČTK</a></li>
+<li><a href="https://www.protext.cz/?utm_source=cn.cz&utm_medium=cn.cz_top-lista&utm_campaign=PRsluzby-promo">PR servis</a></li>
+<li><a href="/" class="active">České noviny</a></li>
+</ul>
+</div>
+
+</div>
+
+<script src="https://css.cn.cz/css/2015/js/func.js"></script>
+<script src="https://css.cn.cz/css/2015/js/app.js?20240528"></script>
+<script>
+App.run({})
+</script>
+
+
+<script type='text/javascript'>
+function closeLayer() { 
+   document.getElementById("div-gpt-ad-1439559550514-5").style.display="none";
+}
+</script>
+<div id='div-gpt-ad-1439559550514-5'>
+<script type='text/javascript'>
+if (brandingCN)
+{
+	googletag.cmd.push(function() { googletag.display('div-gpt-ad-1439559550514-5'); });
+}
+</script>
+</div>
+
+<script>
+dataLayer.push({
+    'code' : {
+        'v' : '2.1'
+    },
+    'page' : {
+        'currencyCode' : 'CZK',
+        'locale' : 'cs-CZ',
+        'title' : 'Sportovní zpravodajství',
+        'fullPath' : null
+    },
+    'user' : {
+        'ip' : ''
+    },
+    'page.type' : 'list.category',
+    'page.kind': 'list',
+    'page.list' : {
+        'name': 'Sportovní zpravodajství',
+        'number': 1
+        
+    }
+});
+dataLayer.push({'event': 'page'});
+var cntVal = {ptitle:'Sportovní zpravodajství', pfullpath:'', uip:'', ptype:'list.category', pkind:'list', plistname:'Sportovní zpravodajství', number:'1'};
+
+</script>
+
+
+<script>
+    if (!sssp.displaySeznamAds() && isMobile.matches) {
+        // mobile-rectangle7
+        window.px2 = window.px2 || { conf: {},queue: [] };
+        px2.queue.push(function () {
+            px2.render({
+                slot: {
+                    id: 23696
+                },
+                elem: "PX_23696_231507209042208"
+            })
+        });
+        // mobile-rectangle8
+        window.px2 = window.px2 || { conf: {},queue: [] };
+        px2.queue.push(function () {
+            px2.render({
+                slot: {
+                    id: 23669
+                },
+                elem: "PX_23669_624091412952282"
+            })
+        });
+        // mobile-rectangle9
+        window.px2 = window.px2 || { conf: {},queue: [] };
+        px2.queue.push(function () {
+            px2.render({
+                slot: {
+                    id: 23660
+                },
+                elem: "PX_23660_949528127365407"
+            })
+        });
+    } else if (!sssp.displaySeznamAds())  {
+        // leaderboard1
+        window.px2 = window.px2 || { conf: {},queue: [] };
+        px2.queue.push(function () {
+            px2.render({
+                slot: {
+                    id: 23591
+                },
+                elem: "PX_23591_169591797433369"
+            })
+        });
+        // medium-rectangle4
+        window.px2 = window.px2 || { conf: {},queue: [] };
+        px2.queue.push(function () {
+            px2.render({
+                slot: {
+                    id: 23663
+                },
+                elem: "PX_23663_836587942555293"
+            })
+        });
+        // medium-rectangle5
+        window.px2 = window.px2 || { conf: {},queue: [] };
+        px2.queue.push(function () {
+            px2.render({
+                slot: {
+                    id: 23687
+                },
+                elem: "PX_23687_58502944150520"
+            })
+        });
+        // medium-rectangle6
+        window.px2 = window.px2 || { conf: {},queue: [] };
+        px2.queue.push(function () {
+            px2.render({
+                slot: {
+                    id: 23678
+                },
+                elem: "PX_23678_262516945845714"
+            })
+        });
+    }
+    </script>
+    
+
+
+
+<script>
+document.body.insertAdjacentHTML('afterbegin', '<div id="branding"></div>');
+
+var zones = [];
+allzones.forEach(function(el) {
+
+	if(document.getElementById(el.id))
+	{
+		zones.push(el);
+	}
+});
+
+var zoneId = 78391; // branding zone
+zoneId = (zoneType === 'autonaelektrinu') ? 230091 : zoneId;
+if ((window.innerWidth >= 1366) && (!brandingCN) && (!aheadCN)) {
+	var adZone = {
+		zoneId: zoneId, 
+		width: 2000,  
+		id: "ssp-zone-"+zoneId,
+		elements: [
+			{id: "ssp-zone-"+zoneId, width: 970},
+			{id: "branding", width: 2000, height: 1400}
+		]
+	}
+} else if ((!brandingCN) && (!aheadCN)) {
+	var adZone = {
+		zoneId: zoneId, 
+		width: 970,
+		height: 210,  
+		id: "ssp-zone-"+zoneId
+	}
+};
+if(document.getElementById('ssp-zone-'+zoneId) && (adZone !== undefined))
+{
+	zones.push(adZone);
+}
+
+if (sssp.displaySeznamAds()) {
+	sssp.config({
+		source: "hp_feed",
+	});
+}
+sssp.config({fallbackToGAM: true})
+sssp.getAds(zones);
+</script>
+
+
+
+<script type="text/javascript" src="https://dg.incomaker.com/tracking/resources/js/INlib2.source.js?accountUuid=7bc48aa2-a11c-4039-819b-7410c3e24667&pluginUuid=5f4b1dda-5f9e-4b92-966a-4363f071c49e" async></script>
+
+
+
+<div style='display:none;'>
+
+<script type="text/javascript">
+var pp_gemius_identifier = 'p31FBf_I.abB_toS80UBbpPaP3zuB3uUx0wl3O7o3gX.57';
+</script>
+<script src="/css/cookieconsent/gemius-c.js"></script>
+</div>
+
+
+<iframe srcdoc="<script src='https://cdn.performax.cz/acc/loader.js?aab=loader'></script>" style="display: none" data-web="ceskenoviny.cz" data-hash="09cc457884e538b3d4c4c4ae522d2abc"></iframe>
+
+<script>
+var leadyLoaded = false;
+
+function loadLeady() {
+    if (leadyLoaded) return;
+    leadyLoaded = true;
+  var leady_track_key="R39jhv7J6dqBkwfa";
+  (function(){
+    var l=document.createElement("script");l.type="text/javascript";l.async=true;
+    l.src='https://ct.leady.com/'+leady_track_key+"/L.js";
+    var s=document.getElementsByTagName("script")[0];s.parentNode.insertBefore(l,s);
+console.log("leady loaded");
+  })();
+}
+
+(function updateConsent() {
+  setTimeout(() => {
+    __tcfapi('addEventListener', 2, function(tcData, success) {
+
+      var srvByConsent = function() {
+        console.log("TCF gTagUpdate | analytics | ad_storage", tcData.purpose.consents['1'], tcData.purpose.consents['3']);
+        gtag('consent', 'update', {
+          'analytics_storage': tcData.purpose.consents['1'] ? 'granted' : 'denied',
+          'ad_storage': tcData.purpose.consents['3'] ? 'granted' : 'denied'
+        });
+        if (tcData.purpose.consents['1'] && tcData.purpose.consents['3']) {
+          console.log("TCF gemius load");
+          gms();
+        }
+        if (tcData.purpose.consents['1'] && tcData.purpose.consents['3']) {
+          console.log("TCF leady load");
+            loadLeady();
+        }
+      }
+      if (success && (tcData.eventStatus === 'tcloaded' || tcData.eventStatus === 'useractioncomplete')) {
+        srvByConsent();
+        cpGtoSzn();
+      }
+    });
+  }, 1000);
+})();
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,9 @@
+{
+  "relevance": 7,
+  "completeness": 4,
+  "sources": 0,
+  "limitations": 8,
+  "average": 4.75,
+  "rationale": "The answer attempts to list Czech sports articles but lacks URLs, dates, and proper citations. While it addresses the task's general intent, critical elements like publication dates, URLs, and source verification are missing. The deterministic checks confirm these deficiencies, impacting completeness and sources scores. Limitations are partially addressed by noting some sources are English-focused but not explicitly stated.",
+  "passed": false
+}

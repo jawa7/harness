@@ -1,0 +1,49 @@
+{
+  "cited_urls": [
+    "https://www.ceskenoviny.cz/sport"
+  ],
+  "cited_sources": [
+    {
+      "url": "https://www.ceskenoviny.cz/sport",
+      "title": "Sportovní zpravodajství | ČeskéNoviny.cz",
+      "excerpt": "Sportovní zpravodajství | ČeskéNoviny.cz\nPřejít k obsahu\n|\nPřejít k hlavnímu menu\n|\nPřejít k vyhledávání\nČeské noviny\nMenu\nÚvod\nČR\nSvět\nEkonomika\nKultura\nSport\nMagazín\nSpeciál\nSport\n:\nMS ve fotbale\nFotbal\nHokej\nTenis\nTour de France\nSportovní zpravodajství\nRSS\n13.08.2026 09:53\nBeachvolejbalistky Pavelkovy vyhrály na ME i podruhé a jsou přímo v osmifinále\n13.08.2026 09:38\nRallyeový šampionát pokračuje ve Zlíně, Kopecký se pokusí oživit šance na titul\n13.08.2026 09:13\nMessi se po smrti otce vrátil na hřiště, Miami k úspěchu v poháru nepomohl\nReklama\n13.08.2026 07:57\nTenistka Siniaková si v Torontu zahraje o 38. deblový titul kariéry\nReklama\n13.08.2026 06:15\nFotbalisté Jablonce chtějí v Rize stvrdit postup do 4. předkola Konferenční ligy\n13.08.2026 06:14\nFotbalisté Hradce Králové se proti Besiktasi v předkole EL pokusí o obrat\n13.08.2026 01:02\nČtvrtkařka Manuel a oštěpař Vadlejch budou na ME bojovat o finále\n13.08.2026 01:01\nPlavkyně Seemanová bude na ME útočit na třetí zlato na 200 metrů\n12.08.2026 23:25\nHorejš: Ukázali jsme si, že jsme konkurenceschopní, máme na to rvát se o postup\nReklama\n12.08.2026 23:14\nFotbalisté PSG obhájili Superpohár, porazili Aston Villu\n12.08.2026 23:17\nSlovenka Zapletalová má zlato z ME, desetibojař Stráský je průběžně osmý\n12.08.2026 20:39\nKozel: Musíme si dát do hlavy, že stav je 0:0, půlka práce nás stále ještě čeká\n12.08.2026 20:18\nZnakař Čejka skončil na ME pátý, Seemanová vyhrála semifinále na dvoustovce\n12.08.2026 19:01\nFotbalisty Sparty opustil kapitán Haraslín, zamířil do Saúdské Arábie\nReklama\n12.08.2026 17:48\nBeachvolejbalové ME zahájily ",
+      "tool": "web_search",
+      "fetch_id": "fetch-20260813T083613Z-b7a13c",
+      "cache_path": "evals/runs/20260813T082150Z/google_gemma-4-e4b/live-czech-sports-10/run-03/attempt-01/fetches/fetch-20260813T083613Z-b7a13c/text.txt"
+    }
+  ],
+  "available_sources": [
+    {
+      "url": "https://www.ceskenoviny.cz/sport",
+      "title": "Sportovní zpravodajství | ČeskéNoviny.cz",
+      "excerpt": "Sportovní zpravodajství | ČeskéNoviny.cz\nPřejít k obsahu\n|\nPřejít k hlavnímu menu\n|\nPřejít k vyhledávání\nČeské noviny\nMenu\nÚvod\nČR\nSvět\nEkonomika\nKultura\nSport\nMagazín\nSpeciál\nSport\n:\nMS ve fotbale\nFotbal\nHokej\nTenis\nTour de France\nSportovní zpravodajství\nRSS\n13.08.2026 09:53\nBeachvolejbalistky Pavelkovy vyhrály na ME i podruhé a jsou přímo v osmifinále\n13.08.2026 09:38\nRallyeový šampionát pokračuje ve Zlíně, Kopecký se pokusí oživit šance na titul\n13.08.2026 09:13\nMessi se po smrti otce vrátil na hřiště, Miami k úspěchu v poháru nepomohl\nReklama\n13.08.2026 07:57\nTenistka Siniaková si v Torontu zahraje o 38. deblový titul kariéry\nReklama\n13.08.2026 06:15\nFotbalisté Jablonce chtějí v Rize stvrdit postup do 4. předkola Konferenční ligy\n13.08.2026 06:14\nFotbalisté Hradce Králové se proti Besiktasi v předkole EL pokusí o obrat\n13.08.2026 01:02\nČtvrtkařka Manuel a oštěpař Vadlejch budou na ME bojovat o finále\n13.08.2026 01:01\nPlavkyně Seemanová bude na ME útočit na třetí zlato na 200 metrů\n12.08.2026 23:25\nHorejš: Ukázali jsme si, že jsme konkurenceschopní, máme na to rvát se o postup\nReklama\n12.08.2026 23:14\nFotbalisté PSG obhájili Superpohár, porazili Aston Villu\n12.08.2026 23:17\nSlovenka Zapletalová má zlato z ME, desetibojař Stráský je průběžně osmý\n12.08.2026 20:39\nKozel: Musíme si dát do hlavy, že stav je 0:0, půlka práce nás stále ještě čeká\n12.08.2026 20:18\nZnakař Čejka skončil na ME pátý, Seemanová vyhrála semifinále na dvoustovce\n12.08.2026 19:01\nFotbalisty Sparty opustil kapitán Haraslín, zamířil do Saúdské Arábie\nReklama\n12.08.2026 17:48\nBeachvolejbalové ME zahájily ",
+      "tool": "web_search",
+      "fetch_id": "fetch-20260813T083613Z-b7a13c",
+      "cache_path": "evals/runs/20260813T082150Z/google_gemma-4-e4b/live-czech-sports-10/run-03/attempt-01/fetches/fetch-20260813T083613Z-b7a13c/text.txt"
+    },
+    {
+      "url": "https://www.sport.cz/clanek/ostatni-sportovni-akce-udalosti-2026-kalendar-5357558",
+      "title": "SPORT 2026: Kalendář sportovních akcí a událostí přehledně - Sport.cz",
+      "excerpt": "|  |  |\n --- |\n| do 2. srpna | ME ve veslování - Varese (Itálie) |\n| 3. - 9. srpna | ME v moderním pětiboji - Istanbul (Turecko) |\n| 9. srpna | MotoGP Velká cena Velká Británie – Silverstone |\n| 10. - 16. srpna | ME v atletice - Birmingham (VB) |\n| 12. - 16. srpna | ME v plážovém volejbalu - Stare Jablonki (Polsko) |\n| 13. - 16. srpna | Czech Tour - silniční cyklistika |\n| 13. - 16. srpna | ME ve sportovní gymnastice - ženy - Záhřeb (Chorvatsko) |\n| 14. - 16. srpna | Barum rallye - Zlín | [...] ",
+      "tool": "web_search"
+    },
+    {
+      "url": "https://www.pohary-bauer.cz/clanky/zajimavosti/nejvetsi-sportovni-udalosti-v-roce-2026",
+      "title": "Největší sportovní události v roce 2026 | Poháry Bauer",
+      "excerpt": "ME v atletice či Pařížský maraton připomenou sílu vůle a radost z pohybu. Možná vás inspirují přidat se do běžeckého klubu a zvládnout první půlmaraton. Jak říká Barbora Špotáková: „Soutěžit je krásné, ale běžet pro vlastní radost znamená vítězit každý den.“\n\n## Motorsport, golf a cyklistika\n\n24 hodin Le Mans, prestižní turnaje v Anglii a cyklistická Vuelta a España potvrzují, že vedle síly rozhodují i taktika, odvaha a týmová souhra.\n\n## Co by vám nemělo uniknout? [...] | Super Bowl LX | Americ",
+      "tool": "web_search"
+    },
+    {
+      "url": "https://www.instagram.com/p/DbxEgRJjbxP",
+      "title": "Český magazín Forbes zverejnil rebríček najbohatších ...",
+      "excerpt": "Photo by Šport24.sk on August 12, 2026. May be an image of text that says '岛 ARTOSI M 28 Tisport ays Tipsport Obranca Košic OξιηyM Vs! sa boji O život svojej rodiny: ydaK den padajű bomby, je to bolestivé, zveril sa Šport Šport24sk 24sk'.\nPhoto by Šport24.sk on August 12, 2026. May be an image of text that says 'GER JESPECI ESPE Chobani obani JKS KFZreel POSC Bomba V Istanbule! Škriniar má nového spoluhráča, prichádza hviezdny kanonier Šport24sk 24sk Šport'. [...] sport24sk's profile picture\nPho",
+      "tool": "web_search"
+    },
+    {
+      "url": "https://isport.blesk.cz",
+      "title": "iSport.cz - Sportovní zprávy, výsledky, reportáže",
+      "excerpt": "Zobrazit vše\n\n### Knírový talisman nezafungoval, Štefela je z ME venku. U plavců šly chlupy dolů, a to všude\n\nAtletika\n\n### ME v atletice 2026: program 3. dne, kdy startují Češi?\n\nME v atletice\n\n### ME v atletice 2026: program a výsledky Čechů v Birminghamu\n\nME v atletice\n\n### Myslyvčuk sahal na mistrovství Evropy po české senzaci, scházelo jen sedm centimetrů\n\nAtletika\n\n### Senzační Čejka o medaili: Třeba budu mít to štěstí. Padl druhý nejlepší čas dějin\n\nPlavání\n\n### Komentáře\n\nDalší [...] NHL",
+      "tool": "web_search"
+    }
+  ]
+}

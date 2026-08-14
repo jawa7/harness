@@ -1,0 +1,49 @@
+{
+  "case": "live-multi-url-compare",
+  "model": "llama-xlam-2-8b-fc-r",
+  "mode": "live",
+  "target_url": null,
+  "target_urls": {
+    "first_url": "https://huggingface.co/Qwen/Qwen3.5-0.8B",
+    "second_url": "https://huggingface.co/Qwen/Qwen3-0.6B"
+  },
+  "run_at": "2026-08-12T16:33:48.060011+00:00",
+  "result": {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Compare these two model-card pages: https://huggingface.co/Qwen/Qwen3.5-0.8B and https://huggingface.co/Qwen/Qwen3-0.6B. Fetch both supplied URLs before answering. Do not search the web. Give a concise comparison with at least two meaningful differences and include both URLs."
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"name\": \"web_fetch\", \"arguments\": {\"url\": \"https://huggingface.co/Qwen/Qwen3.5-0.8B\"}}, {\"name\": \"web_fetch\", \"arguments\": {\"url\": \"https://huggingface.co/Qwen/Qwen3-0.6B\"}}]"
+      }
+    ],
+    "finished": true,
+    "summary": "[{\"name\": \"web_fetch\", \"arguments\": {\"url\": \"https://huggingface.co/Qwen/Qwen3.5-0.8B\"}}, {\"name\": \"web_fetch\", \"arguments\": {\"url\": \"https://huggingface.co/Qwen/Qwen3-0.6B\"}}]",
+    "crashed": null,
+    "events": [],
+    "recovered_from_loop": false,
+    "loop_recovery_failed": false
+  },
+  "deterministic": {
+    "passed": false,
+    "failures": [
+      "missing required tool calls: web_fetch",
+      "called web_fetch 0 times; expected at least 2"
+    ],
+    "web_requests": 0,
+    "unique_sources": 0,
+    "output_urls": 2,
+    "output_dates": 0
+  },
+  "outcome": "completed",
+  "evidence": {
+    "cited_urls": [
+      "https://huggingface.co/Qwen/Qwen3-0.6B\"}}",
+      "https://huggingface.co/Qwen/Qwen3.5-0.8B\"}}"
+    ],
+    "cited_sources": [],
+    "available_sources": []
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "id": "page-cache",
+  "modes": ["offline"],
+  "task": "Fetch https://docs.example.test/page, save both the raw page and the complete page text using basename page-copy, then finish.",
+  "tools": ["web_fetch", "save_fetched_page", "print_fetched_page"],
+  "checks": {"required_tools": ["web_fetch", "save_fetched_page"], "expected_files": ["page-copy.raw", "page-copy.txt"]},
+  "fixtures": {
+    "fetch": {
+      "https://docs.example.test/page": {
+        "status": "ok", "url": "https://docs.example.test/page",
+        "text": "Full fixture page text.", "full_text": "Full fixture page text.",
+        "raw": "<html><body>Full fixture page text.</body></html>",
+        "content_type": "text/html; charset=utf-8"
+      }
+    }
+  }
+}

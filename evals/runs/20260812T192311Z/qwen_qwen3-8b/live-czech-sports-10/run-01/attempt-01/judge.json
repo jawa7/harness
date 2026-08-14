@@ -1,0 +1,15 @@
+{
+  "relevance": 10,
+  "completeness": 9,
+  "sources": 6,
+  "limitations": 8,
+  "dimensions": [
+    "relevance",
+    "completeness",
+    "sources",
+    "limitations"
+  ],
+  "average": 8.25,
+  "rationale": "The answer addresses the task by listing 10 articles, but only 7 unique URLs are cited (some entries reuse same URLs). Sources are partially tied to evidence, but 3 articles lack specific URLs. Limitations are acknowledged with note about English-language content and URL discrepancies, though 7/10 articles lack proper citations.",
+  "passed": true
+}

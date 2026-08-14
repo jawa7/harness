@@ -1,0 +1,13 @@
+{
+  "relevance": 10,
+  "completeness": 10,
+  "sources": 10,
+  "dimensions": [
+    "relevance",
+    "completeness",
+    "sources"
+  ],
+  "average": 10.0,
+  "rationale": "The answer directly addresses the task by comparing both model cards, includes all requested URLs, and highlights two key differences (modality and scale/context). Claims are tied to the provided sources without external assumptions.",
+  "passed": true
+}

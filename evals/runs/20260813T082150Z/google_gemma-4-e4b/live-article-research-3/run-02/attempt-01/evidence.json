@@ -1,0 +1,46 @@
+{
+  "cited_urls": [
+    "https://daily.dev/blog/best-local-llm-models-run`",
+    "https://www.docker.com/blog/local-llm-tool-calling-a-practical-evaluation`",
+    "https://www.promptquorum.com/power-local-llm/best-local-models-tool-calling-2026`"
+  ],
+  "cited_sources": [],
+  "available_sources": [
+    {
+      "url": "https://pinggy.io/blog/top_5_local_llm_tools_and_models",
+      "title": "Top 5 Local LLM Tools and Models in 2026 | Pinggy Blog",
+      "excerpt": "Running powerful AI language models locally has become increasingly accessible in 2026, offering privacy, cost savings, and full control over your data. With releases like Qwen3.6 and Qwen3.5, Google’s Gemma 4, OpenAI’s gpt-oss, Qwen3-Coder-Next for agentic coding, NVIDIA’s Nemotron 3, Mistral Medium 3.5, and DeepSeek-V4-Flash, local LLMs now rival cloud-based services in performance while maintaining complete data privacy and eliminating subscription costs. [...] Qwen3.6-35B-A3B - 23GB, best al",
+      "tool": "web_search"
+    },
+    {
+      "url": "https://www.docker.com/blog/local-llm-tool-calling-a-practical-evaluation",
+      "title": "Tool Calling with Local LLMs: A Practical Evaluation",
+      "excerpt": "Local LLM Tool Calling: Which LLM Should You Use? | DockerTool Calling with Local LLMs: A Practical Evaluation | Docker\nSkip to content\nProducts\nAI and Agents\nDocker Sandboxes\nNew\nIsolated environments for coding agents\nAI Governance\nNew\nGovern agents and Claws across every team\nGordon\nNew\nYour AI Agent across Docker\nDocker Model Runner\nLocal-first LLM inference made easy\nDocker MCP Catalog and Toolkit\nConnect and manage MCP tools\nApplication Security\nDocker Hardened Images\nShip with secure, enterprise-ready images\nDocker Scout\nSimplify the software supply chain\nApplication Development\nDocker Desktop\nContainerize your applications\nDocker Hub\nDiscover and share container images\nDocker Offload\nBreak free of local constraints\nSupport\nDevelopers\nDocumentation\nFind guides for Docker products\nGetting Started\nLearn the Docker basics\nResources\nSearch a library of helpful materials\nTraining\nSkill up your Docker knowledge\nExtensions SDK\nCreate and share your own extensions\nCommunity\nConnect with other Docker developers\nOpen Source\nExplore open source projects\nPreview Program\nHelp shape the future of Docker\nCustomer Stories\nGet inspired with customer stories\nGet the latest Docker news\nPricing\nYearly\nMonthly\nDocker Personal\n$0\n$0\nFor individual developers who need the essential tools to build and deploy containers.\nGet started\nGet started\nDocker Pro\n$11\n$9\nper user/month\nFor individual professionals who require more advanced features and additional resources.\nBuy now\nBuy now\nMOST POPULAR\nDocker Team\n$16\n$15\nper user/month\nFor small teams that need collaborative tools to make working to",
+      "tool": "web_search",
+      "fetch_id": "fetch-20260813T082632Z-7daaf1",
+      "cache_path": "evals/runs/20260813T082150Z/google_gemma-4-e4b/live-article-research-3/run-02/attempt-01/fetches/fetch-20260813T082632Z-7daaf1/text.txt"
+    },
+    {
+      "url": "https://daily.dev/blog/best-local-llm-models-run",
+      "title": "The Best Local LLM Models to Run in 2026 | daily.dev",
+      "excerpt": "The Best Local LLM Models to Run in 2026 | daily.dev\nSkip to main content\nDownload Logo\nSVG\nPNG\nCopy SVG\nBrand Assets\nSVG copied to clipboard\nProduct\nFor business\nFor Advertisers\nIn-feed ads, sponsored content & more\nFor Recruiters\nHire from millions of developers\nContact sales\n→\nPostmark\ndrove\n12.8× more signups\nvs. Reddit Ads\nRead the story\n→\nResources\nDocs\nThe Agentic AI Hub\nBlog\nChangelog\nWall of Love\nEvents\nOpen source\nCareers\nContact\nLog in\nGet it now\n→\nProduct\nFor business\nFor Advertisers\nFor Recruiters\nResources\nDocs\nThe Agentic AI Hub\nBlog\nChangelog\nWall of Love\nEvents\nOpen source\nCareers\nContact\nGet it now\n→\nLog in\nTheme\nBlog\nTrends\nThe Best Local LLM Models to Run in 2026\nThe Best Local LLM Models to Run in 2026\nCarlos Mendoza\nJun 22, 2026\n16 min read\nTable of Contents\nQuick Comparison\n1. Llama)\n2. Mistral\n3. Qwen\n4. DeepSeek\n5. Gemma\n6. Phi)\nWhich Model to Pick for Your Hardware Setup\nPros and Cons of Each Local LLM Family\nConclusion\nFAQs\nLink copied!\nQuick take\nCompare six top local LLM families and choose by memory first, then task—recommendations for 8GB to 48GB+ setups and core use cases.\nIf I had to cut this guide down to one line, it would be this: pick by memory first, then by task.\nIn 2026, the six local model families that matter most are\nLlama, Mistral, Qwen, DeepSeek, Gemma, and Phi\n. For most people,\nQwen\nis the safest all-around default,\nDeepSeek\nis the top pick for logic-heavy work,\nMistral\nis strong for code-first setups,\nLlama\nis the easy starting point,\nGemma\nis good for multimodal use, and\nPhi\nis the small-hardware option.\nHere’s the short vers",
+      "tool": "web_search",
+      "fetch_id": "fetch-20260813T082800Z-4ae9aa",
+      "cache_path": "evals/runs/20260813T082150Z/google_gemma-4-e4b/live-article-research-3/run-02/attempt-01/fetches/fetch-20260813T082800Z-4ae9aa/text.txt"
+    },
+    {
+      "url": "https://www.ayautomate.com/blog/best-local-llm-tools-2026",
+      "title": "8 Best Local LLM Tools 2026: Free, Ranked by Use Case",
+      "excerpt": "Updated July 2026\n\n## 8 Best Local LLM Tools to Run LLMs Locally in 2026\n\nThe best local LLM stack in 2026 splits by job: Ollama for developers who want a model behind a local API in one command, LM Studio for the most polished desktop GUI, GPT4All for document chat on modest hardware, vLLM for high-throughput production serving, and llama.cpp as the engine layer with the deepest control. Jan, LocalAI, and Open WebUI cover offline privacy, OpenAI-compatible backends, and shared team chat. [...] ",
+      "tool": "web_search"
+    },
+    {
+      "url": "https://www.promptquorum.com/power-local-llm/best-local-models-tool-calling-2026",
+      "title": "Best Local Models for Tool Calling in 2026: Benchmarks & ...",
+      "excerpt": "Best Local Tool-Calling Models 2026: Real MCP Benchmarks\nSkip to main content\nPromptQuorum\nCompare Tools\nFeatures\nHow It Works\nFAQ\nBlog\nPrompt Engineering\nLocal LLMs\nPower Local LLM\nPrompt Bites\nSmart Home\nBalcony Solar\nTry Beta\nSearch guides...\n⌘K\n🇺🇸\nEN\n🇺🇸\nEN\nCompare Tools\nFeatures\nHow It Works\nFAQ\nBlog\nPrompt Engineering\nLocal LLMs\nPower Local LLM\nPrompt Bites\nSmart Home\nBalcony Solar\nTry Beta\nHome\n/\nPower Local LLM\n/\nBest Local Models for Tool Calling in 2026: Benchmarks & Comparison\nLocal AI Agents & Tool Use\nBest Local Models for Tool Calling in 2026: Benchmarks & Comparison\nLast updated:\nJune 19, 2026\n·\n12 min read\n·\nBy\nHans Kuepper\n· Founder of PromptQuorum, multi-model AI dispatch tool · PromptQuorum\nRead in:\n🇺🇸\nen\n🇩🇪\nde\n🇫🇷\nfr\n🇯🇵\nja\n🇨🇳\nzh\n🇪🇸\nes\n🇧🇷\npt\n🇸🇦\nar\n🇰🇷\nko\nFive local models tool-call reliably in May 2026: Gemma 4 27B, GLM-4.7 32B, Qwen3 32B, Qwen3-Coder 30B, and Llama 3.3 70B. Llama 3.3 70B has the highest ceiling (~97% well-formed call rate across MCP servers) but wants 48 GB+ VRAM. Qwen3-Coder 30B is the best pick for code-shaped tool work. Gemma 4 27B is the best general-purpose pick for 24 GB VRAM rigs. GLM-4.7 32B wins on long-context agent tasks (128K context out of the box). Qwen3 32B is the well-rounded fallback. Models below 7B and most general-purpose models without explicit tool-call training emit malformed calls in the same workloads — the failure attributes to the model, not the harness. Quantisation harsher than Q4_K_M on the smaller end of this list degrades reliability noticeably; Q4_K_M is the production floor.\nTool-call reliability is the sin",
+      "tool": "web_search",
+      "fetch_id": "fetch-20260813T082712Z-78e01d",
+      "cache_path": "evals/runs/20260813T082150Z/google_gemma-4-e4b/live-article-research-3/run-02/attempt-01/fetches/fetch-20260813T082712Z-78e01d/text.txt"
+    }
+  ]
+}

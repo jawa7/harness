@@ -1,0 +1,54 @@
+{
+  "cited_urls": [
+    "https://pinggy.io/blog/top_5_local_llm_tools_and_models",
+    "https://pinggy.io/blog/top_5_local_llm_tools_and_models`",
+    "https://www.docker.com/blog/local-llm-tool-calling-a-practical-evaluation",
+    "https://www.docker.com/blog/local-llm-tool-calling-a-practical-evaluation`"
+  ],
+  "cited_sources": [
+    {
+      "url": "https://www.docker.com/blog/local-llm-tool-calling-a-practical-evaluation",
+      "title": "Tool Calling with Local LLMs: A Practical Evaluation",
+      "excerpt": "Jul 30, 2026\n\n  #### The Future of Agentic AI Depends on Openness and Trust. That’s Why Docker Is Joining Nvidia’s Open Secure AI Alliance.\n\n  Docker joins NVIDIA’s Open Secure AI Alliance to help build the security, governance, and trust frameworks that agentic AI systems demand.\n\n  \n\n  Tushar Jain\n\n  Read now\n Aug 4, 2026\n\n  #### The Software Supply Chain Is Under Siege. Devs Are Still the First Line of Defense [...] 77% of organizations experienced a software supply chain incident in the past",
+      "tool": "web_search"
+    },
+    {
+      "url": "https://pinggy.io/blog/top_5_local_llm_tools_and_models",
+      "title": "Top 5 Local LLM Tools and Models in 2026 | Pinggy Blog",
+      "excerpt": "# Top 5 Local LLM Tools and Models in 2026\n\nUpdated August 2, 2026   19 min read   Pinggy Blog\n\n Llm\n AI Models\n Local AI\n Self-Hosted AI\n Ollama\n LM Studio\n Unsloth\n Gpt4all\n Llama.cpp\n Local Inference\n Jan\n\nIn this article\ntop 5 local llm tools and models 2026 banner [...] | Nemotron 3 Super | 120B (12B) | 64-72GB | Reasoning, 1M context |\n| gpt-oss-120b | 120B MoE | 66GB | Tool calling, Apache 2.0 |\n| Qwen3.5-122B-A10B | 122B (10B) | 70GB | Frontier-ish general use |\n| Mistral Medium 3.5 | 12",
+      "tool": "web_search"
+    }
+  ],
+  "available_sources": [
+    {
+      "url": "https://www.docker.com/blog/local-llm-tool-calling-a-practical-evaluation",
+      "title": "Tool Calling with Local LLMs: A Practical Evaluation",
+      "excerpt": "Jul 30, 2026\n\n  #### The Future of Agentic AI Depends on Openness and Trust. That’s Why Docker Is Joining Nvidia’s Open Secure AI Alliance.\n\n  Docker joins NVIDIA’s Open Secure AI Alliance to help build the security, governance, and trust frameworks that agentic AI systems demand.\n\n  \n\n  Tushar Jain\n\n  Read now\n Aug 4, 2026\n\n  #### The Software Supply Chain Is Under Siege. Devs Are Still the First Line of Defense [...] 77% of organizations experienced a software supply chain incident in the past",
+      "tool": "web_search"
+    },
+    {
+      "url": "https://pinggy.io/blog/top_5_local_llm_tools_and_models",
+      "title": "Top 5 Local LLM Tools and Models in 2026 | Pinggy Blog",
+      "excerpt": "# Top 5 Local LLM Tools and Models in 2026\n\nUpdated August 2, 2026   19 min read   Pinggy Blog\n\n Llm\n AI Models\n Local AI\n Self-Hosted AI\n Ollama\n LM Studio\n Unsloth\n Gpt4all\n Llama.cpp\n Local Inference\n Jan\n\nIn this article\ntop 5 local llm tools and models 2026 banner [...] | Nemotron 3 Super | 120B (12B) | 64-72GB | Reasoning, 1M context |\n| gpt-oss-120b | 120B MoE | 66GB | Tool calling, Apache 2.0 |\n| Qwen3.5-122B-A10B | 122B (10B) | 70GB | Frontier-ish general use |\n| Mistral Medium 3.5 | 12",
+      "tool": "web_search"
+    },
+    {
+      "url": "https://www.jdhodges.com/blog/local-llms-on-tool-calling-2026-pt1-local-lm",
+      "title": "I Tested 13 Local LLMs on Tool Calling | 2026 Eval Results",
+      "excerpt": "| 12 | Hammer 2.1 7B | 4.2 GB | 20.0% | 0/8 | 0/8 | 0/8 | 8/8 | 0/8 | 38 |\n| 13 | xLAM-2 8B FC-R | 4.9 GB | 15.0% | 0/8 | 0/8 | 0/8 | 6/8 | 0/8 | 34 | [...] | 5 | GPT-OSS 20B | 12 GB | 85.0% | 8/8 | 8/8 | 2/8 | 8/8 | 8/8 | 65 |\n| 5 | Nemotron 3 Nano MoE | 25 GB | 85.0% | 8/8 | 8/8 | 4/8 | 8/8 | 6/8 | 52 |\n| 8 | DeepSeek-R1-Distill 14B | 9 GB | 57.5% | 4/8 | 5/8 | 1/8 | 7/8 | 6/8 | 23 |\n| 8 | Phi-4 Mini | 2.5 GB | 57.5% | 8/8 | 5/8 | 0/8 | 4/8 | 6/8 | 57 |\n| 10 | Gemma 3 4B QAT | 3.2 GB | 55.0% |",
+      "tool": "web_search"
+    },
+    {
+      "url": "https://www.promptquorum.com/power-local-llm/best-local-models-tool-calling-2026",
+      "title": "Best Local Models for Tool Calling in 2026: Benchmarks & ...",
+      "excerpt": "PromptQuorum\n\nCompare ToolsFeaturesHow It WorksFAQBlogPrompt EngineeringLocal LLMsPower Local LLMPrompt BitesSmart HomeBalcony SolarTry Beta\n\nAccueil/LLM locaux avancés/Meilleurs modèles locaux pour Tool Calling en 2026 : Benchmarks et comparaison\n\nLocal AI Agents & Tool Use\n\n# Meilleurs modèles locaux pour Tool Calling en 2026 : Benchmarks et comparaison\n\n·12 min de lecture·Par Hans Kuepper · Fondateur de PromptQuorum, outil de dispatch multi-modèle · PromptQuorum\n\nLire en: [...] Connecter Olla",
+      "tool": "web_search"
+    },
+    {
+      "url": "https://dev.to/docteurrs/calling-code-with-local-llm-is-a-hoax-2n51",
+      "title": "Calling code with local LLM is a hoax",
+      "excerpt": "# Introduction\n\nIs calling tools even doable? Sure chatGPT makes it easy. But what of your local LLMs. In this article, we'll be trying multiple agent frameworks with tool-calling capabilities and see if our local LLM can use them.\n\nMy configuration is:\n\n RTX4090 with 32GB of RAM\n\nUsing the following LLMs for testing:\n\n llama3:8b\n dolphin-mixtral:8x7b-v2.7-q4\\_K\\_M\n mistral:latest\n\nPowered locally by Ollama.\n\n# I. AutoGPT [...] The documentation doesn't have anything about using local models and",
+      "tool": "web_search"
+    }
+  ]
+}

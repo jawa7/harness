@@ -1,0 +1,10 @@
+{
+  "fetch_id": "fetch-20260813T092942Z-052e9d",
+  "url": "https://benchlm.ai/best/tool-use",
+  "fetched_at": "2026-08-13T09:29:42.670732+00:00",
+  "content_type": "text/html; charset=utf-8",
+  "charset": "utf-8",
+  "raw_bytes": 145684,
+  "text_chars": 8951,
+  "truncated": false
+}

@@ -1,0 +1,49 @@
+{
+  "cited_urls": [
+    "https://www.docker.com/blog/local-llm-tool-calling-a-practical-evaluation"
+  ],
+  "cited_sources": [
+    {
+      "url": "https://www.docker.com/blog/local-llm-tool-calling-a-practical-evaluation",
+      "title": "Tool Calling with Local LLMs: A Practical Evaluation",
+      "excerpt": "Local LLM Tool Calling: Which LLM Should You Use? | DockerTool Calling with Local LLMs: A Practical Evaluation | Docker\nSkip to content\nProducts\nAI and Agents\nDocker Sandboxes\nNew\nIsolated environments for coding agents\nAI Governance\nNew\nGovern agents and Claws across every team\nGordon\nNew\nYour AI Agent across Docker\nDocker Model Runner\nLocal-first LLM inference made easy\nDocker MCP Catalog and Toolkit\nConnect and manage MCP tools\nApplication Security\nDocker Hardened Images\nShip with secure, enterprise-ready images\nDocker Scout\nSimplify the software supply chain\nApplication Development\nDocker Desktop\nContainerize your applications\nDocker Hub\nDiscover and share container images\nDocker Offload\nBreak free of local constraints\nSupport\nDevelopers\nDocumentation\nFind guides for Docker products\nGetting Started\nLearn the Docker basics\nResources\nSearch a library of helpful materials\nTraining\nSkill up your Docker knowledge\nExtensions SDK\nCreate and share your own extensions\nCommunity\nConnect with other Docker developers\nOpen Source\nExplore open source projects\nPreview Program\nHelp shape the future of Docker\nCustomer Stories\nGet inspired with customer stories\nGet the latest Docker news\nPricing\nYearly\nMonthly\nDocker Personal\n$0\n$0\nFor individual developers who need the essential tools to build and deploy containers.\nGet started\nGet started\nDocker Pro\n$11\n$9\nper user/month\nFor individual professionals who require more advanced features and additional resources.\nBuy now\nBuy now\nMOST POPULAR\nDocker Team\n$16\n$15\nper user/month\nFor small teams that need collaborative tools to make working to",
+      "tool": "web_search",
+      "fetch_id": "fetch-20260813T084508Z-8761bc",
+      "cache_path": "evals/runs/20260813T082150Z/google_gemma-4-e4b/live-topic-research/run-03/attempt-01/fetches/fetch-20260813T084508Z-8761bc/text.txt"
+    }
+  ],
+  "available_sources": [
+    {
+      "url": "https://www.docker.com/blog/local-llm-tool-calling-a-practical-evaluation",
+      "title": "Tool Calling with Local LLMs: A Practical Evaluation",
+      "excerpt": "Local LLM Tool Calling: Which LLM Should You Use? | DockerTool Calling with Local LLMs: A Practical Evaluation | Docker\nSkip to content\nProducts\nAI and Agents\nDocker Sandboxes\nNew\nIsolated environments for coding agents\nAI Governance\nNew\nGovern agents and Claws across every team\nGordon\nNew\nYour AI Agent across Docker\nDocker Model Runner\nLocal-first LLM inference made easy\nDocker MCP Catalog and Toolkit\nConnect and manage MCP tools\nApplication Security\nDocker Hardened Images\nShip with secure, enterprise-ready images\nDocker Scout\nSimplify the software supply chain\nApplication Development\nDocker Desktop\nContainerize your applications\nDocker Hub\nDiscover and share container images\nDocker Offload\nBreak free of local constraints\nSupport\nDevelopers\nDocumentation\nFind guides for Docker products\nGetting Started\nLearn the Docker basics\nResources\nSearch a library of helpful materials\nTraining\nSkill up your Docker knowledge\nExtensions SDK\nCreate and share your own extensions\nCommunity\nConnect with other Docker developers\nOpen Source\nExplore open source projects\nPreview Program\nHelp shape the future of Docker\nCustomer Stories\nGet inspired with customer stories\nGet the latest Docker news\nPricing\nYearly\nMonthly\nDocker Personal\n$0\n$0\nFor individual developers who need the essential tools to build and deploy containers.\nGet started\nGet started\nDocker Pro\n$11\n$9\nper user/month\nFor individual professionals who require more advanced features and additional resources.\nBuy now\nBuy now\nMOST POPULAR\nDocker Team\n$16\n$15\nper user/month\nFor small teams that need collaborative tools to make working to",
+      "tool": "web_search",
+      "fetch_id": "fetch-20260813T084508Z-8761bc",
+      "cache_path": "evals/runs/20260813T082150Z/google_gemma-4-e4b/live-topic-research/run-03/attempt-01/fetches/fetch-20260813T084508Z-8761bc/text.txt"
+    },
+    {
+      "url": "https://www.jdhodges.com/blog/local-llms-on-tool-calling-2026-pt1-local-lm",
+      "title": "I Tested 13 Local LLMs on Tool Calling | 2026 Eval Results",
+      "excerpt": "If you’re running a local AI stack with Open WebUI, LM Studio, or any OpenAI-compatible frontend, tool calling is one of the key features that enables agentic behavior. It lets models call functions like checking weather, sending emails, or setting reminders instead of just generating text. But not every model handles it well, and the popular benchmarks don’t always reflect what you’ll get when serving models through a local inference server like LM Studio. [...] If you’ve run similar tests with",
+      "tool": "web_search"
+    },
+    {
+      "url": "https://machinelearningmastery.com/mastering-llm-tool-calling-the-complete-framework-for-connecting-models-to-the-real-world",
+      "title": "Mastering LLM Tool Calling: The Complete Framework for Connecting Models to the Real World - MachineLearningMastery.com",
+      "excerpt": "Tool calling is the mechanism that lets large language models invoke external functions and APIs. It bridges the gap between language generation and real-world actions. Without tools, an LLM is limited to what it learned during training. With tools, it can access current data, take actions, and integrate with your systems.",
+      "tool": "web_search"
+    },
+    {
+      "url": "https://arxiv.org/html/2605.00737v1",
+      "title": "To Call or Not to Call: A Framework to Assess and Optimize LLM Tool Calling",
+      "excerpt": "However, our approach has limitations. The estimators are not perfect and may introduce errors. Future works may investigate why tool calls can lead to negative utility, how tool descriptions influence both perceived and latent utility, and develop more accurate predictors and more effective controllers for tool-calling decisions. [...] Table 1 demonstrates the need for such assessments for an example task, where models can invoke a Web search tool.\nAcross different models, we see that (a) while",
+      "tool": "web_search"
+    },
+    {
+      "url": "https://medium.com/@springrod/why-you-should-use-local-models-a3fce1124c94",
+      "title": "Medium",
+      "excerpt": "This is a mistake. It’s important to understand available model choices and their strengths and weaknesses. Mature Gen AI applications should use a mix of models for different things. Local LLMs are now very useful for many tasks, and their capabilities are growing faster than those of large closed models. Many local LLMs now offer dependable support for tool calling, which was not the case only a few months ago. Local embedding models are often the best choice, period. [...] But different model",
+      "tool": "web_search"
+    }
+  ]
+}

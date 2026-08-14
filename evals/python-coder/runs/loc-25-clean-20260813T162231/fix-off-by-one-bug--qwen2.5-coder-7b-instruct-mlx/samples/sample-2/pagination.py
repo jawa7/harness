@@ -1,0 +1,1 @@
+def page(items, page_number, page_size):\n    if page_number < 1:\n        raise ValueError(\"page_number must be at least 1\")\n    if page_size < 1:\n        raise ValueError(\"page_size must be at least 1\")\n    start = (page_number - 1) * page_size\n    return items[start:start + page_size]\n

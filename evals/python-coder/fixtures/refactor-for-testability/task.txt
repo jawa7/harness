@@ -1,0 +1,1 @@
+Refactor `report.load_open_task_titles()` so its file-reading dependency can be injected for unit tests while preserving its public behaviour. Make the currently xfailed test a normal passing test by removing its xfail marker. Do not change the production behaviour or add third-party dependencies.

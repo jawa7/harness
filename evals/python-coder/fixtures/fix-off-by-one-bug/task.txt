@@ -1,0 +1,1 @@
+`pagination.page()` has an off-by-one defect. Fix the implementation so page numbering is one-based, validation remains intact, and all tests pass. Do not modify the tests.

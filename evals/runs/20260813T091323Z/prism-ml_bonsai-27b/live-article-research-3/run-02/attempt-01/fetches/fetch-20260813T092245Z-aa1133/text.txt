@@ -1,0 +1,429 @@
+Local LLM Tool Calling: Which LLM Should You Use? | DockerTool Calling with Local LLMs: A Practical Evaluation | Docker
+Skip to content
+Products
+AI and Agents
+Docker Sandboxes
+New
+Isolated environments for coding agents
+AI Governance
+New
+Govern agents and Claws across every team
+Gordon
+New
+Your AI Agent across Docker
+Docker Model Runner
+Local-first LLM inference made easy
+Docker MCP Catalog and Toolkit
+Connect and manage MCP tools
+Application Security
+Docker Hardened Images
+Ship with secure, enterprise-ready images
+Docker Scout
+Simplify the software supply chain
+Application Development
+Docker Desktop
+Containerize your applications
+Docker Hub
+Discover and share container images
+Docker Offload
+Break free of local constraints
+Support
+Developers
+Documentation
+Find guides for Docker products
+Getting Started
+Learn the Docker basics
+Resources
+Search a library of helpful materials
+Training
+Skill up your Docker knowledge
+Extensions SDK
+Create and share your own extensions
+Community
+Connect with other Docker developers
+Open Source
+Explore open source projects
+Preview Program
+Help shape the future of Docker
+Customer Stories
+Get inspired with customer stories
+Get the latest Docker news
+Pricing
+Yearly
+Monthly
+Docker Personal
+$0
+$0
+For individual developers who need the essential tools to build and deploy containers.
+Get started
+Get started
+Docker Pro
+$11
+$9
+per user/month
+For individual professionals who require more advanced features and additional resources.
+Buy now
+Buy now
+MOST POPULAR
+Docker Team
+$16
+$15
+per user/month
+For small teams that need collaborative tools to make working together more efficient.
+Buy now
+Buy now
+Docker Business
+$24
+$24
+per user/month
+For enterprises desiring robust security, control, and compliance features.
+Buy now
+Buy now
+Contact sales
+Contact sales
+Docker Hardened Images (DHI)
+Secure, minimal container images for every team, free with enterprise features, if needed.
+Start Free Trial
+Blog
+Docs
+Search
+Sign In
+Toggle menu
+Tool Calling with Local LLMs: A Practical Evaluation
+Posted Jun 30, 2025
+Ignasi Lopez Luna
+Which local model should I use for tool calling?
+When building GenAI and agentic applications, one of the most pressing and persistent questions is:
+“Which local model should I use for tool calling?”
+We kept hearing again and again, from colleagues within Docker and the developer community, ever since we started working on
+Docker Model Runner
+, a local inference engine that helps developers run and experiment with local models.
+It’s a deceptively simple question with a surprisingly nuanced answer. Even when we tried to answer it for a very specific case:
+“What if I just expose 5 simple tools to the model?”
+We realized we had no definite answer for
+that.
+Local LLM models
+offer control, cost-efficiency, and privacy, but when it comes to structured tool use, deciding when and how to act, they can behave very differently. We decided to dig deep and test this properly. We started with manual experimentation, then built a framework to scale our testing. This blog documents that journey and shares which models ranked highest on our tool-calling leaderboard.
+The first attempt: Manual testing
+Our first instinct was to build something quickly and try it out manually.
+So we created
+chat2cart
+, an AI-powered shopping assistant that lets users interact via chat to build, modify, and check out a shopping cart. Through a natural conversation, users can discover products, add or remove items, and complete or cancel their purchase, all from the chat interface.
+To support testing across different LLMs, we added a model selector that makes it easy to switch between local models (via Docker Model Runner or Ollama) and hosted models using the OpenAI API.
+OpenAI’s GPT-4 or GPT-3.5 worked as expected, and the experience was fairly smooth.
+Called tools when they were needed
+Avoided unnecessary tool usage
+Handled tool responses naturally
+But the local models? That’s where the challenges started to surface.
+What went wrong with local models
+We started experimenting with some of the local models listed on the
+Berkeley Function-Calling Leaderboard
+. Our goal was to find smaller models, ideally with fewer than 10 billion parameters, so we tested xLAM-2-8b-fc-r and watt-tool-8B. We quickly ran into several recurring issues:
+Eager invocation
+: Tools were being called even for greeting messages like “Hi there!”
+Wrong tool selection
+: The model would search when it should have added, or tried to remove when the cart was empty
+Invalid arguments
+: Parameters like product_name or quantity were missing or malformed
+Ignored responses
+: The model often failed to respond to tool output, leading to awkward or incomplete conversations
+At this point, it was clear that manual testing wouldn’t scale. Different models failed in different ways, some struggled with invocation logic, while others mishandled tool arguments or responses.  Testing was not only slow, but also unreliable. Because these models are non-deterministic, we had to run each scenario multiple times just to get a reliable read on behavior.
+We needed a testing setup that was repeatable, measurable, and fast.
+Our second attempt: A scalable testing tool
+Our goal wasn’t academic rigor.
+It was:
+“Give us good-enough answers in 2–3 days, not weeks.”
+In a couple of days, we created
+model-test
+, This is a flexible project with the following capabilities
+Define real-world
+test cases
+with multiple valid tool call sequences
+Run them against many models (local & hosted)
+Track
+tool-calling accuracy
+,
+tool selection
+, and
+latency
+Log
+everything
+for analysis (or eventual fine-tuning)
+How it works
+The core idea behind model-test is simple: simulate realistic tool-using conversations, give the model room to reason and act, and check whether its behavior makes sense.
+Each test case includes:
+A
+prompt
+(e.g. “Add iPhone to cart”)
+The
+initial cart state
+(optional)
+One or more
+valid tool-call variants
+, because there’s often more than one right answer
+Here’s a typical case:
+{
+  "prompt": "Add iPhone to cart",
+  "expected_tools_variants": [
+    {
+      "name": "direct_add",
+      "tools": [{ "name": "add_to_cart", "arguments": { "product_name": "iPhone" } }]
+    },
+    {
+      "name": "search_then_add",
+      "tools": [
+        { "name": "search_products", "arguments": { "query": "iPhone" } },
+        { "name": "add_to_cart", "arguments": { "product_name": "iPhone 15" } }
+      ]
+    }
+  ]
+}
+In this case, we consider both
+“just add ‘iPhone’”
+and
+“search first, then add the result”
+as acceptable. Even though “iPhone” isn’t a real product name, we’re fine with it. We weren’t aiming for overly strict precision, just realistic behavior.
+Each test case belongs to a test suite. We provide two built-in suites. However, you can run an entire suite, individual test cases, or a selection of multiple test cases. Additionally, you can create your own custom suites to group tests as needed.
+Simple
+: Greetings, single-step actions
+Complex
+: Multi-step reasoning and tool chaining
+The agent loop
+To make tests feel closer to how real agents behave, we simulate an agent loop up to
+5 rounds
+.
+Example:
+User:
+“Add iPhone 5 to cart”
+Model:
+“Let me search for iPhone 5…”
+Tool:
+(returns product list)
+Model:
+“Adding product X to cart…”
+Tool:
+(updates cart)
+Model:
+“Done”
+→ Great, test passed!
+But if the model still wants to keep going after round 5?
+That’s it, my friend,
+test failed
+. Time’s up.
+Not all-or-nothing
+We deliberately avoided designing tests that require perfect predictions.
+We didn’t demand that the model always know the exact product name.
+What mattered was:
+did the tool sequence make sense
+for the intent?
+This helped us focus on the kind of reasoning and behavior we actually want in agents, not just perfect token matches.
+What We Measured
+Our test outputs distilled down to a final F1 score, encapsulating three core dimensions:
+Metric
+What it tells us
+Tool Invocation
+Did the model realize a tool was needed?
+Tool Selection
+Did it choose the right tool(s) and use them correctly?
+Parameter accuracy
+Whether the tool call arguments were correct?
+The F1 score is the harmonic mean of two things: precision (how often the model made valid tool calls) and recall (how often it made the tool calls it was supposed to).
+We also tracked latency, the average runtime in seconds, but that wasn’t part of the F1 calculation; it simply helped us evaluate speed and user experience.
+21 models and 3,570 tests later: Which models nailed tool calling?
+We tested 21 models across
+3570 test cases
+using 210 batch runs.
+Hardware
+: MacBook Pro M4 Max, 128GB RAM
+Runner
+:
+test-all-models.sh
+Overall Rankings (by Tool Selection F1):
+Model
+F1 Score
+gpt-4
+0.974
+qwen3:14B-Q4_K_M
+0.971
+qwen3:14B-Q6_K
+0.943
+claude-3-haiku-20240307
+0.933
+qwen3:8B-F16
+0.933
+qwen3:8B-Q4_K_M
+0.919
+gpt-3.5-turbo
+0.899
+gpt-4o
+0.857
+gpt-4o-mini
+0.852
+claude-3-5-sonnet-20241022
+0.851
+llama3.1:8B-F16
+0.835
+qwen2.5:14B-Q4_K_M
+0.812
+claude-3-opus-20240229
+0.794
+llama3.1:8B-Q4_K_M
+0.793
+qwen2.5:7B-Q4_K_M
+0.753
+gemma3:4B
+0.733
+llama3.2:3B_F16
+0.727
+llama3grog:7B-Q4_K_M
+0.723
+llama3.3:70B.Q4_K_M
+0.607
+llama-xlam:8B-Q4_K_M
+0.570
+watt-tool:8B-Q4_K_M
+0.484
+Top performers
+Among all models, OpenAI’s GPT-4 came out on top with a tool selection F1 score of 0.974, completing responses in just under 5 seconds on average. While hosted and not the focus of our local model exploration, it served as a reliable benchmark and provided some ground truths.
+On the local side, Qwen 3 (14B) delivered outstanding results, nearly matching GPT-4 with a 0.971 F1 score, though with significantly higher latency (~142 seconds per interaction).
+If you’re looking for something faster, Qwen 3 (8B) also achieved an F1 score of 0.933, while cutting latency nearly in half (~84 seconds), making it a compelling balance between speed and tool-use accuracy.
+Hosted models like Claude 3 Haiku also performed very well, hitting 0.933 F1 with exceptional speed (3.56 seconds average latency), further illustrating the high bar set by cloud-based offerings.
+Underperformers
+Not all models handled tool calling well. The quantized Watt 8B model struggled with parameter accuracy and ended up with a tool selection F1 score of just 0.484. Similarly, the LLaMA-based XLam 8B variant often missed the correct tool path altogether, finishing with an F1 score of 0.570. These models may be suitable for other tasks, but for our structured tool use test, they underdeliver.
+Quantization
+We also experimented with both
+quantized
+and
+non-quantized
+variants for some models, and in all cases observed
+no significant difference
+in tool-calling behavior or performance. This suggests that quantization is beneficial for reducing resource usage without negatively impacting accuracy or reasoning quality, at least for the models and scenarios we tested.
+Our recommendations
+If your goal is maximum tool-calling accuracy, then Qwen 3 (14B) or Qwen 3 (8B) are your best bets, both local, both precise, with the 8B variant being notably faster.
+For a good trade-off between speed and performance, Qwen 2.5 stood out as a solid option. It’s fast enough to support real-time experiences, while still maintaining decent tool selection accuracy.
+If you need something more lightweight, especially for resource-constrained environments, the
+LLaMA 3 Groq 7B
+variant offers modest performance at a much lower compute footprint.
+What we learned and why this matters
+Our testing confirmed that the Qwen family of models leads the pack among open-source options for tool calling. But as always, there’s a trade-off; you’ll need to balance between accuracy and latency when designing your application
+Qwen models dominate
+: Even the 8B version of Qwen3 outperformed any other local model
+Reasoning = latency
+: Higher-accuracy models take longer, often significantly.
+Tool calling is core to almost every real-world GenAI application. Whether you’re building agents or creating agentic workflows, your LLM must know when to act and how. Thanks to this simple framework, “We don’t know which model to pick” became “We’ve narrowed it down to three great options, each with clear pros and cons.”
+If you’re evaluating
+models for your agentic applications
+, skip the guesswork. Try
+model-test
+and make it your own for testing!
+Learn more
+Get an inside look at the
+design architecture of the Docker Model Runner
+.
+Explore the
+story
+behind our model distribution specification
+Read our quickstart guide to
+Docker Model Runner
+.
+Find documentation for
+Model Runner
+.
+Subscribe to the
+Docker Navigator Newsletter
+.
+New to Docker?
+Create an account
+.
+Have questions? The
+Docker community is here to help
+.
+AI/ML
+Docker
+Docker Model Runner
+Products
+Table of contents
+Related Posts
+Jul 30, 2026
+The Future of Agentic AI Depends on Openness and Trust. That’s Why Docker Is Joining Nvidia’s Open Secure AI Alliance.
+Docker joins NVIDIA’s Open Secure AI Alliance to help build the security, governance, and trust frameworks that agentic AI systems demand.
+Tushar Jain
+Read now
+Aug 12, 2026
+Docker VMM Public Beta: A Complete Overhaul, Built for Performance
+Docker VMM is now available in public beta for Mac and Windows. Learn what this means for performance, stability, and governance and how to try it yourself.
+Deanna Sparks
+and
+Colin Hemmings
+Read now
+Aug 12, 2026
+A new security baseline for enterprise agentic adoption
+Agent Baseline is a blueprint for AI adoption that defines six security outcomes for putting enterprise agents to work without giving them unchecked authority. Consider this scenario: a customer-support agent receives a ticket with an attachment. Hidden inside the attachment is an instruction: query the customer database and send the results to an external address….
+Eli Aleyner
+and
+Ranti Familusi
+Read now
+Docker Captain
+Aug 5, 2026
+Governance Is a Developer Experience Problem
+Learn why AI governance is about more than security. Discover how trust, clear boundaries, and developer experience enable AI adoption at scale.
+Karan Verma
+Read now
+Products
+Products Overview
+Docker Desktop
+Docker Hub
+Docker Scout
+Docker Build Cloud
+Docker MCP Catalog and Toolkit
+Docker Hardened Images
+Docker Sandboxes
+AI Governance
+Features
+Command Line Interface
+IDE Extensions
+Container Runtime
+Docker Extensions
+Trusted Open Source Content
+Secure Software Supply Chain
+Developers
+Documentation
+Getting Started
+Trainings
+Extensions SDK
+Community
+Open Source
+Preview Program
+Newsletter
+Pricing
+Personal
+Pro
+Team
+Business
+Premium Support and TAM
+Pricing FAQ
+Contact Sales
+Company
+About Us
+What is a Container
+Blog
+Why Docker
+Trust
+Customer Success
+Partners
+Events
+Docker System Status
+Newsroom
+Swag Store
+Brand Guidelines
+Trademark Guidelines
+Careers
+Contact Us
+Languages
+English
+日本語
+© 2026 Docker Inc. All rights reserved
+Terms of Use
+Privacy
+Legal
+Cookie Settings

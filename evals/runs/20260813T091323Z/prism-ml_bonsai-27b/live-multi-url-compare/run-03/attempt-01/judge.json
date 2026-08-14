@@ -1,0 +1,13 @@
+{
+  "relevance": 10,
+  "completeness": 10,
+  "sources": 10,
+  "dimensions": [
+    "relevance",
+    "completeness",
+    "sources"
+  ],
+  "average": 10.0,
+  "rationale": "The answer directly addresses the task by comparing two model-card pages with two distinct differences (multimodal vs text-only, parameter scale). It includes both URLs and attributes claims to the provided sources. All assertions are tied to the fetched model-card pages, meeting completeness and source requirements.",
+  "passed": true
+}

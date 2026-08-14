@@ -1,0 +1,9 @@
+{
+  "id": "live-url-summary",
+  "modes": ["live"],
+  "target_key": "qwen_model_card",
+  "task": "Make a concise factual summary of this page: {target_url}. Fetch the supplied URL before doing anything else; do not search the web.",
+  "tools": ["web_fetch"],
+  "judge_dimensions": ["relevance", "completeness"],
+  "checks": {"required_tools": ["web_fetch"], "forbidden_tools": ["web_search"], "min_answer_chars": 40}
+}

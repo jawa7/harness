@@ -1,0 +1,13 @@
+{
+  "relevance": 10,
+  "completeness": 10,
+  "sources": 10,
+  "dimensions": [
+    "relevance",
+    "completeness",
+    "sources"
+  ],
+  "average": 10.0,
+  "rationale": "The answer directly addresses the task by comparing two models with two distinct differences (parameter count and capabilities). Both URLs are included, and all claims are tied to the provided sources without additional research.",
+  "passed": true
+}

@@ -1,0 +1,406 @@
+I tried to organize the state of local LLMs in the summer of 2026 | DevelopersIO
+developersIO
+produced by Classmethod
+Original
+English
+Contents
+ちょっと話題の記事
+I tried to organize the state of local LLMs in the summer of 2026
+The local LLM landscape has changed dramatically in six months, so here I will reorganize everything with actual benchmark data. MoE plus 4-bit quantization has become mainstream, and speculative decoding has reached practical usability. For general purposes, Qwen3.6-35B-A3B stands out, while machines with 128GB unified memory are rising in hardware selection. This is the summer 2026 edition guide to choosing models, hardware, and tools.
+NVIDIA
+LLM
+生成AI
+森茂洋 / Hiroshi Morishige
+2026.07.24
+This page has been translated by machine translation.
+View original
+Introduction
+Hello, I'm Mori Shige from Classmethod's Manufacturing Business Technology Division.
+Half a year ago, I published an article titled "A Look at the State of Local LLMs in 2026." Thanks to everyone who read it — but the local LLM landscape has changed dramatically in these past six months. The generational shift from Qwen3.6 and Gemma 4, DeepSeek V4, and the major speed improvements in Ollama. Many of you are probably wondering, "So what's the situation now, six months later?"
+https://dev.classmethod.jp/articles/local-llm-guide-2026/
+After publishing the previous article, I ran hands-on tests using a DGX Spark with Qwen3.6, Gemma 4, Nemotron 3, and Laguna S 2.1. This time, I'm bringing that actual measurement data and rewriting the previous "selection guide" as a Summer 2026 edition.
+To state the conclusion upfront: over these six months, the starring role has shifted to "MoE + 4-bit quantization." For general-purpose use including Japanese, Qwen3.6-35B-A3B is the top candidate, and my actual measurements show 108.3 tok/s including speculative decoding. On the tooling side, Ollama saw major speed improvements in the 0.32 series, reaching parity with vLLM for single-stream decode speed.
+This article covers what has changed over these six months, and introduces how to choose models, hardware, and tools as of July 2026. It's written so you can read it even if you haven't read the previous article.
+!
+The numbers in this article are actual measurements from my DGX Spark (GB10, 128GB unified memory, vLLM v0.24.0–v0.25.1 / Ollama 0.32.3) and Mac mini (M4, 16GB). Please note that results may vary depending on your environment and version.
+What Changed in Local LLMs Over the Past Six Months
+Before getting into the main topic, let me define some key terms that form the backbone of this article. MoE (Mixture of Experts) is an approach where only a subset of the model's specialized parameters are active for each token. The "35B-A3B" in a model name means the total size is 35B but the Active (actually working) portion is 3B, making it run faster relative to its total size. In contrast, traditional dense models use all parameters every time. Speculative decoding is a speed-up technique where a small draft model predicts several tokens ahead and the main model verifies them in batch.
+With that background, here's a summary of what's changed since the previous article.
+Perspective
+As of January 2026
+As of July 2026
+Architecture
+Dense-centric, MoE in some cases (Qwen3-30B-A3B, etc.)
+New models are almost all MoE (Qwen3.6-35B-A3B, Gemma 4 26B-A4B, DeepSeek V4, etc.)
+Quantization
+4-bit was a user-side savings technique
+NVFP4 / QAT and others: distributors now provide 4-bit versions from the start
+Speculative decoding
+Research-oriented topic
+MTP has become practical. 1.4–2.4× on vLLM, Ollama also supports Apple Silicon
+Hardware
+24GB GPU was the main battleground
+128GB unified memory machines are rising
+Tools
+Ollama was convenient but modest in speed
++28% speedup through updates up to 0.32 series, expanded coding agent integration
+The lineup of models has also turned over. Qwen3, Gemma 3, and DeepSeek-V3.2, which I introduced as "major models" in January, were succeeded by Qwen3.6, Gemma 4, and DeepSeek V4 in April. On top of that, Devstral 2 (December 2025), Kimi K2.6 (April), and the code-specialized Laguna S 2.1 (July) — an impressive density of releases for just six months.
+On the other hand, some things haven't changed. gpt-oss remains at its August 2025 version with no successor, and Llama 4 hasn't been updated since April 2025. The pattern of "open model evolution = fast iteration by Chinese players + Google" has become even more pronounced over these six months.
+One more axis has emerged: NVIDIA. Nemotron 3 takes the approach of publishing even training data and recipes, and Japan-specific synthetic datasets like Nemotron-Personas-Japan have appeared. Including Cosmos 3 for Physical AI, the NVIDIA lineup is shaping up as a collection of clean, versatile models useful not just for direct use but as fine-tuning foundations. That feels like broadening the base of local LLM adoption at a different layer from the speed competition.
+Comparing Major Models in Summer 2026
+Here's the main content. I'll update the use-case recommendations in a side-by-side format with the previous article.
+Recommended Models by Use Case
+Use Case
+Recommendation as of January
+Recommendation as of July
+General chat (Japanese)
+Qwen3-14B
+Qwen3.6-35B-A3B, Gemma 4 26B-A4B
+Coding
+Devstral Small 2
+Qwen3.6-27B-coding, Devstral 2, Laguna S 2.1
+Cost-efficiency focused
+Qwen3-30B-A3B
+Qwen3.6-35B-A3B (MoE Active 3B)
+Lightweight / 16GB range
+gpt-oss-20b, Qwen3-1.7B
+Gemma 4 12B (QAT), gpt-oss-20b
+Multimodal
+Gemma 3-27B
+Gemma 4 26B-A4B (image input + MoE)
+Large MoE / reasoning
+DeepSeek-V3.2
+DeepSeek V4 Flash, Kimi K2.6
+Detailed Model Comparison
+Model
+Scale
+License
+Features
+Qwen3.6-35B-A3B
+35B (Active 3B)
+Apache 2.0
+Current top choice for balance of Japanese, speed, and quality
+Qwen3.6-27B
+27B dense
+Apache 2.0
+Dense architecture. Coding version and VL support available
+Gemma 4
+E2B–31B (26B-A4B is MoE)
+Apache 2.0
+5 sizes, 256K ctx for 12B+, image input, QAT version available
+Nemotron 3 Nano
+30B (Active 3B)
+NVIDIA proprietary
+Fast raw decode. Also has Japanese-specific 9B v2 Japanese
+Laguna S 2.1
+118B (Active 8.5B)
+OpenMDW-1.1
+Code-specialized MoE. Reliable tool calling
+GLM-4.7-Flash
+30B (Active 3B)
+Open
+Released in January for local coding use. GLM-5 series above
+DeepSeek V4 Flash
+284B (Active 13B)
+MIT
+Lightweight version of V4 generation. 1M ctx support
+Kimi K2.6
+1T (Active 32B)
+Modified MIT
+Agent-specialized. Local use requires quantized GGUF
+Devstral 2
+123B / Small 24B
+Modified MIT (Small is Apache 2.0)
+SWE-bench Verified 72.2% (flagship)
+gpt-oss
+120b / 20b (MoE)
+Apache 2.0
+Still at August 2025 version. 20b is the standard for 16GB
+Llama 4
+Scout 109B / Maverick 400B
+Meta proprietary
+No updates since April 2025. Weak Japanese relative to size
+In the previous article I wrote "when in doubt, go Apache 2.0," and that hasn't changed. Since both Qwen3.6 and Gemma 4 are Apache 2.0, they're the easy-to-choose top two from a commercial use perspective. Note that the flagship Qwen3.6-Max has non-public weights and is API-only; what's openly available is the mid-range tier like 27B / 35B-A3B.
+Japanese Language Performance
+I'll also update the Japanese language performance evaluation. This is based on Nejumi Leaderboard 4 (July 2026 edition) combined with my own hands-on impressions.
+Model family
+January
+July
+Notes
+Qwen3.6 / 3.5
+◎
+◎
+Dominates the open model top ranks. 27B class exceeds 0.80
+Gemma 4
+○
+◎
+31B is 3rd among open models (0.8077). Clear promotion from previous article
+Nemotron 3
+◎
+○
+Dropped to mid-tier overall. Small Japanese-specific 9B v2 JP still performing
+DeepSeek V4
+○
+○
+Large models only
+GLM
+◎
+○
+GLM-5 series around 0.78
+Kimi K2.5/2.6
+○
+○
+Around 0.77
+Llama 4
+△
+△
+Has disappeared from top rankings
+The conclusion from the previous article — "for Japanese, center on the Qwen family" — stands. What changed is the rise of Gemma 4; particularly the 26B-A4B, which balances MoE speed with Japanese quality and was easy to work with in my hands-on testing. Japanese-domestic models haven't yet broken into the overall top tier, but the Japanese-specialized Nemotron Nano 9B v2 Japanese is holding its own in the small model bracket.
+Decode Speed is Almost Entirely Determined by "Bytes Read Per Token"
+After measuring many models over these six months, this is the most useful rule I found. Decode is the generation phase that happens after the prompt is read — it determines nearly all of your perceived speed. Since this speed is bounded by memory bandwidth, it is inversely proportional to "Active parameter count × bytes per quantization = bytes read to generate one token." Note that the speed of processing long prompts (prefill) is a different axis and is not covered in this article.
+Single decode actual measurements on a single DGX Spark (vLLM v0.24.0–v0.25.1, base + speculative decoding gain). Even among 100B+ class models, Laguna S 2.1 with Active 8.5B is faster than Nemotron 3 Super (120B) with Active 12B.
+Horizontal axis is Active params × quantization bytes (log scale). You can clearly see that this value — not total parameter count — determines speed.
+Three key takeaways from the graphs:
+First, total parameter count is not a speed metric. It's perfectly normal for 118B Laguna S 2.1 (Active 8.5B) to be faster than 27B dense Qwen3.6-27B. In today's MoE-dominated landscape, getting into the habit of looking at "Active how-many-B" rather than "how-many-B is the model" will let you roughly predict speed from spec sheets.
+Second, speculative decoding has become practical. The built-in draft mechanism in a model is called MTP (Multi-Token Prediction), while a separately distributed small draft model is called a drafter — either one adds speed without changing output quality. Qwen3.6-35B-A3B goes from 76.66 to
+108.3 tok/s
+(1.4×) with MTP enabled, and the slower the base is, the more multiplier it gets — so Qwen3.6-27B stretches from 12.13 to 29.38, a 2.4× improvement. A technique that wasn't even mentioned in the previous article has become "basically turn it on if the model supports it" in just six months.
+Third, since this rule is bandwidth-bound, it translates to other environments. The DGX Spark has about 273GB/s bandwidth, roughly the same bandwidth class as Mac M4 Pro or Ryzen AI Max. Discrete GPUs are faster — a second-hand RTX 3090 has about 3.4× the bandwidth, and an RTX 5090 about 6.5×, so you can roughly scale the graph numbers as a rough guide.
+The detailed actual measurements are compiled across a four-part series (
+Cross-comparison starting from Qwen3.6-27B
+,
+Qwen3.6-35B-A3B showdown
+,
+Gemma 4 showdown
+,
+Laguna S 2.1
+, all articles dated July 2026).
+The Winner in Quantization Format Turned Out to Be Model-Dependent
+In the previous article, I covered quantization in one section as "a technique to save memory at the cost of accuracy." The situation changed over these six months, with distributors now routinely shipping 4-bit versions from the start. What emerged from this is the fact that "even with the same 4-bit, speeds can be completely different depending on the distributor — and which is faster depends on the model."
+Let me define some terms here. NVFP4 is NVIDIA's 4-bit quantization format, the mainstream in the vLLM ecosystem; GGUF is the format used in the llama.cpp / Ollama ecosystem; QAT (Quantization-Aware Training) is a high-quality version retrained with 4-bit in mind from the start.
+Here are the results of comparing the NVIDIA official and Unsloth NVFP4 quantizations on DGX Spark:
+Model
+NVIDIA version base
+Unsloth version base
+Winner
+Qwen3.6-35B-A3B
+76.66 tok/s
+67.52 tok/s
+NVIDIA version (wins all configurations)
+Gemma 4 26B-A4B
+31.63 tok/s
+49.13 tok/s
+Unsloth version (
++55%
+)
+NVIDIA version wins every round for Qwen; Unsloth version wins every round for Gemma. Completely opposite. The cause is the compatibility between quantization formats (modelopt static vs. compressed-tensors dynamic) and implementation, and there's currently no way to predict in advance which will win. The practical guideline is simple: if multiple distributors offer 4-bit versions of the same model, try both and use the faster one. That alone is enough to not miss out on a 50% speed boost.
+GGUF users face the same situation. Gemma 4 has an official QAT version from Google, and running
+gemma4:26b-a4b-it-qat
+in Ollama gave
+55.46 tok/s
+in my actual measurements — faster than vLLM's NVFP4 base (49.13). Quantization has shifted from "a compromise to save memory" to "a selection point where performance varies by choice of distributor."
+Incidentally, browsing Ollama's model library, you can now see tags like
+-nvfp4
+and
+-mtp-q4
+alongside
+-qat
+. It's interesting to see vLLM ecosystem technology flowing into the Ollama ecosystem right there in the tag listings.
+Hardware Requirements and the Rise of Unified Memory Machines
+I'll also update the selection guidelines by VRAM tier. This time, the "128GB unified memory" row has been promoted to a starring role.
+Memory tier
+Representative hardware
+Representative models that can run (assuming Q4)
+8GB
+RTX 4060, used RTX 3060
+Qwen3.5-4B, Gemma 4 E4B, Nemotron Nano 9B v2 JP
+16GB
+RTX 5060 Ti, M4 Mac 16GB
+Gemma 4 12B (QAT), gpt-oss-20b
+24GB
+Used RTX 3090 / 4090
+Qwen3.6-27B, Gemma 4 26B-A4B
+32GB
+RTX 5090
+Qwen3.6-35B-A3B (23GB at Q4), Gemma 4 31B
+64GB+
+2 GPUs, unified 64GB
+70B class, Qwen3.5-122B-A10B
+128GB unified
+Strix Halo machines, DGX Spark (GB10)
+Qwen3.6-35B-A3B, Laguna S 2.1, DeepSeek V4 Flash (quantized)
+The reason previous-generation Qwen3.5 remains in the small model tier is that Qwen3.6 has no sizes below 27B. For small models, Qwen3.5 series and Gemma 4 12B and below will continue to serve that role for a while.
+The lineup of unified memory machines expanded dramatically in just six months. Mini PCs with AMD Ryzen AI Max+ 395 (Strix Halo) in 128GB configurations have bandwidth around 256GB/s, nearly matching the DGX Spark (about 273GB/s), with the difference being the CUDA ecosystem and price. Half a year ago some were available for around $1,500, but with DRAM price increases, the realistic lower bound as of July 2026 is $1,800–2,000, with some vendors listing $3,000+. Apple is also facing headwinds with the M3 Ultra 512GB configuration being discontinued due to the same DRAM price surge, though its 819GB/s bandwidth remains in a class of its own. NVIDIA is also preparing the GB10-derived consumer chip N1X, and "local LLM on 128GB unified memory" looks set to become even more accessible in the second half of this year.
+One important caveat: even with 128GB, the bandwidth is narrower than 24GB-class discrete GPUs, so large dense models may fit in memory but won't run fast. Even on my DGX Spark, dense 70B drops to a few tok/s. It's realistic to think of 128GB unified memory machines as "hardware for running large MoE models."
+In the broader world, cases of connecting 2 or 4 DGX Spark or GB10-compatible machines to run hundreds-of-GB-class models are increasing. I also wrote an article about
+running DeepSeek V4 Flash on 2 DGX Sparks
+(article dated 2026-06-30), but at that point it's more of a mini-cluster world than personal local LLM. Where to draw the line on what counts as "local LLM" is debatable, but this article treats "single machine, up to 128GB" as the scope.
+For those wondering "what about my Mac?", I also measured actual performance on a Mac mini (M4, 16GB). Gemma 4 12B QAT ran at 11.26 tok/s in Ollama, Nemotron 9B ran at 9.29 tok/s in LM Studio. At Q4 with 9–12B class models, around 10 tok/s — fast enough to read along while waiting. Since model size and bandwidth dominate over engine differences, model selection is almost everything in the 16GB tier.
+Note that the used GPU market is inflated, with used RTX 4090s going for more than new RTX 5080s in a price inversion. Looking at VRAM cost per GB, used RTX 3090 (24GB) remains the go-to choice, but watch out for units heavily used for mining :)
+Tool Selection: Where Things Stand in Summer 2026
+Tool evaluations have also shifted considerably over six months. Here's the updated comparison table:
+Tool
+Features
+CPU MoE offload
+Best for
+Ollama
+Major speedups through 0.32 series, becoming an agent integration hub
+Auto-eviction only (no explicit knob)
+People who want to get started, CLI agent integration
+vLLM
+Fastest with speculative decoding and parallel throughput. Heavier setup
+✗
+Persistent servers, pushing performance limits
+LM Studio
+GUI-complete, REST API with statistics
+Toggle retreating in 0.4 series
+GUI users, people testing lots of models
+llama.cpp
+Fine-grained control of
+--cpu-moe
+knobs and speculative decoding
+◎
+Power users, people with insufficient VRAM
+The biggest surprise this time around was Ollama. It has steadily gotten faster through a series of releases over these six months. Measuring the same
+qwen3.6:35b-a3b
+on my DGX Spark, it went from 59.70 tok/s in the 0.20 series to
+76.19 tok/s
+in 0.32.3 —
++28%
+from a runtime update alone. This number is nearly the same as vLLM's base (76.66), meaning the previous article's conventional wisdom that "Ollama is convenient but slow" is now outdated for single-stream use. vLLM's advantage has shifted to speculative decoding (108.3) and parallel throughput.
+Four things to know about Ollama's changes over the past six months: On Apple Silicon, Gemma 4's MTP is now enabled by default, yielding about 90% speedup. Integration targets for
+ollama launch
+expanded from just Claude Code to 16 integrations (Codex, Copilot, OpenCode, Cline, etc.), making it a hub for connecting local models to coding agents. The
+reasoning_effort
+in the OpenAI-compatible API now lets you stop thinking models from reasoning (
+"none"
+for instant answers), which is convenient for routing and classification use cases. And newer model tags reject older clients, so if a model fails to pull, suspect a runtime update is needed first. I ran into "requires a newer version" myself with the gemma4 tag.
+LM Studio, on the other hand, has had some setbacks. The "toggle to offload MoE expert weights to CPU" that came in 0.3.23 was replaced with per-layer sliders in the 0.4 series, and the bug tracker has requests to bring back the old toggle. For MoE offload purposes, llama.cpp directly (
+--cpu-moe
+/
+--n-cpu-moe
+) is the reliable choice right now. llama.cpp also got speculative decoding via
+--spec-type draft-mtp
+, supporting the MTP heads of DeepSeek and GLM.
+Another development gaining presence over these six months is MLX, the runtime for Apple Silicon. At WWDC 2026 in June, Apple's own local LLM strategy became clearer. The Foundation Models framework — the language model layer for apps — was opened to third-party models, with an announced mechanism to replace on-device models with Hugging Face MLX community models. On the tooling side, LM Studio now treats MLX format as a first-class option alongside GGUF, and tags like
+gemma4:12b-mlx
+and
+qwen3.6:27b-mlx
+have started appearing in Ollama's model library. Local LLM on Mac is shifting from GGUF as the only option to a state where "MLX is a second standard."
+Stepping back one more level, the layer of "using multiple models together" is also starting to move. While not a local LLM,
+Sakana AI's Fugu
+(article dated 2026-06-22) showed a new way of thinking about a model as an orchestrator directing multiple models. LLM routers like
+NVIDIA's NeMo Switchyard
+(article dated 2026-07-03) have also appeared, and I personally use a setup where local Qwen3.6 handles dispatch decisions. Looking at the trend of models being produced in quantity for specific use cases, I expect routing layers like these to become commonplace in local environments going forward.
+Conclusion
+Looking back, the scene has truly changed dramatically in six months. The leading role in models has shifted to MoE + 4-bit quantization: Qwen3.6-35B-A3B is my current pick for general-purpose including Japanese, and Gemma 4 12B QAT for the 16GB tier. When reading spec sheets, look at Active count rather than total parameters; when downloading, try two distributors. Just those two habits are worth taking away from this article. Hardware-wise, 24GB GPUs remain the main battleground, but 128GB unified memory machines have become a realistic option if you're targeting large MoE models. Just don't forget they're not suited for large dense models.
+Half a year ago I wrote "this is the moment open-source LLMs transition to practical tools." Now it feels like we've taken one step further into a phase where the difference comes from "know-how" — things like speculative decoding and choosing quantization formats. And just as the previous article was already substantially outdated in only six months, the content of this article is being rewritten day by day as we speak. When the next big wave comes, I hope to compile it again with actual measurements. Testing Strix Halo machines in person, and writing a winter edition of this guide at year-end — both are things I'd like to do.
+Reference Links
+A Look at the State of Local LLMs in 2026
+(previous article, 2026-01-28)
+Qwen3.6 GitHub
+Gemma 4 Model Card
+DeepSeek V4 Release Notes
+Introducing Devstral 2 and Mistral Vibe CLI (Mistral AI)
+openai/gpt-oss-120b (Hugging Face)
+Ollama Releases
+Ollama library: gemma4
+Ollama library: qwen3.6
+LM Studio bug tracker #1421
+— Request to restore MoE offload toggle
+Japanese LLM Rankings 2026 (Nejumi Leaderboard 4 Commentary)
+NVIDIA DGX Spark review (Tom's Hardware)
+AI白書2026 配布中
+クラスメソッドが独自に行なったAI診断調査をもとに、企業のAI活用の現在地を調査レポートとしてまとめました。企業規模別の活用度傾向に加え、規模を超えてAI活用を進める企業に共通する取り組みまで、自社の現在地を捉えるためのヒントにぜひ。
+無料でダウンロードする
+Share this article
+classmethod
+Classmethod, Inc.
+Facebook
+X
+YouTube
+Main Categories
+AWS Topics
+AWS
+IAM
+Amazon Cognito
+Security Hub
+AWS Organizations
+Control Tower
+EC2
+S3
+S3 Tables
+AWS CDK
+QuickSight
+Redshift
+Amplify
+CloudFront
+Amazon Connect
+Trending Topics
+Generative AI
+MCP
+ChatGPT
+Claude
+Amazon Bedrock
+RAG
+Amazon Q
+GitHub Copilot
+Devin
+Cursor
+Obsidian
+Modern Data Stack
+Python
+Security
+Project Management
+Products & Services
+Google Cloud
+Microsoft Azure
+Zendesk
+Auth0
+Tableau
+Snowflake
+Alteryx
+Informatica
+dbt
+DuckDB
+Cloudflare
+Splunk
+Vision One
+Notion
+LINE
+Features and Series
+Google Cloud Next ’25
+AWS re:Invent 2025
+AWS Re-Introduction
+AWS Trend Check
+For Beginners
+AWS Technical Support
+AWS Certification
+Manufacturing
+Joined Classmethod
+Classmethod IT Team
+Thai Blog
+Vietnamese Blog
+Company
+About Classmethod
+What is DevelopersIO
+Our Services
+Contact Us
+Download Brochures
+Official X (Twitter)
+YouTube Channel
+Facebook Page
+Official LinkedIn
+Privacy Policy
+© Classmethod, Inc. All rights reserved.
+Trending
+AWS
+Claude
+Bedrock
+Google Cloud
+Azure
+Seminar
+Job fair
+study-club
+Case study
+Recruitment

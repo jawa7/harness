@@ -1,0 +1,13 @@
+{
+  "id": "tool-json-recovery",
+  "modes": ["offline"],
+  "task": "Find one source about reliable tool calling. Use one concise search query and give a sourced answer.",
+  "tools": ["web_search"],
+  "fault_injection": "first_response_length",
+  "checks": {"required_tools": ["web_search"], "min_unique_sources": 1, "min_output_urls": 1},
+  "fixtures": {
+    "search": {
+      "*": {"status": "ok", "results": [{"title": "Guide", "url": "https://research.example.test/guide", "snippet": "Keep tool arguments concise."}]}
+    }
+  }
+}

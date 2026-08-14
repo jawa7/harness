@@ -1,0 +1,15 @@
+{
+  "relevance": 10,
+  "completeness": 5,
+  "sources": 10,
+  "limitations": 10,
+  "dimensions": [
+    "relevance",
+    "completeness",
+    "sources",
+    "limitations"
+  ],
+  "average": 8.75,
+  "rationale": "Relevance is 10 as the answer addresses the task of finding articles about local tool-calling models. Completeness is 5 because only one article was found instead of the required three, and the limitation is acknowledged. Sources score 10 due to proper citation of the single valid article. Limitations score 10 for honestly stating the inability to fetch additional articles due to request limits.",
+  "passed": true
+}

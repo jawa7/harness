@@ -1,0 +1,62 @@
+{
+  "cited_urls": [
+    "https://app.stationx.net/articles/best-local-llm\"",
+    "https://pinggy.io/blog/top_5_local_llm_tools_and_models\"",
+    "https://www.ayautomate.com/blog/best-local-llm-tools-2026\"",
+    "https://www.docker.com/blog/local-llm-tool-calling-a-practical-evaluation\"",
+    "https://www.promptquorum.com/power-local-llm/best-local-models-tool-calling-2026\""
+  ],
+  "cited_sources": [],
+  "available_sources": [
+    {
+      "url": "https://pinggy.io/blog/top_5_local_llm_tools_and_models",
+      "title": "Top 5 Local LLM Tools and Models in 2026 | Pinggy Blog",
+      "excerpt": "Running powerful AI language models locally has become increasingly accessible in 2026, offering privacy, cost savings, and full control over your data. With releases like Qwen3.6 and Qwen3.5, Google’s Gemma 4, OpenAI’s gpt-oss, Qwen3-Coder-Next for agentic coding, NVIDIA’s Nemotron 3, Mistral Medium 3.5, and DeepSeek-V4-Flash, local LLMs now rival cloud-based services in performance while maintaining complete data privacy and eliminating subscription costs. [...] # Top 5 Local LLM Tools and Mod",
+      "tool": "web_search"
+    },
+    {
+      "url": "https://www.promptquorum.com/power-local-llm/best-local-models-tool-calling-2026",
+      "title": "Best Local Models for Tool Calling in 2026: Benchmarks & ...",
+      "excerpt": "PromptQuorum\n\nCompare ToolsFeaturesHow It WorksFAQBlogPrompt EngineeringLocal LLMsPower Local LLMPrompt BitesSmart HomeBalcony SolarTry Beta\n\nAccueil/LLM locaux avancés/Meilleurs modèles locaux pour Tool Calling en 2026 : Benchmarks et comparaison\n\nLocal AI Agents & Tool Use\n\n# Meilleurs modèles locaux pour Tool Calling en 2026 : Benchmarks et comparaison\n\n·12 min de lecture·Par Hans Kuepper · Fondateur de PromptQuorum, outil de dispatch multi-modèle · PromptQuorum\n\nLire en: [...] ## Qu'est-ce q",
+      "tool": "web_search"
+    },
+    {
+      "url": "https://www.ayautomate.com/blog/best-local-llm-tools-2026",
+      "title": "8 Best Local LLM Tools 2026: Free, Ranked by Use Case",
+      "excerpt": "Updated July 2026\n\n## 8 Best Local LLM Tools to Run LLMs Locally in 2026\n\nThe best local LLM stack in 2026 splits by job: Ollama for developers who want a model behind a local API in one command, LM Studio for the most polished desktop GUI, GPT4All for document chat on modest hardware, vLLM for high-throughput production serving, and llama.cpp as the engine layer with the deepest control. Jan, LocalAI, and Open WebUI cover offline privacy, OpenAI-compatible backends, and shared team chat. [...] ",
+      "tool": "web_search"
+    },
+    {
+      "url": "https://app.stationx.net/articles/best-local-llm",
+      "title": "Best Local LLM in August 2026 (Updated Monthly Methodology)",
+      "excerpt": "If you've gone looking for the best local LLM and ended up reading three \"top 5 models for 2026\" articles that contradict each other, you're not alone. The honest answer is that no listicle can keep up. Open-weight models ship weekly, leaderboards re-rank monthly, and half the benchmarks you'll see quoted in vendor blog posts no longer measure what they claim to. [...] Function calling and tool use — for agent workflows, browser automation, API orchestration.\n Writing and editing — the best loca",
+      "tool": "web_search"
+    },
+    {
+      "url": "https://www.docker.com/blog/local-llm-tool-calling-a-practical-evaluation",
+      "title": "Tool Calling with Local LLMs: A Practical Evaluation",
+      "excerpt": "Local LLM Tool Calling: Which LLM Should You Use? | DockerTool Calling with Local LLMs: A Practical Evaluation | Docker\nSkip to content\nProducts\nAI and Agents\nDocker Sandboxes\nNew\nIsolated environments for coding agents\nAI Governance\nNew\nGovern agents and Claws across every team\nGordon\nNew\nYour AI Agent across Docker\nDocker Model Runner\nLocal-first LLM inference made easy\nDocker MCP Catalog and Toolkit\nConnect and manage MCP tools\nApplication Security\nDocker Hardened Images\nShip with secure, enterprise-ready images\nDocker Scout\nSimplify the software supply chain\nApplication Development\nDocker Desktop\nContainerize your applications\nDocker Hub\nDiscover and share container images\nDocker Offload\nBreak free of local constraints\nSupport\nDevelopers\nDocumentation\nFind guides for Docker products\nGetting Started\nLearn the Docker basics\nResources\nSearch a library of helpful materials\nTraining\nSkill up your Docker knowledge\nExtensions SDK\nCreate and share your own extensions\nCommunity\nConnect with other Docker developers\nOpen Source\nExplore open source projects\nPreview Program\nHelp shape the future of Docker\nCustomer Stories\nGet inspired with customer stories\nGet the latest Docker news\nPricing\nYearly\nMonthly\nDocker Personal\n$0\n$0\nFor individual developers who need the essential tools to build and deploy containers.\nGet started\nGet started\nDocker Pro\n$11\n$9\nper user/month\nFor individual professionals who require more advanced features and additional resources.\nBuy now\nBuy now\nMOST POPULAR\nDocker Team\n$16\n$15\nper user/month\nFor small teams that need collaborative tools to make working to",
+      "tool": "web_search",
+      "fetch_id": "fetch-20260813T091632Z-6b2bd7",
+      "cache_path": "evals/runs/20260813T091323Z/prism-ml_bonsai-27b/live-article-research-3/run-01/attempt-01/fetches/fetch-20260813T091632Z-6b2bd7/text.txt"
+    },
+    {
+      "url": "https://www.jdhodges.com/blog/local-llms-on-tool-calling-2026-pt1-local-lm",
+      "title": "I Tested 13 Local LLMs on Tool Calling: March 2026 - J.D. Hodges",
+      "excerpt": "If you’re running a local AI stack with Open WebUI, LM Studio, or any OpenAI-compatible frontend, tool calling is one of the key features that enables agentic behavior. It lets models call functions like checking weather, sending emails, or setting reminders instead of just generating text. But not every model handles it well, and the popular benchmarks don’t always reflect what you’ll get when serving models through a local inference server like LM Studio. [...] The eval harness sends natural-l",
+      "tool": "web_search"
+    },
+    {
+      "url": "https://dev.classmethod.jp/en/articles/local-llm-guide-2026-summer",
+      "title": "I tried to organize the state of local LLMs in the summer of 2026",
+      "excerpt": "Half a year ago, I published an article titled \"A Look at the State of Local LLMs in 2026.\" Thanks to everyone who read it — but the local LLM landscape has changed dramatically in these past six months. The generational shift from Qwen3.6 and Gemma 4, DeepSeek V4, and the major speed improvements in Ollama. Many of you are probably wondering, \"So what's the situation now, six months later?\" [...] One more axis has emerged: NVIDIA. Nemotron 3 takes the approach of publishing even training data a",
+      "tool": "web_search"
+    },
+    {
+      "url": "https://www.kdnuggets.com/5-small-language-models-for-agentic-tool-calling",
+      "title": "5 Small Language Models for Agentic Tool Calling - KDnuggets",
+      "excerpt": "© 2026 Guiding Tech Media   |   About   |   Contact   |   Advertise |   Privacy   |   Terms of Service\n\n  \n\nPublished on May 14, 2026 by\n\nNo, thanks!;) [...] Here are 5 small language models that hare one important trait: they all support structured tool calling in a compact, open-weight package.\n\nBy Matthew Mayo, KDnuggets Managing Editor on May 14, 2026 in Language Models\n\n5 Small Language Models for Agentic Tool Calling\n\n## # Introduction [...] 5 Best AI Tools for Data Analysis You Should Try",
+      "tool": "web_search"
+    }
+  ]
+}

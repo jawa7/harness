@@ -1,0 +1,73 @@
+{
+  "cited_urls": [
+    "https://arxiv.org/html/2605.00737v1",
+    "https://machinelearningmastery.com/mastering-llm-tool-calling-the-complete-framework-for-connecting-models-to-the-real-world",
+    "https://medium.com/@springrod/why-you-should-use-local-models-a3fce1124c94",
+    "https://www.docker.com/blog/local-llm-tool-calling-a-practical-evaluation",
+    "https://www.jdhodges.com/blog/local-llms-on-tool-calling-2026-pt1-local-lm"
+  ],
+  "cited_sources": [
+    {
+      "url": "https://www.docker.com/blog/local-llm-tool-calling-a-practical-evaluation",
+      "title": "Tool Calling with Local LLMs: A Practical Evaluation - Docker",
+      "excerpt": "We realized we had no definite answer forthat. Local LLM models offer control, cost-efficiency, and privacy, but when it comes to structured tool use, deciding when and how to act, they can behave very differently. We decided to dig deep and test this properly. We started with manual experimentation, then built a framework to scale our testing. This blog documents that journey and shares which models ranked highest on our tool-calling leaderboard. [...] Qwen models dominate: Even the 8B version ",
+      "tool": "web_search"
+    },
+    {
+      "url": "https://www.jdhodges.com/blog/local-llms-on-tool-calling-2026-pt1-local-lm",
+      "title": "I Tested 13 Local LLMs on Tool Calling | 2026 Eval Results",
+      "excerpt": "If you’re running a local AI stack with Open WebUI, LM Studio, or any OpenAI-compatible frontend, tool calling is one of the key features that enables agentic behavior. It lets models call functions like checking weather, sending emails, or setting reminders instead of just generating text. But not every model handles it well, and the popular benchmarks don’t always reflect what you’ll get when serving models through a local inference server like LM Studio. [...] If you’ve run similar tests with",
+      "tool": "web_search"
+    },
+    {
+      "url": "https://arxiv.org/html/2605.00737v1",
+      "title": "A Framework to Assess and Optimize LLM Tool Calling",
+      "excerpt": "However, our approach has limitations. The estimators are not perfect and may introduce errors. Future works may investigate why tool calls can lead to negative utility, how tool descriptions influence both perceived and latent utility, and develop more accurate predictors and more effective controllers for tool-calling decisions. [...] Table 1 demonstrates the need for such assessments for an example task, where models can invoke a Web search tool.\nAcross different models, we see that (a) while",
+      "tool": "web_search"
+    },
+    {
+      "url": "https://machinelearningmastery.com/mastering-llm-tool-calling-the-complete-framework-for-connecting-models-to-the-real-world",
+      "title": "Mastering LLM Tool Calling: The Complete Framework for Connecting Models to the Real World - MachineLearningMastery.com",
+      "excerpt": "Tool calling is the mechanism that lets large language models invoke external functions and APIs. It bridges the gap between language generation and real-world actions. Without tools, an LLM is limited to what it learned during training. With tools, it can access current data, take actions, and integrate with your systems. [...] The goal isn’t to eliminate automation. It’s to balance automation benefits with risk management. Start with more human oversight, then gradually reduce it as you build ",
+      "tool": "web_search"
+    },
+    {
+      "url": "https://medium.com/@springrod/why-you-should-use-local-models-a3fce1124c94",
+      "title": "Why You Should Use Local Models",
+      "excerpt": "This is a mistake. It’s important to understand available model choices and their strengths and weaknesses. Mature Gen AI applications should use a mix of models for different things. Local LLMs are now very useful for many tasks, and their capabilities are growing faster than those of large closed models. Many local LLMs now offer dependable support for tool calling, which was not the case only a few months ago. Local embedding models are often the best choice, period. [...] If we refactor our ",
+      "tool": "web_search"
+    }
+  ],
+  "available_sources": [
+    {
+      "url": "https://www.docker.com/blog/local-llm-tool-calling-a-practical-evaluation",
+      "title": "Tool Calling with Local LLMs: A Practical Evaluation - Docker",
+      "excerpt": "We realized we had no definite answer forthat. Local LLM models offer control, cost-efficiency, and privacy, but when it comes to structured tool use, deciding when and how to act, they can behave very differently. We decided to dig deep and test this properly. We started with manual experimentation, then built a framework to scale our testing. This blog documents that journey and shares which models ranked highest on our tool-calling leaderboard. [...] Qwen models dominate: Even the 8B version ",
+      "tool": "web_search"
+    },
+    {
+      "url": "https://www.jdhodges.com/blog/local-llms-on-tool-calling-2026-pt1-local-lm",
+      "title": "I Tested 13 Local LLMs on Tool Calling | 2026 Eval Results",
+      "excerpt": "If you’re running a local AI stack with Open WebUI, LM Studio, or any OpenAI-compatible frontend, tool calling is one of the key features that enables agentic behavior. It lets models call functions like checking weather, sending emails, or setting reminders instead of just generating text. But not every model handles it well, and the popular benchmarks don’t always reflect what you’ll get when serving models through a local inference server like LM Studio. [...] If you’ve run similar tests with",
+      "tool": "web_search"
+    },
+    {
+      "url": "https://arxiv.org/html/2605.00737v1",
+      "title": "A Framework to Assess and Optimize LLM Tool Calling",
+      "excerpt": "However, our approach has limitations. The estimators are not perfect and may introduce errors. Future works may investigate why tool calls can lead to negative utility, how tool descriptions influence both perceived and latent utility, and develop more accurate predictors and more effective controllers for tool-calling decisions. [...] Table 1 demonstrates the need for such assessments for an example task, where models can invoke a Web search tool.\nAcross different models, we see that (a) while",
+      "tool": "web_search"
+    },
+    {
+      "url": "https://machinelearningmastery.com/mastering-llm-tool-calling-the-complete-framework-for-connecting-models-to-the-real-world",
+      "title": "Mastering LLM Tool Calling: The Complete Framework for Connecting Models to the Real World - MachineLearningMastery.com",
+      "excerpt": "Tool calling is the mechanism that lets large language models invoke external functions and APIs. It bridges the gap between language generation and real-world actions. Without tools, an LLM is limited to what it learned during training. With tools, it can access current data, take actions, and integrate with your systems. [...] The goal isn’t to eliminate automation. It’s to balance automation benefits with risk management. Start with more human oversight, then gradually reduce it as you build ",
+      "tool": "web_search"
+    },
+    {
+      "url": "https://medium.com/@springrod/why-you-should-use-local-models-a3fce1124c94",
+      "title": "Why You Should Use Local Models",
+      "excerpt": "This is a mistake. It’s important to understand available model choices and their strengths and weaknesses. Mature Gen AI applications should use a mix of models for different things. Local LLMs are now very useful for many tasks, and their capabilities are growing faster than those of large closed models. Many local LLMs now offer dependable support for tool calling, which was not the case only a few months ago. Local embedding models are often the best choice, period. [...] If we refactor our ",
+      "tool": "web_search"
+    }
+  ]
+}

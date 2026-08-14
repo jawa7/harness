@@ -1,0 +1,15 @@
+{
+  "relevance": 7,
+  "completeness": 5,
+  "sources": 5,
+  "limitations": 7,
+  "dimensions": [
+    "relevance",
+    "completeness",
+    "sources",
+    "limitations"
+  ],
+  "average": 6.0,
+  "rationale": "Relevance: The answer attempts to list 10 Czech sports articles but lacks specific dates and URLs for most entries. Completeness: Fails to meet the requirement of 10 distinct articles with full details; only 4 URLs are provided. Sources: Most cited URLs are incomplete or duplicated, lacking verifiable Czech-language sources. Limitations: Acknowledges gaps in data (e.g., implied dates) but does not clarify how many articles were actually retrieved or verified.",
+  "passed": false
+}

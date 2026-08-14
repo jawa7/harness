@@ -1,0 +1,65 @@
+{
+  "cited_urls": [
+    "https://www.cnn.com/sport",
+    "https://www.flashscore.com/",
+    "https://www.flashscore.com/news/czech-republic/6LHwBDGUnZdPEiqF",
+    "https://www.newsnow.com/",
+    "https://www.newsnow.com/us/World/Europe/Eastern+Europe/Czech+Republic/Sport"
+  ],
+  "cited_sources": [
+    {
+      "url": "https://www.newsnow.com/us/World/Europe/Eastern+Europe/Czech+Republic/Sport",
+      "title": "Czech Sport news | Breaking News & Top Stories | NewsNow",
+      "excerpt": "Czech Sport news | Breaking News & Top Stories | NewsNow\nSearch\nFilter\nSearch\nSearch\nTake a tour\nFeedback\nSign in\nSettings\nSkip to main content\nNewsNow UK\nNewsNow US\nNewsNow Nigeria\nNewsNow România\nNewsNow Italia\nHome\nHot Topics\nUS\nPolitics\nWorld\nSports\nBusiness\nCrypto\nEntertainment\nLifestyle\nAI\nTech\nScience\nMy NewsNow\nAdvertisement\nCzech Sport\nWorld\nEurope\nEastern Europe\nCzech Republic\nSport\nTop\nStories\nLatest\nNews\nMost Read\nTimothy Ouma: The story so far...\nCharlton Athletic - Official Site\n11:57\nCharlton Athletic\nEFL Championship\nTimothy Ouma\nCharlton sign Kenya midfielder Ouma\nBBC\n11:48\nCharlton Athletic\nEFL Championship\nTimothy Ouma\nLyon vs Sparta Prague - prediction, Team News, lineups\nSports Mole\n17:08\nLyon\nLigue 1\nSoccer\nLyon 3-0 Sparta Prague (4-2 agg)\nbeIN SPORTS\n17:14\nLyon\nLigue 1\nSoccer\nCzech goalie Horníček joins Newcastle in €30 million transfer\nRadio Prague\n08:08\nLukas Hornicek\nNewcastle\nPremier League\nNewcastle sign goalkeeper Lukas Hornicek as post-Eddie Howe era begins\nThe Independent\n06:29\nLukas Hornicek\nNewcastle\nPremier League\nAnother Russian-born player changes nationality as Roland Garros junior champion joins Czech…\nTennisUpToDate\n20:36\nFrench Open\nRussian Sport\nTennis\n\"You can get away with making bad decisions because it doesn’t really hurt you\": Poisoned…\nTennisUpToDate\n17:34\nFrench Open\nRussian Sport\nTennis\nCroatia and Portugal to fight for President's Cup; Mexico seal maiden win a…\nInternational Handball Federation\n13:01\nTunisian Sport\nCroatian Sport\nPortuguese Sport\nCzechia and Croatia open President's Cup with wins; Portugal win group at R…\nIn",
+      "tool": "web_search",
+      "fetch_id": "fetch-20260812T160431Z-2fa5bb",
+      "cache_path": "evals/runs/20260812T154646Z/qwen_qwen3-8b/live-czech-sports-10/run-03/attempt-01/fetches/fetch-20260812T160431Z-2fa5bb/text.txt"
+    },
+    {
+      "url": "https://www.flashscore.com/news/czech-republic/6LHwBDGUnZdPEiqF",
+      "title": "Czech Republic News | Football - Flashscore News",
+      "excerpt": "### Patrik Schick calls time on international career after Czechs' World Cup elimination\n\n### Fuelled by anger, South Africa take surprise place in World Cup round of 32\n\n### At least 17 injured as car ploughs into crowd after Mexico's win over Czechs\n\n### Czech boss Koubek blames travel fatigue and 'stupid mistakes' for World Cup exit\n\n### Javier Aguirre praises Mexico's character after dominant win over the Czech Republic\n\n### World Cup LIVE: Mexico and South Africa qualify for Round of 32 [..",
+      "tool": "web_search"
+    },
+    {
+      "url": "https://www.cnn.com/sport",
+      "title": "Latest sports news, videos, interviews and comment",
+      "excerpt": "## Tennis\n\n Ben Whitley/PA Images/Getty Images World No. 1 Jannik Sinner defends Wimbledon title with win over Alexander Zverev\n Cameron Spencer/Getty Images Linda Nosková conquers Wimbledon for first grand slam title in all-Czech final\n Tim Clayton/Corbis Sport/Getty Images Naomi Osaka overpowers top-ranked Aryna Sabalenka to reach Wimbledon quarterfinals\n Andrew Couldridge/Reuters Serena Williams withdraws from doubles match with sister Venus at Wimbledon due to injury\n\n## Golf\n\n • Analysis [.",
+      "tool": "web_search"
+    }
+  ],
+  "available_sources": [
+    {
+      "url": "https://www.newsnow.com/us/World/Europe/Eastern+Europe/Czech+Republic/Sport",
+      "title": "Czech Sport news | Breaking News & Top Stories | NewsNow",
+      "excerpt": "Czech Sport news | Breaking News & Top Stories | NewsNow\nSearch\nFilter\nSearch\nSearch\nTake a tour\nFeedback\nSign in\nSettings\nSkip to main content\nNewsNow UK\nNewsNow US\nNewsNow Nigeria\nNewsNow România\nNewsNow Italia\nHome\nHot Topics\nUS\nPolitics\nWorld\nSports\nBusiness\nCrypto\nEntertainment\nLifestyle\nAI\nTech\nScience\nMy NewsNow\nAdvertisement\nCzech Sport\nWorld\nEurope\nEastern Europe\nCzech Republic\nSport\nTop\nStories\nLatest\nNews\nMost Read\nTimothy Ouma: The story so far...\nCharlton Athletic - Official Site\n11:57\nCharlton Athletic\nEFL Championship\nTimothy Ouma\nCharlton sign Kenya midfielder Ouma\nBBC\n11:48\nCharlton Athletic\nEFL Championship\nTimothy Ouma\nLyon vs Sparta Prague - prediction, Team News, lineups\nSports Mole\n17:08\nLyon\nLigue 1\nSoccer\nLyon 3-0 Sparta Prague (4-2 agg)\nbeIN SPORTS\n17:14\nLyon\nLigue 1\nSoccer\nCzech goalie Horníček joins Newcastle in €30 million transfer\nRadio Prague\n08:08\nLukas Hornicek\nNewcastle\nPremier League\nNewcastle sign goalkeeper Lukas Hornicek as post-Eddie Howe era begins\nThe Independent\n06:29\nLukas Hornicek\nNewcastle\nPremier League\nAnother Russian-born player changes nationality as Roland Garros junior champion joins Czech…\nTennisUpToDate\n20:36\nFrench Open\nRussian Sport\nTennis\n\"You can get away with making bad decisions because it doesn’t really hurt you\": Poisoned…\nTennisUpToDate\n17:34\nFrench Open\nRussian Sport\nTennis\nCroatia and Portugal to fight for President's Cup; Mexico seal maiden win a…\nInternational Handball Federation\n13:01\nTunisian Sport\nCroatian Sport\nPortuguese Sport\nCzechia and Croatia open President's Cup with wins; Portugal win group at R…\nIn",
+      "tool": "web_search",
+      "fetch_id": "fetch-20260812T160431Z-2fa5bb",
+      "cache_path": "evals/runs/20260812T154646Z/qwen_qwen3-8b/live-czech-sports-10/run-03/attempt-01/fetches/fetch-20260812T160431Z-2fa5bb/text.txt"
+    },
+    {
+      "url": "https://english.radio.cz/sports-news-8151342",
+      "title": "Sports News | Radio Prague International",
+      "excerpt": "Czech soccer manager Jarolím under fire after poor Nations League start; javelin pair represent Europe in Continental Cup; climber Ondra misses out on third world championships gold; and Czech tennis pairing fail in Grand Slam hat trick bid.\n\n## Jarolím under fire after Ukraine defeat\n\nCzech Republic - Ukraine,  photo: ČTK/Luděk Peřina \n\nCzech Republic - Ukraine, photo: ČTK/Luděk Peřina [...] The phenomenal Czech climber Adam Ondra has failed to make it a hat trick of gold medals at the Climbing",
+      "tool": "web_search"
+    },
+    {
+      "url": "https://www.expats.cz/czech-news/tag/czech-sports",
+      "title": "Czech Sports articles for Prague and the Czech Republic - Expats.cz",
+      "excerpt": "### GALLERY: Human pyramids, mass gymnastics – Sokol in photos\n\nCulture / Daily News\n\n-\n\nExpats.cz Staff\n\nHundreds of thousands of spectators will descend on Prague as the Sokol mass sports festival kicks off on June 30.\n\nCzechia tops Switzerland 2-0 to win 2024 Ice Hockey World Championships\n\n### Czechia tops Switzerland 2-0 to win 2024 Ice Hockey World Championships\n\nDaily News\n\n-\n\nJason Pirodsky [...] 2024 Ice Hockey World Championship in Czechia: Everything you need to know\n\n### 2024 Ice Hoc",
+      "tool": "web_search"
+    },
+    {
+      "url": "https://www.flashscore.com/news/czech-republic/6LHwBDGUnZdPEiqF",
+      "title": "Czech Republic News | Football - Flashscore News",
+      "excerpt": "### Patrik Schick calls time on international career after Czechs' World Cup elimination\n\n### Fuelled by anger, South Africa take surprise place in World Cup round of 32\n\n### At least 17 injured as car ploughs into crowd after Mexico's win over Czechs\n\n### Czech boss Koubek blames travel fatigue and 'stupid mistakes' for World Cup exit\n\n### Javier Aguirre praises Mexico's character after dominant win over the Czech Republic\n\n### World Cup LIVE: Mexico and South Africa qualify for Round of 32 [..",
+      "tool": "web_search"
+    },
+    {
+      "url": "https://www.cnn.com/sport",
+      "title": "Latest sports news, videos, interviews and comment",
+      "excerpt": "## Tennis\n\n Ben Whitley/PA Images/Getty Images World No. 1 Jannik Sinner defends Wimbledon title with win over Alexander Zverev\n Cameron Spencer/Getty Images Linda Nosková conquers Wimbledon for first grand slam title in all-Czech final\n Tim Clayton/Corbis Sport/Getty Images Naomi Osaka overpowers top-ranked Aryna Sabalenka to reach Wimbledon quarterfinals\n Andrew Couldridge/Reuters Serena Williams withdraws from doubles match with sister Venus at Wimbledon due to injury\n\n## Golf\n\n • Analysis [.",
+      "tool": "web_search"
+    }
+  ]
+}

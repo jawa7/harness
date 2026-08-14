@@ -1,0 +1,2948 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>SportWin » bav se sportem</title>
+    <meta name="description" content="Přinášíme aktuální zprávy ze světa sportu." />
+	<meta name="robots" content="max-image-preview:large" />
+	 
+	
+
+	<!-- favicons -->
+	<link rel="apple-touch-icon" sizes="57x57" href="/favicon/apple-icon-57x57.png" />
+	<link rel="apple-touch-icon" sizes="60x60" href="/favicon/apple-icon-60x60.png" />
+	<link rel="apple-touch-icon" sizes="72x72" href="/favicon/apple-icon-72x72.png" />
+	<link rel="apple-touch-icon" sizes="76x76" href="/favicon/apple-icon-76x76.png" />
+	<link rel="apple-touch-icon" sizes="114x114" href="/favicon/apple-icon-114x114.png" />
+	<link rel="apple-touch-icon" sizes="120x120" href="/favicon/apple-icon-120x120.png" />
+	<link rel="apple-touch-icon" sizes="144x144" href="/favicon/apple-icon-144x144.png" />
+	<link rel="apple-touch-icon" sizes="152x152" href="/favicon/apple-icon-152x152.png" />
+	<link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-icon-180x180.png" />
+	<link rel="icon" type="image/png" sizes="192x192"  href="/favicon/android-icon-192x192.png" />
+	<link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png" />
+	<link rel="icon" type="image/png" sizes="96x96" href="/favicon/favicon-96x96.png" />
+	<link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png" />
+	<link rel="manifest" href="/favicon/manifest.json" />
+	<meta name="msapplication-TileColor" content="#ffffff" />
+	<meta name="msapplication-TileImage" content="/favicon/ms-icon-144x144.png" />
+	<meta name="theme-color" content="#ffffff" />
+
+	<!-- google fonts -->
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,500;0,700;1,300;1,500&family=Poppins:ital,wght@0,300;0,500;0,700;1,300;1,400&display=swap" rel="stylesheet" />
+	<link href="/themes/sportwin/css/styles.css?v=2026-08-03" rel="stylesheet" />
+
+	<!-- Matomo -->
+	<script>
+	  var _paq = window._paq = window._paq || [];
+	  /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+	  _paq.push(['trackPageView']);
+	  _paq.push(['enableLinkTracking']);
+	  (function() { 
+	    var u="//monitor.swork.cz/";
+	    _paq.push(['setTrackerUrl', u+'matomo.php']);
+	    _paq.push(['setSiteId', '6']);
+	    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+	    g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+	  })();
+	</script>
+	<!-- End Matomo Code -->
+	
+	<!-- Google tag (gtag.js) -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-52492997-1"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){ dataLayer.push(arguments); }
+	  gtag('js', new Date());
+	  gtag('config', 'UA-52492997-1');
+	</script>
+
+	<script src="https://ssp.seznam.cz/static/js/ssp.js"></script>
+     
+    <!-- #269998 - skryto
+    <script async src="https://cdn.performax.cz/yi/adsbypx/px_autoads.js?aab=ulite"></script>
+    <link rel="stylesheet" href="https://cdn.performax.cz/yi/adsbypx/px_autoads.css"/>   
+ 	-->
+ 	
+</head>
+
+<body class="body-box bg-news-image">
+
+ 	<div id="adsadd"></div>
+	
+    <!-- Header news -->
+    <header>
+    	<div class="leaderboard ">
+    		<div class="container">
+    			<div class="row">
+    				<div id="seznam-zone-pc-leaderboard" class="" style="    margin: 10px auto;    /* min-height: 210px;*/ width: 100%;"></div>
+    			</div>
+    		</div>
+    	</div>
+        <!-- Navbar  -->
+        <div class="topbar d-none d-sm-block">
+    	<div class="container ">
+        <div class="row">
+            <div class="col-sm-12 col-md-5">
+                <div class="topbar-left">
+                    <div class="topbar-text">
+                        středa, 12. 08. 2026
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-7">
+                <div class="list-unstyled topbar-right">
+                    <ul class="topbar-link">
+                    </ul>
+                    <ul class="topbar-sosmed seznam-nozone">
+                        <li>
+                            <a href="https://www.facebook.com/www.SportWin.cz" target="_blank"><i class="fa fa-facebook"></i></a>
+                            <a href="https://x.com/SportwinCZbavse" target="_blank" class="ml-10" style="    margin-left: 15px;"><img src="/themes/sportwin/images/x-twitter-brands.svg" width="18" style="    margin-top: -3px;" /></a>
+                            <a href="https://www.instagram.com/sport.win.cz/" target="_blank" class="ml-10" style="    margin-left: 15px;"><i class="fa fa-instagram"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- logo -->
+<div class="bg-white ">
+    <div class="container">
+        <div class="row">
+            <div class=" col-sm-12 col-md-4 my-auto d-none d-sm-block ">
+                <figure class="mb-0 mt-3 mb-3">
+                    <a href="/">
+                        <img src="/themes/sportwin/images/logo-sportwin@2x.png" alt="" class="img-fluid logo" style="    max-width: 300px;    padding: 10px 0px;" />
+                    </a>
+                </figure>
+            </div>
+            <div class="col-md-8 seznam-nozone" id="seznam-zone-pc-small-leaderboard" style="    margin: 10px auto;     max-height: 100px; width: 100%;">
+            	<!-- <a href="https://www.bvchlazeni.cz/" target="_blank" >
+                <figure class="mt-3 text-right ">
+                        <img src="/ads/BV_chlazeni_300x300.png" alt="" class="img-fluid">
+                </figure>
+			    </a>  -->
+            </div>
+        </div>
+    </div>
+</div>
+<!-- end logo -->
+
+<!-- navbar -->
+<div class="navigation-wrap navigation-shadow bg-white">
+    <nav class="navbar navbar-hover navbar-expand-lg navbar-soft  ">
+        <div class="container">
+            <div class="offcanvas-header">
+                <div data-toggle="modal" data-target="#modal_aside_right" class="btn-md">
+                    <span class="navbar-toggler-icon"></span>
+                </div>
+            </div>
+            <figure class="mb-0 mx-auto d-block d-sm-none sticky-logo">
+                <a href="/">
+                    <img src="/themes/sportwin/images/logo-sportwin@2x.png" alt="" class="img-fluid logo" style="       height: 40px;    margin-right: 40px;" />
+                </a>
+            </figure>
+            
+            <style>
+
+            	.navbar.fixed-top .sticky-logo {
+					    display: block !important;
+            	}
+            
+            </style>
+            <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main_nav99">
+                <span class="navbar-toggler-icon"></span>
+            </button> -->
+            <div class="collapse navbar-collapse justify-content-between" id="main_nav99">
+                <ul class="navbar-nav">
+                    <li class="nav-item ">
+                        <a class="nav-link active " href="/" >Domů</a>
+                    </li>
+                    
+
+                    <li class="nav-item dropdown has-megamenu">
+                        <a class="nav-link" href="/rubrika/fotbal"> Fotbal </a>
+                        <div class="dropdown-menu animate fade-down megamenu mx-auto" role="menu">
+                            <div class="container wrap__mobile-megamenu">
+                                <div class="col-megamenu">
+                                    <h5 class="title">Poslední zprávy z fotbalu</h5>
+                                    <hr />
+                                    <!-- Popular news carousel -->
+                                    <div class="popular__news-header-carousel">
+
+                                        <div class="top__news__slider">
+                                            <div class="item">
+                                                <!-- Post Article -->
+													<div class="article__entry">
+													    <div class="article__image">
+													        <a href="/clanek/60245-O-budoucnosti-plzenskeho-kouce-rozhodne-majitel-Strnad-Spekuluje-se-hned-o-trech-nastupcich.html">
+													            <img src="/files/thumbnails/2026089-07-38-03-hysky-plzen-crop-500-400-1786253883.jpg" width="500" height="400" class="scale-with-grid" alt="O budoucnosti plzeňského kouče rozhodne majitel Strnad. Spekuluje se hned o třech nástupcích" />
+													        </a>
+													    </div>
+													    <div class="article__content">
+													        <ul class="list-inline">
+													            <li class="list-inline-item">
+													                <span class="text-primary">
+													                    Petr Zajíc
+													                </span>,
+													            </li>
+													
+													            <li class="list-inline-item">
+													                <span>
+													                   12. 08. 2026
+													                </span>
+													            </li>
+													        </ul>
+													        <h5>
+													            <a href="/clanek/60245-O-budoucnosti-plzenskeho-kouce-rozhodne-majitel-Strnad-Spekuluje-se-hned-o-trech-nastupcich.html">
+													                O budoucnosti plzeňského kouče rozhodne majitel Strnad. Spekuluje se hned o třech nástupcích
+													            </a>
+													        </h5>
+													    </div>
+													</div>
+                                            </div>
+                                            <div class="item">
+                                                <!-- Post Article -->
+													<div class="article__entry">
+													    <div class="article__image">
+													        <a href="/clanek/60241-Zatleskali-kotli-a-odesli-Spartane-po-zapase-hledali-slova-pro-vecer-ktery-se-zlomil-za-ctrnact-minut.html">
+													            <img src="/files/thumbnails/20260812-00-41-12-sparta-lyon-crop-500-400-1786488072.jpg" width="500" height="400" class="scale-with-grid" alt="Zatleskali kotli a odešli. Sparťané po zápase hledali slova pro večer, který se zlomil za čtrnáct minut" />
+													        </a>
+													    </div>
+													    <div class="article__content">
+													        <ul class="list-inline">
+													            <li class="list-inline-item">
+													                <span class="text-primary">
+													                    Petr Zajíc
+													                </span>,
+													            </li>
+													
+													            <li class="list-inline-item">
+													                <span>
+													                   12. 08. 2026
+													                </span>
+													            </li>
+													        </ul>
+													        <h5>
+													            <a href="/clanek/60241-Zatleskali-kotli-a-odesli-Spartane-po-zapase-hledali-slova-pro-vecer-ktery-se-zlomil-za-ctrnact-minut.html">
+													                Zatleskali kotli a odešli. Sparťané po zápase hledali slova pro večer, který se zlomil za čtrnáct minut
+													            </a>
+													        </h5>
+													    </div>
+													</div>
+                                            </div>
+                                            <div class="item">
+                                                <!-- Post Article -->
+													<div class="article__entry">
+													    <div class="article__image">
+													        <a href="/clanek/60240-Vylouceni-Sevinskeho-rozdelilo-publikum-Cesti-fanousci-kritizovali-samotneho-obrance-francouzske-komentare-mirily-jinam.html">
+													            <img src="/files/thumbnails/20260726-09-45-27-profimedia-1098720465-crop-500-400-1785051927.jpg" width="500" height="400" class="scale-with-grid" alt="Vyloučení Ševínského rozdělilo publikum. Čeští fanoušci kritizovali samotného obránce, francouzské komentáře mířily jinam" />
+													        </a>
+													    </div>
+													    <div class="article__content">
+													        <ul class="list-inline">
+													            <li class="list-inline-item">
+													                <span class="text-primary">
+													                    Petr Zajíc
+													                </span>,
+													            </li>
+													
+													            <li class="list-inline-item">
+													                <span>
+													                   12. 08. 2026
+													                </span>
+													            </li>
+													        </ul>
+													        <h5>
+													            <a href="/clanek/60240-Vylouceni-Sevinskeho-rozdelilo-publikum-Cesti-fanousci-kritizovali-samotneho-obrance-francouzske-komentare-mirily-jinam.html">
+													                Vyloučení Ševínského rozdělilo publikum. Čeští fanoušci kritizovali samotného obránce, francouzské komentáře mířily jinam
+													            </a>
+													        </h5>
+													    </div>
+													</div>
+                                            </div>
+                                            <div class="item">
+                                                <!-- Post Article -->
+													<div class="article__entry">
+													    <div class="article__image">
+													        <a href="/clanek/60239-Naskok-z-Letne-vydrzel-dvacet-minut-Pak-prisla-chyba-v-rozehravce-a-vsechno-se-otocilo.html">
+													            <img src="/files/thumbnails/2026089-08-42-19-profimedia-1121413535-crop-500-400-1786257739.jpg" width="500" height="400" class="scale-with-grid" alt="Náskok z Letné vydržel dvacet minut. Pak přišla chyba v rozehrávce a všechno se otočilo" />
+													        </a>
+													    </div>
+													    <div class="article__content">
+													        <ul class="list-inline">
+													            <li class="list-inline-item">
+													                <span class="text-primary">
+													                    Petr Zajíc
+													                </span>,
+													            </li>
+													
+													            <li class="list-inline-item">
+													                <span>
+													                   12. 08. 2026
+													                </span>
+													            </li>
+													        </ul>
+													        <h5>
+													            <a href="/clanek/60239-Naskok-z-Letne-vydrzel-dvacet-minut-Pak-prisla-chyba-v-rozehravce-a-vsechno-se-otocilo.html">
+													                Náskok z Letné vydržel dvacet minut. Pak přišla chyba v rozehrávce a všechno se otočilo
+													            </a>
+													        </h5>
+													    </div>
+													</div>
+                                            </div>
+                                            <div class="item">
+                                                <!-- Post Article -->
+													<div class="article__entry">
+													    <div class="article__image">
+													        <a href="/clanek/60238-Arteta-hovori-o-nezdolne-dynastii-Arsenalu-jenze-posledni-dva-zapasy-prohral-A-za-par-dni-ho-cekaji-City.html">
+													            <img src="/files/thumbnails/20240825-13-28-52-arteta-crop-500-400-1724585332.png" width="500" height="400" class="scale-with-grid" alt="Arteta hovoří o nezdolné dynastii Arsenalu, jenže poslední dva zápasy prohrál. A za pár dní ho čekají City" />
+													        </a>
+													    </div>
+													    <div class="article__content">
+													        <ul class="list-inline">
+													            <li class="list-inline-item">
+													                <span class="text-primary">
+													                    Petr Zajíc
+													                </span>,
+													            </li>
+													
+													            <li class="list-inline-item">
+													                <span>
+													                   12. 08. 2026
+													                </span>
+													            </li>
+													        </ul>
+													        <h5>
+													            <a href="/clanek/60238-Arteta-hovori-o-nezdolne-dynastii-Arsenalu-jenze-posledni-dva-zapasy-prohral-A-za-par-dni-ho-cekaji-City.html">
+													                Arteta hovoří o nezdolné dynastii Arsenalu, jenže poslední dva zápasy prohrál. A za pár dní ho čekají City
+													            </a>
+													        </h5>
+													    </div>
+													</div>
+                                            </div>
+                                            <div class="item">
+                                                <!-- Post Article -->
+													<div class="article__entry">
+													    <div class="article__image">
+													        <a href="/clanek/60234-Sestimistna-castka-za-pomer-se-zenou-Platini-si-ho-mel-zavolat-na-koberecek-To-co-nasledovalo-resi-UEFA-po-deseti-letech-znovu.html">
+													            <img src="/files/thumbnails/20251230-10-07-57-profimedia-1062151611-crop-500-400-1767085677.jpg" width="500" height="400" class="scale-with-grid" alt="Šestimístná částka za poměr se ženou. Platini si ho měl zavolat na kobereček. To, co následovalo, řeší UEFA po deseti letech znovu" />
+													        </a>
+													    </div>
+													    <div class="article__content">
+													        <ul class="list-inline">
+													            <li class="list-inline-item">
+													                <span class="text-primary">
+													                    Petr Zajíc
+													                </span>,
+													            </li>
+													
+													            <li class="list-inline-item">
+													                <span>
+													                   11. 08. 2026
+													                </span>
+													            </li>
+													        </ul>
+													        <h5>
+													            <a href="/clanek/60234-Sestimistna-castka-za-pomer-se-zenou-Platini-si-ho-mel-zavolat-na-koberecek-To-co-nasledovalo-resi-UEFA-po-deseti-letech-znovu.html">
+													                Šestimístná částka za poměr se ženou. Platini si ho měl zavolat na kobereček. To, co následovalo, řeší UEFA po deseti letech znovu
+													            </a>
+													        </h5>
+													    </div>
+													</div>
+                                            </div>
+                                            
+                                        </div>
+
+                                    </div>
+                                </div> <!-- col-megamenu.// -->
+                            </div>
+                        </div> <!-- dropdown-mega-menu.// -->
+                    </li>
+					
+                    
+                    <li class="nav-item dropdown has-megamenu">
+                        <a class="nav-link " href="/rubrika/hokej" > Hokej </a>
+                        <div class="dropdown-menu animate fade-down megamenu mx-auto" role="menu">
+                            <div class="container wrap__mobile-megamenu">
+                                <div class="col-megamenu">
+                                    <h5 class="title">Poslední zprávy z hokeje</h5>
+                                    <hr />
+                                    <!-- Popular news carousel -->
+                                    <div class="popular__news-header-carousel">
+
+                                        <div class="top__news__slider">
+                                            <div class="item">
+                                                <!-- Post Article -->
+													<div class="article__entry">
+													    <div class="article__image">
+													        <a href="/clanek/60237-Sest-telefonatu-sest-odmitnuti-A-pak-si-v-Buffalu-rekli-ze-cesky-talent-na-lede-vypada-jako-Oveckin.html">
+													            <img src="/files/thumbnails/2024105-20-40-13-kulich-crop-500-400-1728153613.jpg" width="500" height="400" class="scale-with-grid" alt="Šest hovorů, šest odmítnutí. A pak si v Buffalu řekli, že český talent na ledě vypadá jako Ovečkin" />
+													        </a>
+													    </div>
+													    <div class="article__content">
+													        <ul class="list-inline">
+													            <li class="list-inline-item">
+													                <span class="text-primary">
+													                    Petr Zajíc
+													                </span>,
+													            </li>
+													
+													            <li class="list-inline-item">
+													                <span>
+													                   11. 08. 2026
+													                </span>
+													            </li>
+													        </ul>
+													        <h5>
+													            <a href="/clanek/60237-Sest-telefonatu-sest-odmitnuti-A-pak-si-v-Buffalu-rekli-ze-cesky-talent-na-lede-vypada-jako-Oveckin.html">
+													                Šest hovorů, šest odmítnutí. A pak si v Buffalu řekli, že český talent na ledě vypadá jako Ovečkin
+													            </a>
+													        </h5>
+													    </div>
+													</div>
+                                            </div>
+                                            <div class="item">
+                                                <!-- Post Article -->
+													<div class="article__entry">
+													    <div class="article__image">
+													        <a href="/clanek/60232-Nemeli-jsme-vubec-zadny-prostor-Bowman-popsal-co-Edmonton-dva-roky-nemohl-udelat-i-kdyz-chtel.html">
+													            <img src="/files/thumbnails/20250925-09-10-16-oilers-crop-500-400-1758784216.jpg" width="500" height="400" class="scale-with-grid" alt='„Neměli jsme vůbec žádný prostor." Bowman popsal, co Edmonton dva roky nemohl udělat, i když chtěl' />
+													        </a>
+													    </div>
+													    <div class="article__content">
+													        <ul class="list-inline">
+													            <li class="list-inline-item">
+													                <span class="text-primary">
+													                    Petr Zajíc
+													                </span>,
+													            </li>
+													
+													            <li class="list-inline-item">
+													                <span>
+													                   11. 08. 2026
+													                </span>
+													            </li>
+													        </ul>
+													        <h5>
+													            <a href="/clanek/60232-Nemeli-jsme-vubec-zadny-prostor-Bowman-popsal-co-Edmonton-dva-roky-nemohl-udelat-i-kdyz-chtel.html">
+													                „Neměli jsme vůbec žádný prostor." Bowman popsal, co Edmonton dva roky nemohl udělat, i když chtěl
+													            </a>
+													        </h5>
+													    </div>
+													</div>
+                                            </div>
+                                            <div class="item">
+                                                <!-- Post Article -->
+													<div class="article__entry">
+													    <div class="article__image">
+													        <a href="/clanek/60217-Oveckin-uz-planuje-odchod-z-Ameriky-Pred-navratem-do-Moskvy-muze-Gretzkymu-sebrat-posledni-velky-rekord.html">
+													            <img src="/files/thumbnails/20260810-10-19-17-ovce-crop-500-400-1786349957.jpg" width="500" height="400" class="scale-with-grid" alt="Ovečkin už plánuje odchod z Ameriky. Před návratem do Moskvy může Gretzkymu sebrat poslední velký rekord" />
+													        </a>
+													    </div>
+													    <div class="article__content">
+													        <ul class="list-inline">
+													            <li class="list-inline-item">
+													                <span class="text-primary">
+													                    Jan Matas
+													                </span>,
+													            </li>
+													
+													            <li class="list-inline-item">
+													                <span>
+													                   11. 08. 2026
+													                </span>
+													            </li>
+													        </ul>
+													        <h5>
+													            <a href="/clanek/60217-Oveckin-uz-planuje-odchod-z-Ameriky-Pred-navratem-do-Moskvy-muze-Gretzkymu-sebrat-posledni-velky-rekord.html">
+													                Ovečkin už plánuje odchod z Ameriky. Před návratem do Moskvy může Gretzkymu sebrat poslední velký rekord
+													            </a>
+													        </h5>
+													    </div>
+													</div>
+                                            </div>
+                                            <div class="item">
+                                                <!-- Post Article -->
+													<div class="article__entry">
+													    <div class="article__image">
+													        <a href="/clanek/60184-Prosli-jsme-cely-zebricek-NHL-odshora-dolu-Prvni-Cech-se-objevil-az-v-seste-kategorii.html">
+													            <img src="/files/thumbnails/20240518-10-20-02-zacha-crop-500-400-1716020402.png" width="500" height="400" class="scale-with-grid" alt="Prošli jsme celý žebříček NHL odshora dolů. První Čech se objevil až v šesté kategorii" />
+													        </a>
+													    </div>
+													    <div class="article__content">
+													        <ul class="list-inline">
+													            <li class="list-inline-item">
+													                <span class="text-primary">
+													                    Petr Zajíc
+													                </span>,
+													            </li>
+													
+													            <li class="list-inline-item">
+													                <span>
+													                   08. 08. 2026
+													                </span>
+													            </li>
+													        </ul>
+													        <h5>
+													            <a href="/clanek/60184-Prosli-jsme-cely-zebricek-NHL-odshora-dolu-Prvni-Cech-se-objevil-az-v-seste-kategorii.html">
+													                Prošli jsme celý žebříček NHL odshora dolů. První Čech se objevil až v šesté kategorii
+													            </a>
+													        </h5>
+													    </div>
+													</div>
+                                            </div>
+                                            <div class="item">
+                                                <!-- Post Article -->
+													<div class="article__entry">
+													    <div class="article__image">
+													        <a href="/clanek/60171-Osm-hokejistu-dva-fotbaliste-Forbes-zverejnil-seznam-nejlepe-placenych-ceskych-sportovcu.html">
+													            <img src="/files/thumbnails/20260423-09-29-26-pasta-crop-500-400-1776929366.jpg" width="500" height="400" class="scale-with-grid" alt="Osm hokejistů, dva fotbalisté. Forbes zveřejnil seznam nejlépe placených českých sportovců" />
+													        </a>
+													    </div>
+													    <div class="article__content">
+													        <ul class="list-inline">
+													            <li class="list-inline-item">
+													                <span class="text-primary">
+													                    Petr Zajíc
+													                </span>,
+													            </li>
+													
+													            <li class="list-inline-item">
+													                <span>
+													                   08. 08. 2026
+													                </span>
+													            </li>
+													        </ul>
+													        <h5>
+													            <a href="/clanek/60171-Osm-hokejistu-dva-fotbaliste-Forbes-zverejnil-seznam-nejlepe-placenych-ceskych-sportovcu.html">
+													                Osm hokejistů, dva fotbalisté. Forbes zveřejnil seznam nejlépe placených českých sportovců
+													            </a>
+													        </h5>
+													    </div>
+													</div>
+                                            </div>
+                                            <div class="item">
+                                                <!-- Post Article -->
+													<div class="article__entry">
+													    <div class="article__image">
+													        <a href="/clanek/60172-Palat-nasbiral-po-prestupu-na-Long-Island-pet-bodu-The-Athletic-ohodnotil-jeho-kontrakt-znamkou-D.html">
+													            <img src="/files/thumbnails/2026086-18-00-26-islanders-palat-crop-500-400-1786032026.jpg" width="500" height="400" class="scale-with-grid" alt="Palát nasbíral po přestupu na Long Island pět bodů, The Athletic ohodnotil jeho kontrakt známkou D+" />
+													        </a>
+													    </div>
+													    <div class="article__content">
+													        <ul class="list-inline">
+													            <li class="list-inline-item">
+													                <span class="text-primary">
+													                    Petr Zajíc
+													                </span>,
+													            </li>
+													
+													            <li class="list-inline-item">
+													                <span>
+													                   07. 08. 2026
+													                </span>
+													            </li>
+													        </ul>
+													        <h5>
+													            <a href="/clanek/60172-Palat-nasbiral-po-prestupu-na-Long-Island-pet-bodu-The-Athletic-ohodnotil-jeho-kontrakt-znamkou-D.html">
+													                Palát nasbíral po přestupu na Long Island pět bodů, The Athletic ohodnotil jeho kontrakt známkou D+
+													            </a>
+													        </h5>
+													    </div>
+													</div>
+                                            </div>
+                                            
+                                        </div>
+
+                                    </div>
+                                </div> <!-- col-megamenu.// -->
+                            </div>
+                        </div> <!-- dropdown-mega-menu.// -->
+                    </li>
+                    <li class="nav-item dropdown has-megamenu">
+                        <a class="nav-link " href="/rubrika/tenis"> Tenis </a>
+                        <div class="dropdown-menu animate fade-down megamenu mx-auto" role="menu">
+                            <div class="container wrap__mobile-megamenu">
+                                <div class="col-megamenu">
+                                    <h5 class="title">Poslední zprávy z tenisu</h5>
+                                    <hr />
+                                    <!-- Popular news carousel -->
+                                    <div class="popular__news-header-carousel">
+
+                                        <div class="top__news__slider">
+                                            <div class="item">
+                                                <!-- Post Article -->
+													<div class="article__entry">
+													    <div class="article__image">
+													        <a href="/clanek/60246-Vondrousova-tvrdi-jedno-oficialni-dokument-ITIA-druhe-Belgicanka-z-toho-ale-vini-obe-strany.html">
+													            <img src="/files/thumbnails/20260622-16-39-18-von-crop-500-400-1782139158.jpg" width="500" height="400" class="scale-with-grid" alt="Vondroušová tvrdí jedno, oficiální dokument ITIA druhé. Belgičanka z toho ale viní obě strany" />
+													        </a>
+													    </div>
+													    <div class="article__content">
+													        <ul class="list-inline">
+													            <li class="list-inline-item">
+													                <span class="text-primary">
+													                    Petr Zajíc
+													                </span>,
+													            </li>
+													
+													            <li class="list-inline-item">
+													                <span>
+													                   12. 08. 2026
+													                </span>
+													            </li>
+													        </ul>
+													        <h5>
+													            <a href="/clanek/60246-Vondrousova-tvrdi-jedno-oficialni-dokument-ITIA-druhe-Belgicanka-z-toho-ale-vini-obe-strany.html">
+													                Vondroušová tvrdí jedno, oficiální dokument ITIA druhé. Belgičanka z toho ale viní obě strany
+													            </a>
+													        </h5>
+													    </div>
+													</div>
+                                            </div>
+                                            <div class="item">
+                                                <!-- Post Article -->
+													<div class="article__entry">
+													    <div class="article__image">
+													        <a href="/clanek/60243-Nikdy-nebylo-uplne-jasne-jake-zraneni-utrpel-Alcaraz-vynecha-dalsi-turnaj-a-kolem-jeho-navratu-jsou-nove-otazniky.html">
+													            <img src="/files/thumbnails/20251117-08-25-33-alca-crop-500-400-1763364333.jpg" width="500" height="400" class="scale-with-grid" alt='„Nikdy nebylo úplně jasné, jaké zranění utrpěl." Alcaraz vynechá další turnaj a kolem jeho návratu jsou nové otazníky' />
+													        </a>
+													    </div>
+													    <div class="article__content">
+													        <ul class="list-inline">
+													            <li class="list-inline-item">
+													                <span class="text-primary">
+													                    Petr Zajíc
+													                </span>,
+													            </li>
+													
+													            <li class="list-inline-item">
+													                <span>
+													                   12. 08. 2026
+													                </span>
+													            </li>
+													        </ul>
+													        <h5>
+													            <a href="/clanek/60243-Nikdy-nebylo-uplne-jasne-jake-zraneni-utrpel-Alcaraz-vynecha-dalsi-turnaj-a-kolem-jeho-navratu-jsou-nove-otazniky.html">
+													                „Nikdy nebylo úplně jasné, jaké zranění utrpěl." Alcaraz vynechá další turnaj a kolem jeho návratu jsou nové otazníky
+													            </a>
+													        </h5>
+													    </div>
+													</div>
+                                            </div>
+                                            <div class="item">
+                                                <!-- Post Article -->
+													<div class="article__entry">
+													    <div class="article__image">
+													        <a href="/clanek/60242-Noskova-a-jeji-gesto-pro-Ukrajinu-vyvolalo-vlnu-ohlasu-Reagoval-i-olympijsky-vitez-Dominik-Hasek.html">
+													            <img src="/files/thumbnails/2026015-07-56-47-noskova-crop-500-400-1767596207.jpg" width="500" height="400" class="scale-with-grid" alt="Nosková a její gesto pro Ukrajinu vyvolalo vlnu ohlasů. Reagoval i olympijský vítěz Dominik Hašek" />
+													        </a>
+													    </div>
+													    <div class="article__content">
+													        <ul class="list-inline">
+													            <li class="list-inline-item">
+													                <span class="text-primary">
+													                    Petr Zajíc
+													                </span>,
+													            </li>
+													
+													            <li class="list-inline-item">
+													                <span>
+													                   12. 08. 2026
+													                </span>
+													            </li>
+													        </ul>
+													        <h5>
+													            <a href="/clanek/60242-Noskova-a-jeji-gesto-pro-Ukrajinu-vyvolalo-vlnu-ohlasu-Reagoval-i-olympijsky-vitez-Dominik-Hasek.html">
+													                Nosková a její gesto pro Ukrajinu vyvolalo vlnu ohlasů. Reagoval i olympijský vítěz Dominik Hašek
+													            </a>
+													        </h5>
+													    </div>
+													</div>
+                                            </div>
+                                            <div class="item">
+                                                <!-- Post Article -->
+													<div class="article__entry">
+													    <div class="article__image">
+													        <a href="/clanek/60230-Na-kurtu-sili-pocit-ze-ji-dokazi-porazit-Rusedski-popsal-co-se-za-posledni-rok-u-Sabalenkove-zmenilo.html">
+													            <img src="/files/thumbnails/20260527-21-13-43-1-crop-500-400-1779909223.jpg" width="500" height="400" class="scale-with-grid" alt='„Na kurtu sílí pocit, že ji dokáží porazit." Rusedski popsal, co se za poslední rok u Sabalenkové změnilo' />
+													        </a>
+													    </div>
+													    <div class="article__content">
+													        <ul class="list-inline">
+													            <li class="list-inline-item">
+													                <span class="text-primary">
+													                    Petr Zajíc
+													                </span>,
+													            </li>
+													
+													            <li class="list-inline-item">
+													                <span>
+													                   11. 08. 2026
+													                </span>
+													            </li>
+													        </ul>
+													        <h5>
+													            <a href="/clanek/60230-Na-kurtu-sili-pocit-ze-ji-dokazi-porazit-Rusedski-popsal-co-se-za-posledni-rok-u-Sabalenkove-zmenilo.html">
+													                „Na kurtu sílí pocit, že ji dokáží porazit." Rusedski popsal, co se za poslední rok u Sabalenkové změnilo
+													            </a>
+													        </h5>
+													    </div>
+													</div>
+                                            </div>
+                                            <div class="item">
+                                                <!-- Post Article -->
+													<div class="article__entry">
+													    <div class="article__image">
+													        <a href="/clanek/60236-Djokovic-mluvil-v-show-The-Shop-o-starnuti-vykyvech-formy-i-o-odchodu-z-tenisu-Den-velkeho-rozhodnuti-se-blizi.html">
+													            <img src="/files/thumbnails/2026057-06-32-11-djok-crop-500-400-1778128332.jpg" width="500" height="400" class="scale-with-grid" alt="Djokovič mluvil v show The Shop o stárnutí, výkyvech formy i o odchodu z tenisu. Den velkého rozhodnutí se blíží" />
+													        </a>
+													    </div>
+													    <div class="article__content">
+													        <ul class="list-inline">
+													            <li class="list-inline-item">
+													                <span class="text-primary">
+													                    Petr Zajíc
+													                </span>,
+													            </li>
+													
+													            <li class="list-inline-item">
+													                <span>
+													                   11. 08. 2026
+													                </span>
+													            </li>
+													        </ul>
+													        <h5>
+													            <a href="/clanek/60236-Djokovic-mluvil-v-show-The-Shop-o-starnuti-vykyvech-formy-i-o-odchodu-z-tenisu-Den-velkeho-rozhodnuti-se-blizi.html">
+													                Djokovič mluvil v show The Shop o stárnutí, výkyvech formy i o odchodu z tenisu. Den velkého rozhodnutí se blíží
+													            </a>
+													        </h5>
+													    </div>
+													</div>
+                                            </div>
+                                            <div class="item">
+                                                <!-- Post Article -->
+													<div class="article__entry">
+													    <div class="article__image">
+													        <a href="/clanek/60222-Sabalenkova-je-po-dalsim-nezdaru-pod-tlakem-Rybakinova-se-brzy-muze-stat-se-svetovou-jednickou.html">
+													            <img src="/files/thumbnails/20260810-12-26-26-s-crop-500-400-1786357586.jpg" width="500" height="400" class="scale-with-grid" alt="Střídání stráží po necelých dvou letech? Rybakinová se může brzy stát na úkor Sabalenkové novou světovou jedničkou" />
+													        </a>
+													    </div>
+													    <div class="article__content">
+													        <ul class="list-inline">
+													            <li class="list-inline-item">
+													                <span class="text-primary">
+													                    Jan Matas
+													                </span>,
+													            </li>
+													
+													            <li class="list-inline-item">
+													                <span>
+													                   10. 08. 2026
+													                </span>
+													            </li>
+													        </ul>
+													        <h5>
+													            <a href="/clanek/60222-Sabalenkova-je-po-dalsim-nezdaru-pod-tlakem-Rybakinova-se-brzy-muze-stat-se-svetovou-jednickou.html">
+													                Střídání stráží po necelých dvou letech? Rybakinová se může brzy stát na úkor Sabalenkové novou světovou jedničkou
+													            </a>
+													        </h5>
+													    </div>
+													</div>
+                                            </div>
+                                            
+                                        </div>
+
+                                    </div>
+                                </div> <!-- col-megamenu.// -->
+                            </div>
+                        </div> <!-- dropdown-mega-menu.// -->
+                    </li>
+          
+                    <li class="nav-item dropdown has-megamenu">
+                        <a class="nav-link " href="/rubrika/Cyklistika" > Cyklistika </a>
+                        <div class="dropdown-menu animate fade-down megamenu mx-auto" role="menu">
+                            <div class="container wrap__mobile-megamenu">
+                                <div class="col-megamenu">
+                                    <h5 class="title">Poslední zprávy z cyklistiky</h5>
+                                    <hr />
+                                    <!-- Popular news carousel -->
+                                    <div class="popular__news-header-carousel">
+
+                                        <div class="top__news__slider">
+                                            <div class="item">
+                                                <!-- Post Article -->
+													<div class="article__entry">
+													    <div class="article__image">
+													        <a href="/clanek/60247-21-milionu-Pogacar-lame-dalsi-rekord-mimo-trat-Slovinec-prekonal-Vingegaarda-o-dvacet-procent.html">
+													            <img src="/files/thumbnails/20260719-22-07-54-poga-crop-500-400-1784491674.jpeg" width="500" height="400" class="scale-with-grid" alt="21 milionů. Pogačar láme další rekord mimo trať. Slovinec překonal Vingegaarda o dvacet procent" />
+													        </a>
+													    </div>
+													    <div class="article__content">
+													        <ul class="list-inline">
+													            <li class="list-inline-item">
+													                <span class="text-primary">
+													                    Petr Zajíc
+													                </span>,
+													            </li>
+													
+													            <li class="list-inline-item">
+													                <span>
+													                   12. 08. 2026
+													                </span>
+													            </li>
+													        </ul>
+													        <h5>
+													            <a href="/clanek/60247-21-milionu-Pogacar-lame-dalsi-rekord-mimo-trat-Slovinec-prekonal-Vingegaarda-o-dvacet-procent.html">
+													                21 milionů. Pogačar láme další rekord mimo trať. Slovinec překonal Vingegaarda o dvacet procent
+													            </a>
+													        </h5>
+													    </div>
+													</div>
+                                            </div>
+                                            <div class="item">
+                                                <!-- Post Article -->
+													<div class="article__entry">
+													    <div class="article__image">
+													        <a href="/clanek/60224-Godon-pretrpel-devet-etap-Tour-se-zlomeninami-Rozsah-zraneni-zjistil-francouzsky-sampion-az-doma.html">
+													            <img src="/files/thumbnails/20260810-12-52-16-godon-crop-500-400-1786359136.jpeg" width="500" height="400" class="scale-with-grid" alt="Godon přetrpěl devět etap Tour se zlomeninami. Rozsah zranění zjistil francouzský šampion až doma" />
+													        </a>
+													    </div>
+													    <div class="article__content">
+													        <ul class="list-inline">
+													            <li class="list-inline-item">
+													                <span class="text-primary">
+													                    Jan Matas
+													                </span>,
+													            </li>
+													
+													            <li class="list-inline-item">
+													                <span>
+													                   11. 08. 2026
+													                </span>
+													            </li>
+													        </ul>
+													        <h5>
+													            <a href="/clanek/60224-Godon-pretrpel-devet-etap-Tour-se-zlomeninami-Rozsah-zraneni-zjistil-francouzsky-sampion-az-doma.html">
+													                Godon přetrpěl devět etap Tour se zlomeninami. Rozsah zranění zjistil francouzský šampion až doma
+													            </a>
+													        </h5>
+													    </div>
+													</div>
+                                            </div>
+                                            <div class="item">
+                                                <!-- Post Article -->
+													<div class="article__entry">
+													    <div class="article__image">
+													        <a href="/clanek/60208-Rival-hrdina-i-idol-Pogacar-pred-Vueltou-promluvil-o-svem-vztahu-k-Roglicovi.html">
+													            <img src="/files/thumbnails/2026089-23-12-14-pogy-crop-500-400-1786309934.jpg" width="500" height="400" class="scale-with-grid" alt="Rival, hrdina i idol. Pogačar před Vueltou promluvil o svém vztahu k Rogličovi" />
+													        </a>
+													    </div>
+													    <div class="article__content">
+													        <ul class="list-inline">
+													            <li class="list-inline-item">
+													                <span class="text-primary">
+													                    Jan Matas
+													                </span>,
+													            </li>
+													
+													            <li class="list-inline-item">
+													                <span>
+													                   10. 08. 2026
+													                </span>
+													            </li>
+													        </ul>
+													        <h5>
+													            <a href="/clanek/60208-Rival-hrdina-i-idol-Pogacar-pred-Vueltou-promluvil-o-svem-vztahu-k-Roglicovi.html">
+													                Rival, hrdina i idol. Pogačar před Vueltou promluvil o svém vztahu k Rogličovi
+													            </a>
+													        </h5>
+													    </div>
+													</div>
+                                            </div>
+                                            <div class="item">
+                                                <!-- Post Article -->
+													<div class="article__entry">
+													    <div class="article__image">
+													        <a href="/clanek/60183-Tri-jmena-za-celou-historii-Pogacar-je-jediny-zavod-od-klubu-do-ktereho-se-pul-stoleti-nikdo-nedostal.html">
+													            <img src="/files/thumbnails/2026049-15-45-40-p-crop-500-400-1775742340.jpg" width="500" height="400" class="scale-with-grid" alt="Tři jména za celou historii. Pogačar je jediný závod od klubu, do kterého se půl století nikdo nedostal" />
+													        </a>
+													    </div>
+													    <div class="article__content">
+													        <ul class="list-inline">
+													            <li class="list-inline-item">
+													                <span class="text-primary">
+													                    Petr Zajíc
+													                </span>,
+													            </li>
+													
+													            <li class="list-inline-item">
+													                <span>
+													                   08. 08. 2026
+													                </span>
+													            </li>
+													        </ul>
+													        <h5>
+													            <a href="/clanek/60183-Tri-jmena-za-celou-historii-Pogacar-je-jediny-zavod-od-klubu-do-ktereho-se-pul-stoleti-nikdo-nedostal.html">
+													                Tři jména za celou historii. Pogačar je jediný závod od klubu, do kterého se půl století nikdo nedostal
+													            </a>
+													        </h5>
+													    </div>
+													</div>
+                                            </div>
+                                            <div class="item">
+                                                <!-- Post Article -->
+													<div class="article__entry">
+													    <div class="article__image">
+													        <a href="/clanek/60168-Nejdulezitejsi-podpis-roku-Pogacaruv-dedic-Del-Toro-se-zavazal-UAE-Team-Emirates-az-do-roku-2031.html">
+													            <img src="/files/thumbnails/2026086-14-04-03-toro-crop-500-400-1786017843.jpg" width="500" height="400" class="scale-with-grid" alt="Nejdůležitější podpis roku? Pogačarův dědic Del Toro se zavázal UAE Team Emirates až do roku 2031" />
+													        </a>
+													    </div>
+													    <div class="article__content">
+													        <ul class="list-inline">
+													            <li class="list-inline-item">
+													                <span class="text-primary">
+													                    Jan Matas
+													                </span>,
+													            </li>
+													
+													            <li class="list-inline-item">
+													                <span>
+													                   07. 08. 2026
+													                </span>
+													            </li>
+													        </ul>
+													        <h5>
+													            <a href="/clanek/60168-Nejdulezitejsi-podpis-roku-Pogacaruv-dedic-Del-Toro-se-zavazal-UAE-Team-Emirates-az-do-roku-2031.html">
+													                Nejdůležitější podpis roku? Pogačarův dědic Del Toro se zavázal UAE Team Emirates až do roku 2031
+													            </a>
+													        </h5>
+													    </div>
+													</div>
+                                            </div>
+                                            <div class="item">
+                                                <!-- Post Article -->
+													<div class="article__entry">
+													    <div class="article__image">
+													        <a href="/clanek/60163-Obrovske-rozdily-uz-pred-horami-Pata-etapa-vyrazne-prekreslila-poradi-zenske-Tour-de-France.html">
+													            <img src="/files/thumbnails/2026086-08-34-26-aaaaaa-crop-500-400-1785998066.jpg" width="500" height="400" class="scale-with-grid" alt="Obrovské rozdíly už před horami. Pátá etapa výrazně překreslila pořadí ženské Tour de France" />
+													        </a>
+													    </div>
+													    <div class="article__content">
+													        <ul class="list-inline">
+													            <li class="list-inline-item">
+													                <span class="text-primary">
+													                    Jan Matas
+													                </span>,
+													            </li>
+													
+													            <li class="list-inline-item">
+													                <span>
+													                   06. 08. 2026
+													                </span>
+													            </li>
+													        </ul>
+													        <h5>
+													            <a href="/clanek/60163-Obrovske-rozdily-uz-pred-horami-Pata-etapa-vyrazne-prekreslila-poradi-zenske-Tour-de-France.html">
+													                Obrovské rozdíly už před horami. Pátá etapa výrazně překreslila pořadí ženské Tour de France
+													            </a>
+													        </h5>
+													    </div>
+													</div>
+                                            </div>
+                                            
+                                        </div>
+
+                                    </div>
+                                </div> <!-- col-megamenu.// -->
+                            </div>
+                        </div> <!-- dropdown-mega-menu.// -->
+                    </li>
+                    
+                    <li class="nav-item dropdown has-megamenu">
+                        <a class="nav-link " href="/rubrika/Motorsport" > Motorsport </a>
+                        <div class="dropdown-menu animate fade-down megamenu mx-auto" role="menu">
+                            <div class="container wrap__mobile-megamenu">
+                                <div class="col-megamenu">
+                                    <h5 class="title">Poslední zprávy z motorsportu</h5>
+                                    <hr />
+                                    <!-- Popular news carousel -->
+                                    <div class="popular__news-header-carousel">
+
+                                        <div class="top__news__slider">
+                                            <div class="item">
+                                                <!-- Post Article -->
+													<div class="article__entry">
+													    <div class="article__image">
+													        <a href="/clanek/60229-Byvaly-pilot-Albers-zkritizoval-Russella-Jeho-opatrny-styl-se-s-novymi-pravidly-nesnese.html">
+													            <img src="/files/thumbnails/20260219-05-14-46-1-crop-500-400-1771474486.jpg" width="500" height="400" class="scale-with-grid" alt="Bývalý pilot Albers zkritizoval Russella. Jeho opatrný styl se s novými pravidly nesnese" />
+													        </a>
+													    </div>
+													    <div class="article__content">
+													        <ul class="list-inline">
+													            <li class="list-inline-item">
+													                <span class="text-primary">
+													                    Petr Zajíc
+													                </span>,
+													            </li>
+													
+													            <li class="list-inline-item">
+													                <span>
+													                   12. 08. 2026
+													                </span>
+													            </li>
+													        </ul>
+													        <h5>
+													            <a href="/clanek/60229-Byvaly-pilot-Albers-zkritizoval-Russella-Jeho-opatrny-styl-se-s-novymi-pravidly-nesnese.html">
+													                Bývalý pilot Albers zkritizoval Russella. Jeho opatrný styl se s novými pravidly nesnese
+													            </a>
+													        </h5>
+													    </div>
+													</div>
+                                            </div>
+                                            <div class="item">
+                                                <!-- Post Article -->
+													<div class="article__entry">
+													    <div class="article__image">
+													        <a href="/clanek/60228-Prosba-vyslysena-F1-pujde-Verstappenovi-s-pravidly-na-ruku-Presto-se-porad-mluvi-o-jeho-konci.html">
+													            <img src="/files/thumbnails/20260610-21-48-21-1-crop-500-400-1781120901.jpg" width="500" height="400" class="scale-with-grid" alt="Prosba vyslyšena. F1 půjde Verstappenovi s pravidly na ruku. Přesto se pořád mluví o jeho konci" />
+													        </a>
+													    </div>
+													    <div class="article__content">
+													        <ul class="list-inline">
+													            <li class="list-inline-item">
+													                <span class="text-primary">
+													                    Petr Zajíc
+													                </span>,
+													            </li>
+													
+													            <li class="list-inline-item">
+													                <span>
+													                   11. 08. 2026
+													                </span>
+													            </li>
+													        </ul>
+													        <h5>
+													            <a href="/clanek/60228-Prosba-vyslysena-F1-pujde-Verstappenovi-s-pravidly-na-ruku-Presto-se-porad-mluvi-o-jeho-konci.html">
+													                Prosba vyslyšena. F1 půjde Verstappenovi s pravidly na ruku. Přesto se pořád mluví o jeho konci
+													            </a>
+													        </h5>
+													    </div>
+													</div>
+                                            </div>
+                                            <div class="item">
+                                                <!-- Post Article -->
+													<div class="article__entry">
+													    <div class="article__image">
+													        <a href="/clanek/60219-Hamilton-ma-po-bolestive-ztrate-noveho-partaka-Do-jeho-zivota-vstoupila-nejen-Kim-Kardashian-ale-i-fenka-Halo.html">
+													            <img src="/files/thumbnails/20260810-11-52-55-haml-crop-500-400-1786355575.jpg" width="500" height="400" class="scale-with-grid" alt="Hamilton má po bolestivé ztrátě nového parťáka. Do jeho života vstoupila nejen Kim Kardashian, ale i fenka Halo" />
+													        </a>
+													    </div>
+													    <div class="article__content">
+													        <ul class="list-inline">
+													            <li class="list-inline-item">
+													                <span class="text-primary">
+													                    Jan Matas
+													                </span>,
+													            </li>
+													
+													            <li class="list-inline-item">
+													                <span>
+													                   10. 08. 2026
+													                </span>
+													            </li>
+													        </ul>
+													        <h5>
+													            <a href="/clanek/60219-Hamilton-ma-po-bolestive-ztrate-noveho-partaka-Do-jeho-zivota-vstoupila-nejen-Kim-Kardashian-ale-i-fenka-Halo.html">
+													                Hamilton má po bolestivé ztrátě nového parťáka. Do jeho života vstoupila nejen Kim Kardashian, ale i fenka Halo
+													            </a>
+													        </h5>
+													    </div>
+													</div>
+                                            </div>
+                                            <div class="item">
+                                                <!-- Post Article -->
+													<div class="article__entry">
+													    <div class="article__image">
+													        <a href="/clanek/60202-Velky-triumf-pro-Salace-Cesky-motocyklovy-zavodnik-ovladl-zavod-mistrovstvi-sveta.html">
+													            <img src="/files/thumbnails/2026089-13-50-15-profimedia-1121821751-crop-500-400-1786276215.jpg" width="500" height="400" class="scale-with-grid" alt="Velký triumf pro Salače. Český motocyklový jezdec ovládl závod mistrovství světa" />
+													        </a>
+													    </div>
+													    <div class="article__content">
+													        <ul class="list-inline">
+													            <li class="list-inline-item">
+													                <span class="text-primary">
+													                    Jakub Šafka
+													                </span>,
+													            </li>
+													
+													            <li class="list-inline-item">
+													                <span>
+													                   09. 08. 2026
+													                </span>
+													            </li>
+													        </ul>
+													        <h5>
+													            <a href="/clanek/60202-Velky-triumf-pro-Salace-Cesky-motocyklovy-zavodnik-ovladl-zavod-mistrovstvi-sveta.html">
+													                Velký triumf pro Salače. Český motocyklový jezdec ovládl závod mistrovství světa
+													            </a>
+													        </h5>
+													    </div>
+													</div>
+                                            </div>
+                                            <div class="item">
+                                                <!-- Post Article -->
+													<div class="article__entry">
+													    <div class="article__image">
+													        <a href="/clanek/60182-Osm-vyher-z-jedenacti-zavodu-a-presto-opatrnost-Sef-Mercedesu-prozradil-co-si-tym-schoval-na-podzim.html">
+													            <img src="/files/thumbnails/20250523-19-34-07-antonelli-mercedes-crop-500-400-1748021647.jpg" width="500" height="400" class="scale-with-grid" alt="Osm výher z jedenácti závodů, a přesto opatrnost. Šéf Mercedesu prozradil, co si tým schoval na podzim" />
+													        </a>
+													    </div>
+													    <div class="article__content">
+													        <ul class="list-inline">
+													            <li class="list-inline-item">
+													                <span class="text-primary">
+													                    Petr Zajíc
+													                </span>,
+													            </li>
+													
+													            <li class="list-inline-item">
+													                <span>
+													                   08. 08. 2026
+													                </span>
+													            </li>
+													        </ul>
+													        <h5>
+													            <a href="/clanek/60182-Osm-vyher-z-jedenacti-zavodu-a-presto-opatrnost-Sef-Mercedesu-prozradil-co-si-tym-schoval-na-podzim.html">
+													                Osm výher z jedenácti závodů, a přesto opatrnost. Šéf Mercedesu prozradil, co si tým schoval na podzim
+													            </a>
+													        </h5>
+													    </div>
+													</div>
+                                            </div>
+                                            <div class="item">
+                                                <!-- Post Article -->
+													<div class="article__entry">
+													    <div class="article__image">
+													        <a href="/clanek/60181-Devatenact-let-cekani-a-poprve-realna-sance-V-Maranellu-ale-panuje-jedna-obava.html">
+													            <img src="/files/thumbnails/20260430-06-07-12-f-crop-500-400-1777522032.jpg" width="500" height="400" class="scale-with-grid" alt="Devatenáct let čekání a poprvé reálná šance. V Maranellu ale panuje jedna obava" />
+													        </a>
+													    </div>
+													    <div class="article__content">
+													        <ul class="list-inline">
+													            <li class="list-inline-item">
+													                <span class="text-primary">
+													                    Petr Zajíc
+													                </span>,
+													            </li>
+													
+													            <li class="list-inline-item">
+													                <span>
+													                   08. 08. 2026
+													                </span>
+													            </li>
+													        </ul>
+													        <h5>
+													            <a href="/clanek/60181-Devatenact-let-cekani-a-poprve-realna-sance-V-Maranellu-ale-panuje-jedna-obava.html">
+													                Devatenáct let čekání a poprvé reálná šance. V Maranellu ale panuje jedna obava
+													            </a>
+													        </h5>
+													    </div>
+													</div>
+                                            </div>
+                                            
+                                        </div>
+
+                                    </div>
+                                </div> <!-- col-megamenu.// -->
+                            </div>
+                        </div> <!-- dropdown-mega-menu.// -->
+                    </li>
+                    
+                    
+                    <li class="nav-item dropdown">
+                        <a class="nav-link active dropdown-toggle" href="/rubrika/Dalsi-sporty" >Ostatní sporty</a>
+                        <ul class="dropdown-menu dropdown-menu-left">
+                        
+                            <li><a class="dropdown-item" href="/rubrika/Bojove-sporty"> Bojové sporty </a></li>
+                            <li><a class="dropdown-item" href="/rubrika/basketbal"> Basketbal </a></li>
+                            <li><a class="dropdown-item" href="/rubrika/Cyklistika"> Cyklistika </a></li>
+                            <li><a class="dropdown-item" href="/rubrika/Florbal"> Florbal </a></li>
+                            <li><a class="dropdown-item" href="/rubrika/Golf"> Golf </a></li>
+                            <li><a class="dropdown-item" href="/rubrika/Hazena"> Házená </a></li>
+                            <li><a class="dropdown-item" href="/rubrika/Volejbal"> Volejbal </a></li>
+                            <li><a class="dropdown-item" href="/rubrika/Atletika"> Atletika </a></li>
+                            <li><a class="dropdown-item" href="/rubrika/Motorsport"> Motorsport </a></li>
+                            <li><a class="dropdown-item" href="/rubrika/Zimni-sporty"> Zimní sporty </a></li>
+                            <li><a class="dropdown-item" href="/rubrika/Dalsi-sporty"> Další sporty </a></li>
+                    		<li><a class="dropdown-item" href="/rubrika/rozhovory"> Rozhovory </a></li>
+                        </ul>
+                    </li>
+                    
+                </ul>
+
+
+                <!-- Search bar.// -->
+                <ul class="navbar-nav " style="display: none; ">
+                    <li class="nav-item search hidden-xs hidden-sm "> <a class="nav-link" href="#">
+                            <i class="fa fa-search"></i>
+                        </a>
+                    </li>
+                </ul>
+                <!-- Search content bar.// -->
+                <div class="top-search navigation-shadow"  style="display: none; ">
+                    <div class="container">
+                        <div class="input-group ">
+                            <form action="#">
+                                <div class="row no-gutters mt-3">
+                                    <div class="col">
+                                        <input class="form-control border-secondary border-right-0 rounded-0"
+                                            type="search" value="" placeholder="Vyhledávání ... " />
+                                    </div>
+                                    <div class="col-auto">
+                                        <a class="btn btn-outline-secondary border-left-0 rounded-0 rounded-right"
+                                            href="/search-result.html">
+                                            <i class="fa fa-search"></i>
+                                        </a>
+                                    </div>
+                                </div>
+
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <!-- Search content bar.// -->
+
+
+            </div> <!-- navbar-collapse.// -->
+        </div>
+    </nav>
+
+</div>
+
+<div id="modal_aside_right" class="modal fixed-left fade" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-dialog-aside" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="widget__form-search-bar  ">
+    <div class="row no-gutters">
+        <div class="col">
+            <input class="form-control border-secondary border-right-0 rounded-0" value="" placeholder="Hledat" />
+        </div>
+        <div class="col-auto">
+            <button class="btn btn-outline-secondary border-left-0 rounded-0 rounded-right">
+                <i class="fa fa-search"></i>
+            </button>
+        </div>
+    </div>
+</div>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <nav class="list-group list-group-flush">
+                    <ul class="navbar-nav ">
+                        <li class="nav-item"><a class="nav-link  text-dark" href="/"> Domů </a></li>
+                        <li class="nav-item"><a class="nav-link  text-dark" href="/rubrika/fotbal"> Fotbal </a></li>
+                        <li class="nav-item"><a class="nav-link  text-dark" href="/rubrika/MS-ve-fotbale-2026"> MS ve fotbale 2026 </a></li>
+                        <li class="nav-item"><a class="nav-link  text-dark" href="/rubrika/hokej"> Hokej </a></li>
+                        <li class="nav-item"><a class="nav-link  text-dark" href="/rubrika/tenis"> Tenis </a></li>
+                        <li class="nav-item dropdown">
+	                        <a class="nav-link active dropdown-toggle text-dark" href="/rubrika/Dalsi-sporty" data-toggle="dropdown" >Ostatní sporty</a>
+	                        <ul class="dropdown-menu dropdown-menu-left">
+	                            <li><a class="dropdown-item text-dark" href="/rubrika/Bojove-sporty"> Bojové sporty </a></li>
+                        		<li><a class="dropdown-item text-dark" href="/rubrika/basketbal"> Basketbal </a></li> 
+	                            <li><a class="dropdown-item text-dark" href="/rubrika/Cyklistika"> Cyklistika </a></li>
+	                            <li><a class="dropdown-item text-dark" href="/rubrika/Florbal"> Florbal </a></li>
+	                            <li><a class="dropdown-item text-dark" href="/rubrika/Golf"> Golf </a></li>
+	                            <li><a class="dropdown-item text-dark" href="/rubrika/Hazena"> Házená </a></li>
+	                            <li><a class="dropdown-item text-dark" href="/rubrika/Volejbal"> Volejbal </a></li>
+	                            <li><a class="dropdown-item text-dark" href="/rubrika/Atletika"> Atletika </a></li>
+	                            <li><a class="dropdown-item text-dark" href="/rubrika/Motorsport"> Motorsport </a></li>
+	                            <li><a class="dropdown-item text-dark" href="/rubrika/Zimni-sporty"> Zimní sporty </a></li>
+	                            <li><a class="dropdown-item text-dark" href="/rubrika/Dalsi-sporty"> Další sporty </a></li>
+	                        </ul>
+	                    </li>
+	                    <li class="nav-item"><a class="nav-link  text-dark"  href="/rubrika/rozhory"> Rozhovory </a></li>
+	                    
+                    </ul>
+
+                </nav>
+            </div>
+            <div class="modal-footer">
+
+
+                <p>© 2026 - sportwin</p>
+
+            </div>
+
+        </div>
+    </div> <!-- modal-bialog .// -->
+</div> <!-- modal.// -->
+        <!-- End Navbar  -->
+        <!-- Tranding News -->
+        <div class="bg-white">
+            <!-- Trending News Start -->
+<div class="trending-news pt-4 border-tranding">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="trending-news-inner">
+                    <div class="title">
+                        <i class="fa fa-bolt"></i>
+                        <strong>top zprávy</strong>
+                    </div>
+                    <div class="trending-news-slider">
+                        <div class="item-single">
+                            <a href="/clanek/60189-Nejlepsi-zada-v-historii-kulturistiky-stala-na-stroji-ktery-dnes-v-posilovne-skoro-nenajdete.html" style="  ">Nejlepší záda v historii kulturistiky stála na stroji, který dnes v posilovně skoro nenajdete</a>
+                        </div>
+                        <div class="item-single">
+                            <a href="/clanek/60209-Turecke-silenstvi-pokracuje-Trabzonspor-si-jde-pro-dalsi-hvezdu-ktera-bude-mit-vyssi-plat-nez-Salah.html" style="  ">Turecké šílenství pokračuje. Trabzonspor si jde pro další hvězdu, která bude mít vyšší plat než Salah</a>
+                        </div>
+                        <div class="item-single">
+                            <a href="/clanek/60213-Z-Haalanda-je-turisticka-atrakce-Lode-vozi-fanousky-k-jeho-jachte-a-kdy-zrovna-neveceri-s-Jennifer-Lopez-s-usmevem-jim-mava.html" style="  ">Z Haalanda je turistická atrakce. Lodě vozí fanoušky k jeho jachtě a kdy zrovna nevečeří s Jennifer Lopez, s úsměvem jim mává</a>
+                        </div>
+                        <div class="item-single">
+                            <a href="/clanek/60192-Divak-mu-cely-zapas-radil-z-hlediste-Mensikovi-dosla-trpelivost-a-stejne-tak-i-rozhodcimu.html" style="  ">Divák mu celý zápas radil z hlediště. Menšíkovi došla trpělivost, a stejně tak i rozhodčímu</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Trending News End -->
+        </div>
+        <!-- End Tranding News -->
+    </header>
+    <!-- End Header news -->
+
+    <!-- Popular Content news -->
+    <section class="bg-content">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8">
+<!-- Popular news carousel -->
+                    <div class="card__post-carousel">
+                        <div class="item">
+                            <!-- Post Article -->
+							<div class="card__post">
+							    <div class="card__post__body">
+							        <a href="/clanek/60249-Jako-polonahe-bychom-ziskaly-vice-sponzoru-Veta-ktera-ve-Svedsku-rozvirila-hladinu-tesne-pred-startem-sampionatu.html">
+							            <img src="/files/thumbnails/20260811-16-50-35-johansson-crop-800-600-1786459835.jpg" width="800" height="600" class="img-fluid" alt='„Jako polonahé bychom získaly více sponzorů." Věta, která ve Švédsku rozvířila hladinu těsně před startem šampionátu' />
+							        </a>
+							        <div class="card__post__content bg__post-cover">
+							            <a href="/rubrika/Dalsi-sporty" class="card__post__category">
+							                Další sporty
+							            </a>
+							            <div class="card__post__title">
+							                <h2>
+							                    <a href="/clanek/60249-Jako-polonahe-bychom-ziskaly-vice-sponzoru-Veta-ktera-ve-Svedsku-rozvirila-hladinu-tesne-pred-startem-sampionatu.html">
+							                      „Jako polonahé bychom získaly více sponzorů." Věta, která ve Švédsku rozvířila hladinu těsně před startem šampionátu
+							                    </a>
+							                </h2>
+							            </div>
+							            <div class="card__post__author-info">
+							                <ul class="list-inline">
+							                    <li class="list-inline-item">
+							                    </li>
+							                    <li class="list-inline-item">
+							                        <span>
+							                            12. 08. 2026
+							                        </span>
+							                    </li>
+							                </ul>
+							            </div>
+							        </div>
+							    </div>
+							
+							
+							</div>
+                        </div>
+                        <div class="item">
+                            <!-- Post Article -->
+							<div class="card__post">
+							    <div class="card__post__body">
+							        <a href="/clanek/60248-De-Ridder-pred-srpnovym-zapasem-s-Romanem-Dolidzem-zkritizoval-Prochazkovu-nindza-image-Pusobi-pry-falesne.html">
+							            <img src="/files/thumbnails/20250123-20-10-18-prochazka-crop-800-600-1737659418.jpg" width="800" height="600" class="img-fluid" alt="De Ridder před srpnovým zápasem zkritizoval Procházkovu nindža image. Působí prý falešně" />
+							        </a>
+							        <div class="card__post__content bg__post-cover">
+							            <a href="/rubrika/Bojove-sporty" class="card__post__category">
+							                Bojové sporty
+							            </a>
+							            <div class="card__post__title">
+							                <h2>
+							                    <a href="/clanek/60248-De-Ridder-pred-srpnovym-zapasem-s-Romanem-Dolidzem-zkritizoval-Prochazkovu-nindza-image-Pusobi-pry-falesne.html">
+							                      De Ridder před srpnovým zápasem zkritizoval Procházkovu nindža image. Působí prý falešně
+							                    </a>
+							                </h2>
+							            </div>
+							            <div class="card__post__author-info">
+							                <ul class="list-inline">
+							                    <li class="list-inline-item">
+							                    </li>
+							                    <li class="list-inline-item">
+							                        <span>
+							                            12. 08. 2026
+							                        </span>
+							                    </li>
+							                </ul>
+							            </div>
+							        </div>
+							    </div>
+							
+							
+							</div>
+                        </div>
+                        <div class="item">
+                            <!-- Post Article -->
+							<div class="card__post">
+							    <div class="card__post__body">
+							        <a href="/clanek/60247-21-milionu-Pogacar-lame-dalsi-rekord-mimo-trat-Slovinec-prekonal-Vingegaarda-o-dvacet-procent.html">
+							            <img src="/files/thumbnails/20260719-22-07-54-poga-crop-800-600-1784491674.jpeg" width="800" height="600" class="img-fluid" alt="21 milionů. Pogačar láme další rekord mimo trať. Slovinec překonal Vingegaarda o dvacet procent" />
+							        </a>
+							        <div class="card__post__content bg__post-cover">
+							            <a href="/rubrika/Cyklistika" class="card__post__category">
+							                Cyklistika
+							            </a>
+							            <div class="card__post__title">
+							                <h2>
+							                    <a href="/clanek/60247-21-milionu-Pogacar-lame-dalsi-rekord-mimo-trat-Slovinec-prekonal-Vingegaarda-o-dvacet-procent.html">
+							                      21 milionů. Pogačar láme další rekord mimo trať. Slovinec překonal Vingegaarda o dvacet procent
+							                    </a>
+							                </h2>
+							            </div>
+							            <div class="card__post__author-info">
+							                <ul class="list-inline">
+							                    <li class="list-inline-item">
+							                    </li>
+							                    <li class="list-inline-item">
+							                        <span>
+							                            12. 08. 2026
+							                        </span>
+							                    </li>
+							                </ul>
+							            </div>
+							        </div>
+							    </div>
+							
+							
+							</div>
+                        </div>
+                    </div>
+                    <!-- End Popular news carousel -->
+                    <!-- Banner ads -->
+                    <figure class="mt-4 mb-4" >
+                    	<div id="seznam-zone-mobile-smr-hp1" class="seznam-zone-mobile" style="    margin: 10px auto;"></div>
+                        <div id="seznam-zone-popup"></div>
+                    </figure>
+                    <!-- End Banner ads -->
+
+                    <!-- Popular news Category -->
+                    <div class="wrapper__list__article">
+                        <h4 class="border_section">doporučujeme</h4>
+                        <div class="row ">
+                            <div class="col-lg-6 pd-0">
+                                <!-- Post Article -->
+								<div class="article__entry">
+								    <div class="article__image">
+								        <a href="/clanek/60216-58-stran-proti-temer-uplnemu-tichu-Vondrousova-doplatila-na-fatalni-chybu-jeji-pripad-ukazal-propast-mezi-tenisem-a-fotbalem.html">
+								            <img src="/files/thumbnails/20260810-09-59-27-vond-crop-500-400-1786348767.jpg" width="500" height="400" class="img-fluid" alt="58 stran vs. úplné ticho? Vondroušová doplatila na fatální chybu, její případ ukázal propast mezi tenisem a fotbalem" />
+								        </a>
+								    </div>
+								    <div class="article__content">
+								       
+								        <ul class="list-inline">
+								            
+								            <li class="list-inline-item">
+				                                <a href="/rubrika/Tenis" class="article__category">
+														Tenis
+													</a>
+					                            </li>
+							                            
+								            <li class="list-inline-item">
+								                <span class="text-dark text-capitalize">
+								                    10. 08. 2026
+								                </span>
+								            </li>
+								
+								        </ul>
+								        <h5>
+								            <a href="/clanek/60216-58-stran-proti-temer-uplnemu-tichu-Vondrousova-doplatila-na-fatalni-chybu-jeji-pripad-ukazal-propast-mezi-tenisem-a-fotbalem.html">
+												58 stran vs. úplné ticho? Vondroušová doplatila na fatální chybu, její případ ukázal propast mezi tenisem a fotbalem
+											</a>
+								        </h5>
+								        <p class="d-none">
+								           Čtyři roky bez profesionálního tenisu kvůli rozhodnutí, které trvalo jen několik okamžiků. Případ Markéty Vondroušové dál rezonuje zahraničními médii a Guardian nyní upozornil nejen na okolnosti jejího odmítnutého dopingového testu, ale především na výrazně rozdílný přístup tenisu a fotbalu k podobným kauzám.
+								        </p>
+								        <a href="/clanek/60216-58-stran-proti-temer-uplnemu-tichu-Vondrousova-doplatila-na-fatalni-chybu-jeji-pripad-ukazal-propast-mezi-tenisem-a-fotbalem.html" class="btn btn-outline-primary mb-4 text-capitalize"> číst více</a>
+								    </div>
+								</div>
+                                
+
+                            </div>
+                            <div class="col-lg-6 pd-0">
+                                <!-- Post Article -->
+								<div class="article__entry">
+								    <div class="article__image">
+								        <a href="/clanek/60202-Velky-triumf-pro-Salace-Cesky-motocyklovy-zavodnik-ovladl-zavod-mistrovstvi-sveta.html">
+								            <img src="/files/thumbnails/2026089-13-50-15-profimedia-1121821751-crop-500-400-1786276215.jpg" width="500" height="400" class="img-fluid" alt="Velký triumf pro Salače. Český motocyklový jezdec ovládl závod mistrovství světa" />
+								        </a>
+								    </div>
+								    <div class="article__content">
+								       
+								        <ul class="list-inline">
+								            
+								            <li class="list-inline-item">
+				                                <a href="/rubrika/Motorsport" class="article__category">
+														Motorsport
+													</a>
+					                            </li>
+							                            
+								            <li class="list-inline-item">
+								                <span class="text-dark text-capitalize">
+								                    09. 08. 2026
+								                </span>
+								            </li>
+								
+								        </ul>
+								        <h5>
+								            <a href="/clanek/60202-Velky-triumf-pro-Salace-Cesky-motocyklovy-zavodnik-ovladl-zavod-mistrovstvi-sveta.html">
+												Velký triumf pro Salače. Český motocyklový jezdec ovládl závod mistrovství světa
+											</a>
+								        </h5>
+								        <p class="d-none">
+								           Český motocyklový závodník Filip
+Salač poprvé ve své kariéře triumfoval v&nbsp;závodě motocyklového mistrovství
+světa. Stalo se tak v&nbsp;rámci Velké ceny Británie v&nbsp;kategorii Moto2.
+Navázal tak na vítězství českého jezdce Karla Abrahama z&nbsp;roku 2010.
+								        </p>
+								        <a href="/clanek/60202-Velky-triumf-pro-Salace-Cesky-motocyklovy-zavodnik-ovladl-zavod-mistrovstvi-sveta.html" class="btn btn-outline-primary mb-4 text-capitalize"> číst více</a>
+								    </div>
+								</div>
+                                
+
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Popular news Category -->
+
+                    
+
+                    <!-- Category news -->
+                    <div class="wrapper__list__article">
+                        <h4 class="border_section">další články</h4>
+                        <div id="seznam-zone-popup"></div>
+                        <div class="wrapp__list__article-responsive">
+                            <!-- Post Article List -->
+							<div class="card__post card__post-list card__post__transition mt-30">
+							    <div class="row ">
+							        <div class="col-md-5">
+							            <div class="card__post__transition">
+							                <a href="/clanek/60246-Vondrousova-tvrdi-jedno-oficialni-dokument-ITIA-druhe-Belgicanka-z-toho-ale-vini-obe-strany.html">
+												<img src="/files/thumbnails/20260622-16-39-18-von-crop-500-400-1782139158.jpg" width="500" height="400" class="img-fluid w-100" alt="Vondroušová tvrdí jedno, oficiální dokument ITIA druhé. Belgičanka z toho ale viní obě strany" />
+											</a>
+							            </div>
+							        </div>
+							        <div class="col-md-7 my-auto pl-0">
+							            <div class="card__post__body ">
+							                <div class="card__post__content  ">
+							                    
+							                    <div class="card__post__author-info mb-2">
+							                        <ul class="list-inline">
+							                           	
+							                           	<li class="list-inline-item">
+							                                <a href="/rubrika/Tenis" class="card__post__category">
+																Tenis
+															</a>
+							                            </li>
+							                            
+							                            <li class="list-inline-item">
+							                                <span class="text-dark text-capitalize">
+							                                     12. 08. 2026
+							                                </span>
+							                            </li>
+							
+							                        </ul>
+							                    </div>
+							                    <div class="card__post__title">
+							                        <h5>
+							                           <a href="/clanek/60246-Vondrousova-tvrdi-jedno-oficialni-dokument-ITIA-druhe-Belgicanka-z-toho-ale-vini-obe-strany.html">
+															Vondroušová tvrdí jedno, oficiální dokument ITIA druhé. Belgičanka z toho ale viní obě strany
+														</a>
+							                        </h5>
+							                        <p class=" mb-30 d-none">
+							                           Případ Markéty Vondroušové rozdělil tenisový svět a jeden detail v něm dodnes nesedí. Šlo o to, zda česká tenistka věděla, že ji antidopingový komisař může navštívit i mimo nahlášené hodinové okno. Bývalá světová jednička Kim Clijstersová tvrdí, že to nevěděl skoro nikdo, a viní z toho i druhou stranu.
+							                        </p>
+							
+							                    </div>
+							
+							                </div>
+							            </div>
+							        </div>
+							
+							    </div>
+							</div>
+							<!-- Banner ads -->
+		                    <!-- End Banner ads -->
+                    
+							<div class="card__post card__post-list card__post__transition mt-30">
+							    <div class="row ">
+							        <div class="col-md-5">
+							            <div class="card__post__transition">
+							                <a href="/clanek/60245-O-budoucnosti-plzenskeho-kouce-rozhodne-majitel-Strnad-Spekuluje-se-hned-o-trech-nastupcich.html">
+												<img src="/files/thumbnails/2026089-07-38-03-hysky-plzen-crop-500-400-1786253883.jpg" width="500" height="400" class="img-fluid w-100" alt="O budoucnosti plzeňského kouče rozhodne majitel Strnad. Spekuluje se hned o třech nástupcích" />
+											</a>
+							            </div>
+							        </div>
+							        <div class="col-md-7 my-auto pl-0">
+							            <div class="card__post__body ">
+							                <div class="card__post__content  ">
+							                    
+							                    <div class="card__post__author-info mb-2">
+							                        <ul class="list-inline">
+							                           	
+							                           	<li class="list-inline-item">
+							                                <a href="/rubrika/Fotbal" class="card__post__category">
+																Fotbal
+															</a>
+							                            </li>
+							                            
+							                            <li class="list-inline-item">
+							                                <span class="text-dark text-capitalize">
+							                                     12. 08. 2026
+							                                </span>
+							                            </li>
+							
+							                        </ul>
+							                    </div>
+							                    <div class="card__post__title">
+							                        <h5>
+							                           <a href="/clanek/60245-O-budoucnosti-plzenskeho-kouce-rozhodne-majitel-Strnad-Spekuluje-se-hned-o-trech-nastupcich.html">
+															O budoucnosti plzeňského kouče rozhodne majitel Strnad. Spekuluje se hned o třech nástupcích
+														</a>
+							                        </h5>
+							                        <p class=" mb-30 d-none">
+							                           Loni na podzim vedl výkonný ředitel Viktorie Adolf Šádek tvrdý souboj o trenéra, kterého si Slavia chystala jako budoucnost. Vyhrál ho. Po dvou bodech ze tří kol a přestřelce 5:5 v Teplicích ale v Plzni vře a rozhodnutí o osudu Martina Hyského už nepatří jemu.
+							                        </p>
+							
+							                    </div>
+							
+							                </div>
+							            </div>
+							        </div>
+							
+							    </div>
+							</div>
+							<!-- Banner ads -->
+		                    <!-- End Banner ads -->
+                    
+							<div class="card__post card__post-list card__post__transition mt-30">
+							    <div class="row ">
+							        <div class="col-md-5">
+							            <div class="card__post__transition">
+							                <a href="/clanek/60251-Az-dvanact-let-vezeni-za-napadeni-v-Bohnicich-Leo-trpi-halucinacemi-ozvala-se-matka.html">
+												<img src="/files/thumbnails/20260812-04-31-19-beranek-clash-crop-500-400-1786501879.jpg" width="500" height="400" class="img-fluid w-100" alt="Až dvanáct let vězení za napadení v Bohnicích. Leo trpí halucinacemi! ozvala se matka" />
+											</a>
+							            </div>
+							        </div>
+							        <div class="col-md-7 my-auto pl-0">
+							            <div class="card__post__body ">
+							                <div class="card__post__content  ">
+							                    
+							                    <div class="card__post__author-info mb-2">
+							                        <ul class="list-inline">
+							                           	
+							                           	<li class="list-inline-item">
+							                                <a href="/rubrika/Bojove-sporty" class="card__post__category">
+																Bojové sporty
+															</a>
+							                            </li>
+							                            
+							                            <li class="list-inline-item">
+							                                <span class="text-dark text-capitalize">
+							                                     12. 08. 2026
+							                                </span>
+							                            </li>
+							
+							                        </ul>
+							                    </div>
+							                    <div class="card__post__title">
+							                        <h5>
+							                           <a href="/clanek/60251-Az-dvanact-let-vezeni-za-napadeni-v-Bohnicich-Leo-trpi-halucinacemi-ozvala-se-matka.html">
+															Až dvanáct let vězení za napadení v Bohnicích. Leo trpí halucinacemi! ozvala se matka
+														</a>
+							                        </h5>
+							                        <p class=" mb-30 d-none">
+							                           Do psychiatrické nemocnice ho podle jejích slov odvezla proto, aby mu pomohla. Za necelý den byl jejím synem podezřelý v policejním protokolu. Matka Lea Beránka teď poprvé souvisle popsala měsíce, které dubnovému incidentu v Bohnicích předcházely, a žádá, aby se v dalším řízení řešil i psychický stav jejího syna.
+							                        </p>
+							
+							                    </div>
+							
+							                </div>
+							            </div>
+							        </div>
+							
+							    </div>
+							</div>
+							<!-- Banner ads -->
+		                    <!-- End Banner ads -->
+                    
+							<div class="card__post card__post-list card__post__transition mt-30">
+							    <div class="row ">
+							        <div class="col-md-5">
+							            <div class="card__post__transition">
+							                <a href="/clanek/60243-Nikdy-nebylo-uplne-jasne-jake-zraneni-utrpel-Alcaraz-vynecha-dalsi-turnaj-a-kolem-jeho-navratu-jsou-nove-otazniky.html">
+												<img src="/files/thumbnails/20251117-08-25-33-alca-crop-500-400-1763364333.jpg" width="500" height="400" class="img-fluid w-100" alt='„Nikdy nebylo úplně jasné, jaké zranění utrpěl." Alcaraz vynechá další turnaj a kolem jeho návratu jsou nové otazníky' />
+											</a>
+							            </div>
+							        </div>
+							        <div class="col-md-7 my-auto pl-0">
+							            <div class="card__post__body ">
+							                <div class="card__post__content  ">
+							                    
+							                    <div class="card__post__author-info mb-2">
+							                        <ul class="list-inline">
+							                           	
+							                           	<li class="list-inline-item">
+							                                <a href="/rubrika/Tenis" class="card__post__category">
+																Tenis
+															</a>
+							                            </li>
+							                            
+							                            <li class="list-inline-item">
+							                                <span class="text-dark text-capitalize">
+							                                     12. 08. 2026
+							                                </span>
+							                            </li>
+							
+							                        </ul>
+							                    </div>
+							                    <div class="card__post__title">
+							                        <h5>
+							                           <a href="/clanek/60243-Nikdy-nebylo-uplne-jasne-jake-zraneni-utrpel-Alcaraz-vynecha-dalsi-turnaj-a-kolem-jeho-navratu-jsou-nove-otazniky.html">
+															„Nikdy nebylo úplně jasné, jaké zranění utrpěl." Alcaraz vynechá další turnaj a kolem jeho návratu jsou nové otazníky
+														</a>
+							                        </h5>
+							                        <p class=" mb-30 d-none">
+							                           Carlos Alcaraz nehrál zápas od dubna a jeho účast na posledním grandslamu sezony visí na vlásku. Do téhle situace přišly výroky šéflékaře italské tenisové federace, který v rozhovoru pro italský deník zpochybnil povahu jeho zranění a přidal spekulace o psychickém stavu. Ze Španělska se ozvala okamžitá reakce.
+							                        </p>
+							
+							                    </div>
+							
+							                </div>
+							            </div>
+							        </div>
+							
+							    </div>
+							</div>
+							<!-- Banner ads -->
+		                    <figure class="mt-4 mb-4">
+		                    	<div id="seznam-zone-mobile-smr-hp2" class="seznam-zone-mobile" style="    margin: 20px auto;"></div>
+		                        
+		                    </figure>
+		                    <!-- End Banner ads -->
+                    
+							<div class="card__post card__post-list card__post__transition mt-30">
+							    <div class="row ">
+							        <div class="col-md-5">
+							            <div class="card__post__transition">
+							                <a href="/clanek/60242-Noskova-a-jeji-gesto-pro-Ukrajinu-vyvolalo-vlnu-ohlasu-Reagoval-i-olympijsky-vitez-Dominik-Hasek.html">
+												<img src="/files/thumbnails/2026015-07-56-47-noskova-crop-500-400-1767596207.jpg" width="500" height="400" class="img-fluid w-100" alt="Nosková a její gesto pro Ukrajinu vyvolalo vlnu ohlasů. Reagoval i olympijský vítěz Dominik Hašek" />
+											</a>
+							            </div>
+							        </div>
+							        <div class="col-md-7 my-auto pl-0">
+							            <div class="card__post__body ">
+							                <div class="card__post__content  ">
+							                    
+							                    <div class="card__post__author-info mb-2">
+							                        <ul class="list-inline">
+							                           	
+							                           	<li class="list-inline-item">
+							                                <a href="/rubrika/Tenis" class="card__post__category">
+																Tenis
+															</a>
+							                            </li>
+							                            
+							                            <li class="list-inline-item">
+							                                <span class="text-dark text-capitalize">
+							                                     12. 08. 2026
+							                                </span>
+							                            </li>
+							
+							                        </ul>
+							                    </div>
+							                    <div class="card__post__title">
+							                        <h5>
+							                           <a href="/clanek/60242-Noskova-a-jeji-gesto-pro-Ukrajinu-vyvolalo-vlnu-ohlasu-Reagoval-i-olympijsky-vitez-Dominik-Hasek.html">
+															Nosková a její gesto pro Ukrajinu vyvolalo vlnu ohlasů. Reagoval i olympijský vítěz Dominik Hašek
+														</a>
+							                        </h5>
+							                        <p class=" mb-30 d-none">
+							                           Osmnáct tisíc čtyři sta dvacet dolarů. Přesně tolik si pětadvacetiletá ukrajinská tenistka Oleksandra Olijnyková odvezla z kanadské tisícovky za jediný odehraný zápas, a přesně tolik poslala na bojové drony pro ukrajinskou armádu. Když její rozhodnutí sdílela wimbledonská šampionka Linda Nosková, spustila tím na Ukrajině vlnu reakcí.
+							                        </p>
+							
+							                    </div>
+							
+							                </div>
+							            </div>
+							        </div>
+							
+							    </div>
+							</div>
+							<!-- Banner ads -->
+		                    <!-- End Banner ads -->
+                    
+							<div class="card__post card__post-list card__post__transition mt-30">
+							    <div class="row ">
+							        <div class="col-md-5">
+							            <div class="card__post__transition">
+							                <a href="/clanek/60241-Zatleskali-kotli-a-odesli-Spartane-po-zapase-hledali-slova-pro-vecer-ktery-se-zlomil-za-ctrnact-minut.html">
+												<img src="/files/thumbnails/20260812-00-41-12-sparta-lyon-crop-500-400-1786488072.jpg" width="500" height="400" class="img-fluid w-100" alt="Zatleskali kotli a odešli. Sparťané po zápase hledali slova pro večer, který se zlomil za čtrnáct minut" />
+											</a>
+							            </div>
+							        </div>
+							        <div class="col-md-7 my-auto pl-0">
+							            <div class="card__post__body ">
+							                <div class="card__post__content  ">
+							                    
+							                    <div class="card__post__author-info mb-2">
+							                        <ul class="list-inline">
+							                           	
+							                           	<li class="list-inline-item">
+							                                <a href="/rubrika/Fotbal" class="card__post__category">
+																Fotbal
+															</a>
+							                            </li>
+							                            
+							                            <li class="list-inline-item">
+							                                <span class="text-dark text-capitalize">
+							                                     12. 08. 2026
+							                                </span>
+							                            </li>
+							
+							                        </ul>
+							                    </div>
+							                    <div class="card__post__title">
+							                        <h5>
+							                           <a href="/clanek/60241-Zatleskali-kotli-a-odesli-Spartane-po-zapase-hledali-slova-pro-vecer-ktery-se-zlomil-za-ctrnact-minut.html">
+															Zatleskali kotli a odešli. Sparťané po zápase hledali slova pro večer, který se zlomil za čtrnáct minut
+														</a>
+							                        </h5>
+							                        <p class=" mb-30 d-none">
+							                           Zatleskali sparťanskému kotli, který je v Lyonu neúnavně hnal dopředu, a pak zklamaně odešli z trávníku. Po porážce 0:3 v odvetě třetího předkola zbývá Letenským místo Ligy mistrů evropská soutěž o řád níž. „Jsme zklamaní, ale v deseti pak bylo složité Lyonu čelit," řekl kapitán Asger Sörensen.
+							                        </p>
+							
+							                    </div>
+							
+							                </div>
+							            </div>
+							        </div>
+							
+							    </div>
+							</div>
+							<!-- Banner ads -->
+		                    <!-- End Banner ads -->
+                    
+							<div class="card__post card__post-list card__post__transition mt-30">
+							    <div class="row ">
+							        <div class="col-md-5">
+							            <div class="card__post__transition">
+							                <a href="/clanek/60240-Vylouceni-Sevinskeho-rozdelilo-publikum-Cesti-fanousci-kritizovali-samotneho-obrance-francouzske-komentare-mirily-jinam.html">
+												<img src="/files/thumbnails/20260726-09-45-27-profimedia-1098720465-crop-500-400-1785051927.jpg" width="500" height="400" class="img-fluid w-100" alt="Vyloučení Ševínského rozdělilo publikum. Čeští fanoušci kritizovali samotného obránce, francouzské komentáře mířily jinam" />
+											</a>
+							            </div>
+							        </div>
+							        <div class="col-md-7 my-auto pl-0">
+							            <div class="card__post__body ">
+							                <div class="card__post__content  ">
+							                    
+							                    <div class="card__post__author-info mb-2">
+							                        <ul class="list-inline">
+							                           	
+							                           	<li class="list-inline-item">
+							                                <a href="/rubrika/Fotbal" class="card__post__category">
+																Fotbal
+															</a>
+							                            </li>
+							                            
+							                            <li class="list-inline-item">
+							                                <span class="text-dark text-capitalize">
+							                                     12. 08. 2026
+							                                </span>
+							                            </li>
+							
+							                        </ul>
+							                    </div>
+							                    <div class="card__post__title">
+							                        <h5>
+							                           <a href="/clanek/60240-Vylouceni-Sevinskeho-rozdelilo-publikum-Cesti-fanousci-kritizovali-samotneho-obrance-francouzske-komentare-mirily-jinam.html">
+															Vyloučení Ševínského rozdělilo publikum. Čeští fanoušci kritizovali samotného obránce, francouzské komentáře mířily jinam
+														</a>
+							                        </h5>
+							                        <p class=" mb-30 d-none">
+							                           Sparta odjížděla z Lyonu s porážkou 0:3 a s vyřazením z Ligy mistrů, jenže nejvíc se po zápase nerozebíraly branky. Debatu ovládlo vyloučení Adama Ševínského ze 34. minuty. A rozdělila se přesně opačně, než by se dalo čekat.
+							                        </p>
+							
+							                    </div>
+							
+							                </div>
+							            </div>
+							        </div>
+							
+							    </div>
+							</div>
+							<!-- Banner ads -->
+		                    <!-- End Banner ads -->
+                    
+							<div class="card__post card__post-list card__post__transition mt-30">
+							    <div class="row ">
+							        <div class="col-md-5">
+							            <div class="card__post__transition">
+							                <a href="/clanek/60239-Naskok-z-Letne-vydrzel-dvacet-minut-Pak-prisla-chyba-v-rozehravce-a-vsechno-se-otocilo.html">
+												<img src="/files/thumbnails/2026089-08-42-19-profimedia-1121413535-crop-500-400-1786257739.jpg" width="500" height="400" class="img-fluid w-100" alt="Náskok z Letné vydržel dvacet minut. Pak přišla chyba v rozehrávce a všechno se otočilo" />
+											</a>
+							            </div>
+							        </div>
+							        <div class="col-md-7 my-auto pl-0">
+							            <div class="card__post__body ">
+							                <div class="card__post__content  ">
+							                    
+							                    <div class="card__post__author-info mb-2">
+							                        <ul class="list-inline">
+							                           	
+							                           	<li class="list-inline-item">
+							                                <a href="/rubrika/Fotbal" class="card__post__category">
+																Fotbal
+															</a>
+							                            </li>
+							                            
+							                            <li class="list-inline-item">
+							                                <span class="text-dark text-capitalize">
+							                                     12. 08. 2026
+							                                </span>
+							                            </li>
+							
+							                        </ul>
+							                    </div>
+							                    <div class="card__post__title">
+							                        <h5>
+							                           <a href="/clanek/60239-Naskok-z-Letne-vydrzel-dvacet-minut-Pak-prisla-chyba-v-rozehravce-a-vsechno-se-otocilo.html">
+															Náskok z Letné vydržel dvacet minut. Pak přišla chyba v rozehrávce a všechno se otočilo
+														</a>
+							                        </h5>
+							                        <p class=" mb-30 d-none">
+							                           Do Lyonu vezla Sparta jednogólový náskok, na hřišti ho ale udržela sotva dvacet minut. Vyloučení Adama Ševínského pak z odvety třetího předkola Ligy mistrů udělalo bránění o přežití, které skončilo porážkou 0:3. Pražané se přesunou do ligové fáze Evropské ligy, Lyon jde na Fenerbahce.
+							                        </p>
+							
+							                    </div>
+							
+							                </div>
+							            </div>
+							        </div>
+							
+							    </div>
+							</div>
+							<!-- Banner ads -->
+		                    <!-- End Banner ads -->
+                    
+							<div class="card__post card__post-list card__post__transition mt-30">
+							    <div class="row ">
+							        <div class="col-md-5">
+							            <div class="card__post__transition">
+							                <a href="/clanek/60229-Byvaly-pilot-Albers-zkritizoval-Russella-Jeho-opatrny-styl-se-s-novymi-pravidly-nesnese.html">
+												<img src="/files/thumbnails/20260219-05-14-46-1-crop-500-400-1771474486.jpg" width="500" height="400" class="img-fluid w-100" alt="Bývalý pilot Albers zkritizoval Russella. Jeho opatrný styl se s novými pravidly nesnese" />
+											</a>
+							            </div>
+							        </div>
+							        <div class="col-md-7 my-auto pl-0">
+							            <div class="card__post__body ">
+							                <div class="card__post__content  ">
+							                    
+							                    <div class="card__post__author-info mb-2">
+							                        <ul class="list-inline">
+							                           	
+							                           	<li class="list-inline-item">
+							                                <a href="/rubrika/Motorsport" class="card__post__category">
+																Motorsport
+															</a>
+							                            </li>
+							                            
+							                            <li class="list-inline-item">
+							                                <span class="text-dark text-capitalize">
+							                                     12. 08. 2026
+							                                </span>
+							                            </li>
+							
+							                        </ul>
+							                    </div>
+							                    <div class="card__post__title">
+							                        <h5>
+							                           <a href="/clanek/60229-Byvaly-pilot-Albers-zkritizoval-Russella-Jeho-opatrny-styl-se-s-novymi-pravidly-nesnese.html">
+															Bývalý pilot Albers zkritizoval Russella. Jeho opatrný styl se s novými pravidly nesnese
+														</a>
+							                        </h5>
+							                        <p class=" mb-30 d-none">
+							                           Sedmé místo a ztráta 57,503 sekundy na vítěze. Poslední závod před letní přestávkou dopadl pro George Russella mizerně a bývalý pilot formule 1 Christijan Albers z toho vyvodil nemilosrdný závěr. Britský jezdec podle něj kroužil po Hungaroringu jako stará dáma.
+							                        </p>
+							
+							                    </div>
+							
+							                </div>
+							            </div>
+							        </div>
+							
+							    </div>
+							</div>
+							<!-- Banner ads -->
+		                    <!-- End Banner ads -->
+                    
+							<div class="card__post card__post-list card__post__transition mt-30">
+							    <div class="row ">
+							        <div class="col-md-5">
+							            <div class="card__post__transition">
+							                <a href="/clanek/60238-Arteta-hovori-o-nezdolne-dynastii-Arsenalu-jenze-posledni-dva-zapasy-prohral-A-za-par-dni-ho-cekaji-City.html">
+												<img src="/files/thumbnails/20240825-13-28-52-arteta-crop-500-400-1724585332.png" width="500" height="400" class="img-fluid w-100" alt="Arteta hovoří o nezdolné dynastii Arsenalu, jenže poslední dva zápasy prohrál. A za pár dní ho čekají City" />
+											</a>
+							            </div>
+							        </div>
+							        <div class="col-md-7 my-auto pl-0">
+							            <div class="card__post__body ">
+							                <div class="card__post__content  ">
+							                    
+							                    <div class="card__post__author-info mb-2">
+							                        <ul class="list-inline">
+							                           	
+							                           	<li class="list-inline-item">
+							                                <a href="/rubrika/Fotbal" class="card__post__category">
+																Fotbal
+															</a>
+							                            </li>
+							                            
+							                            <li class="list-inline-item">
+							                                <span class="text-dark text-capitalize">
+							                                     12. 08. 2026
+							                                </span>
+							                            </li>
+							
+							                        </ul>
+							                    </div>
+							                    <div class="card__post__title">
+							                        <h5>
+							                           <a href="/clanek/60238-Arteta-hovori-o-nezdolne-dynastii-Arsenalu-jenze-posledni-dva-zapasy-prohral-A-za-par-dni-ho-cekaji-City.html">
+															Arteta hovoří o nezdolné dynastii Arsenalu, jenže poslední dva zápasy prohrál. A za pár dní ho čekají City
+														</a>
+							                        </h5>
+							                        <p class=" mb-30 d-none">
+							                           Trenér Arsenalu Mikel Arteta stál po prohraném přípravném utkání před kamerou a místo mírnění očekávání přitvrdil. Cílem letní práce podle něj není udržet titul, ale vybudovat v klubu dynastii. Zaznělo to čtyři dny po prohře 1:3 s Betisem a týden před startem obhajoby.
+							                        </p>
+							
+							                    </div>
+							
+							                </div>
+							            </div>
+							        </div>
+							
+							    </div>
+							</div>
+							<!-- Banner ads -->
+		                    <!-- End Banner ads -->
+                    
+							<div class="card__post card__post-list card__post__transition mt-30">
+							    <div class="row ">
+							        <div class="col-md-5">
+							            <div class="card__post__transition">
+							                <a href="/clanek/60237-Sest-telefonatu-sest-odmitnuti-A-pak-si-v-Buffalu-rekli-ze-cesky-talent-na-lede-vypada-jako-Oveckin.html">
+												<img src="/files/thumbnails/2024105-20-40-13-kulich-crop-500-400-1728153613.jpg" width="500" height="400" class="img-fluid w-100" alt="Šest hovorů, šest odmítnutí. A pak si v Buffalu řekli, že český talent na ledě vypadá jako Ovečkin" />
+											</a>
+							            </div>
+							        </div>
+							        <div class="col-md-7 my-auto pl-0">
+							            <div class="card__post__body ">
+							                <div class="card__post__content  ">
+							                    
+							                    <div class="card__post__author-info mb-2">
+							                        <ul class="list-inline">
+							                           	
+							                           	<li class="list-inline-item">
+							                                <a href="/rubrika/Hokej" class="card__post__category">
+																Hokej
+															</a>
+							                            </li>
+							                            
+							                            <li class="list-inline-item">
+							                                <span class="text-dark text-capitalize">
+							                                     11. 08. 2026
+							                                </span>
+							                            </li>
+							
+							                        </ul>
+							                    </div>
+							                    <div class="card__post__title">
+							                        <h5>
+							                           <a href="/clanek/60237-Sest-telefonatu-sest-odmitnuti-A-pak-si-v-Buffalu-rekli-ze-cesky-talent-na-lede-vypada-jako-Oveckin.html">
+															Šest hovorů, šest odmítnutí. A pak si v Buffalu řekli, že český talent na ledě vypadá jako Ovečkin
+														</a>
+							                        </h5>
+							                        <p class=" mb-30 d-none">
+							                           „Při každé další volbě se mi svíral žaludek, stejně tak ostatním členům realizačního týmu," přiznal asistent generálního manažera Buffala Jerry Forton, když se vracel k draftu 2022. Sabres tehdy mezi šestnáctou a osmadvacátou volbou prožívali nejdelší chvíle celého víkendu. A dodnes si nejsou jistí, jak jim to prošlo.
+							                        </p>
+							
+							                    </div>
+							
+							                </div>
+							            </div>
+							        </div>
+							
+							    </div>
+							</div>
+							<!-- Banner ads -->
+		                    <!-- End Banner ads -->
+                    
+							<div class="card__post card__post-list card__post__transition mt-30">
+							    <div class="row ">
+							        <div class="col-md-5">
+							            <div class="card__post__transition">
+							                <a href="/clanek/60230-Na-kurtu-sili-pocit-ze-ji-dokazi-porazit-Rusedski-popsal-co-se-za-posledni-rok-u-Sabalenkove-zmenilo.html">
+												<img src="/files/thumbnails/20260527-21-13-43-1-crop-500-400-1779909223.jpg" width="500" height="400" class="img-fluid w-100" alt='„Na kurtu sílí pocit, že ji dokáží porazit." Rusedski popsal, co se za poslední rok u Sabalenkové změnilo' />
+											</a>
+							            </div>
+							        </div>
+							        <div class="col-md-7 my-auto pl-0">
+							            <div class="card__post__body ">
+							                <div class="card__post__content  ">
+							                    
+							                    <div class="card__post__author-info mb-2">
+							                        <ul class="list-inline">
+							                           	
+							                           	<li class="list-inline-item">
+							                                <a href="/rubrika/Tenis" class="card__post__category">
+																Tenis
+															</a>
+							                            </li>
+							                            
+							                            <li class="list-inline-item">
+							                                <span class="text-dark text-capitalize">
+							                                     11. 08. 2026
+							                                </span>
+							                            </li>
+							
+							                        </ul>
+							                    </div>
+							                    <div class="card__post__title">
+							                        <h5>
+							                           <a href="/clanek/60230-Na-kurtu-sili-pocit-ze-ji-dokazi-porazit-Rusedski-popsal-co-se-za-posledni-rok-u-Sabalenkove-zmenilo.html">
+															„Na kurtu sílí pocit, že ji dokáží porazit." Rusedski popsal, co se za poslední rok u Sabalenkové změnilo
+														</a>
+							                        </h5>
+							                        <p class=" mb-30 d-none">
+							                           Dva mečboly odvrátila odvážným servisem, třetí ukončila vlastní dvojchybou. Světová jednička Aryna Sabalenková vypadla na turnaji v Torontu už ve čtvrtém kole a bývalá britská jednička Greg Rusedski k tomu přidal nepříjemnou diagnózu. Aura, kterou měla Běloruska před rokem, je podle něj pryč.
+							                        </p>
+							
+							                    </div>
+							
+							                </div>
+							            </div>
+							        </div>
+							
+							    </div>
+							</div>
+							<!-- Banner ads -->
+		                    <!-- End Banner ads -->
+                    
+							<div class="card__post card__post-list card__post__transition mt-30">
+							    <div class="row ">
+							        <div class="col-md-5">
+							            <div class="card__post__transition">
+							                <a href="/clanek/60236-Djokovic-mluvil-v-show-The-Shop-o-starnuti-vykyvech-formy-i-o-odchodu-z-tenisu-Den-velkeho-rozhodnuti-se-blizi.html">
+												<img src="/files/thumbnails/2026057-06-32-11-djok-crop-500-400-1778128332.jpg" width="500" height="400" class="img-fluid w-100" alt="Djokovič mluvil v show The Shop o stárnutí, výkyvech formy i o odchodu z tenisu. Den velkého rozhodnutí se blíží" />
+											</a>
+							            </div>
+							        </div>
+							        <div class="col-md-7 my-auto pl-0">
+							            <div class="card__post__body ">
+							                <div class="card__post__content  ">
+							                    
+							                    <div class="card__post__author-info mb-2">
+							                        <ul class="list-inline">
+							                           	
+							                           	<li class="list-inline-item">
+							                                <a href="/rubrika/Tenis" class="card__post__category">
+																Tenis
+															</a>
+							                            </li>
+							                            
+							                            <li class="list-inline-item">
+							                                <span class="text-dark text-capitalize">
+							                                     11. 08. 2026
+							                                </span>
+							                            </li>
+							
+							                        </ul>
+							                    </div>
+							                    <div class="card__post__title">
+							                        <h5>
+							                           <a href="/clanek/60236-Djokovic-mluvil-v-show-The-Shop-o-starnuti-vykyvech-formy-i-o-odchodu-z-tenisu-Den-velkeho-rozhodnuti-se-blizi.html">
+															Djokovič mluvil v show The Shop o stárnutí, výkyvech formy i o odchodu z tenisu. Den velkého rozhodnutí se blíží
+														</a>
+							                        </h5>
+							                        <p class=" mb-30 d-none">
+							                           Vím, jak je porazit. Ale jsem toho ještě schopen? Přesně takovou otázku si podle vlastních slov klade devětatřicetiletý Novak Djokovič pokaždé, když proti němu stojí Jannik Sinner nebo Carlos Alcaraz. A přiznává, že mu to působí bolest.
+							                        </p>
+							
+							                    </div>
+							
+							                </div>
+							            </div>
+							        </div>
+							
+							    </div>
+							</div>
+							<!-- Banner ads -->
+		                    <!-- End Banner ads -->
+                    
+							<div class="card__post card__post-list card__post__transition mt-30">
+							    <div class="row ">
+							        <div class="col-md-5">
+							            <div class="card__post__transition">
+							                <a href="/clanek/60234-Sestimistna-castka-za-pomer-se-zenou-Platini-si-ho-mel-zavolat-na-koberecek-To-co-nasledovalo-resi-UEFA-po-deseti-letech-znovu.html">
+												<img src="/files/thumbnails/20251230-10-07-57-profimedia-1062151611-crop-500-400-1767085677.jpg" width="500" height="400" class="img-fluid w-100" alt="Šestimístná částka za poměr se ženou. Platini si ho měl zavolat na kobereček. To, co následovalo, řeší UEFA po deseti letech znovu" />
+											</a>
+							            </div>
+							        </div>
+							        <div class="col-md-7 my-auto pl-0">
+							            <div class="card__post__body ">
+							                <div class="card__post__content  ">
+							                    
+							                    <div class="card__post__author-info mb-2">
+							                        <ul class="list-inline">
+							                           	
+							                           	<li class="list-inline-item">
+							                                <a href="/rubrika/Fotbal" class="card__post__category">
+																Fotbal
+															</a>
+							                            </li>
+							                            
+							                            <li class="list-inline-item">
+							                                <span class="text-dark text-capitalize">
+							                                     11. 08. 2026
+							                                </span>
+							                            </li>
+							
+							                        </ul>
+							                    </div>
+							                    <div class="card__post__title">
+							                        <h5>
+							                           <a href="/clanek/60234-Sestimistna-castka-za-pomer-se-zenou-Platini-si-ho-mel-zavolat-na-koberecek-To-co-nasledovalo-resi-UEFA-po-deseti-letech-znovu.html">
+															Šestimístná částka za poměr se ženou. Platini si ho měl zavolat na kobereček. To, co následovalo, řeší UEFA po deseti letech znovu
+														</a>
+							                        </h5>
+							                        <p class=" mb-30 d-none">
+							                           Šéf světového fotbalu Gianni Infantino čelí uprostřed nejtěžší krize svého mandátu dalšímu podezření. Britský deník The Telegraph napsal, že UEFA v době, kdy byl jejím generálním sekretářem, vyplatila šestimístnou částku zaměstnankyni, s níž měl mít poměr. FIFA tvrzení označila za pomlouvačné, UEFA přitom platbu potvrdila.
+							                        </p>
+							
+							                    </div>
+							
+							                </div>
+							            </div>
+							        </div>
+							
+							    </div>
+							</div>
+							<!-- Banner ads -->
+		                    <!-- End Banner ads -->
+                    
+							<div class="card__post card__post-list card__post__transition mt-30">
+							    <div class="row ">
+							        <div class="col-md-5">
+							            <div class="card__post__transition">
+							                <a href="/clanek/60233-Trinact-let-o-tom-nikdo-nevedel-Ted-Mourinho-prozradil-co-v-roce-2013-skutecne-podepsal.html">
+												<img src="/files/thumbnails/20241125-10-55-04-mou-crop-500-400-1732528504.jpg" width="500" height="400" class="img-fluid w-100" alt="Třináct let o tom nikdo nevěděl. Teď Mourinho prozradil, co v roce 2013 skutečně podepsal" />
+											</a>
+							            </div>
+							        </div>
+							        <div class="col-md-7 my-auto pl-0">
+							            <div class="card__post__body ">
+							                <div class="card__post__content  ">
+							                    
+							                    <div class="card__post__author-info mb-2">
+							                        <ul class="list-inline">
+							                           	
+							                           	<li class="list-inline-item">
+							                                <a href="/rubrika/Fotbal" class="card__post__category">
+																Fotbal
+															</a>
+							                            </li>
+							                            
+							                            <li class="list-inline-item">
+							                                <span class="text-dark text-capitalize">
+							                                     11. 08. 2026
+							                                </span>
+							                            </li>
+							
+							                        </ul>
+							                    </div>
+							                    <div class="card__post__title">
+							                        <h5>
+							                           <a href="/clanek/60233-Trinact-let-o-tom-nikdo-nevedel-Ted-Mourinho-prozradil-co-v-roce-2013-skutecne-podepsal.html">
+															Třináct let o tom nikdo nevěděl. Teď Mourinho prozradil, co v roce 2013 skutečně podepsal
+														</a>
+							                        </h5>
+							                        <p class=" mb-30 d-none">
+							                           Když v roce 2013 odcházel Alex Ferguson z Manchesteru United, měl svého nástupce vybraného. Nebyl jím David Moyes. José Mourinho teď v dokumentu Netflixu přiznal, že smlouvu s United už měl podepsanou, a pak zavolal, že do Anglie nepřijede. Tedy alespoň ne na Old Trafford.
+							                        </p>
+							
+							                    </div>
+							
+							                </div>
+							            </div>
+							        </div>
+							
+							    </div>
+							</div>
+							<!-- Banner ads -->
+		                    <!-- End Banner ads -->
+                    
+							
+                           
+
+                        </div>
+                    </div>
+                    
+                	
+                    
+                </div>
+                <!-- End Category news -->
+
+                <div class="col-md-4">
+                
+                	<!-- Banner news -->
+                        <aside class="wrapper__list__article">
+                            <h4 class="border_section">reklama</h4>
+                            
+                            <div id="seznam-zone-pc-smr" class="seznam-zone-pc" style="    margin: 0px auto;"></div>
+                            
+                            <!-- 
+                            <a href="https://bezpecnyvzduch.cz/cs/info/slunecni- clony/" class="seznam-nozone">
+                                <figure>
+                                    <img src="/ads/bv- banner- slunecni_clony- 300x300.png" alt="" class="img-fluid" width="100%">
+                                </figure>
+                            </a>
+                             -->
+                        </aside>
+                        <!-- End Banner news -->
+                        
+                        <!-- Category news -->
+                        
+                        <!-- Category news -->
+                        <aside class="wrapper__list__article" >
+                            <h4 class="border_section"> žhavá témata</h4>
+                            <!-- Widget Category -->
+								
+								<div class="blog-tags p-0">
+							    <ul class="list-inline">
+							
+							        <li class="list-inline-item">
+							            <a href="/cs/news/tags/motorsport-formule-1">
+							                Formule 1
+							            </a>
+							        </li>
+							        <li class="list-inline-item">
+							            <a href="/cs/news/tags/fotbal-ceska-chance-liga">
+							                Česká Chance liga
+							            </a>
+							        </li>
+							        <li class="list-inline-item">
+							            <a href="/cs/news/tags/fotbal-premier-league">
+							                Premier League
+							            </a>
+							        </li>
+							        <li class="list-inline-item">
+							            <a href="/cs/news/tags/hokej-nhl---national-hockey-league">
+							                NHL - National Hockey League
+							            </a>
+							        </li>
+							        <li class="list-inline-item">
+							            <a href="/cs/news/tags/motorsport-ferrari">
+							                Ferrari
+							            </a>
+							        </li>
+							        <li class="list-inline-item">
+							            <a href="/cs/news/tags/fotbal-ac-sparta-praha">
+							                AC Sparta Praha
+							            </a>
+							        </li>
+							        <li class="list-inline-item">
+							            <a href="/cs/news/tags/motosport-lewis-hamilton">
+							                Lewis Hamilton
+							            </a>
+							        </li>
+							        <li class="list-inline-item">
+							            <a href="/cs/news/tags/bojove-sporty-mma">
+							                MMA
+							            </a>
+							        </li>
+							        <li class="list-inline-item">
+							            <a href="/cs/news/tags/tenis-jannik-sinner">
+							                Jannik Sinner
+							            </a>
+							        </li>
+							        <li class="list-inline-item">
+							            <a href="/cs/news/tags/tenis-carlos-alcaraz">
+							                Carlos Alcaraz
+							            </a>
+							        </li>
+							       
+							
+							    </ul>
+							</div>
+                        </aside>
+                        
+                        
+                        <!-- End Category news -->
+                       
+                        <!-- 
+                        <aside class="wrapper__list__article seznam-nozone">
+                            <h4 class="border_section">reklama</h4>
+                            
+                            
+                            <a href="https://www.ticketportal.cz/event/Cesko-Albanie" class="seznam-nozone">
+                                <figure>
+                                    <img src="/ads/_v_IwdX4X5WlQXTOjZTvyG0p3yYEtIlL4g.jpg" alt="" class="img-fluid" width="100%">
+                                </figure>
+                            </a>
+                        </aside>
+                         -->
+                        <!-- End Banner news -->
+                        
+                        
+                    <!-- social media -->
+                    <aside class="wrapper__list__article seznam-nozone">
+                        <h4 class="border_section">sleduj sportwin</h4>
+                        <!-- widget Social media -->
+						<div class="wrap__social__media">
+						    <a href="https://www.facebook.com/www.SportWin.cz" target="_blank">
+						        <div class="social__media__widget facebook">
+						            <span class="social__media__widget-icon">
+						                <i class="fa fa-facebook"></i>
+						            </span>
+						            <span class="social__media__widget-counter">
+						                1,943 sledujících
+						            </span>
+						            <span class="social__media__widget-name">
+						                like
+						            </span>
+						        </div>
+						    </a>
+						    <a href="https://x.com/SportwinCZbavse" target="_blank">
+						        <div class="social__media__widget twitter">
+						            <span class="social__media__widget-icon" style="    line-height: 30px;    text-align: center;">
+						                <img src="/themes/sportwin/images/x-twitter-brands.svg" width="22" />
+						            </span>
+						            <span class="social__media__widget-counter">
+						                432 sledujících
+						            </span>
+						            <span class="social__media__widget-name">
+						                like
+						            </span>
+						        </div>
+						    </a>
+						    
+						
+						</div>
+                    </aside>
+                    <!-- End social media -->
+					
+                        <aside class="wrapper__list__article seznam-nozone" style=" ">
+                            <h4 class="border_section">reklama</h4>
+                            
+                            
+                           <a href="https://www.bvchlazeni.cz/" target="_blank" class="seznam-nozone" >
+			                <figure class="mt-3 text-right ">
+			                        <img src="/ads/BV_chlazeni_300x300.png" alt="" class="img-fluid" style="    width: 100%;" />
+			                </figure>
+						    </a>
+			    			<!-- 
+                            <a href="https://gustokrupky.cz/" class="seznam-nozone">
+                                <figure>
+                                    <img src="/ads/aLhdszFkPek2te4Jp8sLLybRsz2LMz_ppA.jpg" alt="" class="img-fluid" width="100%">
+                                </figure>
+                            </a>
+                             -->
+                        </aside>
+                        
+ 
+
+                        <aside class="wrapper__list__article">
+                            <h4 class="border_section">nejžhavější novinky</h4>
+                            <!-- List Article -->
+							<div class="card__post__content p-3 card__post__body-border-all">
+							    
+							    <a href="/rubrika/Dalsi-sporty" class="card__post__category text-capitalize">
+									Další sporty
+								</a>
+							    <div class="card__post__author-info mb-2">
+							        <ul class="list-inline mb-0">
+							            <li class="list-inline-item">
+							                <span class="text-primary">
+							                    Petr Zajíc
+							                </span>, 
+							            </li>
+							            <li class="list-inline-item">
+							                <span class="text-dark text-capitalize">
+							                    09. 08. 2026
+							                </span>
+							            </li>
+							
+							        </ul>
+							    </div>
+							    <div class="card__post__title">
+							        <h5>
+							            <a href="/clanek/60189-Nejlepsi-zada-v-historii-kulturistiky-stala-na-stroji-ktery-dnes-v-posilovne-skoro-nenajdete.html">
+							                Nejlepší záda v historii kulturistiky stála na stroji, který dnes v posilovně skoro nenajdete
+							            </a>
+							        </h5>
+							       
+							    </div>
+							
+							</div>
+							<div class="card__post__content p-3 card__post__body-border-all">
+							    
+							    <a href="/rubrika/Fotbal" class="card__post__category text-capitalize">
+									Fotbal
+								</a>
+							    <div class="card__post__author-info mb-2">
+							        <ul class="list-inline mb-0">
+							            <li class="list-inline-item">
+							                <span class="text-primary">
+							                    Jan Matas
+							                </span>, 
+							            </li>
+							            <li class="list-inline-item">
+							                <span class="text-dark text-capitalize">
+							                    10. 08. 2026
+							                </span>
+							            </li>
+							
+							        </ul>
+							    </div>
+							    <div class="card__post__title">
+							        <h5>
+							            <a href="/clanek/60209-Turecke-silenstvi-pokracuje-Trabzonspor-si-jde-pro-dalsi-hvezdu-ktera-bude-mit-vyssi-plat-nez-Salah.html">
+							                Turecké šílenství pokračuje. Trabzonspor si jde pro další hvězdu, která bude mít vyšší plat než Salah
+							            </a>
+							        </h5>
+							       
+							    </div>
+							
+							</div>
+							<div class="card__post__content p-3 card__post__body-border-all">
+							    
+							    <a href="/rubrika/Fotbal" class="card__post__category text-capitalize">
+									Fotbal
+								</a>
+							    <div class="card__post__author-info mb-2">
+							        <ul class="list-inline mb-0">
+							            <li class="list-inline-item">
+							                <span class="text-primary">
+							                    Jan Matas
+							                </span>, 
+							            </li>
+							            <li class="list-inline-item">
+							                <span class="text-dark text-capitalize">
+							                    10. 08. 2026
+							                </span>
+							            </li>
+							
+							        </ul>
+							    </div>
+							    <div class="card__post__title">
+							        <h5>
+							            <a href="/clanek/60213-Z-Haalanda-je-turisticka-atrakce-Lode-vozi-fanousky-k-jeho-jachte-a-kdy-zrovna-neveceri-s-Jennifer-Lopez-s-usmevem-jim-mava.html">
+							                Z Haalanda je turistická atrakce. Lodě vozí fanoušky k jeho jachtě a kdy zrovna nevečeří s Jennifer Lopez, s úsměvem jim mává
+							            </a>
+							        </h5>
+							       
+							    </div>
+							
+							</div>
+							<div class="card__post__content p-3 card__post__body-border-all">
+							    
+							    <a href="/rubrika/Tenis" class="card__post__category text-capitalize">
+									Tenis
+								</a>
+							    <div class="card__post__author-info mb-2">
+							        <ul class="list-inline mb-0">
+							            <li class="list-inline-item">
+							                <span class="text-primary">
+							                    Petr Zajíc
+							                </span>, 
+							            </li>
+							            <li class="list-inline-item">
+							                <span class="text-dark text-capitalize">
+							                    09. 08. 2026
+							                </span>
+							            </li>
+							
+							        </ul>
+							    </div>
+							    <div class="card__post__title">
+							        <h5>
+							            <a href="/clanek/60192-Divak-mu-cely-zapas-radil-z-hlediste-Mensikovi-dosla-trpelivost-a-stejne-tak-i-rozhodcimu.html">
+							                Divák mu celý zápas radil z hlediště. Menšíkovi došla trpělivost, a stejně tak i rozhodčímu
+							            </a>
+							        </h5>
+							       
+							    </div>
+							
+							</div>
+  
+                        </aside>
+                        
+                        <!-- Banner news -->
+                        <aside class="wrapper__list__article seznam-zone" style="position: sticky;    top: 20px;    padding: 10px;">
+                            <h4 class="border_section">reklama</h4>
+                            
+                            <div id="seznam-zone-pc-sky" class="seznam-zone-pc" style="    margin: 0px auto;"></div>
+                            
+                        </aside>
+                        <!-- End Banner news -->
+                        
+                        
+
+                        
+
+                </div>
+                <div class="mx-auto">
+                    <!-- Pagination -->
+
+                </div>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+    </section>
+    <!-- End Popular Content news -->
+
+    <section class="wrapper__section p-0">
+    
+    	<div class="leaderboard-footer " style="background: white;">
+    		<div class=" container">
+            <div class="row">
+                <div class="col-md-12">
+                
+                	<div id="seznam-zone-pc-rectangle"   style="    margin: 10px auto;"></div>
+               	</div>
+            </div>
+         </div>
+    	</div>
+        <div class="wrapper__section__components">
+            <!-- Footer  -->
+            <footer>
+    <div class="wrapper__footer bg__footer ">
+        <div class=" container">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="widget__footer">
+                        <!-- <h4 class="footer-title">company info</h4> -->
+                        <a href="/"><figure>
+                            <img src="/themes/sportwin/images/SportWin_bila.png" alt="" class="logo-footer" />
+                        </figure>
+                        </a>
+                        <p>
+                            Přinášíme vám nejnovější zprávy a hluboké pohledy do fascinujícího světa sportu, který vás nadchne a pohltí.
+
+                            <br />
+                            <!-- <a href=" #" class="btn btn-primary mt-4 text-white">About us</a> -->
+                        </p>
+                    </div>
+                    <div class="border-line"></div>
+                    <div class="widget__footer seznam-nozone">
+                        <h4 class="footer-title">sleduj sportwin</h4>
+                        <!-- <p>
+                            Follow us and stay in touch to get the latest news
+                        </p> -->
+                        <p>
+                            <a href="https://www.facebook.com/www.SportWin.cz" target="_blank" class="btn btn-social btn-social-o facebook mr-1">
+                                <i class="fa fa-facebook-f"></i>
+                            </a>
+                            
+                            
+                            <a href="https://x.com/SportwinCZbavse" target="_blank" class="btn btn-social btn-social-o twitter mr-1" style="    "><img src="/themes/sportwin/images/x-twitter-brands.svg" width="18" style="   " /></a>
+                            
+                            <a href="https://www.instagram.com/sport.win.cz/" target="_blank" class="btn btn-social btn-social-o instagram mr-1">
+                                <i class="fa fa-instagram"></i>
+                            </a>
+                            
+                            
+                            
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Category -->
+                <div class="col-md-8">
+                    <div class="widget__footer">
+                        <h4 class="footer-title">témata</h4>
+                        <div class="link__category">
+                            <ul class="list-unstyled ">
+                                
+                                <li class="list-inline-item"><a href="/rubrika/fotbal"> Fotbal </a>
+                                <li class="list-inline-item"><a href="/rubrika/hokej"> Hokej </a>
+                                <li class="list-inline-item"><a href="/rubrika/tenis"> Tenis </a>
+                                <li class="list-inline-item"><a href="/rubrika/basketbal"> Basketbal </a>
+                                <li class="list-inline-item"><a href="/rubrika/Bojove-sporty"> Bojové sporty </a></li>
+                            	<li class="list-inline-item"><a href="/rubrika/Cyklistika"> Cyklistika </a></li>
+                           		<li class="list-inline-item"><a href="/rubrika/Florbal"> Florbal </a></li>
+                            	<li class="list-inline-item"><a href="/rubrika/Golf"> Golf </a></li>
+                            	<li class="list-inline-item"><a href="/rubrika/Hazena"> Házená </a></li>
+                            	<li class="list-inline-item"><a href="/rubrika/Volejbal"> Volejbal </a></li>
+                            	<li class="list-inline-item"><a href="/rubrika/Atletika"> Atletika </a></li>
+                            	<li class="list-inline-item"><a href="/rubrika/Motorsport"> Motorsport </a></li>
+                            	<li class="list-inline-item"><a href="/rubrika/Zimni-sporty"> Zimní sporty </a></li>
+                            	<li class="list-inline-item"><a href="/rubrika/Dalsi-sporty"> Další sporty </a></li>
+                            
+
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+
+                
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Footer Bottom -->
+    <div class="bg__footer-bottom ">
+        <div class="container">
+            <div class="row flex-column-reverse flex-md-row">
+                <div class="col-md-4">
+                    <span>
+                        © 2025 
+                       
+                    </span>
+                </div>
+                <div class="col-md-8">
+                    <ul class="list-inline ">
+                        <li class="list-inline-item">
+                            <a href="/cs/info/print/57">
+                                kontakt
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="/cs/info/print/55">
+                                podmínky užívání webové stránky
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="/cs/info/print/56">
+                                zpracování osobních údajů
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="#" id="gtagOpenCookiesSetings">
+                                změna nastavení cookies
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+            <!-- End Footer  -->
+        </div>
+    </section>
+
+	
+	<div id="seznam-zone-popup"></div>
+
+    <a href="javascript:" id="return-to-top"><i class="fa fa-chevron-up"></i></a>
+
+	<script>
+	document.getElementById('gtagOpenCookiesSetings').addEventListener('click', function (e) {
+	    e.preventDefault();
+	
+	    if (typeof googlefc !== 'undefined' && typeof googlefc.showConsentDialog === 'function') {
+	        googlefc.showConsentDialog();
+	    } else {
+	        console.warn('Google CMP není načteno');
+	    }
+	});
+	</script>
+
+	
+	<!-- 
+	<div id="adm-sticky"></div> <script src="https://rtb.admaster.cz/js/adm-sportwin.js"></script>
+	-->
+ 	<script type="text/javascript" src="/themes/sportwin/js/index.bundle.js?537a1bbd0e5129401d28"></script></body>
+	
+	<script>
+	(function(a){  (jQuery.browser=jQuery.browser||{  }).mobile=/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|iris|kindle|lge |maemo|midp|mmp|mobile.+firefox|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows ce|xda|xiino/i.test(a)||/1207|6310|6590|3gso|4thp|50[1-6]i|770s|802s|a wa|abac|ac(er|oo|s\-)|ai(ko|rn)|al(av|ca|co)|amoi|an(ex|ny|yw)|aptu|ar(ch|go)|as(te|us)|attw|au(di|\-m|r |s )|avan|be(ck|ll|nq)|bi(lb|rd)|bl(ac|az)|br(e|v)w|bumb|bw\-(n|u)|c55\/|capi|ccwa|cdm\-|cell|chtm|cldc|cmd\-|co(mp|nd)|craw|da(it|ll|ng)|dbte|dc\-s|devi|dica|dmob|do(c|p)o|ds(12|\-d)|el(49|ai)|em(l2|ul)|er(ic|k0)|esl8|ez([4-7]0|os|wa|ze)|fetc|fly(\-|_)|g1 u|g560|gene|gf\-5|g\-mo|go(\.w|od)|gr(ad|un)|haie|hcit|hd\-(m|p|t)|hei\-|hi(pt|ta)|hp( i|ip)|hs\-c|ht(c(\-| |_|a|g|p|s|t)|tp)|hu(aw|tc)|i\-(20|go|ma)|i230|iac( |\-|\/)|ibro|idea|ig01|ikom|im1k|inno|ipaq|iris|ja(t|v)a|jbro|jemu|jigs|kddi|keji|kgt( |\/)|klon|kpt |kwc\-|kyo(c|k)|le(no|xi)|lg( g|\/(k|l|u)|50|54|\-[a-w])|libw|lynx|m1\-w|m3ga|m50\/|ma(te|ui|xo)|mc(01|21|ca)|m\-cr|me(rc|ri)|mi(o8|oa|ts)|mmef|mo(01|02|bi|de|do|t(\-| |o|v)|zz)|mt(50|p1|v )|mwbp|mywa|n10[0-2]|n20[2-3]|n30(0|2)|n50(0|2|5)|n7(0(0|1)|10)|ne((c|m)\-|on|tf|wf|wg|wt)|nok(6|i)|nzph|o2im|op(ti|wv)|oran|owg1|p800|pan(a|d|t)|pdxg|pg(13|\-([1-8]|c))|phil|pire|pl(ay|uc)|pn\-2|po(ck|rt|se)|prox|psio|pt\-g|qa\-a|qc(07|12|21|32|60|\-[2-7]|i\-)|qtek|r380|r600|raks|rim9|ro(ve|zo)|s55\/|sa(ge|ma|mm|ms|ny|va)|sc(01|h\-|oo|p\-)|sdk\/|se(c(\-|0|1)|47|mc|nd|ri)|sgh\-|shar|sie(\-|m)|sk\-0|sl(45|id)|sm(al|ar|b3|it|t5)|so(ft|ny)|sp(01|h\-|v\-|v )|sy(01|mb)|t2(18|50)|t6(00|10|18)|ta(gt|lk)|tcl\-|tdg\-|tel(i|m)|tim\-|t\-mo|to(pl|sh)|ts(70|m\-|m3|m5)|tx\-9|up(\.b|g1|si)|utst|v400|v750|veri|vi(rg|te)|vk(40|5[0-3]|\-v)|vm40|voda|vulc|vx(52|53|60|61|70|80|81|83|85|98)|w3c(\-| )|webc|whit|wi(g |nc|nw)|wmlb|wonu|x700|yas\-|your|zeto|zte\-/i.test(a.substr(0,4))})(navigator.userAgent||navigator.vendor||window.opera);
+    
+	  sssp.conf.preparePositionsCallback = function () {
+	    // příkazy k provedení
+	  };
+	  
+	 
+	  /* google ads */
+	 	 var file7=document.createElement('script');
+	 	 file7.setAttribute("type","text/javascript");
+	 	 file7.setAttribute("async","true");
+	 	 file7.setAttribute("crossorigin","anonymous");
+	 	 file7.setAttribute("src", "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3812292096923808");
+	 	 document.getElementById("adsadd").appendChild(file7); 
+	 	 
+ 	 
+	  if (sssp.displaySeznamAds()) {
+
+		  $( "*" ).remove( ".seznam-nozone" );
+		  
+		  if(!jQuery.browser.mobile) {
+			    // zobrazuji Seznam reklamu -- PC
+			    sssp.getAds([{ "zoneId": 348940, id: 'seznam-zone-pc-leaderboard', width: 970, height: 210 }]);
+			    sssp.getAds([{ "zoneId": 348943, id: 'seznam-zone-pc-smr', width: 300, height: 300 }]);
+			    sssp.getAds([{ "zoneId": 348946, id: 'seznam-zone-pc-sky', width: 300, height: 600 }]);
+			    sssp.getAds([{ "zoneId": 348955, id: 'seznam-zone-pc-rectangle', width: 970, height: 310 }]);
+			    
+		  } else {
+ 
+			  
+			  $( "div" ).remove( ".seznam-zone.leaderboard");
+			    sssp.getAds([{ "zoneId": 348967, id: 'seznam-zone-pc-smr', width: 480, height: 480 }]);
+			    sssp.getAds([{ "zoneId": 348967 , id: 'seznam-zone-pc-sky', width: 480, height: 480 }]);
+			    sssp.getAds([{ "zoneId": 398298 , id: 'seznam-zone-popup', width: 500, height: 200 }]);
+				//getPopUp(700, "seznam-zone-popup", 348970);
+		  }
+		  
+		  
+	    
+	    
+	  } else {
+
+		  $( "div" ).remove( ".seznam-zone" );
+		  
+		
+		 	 
+		 	 
+		  
+		  //sssp.getAds([{ "zoneId": 348946, id: 'seznam-zone-pc-sky', width: 300, height: 600 }]);
+		    
+		  //var el = document.getElementById('seznam-zone-pc-sky');
+	      //el.innerHTML = '<a href="https://www.fbtlogistics.cz/" class="seznam-nozone"><figure><img src="/ads/300x300_FBT-(2024-09).jpg" alt="" class="img-fluid" width="100%"></figure></a>';
+	    	
+		  
+		     
+	     
+	    	 
+	    	 	var el = document.getElementById('seznam-zone-pc-sky');
+	 	    	el.innerHTML = '<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-3812292096923808" data-ad-slot="9006889767" data-ad-format="auto" data-full-width-responsive="true"></ins>';
+	 	    	
+	 	    	
+	    		var el = document.getElementById('seznam-zone-pc-leaderboard');
+	 	    	//el.innerHTML = '<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-3812292096923808" data-ad-slot="1365237968" data-ad-format="auto" data-full-width-responsive="true"></ins>';
+	 	    	//el.innerHTML = '<a href="https://www.clavin.cz/" class="seznam-nozone"><figure><img src="/ads/banner_efotbal_Clavin_980x200_3.jpg" alt="" class="img-fluid" width="100%"></figure></a>';
+	 	    	
+	 	    	var el = document.getElementById('seznam-zone-pc-smr');
+	 	    	el.innerHTML = '<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-3812292096923808" data-ad-slot="5195514872" data-ad-format="auto" data-full-width-responsive="true"></ins>';
+	 	    	
+	 	    	
+	 	    	//el.innerHTML = '<a href="https://www.bvchlazeni.cz/" target="_blank"><img src="/ads/BV_chlazeni_300x300.png" alt="" width="100%" /></a>'; 
+	 	    	//el.innerHTML = '<a href="https://www.palmknihy.cz/?utm_source=mediaboard&utm_medium=floating&utm_campaign=brandawareness1124" class="seznam-nozone"><figure><img src="/ads/golf-digest_9_palmknihy_produkt_300x300.png" alt="" class="img-fluid" width="100%"></figure></a>';
+	 	    	//el.innerHTML = '<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-3812292096923808" data-ad-slot="5195514872" data-ad-format="auto" data-full-width-responsive="true"></ins>';
+	 	    	
+	 	    	(adsbygoogle = window.adsbygoogle || []).push({ });
+	 	    	(adsbygoogle = window.adsbygoogle || []).push({ });
+	 	    	(adsbygoogle = window.adsbygoogle || []).push({ });
+	 	    	
+	 	    	
+	    	 if(!jQuery.browser.mobile) {
+
+	   		  		//sssp.getAds([{ "zoneId": 348940, id: 'seznam-zone-pc-rectangle', width: 970, height: 210 }]);
+	   		  	
+	   		  		var el = document.getElementById('seznam-zone-pc-rectangle');
+	      			el.innerHTML = '<a href="https://clavin.cz/?utm_source=sportwin&utm_medium=banner" class="seznam-nozone"><figure><img src="/ads/banner_Clavin_Intensive_980x200.jpg" alt="" class="img-fluid" width="100%"></figure></a>';
+	      
+	    			// var el = document.getElementById('seznam-zone-pc-small-leaderboard');
+		 	    	//el.innerHTML = '<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-3812292096923808"  data-ad-slot="9209328807"  data-ad-format="auto"  data-full-width-responsive="true"></ins>';
+		 	    	//(adsbygoogle = window.adsbygoogle || []).push({ });
+	    		
+	    	 } else {
+
+	   		 	$( "div" ).remove( "#seznam-zone-pc-small-leaderboard" );
+	    	 }
+	  	 		
+	  	 		
+	  }
+	  
+	  if (!sssp.displaySeznamAds() && jQuery.browser.mobile) { 
+		    // Načti JS
+		    var script = document.createElement('script');
+		    script.async = true;
+		    script.src = 'https://cdn.performax.cz/yi/adsbypx/px_autoads.js?aab=ulite';
+		    document.head.appendChild(script);
+
+		    // Načti CSS
+		    //var link = document.createElement('link');
+		    //link.rel = 'stylesheet';
+		    //link.href = 'https://cdn.performax.cz/yi/adsbypx/px_autoads.css';
+		    //document.head.appendChild(link);
+		}
+	  
+	</script>
+	
+	                    <script>
+                    if (sssp.displaySeznamAds()) {
+
+							  
+							  if(!jQuery.browser.mobile) {
+								    // zobrazuji Seznam reklamu -- PC
+								    
+							  } else {
+					
+								    sssp.getAds([{ "zoneId": 348958, id: 'seznam-zone-mobile-smr-hp1', width: 720, height: 1280 }]);
+								    sssp.getAds([{ "zoneId": 348961 , id: 'seznam-zone-mobile-smr-hp2', width: 480, height: 480 }]);
+					
+							  }
+							  
+							  
+						    
+						    
+						  } else {
+							  
+							  if(!jQuery.browser.mobile) {
+								  
+								  var el = document.getElementById('seznam-zone-mobile-smr-hp1');
+						 	    	el.innerHTML = '<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-3812292096923808" data-ad-slot="1365237968" data-ad-format="auto" data-full-width-responsive="true"></ins>';
+						 	    	(adsbygoogle = window.adsbygoogle || []).push({ });
+
+						    		var el = document.getElementById('seznam-zone-mobile-smr-hp2'); 
+						 	    	el.innerHTML = '<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-3812292096923808" data-ad-slot="1365237968" data-ad-format="auto" data-full-width-responsive="true"></ins>';
+						 	    	(adsbygoogle = window.adsbygoogle || []).push({ });
+								  
+							  } else {
+
+						    		var el = document.getElementById('seznam-zone-mobile-smr-hp2');
+						 	    	el.innerHTML = '<ins class="adsbygoogle" style="display:block" data-ad-format="fluid" data-ad-layout-key="-7f+dx+1c-31+77" data-ad-client="ca-pub-3812292096923808" data-ad-slot="8505361388"></ins>';
+						 	    	(adsbygoogle = window.adsbygoogle || []).push({ });
+							  }
+							  
+					 	    	
+
+					    		
+					 	    	
+					 	    	
+						  }
+                    </script>
+
+	
+</html>

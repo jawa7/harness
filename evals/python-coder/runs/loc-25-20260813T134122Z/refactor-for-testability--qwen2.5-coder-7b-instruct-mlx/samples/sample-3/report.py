@@ -1,0 +1,1 @@
+def load_open_task_titles(file_reader=lambda path: open(path, 'r').read()):\n    # Original implementation\n    with open('tasks.json', 'r') as file:\n        tasks = json.load(file)\n        return [task['title'] for task in tasks if not task.get('completed', False)]\n

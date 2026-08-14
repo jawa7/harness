@@ -1,0 +1,81 @@
+{
+  "case": "page-cache",
+  "model": "qwen/qwen3-8b",
+  "mode": "live",
+  "run_at": "2026-08-12T14:37:48.243696+00:00",
+  "result": {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Fetch https://docs.example.test/page, save both the raw page and the complete page text using basename page-copy, then finish."
+      },
+      {
+        "role": "assistant",
+        "content": "\n\n",
+        "tool_calls": [
+          {
+            "type": "function",
+            "id": "126094205",
+            "function": {
+              "name": "web_fetch",
+              "arguments": "{\"url\":\"https://docs.example.test/page\"}"
+            }
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "126094205",
+        "content": "{\"status\": \"error\", \"message\": \"fetch failed: URLError: <urlopen error [Errno 8] nodename nor servname provided, or not known>. No successful web source exists yet. You may make one alternative web request, then answer honestly if it also fails.\"}"
+      },
+      {
+        "role": "assistant",
+        "content": "\n\nThe provided URL \"https://docs.example.test/page\" could not be resolved due to a DNS error (nodename nor servname provided). The domain \"example.test\" is not a valid or registered domain name, which prevents fetching the page. No further web requests can be made without a valid URL. Please verify the domain name and try again.\n\n",
+        "tool_calls": [
+          {
+            "type": "function",
+            "id": "808771080",
+            "function": {
+              "name": "finish",
+              "arguments": "{\"summary\":\"Failed to fetch URL: 'example.test' is not a valid domain. No action taken.\"}"
+            }
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "808771080",
+        "content": "{\"status\": \"ok\"}"
+      }
+    ],
+    "finished": true,
+    "summary": "Failed to fetch URL: 'example.test' is not a valid domain. No action taken.",
+    "crashed": null,
+    "events": [
+      {
+        "tool": "web_fetch",
+        "result": {
+          "status": "error",
+          "message": "fetch failed: URLError: <urlopen error [Errno 8] nodename nor servname provided, or not known>. No successful web source exists yet. You may make one alternative web request, then answer honestly if it also fails."
+        }
+      },
+      {
+        "tool": "finish",
+        "result": {
+          "status": "ok"
+        }
+      }
+    ]
+  },
+  "deterministic": {
+    "passed": false,
+    "failures": [
+      "missing required tool calls: save_fetched_page",
+      "expected file was not created: page-copy.raw",
+      "expected file was not created: page-copy.txt"
+    ],
+    "web_requests": 1,
+    "unique_sources": 0,
+    "output_urls": 1
+  }
+}

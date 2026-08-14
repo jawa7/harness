@@ -1,0 +1,13 @@
+{
+  "relevance": 10,
+  "completeness": 10,
+  "sources": 10,
+  "dimensions": [
+    "relevance",
+    "completeness",
+    "sources"
+  ],
+  "average": 10.0,
+  "rationale": "The answer directly addresses the task by comparing both model-card pages, includes both URLs as requested, highlights two meaningful differences (modality and context window), and ties all claims to the provided sources without introducing external information.",
+  "passed": true
+}

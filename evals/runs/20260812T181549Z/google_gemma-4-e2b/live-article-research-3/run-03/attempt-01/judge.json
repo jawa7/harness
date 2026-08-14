@@ -1,0 +1,15 @@
+{
+  "relevance": 3,
+  "completeness": 4,
+  "sources": 2,
+  "limitations": 5,
+  "dimensions": [
+    "relevance",
+    "completeness",
+    "sources",
+    "limitations"
+  ],
+  "average": 3.5,
+  "rationale": "Relevance is low due to two articles (Jun 30, 2025 and June 19, 2026) outside the 30-day window. Completeness is partial as one article lacks a date. Sources have URLs but fail to verify dates. Limitations are unaddressed; answer should note date discrepancies and missing publication date for the third article.",
+  "passed": false
+}

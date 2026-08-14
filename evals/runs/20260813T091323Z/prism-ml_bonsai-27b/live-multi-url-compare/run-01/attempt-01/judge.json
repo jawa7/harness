@@ -1,0 +1,13 @@
+{
+  "relevance": 10,
+  "completeness": 10,
+  "sources": 10,
+  "dimensions": [
+    "relevance",
+    "completeness",
+    "sources"
+  ],
+  "average": 10.0,
+  "rationale": "The answer directly addresses the task by comparing the two model-card pages using the provided URLs. It identifies at least two meaningful differences (multimodal vs text-only, parameter scale/context window) and includes additional architectural/feature distinctions. All claims are tied to the cited URLs, with no unrequested criteria added.",
+  "passed": true
+}

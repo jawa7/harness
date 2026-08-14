@@ -1,0 +1,15 @@
+{
+  "relevance": 10,
+  "completeness": 8,
+  "sources": 10,
+  "limitations": 5,
+  "dimensions": [
+    "relevance",
+    "completeness",
+    "sources",
+    "limitations"
+  ],
+  "average": 8.25,
+  "rationale": "Relevance: The answer provides exactly 10 Czech sports articles within the required timeframe. Completeness: Meets the count requirement but all URLs are identical, possibly due to a single source page. Sources: All claims cite the same source URL, which is acceptable if the articles are distinct on that page. Limitations: The answer does not address the tool's web_search error or note potential limitations in sourcing 10 unique articles from a single page.",
+  "passed": true
+}

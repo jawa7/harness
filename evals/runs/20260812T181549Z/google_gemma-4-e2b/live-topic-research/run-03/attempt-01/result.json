@@ -1,0 +1,136 @@
+{
+  "case": "live-topic-research",
+  "model": "google/gemma-4-e2b",
+  "mode": "live",
+  "target_url": null,
+  "target_urls": {},
+  "run_at": "2026-08-12T18:44:01.066500+00:00",
+  "result": {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Research the benefits and limitations of local tool-calling language models. Provide a short conclusion, key findings, and source URLs for each claim."
+      },
+      {
+        "role": "assistant",
+        "content": "",
+        "tool_calls": [
+          {
+            "type": "function",
+            "id": "151381834",
+            "function": {
+              "name": "web_search",
+              "arguments": "{\"query\":\"benefits and limitations of local tool-calling language models\"}"
+            }
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "151381834",
+        "content": "{\"status\": \"ok\", \"results\": [{\"title\": \"Tool Calling with Local LLMs: A Practical Evaluation - Docker\", \"url\": \"https://www.docker.com/blog/local-llm-tool-calling-a-practical-evaluation\", \"snippet\": \"We realized we had no definite answer forthat. Local LLM models offer control, cost-efficiency, and privacy, but when it comes to structured tool use, deciding when and how to act, they can behave very differently. We decided to dig deep and test this properly. We started with manual experimentation, then built a framework to scale our testing. This blog documents that journey and shares which models ranked highest on our tool-calling leaderboard. [...] Qwen models dominate: Even the 8B version \"}, {\"title\": \"Pros and Cons of Running a Large Language Model Locally -- Pure AI\", \"url\": \"https://pureai.com/articles/2025/09/02/pros-and-cons-of-running-a-large-language-model-locally.aspx\", \"snippet\": \"Briefly, advantages of running an LLM system locally include:\\n\\nThese three advantages of local LLM systems depend on specific usage scenario conditions.\\n\\nThe disadvantages of running a local LLM system include: [...] In short, the decision of whether to use a local LLM system or a cloud LLM system, or a combination of systems, depends on the usage scenario. As a general rule of thumb, relatively straightforward scenarios, such as document summarization, question-answering, and sentiment analysis\"}, {\"title\": \"Mastering LLM Tool Calling: The Complete Framework for ...\", \"url\": \"https://machinelearningmastery.com/mastering-llm-tool-calling-the-complete-framework-for-connecting-models-to-the-real-world\", \"snippet\": \"Tool calling is the mechanism that lets large language models invoke external functions and APIs. It bridges the gap between language generation and real-world actions. Without tools, an LLM is limited to what it learned during training. With tools, it can access current data, take actions, and integrate with your systems. [...] The goal isn\\u2019t to eliminate automation. It\\u2019s to balance automation benefits with risk management. Start with more human oversight, then gradually reduce it as you build \"}, {\"title\": \"To Call or Not to Call: A Framework to Assess and Optimize LLM Tool Calling\", \"url\": \"https://arxiv.org/html/2605.00737v1\", \"snippet\": \"However, our approach has limitations. The estimators are not perfect and may introduce errors. Future works may investigate why tool calls can lead to negative utility, how tool descriptions influence both perceived and latent utility, and develop more accurate predictors and more effective controllers for tool-calling decisions. [...] Table 1 demonstrates the need for such assessments for an example task, where models can invoke a Web search tool.\\nAcross different models, we see that (a) while\"}, {\"title\": \"Medium\", \"url\": \"https://medium.com/@springrod/why-you-should-use-local-models-a3fce1124c94\", \"snippet\": \"This is a mistake. It\\u2019s important to understand available model choices and their strengths and weaknesses. Mature Gen AI applications should use a mix of models for different things. Local LLMs are now very useful for many tasks, and their capabilities are growing faster than those of large closed models. Many local LLMs now offer dependable support for tool calling, which was not the case only a few months ago. Local embedding models are often the best choice, period. [...] But different model\"}]}"
+      },
+      {
+        "role": "assistant",
+        "content": "Here is a summary of the benefits and limitations of local tool-calling language models, based on the research conducted.\n\n### Conclusion\n\nLocal tool-calling language models offer a compelling trade-off: they provide significant advantages in terms of **control, cost-efficiency, and data privacy**, making them ideal for specific use cases. However, their implementation requires careful consideration regarding **predictability and error management** when invoking external tools. The decision to use a local model versus a cloud model should be scenario-dependent, balancing the need for automation with necessary risk management and human oversight.\n\n### Key Findings\n\n#### ✅ Benefits of Local Tool-Calling LLMs\n\n1.  **Control and Customization:** Running models locally gives users greater control over the inference process, which is crucial for specific application requirements.\n2.  **Cost-Efficiency:** Local deployment can reduce reliance on external API calls or cloud computing costs, leading to lower operational expenses.\n3.  **Privacy:** For sensitive tasks, running models on local infrastructure ensures that data processing and tool invocation do not rely on third-party servers, enhancing data privacy.\n4.  **Growing Capability:** Many local LLMs are now offering dependable support for tool calling, indicating that their capabilities are rapidly improving.\n\n#### ❌ Limitations and Challenges\n\n1.  **Tool Decision Complexity:** Deciding *when* and *how* an LLM should invoke a tool can be challenging, as the behavior of local models might differ significantly from cloud-based ones.\n2.  **Predictability Issues:** The mechanisms used to predict or estimate tool calls are not perfect and can introduce errors into the automation process.\n3.  **Scenario Dependency:** The optimal choice between a local LLM system and a cloud LLM system (or a combination) is highly dependent on the specific usage scenario.\n4.  **Need for Oversight:** To mitigate risks associated with tool use, it is recommended to start with more human oversight and gradually reduce it as the system is built.\n\n### Source URLs\n\nHere are the sources consulted for these findings:\n\n*   **Tool Calling Evaluation:** `https://www.docker.com/blog/local-llm-tool-calling-a-practical-evaluation`\n*   **Pros and Cons of Running LLMs Locally:** `https://pureai.com/articles/2025/09/02/pros-and-cons-of-running-a-large-language-model-locally.aspx`\n*   **Mastering LLM Tool Calling Framework:** `https://machinelearningmastery.com/mastering-llm-tool-calling-the-complete-framework-for-connecting-models-to-the-real-world`\n*   **Assessing Tool Calling:** `https://arxiv.org/html/2605.00737v1`\n*   **Model Maturity Discussion:** `https://medium.com/@springrod/why-you-should-use-local-models-a3fce1124c94`"
+      }
+    ],
+    "finished": true,
+    "summary": "Here is a summary of the benefits and limitations of local tool-calling language models, based on the research conducted.\n\n### Conclusion\n\nLocal tool-calling language models offer a compelling trade-off: they provide significant advantages in terms of **control, cost-efficiency, and data privacy**, making them ideal for specific use cases. However, their implementation requires careful consideration regarding **predictability and error management** when invoking external tools. The decision to use a local model versus a cloud model should be scenario-dependent, balancing the need for automation with necessary risk management and human oversight.\n\n### Key Findings\n\n#### ✅ Benefits of Local Tool-Calling LLMs\n\n1.  **Control and Customization:** Running models locally gives users greater control over the inference process, which is crucial for specific application requirements.\n2.  **Cost-Efficiency:** Local deployment can reduce reliance on external API calls or cloud computing costs, leading to lower operational expenses.\n3.  **Privacy:** For sensitive tasks, running models on local infrastructure ensures that data processing and tool invocation do not rely on third-party servers, enhancing data privacy.\n4.  **Growing Capability:** Many local LLMs are now offering dependable support for tool calling, indicating that their capabilities are rapidly improving.\n\n#### ❌ Limitations and Challenges\n\n1.  **Tool Decision Complexity:** Deciding *when* and *how* an LLM should invoke a tool can be challenging, as the behavior of local models might differ significantly from cloud-based ones.\n2.  **Predictability Issues:** The mechanisms used to predict or estimate tool calls are not perfect and can introduce errors into the automation process.\n3.  **Scenario Dependency:** The optimal choice between a local LLM system and a cloud LLM system (or a combination) is highly dependent on the specific usage scenario.\n4.  **Need for Oversight:** To mitigate risks associated with tool use, it is recommended to start with more human oversight and gradually reduce it as the system is built.\n\n### Source URLs\n\nHere are the sources consulted for these findings:\n\n*   **Tool Calling Evaluation:** `https://www.docker.com/blog/local-llm-tool-calling-a-practical-evaluation`\n*   **Pros and Cons of Running LLMs Locally:** `https://pureai.com/articles/2025/09/02/pros-and-cons-of-running-a-large-language-model-locally.aspx`\n*   **Mastering LLM Tool Calling Framework:** `https://machinelearningmastery.com/mastering-llm-tool-calling-the-complete-framework-for-connecting-models-to-the-real-world`\n*   **Assessing Tool Calling:** `https://arxiv.org/html/2605.00737v1`\n*   **Model Maturity Discussion:** `https://medium.com/@springrod/why-you-should-use-local-models-a3fce1124c94`",
+    "crashed": null,
+    "events": [
+      {
+        "tool": "web_search",
+        "result": {
+          "status": "ok",
+          "results": [
+            {
+              "title": "Tool Calling with Local LLMs: A Practical Evaluation - Docker",
+              "url": "https://www.docker.com/blog/local-llm-tool-calling-a-practical-evaluation",
+              "snippet": "We realized we had no definite answer forthat. Local LLM models offer control, cost-efficiency, and privacy, but when it comes to structured tool use, deciding when and how to act, they can behave very differently. We decided to dig deep and test this properly. We started with manual experimentation, then built a framework to scale our testing. This blog documents that journey and shares which models ranked highest on our tool-calling leaderboard. [...] Qwen models dominate: Even the 8B version "
+            },
+            {
+              "title": "Pros and Cons of Running a Large Language Model Locally -- Pure AI",
+              "url": "https://pureai.com/articles/2025/09/02/pros-and-cons-of-running-a-large-language-model-locally.aspx",
+              "snippet": "Briefly, advantages of running an LLM system locally include:\n\nThese three advantages of local LLM systems depend on specific usage scenario conditions.\n\nThe disadvantages of running a local LLM system include: [...] In short, the decision of whether to use a local LLM system or a cloud LLM system, or a combination of systems, depends on the usage scenario. As a general rule of thumb, relatively straightforward scenarios, such as document summarization, question-answering, and sentiment analysis"
+            },
+            {
+              "title": "Mastering LLM Tool Calling: The Complete Framework for ...",
+              "url": "https://machinelearningmastery.com/mastering-llm-tool-calling-the-complete-framework-for-connecting-models-to-the-real-world",
+              "snippet": "Tool calling is the mechanism that lets large language models invoke external functions and APIs. It bridges the gap between language generation and real-world actions. Without tools, an LLM is limited to what it learned during training. With tools, it can access current data, take actions, and integrate with your systems. [...] The goal isn’t to eliminate automation. It’s to balance automation benefits with risk management. Start with more human oversight, then gradually reduce it as you build "
+            },
+            {
+              "title": "To Call or Not to Call: A Framework to Assess and Optimize LLM Tool Calling",
+              "url": "https://arxiv.org/html/2605.00737v1",
+              "snippet": "However, our approach has limitations. The estimators are not perfect and may introduce errors. Future works may investigate why tool calls can lead to negative utility, how tool descriptions influence both perceived and latent utility, and develop more accurate predictors and more effective controllers for tool-calling decisions. [...] Table 1 demonstrates the need for such assessments for an example task, where models can invoke a Web search tool.\nAcross different models, we see that (a) while"
+            },
+            {
+              "title": "Medium",
+              "url": "https://medium.com/@springrod/why-you-should-use-local-models-a3fce1124c94",
+              "snippet": "This is a mistake. It’s important to understand available model choices and their strengths and weaknesses. Mature Gen AI applications should use a mix of models for different things. Local LLMs are now very useful for many tasks, and their capabilities are growing faster than those of large closed models. Many local LLMs now offer dependable support for tool calling, which was not the case only a few months ago. Local embedding models are often the best choice, period. [...] But different model"
+            }
+          ]
+        },
+        "network_request_executed": true
+      }
+    ],
+    "recovered_from_loop": false,
+    "loop_recovery_failed": false,
+    "recovered_from_web_limit": false,
+    "recovered_from_turn_limit": false,
+    "final_recovery_failed": false,
+    "normalized_content_tool_calls": 0,
+    "web_requests": 1
+  },
+  "deterministic": {
+    "passed": true,
+    "failures": [],
+    "web_requests": 1,
+    "unique_sources": 5,
+    "output_urls": 5,
+    "output_dates": 0
+  },
+  "outcome": "completed",
+  "evidence": {
+    "cited_urls": [
+      "https://arxiv.org/html/2605.00737v1`",
+      "https://machinelearningmastery.com/mastering-llm-tool-calling-the-complete-framework-for-connecting-models-to-the-real-world`",
+      "https://medium.com/@springrod/why-you-should-use-local-models-a3fce1124c94`",
+      "https://pureai.com/articles/2025/09/02/pros-and-cons-of-running-a-large-language-model-locally.aspx`",
+      "https://www.docker.com/blog/local-llm-tool-calling-a-practical-evaluation`"
+    ],
+    "cited_sources": [],
+    "available_sources": [
+      {
+        "url": "https://www.docker.com/blog/local-llm-tool-calling-a-practical-evaluation",
+        "title": "Tool Calling with Local LLMs: A Practical Evaluation - Docker",
+        "excerpt": "We realized we had no definite answer forthat. Local LLM models offer control, cost-efficiency, and privacy, but when it comes to structured tool use, deciding when and how to act, they can behave very differently. We decided to dig deep and test this properly. We started with manual experimentation, then built a framework to scale our testing. This blog documents that journey and shares which models ranked highest on our tool-calling leaderboard. [...] Qwen models dominate: Even the 8B version ",
+        "tool": "web_search"
+      },
+      {
+        "url": "https://pureai.com/articles/2025/09/02/pros-and-cons-of-running-a-large-language-model-locally.aspx",
+        "title": "Pros and Cons of Running a Large Language Model Locally -- Pure AI",
+        "excerpt": "Briefly, advantages of running an LLM system locally include:\n\nThese three advantages of local LLM systems depend on specific usage scenario conditions.\n\nThe disadvantages of running a local LLM system include: [...] In short, the decision of whether to use a local LLM system or a cloud LLM system, or a combination of systems, depends on the usage scenario. As a general rule of thumb, relatively straightforward scenarios, such as document summarization, question-answering, and sentiment analysis",
+        "tool": "web_search"
+      },
+      {
+        "url": "https://machinelearningmastery.com/mastering-llm-tool-calling-the-complete-framework-for-connecting-models-to-the-real-world",
+        "title": "Mastering LLM Tool Calling: The Complete Framework for ...",
+        "excerpt": "Tool calling is the mechanism that lets large language models invoke external functions and APIs. It bridges the gap between language generation and real-world actions. Without tools, an LLM is limited to what it learned during training. With tools, it can access current data, take actions, and integrate with your systems. [...] The goal isn’t to eliminate automation. It’s to balance automation benefits with risk management. Start with more human oversight, then gradually reduce it as you build ",
+        "tool": "web_search"
+      },
+      {
+        "url": "https://arxiv.org/html/2605.00737v1",
+        "title": "To Call or Not to Call: A Framework to Assess and Optimize LLM Tool Calling",
+        "excerpt": "However, our approach has limitations. The estimators are not perfect and may introduce errors. Future works may investigate why tool calls can lead to negative utility, how tool descriptions influence both perceived and latent utility, and develop more accurate predictors and more effective controllers for tool-calling decisions. [...] Table 1 demonstrates the need for such assessments for an example task, where models can invoke a Web search tool.\nAcross different models, we see that (a) while",
+        "tool": "web_search"
+      },
+      {
+        "url": "https://medium.com/@springrod/why-you-should-use-local-models-a3fce1124c94",
+        "title": "Medium",
+        "excerpt": "This is a mistake. It’s important to understand available model choices and their strengths and weaknesses. Mature Gen AI applications should use a mix of models for different things. Local LLMs are now very useful for many tasks, and their capabilities are growing faster than those of large closed models. Many local LLMs now offer dependable support for tool calling, which was not the case only a few months ago. Local embedding models are often the best choice, period. [...] But different model",
+        "tool": "web_search"
+      }
+    ]
+  }
+}

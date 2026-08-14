@@ -1,0 +1,342 @@
+[
+  {
+    "model": "websailor-7b-i1",
+    "case": "live-article-research-3",
+    "status": "diagnostic",
+    "aggregate": {
+      "status": "diagnostic",
+      "passed": null,
+      "successes": 0,
+      "runs": 1
+    },
+    "completed_runs": 1,
+    "inconclusive_runs": 0,
+    "repetitions": 1,
+    "loop_recoveries": 0,
+    "failed_loop_recoveries": 0,
+    "web_limit_recoveries": 1,
+    "turn_limit_recoveries": 0,
+    "normalized_content_tool_calls": 0,
+    "judge_overlaps_target": false,
+    "attempts": [
+      {
+        "repetition": 1,
+        "retry": 1,
+        "target_url": null,
+        "target_urls": {},
+        "outcome": "completed",
+        "deterministic": {
+          "passed": false,
+          "failures": [
+            "final recovery did not produce a user-facing final answer",
+            "answer contains 9 URLs; expected exactly 3",
+            "answer contains 1 dates; expected at least 3"
+          ],
+          "web_requests": 12,
+          "unique_sources": 16,
+          "output_urls": 9,
+          "output_dates": 1
+        },
+        "judge": {
+          "relevance": 6,
+          "completeness": 5,
+          "sources": 4,
+          "limitations": 7,
+          "dimensions": [
+            "relevance",
+            "completeness",
+            "sources",
+            "limitations"
+          ],
+          "average": 5.5,
+          "rationale": "Relevance: Partially addresses task with some off-topic sources (Nature article). Completeness: Exceeds 3 articles but lacks proper date verification and structured output. Sources: Mix of relevant (Docker, Jdhodges) and irrelevant (Nature) URLs. Limitations: User exceeded web request limit, answer includes 9 URLs instead of 3, and fails to clearly state unmet criteria.",
+          "passed": false
+        },
+        "recovered_from_loop": false,
+        "loop_recovery_failed": false,
+        "recovered_from_web_limit": true,
+        "recovered_from_turn_limit": false
+      }
+    ]
+  },
+  {
+    "model": "websailor-7b-i1",
+    "case": "live-czech-sports-10",
+    "status": "diagnostic",
+    "aggregate": {
+      "status": "diagnostic",
+      "passed": null,
+      "successes": 0,
+      "runs": 1
+    },
+    "completed_runs": 1,
+    "inconclusive_runs": 0,
+    "repetitions": 1,
+    "loop_recoveries": 1,
+    "failed_loop_recoveries": 1,
+    "web_limit_recoveries": 0,
+    "turn_limit_recoveries": 0,
+    "normalized_content_tool_calls": 0,
+    "judge_overlaps_target": false,
+    "attempts": [
+      {
+        "repetition": 1,
+        "retry": 1,
+        "target_url": null,
+        "target_urls": {},
+        "outcome": "completed",
+        "deterministic": {
+          "passed": false,
+          "failures": [
+            "final recovery did not produce a user-facing final answer",
+            "answer contains 8 URLs; expected at least 10",
+            "answer contains 8 URLs; expected exactly 10",
+            "answer contains 0 dates; expected at least 10"
+          ],
+          "web_requests": 4,
+          "unique_sources": 9,
+          "output_urls": 8,
+          "output_dates": 0
+        },
+        "judge": {
+          "relevance": 4,
+          "completeness": 3,
+          "sources": 2,
+          "limitations": 5,
+          "dimensions": [
+            "relevance",
+            "completeness",
+            "sources",
+            "limitations"
+          ],
+          "average": 3.5,
+          "rationale": "Relevance: Some entries are non-Czech language or lack clear sports focus. Completeness: Only 8 URLs provided, no dates included. Sources: Wikipedia and English-language sites dominate; Czech-language articles are scarce. Limitations: Answer fails to address missing Czech content, date verification, and underreports required data.",
+          "passed": false
+        },
+        "recovered_from_loop": true,
+        "loop_recovery_failed": true,
+        "recovered_from_web_limit": false,
+        "recovered_from_turn_limit": false
+      }
+    ]
+  },
+  {
+    "model": "websailor-7b-i1",
+    "case": "live-multi-url-compare",
+    "status": "diagnostic",
+    "aggregate": {
+      "status": "diagnostic",
+      "passed": null,
+      "successes": 0,
+      "runs": 1
+    },
+    "completed_runs": 1,
+    "inconclusive_runs": 0,
+    "repetitions": 1,
+    "loop_recoveries": 0,
+    "failed_loop_recoveries": 0,
+    "web_limit_recoveries": 0,
+    "turn_limit_recoveries": 0,
+    "normalized_content_tool_calls": 0,
+    "judge_overlaps_target": false,
+    "attempts": [
+      {
+        "repetition": 1,
+        "retry": 1,
+        "target_url": null,
+        "target_urls": {
+          "first_url": "https://huggingface.co/Qwen/Qwen3.5-0.8B",
+          "second_url": "https://huggingface.co/Qwen/Qwen3-0.6B"
+        },
+        "outcome": "completed",
+        "deterministic": {
+          "passed": false,
+          "failures": [
+            "answer contains 0 URLs; expected at least 2",
+            "answer contains 0 URLs; expected exactly 2"
+          ],
+          "web_requests": 2,
+          "unique_sources": 2,
+          "output_urls": 0,
+          "output_dates": 0
+        },
+        "judge": {
+          "relevance": 10,
+          "completeness": 8,
+          "sources": 0,
+          "dimensions": [
+            "relevance",
+            "completeness",
+            "sources"
+          ],
+          "average": 6.0,
+          "rationale": "The answer addresses the task by comparing two models with two differences (size, modalities). However, it lacks the required URLs in the answer despite fetching them. Sources score is 0 because claims aren't tied to specific URLs as requested.",
+          "passed": false
+        },
+        "recovered_from_loop": false,
+        "loop_recovery_failed": false,
+        "recovered_from_web_limit": false,
+        "recovered_from_turn_limit": false
+      }
+    ]
+  },
+  {
+    "model": "websailor-7b-i1",
+    "case": "live-page-cache",
+    "status": "diagnostic",
+    "aggregate": {
+      "status": "diagnostic",
+      "passed": null,
+      "successes": 0,
+      "runs": 1
+    },
+    "completed_runs": 1,
+    "inconclusive_runs": 0,
+    "repetitions": 1,
+    "loop_recoveries": 0,
+    "failed_loop_recoveries": 0,
+    "web_limit_recoveries": 0,
+    "turn_limit_recoveries": 0,
+    "normalized_content_tool_calls": 0,
+    "judge_overlaps_target": false,
+    "attempts": [
+      {
+        "repetition": 1,
+        "retry": 1,
+        "target_url": "https://huggingface.co/Qwen/Qwen3.5-0.8B",
+        "target_urls": {
+          "target_url": "https://huggingface.co/Qwen/Qwen3.5-0.8B"
+        },
+        "outcome": "completed",
+        "deterministic": {
+          "passed": true,
+          "failures": [],
+          "web_requests": 1,
+          "unique_sources": 1,
+          "output_urls": 0,
+          "output_dates": 0
+        },
+        "judge": {
+          "passed": false,
+          "error": "JSONDecodeError: Unterminated string starting at: line 1 column 17 (char 16)"
+        },
+        "recovered_from_loop": false,
+        "loop_recovery_failed": false,
+        "recovered_from_web_limit": false,
+        "recovered_from_turn_limit": false
+      }
+    ]
+  },
+  {
+    "model": "websailor-7b-i1",
+    "case": "live-topic-research",
+    "status": "diagnostic",
+    "aggregate": {
+      "status": "diagnostic",
+      "passed": null,
+      "successes": 0,
+      "runs": 1
+    },
+    "completed_runs": 1,
+    "inconclusive_runs": 0,
+    "repetitions": 1,
+    "loop_recoveries": 0,
+    "failed_loop_recoveries": 0,
+    "web_limit_recoveries": 1,
+    "turn_limit_recoveries": 0,
+    "normalized_content_tool_calls": 0,
+    "judge_overlaps_target": false,
+    "attempts": [
+      {
+        "repetition": 1,
+        "retry": 1,
+        "target_url": null,
+        "target_urls": {},
+        "outcome": "completed",
+        "deterministic": {
+          "passed": false,
+          "failures": [
+            "final recovery did not produce a user-facing final answer"
+          ],
+          "web_requests": 12,
+          "unique_sources": 7,
+          "output_urls": 5,
+          "output_dates": 0
+        },
+        "judge": {
+          "relevance": 8,
+          "completeness": 6,
+          "sources": 5,
+          "limitations": 7,
+          "dimensions": [
+            "relevance",
+            "completeness",
+            "sources",
+            "limitations"
+          ],
+          "average": 6.5,
+          "rationale": "The answer addresses the task by discussing benefits (cost, security) and limitations (hardware costs, technical expertise) of local LLMs. However, it lacks depth on tool-calling specifics and fails to explicitly link claims to sources. Some limitations are acknowledged (web request limits), but the analysis of tool-calling tradeoffs remains underdeveloped. Sources are referenced but not clearly tied to individual claims.",
+          "passed": false
+        },
+        "recovered_from_loop": false,
+        "loop_recovery_failed": false,
+        "recovered_from_web_limit": true,
+        "recovered_from_turn_limit": false
+      }
+    ]
+  },
+  {
+    "model": "websailor-7b-i1",
+    "case": "live-url-summary",
+    "status": "diagnostic",
+    "aggregate": {
+      "status": "diagnostic",
+      "passed": null,
+      "successes": 1,
+      "runs": 1
+    },
+    "completed_runs": 1,
+    "inconclusive_runs": 0,
+    "repetitions": 1,
+    "loop_recoveries": 0,
+    "failed_loop_recoveries": 0,
+    "web_limit_recoveries": 0,
+    "turn_limit_recoveries": 0,
+    "normalized_content_tool_calls": 0,
+    "judge_overlaps_target": false,
+    "attempts": [
+      {
+        "repetition": 1,
+        "retry": 1,
+        "target_url": "https://huggingface.co/Qwen/Qwen3.5-0.8B",
+        "target_urls": {
+          "target_url": "https://huggingface.co/Qwen/Qwen3.5-0.8B"
+        },
+        "outcome": "completed",
+        "deterministic": {
+          "passed": true,
+          "failures": [],
+          "web_requests": 1,
+          "unique_sources": 1,
+          "output_urls": 0,
+          "output_dates": 0
+        },
+        "judge": {
+          "relevance": 10,
+          "completeness": 10,
+          "dimensions": [
+            "relevance",
+            "completeness"
+          ],
+          "average": 10.0,
+          "rationale": "The answer directly addresses the task by summarizing the page's content about Qwen/Qwen3.5-0.8B, including technical specifications, architecture, compatibility, and use cases. It is concise, factual, and covers all requested details without omission.",
+          "passed": true
+        },
+        "recovered_from_loop": false,
+        "loop_recovery_failed": false,
+        "recovered_from_web_limit": false,
+        "recovered_from_turn_limit": false
+      }
+    ]
+  }
+]

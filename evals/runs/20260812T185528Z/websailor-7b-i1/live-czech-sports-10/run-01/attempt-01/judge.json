@@ -1,0 +1,15 @@
+{
+  "relevance": 4,
+  "completeness": 3,
+  "sources": 2,
+  "limitations": 5,
+  "dimensions": [
+    "relevance",
+    "completeness",
+    "sources",
+    "limitations"
+  ],
+  "average": 3.5,
+  "rationale": "Relevance: Some entries are non-Czech language or lack clear sports focus. Completeness: Only 8 URLs provided, no dates included. Sources: Wikipedia and English-language sites dominate; Czech-language articles are scarce. Limitations: Answer fails to address missing Czech content, date verification, and underreports required data.",
+  "passed": false
+}

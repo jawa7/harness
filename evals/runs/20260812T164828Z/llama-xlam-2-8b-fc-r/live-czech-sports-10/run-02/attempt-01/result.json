@@ -1,0 +1,126 @@
+{
+  "case": "live-czech-sports-10",
+  "model": "llama-xlam-2-8b-fc-r",
+  "mode": "live",
+  "target_url": null,
+  "target_urls": {},
+  "run_at": "2026-08-12T16:50:50.300693+00:00",
+  "result": {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Find exactly 10 Czech-language sports articles published within the last 30 days as of 2026-08-12. Give title, date, publication, URL, and one-line description for each. Cite only material returned by your web tools."
+      },
+      {
+        "role": "assistant",
+        "content": "",
+        "tool_calls": [
+          {
+            "type": "function",
+            "id": "content-tool-1",
+            "function": {
+              "name": "web_search",
+              "arguments": "{\"query\": \"Czech-language sports articles published within the last 30 days\"}"
+            }
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "content-tool-1",
+        "content": "{\"status\": \"ok\", \"results\": [{\"title\": \"Czech Sport news | Breaking News & Top Stories | NewsNow\", \"url\": \"https://www.newsnow.com/us/World/Europe/Eastern+Europe/Czech+Republic/Sport\", \"snippet\": \"Daniel \\u0160kvor meets Tomasz Narkun at OKTAGON 95 in Karlovy Vary  LowKick MMA   11:28 Tue, 11 Aug\\n\\nHow to watch the 2026 Czech Tour: Streaming and TV by Country  Domestique Cycling   10:06 Tue, 11 Aug\\n\\nAnother Russian-born player changes nationality as Roland Garros junior champion joins Czech Republic  TennisUpToDate   01:36 Tue, 11 Aug\\n\\nMonday\\n\\nTimothy Ouma: The story so far...  Charlton Athletic - Official Site   16:57 Mon, 10 Aug\\n\\nAdvertisement\\n\\nAdvertisement\\n\\nAdvertisement [...] Startlist Cze\"}, {\"title\": \"Czech Sports articles for Prague and the Czech Republic - Expats.cz\", \"url\": \"https://www.expats.cz/czech-news/tag/czech-sports\", \"snippet\": \"2024 Ice Hockey World Championship in Czechia: Everything you need to know\\n\\n### 2024 Ice Hockey World Championship in Czechia: Everything you need to know\\n\\nPrague / Daily News\\n\\n-\\n\\nThomas Smith\\n\\nAlmost 1 million ice hockey fans will descend upon host cities Prague and Ostrava for over two weeks \\u2013 here's the latest on ticketing, transport, and more.\\n\\nAdvertisement  Liberec spring 26 var 1 list\\n\\nNational Gallery Prague looks at beloved Czech sport through the lens of art [...] Czech tennis stars sh\"}, {\"title\": \"Czech Sports That Captivate: Record-Breaking Moments and Pioneering Achievements - News\", \"url\": \"https://www.prague.fm/294840/czech-sports-that-captivate-record-breaking-moments-and-pioneering-achievements\", \"snippet\": \"+ To wrap things up with a wintry highlight: Prague has become the cradle of Czech skiing. The first skis were brought here in 1887 from Norway by the sports pioneer Josef R\\u00f6ssler-O\\u0159ovsk\\u00fd, who, alongside his brother, made history by taking the first ski trip through Wenceslas Square. They also embarked on their first experimental skiing rides around Stromovka, capturing the public\\u2019s attention.\\n\\nNovember 4, 2025\\n\\n4 minutes read [...] 4 minutes read\\n\\nFacebook   X   LinkedIn   Tumblr   Pinterest   \"}, {\"title\": \"Understanding internationalization variance within a sport brand: case study of the Sparta Prague ice hockey and football clubs\", \"url\": \"https://pmc.ncbi.nlm.nih.gov/articles/PMC11544599\", \"snippet\": \"Tom\\u00e1\\u0161 Ruda: , , \\n\\nReceived 2024 Jul 04; Accepted 2024 Sep 30; Collection date 2024.\\n\\nCopyright \\u00a9 2024 Crossan, \\u0160\\u00edma, Kapr\\u00e1lkov\\u00e1 and Ruda.\"}, {\"title\": \"Redesigning Czech tennis after 30 years: How to pull off a ...\", \"url\": \"https://www.sportin.art/en/article-detail/redesigning-czech-tennis-after-30-years-how-to-pull-off-a-modern-rebrand-without-cliches-or-national-colors\", \"snippet\": \"Do you enjoy reading articles about design and sport? You might find THIS LINK of interest.\\n\\nShare article\\n\\nPublished 10.08.2026\\n\\n \\n\\n## Keep up to date\\n\\n### Most Read Articles\\n\\n1. Muralist Aryz: I\\u2019ve been obsessed with\\u2026 \\n\\n   #### Muralist Aryz: I\\u2019ve been obsessed with translating movement to a static image\\n2. New 2026 World Cup Anthem Out Now.\\u2026 \\n\\n   #### New 2026 World Cup Anthem Out Now. Shakira, Madonna & BTS for Halftime Show\\n3. Female Bodybuilders: Women\\u2019s Muscles as\\u2026 [...] His game was defi\"}]}"
+      }
+    ],
+    "finished": false,
+    "summary": null,
+    "crashed": "HTTPError: HTTP Error 400: Bad Request",
+    "events": [
+      {
+        "tool": "web_search",
+        "result": {
+          "status": "ok",
+          "results": [
+            {
+              "title": "Czech Sport news | Breaking News & Top Stories | NewsNow",
+              "url": "https://www.newsnow.com/us/World/Europe/Eastern+Europe/Czech+Republic/Sport",
+              "snippet": "Daniel Škvor meets Tomasz Narkun at OKTAGON 95 in Karlovy Vary  LowKick MMA   11:28 Tue, 11 Aug\n\nHow to watch the 2026 Czech Tour: Streaming and TV by Country  Domestique Cycling   10:06 Tue, 11 Aug\n\nAnother Russian-born player changes nationality as Roland Garros junior champion joins Czech Republic  TennisUpToDate   01:36 Tue, 11 Aug\n\nMonday\n\nTimothy Ouma: The story so far...  Charlton Athletic - Official Site   16:57 Mon, 10 Aug\n\nAdvertisement\n\nAdvertisement\n\nAdvertisement [...] Startlist Cze"
+            },
+            {
+              "title": "Czech Sports articles for Prague and the Czech Republic - Expats.cz",
+              "url": "https://www.expats.cz/czech-news/tag/czech-sports",
+              "snippet": "2024 Ice Hockey World Championship in Czechia: Everything you need to know\n\n### 2024 Ice Hockey World Championship in Czechia: Everything you need to know\n\nPrague / Daily News\n\n-\n\nThomas Smith\n\nAlmost 1 million ice hockey fans will descend upon host cities Prague and Ostrava for over two weeks – here's the latest on ticketing, transport, and more.\n\nAdvertisement  Liberec spring 26 var 1 list\n\nNational Gallery Prague looks at beloved Czech sport through the lens of art [...] Czech tennis stars sh"
+            },
+            {
+              "title": "Czech Sports That Captivate: Record-Breaking Moments and Pioneering Achievements - News",
+              "url": "https://www.prague.fm/294840/czech-sports-that-captivate-record-breaking-moments-and-pioneering-achievements",
+              "snippet": "+ To wrap things up with a wintry highlight: Prague has become the cradle of Czech skiing. The first skis were brought here in 1887 from Norway by the sports pioneer Josef Rössler-Ořovský, who, alongside his brother, made history by taking the first ski trip through Wenceslas Square. They also embarked on their first experimental skiing rides around Stromovka, capturing the public’s attention.\n\nNovember 4, 2025\n\n4 minutes read [...] 4 minutes read\n\nFacebook   X   LinkedIn   Tumblr   Pinterest   "
+            },
+            {
+              "title": "Understanding internationalization variance within a sport brand: case study of the Sparta Prague ice hockey and football clubs",
+              "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11544599",
+              "snippet": "Tomáš Ruda: , , \n\nReceived 2024 Jul 04; Accepted 2024 Sep 30; Collection date 2024.\n\nCopyright © 2024 Crossan, Šíma, Kaprálková and Ruda."
+            },
+            {
+              "title": "Redesigning Czech tennis after 30 years: How to pull off a ...",
+              "url": "https://www.sportin.art/en/article-detail/redesigning-czech-tennis-after-30-years-how-to-pull-off-a-modern-rebrand-without-cliches-or-national-colors",
+              "snippet": "Do you enjoy reading articles about design and sport? You might find THIS LINK of interest.\n\nShare article\n\nPublished 10.08.2026\n\n \n\n## Keep up to date\n\n### Most Read Articles\n\n1. Muralist Aryz: I’ve been obsessed with… \n\n   #### Muralist Aryz: I’ve been obsessed with translating movement to a static image\n2. New 2026 World Cup Anthem Out Now.… \n\n   #### New 2026 World Cup Anthem Out Now. Shakira, Madonna & BTS for Halftime Show\n3. Female Bodybuilders: Women’s Muscles as… [...] His game was defi"
+            }
+          ]
+        }
+      }
+    ],
+    "recovered_from_loop": false,
+    "loop_recovery_failed": false,
+    "normalized_content_tool_calls": 1
+  },
+  "deterministic": {
+    "passed": false,
+    "failures": [
+      "agent did not finish: HTTPError: HTTP Error 400: Bad Request",
+      "answer contains 0 URLs; expected at least 10",
+      "answer contains 0 URLs; expected exactly 10",
+      "answer contains 0 dates; expected at least 10"
+    ],
+    "web_requests": 1,
+    "unique_sources": 5,
+    "output_urls": 0,
+    "output_dates": 0
+  },
+  "outcome": "completed",
+  "evidence": {
+    "cited_urls": [],
+    "cited_sources": [],
+    "available_sources": [
+      {
+        "url": "https://www.newsnow.com/us/World/Europe/Eastern+Europe/Czech+Republic/Sport",
+        "title": "Czech Sport news | Breaking News & Top Stories | NewsNow",
+        "excerpt": "Daniel Škvor meets Tomasz Narkun at OKTAGON 95 in Karlovy Vary  LowKick MMA   11:28 Tue, 11 Aug\n\nHow to watch the 2026 Czech Tour: Streaming and TV by Country  Domestique Cycling   10:06 Tue, 11 Aug\n\nAnother Russian-born player changes nationality as Roland Garros junior champion joins Czech Republic  TennisUpToDate   01:36 Tue, 11 Aug\n\nMonday\n\nTimothy Ouma: The story so far...  Charlton Athletic - Official Site   16:57 Mon, 10 Aug\n\nAdvertisement\n\nAdvertisement\n\nAdvertisement [...] Startlist Cze",
+        "tool": "web_search"
+      },
+      {
+        "url": "https://www.expats.cz/czech-news/tag/czech-sports",
+        "title": "Czech Sports articles for Prague and the Czech Republic - Expats.cz",
+        "excerpt": "2024 Ice Hockey World Championship in Czechia: Everything you need to know\n\n### 2024 Ice Hockey World Championship in Czechia: Everything you need to know\n\nPrague / Daily News\n\n-\n\nThomas Smith\n\nAlmost 1 million ice hockey fans will descend upon host cities Prague and Ostrava for over two weeks – here's the latest on ticketing, transport, and more.\n\nAdvertisement  Liberec spring 26 var 1 list\n\nNational Gallery Prague looks at beloved Czech sport through the lens of art [...] Czech tennis stars sh",
+        "tool": "web_search"
+      },
+      {
+        "url": "https://www.prague.fm/294840/czech-sports-that-captivate-record-breaking-moments-and-pioneering-achievements",
+        "title": "Czech Sports That Captivate: Record-Breaking Moments and Pioneering Achievements - News",
+        "excerpt": "+ To wrap things up with a wintry highlight: Prague has become the cradle of Czech skiing. The first skis were brought here in 1887 from Norway by the sports pioneer Josef Rössler-Ořovský, who, alongside his brother, made history by taking the first ski trip through Wenceslas Square. They also embarked on their first experimental skiing rides around Stromovka, capturing the public’s attention.\n\nNovember 4, 2025\n\n4 minutes read [...] 4 minutes read\n\nFacebook   X   LinkedIn   Tumblr   Pinterest   ",
+        "tool": "web_search"
+      },
+      {
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11544599",
+        "title": "Understanding internationalization variance within a sport brand: case study of the Sparta Prague ice hockey and football clubs",
+        "excerpt": "Tomáš Ruda: , , \n\nReceived 2024 Jul 04; Accepted 2024 Sep 30; Collection date 2024.\n\nCopyright © 2024 Crossan, Šíma, Kaprálková and Ruda.",
+        "tool": "web_search"
+      },
+      {
+        "url": "https://www.sportin.art/en/article-detail/redesigning-czech-tennis-after-30-years-how-to-pull-off-a-modern-rebrand-without-cliches-or-national-colors",
+        "title": "Redesigning Czech tennis after 30 years: How to pull off a ...",
+        "excerpt": "Do you enjoy reading articles about design and sport? You might find THIS LINK of interest.\n\nShare article\n\nPublished 10.08.2026\n\n \n\n## Keep up to date\n\n### Most Read Articles\n\n1. Muralist Aryz: I’ve been obsessed with… \n\n   #### Muralist Aryz: I’ve been obsessed with translating movement to a static image\n2. New 2026 World Cup Anthem Out Now.… \n\n   #### New 2026 World Cup Anthem Out Now. Shakira, Madonna & BTS for Halftime Show\n3. Female Bodybuilders: Women’s Muscles as… [...] His game was defi",
+        "tool": "web_search"
+      }
+    ]
+  }
+}

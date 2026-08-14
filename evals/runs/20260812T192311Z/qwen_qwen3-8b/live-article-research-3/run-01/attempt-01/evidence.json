@@ -1,0 +1,38 @@
+{
+  "cited_urls": [],
+  "cited_sources": [],
+  "available_sources": [
+    {
+      "url": "https://www.docker.com/blog/local-llm-tool-calling-a-practical-evaluation",
+      "title": "Tool Calling with Local LLMs: A Practical Evaluation - Docker",
+      "excerpt": "Local LLM Tool Calling: Which LLM Should You Use? | DockerTool Calling with Local LLMs: A Practical Evaluation | Docker\nSkip to content\nProducts\nAI and Agents\nDocker Sandboxes\nNew\nIsolated environments for coding agents\nAI Governance\nNew\nGovern agents and Claws across every team\nGordon\nNew\nYour AI Agent across Docker\nDocker Model Runner\nLocal-first LLM inference made easy\nDocker MCP Catalog and Toolkit\nConnect and manage MCP tools\nApplication Security\nDocker Hardened Images\nShip with secure, enterprise-ready images\nDocker Scout\nSimplify the software supply chain\nApplication Development\nDocker Desktop\nContainerize your applications\nDocker Hub\nDiscover and share container images\nDocker Offload\nBreak free of local constraints\nSupport\nDevelopers\nDocumentation\nFind guides for Docker products\nGetting Started\nLearn the Docker basics\nResources\nSearch a library of helpful materials\nTraining\nSkill up your Docker knowledge\nExtensions SDK\nCreate and share your own extensions\nCommunity\nConnect with other Docker developers\nOpen Source\nExplore open source projects\nPreview Program\nHelp shape the future of Docker\nCustomer Stories\nGet inspired with customer stories\nGet the latest Docker news\nPricing\nYearly\nMonthly\nDocker Personal\n$0\n$0\nFor individual developers who need the essential tools to build and deploy containers.\nGet started\nGet started\nDocker Pro\n$11\n$9\nper user/month\nFor individual professionals who require more advanced features and additional resources.\nBuy now\nBuy now\nMOST POPULAR\nDocker Team\n$16\n$15\nper user/month\nFor small teams that need collaborative tools to make working to",
+      "tool": "web_search",
+      "fetch_id": "fetch-20260812T192509Z-5789e5",
+      "cache_path": "evals/runs/20260812T192311Z/qwen_qwen3-8b/live-article-research-3/run-01/attempt-01/fetches/fetch-20260812T192509Z-5789e5/text.txt"
+    },
+    {
+      "url": "https://www.promptquorum.com/power-local-llm/best-local-models-tool-calling-2026",
+      "title": "Best Local Models for Tool Calling in 2026: Benchmarks & ...",
+      "excerpt": "PromptQuorum\n\nCompare ToolsFeaturesHow It WorksFAQBlogPrompt EngineeringLocal LLMsPower Local LLMPrompt BitesSmart HomeBalcony SolarTry Beta\n\nAccueil/LLM locaux avancés/Meilleurs modèles locaux pour Tool Calling en 2026 : Benchmarks et comparaison\n\nLocal AI Agents & Tool Use\n\n# Meilleurs modèles locaux pour Tool Calling en 2026 : Benchmarks et comparaison\n\n·12 min de lecture·Par Hans Kuepper · Fondateur de PromptQuorum, outil de dispatch multi-modèle · PromptQuorum\n\nLire en: [...] Continue.dev v",
+      "tool": "web_search"
+    },
+    {
+      "url": "https://arxiv.org/html/2510.14453v1",
+      "title": "A Natural Language Approach to Tool Calling In Large ...",
+      "excerpt": "Recent efforts have sought to improve structured approaches through architectural and prompt modifications. Chen et al. 2024 introduced a retrieval framework which adds intermediate steps to determine the most relevant tools, then passes those to a responding model as a list of available tools. Taking an orthogonal approach, Dang et al. 2025 proposed prompt-engineering improvements to guide models toward more accurate tool calling by using guided thinking templates. These methods demonstrated [.",
+      "tool": "web_search"
+    },
+    {
+      "url": "https://www.reddit.com/r/LocalLLaMA/comments/1r4ie8z/i_tested_21_small_llms_on_toolcalling_judgment",
+      "title": "I tested 21 small LLMs on tool-calling judgment — Round 2 ...",
+      "excerpt": "Adjust your tools to improve small model successImage 48 r/LocalLLaMA•26d ago    ### Adjust your tools to improve small model success    2 upvotes ·8 comments    \n\n  \n\n   Good local LLM for tool calling?Image 49 r/LocalLLaMA•6mo ago    ### Good local LLM for tool calling?    7 upvotes ·27 comments [...] Please recommend model: fast, reasoning, tool callsImage 56 r/LocalLLM•8mo ago    ### Please recommend model: fast, reasoning, tool calls    9 upvotes ·15 comments    \n\n  \n\n   What's the smallest",
+      "tool": "web_search"
+    },
+    {
+      "url": "https://dev.to/docteurrs/calling-code-with-local-llm-is-a-hoax-2n51",
+      "title": "Calling code with local LLM is a hoax",
+      "excerpt": "# Introduction\n\nIs calling tools even doable? Sure chatGPT makes it easy. But what of your local LLMs. In this article, we'll be trying multiple agent frameworks with tool-calling capabilities and see if our local LLM can use them.\n\nMy configuration is:\n\n RTX4090 with 32GB of RAM\n\nUsing the following LLMs for testing:\n\n llama3:8b\n dolphin-mixtral:8x7b-v2.7-q4\\_K\\_M\n mistral:latest\n\nPowered locally by Ollama.\n\n# I. AutoGPT",
+      "tool": "web_search"
+    }
+  ]
+}

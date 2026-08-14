@@ -1,0 +1,9 @@
+{
+  "relevance": 0,
+  "completeness": 0,
+  "sources": 0,
+  "limitations": 0,
+  "average": 0.0,
+  "rationale": "The answer is empty and fails to address the task. It lacks key findings, conclusions, and required source URLs. The deterministic checks confirm the agent did not generate a valid response, resulting in zero scores across all categories.",
+  "passed": false
+}

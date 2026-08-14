@@ -1,0 +1,9 @@
+{
+  "relevance": 2,
+  "completeness": 2,
+  "sources": 0,
+  "limitations": 3,
+  "average": 1.75,
+  "rationale": "The answer fails to provide the required 10 Czech-language sports articles with titles, dates, sources, and descriptions. It only restates the need for further search without delivering any results. The tool_trace indicates incomplete data retrieval (5 sources, no URLs), but the final answer contains 0 articles and no URLs. The limitations section in the deterministic checks highlights these issues, but the answer itself does not address them.",
+  "passed": false
+}

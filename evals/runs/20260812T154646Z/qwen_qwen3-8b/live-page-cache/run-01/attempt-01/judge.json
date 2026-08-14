@@ -1,0 +1,9 @@
+{
+  "relevance": 10,
+  "completeness": 9,
+  "sources": 10,
+  "limitations": 10,
+  "average": 9.75,
+  "rationale": "The answer directly addresses the task by confirming the saved files (model-card.raw and model-card.txt) from the specified Hugging Face URL. The cited evidence matches the source URL, and the tool_trace confirms successful execution without missing information or limitations.",
+  "passed": true
+}

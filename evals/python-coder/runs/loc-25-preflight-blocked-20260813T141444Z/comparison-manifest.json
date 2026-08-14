@@ -1,0 +1,59 @@
+{
+  "format": "python-coder-comparison-v1",
+  "collection_status": "blocked-before-collection",
+  "models": [
+    "qwen2.5-coder-7b-instruct-mlx",
+    "qwen2.5-coder-3b-instruct-mlx"
+  ],
+  "samples_per_case": 3,
+  "expected_case_model_combinations": 16,
+  "expected_samples": 48,
+  "collected_samples": 0,
+  "harness_flags": [
+    "--samples=3",
+    "--max-turns=16",
+    "--enable-run-command",
+    "--bootstrap-workspace-context",
+    "--bootstrap-include-verify-command",
+    "--recovery-turns=0"
+  ],
+  "fixture_revision": null,
+  "fixture_revision_note": "Unavailable: this checkout has no Git commits, so no committed fixture tree ID exists.",
+  "output_root": "/Users/ilyabondarenko/.claude/scripts/qwen-harness/evals/python-coder/runs/loc-25-preflight-blocked-20260813T141444Z",
+  "started_at": "2026-08-13T14:14:44Z",
+  "ended_at": "2026-08-13T14:15:30Z",
+  "endpoint": {
+    "base_url": "http://127.0.0.1:1234/v1",
+    "protocol": "OpenAI-compatible",
+    "authentication": "not used",
+    "models_endpoint": "/models",
+    "probe_command": "curl --connect-timeout 5 --max-time 15 -sS http://127.0.0.1:1234/v1/models",
+    "probe_result": "failed",
+    "probe_reason": "curl exit 7: Failed to connect to 127.0.0.1 port 1234; no listener was accepting connections. Neither exact model ID could therefore be verified reachable."
+  },
+  "report_status": "not-generated",
+  "report_reason": "The aggregation-only summarizer correctly refuses incomplete collections; no harness-native sample artifacts exist because collection never began.",
+  "exclusions": [
+    "All 48 planned samples were excluded before invocation because the required local endpoint was unavailable.",
+    "No substitute model or endpoint was used."
+  ],
+  "uninvoked_sample_groups": [
+    {
+      "models": ["qwen2.5-coder-7b-instruct-mlx", "qwen2.5-coder-3b-instruct-mlx"],
+      "cases": [
+        "implement-lru-cache",
+        "fix-off-by-one-bug",
+        "add-cli-flag",
+        "refactor-for-testability",
+        "write-tests-for-untested-module",
+        "follow-existing-pattern",
+        "fix-bug-with-context",
+        "extend-without-breaking-invariant"
+      ],
+      "samples": [1, 2, 3],
+      "status": "not-invoked",
+      "command_template": ".venv-python-coder/bin/python evals/python-coder/run_case.py {case} --model {model} --samples 3 --base-url http://127.0.0.1:1234/v1 --output-dir evals/python-coder/runs/loc-25-preflight-blocked-20260813T141444Z/{case}--{model}",
+      "reason": "Required endpoint preflight failed; model reachability was not established. This group expands to all 48 unique model/case/sample combinations."
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+Build $task_name — write it to $output_file using write_file.
+
+Start from this exact skeleton — every id, the nesting, box-sizing, the
+colors, the font-family stacks, and the :focus rule are REQUIRED VERBATIM
+(a checker verifies them mechanically). The colors and fonts below are NOT
+yours to pick — they are a deliberate design decision already made, keep
+them exact. You MAY change: $allowed_variations.
+
+$skeleton_html

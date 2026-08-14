@@ -1,0 +1,78 @@
+{
+  "cited_urls": [],
+  "cited_sources": [],
+  "available_sources": [
+    {
+      "url": "https://www.docker.com/blog/local-llm-tool-calling-a-practical-evaluation",
+      "title": "Tool Calling with Local LLMs: A Practical Evaluation - Docker",
+      "excerpt": "Eager invocation: Tools were being called even for greeting messages like “Hi there!”\n Wrong tool selection: The model would search when it should have added, or tried to remove when the cart was empty\n Invalid arguments: Parameters like product\\_name or quantity were missing or malformed\n Ignored responses: The model often failed to respond to tool output, leading to awkward or incomplete conversations [...] Not all models handled tool calling well. The quantized Watt 8B model struggled with pa",
+      "tool": "web_search"
+    },
+    {
+      "url": "https://www.jdhodges.com/blog/local-llms-on-tool-calling-2026-pt1-local-lm",
+      "title": "I Tested 13 Local LLMs on Tool Calling | 2026 Eval Results",
+      "excerpt": "In all three cases, the issue appears to be chat template compatibility rather than model quality. These models use custom tool-calling output formats that LM Studio’s OpenAI-compatible API doesn’t properly translate. The models literally could not emit structured tool calls through this particular inference server. Hammer scored 8/8 on edge cases (correctly declining to call tools when it shouldn’t) but 0/8 on every category that required actually producing a tool call. It understood the task. ",
+      "tool": "web_search"
+    },
+    {
+      "url": "https://discuss.huggingface.co/t/tool-function-calling-abilities-of-llms-that-are-used-locally-pulled-through-ollama/165277",
+      "title": "Tool/Function calling abilities of LLM's that are used locally ...",
+      "excerpt": "Thanks in advance\n\nIf you are using Ollama directly without any Agent framework, the models that support tool calling are limited, and there seems to be an issue that is not a bug.\n\nAs a workaround, you could use Ollama through external Agent frameworks.\n\n### Related topics [...] i was trying to build a small AI agent that would query the DB and get the details of the customers, for which i tried many models that are available in the ollama model library, but every model keeps throwing an “inval",
+      "tool": "web_search"
+    },
+    {
+      "url": "https://dev.to/docteurrs/calling-code-with-local-llm-is-a-hoax-2n51",
+      "title": "Calling code with local LLM is a hoax - DEV Community",
+      "excerpt": "On the dark side:\n\n Tool calling still isn't working!\n Human input doesn't always trigger\n Low consistency with infinite loops\n Bugs\n Soooooo many prompts to write\n\n## Available chat mechanisms you can use\n\nThere are \"sequential\" and \"hierarchical\". Sequential will allow your LLMs to go through the tasks in the order you choose. Hierarchical on the other side will create a ghost agent that automatically decides which one of your agents should be triggered using its description. [...] AutoGen cle",
+      "tool": "web_search"
+    },
+    {
+      "url": "https://arxiv.org/html/2508.02979v1",
+      "title": "Unified Tool Integration for LLMs: A Protocol-Agnostic Approach to Function Calling",
+      "excerpt": "Operational Benefits: Deployment time reduced from 3 days to 4 hours compared to manual integration approaches. Maintenance overhead decreased by 65% due to unified error handling and monitoring. The system’s automatic fallback mechanisms prevented 23 potential service disruptions over a 6-month period.\n\n## Limitations, Future Work, and Conclusion\n\n### Current Limitations [...] ToolRegistry addresses these limitations by providing a lightweight, protocol-agnostic solution that differs from exist",
+      "tool": "web_search"
+    },
+    {
+      "url": "https://machinelearningmastery.com/mastering-llm-tool-calling-the-complete-framework-for-connecting-models-to-the-real-world",
+      "title": "Mastering LLM Tool Calling: The Complete Framework for ...",
+      "excerpt": "Tool calling is the mechanism that lets large language models invoke external functions and APIs. It bridges the gap between language generation and real-world actions. Without tools, an LLM is limited to what it learned during training. With tools, it can access current data, take actions, and integrate with your systems. [...] The goal isn’t to eliminate automation. It’s to balance automation benefits with risk management. Start with more human oversight, then gradually reduce it as you build ",
+      "tool": "web_search"
+    },
+    {
+      "url": "https://medium.com/binome/function-calling-with-local-llms-05fbd3fe66e4",
+      "title": "Medium",
+      "excerpt": "Setting up a local LLM with function calling capabilities can be daunting but rewarding. It offers an escape from the recurring costs associated with cloud services, while also providing enhanced control over your computational environment and data privacy. Despite potential initial setbacks with installation and configuration, the end result is a robust, cost-effective solution that expands the capabilities of LLMs beyond simple text generation to more interactive and dynamic applications.",
+      "tool": "web_search"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=n1Tc-Z3Drv0",
+      "title": "Everything You Need to Know About Running LLMs ...",
+      "excerpt": "As large language models (LLMs) become more accessible, running them locally unlocks exciting opportunities for developers, engineers, and privacy-focused users. Why rely on costly cloud AI services that share your data when you could deploy your own models tailored to your needs? In this session, we’ll dive into the advantages of local LLM deployment, from selecting the right open source model to optimizing performance on consumer hardware and integrating with your unique data. [...] going to r",
+      "tool": "web_search"
+    },
+    {
+      "url": "https://community.n8n.io/t/locally-hosted-llm-is-not-able-to-call-tools/138631?tl=en",
+      "title": "Locally hosted LLM is not able to call tools - Questions",
+      "excerpt": "Hey @fwasmeier,\n\nPart of the problem could be that a lot of local LLMs are not “smart” enough to know they need to call a tool and don’t support them.\n\nHave you checked to see if the model you are using does allow tool use?\n\nSee below link for llama models supporting tool calls.\n\n## Llama Models That Support Tool Calls [...] \\Community fine-tuned models, not official Meta releases.\n\n## Key Points\n\nIn summary, if you need tool calling support, choose Llama 3.1 or newer. For advanced features like",
+      "tool": "web_search"
+    },
+    {
+      "url": "https://dev.to/kuroko1t/what-happens-when-local-llms-fail-at-tool-calling-testing-7-models-with-a-rust-coding-agent-cep",
+      "title": "What Happens When Local LLMs Fail at Tool Calling — Testing 7 Models with a Rust Coding Agent - DEV Community",
+      "excerpt": "```\n# hello.py (before) def greet(name): return f \"Hello, {name}! \" if __name__ == \" __main__ \": print(greet(\" World \"))\n```\n\nSimple enough that any tool-calling model should handle it. The expected tool chain is: `read_file` → `edit_file`. Two calls, done.\n\nModels: 7 models available via Ollama, ranging from 7B to 24B parameters.\n\nMode: Yolo (auto-approve all tool calls). Max 10 iterations.\n\nHow to reproduce: [...] Author bias: I built Whet. I'm inclined to fix my agent rather than blame models",
+      "tool": "web_search"
+    },
+    {
+      "url": "https://unsloth.ai/docs/basics/tool-calling-guide-for-local-llms",
+      "title": "Tool Calling Guide for Local LLMs",
+      "excerpt": "Tool calling is when a LLM is allowed to trigger specific functions (like “search my files,” “run a calculator,” or “call an API”) by emitting a structured request instead of guessing the answer in text. You use tool calls because they make outputs more reliable and up-to-date, and they let the model take real actions (query systems, validate facts, enforce schemas) rather than hallucinating. [...] In this tutorial, you will learn how to use local LLMs via Tool Calling with Mathematical, story, ",
+      "tool": "web_search"
+    },
+    {
+      "url": "https://www.apideck.com/blog/llm-tool-use-and-function-calling",
+      "title": "An introduction to function calling and tool use",
+      "excerpt": "LLMs can also plug into databases, CRMs, and other enterprise systems, making them more useful in professional environments. And instead of answering a single question, the model can orchestrate multiple function calls to solve multi-step problems. Planning a trip might involve checking flight availability, booking a hotel, and renting a car through different APIs, all in one conversation. [...] There's a practical upside on the maintenance side too. As new functions or APIs become available, th",
+      "tool": "web_search"
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "relevance": 7,
+  "completeness": 4,
+  "sources": 2,
+  "limitations": 5,
+  "average": 4.5,
+  "rationale": "The answer attempts to address the task of researching topic X but lacks concrete information and sources. It mentions limitations (need for more precise info) but does not explicitly state the limitation as required. The answer is incomplete and does not provide URLs or citations, resulting in low scores for completeness and sources.",
+  "passed": false
+}

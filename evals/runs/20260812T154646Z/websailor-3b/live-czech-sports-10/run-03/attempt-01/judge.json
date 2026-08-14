@@ -1,0 +1,9 @@
+{
+  "relevance": 0,
+  "completeness": 0,
+  "sources": 0,
+  "limitations": 5,
+  "average": 1.25,
+  "rationale": "The answer does not provide any Czech-language sports articles, URLs, or dates as requested. It only repeats the task's requirements without executing the search or citing any sources. The deterministic checks confirm zero output URLs and dates, indicating failure to fulfill the task.",
+  "passed": false
+}

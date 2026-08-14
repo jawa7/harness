@@ -1,0 +1,26 @@
+{
+  "id": "czech-sports-10",
+  "modes": ["offline"],
+  "task": "Find exactly 10 Czech-language sports articles published within the last 30 days. Give title, date, publication, URL, and one-line description for each. Use only the supplied search result source material.",
+  "tools": ["web_search", "web_fetch"],
+  "checks": {"required_tools": ["web_search"], "min_output_urls": 10, "exact_output_urls": 10, "min_output_dates": 10},
+  "fixtures": {
+    "search": {
+      "*": {
+        "status": "ok",
+        "results": [
+          {"title": "Článek 1", "url": "https://sport.example.test/cs/1", "snippet": "Český sport, 2026-08-01."},
+          {"title": "Článek 2", "url": "https://sport.example.test/cs/2", "snippet": "Český sport, 2026-08-02."},
+          {"title": "Článek 3", "url": "https://sport.example.test/cs/3", "snippet": "Český sport, 2026-08-03."},
+          {"title": "Článek 4", "url": "https://sport.example.test/cs/4", "snippet": "Český sport, 2026-08-04."},
+          {"title": "Článek 5", "url": "https://sport.example.test/cs/5", "snippet": "Český sport, 2026-08-05."},
+          {"title": "Článek 6", "url": "https://sport.example.test/cs/6", "snippet": "Český sport, 2026-08-06."},
+          {"title": "Článek 7", "url": "https://sport.example.test/cs/7", "snippet": "Český sport, 2026-08-07."},
+          {"title": "Článek 8", "url": "https://sport.example.test/cs/8", "snippet": "Český sport, 2026-08-08."},
+          {"title": "Článek 9", "url": "https://sport.example.test/cs/9", "snippet": "Český sport, 2026-08-09."},
+          {"title": "Článek 10", "url": "https://sport.example.test/cs/10", "snippet": "Český sport, 2026-08-10."}
+        ]
+      }
+    }
+  }
+}

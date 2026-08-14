@@ -1,0 +1,32 @@
+{
+  "case": "partial-after-error",
+  "model": "qwen/qwen3-8b",
+  "mode": "live",
+  "run_at": "2026-08-12T14:38:07.288464+00:00",
+  "result": {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Research topic X. If another page cannot be retrieved after you have a source, give a partial answer and explicitly state the limitation."
+      },
+      {
+        "role": "assistant",
+        "content": "\n\nThe query mentions \"topic X\" but does not specify what the research topic should be. Please provide the exact topic you'd like me to research, and I'll use the tools to gather information. For example: \"Research the impact of climate change on biodiversity.\""
+      }
+    ],
+    "finished": true,
+    "summary": "\n\nThe query mentions \"topic X\" but does not specify what the research topic should be. Please provide the exact topic you'd like me to research, and I'll use the tools to gather information. For example: \"Research the impact of climate change on biodiversity.\"",
+    "crashed": null,
+    "events": []
+  },
+  "deterministic": {
+    "passed": false,
+    "failures": [
+      "missing required tool calls: web_fetch, web_search",
+      "answer is missing required phrase: 'limitation'"
+    ],
+    "web_requests": 0,
+    "unique_sources": 0,
+    "output_urls": 0
+  }
+}

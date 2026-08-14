@@ -1,0 +1,84 @@
+{
+  "samples": [
+    {
+      "finished": true,
+      "crashed": null,
+      "finish_summary": "Implemented LRUCache in lru_cache.py. All tests passed.",
+      "turns_used": 4,
+      "unverified_urls": [],
+      "initial_failure": null,
+      "verification_results": [
+        {
+          "phase": "initial",
+          "completion_kind": "finish",
+          "passed": true,
+          "result": {
+            "status": "ok",
+            "exit_code": 0,
+            "stdout": "...                                                                      [100%]\n3 passed in 0.01s\n",
+            "stderr": ""
+          }
+        }
+      ],
+      "recovery_attempts": 0,
+      "recovery_turn_limit_reached": false,
+      "sample": 1,
+      "workdir": "samples/sample-1",
+      "passed": true
+    },
+    {
+      "finished": true,
+      "crashed": null,
+      "finish_summary": "Implemented `LRUCache` in `lru_cache.py`. The implementation includes methods `get(key)` and `put(key, value)`, and it raises a `ValueError` if the capacity is below one. The cache evicts the least recently used item when full.",
+      "turns_used": 4,
+      "unverified_urls": [],
+      "initial_failure": null,
+      "verification_results": [
+        {
+          "phase": "initial",
+          "completion_kind": "finish",
+          "passed": true,
+          "result": {
+            "status": "ok",
+            "exit_code": 0,
+            "stdout": "...                                                                      [100%]\n3 passed in 0.01s\n",
+            "stderr": ""
+          }
+        }
+      ],
+      "recovery_attempts": 0,
+      "recovery_turn_limit_reached": false,
+      "sample": 2,
+      "workdir": "samples/sample-2",
+      "passed": true
+    },
+    {
+      "finished": true,
+      "crashed": null,
+      "finish_summary": "Implemented LRUCache in lru_cache.py. All tests passed.",
+      "turns_used": 4,
+      "unverified_urls": [],
+      "initial_failure": null,
+      "verification_results": [
+        {
+          "phase": "initial",
+          "completion_kind": "finish",
+          "passed": true,
+          "result": {
+            "status": "ok",
+            "exit_code": 0,
+            "stdout": "...                                                                      [100%]\n3 passed in 0.01s\n",
+            "stderr": ""
+          }
+        }
+      ],
+      "recovery_attempts": 0,
+      "recovery_turn_limit_reached": false,
+      "sample": 3,
+      "workdir": "samples/sample-3",
+      "passed": true
+    }
+  ],
+  "passed_count": 3,
+  "total": 3
+}

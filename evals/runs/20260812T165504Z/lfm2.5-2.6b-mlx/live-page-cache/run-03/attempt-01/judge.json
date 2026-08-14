@@ -1,0 +1,15 @@
+{
+  "relevance": 7,
+  "completeness": 6,
+  "sources": 8,
+  "limitations": 5,
+  "dimensions": [
+    "relevance",
+    "completeness",
+    "sources",
+    "limitations"
+  ],
+  "average": 6.5,
+  "rationale": "The answer claims success in fetching and saving files but fails deterministic checks (missing filenames: .raw/.txt vs. model-card/raw/text). Relevance is partial due to unaddressed failures. Completeness lacks error details. Sources cite the URL but don't directly link to saved files. Limitations are absent despite discrepancies between claims and actual outputs.",
+  "passed": false
+}

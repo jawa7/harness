@@ -1,0 +1,68 @@
+{
+  "cited_urls": [
+    "https://app.stationx.net/articles/best-local-llm\"",
+    "https://benchlm.ai/best/tool-use\"",
+    "https://pinggy.io/blog/top_5_local_llm_tools_and_models\"",
+    "https://www.docker.com/blog/local-llm-tool-calling-a-practical-evaluation\"",
+    "https://www.promptquorum.com/power-local-llm/best-local-models-tool-calling-2026\""
+  ],
+  "cited_sources": [],
+  "available_sources": [
+    {
+      "url": "https://pinggy.io/blog/top_5_local_llm_tools_and_models",
+      "title": "Top 5 Local LLM Tools and Models in 2026 | Pinggy Blog",
+      "excerpt": "Running powerful AI language models locally has become increasingly accessible in 2026, offering privacy, cost savings, and full control over your data. With releases like Qwen3.6 and Qwen3.5, Google’s Gemma 4, OpenAI’s gpt-oss, Qwen3-Coder-Next for agentic coding, NVIDIA’s Nemotron 3, Mistral Medium 3.5, and DeepSeek-V4-Flash, local LLMs now rival cloud-based services in performance while maintaining complete data privacy and eliminating subscription costs. [...] Qwen3.6-35B-A3B - 23GB, best al",
+      "tool": "web_search"
+    },
+    {
+      "url": "https://benchlm.ai/best/tool-use",
+      "title": "Best Tool Use & Function Calling Models in 2026",
+      "excerpt": "Best Tool Use & Function Calling Models (August 2026) — Ranked by Benchmark Data | BenchLM.ai\nSkip to main content\nRadar\nFive or fewer confirmed AI changes, with original sources, on mornings when something changed.\nA free source-linked morning brief.\nStart free brief\nBench\nLM\nLeaderboard\nRadar\nCompare\nBenchmarks\nModels\nResearch\nNewsletter\nTools\nAI Prompt Writer\nStart with a goal, context, and constraints\nPrompt Optimizer\nRewrite an existing prompt and inspect the diff\nBrowse all tools\n›\nAdvertise\nBrowse\nBrowse BenchLM\nRankings, research, tools, and data standards.\nRadar\nStart the free morning brief.\nUp to five confirmed changes, each linked to its original source. No card required.\nPopular paths\nAI Prompt Writer\n›\nPrompt Optimizer\n›\nBest models by use case\n›\nModel selector\n›\nLLM pricing\n›\nCost calculator\n›\nAI Race\n›\nBest Chinese models\n›\nBrowse BenchLM\n01\nLeaderboard\nRanked models and evidence\n›\n02\nCompare\nHead-to-head model evidence\n›\n03\nBenchmarks\nEvaluation records and sources\n›\n04\nModels\nModel evidence dossiers\n›\nAdvertise\nReach teams choosing AI models.\nRankings\nCapabilities, regions, and use cases\n22\nCore Rankings\nAll Benchmarks\n›\nFrontier Models\n›\nAgentic\n›\nCoding\n›\nMultimodal\n›\nReasoning\n›\nKnowledge\n›\nSpecialized\nInstruction Following\n›\nMultilingual\n›\nMath\n›\nVoice Benchmarks\n›\nKorean Benchmarks\n›\nKorean LLMs\n›\nEuropean Models\n›\nUse Cases\nLong Context\n›\nTool Use\n›\nWeb Research\n›\nComputer Use\n›\nDocument AI\n›\nImage Understanding\n›\nFrontend / App Dev\n›\nFactuality\n›\nDashboards\nPricing, speed, market, and evidence\n13\nRadar\n›\nNew releases\n›\nLLM Pricing\n›\nToken Price Index",
+      "tool": "web_search",
+      "fetch_id": "fetch-20260813T092740Z-de2592",
+      "cache_path": "evals/runs/20260813T091323Z/prism-ml_bonsai-27b/live-article-research-3/run-02/attempt-01/fetches/fetch-20260813T092740Z-de2592/text.txt"
+    },
+    {
+      "url": "https://app.stationx.net/articles/best-local-llm",
+      "title": "Best Local LLM in August 2026 (Updated Monthly Methodology)",
+      "excerpt": "If you've gone looking for the best local LLM and ended up reading three \"top 5 models for 2026\" articles that contradict each other, you're not alone. The honest answer is that no listicle can keep up. Open-weight models ship weekly, leaderboards re-rank monthly, and half the benchmarks you'll see quoted in vendor blog posts no longer measure what they claim to. [...] Function calling and tool use — for agent workflows, browser automation, API orchestration.\n Writing and editing — the best loca",
+      "tool": "web_search"
+    },
+    {
+      "url": "https://www.promptquorum.com/power-local-llm/best-local-models-tool-calling-2026",
+      "title": "Best Local Models for Tool Calling in 2026: Benchmarks & ...",
+      "excerpt": "PromptQuorum\n\nCompare ToolsFeaturesHow It WorksFAQBlogPrompt EngineeringLocal LLMsPower Local LLMPrompt BitesSmart HomeBalcony SolarTry Beta\n\nAccueil/LLM locaux avancés/Meilleurs modèles locaux pour Tool Calling en 2026 : Benchmarks et comparaison\n\nLocal AI Agents & Tool Use\n\n# Meilleurs modèles locaux pour Tool Calling en 2026 : Benchmarks et comparaison\n\n·12 min de lecture·Par Hans Kuepper · Fondateur de PromptQuorum, outil de dispatch multi-modèle · PromptQuorum\n\nLire en: [...] Cinq modèles d",
+      "tool": "web_search"
+    },
+    {
+      "url": "https://www.docker.com/blog/local-llm-tool-calling-a-practical-evaluation",
+      "title": "Tool Calling with Local LLMs: A Practical Evaluation",
+      "excerpt": "Jul 30, 2026\n\n  #### The Future of Agentic AI Depends on Openness and Trust. That’s Why Docker Is Joining Nvidia’s Open Secure AI Alliance.\n\n  Docker joins NVIDIA’s Open Secure AI Alliance to help build the security, governance, and trust frameworks that agentic AI systems demand.\n\n  \n\n  Tushar Jain\n\n  Read now\n Aug 4, 2026\n\n  #### The Software Supply Chain Is Under Siege. Devs Are Still the First Line of Defense [...] 77% of organizations experienced a software supply chain incident in the past",
+      "tool": "web_search"
+    },
+    {
+      "url": "https://dev.to/pavelespitia/function-calling-with-ollama-make-your-local-llm-run-real-tools-bep",
+      "title": "Function Calling with Ollama: Make Your Local LLM Run Real Tools - DEV Community",
+      "excerpt": "As of 2026:\n\n `qwen2.5:7b` and larger — strong support\n `llama3.1:8b` and larger — strong support\n `mistral-nemo` — strong support\n `qwen2.5-coder:7b` — works for technical functions\n `llama3.2:3b` — limited, expect quirks\n\nPull the model:\n\n```\nollama pull qwen2.5:7b \n```\n\n## The minimum example\n\nDefine a tool. The schema follows the JSON Schema format the OpenAI API uses, so any existing tool you have works without translation. [...] Without it, your LLM is a closed system. It only knows what's",
+      "tool": "web_search"
+    },
+    {
+      "url": "https://www.jdhodges.com/blog/local-llms-on-tool-calling-2026-pt1-local-lm",
+      "title": "I Tested 13 Local LLMs on Tool Calling: March 2026 - J.D. Hodges",
+      "excerpt": "The eval harness sends natural-language requests to each model along with eight tool schemas: weather lookups, currency conversion, reminders, email, calendar events, time zones, web search, and calendar reads. The scorer checks whether the model picked the right tool, passed the right arguments, and handled edge cases where no tool should be called.\n\nFive categories, eight test cases each: [...] Most models that scored above 85% were nearly perfect on four of the five categories. The one catego",
+      "tool": "web_search"
+    },
+    {
+      "url": "https://www.kdnuggets.com/5-small-language-models-for-agentic-tool-calling",
+      "title": "5 Small Language Models for Agentic Tool Calling - KDnuggets",
+      "excerpt": "© 2026 Guiding Tech Media   |   About   |   Contact   |   Advertise |   Privacy   |   Terms of Service\n\n  \n\nPublished on May 14, 2026 by\n\nNo, thanks!;) [...] Here are 5 small language models that hare one important trait: they all support structured tool calling in a compact, open-weight package.\n\nBy Matthew Mayo, KDnuggets Managing Editor on May 14, 2026 in Language Models\n\n5 Small Language Models for Agentic Tool Calling\n\n## # Introduction [...] 5 Best AI Tools for Data Analysis You Should Try",
+      "tool": "web_search"
+    },
+    {
+      "url": "https://arxiv.org/abs/2512.15943",
+      "title": "Small Language Models for Efficient Agentic Tool Calling",
+      "excerpt": "|  |  |\n --- |\n| Comments: | Accepted at AAAI 2026 Workshop on Agentic AI Benchmarks and Applications for Enterprise Tasks |\n| Subjects: | Artificial Intelligence (cs.AI) |\n| Cite as: | arXiv:2512.15943 [cs.AI] |\n|  | (or  arXiv:2512.15943v2 [cs.AI] for this version) |\n|  |  Focus to learn more  arXiv-issued DOI via DataCite |\n\n## Submission history\n\n## Access Paper:\n\nlicense icon\n\n### Current browse context:\n\n### References & Citations\n\n## BibTeX formatted citation\n\n### Bookmark [...] archive\n\n",
+      "tool": "web_search"
+    }
+  ]
+}

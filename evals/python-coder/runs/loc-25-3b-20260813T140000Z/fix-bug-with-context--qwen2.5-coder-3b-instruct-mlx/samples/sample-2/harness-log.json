@@ -1,0 +1,15 @@
+{
+  "turns": [],
+  "finished": false,
+  "summary": null,
+  "crashed": "HTTPError: HTTP Error 400: Bad Request",
+  "unverified_urls": [],
+  "initial_failure": null,
+  "verification_results": [],
+  "recovery": {
+    "enabled": false,
+    "turn_limit": 0,
+    "attempts": 0,
+    "turn_limit_reached": false
+  }
+}

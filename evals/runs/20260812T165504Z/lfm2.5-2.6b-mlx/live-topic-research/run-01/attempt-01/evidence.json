@@ -1,0 +1,77 @@
+{
+  "cited_urls": [
+    "https://www.jdhodges.com/blog/local-llms-on-tool-calling-2026-pt1-local-lm"
+  ],
+  "cited_sources": [
+    {
+      "url": "https://www.jdhodges.com/blog/local-llms-on-tool-calling-2026-pt1-local-lm",
+      "title": "I Tested 13 Local LLMs on Tool Calling | 2026 Eval Results",
+      "excerpt": "I Tested 13 Local LLMs on Tool Calling | 2026 Eval Results\nSkip to content\nJ.D. Hodges\nEvery man has a story, this is my story.\nBlogging since 1999.\nHome\nAsk J.D.\nGadgets and Tech\nSolar System Monitor\nI Tested 13 Local LLMs on Tool Calling: March 2026\nThursday, 2026.03.19\nJ.D. H.\nLeave a comment\nI built a deterministic eval harness and tested 13 local LLMs on tool calling (function calling) to find out which models work decently well for agentic tasks. The result that surprised me most: a 3.4 GB model scored higher than everything else I tested, including models five times its size.\nIf you’re running a local AI stack with Open WebUI, LM Studio, or any OpenAI-compatible frontend, tool calling is one of the key features that enables agentic behavior. It lets models call functions like checking weather, sending emails, or setting reminders instead of just generating text. But not every model handles it well, and the popular benchmarks don’t always reflect what you’ll get when serving models through a local inference server like LM Studio.\nSo I ran 13 models through 40 test cases across five categories. No LLM-as-judge, no random vibes, just schema-aware pass/fail scoring with deterministic and reproducible results.\nThe Setup\nHardware:\nAMD AI Max+ 395 with 128 GB unified RAM (about 96 GB allocatable to GPU). All models served through LM Studio v0.4.6 using Q4_K_M quantization over the OpenAI-compatible API. One exception: Gemma 3 4B QAT used Google’s pre-quantized Q4_0, since the whole point of QAT is that the model was trained specifically for that quantization level.\nThe eval",
+      "tool": "web_search",
+      "fetch_id": "fetch-20260812T173639Z-92d0a8",
+      "cache_path": "evals/runs/20260812T165504Z/lfm2.5-2.6b-mlx/live-topic-research/run-01/attempt-01/fetches/fetch-20260812T173639Z-92d0a8/text.txt"
+    }
+  ],
+  "available_sources": [
+    {
+      "url": "https://magazine.sebastianraschka.com/p/state-of-llms-2025",
+      "title": "The State Of LLMs 2025: Progress, Problems, and Predictions",
+      "excerpt": "At the same time, LLMs have been extremely valuable for tasks outside my core expertise. They let me automate things I would otherwise not have had the time or energy to tackle. One example is a recent tool I wrote to extract and back up my Substack articles as Markdown. (I draft everything in Markdown, but I often edit and extend articles directly in the Substack editor, so my local drafts are not always up to date). LLMs also helped me clean up the CSS on my website, which had accumulated [...",
+      "tool": "web_search"
+    },
+    {
+      "url": "https://www.emergentmind.com/topics/multi-turn-tool-calling-llms",
+      "title": "Multi-Turn Tool-Calling LLMs: Advances & Challenges",
+      "excerpt": "In summary, the current state of multi-turn tool-calling LLMs is characterized by rapid progress in dataset construction, algorithm design, system integration, and multifaceted evaluation, with outstanding challenges in temporal alignment, robustness to erroneous assertions, long-context scalability, and effective agentic planning (Yin et al., 10 Mar 2025, Kate et al., 30 Apr 2025, Cheng et al., 27 Oct 2025, Xu et al., 28 Oct 2025, Waqas et al., 29 Nov 2025). Developing reliable, real-world [...",
+      "tool": "web_search"
+    },
+    {
+      "url": "https://arxiv.org/html/2605.00737v1",
+      "title": "A Framework to Assess and Optimize LLM Tool Calling - arXiv",
+      "excerpt": "To Call or Not to Call:A Framework to Assess and Optimize LLM Tool Calling\nReport GitHub Issue\n×\nTitle:\nContent selection saved. Describe the issue below:\nDescription:\nSubmit without GitHub\nSubmit in GitHub\narXiv is now an independent nonprofit!\nLearn more\n×\nBack to arXiv\nWhy HTML?\nReport Issue\nBack to Abstract\nDownload PDF\nAbstract\n1\nIntroduction\n2\nRelated Work\n3\nOperating Frameworks for Assessing and Optimizing Tool Calling\nProblem Setup\nEvaluating Tool Calling Decisions\n4\nExperiments and Findings\n4.1\nNeed and Utility\n4.2\nCost and Affordability\n4.3\nThe Controller Framework\n5\nConcluding Discussion\n6\nDisclosure of LLM use in Research\nReferences\nA\nExperimental Setup\nA.1\nModels\nOpen-source models.\nA.2\nTask and Dataset\nA.2.1\nMain: Entity Task Dataset Construction\nInvivoQuery Task Dataset.\nA.2.2\nBFCL Task Dataset\nA.3\nScoring\nA.3.1\nEntity and InvivoQuery task\nClaim Extraction and Verification Prompts.\n(1) Claim Extraction.\n(2) Claim Verification.\nA.3.2\nBFCL Scorer\nA.4\nAgentic Tool-Use Framework\nA.4.1\nStage 1: Tool decision.\nThe self-awareness setup.\nThe no-tool setup.\nThe\nAlways Tool\nsetup.\nPerceived need prompts\nCost-Aware Tool Description Variants\n(1) Explicit Budget (No Implicit Calculation Required).\n(2) Implicit Budget (Requires Internal Calculation).\nBudget-Aware Setting.\nStage 2: Response generation.\nA.5\nWeb-Search Backend\nGoogle Search via SerpAPI.\nPerplexity Search.\nA.6\nThe Controller Framework\nB\nHuman Alignment with the LLM-as-Judge Evaluation\nC\nExample of True Negative Utility\nEntity: Sky Blue\nD\nAdditional Entity Task Results\nD.1\nNormative Lens\nD.2\nDescriptive Lens\nD.",
+      "tool": "web_search",
+      "fetch_id": "fetch-20260812T173638Z-1e6a44",
+      "cache_path": "evals/runs/20260812T165504Z/lfm2.5-2.6b-mlx/live-topic-research/run-01/attempt-01/fetches/fetch-20260812T173638Z-1e6a44/text.txt"
+    },
+    {
+      "url": "https://www.docker.com/blog/local-llm-tool-calling-a-practical-evaluation",
+      "title": "Tool Calling with Local LLMs: A Practical Evaluation - Docker",
+      "excerpt": "Local LLM Tool Calling: Which LLM Should You Use? | DockerTool Calling with Local LLMs: A Practical Evaluation | Docker\nSkip to content\nProducts\nAI and Agents\nDocker Sandboxes\nNew\nIsolated environments for coding agents\nAI Governance\nNew\nGovern agents and Claws across every team\nGordon\nNew\nYour AI Agent across Docker\nDocker Model Runner\nLocal-first LLM inference made easy\nDocker MCP Catalog and Toolkit\nConnect and manage MCP tools\nApplication Security\nDocker Hardened Images\nShip with secure, enterprise-ready images\nDocker Scout\nSimplify the software supply chain\nApplication Development\nDocker Desktop\nContainerize your applications\nDocker Hub\nDiscover and share container images\nDocker Offload\nBreak free of local constraints\nSupport\nDevelopers\nDocumentation\nFind guides for Docker products\nGetting Started\nLearn the Docker basics\nResources\nSearch a library of helpful materials\nTraining\nSkill up your Docker knowledge\nExtensions SDK\nCreate and share your own extensions\nCommunity\nConnect with other Docker developers\nOpen Source\nExplore open source projects\nPreview Program\nHelp shape the future of Docker\nCustomer Stories\nGet inspired with customer stories\nGet the latest Docker news\nPricing\nYearly\nMonthly\nDocker Personal\n$0\n$0\nFor individual developers who need the essential tools to build and deploy containers.\nGet started\nGet started\nDocker Pro\n$11\n$9\nper user/month\nFor individual professionals who require more advanced features and additional resources.\nBuy now\nBuy now\nMOST POPULAR\nDocker Team\n$16\n$15\nper user/month\nFor small teams that need collaborative tools to make working to",
+      "tool": "web_search",
+      "fetch_id": "fetch-20260812T173638Z-df3071",
+      "cache_path": "evals/runs/20260812T165504Z/lfm2.5-2.6b-mlx/live-topic-research/run-01/attempt-01/fetches/fetch-20260812T173638Z-df3071/text.txt"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=vdUxBDulv1M",
+      "title": "LLM Tool Calling EXPLAINED! - The Power Behind AI Agents 🤖",
+      "excerpt": "# LLM Tool Calling EXPLAINED! - The Power Behind AI Agents 🤖\n## Execute Automation\n118000 subscribers\n58 likes\n\n### Description\n3761 views\nPosted: 26 Feb 2025\nEver wondered how AI agents can browse the web, call APIs, and automate tasks? It’s all thanks to Tool Calling! 🚀 In this video, we’ll break down how LLMs use external tools to perform real-world actions, making them smarter and more useful than ever. \n\nStay tuned for a hands-on demo with Playwright and Local LLM with LangChain. [...] you'",
+      "tool": "web_search"
+    },
+    {
+      "url": "https://dev.to/docteurrs/calling-code-with-local-llm-is-a-hoax-2n51",
+      "title": "Calling code with local LLM is a hoax - DEV Community",
+      "excerpt": "On the dark side:\n\n Tool calling still isn't working!\n Human input doesn't always trigger\n Low consistency with infinite loops\n Bugs\n Soooooo many prompts to write\n\n## Available chat mechanisms you can use\n\nThere are \"sequential\" and \"hierarchical\". Sequential will allow your LLMs to go through the tasks in the order you choose. Hierarchical on the other side will create a ghost agent that automatically decides which one of your agents should be triggered using its description. [...] AutoGen cle",
+      "tool": "web_search"
+    },
+    {
+      "url": "https://www.jdhodges.com/blog/local-llms-on-tool-calling-2026-pt1-local-lm",
+      "title": "I Tested 13 Local LLMs on Tool Calling | 2026 Eval Results",
+      "excerpt": "I Tested 13 Local LLMs on Tool Calling | 2026 Eval Results\nSkip to content\nJ.D. Hodges\nEvery man has a story, this is my story.\nBlogging since 1999.\nHome\nAsk J.D.\nGadgets and Tech\nSolar System Monitor\nI Tested 13 Local LLMs on Tool Calling: March 2026\nThursday, 2026.03.19\nJ.D. H.\nLeave a comment\nI built a deterministic eval harness and tested 13 local LLMs on tool calling (function calling) to find out which models work decently well for agentic tasks. The result that surprised me most: a 3.4 GB model scored higher than everything else I tested, including models five times its size.\nIf you’re running a local AI stack with Open WebUI, LM Studio, or any OpenAI-compatible frontend, tool calling is one of the key features that enables agentic behavior. It lets models call functions like checking weather, sending emails, or setting reminders instead of just generating text. But not every model handles it well, and the popular benchmarks don’t always reflect what you’ll get when serving models through a local inference server like LM Studio.\nSo I ran 13 models through 40 test cases across five categories. No LLM-as-judge, no random vibes, just schema-aware pass/fail scoring with deterministic and reproducible results.\nThe Setup\nHardware:\nAMD AI Max+ 395 with 128 GB unified RAM (about 96 GB allocatable to GPU). All models served through LM Studio v0.4.6 using Q4_K_M quantization over the OpenAI-compatible API. One exception: Gemma 3 4B QAT used Google’s pre-quantized Q4_0, since the whole point of QAT is that the model was trained specifically for that quantization level.\nThe eval",
+      "tool": "web_search",
+      "fetch_id": "fetch-20260812T173639Z-92d0a8",
+      "cache_path": "evals/runs/20260812T165504Z/lfm2.5-2.6b-mlx/live-topic-research/run-01/attempt-01/fetches/fetch-20260812T173639Z-92d0a8/text.txt"
+    },
+    {
+      "url": "https://forums.developer.nvidia.com/t/toolery-0-1-0-a-deterministic-tool-calling-benchmark-for-local-llms/371794",
+      "title": "Toolery 0.1.0 - a deterministic tool-calling benchmark for local LLMs - DGX Spark / GB10 Projects - NVIDIA Developer Forums",
+      "excerpt": "One last thing worth pointing you at: the Profiles tab. That’s where it gets genuinely handy instead of staring at a wall of numbers, you can pick a local LLM based on what you actually need it for. It rebalances the weighting across capabilities depending on the job, so a model tuned for agentic coding bubbles up for one profile and a tidy structured-output workhorse wins for another. Saves you the mental gymnastics of deciding which columns matter today. [...] image\n\nThe part I find most usefu",
+      "tool": "web_search"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=sI6P20KueUA",
+      "title": "Should Developers Learn to Run Local LLMs?",
+      "excerpt": "have really good harnesses and orchestrations around the local model like Deep Seek from and there's several others, you might be able to get exactly what you need or more than you need in terms of application. So, depends, you know, the local model, the advantage there is that security in theory cuz you don't you know, you got to make sure things are locked down in those local models, but you have much you have total control, right? You control it. It's open source. And the other advantage, [..",
+      "tool": "web_search"
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "id": "topic-research",
+  "modes": ["offline"],
+  "task": "Research the benefits and limitations of local tool-calling language models. Provide a short conclusion, key findings, and source URLs for each claim.",
+  "tools": ["web_search", "web_fetch"],
+  "checks": {"required_tools": ["web_search"], "min_unique_sources": 3, "min_output_urls": 3},
+  "fixtures": {
+    "search": {
+      "*": {
+        "status": "ok",
+        "results": [
+          {"title": "Reliability", "url": "https://research.example.test/reliability", "snippet": "Tool use needs validation."},
+          {"title": "Privacy", "url": "https://research.example.test/privacy", "snippet": "Local inference can keep data on device."},
+          {"title": "Latency", "url": "https://research.example.test/latency", "snippet": "Small models reduce latency but can make malformed calls."}
+        ]
+      }
+    }
+  }
+}

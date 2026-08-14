@@ -1,0 +1,9 @@
+{
+  "relevance": 7,
+  "completeness": 6,
+  "sources": 4,
+  "limitations": 8,
+  "average": 6.25,
+  "rationale": "The answer provides 10 articles but all cite a single source (NewsNow) with unclear language. While it addresses the task's quantity, the lack of unique sources and potential non-Czech content reduces reliability. The note acknowledges language uncertainty, but the deterministic checks failed due to URL and date inconsistencies.",
+  "passed": false
+}

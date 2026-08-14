@@ -1,0 +1,45 @@
+{
+  "case": "live-czech-sports-10",
+  "model": "llama-xlam-2-8b-fc-r",
+  "mode": "live",
+  "target_url": null,
+  "target_urls": {},
+  "run_at": "2026-08-12T16:32:29.290947+00:00",
+  "result": {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Find exactly 10 Czech-language sports articles published within the last 30 days as of 2026-08-12. Give title, date, publication, URL, and one-line description for each. Cite only material returned by your web tools."
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"name\": \"web_search\", \"arguments\": {\"query\": \"Czech-language sports articles published within the last 30 days\"}}]"
+      }
+    ],
+    "finished": true,
+    "summary": "[{\"name\": \"web_search\", \"arguments\": {\"query\": \"Czech-language sports articles published within the last 30 days\"}}]",
+    "crashed": null,
+    "events": [],
+    "recovered_from_loop": false,
+    "loop_recovery_failed": false
+  },
+  "deterministic": {
+    "passed": false,
+    "failures": [
+      "missing required tool calls: web_search",
+      "answer contains 0 URLs; expected at least 10",
+      "answer contains 0 URLs; expected exactly 10",
+      "answer contains 0 dates; expected at least 10"
+    ],
+    "web_requests": 0,
+    "unique_sources": 0,
+    "output_urls": 0,
+    "output_dates": 0
+  },
+  "outcome": "completed",
+  "evidence": {
+    "cited_urls": [],
+    "cited_sources": [],
+    "available_sources": []
+  }
+}

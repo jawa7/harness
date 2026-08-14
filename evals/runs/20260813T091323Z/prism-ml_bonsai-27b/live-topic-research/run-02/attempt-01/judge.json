@@ -1,0 +1,15 @@
+{
+  "relevance": 0,
+  "completeness": 0,
+  "sources": 0,
+  "limitations": 0,
+  "dimensions": [
+    "relevance",
+    "completeness",
+    "sources",
+    "limitations"
+  ],
+  "average": 0.0,
+  "rationale": "The answer is empty and does not address the task. The model failed to generate a valid response due to token limits, resulting in no content, URLs, or citations. All rubric criteria are unmet.",
+  "passed": false
+}

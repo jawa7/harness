@@ -1,0 +1,13 @@
+{
+  "relevance": 10,
+  "completeness": 10,
+  "sources": 10,
+  "dimensions": [
+    "relevance",
+    "completeness",
+    "sources"
+  ],
+  "average": 10.0,
+  "rationale": "The answer directly addresses the task by comparing two model cards from the provided URLs. It identifies two key differences (model scale/multimodality vs. text focus, reasoning features) and cites both URLs as required. All claims are tied to the specified sources without adding unrequested criteria.",
+  "passed": true
+}

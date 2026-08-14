@@ -1,0 +1,13 @@
+{
+  "relevance": 10,
+  "completeness": 10,
+  "sources": 10,
+  "dimensions": [
+    "relevance",
+    "completeness",
+    "sources"
+  ],
+  "average": 10.0,
+  "rationale": "The answer directly addresses the task by comparing the two model cards with a table, highlights two meaningful differences (multimodal integration and reasoning control), includes both URLs as requested, and avoids unrequested criteria. All claims are tied to the provided URLs without introducing external information.",
+  "passed": true
+}

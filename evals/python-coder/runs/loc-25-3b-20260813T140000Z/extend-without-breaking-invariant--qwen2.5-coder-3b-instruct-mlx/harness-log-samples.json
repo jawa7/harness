@@ -1,0 +1,48 @@
+{
+  "samples": [
+    {
+      "finished": false,
+      "crashed": "HTTPError: HTTP Error 400: Bad Request",
+      "finish_summary": null,
+      "turns_used": 1,
+      "unverified_urls": [],
+      "initial_failure": null,
+      "verification_results": [],
+      "recovery_attempts": 0,
+      "recovery_turn_limit_reached": false,
+      "sample": 1,
+      "workdir": "samples/sample-1",
+      "passed": false
+    },
+    {
+      "finished": false,
+      "crashed": "HTTPError: HTTP Error 400: Bad Request",
+      "finish_summary": null,
+      "turns_used": 1,
+      "unverified_urls": [],
+      "initial_failure": null,
+      "verification_results": [],
+      "recovery_attempts": 0,
+      "recovery_turn_limit_reached": false,
+      "sample": 2,
+      "workdir": "samples/sample-2",
+      "passed": false
+    },
+    {
+      "finished": false,
+      "crashed": "HTTPError: HTTP Error 400: Bad Request",
+      "finish_summary": null,
+      "turns_used": 1,
+      "unverified_urls": [],
+      "initial_failure": null,
+      "verification_results": [],
+      "recovery_attempts": 0,
+      "recovery_turn_limit_reached": false,
+      "sample": 3,
+      "workdir": "samples/sample-3",
+      "passed": false
+    }
+  ],
+  "passed_count": 0,
+  "total": 3
+}

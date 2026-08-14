@@ -1,0 +1,15 @@
+{
+  "relevance": 0,
+  "completeness": 0,
+  "sources": 0,
+  "limitations": 0,
+  "dimensions": [
+    "relevance",
+    "completeness",
+    "sources",
+    "limitations"
+  ],
+  "average": 0.0,
+  "rationale": "The answer fails to address the task by not executing web_search, providing zero URLs/dates, and lacking citations. It violates all requirements for relevance, completeness, sources, and limitations.",
+  "passed": false
+}

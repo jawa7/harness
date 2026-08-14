@@ -1,0 +1,13 @@
+{
+  "relevance": 10,
+  "completeness": 10,
+  "sources": 10,
+  "dimensions": [
+    "relevance",
+    "completeness",
+    "sources"
+  ],
+  "average": 10.0,
+  "rationale": "The answer directly addresses the task by comparing the two model cards with two key differences (multimodal vs text-only, parameter scale/context window) and includes both URLs. All claims are explicitly tied to the provided URLs in the cited evidence, with direct excerpts supporting each assertion.",
+  "passed": true
+}

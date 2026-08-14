@@ -1,0 +1,14 @@
+Build $task_name — write it to $output_file using write_file.
+
+Design tokens (colors, fonts) are fixed — use these exact values:
+$design_tokens
+
+Structural anchors that MUST be present (a checker verifies these, not
+exact markup): $required_anchors
+
+$skeleton_html
+
+IMPORTANT: any placeholder written as [PICK ONE: ...] inside the skeleton
+above is NOT valid output — it must be replaced with your own judgment call
+for this specific case, not copied verbatim. Restructure freely beyond the
+fixed anchors and tokens.

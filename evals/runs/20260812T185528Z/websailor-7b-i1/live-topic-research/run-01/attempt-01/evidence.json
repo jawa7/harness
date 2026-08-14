@@ -1,0 +1,56 @@
+{
+  "cited_urls": [
+    "https://arxiv.org/html/2605.00737v1\"",
+    "https://discuss.huggingface.co/t/tool-function-calling-abilities-of-llms-that-are-used-locally-pulled-through-ollama/165277\"",
+    "https://pureai.com/articles/2025/09/02/pros-and-cons-of-running-a-large-language-model-locally.aspx\"",
+    "https://www.docker.com/blog/local-llm-tool-calling-a-practical-evaluation\"",
+    "https://www.youtube.com/watch?v=n1Tc-Z3Drv0\""
+  ],
+  "cited_sources": [],
+  "available_sources": [
+    {
+      "url": "https://arxiv.org/html/2605.00737v1",
+      "title": "A Framework to Assess and Optimize LLM Tool Calling",
+      "excerpt": "However, our approach has limitations. The estimators are not perfect and may introduce errors. Future works may investigate why tool calls can lead to negative utility, how tool descriptions influence both perceived and latent utility, and develop more accurate predictors and more effective controllers for tool-calling decisions. [...] overall performance remains suboptimal, highlighting limitations in cost-aware decision-making. [...] While larger models (e.g., GPT-OSS-120B, Gemma-3-27B-IT) ex",
+      "tool": "web_search"
+    },
+    {
+      "url": "https://pureai.com/articles/2025/09/02/pros-and-cons-of-running-a-large-language-model-locally.aspx",
+      "title": "Pros and Cons of Running a Large Language Model Locally",
+      "excerpt": "Pros and Cons of Running a Large Language Model Locally -- Pure AI\nSkip to main content\nSections\nNews\nFeatures\nInsights\nHuman in the Loop\nMind the Prompt\nThe Pure AI Blog\nThe Long View\nAI Castaway\nAI Watch\nHow-To\nAI Tracker\nEvents\nVideos\nWebcasts\nWhite Papers\nTraining\nAdvertise\nNewsletters\nGlossary\nContact Us\nExpert Insights for the AI Business Revolution\nAdd as a preferred source on Google\nIn-Depth\nPros and Cons of Running a Large Language Model Locally\nBy Pure AI  Editors\n09/02/2025\nIt's safe to say that hundreds of companies (at least) are implementing AI large language model systems. The standard way to do this is to use an LLM model such as GPT-4 from OpenAI or Llama from Google or Claude from Anthropic. These systems are hosted in the Cloud and so using them requires an active Internet connection and a paid subscription. But it is also possible to run an LLM system locally on company server machines in a completely isolated manner, free of charge.\nBriefly, advantages of running an LLM system locally include:\nLocal systems are free to use, decreasing usage costs.\nLocal systems are less likely to suffer a network outage, increasing reliability.\nLocal systems maintain all data on-premises, increasing security.\nThese three advantages of local LLM systems depend on specific usage scenario conditions.\nThe disadvantages of running a local LLM system include:\nRelatively high initial costs, to purchase beefy hardware.\nRequire moderate-to-high levels of in-house technical expertise.\nUsually cannot use the most advanced LLM models.\nIn short, the decision of whether to use a loca",
+      "tool": "web_search",
+      "fetch_id": "fetch-20260812T190605Z-74aa60",
+      "cache_path": "evals/runs/20260812T185528Z/websailor-7b-i1/live-topic-research/run-01/attempt-01/fetches/fetch-20260812T190605Z-74aa60/text.txt"
+    },
+    {
+      "url": "https://www.docker.com/blog/local-llm-tool-calling-a-practical-evaluation",
+      "title": "Tool Calling with Local LLMs: A Practical Evaluation - Docker",
+      "excerpt": "We realized we had no definite answer forthat. Local LLM models offer control, cost-efficiency, and privacy, but when it comes to structured tool use, deciding when and how to act, they can behave very differently. We decided to dig deep and test this properly. We started with manual experimentation, then built a framework to scale our testing. This blog documents that journey and shares which models ranked highest on our tool-calling leaderboard. [...] Qwen models dominate: Even the 8B version ",
+      "tool": "web_search"
+    },
+    {
+      "url": "https://discuss.huggingface.co/t/tool-function-calling-abilities-of-llms-that-are-used-locally-pulled-through-ollama/165277",
+      "title": "Tool/Function calling abilities of LLM's that are used locally ...",
+      "excerpt": "Thanks in advance\n\nIf you are using Ollama directly without any Agent framework, the models that support tool calling are limited, and there seems to be an issue that is not a bug.\n\nAs a workaround, you could use Ollama through external Agent frameworks.\n\n### Related topics [...] i was trying to build a small AI agent that would query the DB and get the details of the customers, for which i tried many models that are available in the ollama model library, but every model keeps throwing an “inval",
+      "tool": "web_search"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=n1Tc-Z3Drv0",
+      "title": "Everything You Need to Know About Running LLMs Locally by Cedric Clyburn",
+      "excerpt": "As large language models (LLMs) become more accessible, running them locally unlocks exciting opportunities for developers, engineers, and privacy-focused users. Why rely on costly cloud AI services that share your data when you could deploy your own models tailored to your needs? In this session, we’ll dive into the advantages of local LLM deployment, from selecting the right open source model to optimizing performance on consumer hardware and integrating with your unique data.",
+      "tool": "web_search"
+    },
+    {
+      "url": "https://machinelearningmastery.com/mastering-llm-tool-calling-the-complete-framework-for-connecting-models-to-the-real-world",
+      "title": "Mastering LLM Tool Calling: The Complete Framework for ...",
+      "excerpt": "Tool calling is the mechanism that lets large language models invoke external functions and APIs. It bridges the gap between language generation and real-world actions. Without tools, an LLM is limited to what it learned during training. With tools, it can access current data, take actions, and integrate with your systems. [...] The goal isn’t to eliminate automation. It’s to balance automation benefits with risk management. Start with more human oversight, then gradually reduce it as you build ",
+      "tool": "web_search"
+    },
+    {
+      "url": "https://medium.com/@springrod/why-you-should-use-local-models-a3fce1124c94",
+      "title": "Why You Should Use Local Models",
+      "excerpt": "This is a mistake. It’s important to understand available model choices and their strengths and weaknesses. Mature Gen AI applications should use a mix of models for different things. Local LLMs are now very useful for many tasks, and their capabilities are growing faster than those of large closed models. Many local LLMs now offer dependable support for tool calling, which was not the case only a few months ago. Local embedding models are often the best choice, period. [...] But different model",
+      "tool": "web_search"
+    }
+  ]
+}

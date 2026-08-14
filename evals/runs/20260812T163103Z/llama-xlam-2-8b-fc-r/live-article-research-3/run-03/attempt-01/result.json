@@ -1,0 +1,46 @@
+{
+  "case": "live-article-research-3",
+  "model": "llama-xlam-2-8b-fc-r",
+  "mode": "live",
+  "target_url": null,
+  "target_urls": {},
+  "run_at": "2026-08-12T16:31:57.099875+00:00",
+  "result": {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Find exactly 3 English-language articles published within the last 30 days as of 2026-08-12 about local tool-calling language models. For every article provide title, date, publication, its individual article URL, and a one-line description. Do not use or cite category, search, or aggregator pages as article URLs. Fetch at least 2 selected article URLs before writing the answer."
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"name\": \"web_search\", \"arguments\": {\"query\": \"English-language articles published within the last 30 days about local tool-calling language models\"}}]"
+      }
+    ],
+    "finished": true,
+    "summary": "[{\"name\": \"web_search\", \"arguments\": {\"query\": \"English-language articles published within the last 30 days about local tool-calling language models\"}}]",
+    "crashed": null,
+    "events": [],
+    "recovered_from_loop": false,
+    "loop_recovery_failed": false
+  },
+  "deterministic": {
+    "passed": false,
+    "failures": [
+      "missing required tool calls: web_fetch, web_search",
+      "called web_fetch 0 times; expected at least 2",
+      "answer contains 0 URLs; expected at least 3",
+      "answer contains 0 URLs; expected exactly 3",
+      "answer contains 0 dates; expected at least 3"
+    ],
+    "web_requests": 0,
+    "unique_sources": 0,
+    "output_urls": 0,
+    "output_dates": 0
+  },
+  "outcome": "completed",
+  "evidence": {
+    "cited_urls": [],
+    "cited_sources": [],
+    "available_sources": []
+  }
+}

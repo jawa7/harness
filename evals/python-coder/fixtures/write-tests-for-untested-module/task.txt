@@ -1,0 +1,1 @@
+`pricing.py` is production code with no tests. Add a focused pytest suite that exercises every branch and brings coverage for that module to 100%. Do not change `pricing.py`.

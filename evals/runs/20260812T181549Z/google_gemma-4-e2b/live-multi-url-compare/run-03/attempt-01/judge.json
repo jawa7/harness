@@ -1,0 +1,13 @@
+{
+  "relevance": 10,
+  "completeness": 10,
+  "sources": 10,
+  "dimensions": [
+    "relevance",
+    "completeness",
+    "sources"
+  ],
+  "average": 10.0,
+  "rationale": "The answer directly addresses the task by comparing two model cards from the provided URLs. It includes two meaningful differences (multimodal vs reasoning focus, context window size) and cites both URLs. All claims are tied to the specified sources without introducing external information.",
+  "passed": true
+}

@@ -1,0 +1,15 @@
+{
+  "relevance": 0,
+  "completeness": 1,
+  "sources": 0,
+  "limitations": 5,
+  "dimensions": [
+    "relevance",
+    "completeness",
+    "sources",
+    "limitations"
+  ],
+  "average": 1.5,
+  "rationale": "The answer fails to provide 10 Czech sports articles as requested. It contains only 9 URLs, lacks proper citation of sources, and does not verify if all articles are within the 30-day window. The response also mentions inability to complete workflow, indicating limitations in data retrieval and presentation.",
+  "passed": false
+}

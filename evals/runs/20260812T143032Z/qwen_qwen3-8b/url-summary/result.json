@@ -1,0 +1,56 @@
+{
+  "case": "url-summary",
+  "model": "qwen/qwen3-8b",
+  "mode": "live",
+  "run_at": "2026-08-12T14:40:45.384629+00:00",
+  "result": {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Make a concise summary of this page: https://docs.example.test/model-card"
+      },
+      {
+        "role": "assistant",
+        "content": "\n\n",
+        "tool_calls": [
+          {
+            "type": "function",
+            "id": "824054234",
+            "function": {
+              "name": "web_fetch",
+              "arguments": "{\"url\":\"https://docs.example.test/model-card\"}"
+            }
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "824054234",
+        "content": "{\"status\": \"error\", \"message\": \"fetch failed: URLError: <urlopen error [Errno 8] nodename nor servname provided, or not known>. No successful web source exists yet. You may make one alternative web request, then answer honestly if it also fails.\"}"
+      },
+      {
+        "role": "assistant",
+        "content": "\n\nThe provided URL (https://docs.example.test/model-card) could not be fetched due to a domain resolution error (Errno 8). This suggests the domain \"docs.example.test\" may be invalid, misconfigured, or unreachable. No alternative URLs were provided to attempt retrieval. \n\n<finish>\nFailed to summarize the page because the URL could not be accessed. The error indicates a problem with the domain name or network connectivity to \"docs.example.test\".\n</finish>"
+      }
+    ],
+    "finished": true,
+    "summary": "\n\nThe provided URL (https://docs.example.test/model-card) could not be fetched due to a domain resolution error (Errno 8). This suggests the domain \"docs.example.test\" may be invalid, misconfigured, or unreachable. No alternative URLs were provided to attempt retrieval. \n\n<finish>\nFailed to summarize the page because the URL could not be accessed. The error indicates a problem with the domain name or network connectivity to \"docs.example.test\".\n</finish>",
+    "crashed": null,
+    "events": [
+      {
+        "tool": "web_fetch",
+        "result": {
+          "status": "error",
+          "message": "fetch failed: URLError: <urlopen error [Errno 8] nodename nor servname provided, or not known>. No successful web source exists yet. You may make one alternative web request, then answer honestly if it also fails."
+        }
+      }
+    ]
+  },
+  "deterministic": {
+    "passed": true,
+    "failures": [],
+    "web_requests": 1,
+    "unique_sources": 0,
+    "output_urls": 1
+  }
+}

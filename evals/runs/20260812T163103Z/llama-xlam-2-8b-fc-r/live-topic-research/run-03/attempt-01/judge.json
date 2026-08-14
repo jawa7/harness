@@ -1,0 +1,15 @@
+{
+  "relevance": 0,
+  "completeness": 0,
+  "sources": 0,
+  "limitations": 0,
+  "dimensions": [
+    "relevance",
+    "completeness",
+    "sources",
+    "limitations"
+  ],
+  "average": 0.0,
+  "rationale": "The answer fails to address the task by not executing the web_search tool or providing any content. It lacks conclusion, key findings, and required URLs. No sources are cited, and limitations of the approach are not acknowledged.",
+  "passed": false
+}

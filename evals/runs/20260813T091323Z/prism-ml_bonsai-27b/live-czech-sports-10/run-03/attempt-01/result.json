@@ -1,0 +1,638 @@
+{
+  "case": "live-czech-sports-10",
+  "case_definition": {
+    "id": "live-czech-sports-10",
+    "modes": [
+      "live"
+    ],
+    "task": "Find exactly 10 Czech-language sports articles published within the last 30 days as of {today}. Give title, date, publication, URL, and one-line description for each. Cite only material returned by your web tools.",
+    "tools": [
+      "web_search",
+      "web_fetch"
+    ],
+    "checks": {
+      "required_tools": [
+        "web_search"
+      ],
+      "min_output_urls": 10,
+      "exact_output_urls": 10,
+      "min_output_dates": 10
+    },
+    "_path": "/Users/ilyabondarenko/.claude/scripts/qwen-harness/evals/cases/live-czech-sports-10.json"
+  },
+  "model": "prism-ml/bonsai-27b",
+  "mode": "live",
+  "target_url": null,
+  "target_urls": {},
+  "run_at": "2026-08-13T09:44:54.235158+00:00",
+  "result": {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Find exactly 10 Czech-language sports articles published within the last 30 days as of 2026-08-13. Give title, date, publication, URL, and one-line description for each. Cite only material returned by your web tools."
+      },
+      {
+        "role": "assistant",
+        "content": "",
+        "tool_calls": [
+          {
+            "type": "function",
+            "id": "ydkJ6f5Gge0MF5avQvAoREYd3VpfHgwd",
+            "function": {
+              "name": "web_search",
+              "arguments": "{\"query\":\"České sporty recent news last 30 days\"}"
+            }
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "ydkJ6f5Gge0MF5avQvAoREYd3VpfHgwd",
+        "content": "{\"status\": \"ok\", \"results\": [{\"title\": \"Prague Daily News | Czech News in English\", \"url\": \"https://www.praguedaily.news\", \"snippet\": \"SportsJul 29, 2026\\n\\n### EFA: Nothing But a Win on Sunday Will Do for the Prague Lions Against Raiders Tirol\\n\\nFoto: Rugby Club Tatra Sm\\u00edchov\\n\\nSportsJul 23, 2026\\n\\n### Prague to Modernise Tatra Sm\\u00edchov Rugby Ground\\n\\nAdvertise here\\n\\n#### This could be your advertising space\\n\\nReach readers across Prague with high-visibility placements.\\n\\nView advertising options\\n\\n## Latest Articles\\n\\nFoto: Port\\u00e1l hlavn\\u00edho m\\u011bsta Prahy\\n\\nNewsAug 12, 2026 [...] ### Voil\\u00e0 Kampa! French Market Returns to Prague This July for\"}, {\"title\": \"Czech Sport news | Breaking News & Top Stories | NewsNow\", \"url\": \"https://www.newsnow.com/us/World/Europe/Eastern+Europe/Czech+Republic/Sport\", \"snippet\": \"Besiktas vs Hradec Kralove - prediction, team news, lineups  Sports Mole   19:04 Tue, 11 Aug\\n\\nCzech Tour 2026 start list  Domestique Cycling   14:00 Tue, 11 Aug\\n\\nDaniel \\u0160kvor meets Tomasz Narkun at OKTAGON 95 in Karlovy Vary  LowKick MMA   11:28 Tue, 11 Aug\\n\\nHow to watch the 2026 Czech Tour: Streaming and TV by Country  Domestique Cycling   10:06 Tue, 11 Aug [...] Another Russian-born player changes nationality as Roland Garros junior champion joins Czech Republic  TennisUpToDate   01:36 Tue, 11\"}, {\"title\": \"Czech Republic | Czech Republic | Today's latest from Al Jazeera\", \"url\": \"https://www.aljazeera.com/where/czech-republic\", \"snippet\": \"People attend a protest rally in support of public media as the Czech government plans to revamp and cut funding for Czech TV and Czech Radio, in Prague, Czech Republic, June 21, 2026. REUTERS/Eva Korinkova\\n ## Ex-Wimbledon champion Vondrousova banned for refusing drug test\\n\\n  Marketa Vondrousova in action.\\n ## MotoGP: Marquez goes back-to-back in Brno, narrows title gap to Bezzecchi\\n\\n  Marc Marquez celebrates on the podium\\n World Cup 2026 post label [...] South Korea's Oh Hyeon-gyu, left, celeb\"}, {\"title\": \"News from the Czech Republic | Radio Prague International\", \"url\": \"https://english.radio.cz/en-hp\", \"snippet\": \"One of the oldest \\\"patients\\\" on record has undergone an examination at the St. Anne's University Hospital in Brno. Using CT, doctors scanned 700-year-old statue.\\n\\n## Sport\\n\\n Luk\\u00e1\\u0161 Horn\\u00ed\\u010dek | Photo: Martin Div\\u00ed\\u0161ek,  Profimedia   03:10\\n\\n  ### Czech goalie Horn\\u00ed\\u010dek joins Newcastle in \\u20ac30 million transfer\\n\\n  Czech goalie Luk\\u00e1\\u0161 Horn\\u00ed\\u010dek has completed a \\u20ac30 million transfer from Portuguese side Braga to English Premier League club Newcastle United, signing a five-year contract.\\n\\n## Travel [...] Czech \"}, {\"title\": \"Latest daily news for Prague and the Czech Republic\", \"url\": \"https://www.expats.cz/czech-news/daily-news\", \"snippet\": \"Frost hits mountains as Czechia readies for heat, US charges cartel members over Czech arms plot, and runway reopens at Ruzyn\\u011b Airport this week.\\n\\nCzech news in brief for August 11: Tuesday's top afternoon headlines\\n\\n### Czech news in brief for August 11: Tuesday's top afternoon headlines\\n\\nDaily News\\n\\n-\\n\\nExpats.cz Staff,  \\u010cTK\\n\\nCzechia issues warnings for Colombia travel after quake, digital ID app opens to public stress test this week, and heat stress tool tracks Czech cities. [...] ### 'Trouser\"}]}"
+      },
+      {
+        "role": "assistant",
+        "content": "",
+        "tool_calls": [
+          {
+            "type": "function",
+            "id": "kKBZUyufkp0jdFtWapFxqJrbuyY5acOz",
+            "function": {
+              "name": "web_search",
+              "arguments": "{\"query\":\"české sporty recent news last 30 days Czech language\"}"
+            }
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "kKBZUyufkp0jdFtWapFxqJrbuyY5acOz",
+        "content": "{\"status\": \"ok\", \"results\": [{\"title\": \"Sportovn\\u00ed zpravodajstv\\u00ed | \\u010cesk\\u00e9Noviny.cz\", \"url\": \"https://www.ceskenoviny.cz/sport\", \"snippet\": \"### \\u010ctvrtka\\u0159ka Manuel a o\\u0161t\\u011bpa\\u0159 Vadlejch budou na ME bojovat o fin\\u00e1le\\n Reklama\\n 13.08.2026 01:01\\n\\n  ### Plavkyn\\u011b Seemanov\\u00e1 bude na ME \\u00fato\\u010dit na t\\u0159et\\u00ed zlato na 200 metr\\u016f\\n Reklama\\n 12.08.2026 23:25\\n\\n  ### Horej\\u0161: Uk\\u00e1zali jsme si, \\u017ee jsme konkurenceschopn\\u00ed, m\\u00e1me na to rv\\u00e1t se o postup\\n 12.08.2026 23:14\\n\\n  ### Fotbalist\\u00e9 PSG obh\\u00e1jili Superpoh\\u00e1r, porazili Aston Villu\\n 12.08.2026 23:17\\n\\n  ### Slovenka Zapletalov\\u00e1 m\\u00e1 zlato z ME, desetiboja\\u0159 Str\\u00e1sk\\u00fd je pr\\u016fb\\u011b\\u017en\\u011b osm\\u00fd\\n 12.08.2026 20:39 [...] ### Kozel: Mu\"}, {\"title\": \"Czech Sport news | Breaking News & Top Stories | NewsNow\", \"url\": \"https://www.newsnow.com/us/World/Europe/Eastern+Europe/Czech+Republic/Sport\", \"snippet\": \"Besiktas vs Hradec Kralove - prediction, team news, lineups  Sports Mole   19:04 Tue, 11 Aug\\n\\nCzech Tour 2026 start list  Domestique Cycling   14:00 Tue, 11 Aug\\n\\nDaniel \\u0160kvor meets Tomasz Narkun at OKTAGON 95 in Karlovy Vary  LowKick MMA   11:28 Tue, 11 Aug\\n\\nHow to watch the 2026 Czech Tour: Streaming and TV by Country  Domestique Cycling   10:06 Tue, 11 Aug [...] Vancouver Canucks sign 24th overall pick Adam Novotny to a 3-year entry-level contract  The Canuck Way (Weblog)   15:16\\n\\nEarlier Toda\"}, {\"title\": \"iSport.cz - Sportovn\\u00ed zpr\\u00e1vy, v\\u00fdsledky, report\\u00e1\\u017ee\", \"url\": \"https://isport.blesk.cz\", \"snippet\": \"|  |  |  |  |\\n ---  --- |\\n| Fotbal  Paris SG - Aston Villa | 11,72 | 03,92 | 24,85 |\\n| Basketbal  Magnolia Hotshots - Phoenix Fuel Masters | 11,65 | 014 | 22,35 | Stream |\\n| Fotbal  FC K\\u00f6benhavn - Debrecen VSC (odv.) | 11,29 | 05,59 | 29,08 |\\n| Fotbal  GKS Katowice - Hapoel Tel Aviv (odv.) | 12,05 | 03,37 | 23,56 | Stream |\\n| Ledn\\u00ed hokej  \\u010cesk\\u00e9 Bud\\u011bjovice - Salzburg | 11,73 | 04,43 | 23,67 | Stream | [...] Blesk.cz\\n\\n### N\\u011bmecko v pasti blb\\u00e9 n\\u00e1lady: Merz bojuje s vlastn\\u00ed stranou, AfD t\\u011b\\u017e\\u00ed z frust\"}, {\"title\": \"Sport \\u2013 Aktu\\u00e1ln\\u011b.cz\", \"url\": \"https://sport.aktualne.cz\", \"snippet\": \"Michal Rada potvrdil na atletick\\u00e9m mistrovstv\\u00ed sv\\u011bta junior\\u016f v Eugene pov\\u011bst ml\\u00e1de\\u017enick\\u00e9 superstar. 19let\\u00fd \\u010cech si v z\\u00e1vod\\u011b na 400 metr\\u016f p\\u0159ek\\u00e1\\u017eek suver\\u00e9nn\\u011b dob\\u011bhl pro zlato, nav\\u00edc p\\u0159i tom rozmetal vousat\\u00fd evropsk\\u00fd rekord kategorie. Stejn\\u011b jako p\\u0159edloni a vloni pr\\u0161\\u00ed na talent z \\u010cesk\\u00fdch Bud\\u011bjovic chv\\u00e1la.\\n\\n## P\\u0159enos skon\\u010dil Lyon - Sparta 3:0. Pra\\u017ean\\u00e9 nem\\u011bli ve Francii \\u0161anci, v Lize mistr\\u016f kon\\u010d\\u00ed [...] ## Siniakov\\u00e1 zu\\u0159ila, intervence \\u010c\\u00ed\\u0148anky pobavila Toronto. \\u010ce\\u0161ka op\\u011bvuje \\u201enovou\\u201c partnerku\\n\\nKate\\u0159ina\"}, {\"title\": \"Radio Prague International: News from the Czech Republic\", \"url\": \"https://english.radio.cz/en-hp\", \"snippet\": \"One of the oldest \\\"patients\\\" on record has undergone an examination at the St. Anne's University Hospital in Brno. Using CT, doctors scanned 700-year-old statue.\\n\\n## Sport\\n\\n Luk\\u00e1\\u0161 Horn\\u00ed\\u010dek | Photo: Martin Div\\u00ed\\u0161ek,  Profimedia   03:10\\n\\n  ### Czech goalie Horn\\u00ed\\u010dek joins Newcastle in \\u20ac30 million transfer\\n\\n  Czech goalie Luk\\u00e1\\u0161 Horn\\u00ed\\u010dek has completed a \\u20ac30 million transfer from Portuguese side Braga to English Premier League club Newcastle United, signing a five-year contract.\\n\\n## Travel [...] Czech \"}]}"
+      },
+      {
+        "role": "assistant",
+        "content": "",
+        "tool_calls": [
+          {
+            "type": "function",
+            "id": "280PiRhSS5RmmoqtD32cJoRbxlRj6pps",
+            "function": {
+              "name": "web_search",
+              "arguments": "{\"query\":\"sportovni.cz recent news August 2026\"}"
+            }
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "280PiRhSS5RmmoqtD32cJoRbxlRj6pps",
+        "content": "{\"status\": \"ok\", \"results\": [{\"title\": \"Latest sports news, videos, interviews and comment\", \"url\": \"https://www.cnn.com/sport\", \"snippet\": \"Red Bull Content Pool](/2026/08/05/sport/red-bull-district-ride-groningen-slopestyle-biking) This Dutch city square became an extreme biking arena for the weekend. Now women are allowed to compete\\n\\n## On the go\\n\\n \\u2022 Video  1:15\\n\\n  Getty Images Video What did Jalen Brunson\\u2019s mom text him before the Knicks Finals? 1:15\\n \\u2022 Video  1:53\\n\\n  The Karate Kid (1984)/ESPN+ Video Meet the Patriot Games\\u2019 Johnny from \\u2018The Karate kid\\u2019 1:53\\n \\u2022 Video  0:22 [...] ## Tennis\\n\\n Ben Whitley/PA Images/Getty Images Worl\"}, {\"title\": \"Enlarged Partial Agreement on Sport - Sport - www.coe.int\", \"url\": \"https://www.coe.int/en/web/sport/epas\", \"snippet\": \"3 August 2026\\n\\nThe Council of Europe\\u2019s Enlarged Partial Agreement on Sport (EPAS) runs the Database of Alleged...\\n\\n   Image 6: European Sports Charter: EPAS support and follow\\u2011up visit to Armenia \\n\\n \\n\\n\\n\\n3 August 2026\\n\\nThe Council of Europe\\u2019s Enlarged Partial Agreement on Sport (EPAS) runs the Database of Alleged...\\n\\n1.   1\\n2.   2\\n3.   3\\n\\n   Previous\\n   Next\\n\\nView all news >>\\n\\nImage 9: Ethical sport\\n#### Ethical sport\\n\\nImage 10: Inclusive sport\\n#### Inclusive sport [...] \\\")\\n\\nThe Enlarged Partial \"}, {\"title\": \"FISU - Sports, Games, Results & Latest News\", \"url\": \"https://www.fisu.net\", \"snippet\": \"### 2026 FISU World University Championship Modern Pentathlon\\n\\nSpain, Madrid\\n\\n16   Aug   2026  \\u2013  19   Aug   2026\\n\\n### 2026 FISU World University Championship Canoe Sports\\n\\nHungary, Szeged\\n\\n17   Aug   2026  \\u2013  20   Aug   2026\\n\\n### \\u00d6stersund 2026 FISU World Forum\\n\\nSweden, \\u00d6stersund\\n\\n24   Aug   2026  \\u2013  28   Aug   2026\\n\\n### 2026 FISU World University Championship Rugby Sevens\\n\\nSouth Africa, Stellenbosch\\n\\n04   Sep   2026  \\u2013  06   Sep   2026\\n\\nAll events\\n\\nPrevious slide\\n\\nNext slide\\n\\n## Explore [...] \"}, {\"title\": \"Track & Field News - The Bible of the Sport Since 1948\", \"url\": \"https://trackandfieldnews.com\", \"snippet\": \"JUNIOR (U20) ALL-TIME ABSOLUTE TOP 10 LISTS \\u2022 World Junior (U20) Absolute Men \\u2022 World Junior (U20) Absolute Women \\u2022\\u2026  Read More\\n\\nby Glen McMicken\\n\\n\\n Duplantis Bids For Fourth Euro Title\\n Highlights Of CAC Games\\n\\nView all \\u00bb\\n\\nAugust 2026\\n\\nRead Now Online\\n\\nOr\\n\\n### Subscribe Today!\\n\\nWe offer a number of plans to fit your budget. Try our Digital Only Premium for complete online access, including our entire archive.\\n\\n Subscribe \\n\\nAlready a subscriber? Log in [...] Skip to content\\n\\n Home\\n Lists\\n From T\"}, {\"title\": \"NBC Sports - news, scores, stats, rumors, videos, and more\", \"url\": \"https://www.nbcsports.com\", \"snippet\": \"August 12, 2026 03:40 PM\\n\\nDan Patrick and Co. ponder whether rivalries in college football \\u2014 and across sports \\u2014 are diminished.\\n\\nnbc_dps_JJWattFullInterview_260812.jpg \\n\\n16:49\\n\\nWatt: Donald will be \\u2018great\\u2019 if he returns to Rams\\n\\nNow Playing\\n\\nWatt: Donald will be 'great' if he returns to Rams\\n\\nAugust 12, 2026 03:40 PM [...] nbc_roto_smith_260812.jpg \\n\\n1:52\\n\\nAstros\\u2019 Smith is \\u2018finally turning the corner\\u2019\\n\\nNow Playing\\n\\nAstros' Smith is 'finally turning the corner'\\n\\nAugust 12, 2026 03:30 PM\\n\\nJames S\"}]}"
+      },
+      {
+        "role": "assistant",
+        "content": "",
+        "tool_calls": [
+          {
+            "type": "function",
+            "id": "0ndQFZjphevK3hUYssQYsg6RvylHTszm",
+            "function": {
+              "name": "web_search",
+              "arguments": "{\"query\":\"sportovni.cz recent articles August 2026\"}"
+            }
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "0ndQFZjphevK3hUYssQYsg6RvylHTszm",
+        "content": "{\"status\": \"ok\", \"results\": [{\"title\": \"Enlarged Partial Agreement on Sport - The Council of Europe\", \"url\": \"https://www.coe.int/en/web/sport/epas\", \"snippet\": \"3 August 2026\\n\\nThe Council of Europe\\u2019s Enlarged Partial Agreement on Sport (EPAS) runs the Database of Alleged...\\n\\n   Image 6: European Sports Charter: EPAS support and follow\\u2011up visit to Armenia \\n\\n \\n\\n\\n\\n3 August 2026\\n\\nThe Council of Europe\\u2019s Enlarged Partial Agreement on Sport (EPAS) runs the Database of Alleged...\\n\\n1.   1\\n2.   2\\n3.   3\\n\\n   Previous\\n   Next\\n\\nView all news >>\\n\\nImage 9: Ethical sport\\n#### Ethical sport\\n\\nImage 10: Inclusive sport\\n#### Inclusive sport [...] \\\")\\n\\nThe Enlarged Partial \"}, {\"title\": \"Track & Field News - The Bible of the Sport Since 1948\", \"url\": \"https://trackandfieldnews.com\", \"snippet\": \"JUNIOR (U20) ALL-TIME ABSOLUTE TOP 10 LISTS \\u2022 World Junior (U20) Absolute Men \\u2022 World Junior (U20) Absolute Women \\u2022\\u2026  Read More\\n\\nby Glen McMicken\\n\\n\\n Duplantis Bids For Fourth Euro Title\\n Highlights Of CAC Games\\n\\nView all \\u00bb\\n\\nAugust 2026\\n\\nRead Now Online\\n\\nOr\\n\\n### Subscribe Today!\\n\\nWe offer a number of plans to fit your budget. Try our Digital Only Premium for complete online access, including our entire archive.\\n\\n Subscribe \\n\\nAlready a subscriber? Log in [...] Skip to content\\n\\n Home\\n Lists\\n From T\"}, {\"title\": \"Czech news in brief for August 11: Tuesday's top afternoon headlines - Prague, Czech Republic\", \"url\": \"https://www.expats.cz/czech-news/article/czech-news-in-brief-for-august-11-2026-tuesday-top-afternoon-headlines\", \"snippet\": \"Written by Expats.cz Staff,  \\u010cTK  Published on 11.08.2026 16:47:00 (updated on 11.08.2026)   Reading time: 3 minutes\\n\\nDaily News\\n\\nDaily news briefing - evening edition   )  \\n\\nDaily news briefing - evening edition\\n\\n### Summary for: Czech news in brief for August 11: Tuesday's top afternoon headlines [...] Oscar angle: Invincible is also one of five finalists in the running to become Czechia's official Best Foreign Language Film submission, with the pick due Aug.19.\\n\\nAdvertisement  George Prime St\"}, {\"title\": \"World Climbing\", \"url\": \"https://www.worldclimbing.com\", \"snippet\": \"02 Aug 2026\\n\\nspeed\\n\\n#### World Climbing Europe Series St. P\\u00f6lten 2026St. P\\u00f6lten, Austria\\n\\n07-09 Aug 2026\\n\\nlead speed\\n\\n#### World Climbing Europe Series \\u017dilina 2026\\u017dilina, Slovakia\\n\\n13-16 Aug 2026\\n\\nall-disciplines\\n\\n#### World Climbing Asia Youth Series Quannan 2026Quannan, China\\n\\n21-22 Aug 2026\\n\\nlead\\n\\n#### World Climbing Europe Series Ostermundigen 2026Ostermundigen, Switzerland\\n\\n21-25 Aug 2026\\n\\nall-disciplines\\n\\n#### World Climbing Asia Youth Championship Guiyang 2026Guiyang, China [...] 28-29 Au\"}, {\"title\": \"FISU - Sports, Games, Results & Latest News\", \"url\": \"https://www.fisu.net\", \"snippet\": \"### 2026 FISU World University Championship Modern Pentathlon\\n\\nSpain, Madrid\\n\\n16   Aug   2026  \\u2013  19   Aug   2026\\n\\n### 2026 FISU World University Championship Canoe Sports\\n\\nHungary, Szeged\\n\\n17   Aug   2026  \\u2013  20   Aug   2026\\n\\n### \\u00d6stersund 2026 FISU World Forum\\n\\nSweden, \\u00d6stersund\\n\\n24   Aug   2026  \\u2013  28   Aug   2026\\n\\n### 2026 FISU World University Championship Rugby Sevens\\n\\nSouth Africa, Stellenbosch\\n\\n04   Sep   2026  \\u2013  06   Sep   2026\\n\\nAll events\\n\\nPrevious slide\\n\\nNext slide\\n\\n## Explore [...] \"}]}"
+      },
+      {
+        "role": "assistant",
+        "content": "",
+        "tool_calls": [
+          {
+            "type": "function",
+            "id": "mcTEc711L732zbrtJ4WyxdGCif7DWSCW",
+            "function": {
+              "name": "web_search",
+              "arguments": "{\"query\":\"sportovni.cz recent articles August 2026 Czech\"}"
+            }
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "mcTEc711L732zbrtJ4WyxdGCif7DWSCW",
+        "content": "{\"status\": \"ok\", \"results\": [{\"title\": \"Top Sports Events in Czechia 2026: Major Championships & Stars | VisitCzechia\", \"url\": \"https://www.visitczechia.com/en-us/news/2026/01/n-top-2023-sports-events-in-czechia-you-cant-miss\", \"snippet\": \"## European Carp Fishing Championship\\n\\nAutumn Brings Battles of Anglers. Learn how to catch the golden carp at Stairs2Hell, the European Carp Fishing Championship, taking place from October 3 to 10 at Nov\\u00e9 Ml\\u00fdny. Around 300 competitors from all over the world are expected, with famous angler and renowned influencer Jakub V\\u00e1gner serving as ambassador. The event is organized by the European Carp Fishing Association.\\n\\n## The Parkour Earth World Championships [...] Our tip: Throughout 2026, a variet\"}, {\"title\": \"Czech Sport news | Breaking News & Top Stories | NewsNow\", \"url\": \"https://www.newsnow.com/us/World/Europe/Eastern+Europe/Czech+Republic/Sport\", \"snippet\": \"Besiktas vs Hradec Kralove - prediction, team news, lineups  Sports Mole   19:04 Tue, 11 Aug\\n\\nCzech Tour 2026 start list  Domestique Cycling   14:00 Tue, 11 Aug\\n\\nDaniel \\u0160kvor meets Tomasz Narkun at OKTAGON 95 in Karlovy Vary  LowKick MMA   11:28 Tue, 11 Aug\\n\\nHow to watch the 2026 Czech Tour: Streaming and TV by Country  Domestique Cycling   10:06 Tue, 11 Aug [...] Vancouver Canucks sign 24th overall pick Adam Novotny to a 3-year entry-level contract  The Canuck Way (Weblog)   15:16\\n\\nEarlier Toda\"}, {\"title\": \"Call for Papers | 15th Annual International Conference of Czech Philosophy of Sport | Charles University, Prague, October 15\\u201316, 2026. Call ends August 10, 2026 | idrottsforum.org\", \"url\": \"https://idrottsforum.org/call-for-papers-15th-annual-international-conference-of-czech-philosophy-of-sport-charles-university-prague-october-15-16-2026-call-ends-august-10-2026\", \"snippet\": \"Research articles\\n  + Recent\\n  + By author\\n  + By year of publication\\n  + Peer review, recent\\n  + Peer review, by author\\n Feature articles\\n  + Recent\\n  + By author\\n  + By year of publication\\n  + Scholarly article summaries\\n Book reviews\\n  + Recent\\n  + Book reviews, by author\\n  + Book reviews, by title\\n  + Sports books publishers, a selection\\n News\\n  + All news\\n  + Conferences\\n  + CfP: Scholarly journal\\n  + Vacancies/Lediga platser\\n  + Newsletters\\n Journals\\n  + Recent issues\\n  + The full list [..\"}, {\"title\": \"Czech news in brief for August 1: Saturday's top afternoon headlines - Prague, Czech Republic\", \"url\": \"https://www.expats.cz/czech-news/article/czech-news-in-brief-for-august-1-2026-saturday-top-afternoon-headlines\", \"snippet\": \"Jobs\\n Daily News\\n Prague\\n Culture\\n Food & Drink\\n Expat Life\\n Housing\\n Education\\n Health\\n Work\\n Travel\\n Business & Money\\n Language\\n\\n# Czech news in brief for August 1: Saturday's top afternoon headlines\\n\\n### Heat wave to return next week, Pilsen auto supplier to cut 300 jobs, details released in Czech tennis star's ban, and more Saturday headlines.\\n\\nExpats.cz Staff \\u010cTK\\n\\nWritten by Expats.cz Staff,  \\u010cTK  Published on 01.08.2026 16:05:00 (updated on 01.08.2026)   Reading time: 3 minutes\"}, {\"title\": \"WCS 2026 Is Over. Voucher Pre-Sale for the World Championships in Brno Begins. - WORLD CLIMBING SERIES PRAGUE 2026\", \"url\": \"https://www.worldclimbingseries.cz/wcs-2026-is-over-voucher-pre-sale-for-the-world-championships-in-brno-begins\", \"snippet\": \"The World Championships, scheduled to take place from 13 to 21 August 2027, represent another major milestone for Czech climbing. Compared to World Climbing Series Prague, the event will feature the full range of disciplines \\u2013 boulder, lead, speed climbing and para climbing.\\n\\nThis year\\u2019s World Climbing Series Prague also served as an important test event ahead of one of the most significant sporting events the Czech Republic will host in the coming years. [...] The addition of lead climbing made\"}]}"
+      },
+      {
+        "role": "assistant",
+        "content": "",
+        "tool_calls": [
+          {
+            "type": "function",
+            "id": "pVdBBc757yZN1BSE5InRk83dncaWhqdz",
+            "function": {
+              "name": "web_search",
+              "arguments": "{\"query\":\"sportovni.cz recent articles August 2026 Czech language\"}"
+            }
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "pVdBBc757yZN1BSE5InRk83dncaWhqdz",
+        "content": "{\"status\": \"ok\", \"results\": [{\"title\": \"Top 2026 sports events in Czechia you can't miss\", \"url\": \"https://www.visitczechia.com/en-us/news/2026/01/n-top-2023-sports-events-in-czechia-you-cant-miss\", \"snippet\": \"## European Carp Fishing Championship\\n\\nAutumn Brings Battles of Anglers. Learn how to catch the golden carp at Stairs2Hell, the European Carp Fishing Championship, taking place from October 3 to 10 at Nov\\u00e9 Ml\\u00fdny. Around 300 competitors from all over the world are expected, with famous angler and renowned influencer Jakub V\\u00e1gner serving as ambassador. The event is organized by the European Carp Fishing Association.\\n\\n## The Parkour Earth World Championships [...] Our tip: Throughout 2026, a variet\"}, {\"title\": \"Czech news in brief for August 1: Saturday's top afternoon ...\", \"url\": \"https://www.expats.cz/czech-news/article/czech-news-in-brief-for-august-1-2026-saturday-top-afternoon-headlines\", \"snippet\": \"Jobs\\n Daily News\\n Prague\\n Culture\\n Food & Drink\\n Expat Life\\n Housing\\n Education\\n Health\\n Work\\n Travel\\n Business & Money\\n Language\\n\\n# Czech news in brief for August 1: Saturday's top afternoon headlines\\n\\n### Heat wave to return next week, Pilsen auto supplier to cut 300 jobs, details released in Czech tennis star's ban, and more Saturday headlines.\\n\\nExpats.cz Staff \\u010cTK\\n\\nWritten by Expats.cz Staff,  \\u010cTK  Published on 01.08.2026 16:05:00 (updated on 01.08.2026)   Reading time: 3 minutes [...] Anoth\"}, {\"title\": \"August 2026 \\ud83d\\udccd Czech Republic (Prague, Brno, ...\", \"url\": \"https://www.facebook.com/CzechLondon/posts/-summer-schools-of-slavonic-studies-2026-call-for-applications-are-you-ready-to-/1219850650341379\", \"snippet\": \"July \\u2013 August 2026 \\ud83d\\udccd Czech Republic (Prague, Brno, Olomouc & \\u010cesk\\u00e9 Bud\\u011bjovice) Intensive Czech language courses at . \\ud83d\\uddd3 Application deadline:\"}, {\"title\": \"Summer Schools of Slavonic Studies 2026, M\\u0160MT \\u010cR\", \"url\": \"https://msmt.gov.cz/eu-and-international-affairs/summer-schools-of-slavonic-studies-2026\", \"snippet\": \"The Summer Schools of Slavonic Studies are three- to four-week Czech language courses organized by several public universities in the Czech Republic, which take place annually in July and August. Their duration ranges from 3 to 4 weeks. The length of the course is determined by the organizing school. [...] It is recommended that both the regular nominees and substitutes from non-EU/EEA countries apply for their visas well in advance.\\n\\n#### PROCESSING OF PERSONAL DATA\\n\\nBasic information on the pr\"}, {\"title\": \"Czech Republic\", \"url\": \"https://en.wikipedia.org/wiki/Czech_Republic\", \"snippet\": \"235. \\u2191 \\\"Education and Training Statistics \\u2013 Language Learning\\\". Eurostat. Retrieved 2 August 2026.\\n236. \\u2191 \\\"Foreign language learning increases among EU students\\\". Eurostat. Retrieved 2 August 2026.\\n237. \\u2191 \\\"Stenoprotokol 3. sch\\u016fze Poslaneck\\u00e9 sn\\u011bmovny (25 July 1996), \\u010d\\u00e1st 22/24\\\". Parliament of the Czech Republic. Retrieved 2 August 2026.\\n238. \\u2191 Special Eurobarometer 540: Europeans and their languages (Report). European Commission. 2024. Retrieved 3 August 2026. [...] 231. \\u2191 bpp.de - Die Tschechosl\"}]}"
+      },
+      {
+        "role": "assistant",
+        "content": "",
+        "tool_calls": [
+          {
+            "type": "function",
+            "id": "8tR06reSAnXyJueRdMWoUizBEkfid72f",
+            "function": {
+              "name": "web_search",
+              "arguments": "{\"query\":\"sportovni.cz recent articles August 2026 Czech language\"}"
+            }
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "8tR06reSAnXyJueRdMWoUizBEkfid72f",
+        "content": "{\"status\": \"ok\", \"results\": [{\"title\": \"Top 2026 sports events in Czechia you can't miss\", \"url\": \"https://www.visitczechia.com/en-us/news/2026/01/n-top-2023-sports-events-in-czechia-you-cant-miss\", \"snippet\": \"## European Carp Fishing Championship\\n\\nAutumn Brings Battles of Anglers. Learn how to catch the golden carp at Stairs2Hell, the European Carp Fishing Championship, taking place from October 3 to 10 at Nov\\u00e9 Ml\\u00fdny. Around 300 competitors from all over the world are expected, with famous angler and renowned influencer Jakub V\\u00e1gner serving as ambassador. The event is organized by the European Carp Fishing Association.\\n\\n## The Parkour Earth World Championships [...] Our tip: Throughout 2026, a variet\"}, {\"title\": \"Czech news in brief for August 1: Saturday's top afternoon ...\", \"url\": \"https://www.expats.cz/czech-news/article/czech-news-in-brief-for-august-1-2026-saturday-top-afternoon-headlines\", \"snippet\": \"Jobs\\n Daily News\\n Prague\\n Culture\\n Food & Drink\\n Expat Life\\n Housing\\n Education\\n Health\\n Work\\n Travel\\n Business & Money\\n Language\\n\\n# Czech news in brief for August 1: Saturday's top afternoon headlines\\n\\n### Heat wave to return next week, Pilsen auto supplier to cut 300 jobs, details released in Czech tennis star's ban, and more Saturday headlines.\\n\\nExpats.cz Staff \\u010cTK\\n\\nWritten by Expats.cz Staff,  \\u010cTK  Published on 01.08.2026 16:05:00 (updated on 01.08.2026)   Reading time: 3 minutes [...] Anoth\"}, {\"title\": \"August 2026 \\ud83d\\udccd Czech Republic (Prague, Brno, ...\", \"url\": \"https://www.facebook.com/CzechLondon/posts/-summer-schools-of-slavonic-studies-2026-call-for-applications-are-you-ready-to-/1219850650341379\", \"snippet\": \"July \\u2013 August 2026 \\ud83d\\udccd Czech Republic (Prague, Brno, Olomouc & \\u010cesk\\u00e9 Bud\\u011bjovice) Intensive Czech language courses at . \\ud83d\\uddd3 Application deadline:\"}, {\"title\": \"Summer Schools of Slavonic Studies 2026, M\\u0160MT \\u010cR\", \"url\": \"https://msmt.gov.cz/eu-and-international-affairs/summer-schools-of-slavonic-studies-2026\", \"snippet\": \"The Summer Schools of Slavonic Studies are three- to four-week Czech language courses organized by several public universities in the Czech Republic, which take place annually in July and August. Their duration ranges from 3 to 4 weeks. The length of the course is determined by the organizing school. [...] It is recommended that both the regular nominees and substitutes from non-EU/EEA countries apply for their visas well in advance.\\n\\n#### PROCESSING OF PERSONAL DATA\\n\\nBasic information on the pr\"}, {\"title\": \"Czech Republic\", \"url\": \"https://en.wikipedia.org/wiki/Czech_Republic\", \"snippet\": \"235. \\u2191 \\\"Education and Training Statistics \\u2013 Language Learning\\\". Eurostat. Retrieved 2 August 2026.\\n236. \\u2191 \\\"Foreign language learning increases among EU students\\\". Eurostat. Retrieved 2 August 2026.\\n237. \\u2191 \\\"Stenoprotokol 3. sch\\u016fze Poslaneck\\u00e9 sn\\u011bmovny (25 July 1996), \\u010d\\u00e1st 22/24\\\". Parliament of the Czech Republic. Retrieved 2 August 2026.\\n238. \\u2191 Special Eurobarometer 540: Europeans and their languages (Report). European Commission. 2024. Retrieved 3 August 2026. [...] 231. \\u2191 bpp.de - Die Tschechosl\"}]}"
+      },
+      {
+        "role": "assistant",
+        "content": "",
+        "tool_calls": [
+          {
+            "type": "function",
+            "id": "zO8Iz4HA5EpOjeZWDpd1upmqTVlgzkgK",
+            "function": {
+              "name": "web_search",
+              "arguments": "{\"query\":\"sportovni.cz recent articles August 2026 Czech language\"}"
+            }
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "zO8Iz4HA5EpOjeZWDpd1upmqTVlgzkgK",
+        "content": "{\"status\": \"ok\", \"results\": [{\"title\": \"Top 2026 sports events in Czechia you can't miss\", \"url\": \"https://www.visitczechia.com/en-us/news/2026/01/n-top-2023-sports-events-in-czechia-you-cant-miss\", \"snippet\": \"## European Carp Fishing Championship\\n\\nAutumn Brings Battles of Anglers. Learn how to catch the golden carp at Stairs2Hell, the European Carp Fishing Championship, taking place from October 3 to 10 at Nov\\u00e9 Ml\\u00fdny. Around 300 competitors from all over the world are expected, with famous angler and renowned influencer Jakub V\\u00e1gner serving as ambassador. The event is organized by the European Carp Fishing Association.\\n\\n## The Parkour Earth World Championships [...] Our tip: Throughout 2026, a variet\"}, {\"title\": \"Czech news in brief for August 1: Saturday's top afternoon ...\", \"url\": \"https://www.expats.cz/czech-news/article/czech-news-in-brief-for-august-1-2026-saturday-top-afternoon-headlines\", \"snippet\": \"Jobs\\n Daily News\\n Prague\\n Culture\\n Food & Drink\\n Expat Life\\n Housing\\n Education\\n Health\\n Work\\n Travel\\n Business & Money\\n Language\\n\\n# Czech news in brief for August 1: Saturday's top afternoon headlines\\n\\n### Heat wave to return next week, Pilsen auto supplier to cut 300 jobs, details released in Czech tennis star's ban, and more Saturday headlines.\\n\\nExpats.cz Staff \\u010cTK\\n\\nWritten by Expats.cz Staff,  \\u010cTK  Published on 01.08.2026 16:05:00 (updated on 01.08.2026)   Reading time: 3 minutes [...] Anoth\"}, {\"title\": \"August 2026 \\ud83d\\udccd Czech Republic (Prague, Brno, ...\", \"url\": \"https://www.facebook.com/CzechLondon/posts/-summer-schools-of-slavonic-studies-2026-call-for-applications-are-you-ready-to-/1219850650341379\", \"snippet\": \"July \\u2013 August 2026 \\ud83d\\udccd Czech Republic (Prague, Brno, Olomouc & \\u010cesk\\u00e9 Bud\\u011bjovice) Intensive Czech language courses at . \\ud83d\\uddd3 Application deadline:\"}, {\"title\": \"Summer Schools of Slavonic Studies 2026, M\\u0160MT \\u010cR\", \"url\": \"https://msmt.gov.cz/eu-and-international-affairs/summer-schools-of-slavonic-studies-2026\", \"snippet\": \"The Summer Schools of Slavonic Studies are three- to four-week Czech language courses organized by several public universities in the Czech Republic, which take place annually in July and August. Their duration ranges from 3 to 4 weeks. The length of the course is determined by the organizing school. [...] It is recommended that both the regular nominees and substitutes from non-EU/EEA countries apply for their visas well in advance.\\n\\n#### PROCESSING OF PERSONAL DATA\\n\\nBasic information on the pr\"}, {\"title\": \"Czech Republic\", \"url\": \"https://en.wikipedia.org/wiki/Czech_Republic\", \"snippet\": \"235. \\u2191 \\\"Education and Training Statistics \\u2013 Language Learning\\\". Eurostat. Retrieved 2 August 2026.\\n236. \\u2191 \\\"Foreign language learning increases among EU students\\\". Eurostat. Retrieved 2 August 2026.\\n237. \\u2191 \\\"Stenoprotokol 3. sch\\u016fze Poslaneck\\u00e9 sn\\u011bmovny (25 July 1996), \\u010d\\u00e1st 22/24\\\". Parliament of the Czech Republic. Retrieved 2 August 2026.\\n238. \\u2191 Special Eurobarometer 540: Europeans and their languages (Report). European Commission. 2024. Retrieved 3 August 2026. [...] 231. \\u2191 bpp.de - Die Tschechosl\"}]}"
+      },
+      {
+        "role": "assistant",
+        "content": "I could not complete the requested tool workflow after repeated identical calls. Available material: {\"tool\": \"web_search\", \"result\": {\"status\": \"ok\", \"results\": [{\"title\": \"Prague Daily News | Czech News in English\", \"url\": \"https://www.praguedaily.news\", \"snippet\": \"SportsJul 29, 2026\\n\\n### EFA: Nothing But a Win on Sunday Will Do for the Prague Lions Against Raiders Tirol\\n\\nFoto: Rugby Club Tatra Smíchov\\n\\nSportsJul 23, 2026\\n\\n### Prague to Modernise Tatra Smíchov Rugby Ground\\n\\nAdvertise here\\n\\n#### This could be your advertising space\\n\\nReach readers across Prague with high-visibility placements.\\n\\nView advertising options\\n\\n## Latest Articles\\n\\nFoto: Portál hlavního města Prahy\\n\\nNewsAug 12, 2026 [...] ### Voilà Kampa! French Market Returns to Prague This July for\"}, {\"title\": \"Czech Sport news | Breaking News & Top Stories | NewsNow\", \"url\": \"https://www.newsnow.com/us/World/Europe/Eastern+Europe/Czech+Republic/Sport\", \"snippet\": \"Besiktas vs Hradec Kralove - prediction, team news, lineups  Sports Mole   19:04 Tue, 11 Aug\\n\\nCzech Tour 2026 start list  Domestique Cycling   14:00 Tue, 11 Aug\\n\\nDaniel Škvor meets Tomasz Narkun at OKTAGON 95 in Karlovy Vary  LowKick MMA   11:28 Tue, 11 Aug\\n\\nHow to watch the 2026 Czech Tour: Streaming and TV by Country  Domestique Cycling   10:06 Tue, 11 Aug [...] Another Russian-born player changes nationality as Roland Garros junior champion joins Czech Republic  TennisUpToDate   01:36 Tue, 11\"}, {\"title\": \"Czech Republic | Czech Republic | Today's latest from Al Jazeera\", \"url\": \"https://www.aljazeera.com/where/czech-republic\", \"snippet\": \"People attend a protest rally in support of public media as the Czech government plans to revamp and cut funding for Czech TV and Czech Radio, in Prague, Czech Republic, June 21, 2026. REUTERS/Eva Korinkova\\n ## Ex-Wimbledon champion Vondrousova banned for refusing drug test\\n\\n  Marketa Vondrousova in action.\\n ## MotoGP: Marquez goes back-to-back in Brno, narrows title gap to Bezzecchi\\n\\n  Marc Marquez celebrates on the podium\\n World Cup 2026 post label [...] South Korea's Oh Hyeon-gyu, left, celeb\"}, {\"title\": \"News from the Czech Republic | Radio Prague International\", \"url\": \"https://english.radio.cz/en-hp\", \"snippet\": \"One of the oldest \\\"patients\\\" on record has undergone an examination at the St. Anne's University Hospital in Brno. Using CT, doctors scanned 700-year-old statue.\\n\\n## Sport\\n\\n Lukáš Horníček | Photo: Martin Divíšek,  Profimedia   03:10\\n\\n  ### Czech goalie Horníček joins Newcastle in €30 million transfer\\n\\n  Czech goalie Lukáš Horníček has completed a €30 million transfer from Portuguese side Braga to English Premier League club Newcastle United, signing a five-year contract.\\n\\n## Travel [...] Czech \"}, {\"title\": \"Latest daily news for Prague and the Czech Republic\", \"url\": \"https://www.expats.cz/czech-news/daily-news\", \"snippet\": \"Frost hits mountains as Czechia readies for heat, US charges cartel members over Czech arms plot, and runway reopens at Ruzyně Airport this week.\\n\\nCzech news in brief for August 11: Tuesday's top afternoon headlines\\n\\n### Czech news in brief for August 11: Tuesday's top afternoon headlines\\n\\nDaily News\\n\\n-\\n\\nExpats.cz Staff,  ČTK\\n\\nCzechia issues warnings for Colombia travel after quake, digital ID app opens to public stress test this week, and heat stress tool tracks Czech cities. [...] ### 'Trouser\"}]}}\n{\"tool\": \"web_search\", \"result\": {\"status\": \"ok\", \"results\": [{\"title\": \"Sportovní zpravodajství | ČeskéNoviny.cz\", \"url\": \"https://www.ceskenoviny.cz/sport\", \"snippet\": \"### Čtvrtkařka Manuel a oštěpař Vadlejch budou na ME bojovat o finále\\n Reklama\\n 13.08.2026 01:01\\n\\n  ### Plavkyně Seemanová bude na ME útočit na třetí zlato na 200 metrů\\n Reklama\\n 12.08.2026 23:25\\n\\n  ### Horejš: Ukázali jsme si, že jsme konkurenceschopní, máme na to rvát se o postup\\n 12.08.2026 23:14\\n\\n  ### Fotbalisté PSG obhájili Superpohár, porazili Aston Villu\\n 12.08.2026 23:17\\n\\n  ### Slovenka Zapletalová má zlato z ME, desetibojař Stráský je průběžně osmý\\n 12.08.2026 20:39 [...] ### Kozel: Mu\"}, {\"title\": \"Czech Sport news | Breaking News & Top Stories | NewsNow\", \"url\": \"https://www.newsnow.com/us/World/Europe/Eastern+Europe/Czech+Republic/Sport\", \"snippet\": \"Besiktas vs Hradec Kralove - prediction, team news, lineups  Sports Mole   19:04 Tue, 11 Aug\\n\\nCzech Tour 2026 start list  Domestique Cycling   14:00 Tue, 11 Aug\\n\\nDaniel Škvor meets Tomasz Narkun at OKTAGON 95 in Karlovy Vary  LowKick MMA   11:28 Tue, 11 Aug\\n\\nHow to watch the 2026 Czech Tour: Streaming and TV by Country  Domestique Cycling   10:06 Tue, 11 Aug [...] Vancouver Canucks sign 24th overall pick Adam Novotny to a 3-year entry-level contract  The Canuck Way (Weblog)   15:16\\n\\nEarlier Toda\"}, {\"title\": \"iSport.cz - Sportovní zprávy, výsledky, reportáže\", \"url\": \"https://isport.blesk.cz\", \"snippet\": \"|  |  |  |  |\\n ---  --- |\\n| Fotbal  Paris SG - Aston Villa | 11,72 | 03,92 | 24,85 |\\n| Basketbal  Magnolia Hotshots - Phoenix Fuel Masters | 11,65 | 014 | 22,35 | Stream |\\n| Fotbal  FC Köbenhavn - Debrecen VSC (odv.) | 11,29 | 05,59 | 29,08 |\\n| Fotbal  GKS Katowice - Hapoel Tel Aviv (odv.) | 12,05 | 03,37 | 23,56 | Stream |\\n| Lední hokej  České Budějovice - Salzburg | 11,73 | 04,43 | 23,67 | Stream | [...] Blesk.cz\\n\\n### Německo v pasti blbé nálady: Merz bojuje s vlastní stranou, AfD těží z frust\"}, {\"title\": \"Sport – Aktuálně.cz\", \"url\": \"https://sport.aktualne.cz\", \"snippet\": \"Michal Rada potvrdil na atletickém mistrovství světa juniorů v Eugene pověst mládežnické superstar. 19letý Čech si v závodě na 400 metrů překážek suverénně doběhl pro zlato, navíc při tom rozmetal vousatý evropský rekord kategorie. Stejně jako předloni a vloni prší na talent z Českých Budějovic chvála.\\n\\n## Přenos skončil Lyon - Sparta 3:0. Pražané neměli ve Francii šanci, v Lize mistrů končí [...] ## Siniaková zuřila, intervence Číňanky pobavila Toronto. Češka opěvuje „novou“ partnerku\\n\\nKateřina\"}, {\"title\": \"Radio Prague International: News from the Czech Republic\", \"url\": \"https://english.radio.cz…"
+      }
+    ],
+    "finished": true,
+    "summary": "I could not complete the requested tool workflow after repeated identical calls. Available material: {\"tool\": \"web_search\", \"result\": {\"status\": \"ok\", \"results\": [{\"title\": \"Prague Daily News | Czech News in English\", \"url\": \"https://www.praguedaily.news\", \"snippet\": \"SportsJul 29, 2026\\n\\n### EFA: Nothing But a Win on Sunday Will Do for the Prague Lions Against Raiders Tirol\\n\\nFoto: Rugby Club Tatra Smíchov\\n\\nSportsJul 23, 2026\\n\\n### Prague to Modernise Tatra Smíchov Rugby Ground\\n\\nAdvertise here\\n\\n#### This could be your advertising space\\n\\nReach readers across Prague with high-visibility placements.\\n\\nView advertising options\\n\\n## Latest Articles\\n\\nFoto: Portál hlavního města Prahy\\n\\nNewsAug 12, 2026 [...] ### Voilà Kampa! French Market Returns to Prague This July for\"}, {\"title\": \"Czech Sport news | Breaking News & Top Stories | NewsNow\", \"url\": \"https://www.newsnow.com/us/World/Europe/Eastern+Europe/Czech+Republic/Sport\", \"snippet\": \"Besiktas vs Hradec Kralove - prediction, team news, lineups  Sports Mole   19:04 Tue, 11 Aug\\n\\nCzech Tour 2026 start list  Domestique Cycling   14:00 Tue, 11 Aug\\n\\nDaniel Škvor meets Tomasz Narkun at OKTAGON 95 in Karlovy Vary  LowKick MMA   11:28 Tue, 11 Aug\\n\\nHow to watch the 2026 Czech Tour: Streaming and TV by Country  Domestique Cycling   10:06 Tue, 11 Aug [...] Another Russian-born player changes nationality as Roland Garros junior champion joins Czech Republic  TennisUpToDate   01:36 Tue, 11\"}, {\"title\": \"Czech Republic | Czech Republic | Today's latest from Al Jazeera\", \"url\": \"https://www.aljazeera.com/where/czech-republic\", \"snippet\": \"People attend a protest rally in support of public media as the Czech government plans to revamp and cut funding for Czech TV and Czech Radio, in Prague, Czech Republic, June 21, 2026. REUTERS/Eva Korinkova\\n ## Ex-Wimbledon champion Vondrousova banned for refusing drug test\\n\\n  Marketa Vondrousova in action.\\n ## MotoGP: Marquez goes back-to-back in Brno, narrows title gap to Bezzecchi\\n\\n  Marc Marquez celebrates on the podium\\n World Cup 2026 post label [...] South Korea's Oh Hyeon-gyu, left, celeb\"}, {\"title\": \"News from the Czech Republic | Radio Prague International\", \"url\": \"https://english.radio.cz/en-hp\", \"snippet\": \"One of the oldest \\\"patients\\\" on record has undergone an examination at the St. Anne's University Hospital in Brno. Using CT, doctors scanned 700-year-old statue.\\n\\n## Sport\\n\\n Lukáš Horníček | Photo: Martin Divíšek,  Profimedia   03:10\\n\\n  ### Czech goalie Horníček joins Newcastle in €30 million transfer\\n\\n  Czech goalie Lukáš Horníček has completed a €30 million transfer from Portuguese side Braga to English Premier League club Newcastle United, signing a five-year contract.\\n\\n## Travel [...] Czech \"}, {\"title\": \"Latest daily news for Prague and the Czech Republic\", \"url\": \"https://www.expats.cz/czech-news/daily-news\", \"snippet\": \"Frost hits mountains as Czechia readies for heat, US charges cartel members over Czech arms plot, and runway reopens at Ruzyně Airport this week.\\n\\nCzech news in brief for August 11: Tuesday's top afternoon headlines\\n\\n### Czech news in brief for August 11: Tuesday's top afternoon headlines\\n\\nDaily News\\n\\n-\\n\\nExpats.cz Staff,  ČTK\\n\\nCzechia issues warnings for Colombia travel after quake, digital ID app opens to public stress test this week, and heat stress tool tracks Czech cities. [...] ### 'Trouser\"}]}}\n{\"tool\": \"web_search\", \"result\": {\"status\": \"ok\", \"results\": [{\"title\": \"Sportovní zpravodajství | ČeskéNoviny.cz\", \"url\": \"https://www.ceskenoviny.cz/sport\", \"snippet\": \"### Čtvrtkařka Manuel a oštěpař Vadlejch budou na ME bojovat o finále\\n Reklama\\n 13.08.2026 01:01\\n\\n  ### Plavkyně Seemanová bude na ME útočit na třetí zlato na 200 metrů\\n Reklama\\n 12.08.2026 23:25\\n\\n  ### Horejš: Ukázali jsme si, že jsme konkurenceschopní, máme na to rvát se o postup\\n 12.08.2026 23:14\\n\\n  ### Fotbalisté PSG obhájili Superpohár, porazili Aston Villu\\n 12.08.2026 23:17\\n\\n  ### Slovenka Zapletalová má zlato z ME, desetibojař Stráský je průběžně osmý\\n 12.08.2026 20:39 [...] ### Kozel: Mu\"}, {\"title\": \"Czech Sport news | Breaking News & Top Stories | NewsNow\", \"url\": \"https://www.newsnow.com/us/World/Europe/Eastern+Europe/Czech+Republic/Sport\", \"snippet\": \"Besiktas vs Hradec Kralove - prediction, team news, lineups  Sports Mole   19:04 Tue, 11 Aug\\n\\nCzech Tour 2026 start list  Domestique Cycling   14:00 Tue, 11 Aug\\n\\nDaniel Škvor meets Tomasz Narkun at OKTAGON 95 in Karlovy Vary  LowKick MMA   11:28 Tue, 11 Aug\\n\\nHow to watch the 2026 Czech Tour: Streaming and TV by Country  Domestique Cycling   10:06 Tue, 11 Aug [...] Vancouver Canucks sign 24th overall pick Adam Novotny to a 3-year entry-level contract  The Canuck Way (Weblog)   15:16\\n\\nEarlier Toda\"}, {\"title\": \"iSport.cz - Sportovní zprávy, výsledky, reportáže\", \"url\": \"https://isport.blesk.cz\", \"snippet\": \"|  |  |  |  |\\n ---  --- |\\n| Fotbal  Paris SG - Aston Villa | 11,72 | 03,92 | 24,85 |\\n| Basketbal  Magnolia Hotshots - Phoenix Fuel Masters | 11,65 | 014 | 22,35 | Stream |\\n| Fotbal  FC Köbenhavn - Debrecen VSC (odv.) | 11,29 | 05,59 | 29,08 |\\n| Fotbal  GKS Katowice - Hapoel Tel Aviv (odv.) | 12,05 | 03,37 | 23,56 | Stream |\\n| Lední hokej  České Budějovice - Salzburg | 11,73 | 04,43 | 23,67 | Stream | [...] Blesk.cz\\n\\n### Německo v pasti blbé nálady: Merz bojuje s vlastní stranou, AfD těží z frust\"}, {\"title\": \"Sport – Aktuálně.cz\", \"url\": \"https://sport.aktualne.cz\", \"snippet\": \"Michal Rada potvrdil na atletickém mistrovství světa juniorů v Eugene pověst mládežnické superstar. 19letý Čech si v závodě na 400 metrů překážek suverénně doběhl pro zlato, navíc při tom rozmetal vousatý evropský rekord kategorie. Stejně jako předloni a vloni prší na talent z Českých Budějovic chvála.\\n\\n## Přenos skončil Lyon - Sparta 3:0. Pražané neměli ve Francii šanci, v Lize mistrů končí [...] ## Siniaková zuřila, intervence Číňanky pobavila Toronto. Češka opěvuje „novou“ partnerku\\n\\nKateřina\"}, {\"title\": \"Radio Prague International: News from the Czech Republic\", \"url\": \"https://english.radio.cz…",
+    "crashed": null,
+    "events": [
+      {
+        "tool": "web_search",
+        "result": {
+          "status": "ok",
+          "results": [
+            {
+              "title": "Prague Daily News | Czech News in English",
+              "url": "https://www.praguedaily.news",
+              "snippet": "SportsJul 29, 2026\n\n### EFA: Nothing But a Win on Sunday Will Do for the Prague Lions Against Raiders Tirol\n\nFoto: Rugby Club Tatra Smíchov\n\nSportsJul 23, 2026\n\n### Prague to Modernise Tatra Smíchov Rugby Ground\n\nAdvertise here\n\n#### This could be your advertising space\n\nReach readers across Prague with high-visibility placements.\n\nView advertising options\n\n## Latest Articles\n\nFoto: Portál hlavního města Prahy\n\nNewsAug 12, 2026 [...] ### Voilà Kampa! French Market Returns to Prague This July for"
+            },
+            {
+              "title": "Czech Sport news | Breaking News & Top Stories | NewsNow",
+              "url": "https://www.newsnow.com/us/World/Europe/Eastern+Europe/Czech+Republic/Sport",
+              "snippet": "Besiktas vs Hradec Kralove - prediction, team news, lineups  Sports Mole   19:04 Tue, 11 Aug\n\nCzech Tour 2026 start list  Domestique Cycling   14:00 Tue, 11 Aug\n\nDaniel Škvor meets Tomasz Narkun at OKTAGON 95 in Karlovy Vary  LowKick MMA   11:28 Tue, 11 Aug\n\nHow to watch the 2026 Czech Tour: Streaming and TV by Country  Domestique Cycling   10:06 Tue, 11 Aug [...] Another Russian-born player changes nationality as Roland Garros junior champion joins Czech Republic  TennisUpToDate   01:36 Tue, 11"
+            },
+            {
+              "title": "Czech Republic | Czech Republic | Today's latest from Al Jazeera",
+              "url": "https://www.aljazeera.com/where/czech-republic",
+              "snippet": "People attend a protest rally in support of public media as the Czech government plans to revamp and cut funding for Czech TV and Czech Radio, in Prague, Czech Republic, June 21, 2026. REUTERS/Eva Korinkova\n ## Ex-Wimbledon champion Vondrousova banned for refusing drug test\n\n  Marketa Vondrousova in action.\n ## MotoGP: Marquez goes back-to-back in Brno, narrows title gap to Bezzecchi\n\n  Marc Marquez celebrates on the podium\n World Cup 2026 post label [...] South Korea's Oh Hyeon-gyu, left, celeb"
+            },
+            {
+              "title": "News from the Czech Republic | Radio Prague International",
+              "url": "https://english.radio.cz/en-hp",
+              "snippet": "One of the oldest \"patients\" on record has undergone an examination at the St. Anne's University Hospital in Brno. Using CT, doctors scanned 700-year-old statue.\n\n## Sport\n\n Lukáš Horníček | Photo: Martin Divíšek,  Profimedia   03:10\n\n  ### Czech goalie Horníček joins Newcastle in €30 million transfer\n\n  Czech goalie Lukáš Horníček has completed a €30 million transfer from Portuguese side Braga to English Premier League club Newcastle United, signing a five-year contract.\n\n## Travel [...] Czech "
+            },
+            {
+              "title": "Latest daily news for Prague and the Czech Republic",
+              "url": "https://www.expats.cz/czech-news/daily-news",
+              "snippet": "Frost hits mountains as Czechia readies for heat, US charges cartel members over Czech arms plot, and runway reopens at Ruzyně Airport this week.\n\nCzech news in brief for August 11: Tuesday's top afternoon headlines\n\n### Czech news in brief for August 11: Tuesday's top afternoon headlines\n\nDaily News\n\n-\n\nExpats.cz Staff,  ČTK\n\nCzechia issues warnings for Colombia travel after quake, digital ID app opens to public stress test this week, and heat stress tool tracks Czech cities. [...] ### 'Trouser"
+            }
+          ]
+        },
+        "network_request_executed": true
+      },
+      {
+        "tool": "web_search",
+        "result": {
+          "status": "ok",
+          "results": [
+            {
+              "title": "Sportovní zpravodajství | ČeskéNoviny.cz",
+              "url": "https://www.ceskenoviny.cz/sport",
+              "snippet": "### Čtvrtkařka Manuel a oštěpař Vadlejch budou na ME bojovat o finále\n Reklama\n 13.08.2026 01:01\n\n  ### Plavkyně Seemanová bude na ME útočit na třetí zlato na 200 metrů\n Reklama\n 12.08.2026 23:25\n\n  ### Horejš: Ukázali jsme si, že jsme konkurenceschopní, máme na to rvát se o postup\n 12.08.2026 23:14\n\n  ### Fotbalisté PSG obhájili Superpohár, porazili Aston Villu\n 12.08.2026 23:17\n\n  ### Slovenka Zapletalová má zlato z ME, desetibojař Stráský je průběžně osmý\n 12.08.2026 20:39 [...] ### Kozel: Mu"
+            },
+            {
+              "title": "Czech Sport news | Breaking News & Top Stories | NewsNow",
+              "url": "https://www.newsnow.com/us/World/Europe/Eastern+Europe/Czech+Republic/Sport",
+              "snippet": "Besiktas vs Hradec Kralove - prediction, team news, lineups  Sports Mole   19:04 Tue, 11 Aug\n\nCzech Tour 2026 start list  Domestique Cycling   14:00 Tue, 11 Aug\n\nDaniel Škvor meets Tomasz Narkun at OKTAGON 95 in Karlovy Vary  LowKick MMA   11:28 Tue, 11 Aug\n\nHow to watch the 2026 Czech Tour: Streaming and TV by Country  Domestique Cycling   10:06 Tue, 11 Aug [...] Vancouver Canucks sign 24th overall pick Adam Novotny to a 3-year entry-level contract  The Canuck Way (Weblog)   15:16\n\nEarlier Toda"
+            },
+            {
+              "title": "iSport.cz - Sportovní zprávy, výsledky, reportáže",
+              "url": "https://isport.blesk.cz",
+              "snippet": "|  |  |  |  |\n ---  --- |\n| Fotbal  Paris SG - Aston Villa | 11,72 | 03,92 | 24,85 |\n| Basketbal  Magnolia Hotshots - Phoenix Fuel Masters | 11,65 | 014 | 22,35 | Stream |\n| Fotbal  FC Köbenhavn - Debrecen VSC (odv.) | 11,29 | 05,59 | 29,08 |\n| Fotbal  GKS Katowice - Hapoel Tel Aviv (odv.) | 12,05 | 03,37 | 23,56 | Stream |\n| Lední hokej  České Budějovice - Salzburg | 11,73 | 04,43 | 23,67 | Stream | [...] Blesk.cz\n\n### Německo v pasti blbé nálady: Merz bojuje s vlastní stranou, AfD těží z frust"
+            },
+            {
+              "title": "Sport – Aktuálně.cz",
+              "url": "https://sport.aktualne.cz",
+              "snippet": "Michal Rada potvrdil na atletickém mistrovství světa juniorů v Eugene pověst mládežnické superstar. 19letý Čech si v závodě na 400 metrů překážek suverénně doběhl pro zlato, navíc při tom rozmetal vousatý evropský rekord kategorie. Stejně jako předloni a vloni prší na talent z Českých Budějovic chvála.\n\n## Přenos skončil Lyon - Sparta 3:0. Pražané neměli ve Francii šanci, v Lize mistrů končí [...] ## Siniaková zuřila, intervence Číňanky pobavila Toronto. Češka opěvuje „novou“ partnerku\n\nKateřina"
+            },
+            {
+              "title": "Radio Prague International: News from the Czech Republic",
+              "url": "https://english.radio.cz/en-hp",
+              "snippet": "One of the oldest \"patients\" on record has undergone an examination at the St. Anne's University Hospital in Brno. Using CT, doctors scanned 700-year-old statue.\n\n## Sport\n\n Lukáš Horníček | Photo: Martin Divíšek,  Profimedia   03:10\n\n  ### Czech goalie Horníček joins Newcastle in €30 million transfer\n\n  Czech goalie Lukáš Horníček has completed a €30 million transfer from Portuguese side Braga to English Premier League club Newcastle United, signing a five-year contract.\n\n## Travel [...] Czech "
+            }
+          ]
+        },
+        "network_request_executed": true
+      },
+      {
+        "tool": "web_search",
+        "result": {
+          "status": "ok",
+          "results": [
+            {
+              "title": "Latest sports news, videos, interviews and comment",
+              "url": "https://www.cnn.com/sport",
+              "snippet": "Red Bull Content Pool](/2026/08/05/sport/red-bull-district-ride-groningen-slopestyle-biking) This Dutch city square became an extreme biking arena for the weekend. Now women are allowed to compete\n\n## On the go\n\n • Video  1:15\n\n  Getty Images Video What did Jalen Brunson’s mom text him before the Knicks Finals? 1:15\n • Video  1:53\n\n  The Karate Kid (1984)/ESPN+ Video Meet the Patriot Games’ Johnny from ‘The Karate kid’ 1:53\n • Video  0:22 [...] ## Tennis\n\n Ben Whitley/PA Images/Getty Images Worl"
+            },
+            {
+              "title": "Enlarged Partial Agreement on Sport - Sport - www.coe.int",
+              "url": "https://www.coe.int/en/web/sport/epas",
+              "snippet": "3 August 2026\n\nThe Council of Europe’s Enlarged Partial Agreement on Sport (EPAS) runs the Database of Alleged...\n\n   Image 6: European Sports Charter: EPAS support and follow‑up visit to Armenia \n\n \n\n\n\n3 August 2026\n\nThe Council of Europe’s Enlarged Partial Agreement on Sport (EPAS) runs the Database of Alleged...\n\n1.   1\n2.   2\n3.   3\n\n   Previous\n   Next\n\nView all news >>\n\nImage 9: Ethical sport\n#### Ethical sport\n\nImage 10: Inclusive sport\n#### Inclusive sport [...] \")\n\nThe Enlarged Partial "
+            },
+            {
+              "title": "FISU - Sports, Games, Results & Latest News",
+              "url": "https://www.fisu.net",
+              "snippet": "### 2026 FISU World University Championship Modern Pentathlon\n\nSpain, Madrid\n\n16   Aug   2026  –  19   Aug   2026\n\n### 2026 FISU World University Championship Canoe Sports\n\nHungary, Szeged\n\n17   Aug   2026  –  20   Aug   2026\n\n### Östersund 2026 FISU World Forum\n\nSweden, Östersund\n\n24   Aug   2026  –  28   Aug   2026\n\n### 2026 FISU World University Championship Rugby Sevens\n\nSouth Africa, Stellenbosch\n\n04   Sep   2026  –  06   Sep   2026\n\nAll events\n\nPrevious slide\n\nNext slide\n\n## Explore [...] "
+            },
+            {
+              "title": "Track & Field News - The Bible of the Sport Since 1948",
+              "url": "https://trackandfieldnews.com",
+              "snippet": "JUNIOR (U20) ALL-TIME ABSOLUTE TOP 10 LISTS • World Junior (U20) Absolute Men • World Junior (U20) Absolute Women •…  Read More\n\nby Glen McMicken\n\n\n Duplantis Bids For Fourth Euro Title\n Highlights Of CAC Games\n\nView all »\n\nAugust 2026\n\nRead Now Online\n\nOr\n\n### Subscribe Today!\n\nWe offer a number of plans to fit your budget. Try our Digital Only Premium for complete online access, including our entire archive.\n\n Subscribe \n\nAlready a subscriber? Log in [...] Skip to content\n\n Home\n Lists\n From T"
+            },
+            {
+              "title": "NBC Sports - news, scores, stats, rumors, videos, and more",
+              "url": "https://www.nbcsports.com",
+              "snippet": "August 12, 2026 03:40 PM\n\nDan Patrick and Co. ponder whether rivalries in college football — and across sports — are diminished.\n\nnbc_dps_JJWattFullInterview_260812.jpg \n\n16:49\n\nWatt: Donald will be ‘great’ if he returns to Rams\n\nNow Playing\n\nWatt: Donald will be 'great' if he returns to Rams\n\nAugust 12, 2026 03:40 PM [...] nbc_roto_smith_260812.jpg \n\n1:52\n\nAstros’ Smith is ‘finally turning the corner’\n\nNow Playing\n\nAstros' Smith is 'finally turning the corner'\n\nAugust 12, 2026 03:30 PM\n\nJames S"
+            }
+          ]
+        },
+        "network_request_executed": true
+      },
+      {
+        "tool": "web_search",
+        "result": {
+          "status": "ok",
+          "results": [
+            {
+              "title": "Enlarged Partial Agreement on Sport - The Council of Europe",
+              "url": "https://www.coe.int/en/web/sport/epas",
+              "snippet": "3 August 2026\n\nThe Council of Europe’s Enlarged Partial Agreement on Sport (EPAS) runs the Database of Alleged...\n\n   Image 6: European Sports Charter: EPAS support and follow‑up visit to Armenia \n\n \n\n\n\n3 August 2026\n\nThe Council of Europe’s Enlarged Partial Agreement on Sport (EPAS) runs the Database of Alleged...\n\n1.   1\n2.   2\n3.   3\n\n   Previous\n   Next\n\nView all news >>\n\nImage 9: Ethical sport\n#### Ethical sport\n\nImage 10: Inclusive sport\n#### Inclusive sport [...] \")\n\nThe Enlarged Partial "
+            },
+            {
+              "title": "Track & Field News - The Bible of the Sport Since 1948",
+              "url": "https://trackandfieldnews.com",
+              "snippet": "JUNIOR (U20) ALL-TIME ABSOLUTE TOP 10 LISTS • World Junior (U20) Absolute Men • World Junior (U20) Absolute Women •…  Read More\n\nby Glen McMicken\n\n\n Duplantis Bids For Fourth Euro Title\n Highlights Of CAC Games\n\nView all »\n\nAugust 2026\n\nRead Now Online\n\nOr\n\n### Subscribe Today!\n\nWe offer a number of plans to fit your budget. Try our Digital Only Premium for complete online access, including our entire archive.\n\n Subscribe \n\nAlready a subscriber? Log in [...] Skip to content\n\n Home\n Lists\n From T"
+            },
+            {
+              "title": "Czech news in brief for August 11: Tuesday's top afternoon headlines - Prague, Czech Republic",
+              "url": "https://www.expats.cz/czech-news/article/czech-news-in-brief-for-august-11-2026-tuesday-top-afternoon-headlines",
+              "snippet": "Written by Expats.cz Staff,  ČTK  Published on 11.08.2026 16:47:00 (updated on 11.08.2026)   Reading time: 3 minutes\n\nDaily News\n\nDaily news briefing - evening edition   )  \n\nDaily news briefing - evening edition\n\n### Summary for: Czech news in brief for August 11: Tuesday's top afternoon headlines [...] Oscar angle: Invincible is also one of five finalists in the running to become Czechia's official Best Foreign Language Film submission, with the pick due Aug.19.\n\nAdvertisement  George Prime St"
+            },
+            {
+              "title": "World Climbing",
+              "url": "https://www.worldclimbing.com",
+              "snippet": "02 Aug 2026\n\nspeed\n\n#### World Climbing Europe Series St. Pölten 2026St. Pölten, Austria\n\n07-09 Aug 2026\n\nlead speed\n\n#### World Climbing Europe Series Žilina 2026Žilina, Slovakia\n\n13-16 Aug 2026\n\nall-disciplines\n\n#### World Climbing Asia Youth Series Quannan 2026Quannan, China\n\n21-22 Aug 2026\n\nlead\n\n#### World Climbing Europe Series Ostermundigen 2026Ostermundigen, Switzerland\n\n21-25 Aug 2026\n\nall-disciplines\n\n#### World Climbing Asia Youth Championship Guiyang 2026Guiyang, China [...] 28-29 Au"
+            },
+            {
+              "title": "FISU - Sports, Games, Results & Latest News",
+              "url": "https://www.fisu.net",
+              "snippet": "### 2026 FISU World University Championship Modern Pentathlon\n\nSpain, Madrid\n\n16   Aug   2026  –  19   Aug   2026\n\n### 2026 FISU World University Championship Canoe Sports\n\nHungary, Szeged\n\n17   Aug   2026  –  20   Aug   2026\n\n### Östersund 2026 FISU World Forum\n\nSweden, Östersund\n\n24   Aug   2026  –  28   Aug   2026\n\n### 2026 FISU World University Championship Rugby Sevens\n\nSouth Africa, Stellenbosch\n\n04   Sep   2026  –  06   Sep   2026\n\nAll events\n\nPrevious slide\n\nNext slide\n\n## Explore [...] "
+            }
+          ]
+        },
+        "network_request_executed": true
+      },
+      {
+        "tool": "web_search",
+        "result": {
+          "status": "ok",
+          "results": [
+            {
+              "title": "Top Sports Events in Czechia 2026: Major Championships & Stars | VisitCzechia",
+              "url": "https://www.visitczechia.com/en-us/news/2026/01/n-top-2023-sports-events-in-czechia-you-cant-miss",
+              "snippet": "## European Carp Fishing Championship\n\nAutumn Brings Battles of Anglers. Learn how to catch the golden carp at Stairs2Hell, the European Carp Fishing Championship, taking place from October 3 to 10 at Nové Mlýny. Around 300 competitors from all over the world are expected, with famous angler and renowned influencer Jakub Vágner serving as ambassador. The event is organized by the European Carp Fishing Association.\n\n## The Parkour Earth World Championships [...] Our tip: Throughout 2026, a variet"
+            },
+            {
+              "title": "Czech Sport news | Breaking News & Top Stories | NewsNow",
+              "url": "https://www.newsnow.com/us/World/Europe/Eastern+Europe/Czech+Republic/Sport",
+              "snippet": "Besiktas vs Hradec Kralove - prediction, team news, lineups  Sports Mole   19:04 Tue, 11 Aug\n\nCzech Tour 2026 start list  Domestique Cycling   14:00 Tue, 11 Aug\n\nDaniel Škvor meets Tomasz Narkun at OKTAGON 95 in Karlovy Vary  LowKick MMA   11:28 Tue, 11 Aug\n\nHow to watch the 2026 Czech Tour: Streaming and TV by Country  Domestique Cycling   10:06 Tue, 11 Aug [...] Vancouver Canucks sign 24th overall pick Adam Novotny to a 3-year entry-level contract  The Canuck Way (Weblog)   15:16\n\nEarlier Toda"
+            },
+            {
+              "title": "Call for Papers | 15th Annual International Conference of Czech Philosophy of Sport | Charles University, Prague, October 15–16, 2026. Call ends August 10, 2026 | idrottsforum.org",
+              "url": "https://idrottsforum.org/call-for-papers-15th-annual-international-conference-of-czech-philosophy-of-sport-charles-university-prague-october-15-16-2026-call-ends-august-10-2026",
+              "snippet": "Research articles\n  + Recent\n  + By author\n  + By year of publication\n  + Peer review, recent\n  + Peer review, by author\n Feature articles\n  + Recent\n  + By author\n  + By year of publication\n  + Scholarly article summaries\n Book reviews\n  + Recent\n  + Book reviews, by author\n  + Book reviews, by title\n  + Sports books publishers, a selection\n News\n  + All news\n  + Conferences\n  + CfP: Scholarly journal\n  + Vacancies/Lediga platser\n  + Newsletters\n Journals\n  + Recent issues\n  + The full list [.."
+            },
+            {
+              "title": "Czech news in brief for August 1: Saturday's top afternoon headlines - Prague, Czech Republic",
+              "url": "https://www.expats.cz/czech-news/article/czech-news-in-brief-for-august-1-2026-saturday-top-afternoon-headlines",
+              "snippet": "Jobs\n Daily News\n Prague\n Culture\n Food & Drink\n Expat Life\n Housing\n Education\n Health\n Work\n Travel\n Business & Money\n Language\n\n# Czech news in brief for August 1: Saturday's top afternoon headlines\n\n### Heat wave to return next week, Pilsen auto supplier to cut 300 jobs, details released in Czech tennis star's ban, and more Saturday headlines.\n\nExpats.cz Staff ČTK\n\nWritten by Expats.cz Staff,  ČTK  Published on 01.08.2026 16:05:00 (updated on 01.08.2026)   Reading time: 3 minutes"
+            },
+            {
+              "title": "WCS 2026 Is Over. Voucher Pre-Sale for the World Championships in Brno Begins. - WORLD CLIMBING SERIES PRAGUE 2026",
+              "url": "https://www.worldclimbingseries.cz/wcs-2026-is-over-voucher-pre-sale-for-the-world-championships-in-brno-begins",
+              "snippet": "The World Championships, scheduled to take place from 13 to 21 August 2027, represent another major milestone for Czech climbing. Compared to World Climbing Series Prague, the event will feature the full range of disciplines – boulder, lead, speed climbing and para climbing.\n\nThis year’s World Climbing Series Prague also served as an important test event ahead of one of the most significant sporting events the Czech Republic will host in the coming years. [...] The addition of lead climbing made"
+            }
+          ]
+        },
+        "network_request_executed": true
+      },
+      {
+        "tool": "web_search",
+        "result": {
+          "status": "ok",
+          "results": [
+            {
+              "title": "Top 2026 sports events in Czechia you can't miss",
+              "url": "https://www.visitczechia.com/en-us/news/2026/01/n-top-2023-sports-events-in-czechia-you-cant-miss",
+              "snippet": "## European Carp Fishing Championship\n\nAutumn Brings Battles of Anglers. Learn how to catch the golden carp at Stairs2Hell, the European Carp Fishing Championship, taking place from October 3 to 10 at Nové Mlýny. Around 300 competitors from all over the world are expected, with famous angler and renowned influencer Jakub Vágner serving as ambassador. The event is organized by the European Carp Fishing Association.\n\n## The Parkour Earth World Championships [...] Our tip: Throughout 2026, a variet"
+            },
+            {
+              "title": "Czech news in brief for August 1: Saturday's top afternoon ...",
+              "url": "https://www.expats.cz/czech-news/article/czech-news-in-brief-for-august-1-2026-saturday-top-afternoon-headlines",
+              "snippet": "Jobs\n Daily News\n Prague\n Culture\n Food & Drink\n Expat Life\n Housing\n Education\n Health\n Work\n Travel\n Business & Money\n Language\n\n# Czech news in brief for August 1: Saturday's top afternoon headlines\n\n### Heat wave to return next week, Pilsen auto supplier to cut 300 jobs, details released in Czech tennis star's ban, and more Saturday headlines.\n\nExpats.cz Staff ČTK\n\nWritten by Expats.cz Staff,  ČTK  Published on 01.08.2026 16:05:00 (updated on 01.08.2026)   Reading time: 3 minutes [...] Anoth"
+            },
+            {
+              "title": "August 2026 📍 Czech Republic (Prague, Brno, ...",
+              "url": "https://www.facebook.com/CzechLondon/posts/-summer-schools-of-slavonic-studies-2026-call-for-applications-are-you-ready-to-/1219850650341379",
+              "snippet": "July – August 2026 📍 Czech Republic (Prague, Brno, Olomouc & České Budějovice) Intensive Czech language courses at . 🗓 Application deadline:"
+            },
+            {
+              "title": "Summer Schools of Slavonic Studies 2026, MŠMT ČR",
+              "url": "https://msmt.gov.cz/eu-and-international-affairs/summer-schools-of-slavonic-studies-2026",
+              "snippet": "The Summer Schools of Slavonic Studies are three- to four-week Czech language courses organized by several public universities in the Czech Republic, which take place annually in July and August. Their duration ranges from 3 to 4 weeks. The length of the course is determined by the organizing school. [...] It is recommended that both the regular nominees and substitutes from non-EU/EEA countries apply for their visas well in advance.\n\n#### PROCESSING OF PERSONAL DATA\n\nBasic information on the pr"
+            },
+            {
+              "title": "Czech Republic",
+              "url": "https://en.wikipedia.org/wiki/Czech_Republic",
+              "snippet": "235. ↑ \"Education and Training Statistics – Language Learning\". Eurostat. Retrieved 2 August 2026.\n236. ↑ \"Foreign language learning increases among EU students\". Eurostat. Retrieved 2 August 2026.\n237. ↑ \"Stenoprotokol 3. schůze Poslanecké sněmovny (25 July 1996), část 22/24\". Parliament of the Czech Republic. Retrieved 2 August 2026.\n238. ↑ Special Eurobarometer 540: Europeans and their languages (Report). European Commission. 2024. Retrieved 3 August 2026. [...] 231. ↑ bpp.de - Die Tschechosl"
+            }
+          ]
+        },
+        "network_request_executed": true
+      },
+      {
+        "tool": "web_search",
+        "result": {
+          "status": "ok",
+          "results": [
+            {
+              "title": "Top 2026 sports events in Czechia you can't miss",
+              "url": "https://www.visitczechia.com/en-us/news/2026/01/n-top-2023-sports-events-in-czechia-you-cant-miss",
+              "snippet": "## European Carp Fishing Championship\n\nAutumn Brings Battles of Anglers. Learn how to catch the golden carp at Stairs2Hell, the European Carp Fishing Championship, taking place from October 3 to 10 at Nové Mlýny. Around 300 competitors from all over the world are expected, with famous angler and renowned influencer Jakub Vágner serving as ambassador. The event is organized by the European Carp Fishing Association.\n\n## The Parkour Earth World Championships [...] Our tip: Throughout 2026, a variet"
+            },
+            {
+              "title": "Czech news in brief for August 1: Saturday's top afternoon ...",
+              "url": "https://www.expats.cz/czech-news/article/czech-news-in-brief-for-august-1-2026-saturday-top-afternoon-headlines",
+              "snippet": "Jobs\n Daily News\n Prague\n Culture\n Food & Drink\n Expat Life\n Housing\n Education\n Health\n Work\n Travel\n Business & Money\n Language\n\n# Czech news in brief for August 1: Saturday's top afternoon headlines\n\n### Heat wave to return next week, Pilsen auto supplier to cut 300 jobs, details released in Czech tennis star's ban, and more Saturday headlines.\n\nExpats.cz Staff ČTK\n\nWritten by Expats.cz Staff,  ČTK  Published on 01.08.2026 16:05:00 (updated on 01.08.2026)   Reading time: 3 minutes [...] Anoth"
+            },
+            {
+              "title": "August 2026 📍 Czech Republic (Prague, Brno, ...",
+              "url": "https://www.facebook.com/CzechLondon/posts/-summer-schools-of-slavonic-studies-2026-call-for-applications-are-you-ready-to-/1219850650341379",
+              "snippet": "July – August 2026 📍 Czech Republic (Prague, Brno, Olomouc & České Budějovice) Intensive Czech language courses at . 🗓 Application deadline:"
+            },
+            {
+              "title": "Summer Schools of Slavonic Studies 2026, MŠMT ČR",
+              "url": "https://msmt.gov.cz/eu-and-international-affairs/summer-schools-of-slavonic-studies-2026",
+              "snippet": "The Summer Schools of Slavonic Studies are three- to four-week Czech language courses organized by several public universities in the Czech Republic, which take place annually in July and August. Their duration ranges from 3 to 4 weeks. The length of the course is determined by the organizing school. [...] It is recommended that both the regular nominees and substitutes from non-EU/EEA countries apply for their visas well in advance.\n\n#### PROCESSING OF PERSONAL DATA\n\nBasic information on the pr"
+            },
+            {
+              "title": "Czech Republic",
+              "url": "https://en.wikipedia.org/wiki/Czech_Republic",
+              "snippet": "235. ↑ \"Education and Training Statistics – Language Learning\". Eurostat. Retrieved 2 August 2026.\n236. ↑ \"Foreign language learning increases among EU students\". Eurostat. Retrieved 2 August 2026.\n237. ↑ \"Stenoprotokol 3. schůze Poslanecké sněmovny (25 July 1996), část 22/24\". Parliament of the Czech Republic. Retrieved 2 August 2026.\n238. ↑ Special Eurobarometer 540: Europeans and their languages (Report). European Commission. 2024. Retrieved 3 August 2026. [...] 231. ↑ bpp.de - Die Tschechosl"
+            }
+          ]
+        },
+        "network_request_executed": true
+      },
+      {
+        "tool": "web_search",
+        "result": {
+          "status": "ok",
+          "results": [
+            {
+              "title": "Top 2026 sports events in Czechia you can't miss",
+              "url": "https://www.visitczechia.com/en-us/news/2026/01/n-top-2023-sports-events-in-czechia-you-cant-miss",
+              "snippet": "## European Carp Fishing Championship\n\nAutumn Brings Battles of Anglers. Learn how to catch the golden carp at Stairs2Hell, the European Carp Fishing Championship, taking place from October 3 to 10 at Nové Mlýny. Around 300 competitors from all over the world are expected, with famous angler and renowned influencer Jakub Vágner serving as ambassador. The event is organized by the European Carp Fishing Association.\n\n## The Parkour Earth World Championships [...] Our tip: Throughout 2026, a variet"
+            },
+            {
+              "title": "Czech news in brief for August 1: Saturday's top afternoon ...",
+              "url": "https://www.expats.cz/czech-news/article/czech-news-in-brief-for-august-1-2026-saturday-top-afternoon-headlines",
+              "snippet": "Jobs\n Daily News\n Prague\n Culture\n Food & Drink\n Expat Life\n Housing\n Education\n Health\n Work\n Travel\n Business & Money\n Language\n\n# Czech news in brief for August 1: Saturday's top afternoon headlines\n\n### Heat wave to return next week, Pilsen auto supplier to cut 300 jobs, details released in Czech tennis star's ban, and more Saturday headlines.\n\nExpats.cz Staff ČTK\n\nWritten by Expats.cz Staff,  ČTK  Published on 01.08.2026 16:05:00 (updated on 01.08.2026)   Reading time: 3 minutes [...] Anoth"
+            },
+            {
+              "title": "August 2026 📍 Czech Republic (Prague, Brno, ...",
+              "url": "https://www.facebook.com/CzechLondon/posts/-summer-schools-of-slavonic-studies-2026-call-for-applications-are-you-ready-to-/1219850650341379",
+              "snippet": "July – August 2026 📍 Czech Republic (Prague, Brno, Olomouc & České Budějovice) Intensive Czech language courses at . 🗓 Application deadline:"
+            },
+            {
+              "title": "Summer Schools of Slavonic Studies 2026, MŠMT ČR",
+              "url": "https://msmt.gov.cz/eu-and-international-affairs/summer-schools-of-slavonic-studies-2026",
+              "snippet": "The Summer Schools of Slavonic Studies are three- to four-week Czech language courses organized by several public universities in the Czech Republic, which take place annually in July and August. Their duration ranges from 3 to 4 weeks. The length of the course is determined by the organizing school. [...] It is recommended that both the regular nominees and substitutes from non-EU/EEA countries apply for their visas well in advance.\n\n#### PROCESSING OF PERSONAL DATA\n\nBasic information on the pr"
+            },
+            {
+              "title": "Czech Republic",
+              "url": "https://en.wikipedia.org/wiki/Czech_Republic",
+              "snippet": "235. ↑ \"Education and Training Statistics – Language Learning\". Eurostat. Retrieved 2 August 2026.\n236. ↑ \"Foreign language learning increases among EU students\". Eurostat. Retrieved 2 August 2026.\n237. ↑ \"Stenoprotokol 3. schůze Poslanecké sněmovny (25 July 1996), část 22/24\". Parliament of the Czech Republic. Retrieved 2 August 2026.\n238. ↑ Special Eurobarometer 540: Europeans and their languages (Report). European Commission. 2024. Retrieved 3 August 2026. [...] 231. ↑ bpp.de - Die Tschechosl"
+            }
+          ]
+        },
+        "network_request_executed": true
+      }
+    ],
+    "recovered_from_loop": true,
+    "loop_recovery_failed": true,
+    "recovered_from_web_limit": false,
+    "recovered_from_turn_limit": false,
+    "final_recovery_failed": true,
+    "normalized_content_tool_calls": 0,
+    "web_requests": 8
+  },
+  "deterministic": {
+    "passed": false,
+    "failures": [
+      "final recovery did not produce a user-facing final answer",
+      "answer contains 9 URLs; expected at least 10",
+      "answer contains 9 URLs; expected exactly 10",
+      "answer contains 2 dates; expected at least 10"
+    ],
+    "web_requests": 8,
+    "unique_sources": 22,
+    "output_urls": 9,
+    "output_dates": 2
+  },
+  "outcome": "completed",
+  "evidence": {
+    "cited_urls": [
+      "https://english.radio.cz/en-hp\"",
+      "https://english.radio.cz…",
+      "https://isport.blesk.cz\"",
+      "https://sport.aktualne.cz\"",
+      "https://www.aljazeera.com/where/czech-republic\"",
+      "https://www.ceskenoviny.cz/sport\"",
+      "https://www.expats.cz/czech-news/daily-news\"",
+      "https://www.newsnow.com/us/World/Europe/Eastern+Europe/Czech+Republic/Sport\"",
+      "https://www.praguedaily.news\""
+    ],
+    "cited_sources": [],
+    "available_sources": [
+      {
+        "url": "https://www.praguedaily.news",
+        "title": "Prague Daily News | Czech News in English",
+        "excerpt": "SportsJul 29, 2026\n\n### EFA: Nothing But a Win on Sunday Will Do for the Prague Lions Against Raiders Tirol\n\nFoto: Rugby Club Tatra Smíchov\n\nSportsJul 23, 2026\n\n### Prague to Modernise Tatra Smíchov Rugby Ground\n\nAdvertise here\n\n#### This could be your advertising space\n\nReach readers across Prague with high-visibility placements.\n\nView advertising options\n\n## Latest Articles\n\nFoto: Portál hlavního města Prahy\n\nNewsAug 12, 2026 [...] ### Voilà Kampa! French Market Returns to Prague This July for",
+        "tool": "web_search"
+      },
+      {
+        "url": "https://www.newsnow.com/us/World/Europe/Eastern+Europe/Czech+Republic/Sport",
+        "title": "Czech Sport news | Breaking News & Top Stories | NewsNow",
+        "excerpt": "Besiktas vs Hradec Kralove - prediction, team news, lineups  Sports Mole   19:04 Tue, 11 Aug\n\nCzech Tour 2026 start list  Domestique Cycling   14:00 Tue, 11 Aug\n\nDaniel Škvor meets Tomasz Narkun at OKTAGON 95 in Karlovy Vary  LowKick MMA   11:28 Tue, 11 Aug\n\nHow to watch the 2026 Czech Tour: Streaming and TV by Country  Domestique Cycling   10:06 Tue, 11 Aug [...] Vancouver Canucks sign 24th overall pick Adam Novotny to a 3-year entry-level contract  The Canuck Way (Weblog)   15:16\n\nEarlier Toda",
+        "tool": "web_search"
+      },
+      {
+        "url": "https://www.aljazeera.com/where/czech-republic",
+        "title": "Czech Republic | Czech Republic | Today's latest from Al Jazeera",
+        "excerpt": "People attend a protest rally in support of public media as the Czech government plans to revamp and cut funding for Czech TV and Czech Radio, in Prague, Czech Republic, June 21, 2026. REUTERS/Eva Korinkova\n ## Ex-Wimbledon champion Vondrousova banned for refusing drug test\n\n  Marketa Vondrousova in action.\n ## MotoGP: Marquez goes back-to-back in Brno, narrows title gap to Bezzecchi\n\n  Marc Marquez celebrates on the podium\n World Cup 2026 post label [...] South Korea's Oh Hyeon-gyu, left, celeb",
+        "tool": "web_search"
+      },
+      {
+        "url": "https://english.radio.cz/en-hp",
+        "title": "Radio Prague International: News from the Czech Republic",
+        "excerpt": "One of the oldest \"patients\" on record has undergone an examination at the St. Anne's University Hospital in Brno. Using CT, doctors scanned 700-year-old statue.\n\n## Sport\n\n Lukáš Horníček | Photo: Martin Divíšek,  Profimedia   03:10\n\n  ### Czech goalie Horníček joins Newcastle in €30 million transfer\n\n  Czech goalie Lukáš Horníček has completed a €30 million transfer from Portuguese side Braga to English Premier League club Newcastle United, signing a five-year contract.\n\n## Travel [...] Czech ",
+        "tool": "web_search"
+      },
+      {
+        "url": "https://www.expats.cz/czech-news/daily-news",
+        "title": "Latest daily news for Prague and the Czech Republic",
+        "excerpt": "Frost hits mountains as Czechia readies for heat, US charges cartel members over Czech arms plot, and runway reopens at Ruzyně Airport this week.\n\nCzech news in brief for August 11: Tuesday's top afternoon headlines\n\n### Czech news in brief for August 11: Tuesday's top afternoon headlines\n\nDaily News\n\n-\n\nExpats.cz Staff,  ČTK\n\nCzechia issues warnings for Colombia travel after quake, digital ID app opens to public stress test this week, and heat stress tool tracks Czech cities. [...] ### 'Trouser",
+        "tool": "web_search"
+      },
+      {
+        "url": "https://www.ceskenoviny.cz/sport",
+        "title": "Sportovní zpravodajství | ČeskéNoviny.cz",
+        "excerpt": "### Čtvrtkařka Manuel a oštěpař Vadlejch budou na ME bojovat o finále\n Reklama\n 13.08.2026 01:01\n\n  ### Plavkyně Seemanová bude na ME útočit na třetí zlato na 200 metrů\n Reklama\n 12.08.2026 23:25\n\n  ### Horejš: Ukázali jsme si, že jsme konkurenceschopní, máme na to rvát se o postup\n 12.08.2026 23:14\n\n  ### Fotbalisté PSG obhájili Superpohár, porazili Aston Villu\n 12.08.2026 23:17\n\n  ### Slovenka Zapletalová má zlato z ME, desetibojař Stráský je průběžně osmý\n 12.08.2026 20:39 [...] ### Kozel: Mu",
+        "tool": "web_search"
+      },
+      {
+        "url": "https://isport.blesk.cz",
+        "title": "iSport.cz - Sportovní zprávy, výsledky, reportáže",
+        "excerpt": "|  |  |  |  |\n ---  --- |\n| Fotbal  Paris SG - Aston Villa | 11,72 | 03,92 | 24,85 |\n| Basketbal  Magnolia Hotshots - Phoenix Fuel Masters | 11,65 | 014 | 22,35 | Stream |\n| Fotbal  FC Köbenhavn - Debrecen VSC (odv.) | 11,29 | 05,59 | 29,08 |\n| Fotbal  GKS Katowice - Hapoel Tel Aviv (odv.) | 12,05 | 03,37 | 23,56 | Stream |\n| Lední hokej  České Budějovice - Salzburg | 11,73 | 04,43 | 23,67 | Stream | [...] Blesk.cz\n\n### Německo v pasti blbé nálady: Merz bojuje s vlastní stranou, AfD těží z frust",
+        "tool": "web_search"
+      },
+      {
+        "url": "https://sport.aktualne.cz",
+        "title": "Sport – Aktuálně.cz",
+        "excerpt": "Michal Rada potvrdil na atletickém mistrovství světa juniorů v Eugene pověst mládežnické superstar. 19letý Čech si v závodě na 400 metrů překážek suverénně doběhl pro zlato, navíc při tom rozmetal vousatý evropský rekord kategorie. Stejně jako předloni a vloni prší na talent z Českých Budějovic chvála.\n\n## Přenos skončil Lyon - Sparta 3:0. Pražané neměli ve Francii šanci, v Lize mistrů končí [...] ## Siniaková zuřila, intervence Číňanky pobavila Toronto. Češka opěvuje „novou“ partnerku\n\nKateřina",
+        "tool": "web_search"
+      },
+      {
+        "url": "https://www.cnn.com/sport",
+        "title": "Latest sports news, videos, interviews and comment",
+        "excerpt": "Red Bull Content Pool](/2026/08/05/sport/red-bull-district-ride-groningen-slopestyle-biking) This Dutch city square became an extreme biking arena for the weekend. Now women are allowed to compete\n\n## On the go\n\n • Video  1:15\n\n  Getty Images Video What did Jalen Brunson’s mom text him before the Knicks Finals? 1:15\n • Video  1:53\n\n  The Karate Kid (1984)/ESPN+ Video Meet the Patriot Games’ Johnny from ‘The Karate kid’ 1:53\n • Video  0:22 [...] ## Tennis\n\n Ben Whitley/PA Images/Getty Images Worl",
+        "tool": "web_search"
+      },
+      {
+        "url": "https://www.coe.int/en/web/sport/epas",
+        "title": "Enlarged Partial Agreement on Sport - The Council of Europe",
+        "excerpt": "3 August 2026\n\nThe Council of Europe’s Enlarged Partial Agreement on Sport (EPAS) runs the Database of Alleged...\n\n   Image 6: European Sports Charter: EPAS support and follow‑up visit to Armenia \n\n \n\n\n\n3 August 2026\n\nThe Council of Europe’s Enlarged Partial Agreement on Sport (EPAS) runs the Database of Alleged...\n\n1.   1\n2.   2\n3.   3\n\n   Previous\n   Next\n\nView all news >>\n\nImage 9: Ethical sport\n#### Ethical sport\n\nImage 10: Inclusive sport\n#### Inclusive sport [...] \")\n\nThe Enlarged Partial ",
+        "tool": "web_search"
+      },
+      {
+        "url": "https://www.fisu.net",
+        "title": "FISU - Sports, Games, Results & Latest News",
+        "excerpt": "### 2026 FISU World University Championship Modern Pentathlon\n\nSpain, Madrid\n\n16   Aug   2026  –  19   Aug   2026\n\n### 2026 FISU World University Championship Canoe Sports\n\nHungary, Szeged\n\n17   Aug   2026  –  20   Aug   2026\n\n### Östersund 2026 FISU World Forum\n\nSweden, Östersund\n\n24   Aug   2026  –  28   Aug   2026\n\n### 2026 FISU World University Championship Rugby Sevens\n\nSouth Africa, Stellenbosch\n\n04   Sep   2026  –  06   Sep   2026\n\nAll events\n\nPrevious slide\n\nNext slide\n\n## Explore [...] ",
+        "tool": "web_search"
+      },
+      {
+        "url": "https://trackandfieldnews.com",
+        "title": "Track & Field News - The Bible of the Sport Since 1948",
+        "excerpt": "JUNIOR (U20) ALL-TIME ABSOLUTE TOP 10 LISTS • World Junior (U20) Absolute Men • World Junior (U20) Absolute Women •…  Read More\n\nby Glen McMicken\n\n\n Duplantis Bids For Fourth Euro Title\n Highlights Of CAC Games\n\nView all »\n\nAugust 2026\n\nRead Now Online\n\nOr\n\n### Subscribe Today!\n\nWe offer a number of plans to fit your budget. Try our Digital Only Premium for complete online access, including our entire archive.\n\n Subscribe \n\nAlready a subscriber? Log in [...] Skip to content\n\n Home\n Lists\n From T",
+        "tool": "web_search"
+      },
+      {
+        "url": "https://www.nbcsports.com",
+        "title": "NBC Sports - news, scores, stats, rumors, videos, and more",
+        "excerpt": "August 12, 2026 03:40 PM\n\nDan Patrick and Co. ponder whether rivalries in college football — and across sports — are diminished.\n\nnbc_dps_JJWattFullInterview_260812.jpg \n\n16:49\n\nWatt: Donald will be ‘great’ if he returns to Rams\n\nNow Playing\n\nWatt: Donald will be 'great' if he returns to Rams\n\nAugust 12, 2026 03:40 PM [...] nbc_roto_smith_260812.jpg \n\n1:52\n\nAstros’ Smith is ‘finally turning the corner’\n\nNow Playing\n\nAstros' Smith is 'finally turning the corner'\n\nAugust 12, 2026 03:30 PM\n\nJames S",
+        "tool": "web_search"
+      },
+      {
+        "url": "https://www.expats.cz/czech-news/article/czech-news-in-brief-for-august-11-2026-tuesday-top-afternoon-headlines",
+        "title": "Czech news in brief for August 11: Tuesday's top afternoon headlines - Prague, Czech Republic",
+        "excerpt": "Written by Expats.cz Staff,  ČTK  Published on 11.08.2026 16:47:00 (updated on 11.08.2026)   Reading time: 3 minutes\n\nDaily News\n\nDaily news briefing - evening edition   )  \n\nDaily news briefing - evening edition\n\n### Summary for: Czech news in brief for August 11: Tuesday's top afternoon headlines [...] Oscar angle: Invincible is also one of five finalists in the running to become Czechia's official Best Foreign Language Film submission, with the pick due Aug.19.\n\nAdvertisement  George Prime St",
+        "tool": "web_search"
+      },
+      {
+        "url": "https://www.worldclimbing.com",
+        "title": "World Climbing",
+        "excerpt": "02 Aug 2026\n\nspeed\n\n#### World Climbing Europe Series St. Pölten 2026St. Pölten, Austria\n\n07-09 Aug 2026\n\nlead speed\n\n#### World Climbing Europe Series Žilina 2026Žilina, Slovakia\n\n13-16 Aug 2026\n\nall-disciplines\n\n#### World Climbing Asia Youth Series Quannan 2026Quannan, China\n\n21-22 Aug 2026\n\nlead\n\n#### World Climbing Europe Series Ostermundigen 2026Ostermundigen, Switzerland\n\n21-25 Aug 2026\n\nall-disciplines\n\n#### World Climbing Asia Youth Championship Guiyang 2026Guiyang, China [...] 28-29 Au",
+        "tool": "web_search"
+      },
+      {
+        "url": "https://www.visitczechia.com/en-us/news/2026/01/n-top-2023-sports-events-in-czechia-you-cant-miss",
+        "title": "Top 2026 sports events in Czechia you can't miss",
+        "excerpt": "## European Carp Fishing Championship\n\nAutumn Brings Battles of Anglers. Learn how to catch the golden carp at Stairs2Hell, the European Carp Fishing Championship, taking place from October 3 to 10 at Nové Mlýny. Around 300 competitors from all over the world are expected, with famous angler and renowned influencer Jakub Vágner serving as ambassador. The event is organized by the European Carp Fishing Association.\n\n## The Parkour Earth World Championships [...] Our tip: Throughout 2026, a variet",
+        "tool": "web_search"
+      },
+      {
+        "url": "https://idrottsforum.org/call-for-papers-15th-annual-international-conference-of-czech-philosophy-of-sport-charles-university-prague-october-15-16-2026-call-ends-august-10-2026",
+        "title": "Call for Papers | 15th Annual International Conference of Czech Philosophy of Sport | Charles University, Prague, October 15–16, 2026. Call ends August 10, 2026 | idrottsforum.org",
+        "excerpt": "Research articles\n  + Recent\n  + By author\n  + By year of publication\n  + Peer review, recent\n  + Peer review, by author\n Feature articles\n  + Recent\n  + By author\n  + By year of publication\n  + Scholarly article summaries\n Book reviews\n  + Recent\n  + Book reviews, by author\n  + Book reviews, by title\n  + Sports books publishers, a selection\n News\n  + All news\n  + Conferences\n  + CfP: Scholarly journal\n  + Vacancies/Lediga platser\n  + Newsletters\n Journals\n  + Recent issues\n  + The full list [..",
+        "tool": "web_search"
+      },
+      {
+        "url": "https://www.expats.cz/czech-news/article/czech-news-in-brief-for-august-1-2026-saturday-top-afternoon-headlines",
+        "title": "Czech news in brief for August 1: Saturday's top afternoon ...",
+        "excerpt": "Jobs\n Daily News\n Prague\n Culture\n Food & Drink\n Expat Life\n Housing\n Education\n Health\n Work\n Travel\n Business & Money\n Language\n\n# Czech news in brief for August 1: Saturday's top afternoon headlines\n\n### Heat wave to return next week, Pilsen auto supplier to cut 300 jobs, details released in Czech tennis star's ban, and more Saturday headlines.\n\nExpats.cz Staff ČTK\n\nWritten by Expats.cz Staff,  ČTK  Published on 01.08.2026 16:05:00 (updated on 01.08.2026)   Reading time: 3 minutes [...] Anoth",
+        "tool": "web_search"
+      },
+      {
+        "url": "https://www.worldclimbingseries.cz/wcs-2026-is-over-voucher-pre-sale-for-the-world-championships-in-brno-begins",
+        "title": "WCS 2026 Is Over. Voucher Pre-Sale for the World Championships in Brno Begins. - WORLD CLIMBING SERIES PRAGUE 2026",
+        "excerpt": "The World Championships, scheduled to take place from 13 to 21 August 2027, represent another major milestone for Czech climbing. Compared to World Climbing Series Prague, the event will feature the full range of disciplines – boulder, lead, speed climbing and para climbing.\n\nThis year’s World Climbing Series Prague also served as an important test event ahead of one of the most significant sporting events the Czech Republic will host in the coming years. [...] The addition of lead climbing made",
+        "tool": "web_search"
+      },
+      {
+        "url": "https://www.facebook.com/CzechLondon/posts/-summer-schools-of-slavonic-studies-2026-call-for-applications-are-you-ready-to-/1219850650341379",
+        "title": "August 2026 📍 Czech Republic (Prague, Brno, ...",
+        "excerpt": "July – August 2026 📍 Czech Republic (Prague, Brno, Olomouc & České Budějovice) Intensive Czech language courses at . 🗓 Application deadline:",
+        "tool": "web_search"
+      },
+      {
+        "url": "https://msmt.gov.cz/eu-and-international-affairs/summer-schools-of-slavonic-studies-2026",
+        "title": "Summer Schools of Slavonic Studies 2026, MŠMT ČR",
+        "excerpt": "The Summer Schools of Slavonic Studies are three- to four-week Czech language courses organized by several public universities in the Czech Republic, which take place annually in July and August. Their duration ranges from 3 to 4 weeks. The length of the course is determined by the organizing school. [...] It is recommended that both the regular nominees and substitutes from non-EU/EEA countries apply for their visas well in advance.\n\n#### PROCESSING OF PERSONAL DATA\n\nBasic information on the pr",
+        "tool": "web_search"
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Czech_Republic",
+        "title": "Czech Republic",
+        "excerpt": "235. ↑ \"Education and Training Statistics – Language Learning\". Eurostat. Retrieved 2 August 2026.\n236. ↑ \"Foreign language learning increases among EU students\". Eurostat. Retrieved 2 August 2026.\n237. ↑ \"Stenoprotokol 3. schůze Poslanecké sněmovny (25 July 1996), část 22/24\". Parliament of the Czech Republic. Retrieved 2 August 2026.\n238. ↑ Special Eurobarometer 540: Europeans and their languages (Report). European Commission. 2024. Retrieved 3 August 2026. [...] 231. ↑ bpp.de - Die Tschechosl",
+        "tool": "web_search"
+      }
+    ]
+  }
+}

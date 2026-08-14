@@ -1,0 +1,82 @@
+{
+  "case": "topic-research",
+  "model": "qwen/qwen3-8b",
+  "mode": "live",
+  "run_at": "2026-08-12T14:40:09.105077+00:00",
+  "result": {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Research the benefits and limitations of local tool-calling language models. Provide a short conclusion, key findings, and source URLs for each claim."
+      },
+      {
+        "role": "assistant",
+        "content": "\n\n",
+        "tool_calls": [
+          {
+            "type": "function",
+            "id": "470576003",
+            "function": {
+              "name": "web_search",
+              "arguments": "{\"query\":\"benefits limitations local tool-calling language models\"}"
+            }
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "470576003",
+        "content": "{\"status\": \"ok\", \"results\": [{\"title\": \"Understanding LLMs and Tool Calling - Adaline.ai\", \"url\": \"https://www.adaline.ai/blog/understanding-llms-and-tool-calling\", \"snippet\": \"LLM tool calling transforms AI systems from text generators into action-oriented automation engines. By creating a structured bridge between language models and external APIs, developers can build systems that understand requests and execute real-world actions. This capability addresses fundamental limitations in base LLMs while opening new possibilities for product teams building the next generation of AI applications. [...] Tool calling represents a paradigm shift in LLM application developmen\"}, {\"title\": \"A Framework to Assess and Optimize LLM Tool Calling\", \"url\": \"https://arxiv.org/html/2605.00737v1\", \"snippet\": \"However, our approach has limitations. The estimators are not perfect and may introduce errors. Future works may investigate why tool calls can lead to negative utility, how tool descriptions influence both perceived and latent utility, and develop more accurate predictors and more effective controllers for tool-calling decisions. [...] overall performance remains suboptimal, highlighting limitations in cost-aware decision-making. [...] As shown in Figure 24, there is a consistent misalignment b\"}, {\"title\": \"Tool Calling with Local LLMs: A Practical Evaluation - Docker\", \"url\": \"https://www.docker.com/blog/local-llm-tool-calling-a-practical-evaluation\", \"snippet\": \"We realized we had no definite answer forthat. Local LLM models offer control, cost-efficiency, and privacy, but when it comes to structured tool use, deciding when and how to act, they can behave very differently. We decided to dig deep and test this properly. We started with manual experimentation, then built a framework to scale our testing. This blog documents that journey and shares which models ranked highest on our tool-calling leaderboard. [...] Qwen models dominate: Even the 8B version \"}, {\"title\": \"Tool/Function calling abilities of LLM's that are used locally ...\", \"url\": \"https://discuss.huggingface.co/t/tool-function-calling-abilities-of-llms-that-are-used-locally-pulled-through-ollama/165277\", \"snippet\": \"Thanks in advance\\n\\nIf you are using Ollama directly without any Agent framework, the models that support tool calling are limited, and there seems to be an issue that is not a bug.\\n\\nAs a workaround, you could use Ollama through external Agent frameworks.\\n\\n### Related topics [...] i was trying to build a small AI agent that would query the DB and get the details of the customers, for which i tried many models that are available in the ollama model library, but every model keeps throwing an \\u201cinval\"}, {\"title\": \"Calling code with local LLM is a hoax\", \"url\": \"https://dev.to/docteurrs/calling-code-with-local-llm-is-a-hoax-2n51\", \"snippet\": \"On the dark side:\\n\\n Tool calling still isn't working!\\n Human input doesn't always trigger\\n Low consistency with infinite loops\\n Bugs\\n Soooooo many prompts to write\\n\\n## Available chat mechanisms you can use\\n\\nThere are \\\"sequential\\\" and \\\"hierarchical\\\". Sequential will allow your LLMs to go through the tasks in the order you choose. Hierarchical on the other side will create a ghost agent that automatically decides which one of your agents should be triggered using its description. [...] AutoGen cle\"}]}"
+      },
+      {
+        "role": "assistant",
+        "content": "\n\n**Conclusion:**  \nLocal tool-calling language models offer enhanced functionality, cost-efficiency, and control but face limitations in technical implementation, framework dependencies, and consistency. Key findings balance benefits like automation capabilities against challenges such as imperfect estimators and operational bugs.\n\n**Key Findings:**  \n1. **Benefits:**  \n   - **Enhanced Automation:** Tool calling bridges LLMs and external APIs, enabling action-oriented AI systems (Adaline.ai).  \n   - **Cost-Efficiency & Control:** Local LLMs provide privacy and reduced cloud dependency, though structured tool use varies by model (Docker blog).  \n   - **Performance Leadership:** Qwen models excel in local tool-calling benchmarks, outperforming others (Docker blog).  \n\n2. **Limitations:**  \n   - **Technical Challenges:** Frameworks like ArXiv’s approach face issues with imperfect estimators and suboptimal cost-aware decisions (arXiv).  \n   - **Implementation Dependencies:** Limited tool-calling support in local setups without external agent frameworks (Hugging Face forum).  \n   - **Operational Bugs:** Issues like inconsistent triggers, infinite loops, and prompt inefficiencies hinder reliability (Dev.to).  \n\n**Source URLs:**  \n- [Adaline.ai: LLM Tool Calling](https://www.adaline.ai/blog/understanding-llms-and-tool-calling)  \n- [ArXiv: Tool Calling Framework](https://arxiv.org/html/2605.00737v1)  \n- [Docker Blog: Local LLM Tool Calling](https://www.docker.com/blog/local-llm-tool-calling-a-practical-evaluation)  \n- [Hugging Face Forum](https://discuss.huggingface.co/t/tool-function-calling-abilities-of-llms-that-are-used-locally-pulled-through-ollama/165277)  \n- [Dev.to: Local LLM Tool Calling Limitations](https://dev.to/docteurrs/calling-code-with-local-llm-is-a-hoax-2n51)  \n\n**Note:** Some claims rely on technical papers and community discussions, with limitations tied to specific frameworks or models."
+      }
+    ],
+    "finished": true,
+    "summary": "\n\n**Conclusion:**  \nLocal tool-calling language models offer enhanced functionality, cost-efficiency, and control but face limitations in technical implementation, framework dependencies, and consistency. Key findings balance benefits like automation capabilities against challenges such as imperfect estimators and operational bugs.\n\n**Key Findings:**  \n1. **Benefits:**  \n   - **Enhanced Automation:** Tool calling bridges LLMs and external APIs, enabling action-oriented AI systems (Adaline.ai).  \n   - **Cost-Efficiency & Control:** Local LLMs provide privacy and reduced cloud dependency, though structured tool use varies by model (Docker blog).  \n   - **Performance Leadership:** Qwen models excel in local tool-calling benchmarks, outperforming others (Docker blog).  \n\n2. **Limitations:**  \n   - **Technical Challenges:** Frameworks like ArXiv’s approach face issues with imperfect estimators and suboptimal cost-aware decisions (arXiv).  \n   - **Implementation Dependencies:** Limited tool-calling support in local setups without external agent frameworks (Hugging Face forum).  \n   - **Operational Bugs:** Issues like inconsistent triggers, infinite loops, and prompt inefficiencies hinder reliability (Dev.to).  \n\n**Source URLs:**  \n- [Adaline.ai: LLM Tool Calling](https://www.adaline.ai/blog/understanding-llms-and-tool-calling)  \n- [ArXiv: Tool Calling Framework](https://arxiv.org/html/2605.00737v1)  \n- [Docker Blog: Local LLM Tool Calling](https://www.docker.com/blog/local-llm-tool-calling-a-practical-evaluation)  \n- [Hugging Face Forum](https://discuss.huggingface.co/t/tool-function-calling-abilities-of-llms-that-are-used-locally-pulled-through-ollama/165277)  \n- [Dev.to: Local LLM Tool Calling Limitations](https://dev.to/docteurrs/calling-code-with-local-llm-is-a-hoax-2n51)  \n\n**Note:** Some claims rely on technical papers and community discussions, with limitations tied to specific frameworks or models.",
+    "crashed": null,
+    "events": [
+      {
+        "tool": "web_search",
+        "result": {
+          "status": "ok",
+          "results": [
+            {
+              "title": "Understanding LLMs and Tool Calling - Adaline.ai",
+              "url": "https://www.adaline.ai/blog/understanding-llms-and-tool-calling",
+              "snippet": "LLM tool calling transforms AI systems from text generators into action-oriented automation engines. By creating a structured bridge between language models and external APIs, developers can build systems that understand requests and execute real-world actions. This capability addresses fundamental limitations in base LLMs while opening new possibilities for product teams building the next generation of AI applications. [...] Tool calling represents a paradigm shift in LLM application developmen"
+            },
+            {
+              "title": "A Framework to Assess and Optimize LLM Tool Calling",
+              "url": "https://arxiv.org/html/2605.00737v1",
+              "snippet": "However, our approach has limitations. The estimators are not perfect and may introduce errors. Future works may investigate why tool calls can lead to negative utility, how tool descriptions influence both perceived and latent utility, and develop more accurate predictors and more effective controllers for tool-calling decisions. [...] overall performance remains suboptimal, highlighting limitations in cost-aware decision-making. [...] As shown in Figure 24, there is a consistent misalignment b"
+            },
+            {
+              "title": "Tool Calling with Local LLMs: A Practical Evaluation - Docker",
+              "url": "https://www.docker.com/blog/local-llm-tool-calling-a-practical-evaluation",
+              "snippet": "We realized we had no definite answer forthat. Local LLM models offer control, cost-efficiency, and privacy, but when it comes to structured tool use, deciding when and how to act, they can behave very differently. We decided to dig deep and test this properly. We started with manual experimentation, then built a framework to scale our testing. This blog documents that journey and shares which models ranked highest on our tool-calling leaderboard. [...] Qwen models dominate: Even the 8B version "
+            },
+            {
+              "title": "Tool/Function calling abilities of LLM's that are used locally ...",
+              "url": "https://discuss.huggingface.co/t/tool-function-calling-abilities-of-llms-that-are-used-locally-pulled-through-ollama/165277",
+              "snippet": "Thanks in advance\n\nIf you are using Ollama directly without any Agent framework, the models that support tool calling are limited, and there seems to be an issue that is not a bug.\n\nAs a workaround, you could use Ollama through external Agent frameworks.\n\n### Related topics [...] i was trying to build a small AI agent that would query the DB and get the details of the customers, for which i tried many models that are available in the ollama model library, but every model keeps throwing an “inval"
+            },
+            {
+              "title": "Calling code with local LLM is a hoax",
+              "url": "https://dev.to/docteurrs/calling-code-with-local-llm-is-a-hoax-2n51",
+              "snippet": "On the dark side:\n\n Tool calling still isn't working!\n Human input doesn't always trigger\n Low consistency with infinite loops\n Bugs\n Soooooo many prompts to write\n\n## Available chat mechanisms you can use\n\nThere are \"sequential\" and \"hierarchical\". Sequential will allow your LLMs to go through the tasks in the order you choose. Hierarchical on the other side will create a ghost agent that automatically decides which one of your agents should be triggered using its description. [...] AutoGen cle"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "deterministic": {
+    "passed": true,
+    "failures": [],
+    "web_requests": 1,
+    "unique_sources": 5,
+    "output_urls": 5
+  }
+}

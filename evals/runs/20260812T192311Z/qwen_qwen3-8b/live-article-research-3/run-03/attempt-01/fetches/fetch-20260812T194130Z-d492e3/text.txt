@@ -1,0 +1,453 @@
+Best Local Tool-Calling Models 2026: Real MCP Benchmarks
+Skip to main content
+PromptQuorum
+Compare Tools
+Features
+How It Works
+FAQ
+Blog
+Prompt Engineering
+Local LLMs
+Power Local LLM
+Prompt Bites
+Smart Home
+Balcony Solar
+Try Beta
+Search guides...
+⌘K
+🇺🇸
+EN
+🇺🇸
+EN
+Compare Tools
+Features
+How It Works
+FAQ
+Blog
+Prompt Engineering
+Local LLMs
+Power Local LLM
+Prompt Bites
+Smart Home
+Balcony Solar
+Try Beta
+Home
+/
+Power Local LLM
+/
+Best Local Models for Tool Calling in 2026: Benchmarks & Comparison
+Local AI Agents & Tool Use
+Best Local Models for Tool Calling in 2026: Benchmarks & Comparison
+Last updated:
+June 19, 2026
+·
+12 min read
+·
+By
+Hans Kuepper
+· Founder of PromptQuorum, multi-model AI dispatch tool · PromptQuorum
+Read in:
+🇺🇸
+en
+🇩🇪
+de
+🇫🇷
+fr
+🇯🇵
+ja
+🇨🇳
+zh
+🇪🇸
+es
+🇧🇷
+pt
+🇸🇦
+ar
+🇰🇷
+ko
+Five local models tool-call reliably in May 2026: Gemma 4 27B, GLM-4.7 32B, Qwen3 32B, Qwen3-Coder 30B, and Llama 3.3 70B. Llama 3.3 70B has the highest ceiling (~97% well-formed call rate across MCP servers) but wants 48 GB+ VRAM. Qwen3-Coder 30B is the best pick for code-shaped tool work. Gemma 4 27B is the best general-purpose pick for 24 GB VRAM rigs. GLM-4.7 32B wins on long-context agent tasks (128K context out of the box). Qwen3 32B is the well-rounded fallback. Models below 7B and most general-purpose models without explicit tool-call training emit malformed calls in the same workloads — the failure attributes to the model, not the harness. Quantisation harsher than Q4_K_M on the smaller end of this list degrades reliability noticeably; Q4_K_M is the production floor.
+Tool-call reliability is the single biggest determinant of whether a local agent finishes a task or stalls. The harness you wrap the model in matters less — same Cline, same MCP servers, same prompt: the model emits well-formed tool calls or it does not. This guide benchmarks the five reliable tool-callers in May 2026 (Gemma 4 27B, GLM-4.7 32B, Qwen3 32B, Qwen3-Coder 30B, Llama 3.3 70B) on real MCP workflows, names the failure modes, and tells you which model to pick per VRAM budget.
+⚡
+Quick Answer
+Updated
+:
+2026-06-19
+Which local model is best for tool calling in 2026?
+The best local model for tool calling in 2026 is **Qwen3 7B** — reliable structured JSON tool calls on 8 GB VRAM. For highest accuracy and complex multi-tool workflows, use **Qwen3 32B** on 24 GB VRAM.
+→
+Top picks by VRAM: 24 GB → Gemma 4 27B; 24 GB long-context → GLM-4.7 32B; 24 GB code-shaped → Qwen3-Coder 30B; 48 GB+ → Llama 3.3 70B.
+→
+All five reliable models emit well-formed function-calling JSON, handle parallel calls, and survive strict schema validation in MCP clients.
+→
+Models below 7B and general-purpose models without tool-call training emit malformed calls — the failure is the model, not the harness.
+→
+Quantisation: Q4_K_M is the production floor across all five. Q3 and below degrade tool-call reliability before they degrade chat quality.
+→
+Format-portability is high — the same model handles OpenAI tools, Cline's XML, MCP JSON-RPC, and Aider's diff blocks without reconfiguration.
+→
+Real-world reliability is rate-of-well-formed-calls × rate-of-correct-tool-selection × rate-of-correct-arguments. The 90%+ headline numbers compound; expect 80–90% end-to-end on real workflows.
+Slide Deck
+:
+Best Local Models for Tool Calling in 2026: Benchmarks & Comparison
+The slide deck below covers: 5 local models benchmarked on real MCP workflows (Gemma 4 27B ~95%, GLM-4.7 32B ~94%, Qwen3 32B ~93%, Qwen3-Coder 30B ~96% code, Llama 3.3 70B ~97%), VRAM requirements and quantisation floor (Q4_K_M), models that fail (sub-7B, no tool-call training, heavy quantisation), tool-call format comparison (OpenAI JSON, Cline XML, MCP JSON-RPC 2.0, Aider SEARCH/REPLACE), reliability compounding across agent loops, and 5 common mistakes. Download the PDF as a local tool-calling model reference card.
+Browse the slides below or download as PDF for offline reference.
+Download Reference Card (PDF)
+Contents
+Key Takeaways
+Quick Facts
+What Tool Calling Means for Local Models
+How We Tested
+Head-to-Head Comparison
+Gemma 4 27B
+GLM-4.7 32B
+Qwen3 32B
+Qwen3-Coder 30B
+Llama 3.3 70B
+Models That Do Not Work
+Tool-Call Format Comparison
+Common Mistakes
+Sources
+FAQ
+Related Reading
+Key Takeaways
+Five reliable tool-callers in May 2026:
+Gemma 4 27B, GLM-4.7 32B, Qwen3 32B, Qwen3-Coder 30B, Llama 3.3 70B. All five emit well-formed function-calling JSON and survive strict MCP schema validation.
+Llama 3.3 70B has the highest ceiling
+— well-formed call rate in the high 90s across MCP servers — but wants 48 GB+ VRAM at Q4_K_M. Use only when the hardware fits; the smaller models are usually enough.
+Gemma 4 27B is the default 24 GB-rig pick.
+Best-in-class tool-call training for the size, conservative on chained calls. Reliable on filesystem, database, and GitHub MCP servers.
+GLM-4.7 32B wins long-context agent tasks.
+128K context window out of the box; rare argument truncation is the only common failure. Pick it for compliance reporting and hour-long transcripts.
+Qwen3-Coder 30B is the best code-shaped tool-caller.
+Strong on
+replace_in_file
+,
+read_file
+, and code-aware browser actions; weaker on non-code MCP servers than Gemma 4.
+Models below 7B emit malformed calls.
+General-purpose models without explicit tool-call training do the same regardless of size. The failure is the model, not the harness; switching harnesses does not fix it.
+Q4_K_M is the production floor.
+Q3 and below degrade tool-call reliability before they degrade chat quality. Match quantisation to the workload, not just to the VRAM budget.
+Quick Facts
+Best overall (24 GB VRAM):
+Gemma 4 27B — Q4_K_M, ~16 GB VRAM, reliable across all four reference MCP servers (filesystem, sqlite, puppeteer, github).
+Best long-context (24 GB VRAM):
+GLM-4.7 32B — 128K context, ~20 GB VRAM at Q4_K_M.
+Best code-shaped:
+Qwen3-Coder 30B — ~18 GB VRAM at Q4_K_M, strongest on
+replace_in_file
+and code MCP tools.
+Highest ceiling:
+Llama 3.3 70B — ~42 GB VRAM at Q4_K_M, slowest of the five but most reliable on chained tool calls.
+Lightweight pick:
+Llama 3.2 3B — 4–8 GB VRAM, good enough for triage classification, not enough for multi-step plans.
+Production floor for quantisation:
+Q4_K_M. Q3 and Q2 degrade tool-call reliability before chat quality.
+Headline reliability range:
+90%+ well-formed calls on simple workloads; 80–90% end-to-end on multi-step real workflows after compounding selection and argument errors.
+What Tool Calling Means for Local Models
+Tool calling is the model emitting structured JSON that names a tool and its arguments — the LLM-side capability that turns a chat model into an agent.
+MCP, OpenAI tools, Anthropic tools, and Cline's XML are all wire-format expressions of the same underlying skill.
+📍 In One Sentence
+Qwen3 7B is the best local model for tool calling in 2026 — reliable structured JSON function calls on 8 GB VRAM via Ollama.
+💬 In Plain Terms
+For most tool-calling use cases: Qwen3 7B. For complex multi-step tool chains where accuracy matters most: Qwen3 32B. Both available via Ollama.
+The skill the model needs:
+read a tool schema, decide whether the user request maps to a tool call, and emit a structured response that names the tool and supplies arguments matching the schema. Not free prose with tool-call-shaped text in it — a structured object the harness can parse without heuristics.
+The wire format varies; the skill does not.
+A model that tool-calls reliably on OpenAI's JSON tools format usually tool-calls reliably on Cline's XML and MCP's JSON-RPC too. The skill ports; reformatting failures are surface-level.
+Tool-call training is the cheapest and highest-impact post-training pass.
+The Gemma 3 → Gemma 4, Qwen3 → Qwen3, and Llama 3 → Llama 3.3 step-changes all reflect this. New flagship open-weight releases routinely add or improve tool-call training; that is what separates the reliable list above from the rest of the open-weight landscape.
+Why it matters for agents specifically:
+an agent loop is a sequence of tool calls. Even a 95% per-call reliability rate compounds — eight steps at 95% lands successfully ~66% of the time. This is why scoped harnesses with approval gates outperform autonomous agents on real tasks: human approval recovers the per-call failures.
+For the prompting techniques that improve tool-call reliability on any compliant model, see
+chain-of-thought prompting
+and
+tree-of-thought and ReAct
+— both reduce the rate at which the model picks the wrong tool or supplies wrong arguments.
+Tool calling in 5 steps: user prompt → LLM reads available tool schemas → emits structured JSON naming tool and arguments → harness validates against schema → tool executes (filesystem, database, browser, API). Wire format varies; the underlying LLM skill does not.
+💡
+Tip
+:
+Per-call reliability compounds across an agent loop. A 95% per-call rate over 8 steps lands successfully ~66% of the time. Plan for compounding — keep plan horizons short, use approval gates, and prefer the smallest reliable model that handles your longest realistic horizon.
+How We Tested
+The test held the harness constant and varied only the model.
+Same MCP client, same servers, same prompts — failures attribute to the model, not the runtime.
+Setup:
+Cline 3.x in VS Code (the most strict tool-call validator we tested) plus Goose+MCP for the headless side. Backend Ollama 0.5+ serving each model at Q4_K_M unless otherwise noted.
+Servers:
+the four reference MCP servers —
+filesystem
+(read/write a sandboxed directory),
+sqlite
+(read-only by default, write role for specific tasks),
+puppeteer
+(headless browser),
+github
+(PR and issue management with a fine-grained PAT). Same server versions across all model runs.
+Prompt set:
+50 task prompts per server, repeated 3 times per model = 600 graded calls per model across the 4 servers (~3,000 total across the 5 models). Prompts span single-tool tasks ("read this file"), multi-step plans ("find references to X across the repo"), and parallel calls ("list these 3 directories").
+Grading:
+four signals per call.
+Well-formed
+— the call parses cleanly against the tool schema.
+Correct selection
+— the right tool was chosen for the task.
+Correct arguments
+— argument values match what the task required.
+Execution success
+— the call produced the expected outcome.
+Hardware:
+Apple M5 Max 64 GB MacBook Pro for the smaller models (up to GLM-4.7 32B); NVIDIA L40S 48 GB and 2× RTX 3090 24 GB for Llama 3.3 70B. All runs sustained at usable token rates (≥10 tokens/s) so latency was not the failure mode.
+Honesty constraints:
+percentages reported as ranges, not invented sharp numbers. "~95%" means our runs landed 92–96% across the test set; we round only when the variance was small enough that the precision would be misleading.
+Test methodology: 4 MCP servers (filesystem, sqlite, puppeteer, github), 50 prompts × 4 servers × 3 runs = 600 graded calls per model, ~3,000 total across 5 models — same Cline 3.x harness throughout, only the model varied.
+📌
+Note
+:
+These numbers are from our test harness, not from BFCL or ToolBench leaderboards. Public benchmarks correlate directionally but not one-to-one with MCP-server workloads — the right benchmark for your stack is your stack. Treat the percentages here as a starting hypothesis, not a final verdict.
+Head-to-Head: Five Tool-Calling Models in 2026
+Same harness, same prompts, different models.
+Llama 3.3 70B leads on the headline number; the smaller models lead on the metric that often matters more — reliability per VRAM dollar.
+📍 In One Sentence
+Pick Gemma 4 27B for general 24 GB rigs, GLM-4.7 32B for long context, Qwen3-Coder 30B for code, Qwen3 32B as the well-rounded fallback, and Llama 3.3 70B when you have 48 GB+ VRAM and need the highest ceiling.
+💬 In Plain Terms
+All five work. The differences are in what they cost (VRAM), what they specialise in (long context, code, general purpose), and how often they get a tool call slightly wrong (a few percent — recoverable with approval gates).
+Model
+Size
+VRAM (Q4_K_M)
+Well-formed call rate
+Best for
+Common failure mode
+Gemma 4 27B
+27B
+~16 GB
+~95%
+General-purpose agents on 24 GB rigs
+Conservative on chained calls (asks for approval where chaining would have worked)
+GLM-4.7 32B
+32B
+~20 GB
+~94%
+Long-context agents (128K out of the box)
+Occasional argument truncation on long inputs
+Qwen3 32B
+32B
+~20 GB
+~93%
+Well-rounded — general + light code
+Rare XML malformation in Cline's strict format
+Qwen3-Coder 30B
+30B
+~18 GB
+~96% (code) / ~91% (non-code)
+Coding agents (replace_in_file, read_file, code-aware browser)
+Weaker on non-code servers than the general-purpose picks
+Llama 3.3 70B
+70B
+~42 GB
+~97%
+Highest ceiling when hardware fits
+Slow per-token rate makes long agent loops painful
+Five tool-calling models benchmarked on 4 MCP servers: Llama 3.3 70B leads at ~97% well-formed calls (42 GB VRAM); Qwen3-Coder 30B tops ~96% on code tools; Gemma 4 27B delivers ~95% on 16 GB VRAM; GLM-4.7 32B ~94% with 128K context; Qwen3 32B ~93% well-rounded.
+Gemma 4 27B: The Default Pick for 24 GB Rigs
+Gemma 4 27B is the model most teams should install first.
+Best-in-class tool-call training for the size, fits in 16 GB unified memory or 24 GB VRAM at Q4_K_M, and ships clean function-calling JSON across every MCP server we tested.
+Strengths:
+strict adherence to tool schemas (low malformed-call rate), good general reasoning on tool selection, comfortable on 24 GB consumer GPUs and Apple M-series machines.
+Failure mode:
+conservative on chained tool calls. Gemma 4 sometimes pauses to ask the user a clarifying question where Llama 3.3 would have called the next tool. This is a feature when supervision is the goal; a friction point when you want autonomy.
+Recommended quantisation:
+Q4_K_M. Q5_K_M improves chat quality but does not measurably improve tool-call reliability — the dollar of extra VRAM is better spent on a longer context budget.
+Best harness pairing:
+any of the reliable runtimes. Cline + Gemma 4 is a particularly clean pairing because Gemma's conservatism aligns with Cline's per-step approval UX.
+Where to use it:
+general-purpose agent work, document processing, email triage, MCP-based filesystem and database work. The default pick when you do not have a specific reason to choose one of the others.
+GLM-4.7 32B: The Long-Context Pick
+GLM-4.7 32B is the right pick when the input is long.
+128K context window out of the box, strong tool-call reliability, and the only model in the top five that does not need a context-extension finetune for hour-long meeting transcripts or full-codebase reads.
+Strengths:
+native 128K context (no rope scaling artefacts), reliable tool-call JSON, slightly heavier than Gemma 4 but still comfortable on 24 GB VRAM at Q4_K_M.
+Failure mode:
+occasional argument truncation on very long inputs. When the model is given a 100K-token document and asked to call a tool with the document's key claim as an argument, GLM-4.7 sometimes truncates the argument before the period. Recoverable — Cline surfaces the malformed call and the model retries — but adds an approval cycle.
+Recommended quantisation:
+Q4_K_M. GLM-4.7 quantises slightly less gracefully than Gemma 4; do not drop below Q4 for tool-call workloads.
+Where to use it:
+compliance report generation, long-form document analysis, agent tasks that need the model to hold an entire codebase in context. The pick when context length is the constraint.
+Qwen3 32B: The Well-Rounded Fallback
+Qwen3 32B is the model that does everything competently and nothing first-place.
+Pick it when you need one model for a mix of general work and light code work without juggling two installs.
+Strengths:
+consistent tool-call reliability across all four MCP servers, good general reasoning, fast enough for long agent loops on a 24 GB GPU.
+Failure mode:
+rare XML malformation in Cline's strict format. When it happens, the agent loop retries cleanly — this is a low-impact failure mode in practice.
+Recommended quantisation:
+Q4_K_M. Qwen3 quantises gracefully; Q5_K_M is a small upgrade if you have the VRAM.
+Where to use it:
+mixed workloads where you do not want to switch models per task. The "one model for the team" pick.
+Qwen3-Coder 30B: The Code-Shaped Pick
+Qwen3-Coder 30B is the strongest tool-caller on code-shaped MCP work.
+replace_in_file
+,
+read_file
+, code-aware browser actions, and GitHub PR management all benefit from the code-fine-tuning baked in.
+Strengths:
+highest well-formed-call rate on code MCP tools (~96%), strong on multi-file agent tasks, lower VRAM than the other 32B picks (~18 GB at Q4_K_M).
+Failure mode:
+weaker on non-code servers. Sqlite and puppeteer reliability drops compared to Gemma 4 — Qwen3-Coder treats database queries and browser actions less idiomatically than the general-purpose models.
+Recommended quantisation:
+Q4_K_M. Q5_K_M is the small step up if you want sharper code reasoning.
+Where to use it:
+Cline + Continue.dev coding agents, repo refactors, exploratory bug debugging. Pair with Gemma 4 if your agent also touches non-code servers.
+Llama 3.3 70B: The Highest Ceiling
+Llama 3.3 70B is the most reliable tool-caller in the open-weights ecosystem in May 2026.
+Use only when the hardware fits — the smaller models are usually enough for everyday work.
+Strengths:
+highest well-formed-call rate (~97%) across all four servers, strongest chained-call reliability, robust to messy input. The model where you stop blaming the harness.
+Failure mode:
+speed. Llama 3.3 70B at Q4_K_M on a single L40S 48 GB sustains ~10–15 tokens/s; long agent loops feel slow. On 2× RTX 3090 split inference, throughput improves but the setup is more involved.
+Recommended quantisation:
+Q4_K_M is the floor; Q5_K_M is preferred if VRAM permits (~52 GB). Llama 3.3 quantises gracefully — the difference between Q4 and Q5 is smaller than for Gemma 4.
+Where to use it:
+workflows where reliability matters more than speed (compliance reporting, legal review, exception handling). Or any setup with hardware to spare.
+💡
+Tip
+:
+Llama 3.3 70B at Q4_K_M wants ~42 GB VRAM, fits comfortably on a single L40S 48 GB or 2× RTX 3090 24 GB with split inference, and runs on Apple M-series machines with 64 GB+ unified memory. Per-token throughput is the practical constraint — long agent loops feel slow even when each call is reliable.
+Models That Do Not Work for Tool Calling
+Three categories of model fail the same way regardless of harness.
+Stop trying to make them work; switch to one of the reliable picks above.
+Sub-7B models.
+Llama 3.2 1B, Llama 3.2 3B, Phi-3 Mini, Gemma 2 2B — all emit malformed tool calls past trivial single-step tasks. Acceptable for triage classification ("is this email customer support / sales / spam") where the output is one short string; not acceptable for multi-step plans.
+General-purpose models without tool-call training.
+Most generic 7B–13B chat models without explicit tool-call fine-tunes paraphrase tool calls into prose, mismatch argument schemas, or invent tools that do not exist. The model class is the failure, not the size.
+Heavily quantised versions of the reliable models.
+Q3, Q2, and IQ-quants degrade tool-call reliability before they degrade chat quality. A Q3 Gemma 4 27B is a worse tool-caller than a Q4 Qwen3 32B even though it benchmarks comparably on chat quality. Match quantisation to the workload — Q4_K_M is the production floor.
+Symptoms when you try anyway:
+malformed XML in Cline (tool-call blocks the parser cannot extract), paraphrased SEARCH/REPLACE blocks in Aider, fenced code that does not match the open file in Continue.dev, and stalled agent loops where the model proposes the same call twice in a row. None of these are harness bugs — switching harnesses surfaces the same failures in different shapes.
+Three model categories that fail tool calling: sub-7B models emit malformed calls on multi-step tasks; models without tool-call training paraphrase calls into prose; Q3/Q2 quantisation degrades tool reliability before chat quality — Q4_K_M is the production floor.
+⚠️
+Warning
+:
+Sub-7B models for tool calling is the most common time-sink we see. Symptoms ("the harness is broken", "MCP is broken", "Cline is broken") all point at the model. Switch to a tool-call-trained 27B+ model and the symptoms vanish without changing anything else in the stack.
+Tool-Call Formats: Same Skill, Different Wire Format
+The same model handles all four formats.
+Format choice is a harness/protocol decision, not a model decision.
+The format-portability claim:
+all five reliable models above handle all four formats without per-format reconfiguration. A Gemma 4 27B that tool-calls reliably in Cline tool-calls reliably in Goose+MCP and Continue.dev Agent.
+The implication:
+pick the format that matches your harness, not your model. The model is the load-bearing variable.
+The exception:
+Qwen3-Coder's SEARCH/REPLACE block adherence (Aider format) is slightly better than Qwen3's, because the code-fine-tuning emphasises diff fidelity. Marginal — Qwen3 32B is fine in Aider too.
+Format
+Where you see it
+Strict?
+Forgiveness on malformed output
+OpenAI tools (JSON)
+OpenAI API, Continue.dev Agent
+Schema-validated
+Surface error, model retries
+Cline XML tool blocks
+Cline VS Code extension
+Very strict
+Loop stalls; small models suffer here first
+MCP JSON-RPC 2.0
+Goose, Cline, Continue.dev, LM Studio
+Schema-validated
+Surface error, model retries; the wire format the ecosystem is converging on
+Aider SEARCH/REPLACE blocks
+Aider CLI
+Pattern-matched verbatim
+Reject and retry; small models paraphrase the SEARCH block and fail
+Four tool-call wire formats compared: OpenAI JSON (schema-validated, Continue.dev), Cline XML (very strict, first to surface failures), MCP JSON-RPC 2.0 (ecosystem standard, schema-validated), Aider SEARCH/REPLACE (pattern-matched verbatim) — all five benchmark models handle all four formats.
+💡
+Tip
+:
+Pick the format your harness supports natively, not the format that benchmarks well. The five reliable models above port across all four formats; the harness UX (per-step approval, audit trail, IDE integration) is a bigger driver of real-world success than format choice.
+Common Mistakes Picking a Tool-Calling Model
+Mistake 1: blaming the harness for tool-call failures.
+Symptoms (malformed XML, paraphrased SEARCH blocks, fenced code that does not match) show in different surface forms across harnesses; the cause is usually a model that lacks tool-call training. Switch model first; switch harness only if you confirmed the model tool-calls cleanly elsewhere.
+Mistake 2: under-quantising to fit a smaller GPU.
+Q3 and IQ-quants of a reliable 27B model are usually worse than Q4_K_M of the next size down. Pick the model and quantisation as a pair, not independently.
+Mistake 3: using a small general-purpose model for "simple" tool calls.
+"Simple" in the prompt is not "simple" for a 7B general-purpose model — the malformed-call rate is high enough that even single-step tasks stall in 5–10% of runs. Use Llama 3.2 3B for triage classification and Gemma 4 27B (or larger) for anything that calls a tool.
+Mistake 4: ignoring the chained-call compounding.
+A 95% per-call rate compounds across agent loop steps. An eight-step task at 95% per-step lands ~66% of the time. Plan for compounding — keep plan horizons short, use approval gates, and prefer the smallest reliable model that handles your longest realistic horizon.
+Mistake 5: chasing leaderboard numbers instead of MCP reliability.
+Public benchmarks (BFCL, ToolBench) are useful signal but do not translate one-to-one to MCP-server workloads. The right benchmark is your real workload; if you cannot run that, prefer the models in this list — they survive real workloads.
+Sources
+Model Context Protocol Specification
+— JSON-RPC schema, transport, and lifecycle definitions used in the test harness.
+Berkeley Function Calling Leaderboard (BFCL)
+— public function-calling benchmark; useful directional signal, not MCP-equivalent.
+Ollama Model Library
+— model availability, tool-call support flags, quantisation levels referenced above.
+modelcontextprotocol/servers GitHub repository
+— reference filesystem, sqlite, postgres, puppeteer, and github servers used in the test set.
+Hugging Face model cards for Gemma 4, GLM-4.7, Qwen3, Qwen3-Coder, Llama 3.3
+— official tool-call training documentation per model.
+Frequently Asked Questions
+Which local model has the highest tool-call success rate in 2026?
+Llama 3.3 70B has the highest well-formed-call rate (~97%) across the four reference MCP servers we tested. It needs 48 GB+ VRAM at Q4_K_M, so most users pick one of the smaller reliable models — Gemma 4 27B for general work, GLM-4.7 32B for long context, Qwen3-Coder 30B for code, Qwen3 32B as the well-rounded fallback. All four 27B–32B picks land in the 93–96% range and are easily reliable enough for production agent work with approval gates.
+Does Gemma 4 native tool calling work without prompting tricks?
+Yes. Gemma 4 27B emits clean function-calling JSON and clean Cline XML directly from the standard chat format — no tool-specific prompt engineering, no JSON-mode wrapper, no system-prompt incantation needed. The model was tool-call-trained at the post-training stage; you call it like any other chat model with the tool list in the system prompt and it picks up the rest.
+Can Llama 3.3 70B reliably call tools?
+Yes — it has the highest reliability of the five tested models. Trade-off is hardware: at Q4_K_M it needs ~42 GB VRAM, so it runs comfortably on a single L40S 48 GB or 2× RTX 3090 24 GB with split inference, and on Apple M-series machines with 64 GB+ unified memory. Per-token throughput is the practical constraint — long agent loops feel slow even when each call is reliable.
+Which model handles parallel function calls best?
+Llama 3.3 70B leads on parallel-call reliability — when the prompt is "list these three directories at once", the 70B emits the parallel call cleanly more often than the 27B–32B picks. Gemma 4 27B and Qwen3 32B are close behind. Qwen3-Coder 30B is slightly weaker on parallel calls because the code-fine-tuning biases toward sequential edits. For most agent workloads parallel-call reliability matters less than chained-call reliability — chains are far more common in practice.
+Do quantised versions perform worse on tool calling?
+Yes, and the degradation hits tool-call reliability before chat quality. A Q3 Gemma 4 27B is a noticeably worse tool-caller than the same model at Q4_K_M, even when both produce comparable chat output. The mechanism is small-magnitude weight quantisation breaking the precise activations that route to the tool-call format. Q4_K_M is the production floor for the five reliable models above; Q5_K_M is the safe step up; Q3 and below are not recommended for agent work.
+Can I fine-tune a smaller model for better tool calling?
+Possible but rarely worth it. The five reliable models above have tool-call training built in at the post-training stage by their original labs; a community fine-tune on a smaller base usually does not match. Use one of the reliable models. If you have a domain-specific tool surface (proprietary internal tools), a small LoRA on top of Gemma 4 or Qwen3 can sharpen schema adherence on your tools — but it does not turn a non-tool-call-trained model into a reliable tool-caller.
+Which model is most reliable for JSON output?
+Reliable JSON output and reliable tool calling are correlated but not identical. For pure JSON-mode work (structured-output extraction without tool calls), Gemma 4 27B and GLM-4.7 32B are the strongest — both emit clean JSON without trailing prose or commentary. For tool calls specifically, the five reliable models all qualify; the JSON they emit inside the tool-call wrapper is well-formed across the board.
+Does tool calling work on CPU-only setups?
+Technically yes, practically painful. A Gemma 4 27B at Q4_K_M on a 32 GB CPU sustains ~1–3 tokens/s; an agent loop that needs 30K–80K tokens for a multi-step task takes hours. CPU-only is fine for evaluation and triage classification with small models (Llama 3.2 3B); for production agents, GPU or Apple Silicon unified memory is the practical floor.
+Related Reading
+Connect Ollama to Databases and APIs With MCP: Local Agent Setup 2026
+— practical implementation; the protocol layer the models above tool-call into.
+Local AI Agents in 2026: What Actually Works (And What Still Fails)
+— broader context; how tool-call reliability compounds across agent loop steps.
+Continue.dev vs Cline vs Aider: Best Local Coding Agent in 2026
+— adjacent harness comparison for the code-shaped end of the agent spectrum.
+Replace GitHub Copilot With a Local LLM
+— applied use case for the coding tool-call models above.
+Top Open-Source Models in Ollama
+— broader model authority for the open-weight landscape.
+LLM Quantization Explained
+— quantisation theory; why Q4_K_M is the production floor for tool-call workloads.
+← Back to Power Local LLM
+PromptQuorum
+© 2026 PromptQuorum. All rights reserved.
+🌍 Available worldwide
+•
+English
+,
+Deutsch
+,
+Français
+,
+日本語
+,
+中文
+,
+Español
+,
+Português
+,
+العربية
+,
+한국어
+About
+•
+Frameworks
+•
+Privacy Policy
+•
+Impressum
+•
+Cookie Settings
+•
+hello@promptquorum.com
+•
+Set as preferred source in Google

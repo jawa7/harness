@@ -1,0 +1,14 @@
+{
+  "id": "live-article-research-3",
+  "modes": ["live"],
+  "task": "Find exactly 3 English-language articles published within the last 30 days as of {today} about local tool-calling language models. For every article provide title, date, publication, its individual article URL, and a one-line description. Do not use or cite category, search, or aggregator pages as article URLs. Fetch at least 2 selected article URLs before writing the answer.",
+  "tools": ["web_search", "web_fetch"],
+  "checks": {
+    "required_tools": ["web_search", "web_fetch"],
+    "min_tool_calls": {"web_fetch": 2},
+    "min_output_urls": 3,
+    "exact_output_urls": 3,
+    "min_output_dates": 3,
+    "forbidden_output_url_substrings": ["newsnow.com", "google.com/search", "bing.com/search"]
+  }
+}

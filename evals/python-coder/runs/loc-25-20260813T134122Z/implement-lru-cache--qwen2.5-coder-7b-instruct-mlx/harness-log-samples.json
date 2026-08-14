@@ -1,0 +1,81 @@
+{
+  "samples": [
+    {
+      "finished": false,
+      "crashed": "TimeoutError: timed out",
+      "finish_summary": null,
+      "turns_used": 1,
+      "unverified_urls": [],
+      "initial_failure": null,
+      "verification_results": [],
+      "recovery_attempts": 0,
+      "recovery_turn_limit_reached": false,
+      "sample": 1,
+      "workdir": "samples/sample-1",
+      "passed": false
+    },
+    {
+      "finished": false,
+      "crashed": "--verify-command failed: {'status': 'ok', 'exit_code': 2, 'stdout': '\\n==================================== ERRORS ====================================\\n_ ERROR collecting evals/python-coder/runs/loc-25-20260813T134122Z/implement-lru-cache--qwen2.5-coder-7b-instruct-mlx/samples/sample-2/test_lru_cache.py _\\n../../../../../../../.venv-python-coder/lib/python3.12/site-packages/_pytest/python.py:498: in importtestmodule\\n    mod = import_path(\\n../../../../../../../.venv-python-coder/lib/python3.12/site-packages/_pytest/pathlib.py:587: in import_path\\n    importlib.import_module(module_name)\\n/Users/ilyabondarenko/.local/share/uv/python/cpython-3.12.13-macos-aarch64-none/lib/python3.12/importlib/__init__.py:90: in import_module\\n    return _bootstrap._gcd_import(name[level:], package, level)\\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\\n<frozen importlib._bootstrap>:1387: in _gcd_import\\n    ???\\n<frozen importlib._bootstrap>:1360: in _find_and_load\\n    ???\\n<frozen importlib._bootstrap>:1331: in _find_and_load_unlocked\\n    ???\\n<frozen importlib._bootstrap>:935: in _load_unlocked\\n    ???\\n../../../../../../../.venv-python-coder/lib/python3.12/site-packages/_pytest/assertion/rewrite.py:177: in exec_module\\n    source_stat, co = _rewrite_test(fn, self.config)\\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\\n../../../../../../../.venv-python-coder/lib/python3.12/site-packages/_pytest/assertion/rewrite.py:357: in _rewrite_test\\n    tree = ast.parse(source, filename=strfn)\\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\\n/Users/ilyabondarenko/.local/share/uv/python/cpython-3.12.13-macos-aarch64-none/lib/python3.12/ast.py:52: in parse\\n    return compile(source, filename, mode, flags,\\nE     File \"/Users/ilyabondarenko/.claude/scripts/qwen-harness/evals/python-coder/runs/loc-25-20260813T134122Z/implement-lru-cache--qwen2.5-coder-7b-instruct-mlx/samples/sample-2/test_lru_cache.py\", line 1\\nE       import pytest\\\\n\\\\nfrom lru_cache import LRUCache\\\\n\\\\ndef test_get_missing_value_and_eviction_order():\\\\n    cache = LRUCache(2)\\\\n    assert cache.get(\"missing\") is None\\\\n    cache.put(\"a\", 1)\\\\n    cache.put(\"b\", 2)\\\\n    assert cache.get(\"a\") == 1\\\\n    cache.put(\"c\", 3)\\\\n    assert cache.get(\"b\") is None\\\\n    assert cache.get(\"a\") == 1\\\\n    assert cache.get(\"c\") == 3\\\\n\\\\ndef test_put_replaces_and_marks_recent():\\\\n    cache = LRUCache(2)\\\\n    cache.put(\"a\", 1)\\\\n    cache.put(\"b\", 2)\\\\n    cache.put(\"a\", 10)\\\\n    cache.put(\"c\", 3)\\\\n    assert cache.get(\"a\") == 10\\\\n    assert cache.get(\"b\") is None\\\\n\\\\ndef test_capacity_must_be_positive():\\\\n    with pytest.raises(ValueError):\\\\n        LRUCache(0)\\nE                     ^\\nE   SyntaxError: unexpected character after line continuation character\\n=========================== short test summary info ============================\\nERROR test_lru_cache.py\\n!!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!\\n1 error in 0.10s\\n', 'stderr': ''}",
+      "finish_summary": "Created lru_cache.py and updated test_lru_cache.py with the LRUCache implementation.",
+      "turns_used": 5,
+      "unverified_urls": [],
+      "initial_failure": {
+        "cause": "verification_failed",
+        "completion_kind": "finish",
+        "verification_result": {
+          "status": "ok",
+          "exit_code": 2,
+          "stdout": "\n==================================== ERRORS ====================================\n_ ERROR collecting evals/python-coder/runs/loc-25-20260813T134122Z/implement-lru-cache--qwen2.5-coder-7b-instruct-mlx/samples/sample-2/test_lru_cache.py _\n../../../../../../../.venv-python-coder/lib/python3.12/site-packages/_pytest/python.py:498: in importtestmodule\n    mod = import_path(\n../../../../../../../.venv-python-coder/lib/python3.12/site-packages/_pytest/pathlib.py:587: in import_path\n    importlib.import_module(module_name)\n/Users/ilyabondarenko/.local/share/uv/python/cpython-3.12.13-macos-aarch64-none/lib/python3.12/importlib/__init__.py:90: in import_module\n    return _bootstrap._gcd_import(name[level:], package, level)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n<frozen importlib._bootstrap>:1387: in _gcd_import\n    ???\n<frozen importlib._bootstrap>:1360: in _find_and_load\n    ???\n<frozen importlib._bootstrap>:1331: in _find_and_load_unlocked\n    ???\n<frozen importlib._bootstrap>:935: in _load_unlocked\n    ???\n../../../../../../../.venv-python-coder/lib/python3.12/site-packages/_pytest/assertion/rewrite.py:177: in exec_module\n    source_stat, co = _rewrite_test(fn, self.config)\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n../../../../../../../.venv-python-coder/lib/python3.12/site-packages/_pytest/assertion/rewrite.py:357: in _rewrite_test\n    tree = ast.parse(source, filename=strfn)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n/Users/ilyabondarenko/.local/share/uv/python/cpython-3.12.13-macos-aarch64-none/lib/python3.12/ast.py:52: in parse\n    return compile(source, filename, mode, flags,\nE     File \"/Users/ilyabondarenko/.claude/scripts/qwen-harness/evals/python-coder/runs/loc-25-20260813T134122Z/implement-lru-cache--qwen2.5-coder-7b-instruct-mlx/samples/sample-2/test_lru_cache.py\", line 1\nE       import pytest\\n\\nfrom lru_cache import LRUCache\\n\\ndef test_get_missing_value_and_eviction_order():\\n    cache = LRUCache(2)\\n    assert cache.get(\"missing\") is None\\n    cache.put(\"a\", 1)\\n    cache.put(\"b\", 2)\\n    assert cache.get(\"a\") == 1\\n    cache.put(\"c\", 3)\\n    assert cache.get(\"b\") is None\\n    assert cache.get(\"a\") == 1\\n    assert cache.get(\"c\") == 3\\n\\ndef test_put_replaces_and_marks_recent():\\n    cache = LRUCache(2)\\n    cache.put(\"a\", 1)\\n    cache.put(\"b\", 2)\\n    cache.put(\"a\", 10)\\n    cache.put(\"c\", 3)\\n    assert cache.get(\"a\") == 10\\n    assert cache.get(\"b\") is None\\n\\ndef test_capacity_must_be_positive():\\n    with pytest.raises(ValueError):\\n        LRUCache(0)\nE                     ^\nE   SyntaxError: unexpected character after line continuation character\n=========================== short test summary info ============================\nERROR test_lru_cache.py\n!!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!\n1 error in 0.10s\n",
+          "stderr": ""
+        }
+      },
+      "verification_results": [
+        {
+          "phase": "initial",
+          "completion_kind": "finish",
+          "passed": false,
+          "result": {
+            "status": "ok",
+            "exit_code": 2,
+            "stdout": "\n==================================== ERRORS ====================================\n_ ERROR collecting evals/python-coder/runs/loc-25-20260813T134122Z/implement-lru-cache--qwen2.5-coder-7b-instruct-mlx/samples/sample-2/test_lru_cache.py _\n../../../../../../../.venv-python-coder/lib/python3.12/site-packages/_pytest/python.py:498: in importtestmodule\n    mod = import_path(\n../../../../../../../.venv-python-coder/lib/python3.12/site-packages/_pytest/pathlib.py:587: in import_path\n    importlib.import_module(module_name)\n/Users/ilyabondarenko/.local/share/uv/python/cpython-3.12.13-macos-aarch64-none/lib/python3.12/importlib/__init__.py:90: in import_module\n    return _bootstrap._gcd_import(name[level:], package, level)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n<frozen importlib._bootstrap>:1387: in _gcd_import\n    ???\n<frozen importlib._bootstrap>:1360: in _find_and_load\n    ???\n<frozen importlib._bootstrap>:1331: in _find_and_load_unlocked\n    ???\n<frozen importlib._bootstrap>:935: in _load_unlocked\n    ???\n../../../../../../../.venv-python-coder/lib/python3.12/site-packages/_pytest/assertion/rewrite.py:177: in exec_module\n    source_stat, co = _rewrite_test(fn, self.config)\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n../../../../../../../.venv-python-coder/lib/python3.12/site-packages/_pytest/assertion/rewrite.py:357: in _rewrite_test\n    tree = ast.parse(source, filename=strfn)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n/Users/ilyabondarenko/.local/share/uv/python/cpython-3.12.13-macos-aarch64-none/lib/python3.12/ast.py:52: in parse\n    return compile(source, filename, mode, flags,\nE     File \"/Users/ilyabondarenko/.claude/scripts/qwen-harness/evals/python-coder/runs/loc-25-20260813T134122Z/implement-lru-cache--qwen2.5-coder-7b-instruct-mlx/samples/sample-2/test_lru_cache.py\", line 1\nE       import pytest\\n\\nfrom lru_cache import LRUCache\\n\\ndef test_get_missing_value_and_eviction_order():\\n    cache = LRUCache(2)\\n    assert cache.get(\"missing\") is None\\n    cache.put(\"a\", 1)\\n    cache.put(\"b\", 2)\\n    assert cache.get(\"a\") == 1\\n    cache.put(\"c\", 3)\\n    assert cache.get(\"b\") is None\\n    assert cache.get(\"a\") == 1\\n    assert cache.get(\"c\") == 3\\n\\ndef test_put_replaces_and_marks_recent():\\n    cache = LRUCache(2)\\n    cache.put(\"a\", 1)\\n    cache.put(\"b\", 2)\\n    cache.put(\"a\", 10)\\n    cache.put(\"c\", 3)\\n    assert cache.get(\"a\") == 10\\n    assert cache.get(\"b\") is None\\n\\ndef test_capacity_must_be_positive():\\n    with pytest.raises(ValueError):\\n        LRUCache(0)\nE                     ^\nE   SyntaxError: unexpected character after line continuation character\n=========================== short test summary info ============================\nERROR test_lru_cache.py\n!!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!\n1 error in 0.10s\n",
+            "stderr": ""
+          }
+        }
+      ],
+      "recovery_attempts": 0,
+      "recovery_turn_limit_reached": false,
+      "sample": 2,
+      "workdir": "samples/sample-2",
+      "passed": false
+    },
+    {
+      "finished": true,
+      "crashed": null,
+      "finish_summary": "Implemented LRUCache in lru_cache.py. It exposes get(key), put(key, value), and rejects capacities below one with ValueError. get returns None for a missing key; every successful get and put makes that key most recently used. When full, put evicts the least recently used key.",
+      "turns_used": 4,
+      "unverified_urls": [],
+      "initial_failure": null,
+      "verification_results": [
+        {
+          "phase": "initial",
+          "completion_kind": "finish",
+          "passed": true,
+          "result": {
+            "status": "ok",
+            "exit_code": 0,
+            "stdout": "...                                                                      [100%]\n3 passed in 0.03s\n",
+            "stderr": ""
+          }
+        }
+      ],
+      "recovery_attempts": 0,
+      "recovery_turn_limit_reached": false,
+      "sample": 3,
+      "workdir": "samples/sample-3",
+      "passed": true
+    }
+  ],
+  "passed_count": 1,
+  "total": 3
+}

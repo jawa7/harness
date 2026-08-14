@@ -1,0 +1,8 @@
+{
+  "id": "live-page-cache",
+  "modes": ["live"],
+  "target_key": "qwen_model_card",
+  "task": "Fetch {target_url}, save both the raw page and complete extracted text with basename model-card, then confirm what was saved. Do not search the web.",
+  "tools": ["web_fetch", "save_fetched_page"],
+  "checks": {"required_tools": ["web_fetch", "save_fetched_page"], "forbidden_tools": ["web_search"], "expected_files": ["model-card.raw", "model-card.txt"]}
+}

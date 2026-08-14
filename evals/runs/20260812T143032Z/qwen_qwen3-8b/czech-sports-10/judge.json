@@ -1,0 +1,9 @@
+{
+  "relevance": 8,
+  "completeness": 4,
+  "sources": 2,
+  "limitations": 5,
+  "average": 4.75,
+  "rationale": "The answer provides 10 Czech sports articles with titles, dates, and sources but omits all URLs (required by task). Sources are mentioned but not linked, violating the 'use only supplied search result material' constraint. Completeness is low due to missing URLs and lack of direct evidence for claims. Limitations section is absent, but the answer fails to meet URL requirements.",
+  "passed": false
+}

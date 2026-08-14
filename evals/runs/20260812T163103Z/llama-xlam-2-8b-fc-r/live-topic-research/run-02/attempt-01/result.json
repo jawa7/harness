@@ -1,0 +1,43 @@
+{
+  "case": "live-topic-research",
+  "model": "llama-xlam-2-8b-fc-r",
+  "mode": "live",
+  "target_url": null,
+  "target_urls": {},
+  "run_at": "2026-08-12T16:35:30.175260+00:00",
+  "result": {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Research the benefits and limitations of local tool-calling language models. Provide a short conclusion, key findings, and source URLs for each claim."
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"name\": \"web_search\", \"arguments\": {\"query\": \"benefits and limitations of local tool-calling language models\"}}]"
+      }
+    ],
+    "finished": true,
+    "summary": "[{\"name\": \"web_search\", \"arguments\": {\"query\": \"benefits and limitations of local tool-calling language models\"}}]",
+    "crashed": null,
+    "events": [],
+    "recovered_from_loop": false,
+    "loop_recovery_failed": false
+  },
+  "deterministic": {
+    "passed": false,
+    "failures": [
+      "missing required tool calls: web_search",
+      "answer contains 0 URLs; expected at least 3"
+    ],
+    "web_requests": 0,
+    "unique_sources": 0,
+    "output_urls": 0,
+    "output_dates": 0
+  },
+  "outcome": "completed",
+  "evidence": {
+    "cited_urls": [],
+    "cited_sources": [],
+    "available_sources": []
+  }
+}

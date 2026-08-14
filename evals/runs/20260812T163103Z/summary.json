@@ -1,0 +1,764 @@
+[
+  {
+    "model": "llama-xlam-2-8b-fc-r",
+    "case": "live-article-research-3",
+    "status": "fail",
+    "aggregate": {
+      "status": "fail",
+      "passed": false,
+      "successes": 0,
+      "runs": 3
+    },
+    "completed_runs": 3,
+    "inconclusive_runs": 0,
+    "repetitions": 3,
+    "loop_recoveries": 0,
+    "failed_loop_recoveries": 0,
+    "judge_overlaps_target": false,
+    "attempts": [
+      {
+        "repetition": 1,
+        "retry": 1,
+        "target_url": null,
+        "target_urls": {},
+        "outcome": "completed",
+        "deterministic": {
+          "passed": false,
+          "failures": [
+            "missing required tool calls: web_fetch, web_search",
+            "called web_fetch 0 times; expected at least 2",
+            "answer contains 0 URLs; expected at least 3",
+            "answer contains 0 URLs; expected exactly 3",
+            "answer contains 0 dates; expected at least 3"
+          ],
+          "web_requests": 0,
+          "unique_sources": 0,
+          "output_urls": 0,
+          "output_dates": 0
+        },
+        "judge": {
+          "relevance": 0,
+          "completeness": 0,
+          "sources": 0,
+          "limitations": 0,
+          "dimensions": [
+            "relevance",
+            "completeness",
+            "sources",
+            "limitations"
+          ],
+          "average": 0.0,
+          "rationale": "The answer fails to address the task by not providing any articles, URLs, dates, or sources. It lacks completeness, relevant sources, and acknowledges no limitations for missing data.",
+          "passed": false
+        },
+        "recovered_from_loop": false,
+        "loop_recovery_failed": false
+      },
+      {
+        "repetition": 2,
+        "retry": 1,
+        "target_url": null,
+        "target_urls": {},
+        "outcome": "completed",
+        "deterministic": {
+          "passed": false,
+          "failures": [
+            "missing required tool calls: web_fetch, web_search",
+            "called web_fetch 0 times; expected at least 2",
+            "answer contains 0 URLs; expected at least 3",
+            "answer contains 0 URLs; expected exactly 3",
+            "answer contains 0 dates; expected at least 3"
+          ],
+          "web_requests": 0,
+          "unique_sources": 0,
+          "output_urls": 0,
+          "output_dates": 0
+        },
+        "judge": {
+          "relevance": 0,
+          "completeness": 0,
+          "sources": 0,
+          "limitations": 0,
+          "dimensions": [
+            "relevance",
+            "completeness",
+            "sources",
+            "limitations"
+          ],
+          "average": 0.0,
+          "rationale": "The answer fails to address the task by not providing any articles, URLs, dates, or sources. It lacks completeness, relevant sources, and acknowledges no limitations for missing data.",
+          "passed": false
+        },
+        "recovered_from_loop": false,
+        "loop_recovery_failed": false
+      },
+      {
+        "repetition": 3,
+        "retry": 1,
+        "target_url": null,
+        "target_urls": {},
+        "outcome": "completed",
+        "deterministic": {
+          "passed": false,
+          "failures": [
+            "missing required tool calls: web_fetch, web_search",
+            "called web_fetch 0 times; expected at least 2",
+            "answer contains 0 URLs; expected at least 3",
+            "answer contains 0 URLs; expected exactly 3",
+            "answer contains 0 dates; expected at least 3"
+          ],
+          "web_requests": 0,
+          "unique_sources": 0,
+          "output_urls": 0,
+          "output_dates": 0
+        },
+        "judge": {
+          "relevance": 0,
+          "completeness": 0,
+          "sources": 0,
+          "limitations": 0,
+          "dimensions": [
+            "relevance",
+            "completeness",
+            "sources",
+            "limitations"
+          ],
+          "average": 0.0,
+          "rationale": "The answer fails to address the task by not providing any articles, URLs, dates, or sources. It lacks completeness, relevant sources, and acknowledges no limitations for missing data.",
+          "passed": false
+        },
+        "recovered_from_loop": false,
+        "loop_recovery_failed": false
+      }
+    ]
+  },
+  {
+    "model": "llama-xlam-2-8b-fc-r",
+    "case": "live-czech-sports-10",
+    "status": "fail",
+    "aggregate": {
+      "status": "fail",
+      "passed": false,
+      "successes": 0,
+      "runs": 3
+    },
+    "completed_runs": 3,
+    "inconclusive_runs": 0,
+    "repetitions": 3,
+    "loop_recoveries": 0,
+    "failed_loop_recoveries": 0,
+    "judge_overlaps_target": false,
+    "attempts": [
+      {
+        "repetition": 1,
+        "retry": 1,
+        "target_url": null,
+        "target_urls": {},
+        "outcome": "completed",
+        "deterministic": {
+          "passed": false,
+          "failures": [
+            "missing required tool calls: web_search",
+            "answer contains 0 URLs; expected at least 10",
+            "answer contains 0 URLs; expected exactly 10",
+            "answer contains 0 dates; expected at least 10"
+          ],
+          "web_requests": 0,
+          "unique_sources": 0,
+          "output_urls": 0,
+          "output_dates": 0
+        },
+        "judge": {
+          "relevance": 0,
+          "completeness": 0,
+          "sources": 0,
+          "limitations": 0,
+          "dimensions": [
+            "relevance",
+            "completeness",
+            "sources",
+            "limitations"
+          ],
+          "average": 0.0,
+          "rationale": "The answer fails to address the task by not executing web_search, providing zero URLs/dates, and lacking citations. It violates all requirements for relevance, completeness, sources, and limitations.",
+          "passed": false
+        },
+        "recovered_from_loop": false,
+        "loop_recovery_failed": false
+      },
+      {
+        "repetition": 2,
+        "retry": 1,
+        "target_url": null,
+        "target_urls": {},
+        "outcome": "completed",
+        "deterministic": {
+          "passed": false,
+          "failures": [
+            "missing required tool calls: web_search",
+            "answer contains 0 URLs; expected at least 10",
+            "answer contains 0 URLs; expected exactly 10",
+            "answer contains 0 dates; expected at least 10"
+          ],
+          "web_requests": 0,
+          "unique_sources": 0,
+          "output_urls": 0,
+          "output_dates": 0
+        },
+        "judge": {
+          "relevance": 0,
+          "completeness": 0,
+          "sources": 0,
+          "limitations": 0,
+          "dimensions": [
+            "relevance",
+            "completeness",
+            "sources",
+            "limitations"
+          ],
+          "average": 0.0,
+          "rationale": "The answer fails to address the task by not executing web_search, providing zero URLs/dates, and lacking citations. It violates all requirements for relevance, completeness, sources, and limitations.",
+          "passed": false
+        },
+        "recovered_from_loop": false,
+        "loop_recovery_failed": false
+      },
+      {
+        "repetition": 3,
+        "retry": 1,
+        "target_url": null,
+        "target_urls": {},
+        "outcome": "completed",
+        "deterministic": {
+          "passed": false,
+          "failures": [
+            "missing required tool calls: web_search",
+            "answer contains 0 URLs; expected at least 10",
+            "answer contains 0 URLs; expected exactly 10",
+            "answer contains 0 dates; expected at least 10"
+          ],
+          "web_requests": 0,
+          "unique_sources": 0,
+          "output_urls": 0,
+          "output_dates": 0
+        },
+        "judge": {
+          "relevance": 0,
+          "completeness": 0,
+          "sources": 0,
+          "limitations": 0,
+          "dimensions": [
+            "relevance",
+            "completeness",
+            "sources",
+            "limitations"
+          ],
+          "average": 0.0,
+          "rationale": "The answer fails to address the task by not executing web_search, providing zero URLs/dates, and lacking citations. It violates all requirements for relevance, completeness, sources, and limitations.",
+          "passed": false
+        },
+        "recovered_from_loop": false,
+        "loop_recovery_failed": false
+      }
+    ]
+  },
+  {
+    "model": "llama-xlam-2-8b-fc-r",
+    "case": "live-multi-url-compare",
+    "status": "fail",
+    "aggregate": {
+      "status": "fail",
+      "passed": false,
+      "successes": 0,
+      "runs": 3
+    },
+    "completed_runs": 3,
+    "inconclusive_runs": 0,
+    "repetitions": 3,
+    "loop_recoveries": 0,
+    "failed_loop_recoveries": 0,
+    "judge_overlaps_target": false,
+    "attempts": [
+      {
+        "repetition": 1,
+        "retry": 1,
+        "target_url": null,
+        "target_urls": {
+          "first_url": "https://huggingface.co/Qwen/Qwen3.5-0.8B",
+          "second_url": "https://huggingface.co/Qwen/Qwen3-0.6B"
+        },
+        "outcome": "completed",
+        "deterministic": {
+          "passed": false,
+          "failures": [
+            "missing required tool calls: web_fetch",
+            "called web_fetch 0 times; expected at least 2"
+          ],
+          "web_requests": 0,
+          "unique_sources": 0,
+          "output_urls": 2,
+          "output_dates": 0
+        },
+        "judge": {
+          "relevance": 2,
+          "completeness": 2,
+          "sources": 0,
+          "dimensions": [
+            "relevance",
+            "completeness",
+            "sources"
+          ],
+          "average": 1.3333333333333333,
+          "rationale": "The answer failed to fetch and compare the model-card pages. It provided only URLs without analysis, missing required comparisons. No web requests were made, so no evidence or sources cited.",
+          "passed": false
+        },
+        "recovered_from_loop": false,
+        "loop_recovery_failed": false
+      },
+      {
+        "repetition": 2,
+        "retry": 1,
+        "target_url": null,
+        "target_urls": {
+          "first_url": "https://huggingface.co/Qwen/Qwen3.5-0.8B",
+          "second_url": "https://huggingface.co/Qwen/Qwen3-0.6B"
+        },
+        "outcome": "completed",
+        "deterministic": {
+          "passed": false,
+          "failures": [
+            "missing required tool calls: web_fetch",
+            "called web_fetch 0 times; expected at least 2"
+          ],
+          "web_requests": 0,
+          "unique_sources": 0,
+          "output_urls": 2,
+          "output_dates": 0
+        },
+        "judge": {
+          "relevance": 2,
+          "completeness": 2,
+          "sources": 0,
+          "dimensions": [
+            "relevance",
+            "completeness",
+            "sources"
+          ],
+          "average": 1.3333333333333333,
+          "rationale": "The answer failed to fetch and compare the model-card pages. It provided only URLs without analysis, missing required comparisons. No web requests were made, so no evidence or sources cited.",
+          "passed": false
+        },
+        "recovered_from_loop": false,
+        "loop_recovery_failed": false
+      },
+      {
+        "repetition": 3,
+        "retry": 1,
+        "target_url": null,
+        "target_urls": {
+          "first_url": "https://huggingface.co/Qwen/Qwen3.5-0.8B",
+          "second_url": "https://huggingface.co/Qwen/Qwen3-0.6B"
+        },
+        "outcome": "completed",
+        "deterministic": {
+          "passed": false,
+          "failures": [
+            "missing required tool calls: web_fetch",
+            "called web_fetch 0 times; expected at least 2"
+          ],
+          "web_requests": 0,
+          "unique_sources": 0,
+          "output_urls": 2,
+          "output_dates": 0
+        },
+        "judge": {
+          "relevance": 2,
+          "completeness": 2,
+          "sources": 0,
+          "dimensions": [
+            "relevance",
+            "completeness",
+            "sources"
+          ],
+          "average": 1.3333333333333333,
+          "rationale": "The answer failed to fetch and compare the model-card pages. It provided only URLs without analysis, missing required comparisons. No web requests were made, so no evidence or sources cited.",
+          "passed": false
+        },
+        "recovered_from_loop": false,
+        "loop_recovery_failed": false
+      }
+    ]
+  },
+  {
+    "model": "llama-xlam-2-8b-fc-r",
+    "case": "live-page-cache",
+    "status": "fail",
+    "aggregate": {
+      "status": "fail",
+      "passed": false,
+      "successes": 0,
+      "runs": 3
+    },
+    "completed_runs": 3,
+    "inconclusive_runs": 0,
+    "repetitions": 3,
+    "loop_recoveries": 0,
+    "failed_loop_recoveries": 0,
+    "judge_overlaps_target": false,
+    "attempts": [
+      {
+        "repetition": 1,
+        "retry": 1,
+        "target_url": "https://huggingface.co/Qwen/Qwen3.5-0.8B",
+        "target_urls": {
+          "target_url": "https://huggingface.co/Qwen/Qwen3.5-0.8B"
+        },
+        "outcome": "completed",
+        "deterministic": {
+          "passed": false,
+          "failures": [
+            "missing required tool calls: save_fetched_page, web_fetch",
+            "expected file was not created: model-card.raw",
+            "expected file was not created: model-card.txt"
+          ],
+          "web_requests": 0,
+          "unique_sources": 0,
+          "output_urls": 1,
+          "output_dates": 0
+        },
+        "judge": {
+          "relevance": 3,
+          "completeness": 2,
+          "sources": 0,
+          "limitations": 1,
+          "dimensions": [
+            "relevance",
+            "completeness",
+            "sources",
+            "limitations"
+          ],
+          "average": 1.5,
+          "rationale": "The answer attempts to use the web_fetch tool but fails to implement required saving operations (save_fetched_page, extract_text). It lacks both the necessary tool calls and output confirmation. No sources are cited as the task was not completed. Limitations are not addressed in the response.",
+          "passed": false
+        },
+        "recovered_from_loop": false,
+        "loop_recovery_failed": false
+      },
+      {
+        "repetition": 2,
+        "retry": 1,
+        "target_url": "https://huggingface.co/Qwen/Qwen3.5-0.8B",
+        "target_urls": {
+          "target_url": "https://huggingface.co/Qwen/Qwen3.5-0.8B"
+        },
+        "outcome": "completed",
+        "deterministic": {
+          "passed": false,
+          "failures": [
+            "missing required tool calls: save_fetched_page, web_fetch",
+            "expected file was not created: model-card.raw",
+            "expected file was not created: model-card.txt"
+          ],
+          "web_requests": 0,
+          "unique_sources": 0,
+          "output_urls": 1,
+          "output_dates": 0
+        },
+        "judge": {
+          "relevance": 3,
+          "completeness": 2,
+          "sources": 0,
+          "limitations": 1,
+          "dimensions": [
+            "relevance",
+            "completeness",
+            "sources",
+            "limitations"
+          ],
+          "average": 1.5,
+          "rationale": "The answer attempts to use the web_fetch tool but fails to implement required saving operations (save_fetched_page, extract_text). It lacks both the necessary tool calls and output confirmation. No sources are cited as the task was not completed. Limitations are not addressed in the response.",
+          "passed": false
+        },
+        "recovered_from_loop": false,
+        "loop_recovery_failed": false
+      },
+      {
+        "repetition": 3,
+        "retry": 1,
+        "target_url": "https://huggingface.co/Qwen/Qwen3.5-0.8B",
+        "target_urls": {
+          "target_url": "https://huggingface.co/Qwen/Qwen3.5-0.8B"
+        },
+        "outcome": "completed",
+        "deterministic": {
+          "passed": false,
+          "failures": [
+            "missing required tool calls: save_fetched_page, web_fetch",
+            "expected file was not created: model-card.raw",
+            "expected file was not created: model-card.txt"
+          ],
+          "web_requests": 0,
+          "unique_sources": 0,
+          "output_urls": 1,
+          "output_dates": 0
+        },
+        "judge": {
+          "relevance": 3,
+          "completeness": 2,
+          "sources": 0,
+          "limitations": 1,
+          "dimensions": [
+            "relevance",
+            "completeness",
+            "sources",
+            "limitations"
+          ],
+          "average": 1.5,
+          "rationale": "The answer attempts to use the web_fetch tool but fails to implement required saving operations (save_fetched_page, extract_text). It lacks both the necessary tool calls and output confirmation. No sources are cited as the task was not completed. Limitations are not addressed in the response.",
+          "passed": false
+        },
+        "recovered_from_loop": false,
+        "loop_recovery_failed": false
+      }
+    ]
+  },
+  {
+    "model": "llama-xlam-2-8b-fc-r",
+    "case": "live-topic-research",
+    "status": "fail",
+    "aggregate": {
+      "status": "fail",
+      "passed": false,
+      "successes": 0,
+      "runs": 3
+    },
+    "completed_runs": 3,
+    "inconclusive_runs": 0,
+    "repetitions": 3,
+    "loop_recoveries": 0,
+    "failed_loop_recoveries": 0,
+    "judge_overlaps_target": false,
+    "attempts": [
+      {
+        "repetition": 1,
+        "retry": 1,
+        "target_url": null,
+        "target_urls": {},
+        "outcome": "completed",
+        "deterministic": {
+          "passed": false,
+          "failures": [
+            "missing required tool calls: web_search",
+            "answer contains 0 URLs; expected at least 3"
+          ],
+          "web_requests": 0,
+          "unique_sources": 0,
+          "output_urls": 0,
+          "output_dates": 0
+        },
+        "judge": {
+          "relevance": 0,
+          "completeness": 0,
+          "sources": 0,
+          "limitations": 0,
+          "dimensions": [
+            "relevance",
+            "completeness",
+            "sources",
+            "limitations"
+          ],
+          "average": 0.0,
+          "rationale": "The answer fails to address the task by not executing the web_search tool or providing any content. It lacks conclusion, key findings, and required URLs. No sources are cited, and limitations of the approach are not acknowledged.",
+          "passed": false
+        },
+        "recovered_from_loop": false,
+        "loop_recovery_failed": false
+      },
+      {
+        "repetition": 2,
+        "retry": 1,
+        "target_url": null,
+        "target_urls": {},
+        "outcome": "completed",
+        "deterministic": {
+          "passed": false,
+          "failures": [
+            "missing required tool calls: web_search",
+            "answer contains 0 URLs; expected at least 3"
+          ],
+          "web_requests": 0,
+          "unique_sources": 0,
+          "output_urls": 0,
+          "output_dates": 0
+        },
+        "judge": {
+          "relevance": 0,
+          "completeness": 0,
+          "sources": 0,
+          "limitations": 0,
+          "dimensions": [
+            "relevance",
+            "completeness",
+            "sources",
+            "limitations"
+          ],
+          "average": 0.0,
+          "rationale": "The answer fails to address the task by not executing the web_search tool or providing any content. It lacks conclusion, key findings, and required URLs. No sources are cited, and limitations of the approach are not acknowledged.",
+          "passed": false
+        },
+        "recovered_from_loop": false,
+        "loop_recovery_failed": false
+      },
+      {
+        "repetition": 3,
+        "retry": 1,
+        "target_url": null,
+        "target_urls": {},
+        "outcome": "completed",
+        "deterministic": {
+          "passed": false,
+          "failures": [
+            "missing required tool calls: web_search",
+            "answer contains 0 URLs; expected at least 3"
+          ],
+          "web_requests": 0,
+          "unique_sources": 0,
+          "output_urls": 0,
+          "output_dates": 0
+        },
+        "judge": {
+          "relevance": 0,
+          "completeness": 0,
+          "sources": 0,
+          "limitations": 0,
+          "dimensions": [
+            "relevance",
+            "completeness",
+            "sources",
+            "limitations"
+          ],
+          "average": 0.0,
+          "rationale": "The answer fails to address the task by not executing the web_search tool or providing any content. It lacks conclusion, key findings, and required URLs. No sources are cited, and limitations of the approach are not acknowledged.",
+          "passed": false
+        },
+        "recovered_from_loop": false,
+        "loop_recovery_failed": false
+      }
+    ]
+  },
+  {
+    "model": "llama-xlam-2-8b-fc-r",
+    "case": "live-url-summary",
+    "status": "fail",
+    "aggregate": {
+      "status": "fail",
+      "passed": false,
+      "successes": 0,
+      "runs": 3
+    },
+    "completed_runs": 3,
+    "inconclusive_runs": 0,
+    "repetitions": 3,
+    "loop_recoveries": 0,
+    "failed_loop_recoveries": 0,
+    "judge_overlaps_target": false,
+    "attempts": [
+      {
+        "repetition": 1,
+        "retry": 1,
+        "target_url": "https://huggingface.co/Qwen/Qwen3.5-0.8B",
+        "target_urls": {
+          "target_url": "https://huggingface.co/Qwen/Qwen3.5-0.8B"
+        },
+        "outcome": "completed",
+        "deterministic": {
+          "passed": false,
+          "failures": [
+            "missing required tool calls: web_fetch"
+          ],
+          "web_requests": 0,
+          "unique_sources": 0,
+          "output_urls": 1,
+          "output_dates": 0
+        },
+        "judge": {
+          "relevance": 0,
+          "completeness": 0,
+          "dimensions": [
+            "relevance",
+            "completeness"
+          ],
+          "average": 0.0,
+          "rationale": "The answer only included the tool call to fetch the URL but failed to provide a summary of the page content, which was the primary task. It did not fulfill the requirement to deliver a concise factual summary.",
+          "passed": false
+        },
+        "recovered_from_loop": false,
+        "loop_recovery_failed": false
+      },
+      {
+        "repetition": 2,
+        "retry": 1,
+        "target_url": "https://huggingface.co/Qwen/Qwen3.5-0.8B",
+        "target_urls": {
+          "target_url": "https://huggingface.co/Qwen/Qwen3.5-0.8B"
+        },
+        "outcome": "completed",
+        "deterministic": {
+          "passed": false,
+          "failures": [
+            "missing required tool calls: web_fetch"
+          ],
+          "web_requests": 0,
+          "unique_sources": 0,
+          "output_urls": 1,
+          "output_dates": 0
+        },
+        "judge": {
+          "relevance": 0,
+          "completeness": 0,
+          "dimensions": [
+            "relevance",
+            "completeness"
+          ],
+          "average": 0.0,
+          "rationale": "The answer only included the tool call to fetch the URL but failed to provide a summary of the page content, which was the primary task. It did not fulfill the requirement to deliver a concise factual summary.",
+          "passed": false
+        },
+        "recovered_from_loop": false,
+        "loop_recovery_failed": false
+      },
+      {
+        "repetition": 3,
+        "retry": 1,
+        "target_url": "https://huggingface.co/Qwen/Qwen3.5-0.8B",
+        "target_urls": {
+          "target_url": "https://huggingface.co/Qwen/Qwen3.5-0.8B"
+        },
+        "outcome": "completed",
+        "deterministic": {
+          "passed": false,
+          "failures": [
+            "missing required tool calls: web_fetch"
+          ],
+          "web_requests": 0,
+          "unique_sources": 0,
+          "output_urls": 1,
+          "output_dates": 0
+        },
+        "judge": {
+          "relevance": 0,
+          "completeness": 0,
+          "dimensions": [
+            "relevance",
+            "completeness"
+          ],
+          "average": 0.0,
+          "rationale": "The answer only included the tool call to fetch the URL but failed to provide a summary of the page content, which was the primary task. It did not fulfill the requirement to deliver a concise factual summary.",
+          "passed": false
+        },
+        "recovered_from_loop": false,
+        "loop_recovery_failed": false
+      }
+    ]
+  }
+]

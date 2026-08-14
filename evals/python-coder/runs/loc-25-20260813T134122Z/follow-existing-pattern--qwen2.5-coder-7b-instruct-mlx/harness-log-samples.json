@@ -1,0 +1,72 @@
+{
+  "samples": [
+    {
+      "finished": false,
+      "crashed": "wrote byte-identical content to 'tests/test_service.py' 3 times in a row despite failing feedback each time \u2014 model is not adapting, stopping early instead of burning the rest of the turn budget",
+      "finish_summary": null,
+      "turns_used": 9,
+      "unverified_urls": [],
+      "initial_failure": null,
+      "verification_results": [],
+      "recovery_attempts": 0,
+      "recovery_turn_limit_reached": false,
+      "sample": 1,
+      "workdir": "samples/sample-1",
+      "passed": false
+    },
+    {
+      "finished": true,
+      "crashed": null,
+      "finish_summary": "Added `TaskService.archive_task(task_id)` method to archive tasks. Updated tests accordingly.",
+      "turns_used": 5,
+      "unverified_urls": [],
+      "initial_failure": null,
+      "verification_results": [
+        {
+          "phase": "initial",
+          "completion_kind": "finish",
+          "passed": true,
+          "result": {
+            "status": "ok",
+            "exit_code": 0,
+            "stdout": "......                                                                   [100%]\n6 passed in 0.02s\n",
+            "stderr": ""
+          }
+        }
+      ],
+      "recovery_attempts": 0,
+      "recovery_turn_limit_reached": false,
+      "sample": 2,
+      "workdir": "samples/sample-2",
+      "passed": true
+    },
+    {
+      "finished": true,
+      "crashed": null,
+      "finish_summary": "Added `TaskService.archive_task(task_id)` method to the `service.py` file. The method raises a `NotFoundError` if the task is not found, logs archival through the repository's logging helper, and returns the updated `Task` dataclass. The archived task is excluded from the project rollup.",
+      "turns_used": 5,
+      "unverified_urls": [],
+      "initial_failure": null,
+      "verification_results": [
+        {
+          "phase": "initial",
+          "completion_kind": "finish",
+          "passed": true,
+          "result": {
+            "status": "ok",
+            "exit_code": 0,
+            "stdout": "......                                                                   [100%]\n6 passed in 0.02s\n",
+            "stderr": ""
+          }
+        }
+      ],
+      "recovery_attempts": 0,
+      "recovery_turn_limit_reached": false,
+      "sample": 3,
+      "workdir": "samples/sample-3",
+      "passed": true
+    }
+  ],
+  "passed_count": 2,
+  "total": 3
+}

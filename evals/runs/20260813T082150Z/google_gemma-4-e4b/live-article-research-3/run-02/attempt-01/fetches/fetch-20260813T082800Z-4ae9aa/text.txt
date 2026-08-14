@@ -1,0 +1,913 @@
+The Best Local LLM Models to Run in 2026 | daily.dev
+Skip to main content
+Download Logo
+SVG
+PNG
+Copy SVG
+Brand Assets
+SVG copied to clipboard
+Product
+For business
+For Advertisers
+In-feed ads, sponsored content & more
+For Recruiters
+Hire from millions of developers
+Contact sales
+→
+Postmark
+drove
+12.8× more signups
+vs. Reddit Ads
+Read the story
+→
+Resources
+Docs
+The Agentic AI Hub
+Blog
+Changelog
+Wall of Love
+Events
+Open source
+Careers
+Contact
+Log in
+Get it now
+→
+Product
+For business
+For Advertisers
+For Recruiters
+Resources
+Docs
+The Agentic AI Hub
+Blog
+Changelog
+Wall of Love
+Events
+Open source
+Careers
+Contact
+Get it now
+→
+Log in
+Theme
+Blog
+Trends
+The Best Local LLM Models to Run in 2026
+The Best Local LLM Models to Run in 2026
+Carlos Mendoza
+Jun 22, 2026
+16 min read
+Table of Contents
+Quick Comparison
+1. Llama)
+2. Mistral
+3. Qwen
+4. DeepSeek
+5. Gemma
+6. Phi)
+Which Model to Pick for Your Hardware Setup
+Pros and Cons of Each Local LLM Family
+Conclusion
+FAQs
+Link copied!
+Quick take
+Compare six top local LLM families and choose by memory first, then task—recommendations for 8GB to 48GB+ setups and core use cases.
+If I had to cut this guide down to one line, it would be this: pick by memory first, then by task.
+In 2026, the six local model families that matter most are
+Llama, Mistral, Qwen, DeepSeek, Gemma, and Phi
+. For most people,
+Qwen
+is the safest all-around default,
+DeepSeek
+is the top pick for logic-heavy work,
+Mistral
+is strong for code-first setups,
+Llama
+is the easy starting point,
+Gemma
+is good for multimodal use, and
+Phi
+is the small-hardware option.
+Here’s the short version:
+Llama
+: best-known local family; easy to run; good for chat and writing
+Mistral
+: strong for coding; Apache 2.0 on key models; good IDE fit
+Qwen
+: top all-around pick for coding + multilingual use; supports
+100+ languages
+DeepSeek
+: best for math and step-by-step reasoning; R1 Distill 32B scores
+72.6% on AIME
+Gemma
+: good for chat, images, and tool use; some models support
+128K context
+Phi
+: best when memory is tight; Phi-4-mini can run in about
+2.5–2.8 GB
+If I were choosing fast, I’d use this rule:
+8 GB RAM
+:
+Qwen3 8B
+or
+Phi-4-mini
+12–16 GB VRAM
+:
+Qwen3 14B
+or
+DeepSeek-R1-Distill-14B
+24 GB VRAM
+:
+Qwen3 32B
+or
+DeepSeek-R1-Distill-32B
+48 GB+ VRAM
+:
+Llama 3.3 70B
+for general use,
+DeepSeek-R1 Distill 70B
+for harder reasoning
+Best Local LLM Models by Hardware & Use Case (2026)
+Quick Comparison
+Family
+Best for
+Good hardware fit
+Main tradeoff
+Llama
+Chat, writing, general use
+8 GB to 48 GB+
+License is less open than Apache 2.0 or MIT
+Mistral
+Coding, autocomplete, agent code tasks
+8 GB to 24 GB+
+Not the top pick for hard reasoning
+Qwen
+Coding, multilingual work, all-around use
+8 GB to 48 GB+
+Larger models can use more VRAM
+DeepSeek
+Math, logic, reasoning
+12 GB to 48 GB+
+Can feel slower on simple prompts
+Gemma
+Multimodal, chat, tool use
+8 GB to 32 GB+
+License terms need a close read
+Phi
+Low-RAM laptops, CPU-only use
+4 GB to 16 GB
+Less polished for general chat
+One more rule I’d keep in mind:
+a larger Q4 model often beats a smaller Q8 model in the same memory budget
+. So if your machine is near the limit, quantization choice matters almost as much as the model family.
+1.
+Llama
+Llama
+has the broadest support across local tools, which makes it the easiest starting point for most people. It runs with
+Ollama
+,
+LM Studio
+, and
+llama.cpp
+. And if something goes sideways, answers are usually easy to find because the user base is so large.
+Hardware Fit
+Start with memory. That’s the first filter.
+Hardware Tier
+Recommended Model
+Quantization
+VRAM/RAM Needed
+8 GB RAM laptop
+Llama 5.1 8B / Llama 3.3 8B
+Q4
+~3–7 GB
+16 GB RAM / mid GPU
+Llama 3.3 13B
+Q4/Q5
+~8–12 GB
+24 GB VRAM (RTX 4090)
+Llama 3.3 70B
+Q2
+~24 GB
+48 GB+ VRAM workstation
+Llama 3.3 70B
+Q4
+~40–43 GB
+Once the model fits your machine, the next question is the job you want it to do. If your main use case is coding or heavy reasoning, later sections point to stronger specialist models.
+Task Strengths
+After hardware, it comes down to chat, writing, or coding. Llama does best at
+general chat, instruction following, and writing
+. Llama 3.3 8B scores about 73% on MMLU, while the 70B version lands near 86%, which puts it in the same ballpark as GPT-4o-mini.
+That makes it a solid day-to-day pick for writing, summaries, and light coding. But if you need harder coding work or more demanding math, model families like Qwen and DeepSeek tend to do better.
+Quantization and Ecosystem
+Llama also stands out for one simple reason: it’s practical. It compresses well and runs in almost every local stack.
+Q4_K_M
+is the usual pick because it cuts model size a lot with only a small hit to output quality - about 50% smaller than 8-bit, with only around a 1–3% drop on benchmark scores.
+One thing to watch: long context windows use extra memory on top of the model weights. On the tooling side, fine-tunes, integrations, and docs are easy to find. Coding assistants like
+Continue.dev
+and
+Aider
+also tend to put Llama support front and center in their documentation.
+2.
+Mistral
+Mistral
+is a strong local option when
+coding
+is the main job and you want licensing that stays clean.
+Mistral Small 3.1
+is the main commercial pick in the lineup, and models like
+Small 3.1
+and
+Devstral
+ship under Apache 2.0. If you're building a local coding setup, this is one of the first model families to look at.
+Hardware Fit
+Mistral maps well to each hardware tier.
+Mistral 7B
+is the best small-model pick for entry-level machines. It can run on a laptop with 8 GB of RAM, using about 6–7 GB under Q4 quantization.
+On a desktop with a 24 GB GPU,
+Mistral Small 3.1
+or
+Codestral 22B
+are good matches. If your work leans more toward multi-step coding jobs,
+Devstral 24B
+is the better fit. For workstations with 48 GB or more of VRAM,
+Mixtral
+8x22B
+or
+Mistral Large
+are better suited for harder reasoning and heavy batch serving.
+Task Strengths
+Mistral does especially well at
+coding
+. The base 7B model scores about 32% on
+HumanEval
+, but the coding-tuned models go much further.
+Codestral 22B
+reaches 88.4% on HumanEval and posts a Fill-in-the-Middle (FIM) score of 94.1, which makes it a strong choice for IDE autocomplete.
+Devstral 24B
+is built for agent-style code work, like fixing bugs and moving through a codebase on its own. Codestral also plugs into IDE tools like Continue.dev and
+Cursor
+out of the box.
+For general chat and summarization, Mistral 7B is solid, though it isn't the top model in its size range. Mistral also performs well across many languages, with a clear edge in European languages. If your local setup is code-first, Mistral should be near the top of your shortlist.
+MoE Advantage
+With larger models, architecture can matter as much as parameter count. That's where Mixtral stands out. Its Mixture-of-Experts, or MoE, design changes the math in a useful way.
+Mixtral 8x7B
+has 47B total parameters, but only 13B are active per token during inference.
+Think of it like having a big team on call, but only the right specialists step in for each task. You get quality closer to a 47B model with active compute closer to 13B. The catch is simple: you still need enough VRAM to load the weights, which comes to about 26 GB at Q4.
+Ecosystem Support
+Mistral runs well on the main local inference stacks, and the coding-focused models fit neatly into local IDE workflows. One thing to watch:
+Codestral 22B
+uses a non-commercial license, so don't use it for commercial work until you've checked the terms.
+3.
+Qwen
+Qwen
+is one of the strongest default picks for local use in 2026. It stands out for multilingual coding and its Apache 2.0 license, which makes commercial use much easier. If Mistral is the coding-first option, Qwen is the better fit when you need coding
+and
+broad language support.
+Hardware Fit
+Qwen scales well across all three hardware tiers. On an
+8 GB RAM laptop
+,
+Qwen3 4B
+at about
+3 GB
+or
+Qwen3 8B
+at roughly
+5.2–6 GB
+in Q4 are the right choices. On a
+12 GB GPU
+,
+Qwen3 14B
+comes in at around
+8–9 GB VRAM
+. On a
+24 GB GPU
+,
+Qwen3 32B
+or
+Qwen3 30B-A3B
+use about
+18–20 GB
+.
+For
+48 GB+ workstations
+,
+Qwen3 72B
+is the strong pick. If you're running a multi-GPU setup,
+Qwen3 235B-A22B
+is also on the table.
+Task Strengths
+Qwen is the best fit for multilingual coding and broad language coverage. It supports
+100+ languages natively
+and includes a built-in
+/think
+mode
+for harder math and logic tasks.
+Qwen3 14B
+posts
+83% on MMLU
+and
+85% on HumanEval
+, which makes it a solid general-purpose model.  On the software engineering side,
+Qwen3.6 27B
+hits
+77.2% on SWE-bench Verified
+, putting it near the top tier of local coding models.
+Memory Efficiency
+This is where Qwen gets more interesting. Its MoE models make better use of the hardware you already have.
+Qwen3 30B-A3B
+activates only
+3B parameters per token
+, which is a big part of why it can punch above its active size.
+In practice, it reaches about
+100 tokens per second on a single RTX 3090
+while still loading at roughly
+20 GB
+.
+Ecosystem Support
+Qwen runs on
+Ollama, LM Studio, llama.cpp,
+vLLM
+, and
+SGLang
+.  That gives you plenty of room to use it in a simple desktop setup or a larger serving stack.
+For coding work, the
+qwen3-coder
+variants pair well with
+VS Code
+extensions like Continue. The Coder 30B-A3B also supports a
+262K token context window
+, which helps when you're working across large codebases instead of just a few files at a time.
+4.
+DeepSeek
+DeepSeek
+is the reasoning-focused option among local LLMs. Where Qwen leans more toward coding and strong multilingual range, DeepSeek's R1 family stands out for math and logic-heavy work. If reasoning matters more than language range or polished chat replies, DeepSeek is usually the better fit.
+Hardware Fit
+Best 8 GB pick: R1 Distill 7B/8B in Q4.
+It fits in about
+5–6 GB
+.
+On a
+12 GB GPU
+,
+R1 Distill 14B
+uses roughly
+9–10 GB VRAM
+. If you have a
+24 GB card
+like an RTX 3090 or 4090,
+R1 Distill 32B
+is the sweet spot. And once you get into
+48 GB+ workstations
+,
+R1 Distill 70B
+starts to make sense.
+V4 Flash
+is the big exception here. It can fit in around
+24 GB VRAM
+and gets close to flagship-level reasoning quality.
+If your system tops out at a small model, start with
+R1 Distill 7B/8B
+. If you have more room, move up the distill stack.
+Task Strengths
+DeepSeek R1 is the clearest pick when you need careful, step-by-step reasoning. It shows intermediate reasoning with
+<think>
+tags, which can help when you're debugging tricky logic. The tradeoff is that it may feel slower on simple chat prompts.
+On benchmarks,
+R1 Distill 32B
+beats OpenAI's o1-mini on:
+AIME:
+72.6% vs. 63.6%
+MATH-500:
+94.3% vs. 90.0%
+For coding,
+DeepSeek Coder V3
+is the better choice for repo-wide work on
+48 GB+
+systems, while the
+16B
+version fits
+12 GB
+setups better. It does well with multi-file edits and technical reasoning.
+Memory Efficiency
+DeepSeek uses an MoE architecture, which keeps the number of active parameters lower during inference. The flagship models have about
+671B total parameters
+, with
+37B active per token
+.
+That said, the full unquantized weights still demand enterprise-scale hardware. Loading them takes roughly
+351 GB of VRAM
+.
+Ecosystem Support
+DeepSeek works across
+Ollama, vLLM, and llama.cpp
+.  You can also find the models in
+GGUF, AWQ, and MXFP4
+formats.
+If you want the easiest setup path,
+ollama pull deepseek-r1:14b
+handles setup and quantization for you.
+There is one catch. DeepSeek can be a bit less steady than Qwen when you need strict XML-based tool-calling schemas in some agent frameworks.  It can also lag behind Qwen on some general knowledge tests and some coding tasks outside pure reasoning.
+If you want a smaller all-around model instead, the next family to look at is Gemma.
+5.
+Gemma
+If DeepSeek leans toward reasoning, Gemma sits in the middle. It’s a solid choice for
+chat, vision, and tool use
+.
+Gemma
+is Google’s open-weight model family built for local use.
+Gemma 4
+is the best all-around option in the lineup, with multimodal support and an
+Apache 2.0
+license that makes commercial use much easier .
+Hardware Fit
+Gemma works well across a wide range of hardware. That’s part of its appeal.
+Gemma 3 4B at Q8
+uses about
+4.5 GB of VRAM
+, which makes it a strong quality-per-GB option for
+8 GB laptops
+. If you have a
+12–16 GB GPU
+,
+Gemma 3 12B at Q8
+lands in a comfortable spot at around
+13 GB
+. On a
+24 GB card
+like an
+RTX 3090
+or
+RTX 4090
+,
+Gemma 3 27B at Q4
+is the sweet spot at roughly
+19 GB
+. And for
+32 GB+ workstations
+,
+Gemma 4 26B A4B
+is the one to look at, thanks to its
+MoE
+design plus built-in vision and tool use support .
+Task Strengths
+Gemma does its best work in
+general chat, vision, and tool use
+. For coding,
+Qwen 3.6
+pulls ahead. For tougher reasoning work,
+DeepSeek-R1
+and
+Phi-4
+do better.
+That said, Gemma still holds up well on benchmarks.
+Gemma 4 31B
+ranks
+#3 among all open models
+on the
+Arena AI text leaderboard
+as of
+June 2026
+, with an
+89.2% score on AIME 2026 math
+and
+80.0% on LiveCodeBench v6
+.
+Memory Efficiency
+Gemma 4’s MoE setup helps keep memory use in check because only part of the model is active for each token. That’s why
+Gemma 4 26B A4B
+can stay usable on smaller workstation GPUs.
+At the low end,
+Gemma 4 E4B
+can run with as little as
+3 GB of VRAM
+. It also supports
+native multimodal audio input
+.
+Ecosystem Support
+Gemma has broad local support across the tools people actually use:
+Ollama, LM Studio, llama.cpp, and vLLM
+. You can also find models in
+GGUF, AWQ, and EXL2
+formats .
+A few other points matter here:
+Gemma 3 and Gemma 4
+support
+128K context
+.
+Gemma 4
+adds native multimodal support for
+text and images
+, plus some
+audio/video variants
+.
+Its
+Apache 2.0
+license makes commercial use more straightforward .
+Next:
+Phi
+, the smallest family worth considering when RAM is tight.
+6.
+Phi
+Phi
+is Microsoft's small model family. Its big draw is
+reasoning on small hardware
+. If
+8 GB RAM
+is your hard cap, Phi is one of the first families to look at.
+Hardware Fit
+For
+8 GB RAM systems
+or
+CPU-only laptops
+,
+Phi-4-mini
+is the main pick. The two core models are
+Phi-4-mini (3.8B)
+and
+Phi-4 (14B)
+.
+Phi-4-mini
+at
+Q4_K_M
+uses about
+2.5–2.8 GB of VRAM
+, which means it can run on
+4 GB GPUs
+and lower-end laptops .
+Phi-4 (14B)
+makes more sense for
+12–16 GB VRAM
+cards, with roughly
+8.5–10 GB
+needed at 4-bit quantization .
+The buying rule here is simple:
+Phi-4-mini
+for
+8 GB and below
+Phi-4
+for
+12–16 GB
+Task Strengths
+Phi tends to do best at
+debugging, structured analysis, and STEM-style reasoning
+. It's a good fit for Python debugging and data science tasks where logical accuracy matters more than smooth, chatty output.
+If you're after
+creative writing
+or
+marketing copy
+, Phi usually isn't the first model people reach for. That's the trade-off: you give up some chat polish, but you get a model family that stays useful even when memory is tight.
+Memory Efficiency
+Phi-4 Reasoning
+is the specialized
+14B
+variant. It runs well on
+8–16 GB VRAM
+and can beat many
+70B
+models on reasoning benchmarks .
+Ecosystem Support
+Phi works well in
+Ollama, LM Studio, and llama.cpp
+, with models offered in
+GGUF
+format . Both
+Phi-4-mini
+and
+Phi-4 Reasoning
+ship under the
+MIT license
+, which is a strong plus for commercial use .
+So while Phi runs in the same local stacks as bigger model families, its edge is pretty clear: it packs useful reasoning into a very small memory budget. For most people, the choice is between the
+smallest usable model
+and a
+more general model
+with a bit more room to breathe.
+Which Model to Pick for Your Hardware Setup
+Start with memory. Then match the model to the job.
+There are
+three hardware tiers
+that matter most.
+For
+8 GB RAM
+, go with
+Qwen
+3 8B
+for general use, or
+Phi
+-4-mini
+if you're on a CPU-only machine. Qwen3 8B at
+Q4_K_M
+uses about
+5.5 GB of VRAM
+, which leaves some room for context . Phi-4-mini is a good fit for CPU-only laptops. Once memory is set, the task should drive the final choice.
+For
+12–16 GB GPUs
+,
+Qwen3 14B
+hits the sweet spot. It fits well inside
+12 GB VRAM
+and still leaves space for context . If your work leans more toward step-by-step logic,
+DeepSeek
+-R1-Distill-14B
+fits in the same VRAM range and tends to do better on multi-step reasoning than general-use models.
+For
+coding on 24 GB+ GPUs
+,
+Qwen
+3-Coder 30B-A3B
+is the top choice. It uses the VRAM of a
+30B
+model, but runs more like a
+3B
+model because only about
+3B parameters
+are active at one time . If your focus is math or pure reasoning,
+DeepSeek-R1-Distill-32B
+is the strongest fit in this range . And if you have
+48 GB+ VRAM
+,
+Llama
+3.3 70B
+is the best all-around pick for writing and harder reasoning tasks, needing about
+40 GB at Q4 quantization
+.
+Hardware Tier
+Recommended Family
+Best Task
+Typical memory use
+Main limit
+Laptop / 8 GB RAM
+Qwen3 8B / Phi-4-mini
+General use
+4–8 GB
+Limited reasoning depth; slow on CPU-only
+Single-GPU (12–16 GB)
+Qwen3 14B
+Coding & Analysis
+12–16 GB
+Can't run 70B+ models at useful speeds
+High-End (24 GB+ / Multi-GPU)
+Qwen3 32B / Llama 3.3 70B
+Reasoning & Writing
+24–48+ GB
+High hardware cost and power draw
+Q4_K_M
+is the default sweet spot. You get lower memory use with little drop in output quality.
+The next section breaks these picks into clear pros and cons for each family.
+Pros and Cons of Each Local LLM Family
+Use the table below to line up each model family with your job and your machine. If you want the short version, start with
+hardware first
+, then sanity-check the task.
+Family
+Best Use Case
+Biggest Advantage
+Biggest Limitation
+Ideal Hardware Tier
+Llama
+General assistant / long context
+Broad tooling support; 10M-token context window
+Restrictive community license
+12 GB (8B) to 48 GB+ (70B)
+Mistral
+Fast chat / coding
+Clean Apache 2.0 license; efficient MoE speed
+Lower reasoning scores than Qwen
+8 GB (7B) to 16 GB (Small)
+Qwen
+Coding / multilingual
+Industry-leading coding; 100+ languages; Apache 2.0
+Higher VRAM for flagship MoE models
+8 GB (8B) to 24 GB (30B MoE)
+DeepSeek
+Logic / math / reasoning
+MIT license; best for logic-heavy work
+Slower on simple prompts
+16 GB to 40 GB+
+Gemma
+Multimodal / single-GPU
+Native multimodal (text + image); strong quality in compact 12B/27B sizes
+More restrictive license terms than Apache 2.0
+8 GB (4B) to 24 GB (27B)
+Phi
+CPU-only laptops / low-RAM devices
+MIT license; Phi-4-mini runs on low-end CPUs
+Limited reasoning depth; smaller context window
+4 GB to 8 GB RAM
+That table points to the main takeaway:
+pick by RAM first, then by workload
+. It saves time and cuts out a lot of trial and error. A model might look great on a benchmark page, but if your system can’t run it well, that score doesn’t help much.
+Licensing matters too, especially if this is headed toward a product.
+Apache 2.0
+models like
+Qwen
+and
+Mistral
+, plus
+MIT
+models like
+DeepSeek
+and
+Phi
+, are the easiest starting point for commercial use.
+Llama
+uses a community license, and
+Gemma
+comes with terms that deserve a close read before you ship anything.
+If you want to keep up with new model drops, two sources stand out: the
+Hugging Face Open LLM Leaderboard
+and
+EvalPlus
+. They’re the quickest way to compare what changed and where each model lands. On
+daily.dev
+, the feed and
+Squads
+are handy for spotting new LLM coverage as it lands.
+Conclusion
+There’s no single best local LLM in 2026. The right pick comes down to
+your hardware first
+and
+your main job second
+.
+The short version is simple: match the model to your RAM, then choose based on what you want it to do.
+For an
+8 GB RAM laptop
+, start with
+Gemma 3 4B
+. If you need to keep memory use lower, go with
+Phi-4-mini
+. On a
+single-GPU desktop with 24 GB VRAM
+,
+Qwen3 32B
+is the strongest general-purpose default. If vision or multimodal work matters more,
+Gemma 3 27B
+is the better fit. On a
+workstation with 48 GB+ VRAM
+,
+Llama 3.3 70B
+is the default choice, while
+DeepSeek-R1 Distill 70B
+is the specialist option for harder reasoning tasks .
+There’s also one rule of thumb that helps when two models run on the same machine: within the same memory budget, a larger Q4 model usually beats a smaller Q8 model .
+To keep up with new model releases, follow the daily.dev feed and
+Squads
+.
+FAQs
+Which local LLM is best for coding?
+The best local LLM for coding in 2026 comes down to one thing:
+your hardware
+.
+Right now,
+Qwen3
+and
+DeepSeek
+are the main picks. If you want professional-grade coding on a single
+24 GB GPU
+, look at
+Qwen3 32B
+or the
+DeepSeek-V4
+series. If you want a strong middle ground for chat, code help, and refactoring,
+Qwen3 14B
+is a solid fit. And if your main goal is fast IDE autocomplete,
+Codestral 22B
+stands out.
+For agentic workflows,
+Devstral
+is built for multi-file edits and more autonomous tasks. You can run these locally with
+Ollama
+or
+LM Studio
+. For setup help, see our guide on running LLMs locally.
+What is the best local model for 8 GB RAM?
+On a machine with
+8 GB of RAM
+and no GPU, a few solid local picks are
+Phi-4-mini
+,
+Gemma 3 1B
+, and
+Qwen3 1.7B
+. These smaller models are a good fit for basic chat on modest hardware, so you don’t need a high-end setup to get started.
+If you have an
+8 GB GPU
+,
+Qwen3 8B
+is widely seen as the best overall choice for 2026. It strikes a nice balance between reasoning and instruction-following. If you want help getting everything running, check the daily.dev guide on running LLMs locally.
+How do I choose between Q4 and Q8?
+Q4 vs. Q8 comes down to a simple trade-off:
+output quality vs. hardware limits
+.
+Q4
+compresses model weights to about
+4 GB for every 7–8 billion parameters
+. That makes it a solid fit for machines with less memory, while still holding up well in many day-to-day tasks.
+Q8
+gives you higher precision and gets closer to full-quality output. You’ll notice that most with harder reasoning tasks and coding work. The catch is simple: it needs a lot more VRAM.
+So the rule of thumb is pretty clear:
+Choose
+Q4
+if you’re working with limited memory and want more room for context.
+Choose
+Q8
+if your hardware has enough VRAM and you want better output quality.
+Share
+Copy link
+Table of Contents
+Quick Comparison
+1. Llama)
+2. Mistral
+3. Qwen
+4. DeepSeek
+5. Gemma
+6. Phi)
+Which Model to Pick for Your Hardware Setup
+Pros and Cons of Each Local LLM Family
+Conclusion
+FAQs
+Get daily.dev
+Link copied!
+More like this
+All posts →
+Trends
+Aug 13, 2026
+What is the Model Context Protocol (MCP)? A plain-English guide for developers
+Plain-English developer guide to MCP: how a host-client-server model plus tools, resources, and prompts standardize AI integrations.
+Trends
+Aug 12, 2026
+The best sources for AI news in 2026
+Curated list of 14 top AI news sources and a simple 1-1-1 reading stack—daily scan, weekly analysis, and primary research feeds for busy readers.
+Trends
+Aug 12, 2026
+How to keep track of new AI model releases (without refreshing X all day)
+Track model launches, deprecations, pricing, and aliases with official notes, trackers, alerts, and a 15-minute weekly review.
+Read more posts
+All posts
+Read more, every new tab
+Posts like this,
+on every new tab.
+daily.dev curates a feed of articles ranked against what you actually care about. Free forever.
+Get daily.dev
+→
+Browse the blog
+The developer homepage millions of engineers open every morning to stay current, without the social media noise.
+Open app
+→
+Open app
+→
+Add to Chrome
+Add to Edge
+Product
+Chrome
+Popular
+Edge
+iOS
+Android
+All apps
+Status
+Community
+Docs
+Open source
+Events
+Swag
+Wall of Love
+Changelog
+Company
+About
+Careers
+Blog
+Brand
+Contact
+Business
+For Advertisers
+For Recruiters
+Contact sales
+Working remotely wherever we’re happiest
+🇮🇱 🇬🇧 🇭🇷 🇦🇺 🇦🇪 🇵🇹 🇿🇦 🇺🇸
+Terms
+Privacy
+Refunds
+Creators
+Guidelines
+Moderation
+Agents
+© 2026 Daily Dev Ltd.
+Link copied!
+Reading on daily.dev
+Every new tab,
+a feed like this one.
+Install the extension and turn every blank new tab into developer news ranked for your stack. Free, no ads, used by millions of engineers.
+Add to browser
+Maybe later
+Reviews
+2,500+
+reviews
+·
+GitHub stars
+18K+
+GitHub stars
+Recognised:
+Product of the Year on Product Hunt
+Engineers from

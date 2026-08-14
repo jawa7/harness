@@ -1,0 +1,736 @@
+[
+  {
+    "model": "google/gemma-4-e4b",
+    "case": "live-article-research-3",
+    "status": "inconclusive",
+    "aggregate": {
+      "status": "inconclusive",
+      "passed": null,
+      "successes": 0,
+      "runs": 2
+    },
+    "completed_runs": 2,
+    "inconclusive_runs": 1,
+    "repetitions": 3,
+    "loop_recoveries": 0,
+    "failed_loop_recoveries": 0,
+    "web_limit_recoveries": 0,
+    "turn_limit_recoveries": 0,
+    "normalized_content_tool_calls": 0,
+    "judge_overlaps_target": false,
+    "attempts": [
+      {
+        "repetition": 1,
+        "retry": 1,
+        "target_url": null,
+        "target_urls": {},
+        "outcome": "completed",
+        "deterministic": {
+          "passed": false,
+          "failures": [
+            "answer contains 4 URLs; expected exactly 3",
+            "answer contains 2 dates; expected at least 3"
+          ],
+          "web_requests": 5,
+          "unique_sources": 5,
+          "output_urls": 4,
+          "output_dates": 2
+        },
+        "judge": {
+          "relevance": 10,
+          "completeness": 7,
+          "sources": 10,
+          "limitations": 10,
+          "dimensions": [
+            "relevance",
+            "completeness",
+            "sources",
+            "limitations"
+          ],
+          "average": 9.25,
+          "rationale": "Relevance: The answer directly addresses the task of finding articles on local tool-calling models. Completeness: Provided two valid articles but couldn't find three, partially meeting the request. Sources: Both cited URLs are relevant and match the content. Limitations: Honesty about only two articles meeting all constraints.",
+          "passed": true
+        },
+        "recovered_from_loop": false,
+        "loop_recovery_failed": false,
+        "recovered_from_web_limit": false,
+        "recovered_from_turn_limit": false
+      },
+      {
+        "repetition": 2,
+        "retry": 1,
+        "target_url": null,
+        "target_urls": {},
+        "outcome": "completed",
+        "deterministic": {
+          "passed": false,
+          "failures": [
+            "answer contains 0 dates; expected at least 3"
+          ],
+          "web_requests": 4,
+          "unique_sources": 5,
+          "output_urls": 3,
+          "output_dates": 0
+        },
+        "judge": {
+          "passed": false,
+          "inconclusive": true,
+          "error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0)"
+        },
+        "recovered_from_loop": false,
+        "loop_recovery_failed": false,
+        "recovered_from_web_limit": false,
+        "recovered_from_turn_limit": false
+      },
+      {
+        "repetition": 3,
+        "retry": 1,
+        "target_url": null,
+        "target_urls": {},
+        "outcome": "completed",
+        "deterministic": {
+          "passed": false,
+          "failures": [
+            "answer contains 0 dates; expected at least 3"
+          ],
+          "web_requests": 4,
+          "unique_sources": 5,
+          "output_urls": 3,
+          "output_dates": 0
+        },
+        "judge": {
+          "relevance": 8,
+          "completeness": 5,
+          "sources": 6,
+          "limitations": 7,
+          "dimensions": [
+            "relevance",
+            "completeness",
+            "sources",
+            "limitations"
+          ],
+          "average": 6.5,
+          "rationale": "Relevance: Articles address local tool-calling models but contain a 2025 date discrepancy. Completeness: Two articles (Pinggy, PromptQuorum) are within 2026 timeframe, but Docker's 2025 date and missing output dates reduce completeness. Sources: Three URLs provided but one is outdated. Limitations: Answer failed to include required article dates in output and didn't flag the Docker 2025 date as a limitation.",
+          "passed": false
+        },
+        "recovered_from_loop": false,
+        "loop_recovery_failed": false,
+        "recovered_from_web_limit": false,
+        "recovered_from_turn_limit": false
+      }
+    ]
+  },
+  {
+    "model": "google/gemma-4-e4b",
+    "case": "live-czech-sports-10",
+    "status": "inconclusive",
+    "aggregate": {
+      "status": "inconclusive",
+      "passed": null,
+      "successes": 0,
+      "runs": 2
+    },
+    "completed_runs": 2,
+    "inconclusive_runs": 1,
+    "repetitions": 3,
+    "loop_recoveries": 0,
+    "failed_loop_recoveries": 0,
+    "web_limit_recoveries": 0,
+    "turn_limit_recoveries": 0,
+    "normalized_content_tool_calls": 0,
+    "judge_overlaps_target": false,
+    "attempts": [
+      {
+        "repetition": 1,
+        "retry": 1,
+        "target_url": null,
+        "target_urls": {},
+        "outcome": "completed",
+        "deterministic": {
+          "passed": false,
+          "failures": [
+            "answer contains 2 URLs; expected at least 10",
+            "answer contains 2 URLs; expected exactly 10",
+            "answer contains 3 dates; expected at least 10"
+          ],
+          "web_requests": 2,
+          "unique_sources": 5,
+          "output_urls": 2,
+          "output_dates": 3
+        },
+        "judge": {
+          "passed": false,
+          "inconclusive": true,
+          "error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0)"
+        },
+        "recovered_from_loop": false,
+        "loop_recovery_failed": false,
+        "recovered_from_web_limit": false,
+        "recovered_from_turn_limit": false
+      },
+      {
+        "repetition": 2,
+        "retry": 1,
+        "target_url": null,
+        "target_urls": {},
+        "outcome": "completed",
+        "deterministic": {
+          "passed": false,
+          "failures": [
+            "answer contains 1 URLs; expected at least 10",
+            "answer contains 1 URLs; expected exactly 10",
+            "answer contains 2 dates; expected at least 10"
+          ],
+          "web_requests": 2,
+          "unique_sources": 5,
+          "output_urls": 1,
+          "output_dates": 2
+        },
+        "judge": {
+          "relevance": 10,
+          "completeness": 8,
+          "sources": 5,
+          "limitations": 5,
+          "dimensions": [
+            "relevance",
+            "completeness",
+            "sources",
+            "limitations"
+          ],
+          "average": 7.0,
+          "rationale": "Answer provides 10 articles as requested (relevance:10), but all URLs are identical (sources:5) and lacks individual article links (completeness:8). Limitations not addressed due to uniform URL citation (limitations:5).",
+          "passed": true
+        },
+        "recovered_from_loop": false,
+        "loop_recovery_failed": false,
+        "recovered_from_web_limit": false,
+        "recovered_from_turn_limit": false
+      },
+      {
+        "repetition": 3,
+        "retry": 1,
+        "target_url": null,
+        "target_urls": {},
+        "outcome": "completed",
+        "deterministic": {
+          "passed": false,
+          "failures": [
+            "answer contains 1 URLs; expected at least 10",
+            "answer contains 1 URLs; expected exactly 10",
+            "answer contains 2 dates; expected at least 10"
+          ],
+          "web_requests": 2,
+          "unique_sources": 5,
+          "output_urls": 1,
+          "output_dates": 2
+        },
+        "judge": {
+          "relevance": 10,
+          "completeness": 5,
+          "sources": 2,
+          "limitations": 0,
+          "dimensions": [
+            "relevance",
+            "completeness",
+            "sources",
+            "limitations"
+          ],
+          "average": 4.25,
+          "rationale": "Answer provides exactly 10 articles as requested (relevance: 10). However, all entries cite the same URL (sources: 2) and only two distinct dates (completeness: 5). No limitations are acknowledged despite the single URL issue.",
+          "passed": false
+        },
+        "recovered_from_loop": false,
+        "loop_recovery_failed": false,
+        "recovered_from_web_limit": false,
+        "recovered_from_turn_limit": false
+      }
+    ]
+  },
+  {
+    "model": "google/gemma-4-e4b",
+    "case": "live-multi-url-compare",
+    "status": "pass",
+    "aggregate": {
+      "status": "pass",
+      "passed": true,
+      "successes": 2,
+      "runs": 3
+    },
+    "completed_runs": 3,
+    "inconclusive_runs": 0,
+    "repetitions": 3,
+    "loop_recoveries": 0,
+    "failed_loop_recoveries": 0,
+    "web_limit_recoveries": 0,
+    "turn_limit_recoveries": 0,
+    "normalized_content_tool_calls": 0,
+    "judge_overlaps_target": false,
+    "attempts": [
+      {
+        "repetition": 1,
+        "retry": 1,
+        "target_url": null,
+        "target_urls": {
+          "first_url": "https://huggingface.co/Qwen/Qwen3.5-0.8B",
+          "second_url": "https://huggingface.co/Qwen/Qwen3-0.6B"
+        },
+        "outcome": "completed",
+        "deterministic": {
+          "passed": true,
+          "failures": [],
+          "web_requests": 2,
+          "unique_sources": 2,
+          "output_urls": 2,
+          "output_dates": 0
+        },
+        "judge": {
+          "relevance": 10,
+          "completeness": 10,
+          "sources": 10,
+          "dimensions": [
+            "relevance",
+            "completeness",
+            "sources"
+          ],
+          "average": 10.0,
+          "rationale": "The answer directly addresses the task by comparing both model cards, includes all requested URLs, and highlights two key differences (modality and scale/context). Claims are tied to the provided sources without external assumptions.",
+          "passed": true
+        },
+        "recovered_from_loop": false,
+        "loop_recovery_failed": false,
+        "recovered_from_web_limit": false,
+        "recovered_from_turn_limit": false
+      },
+      {
+        "repetition": 2,
+        "retry": 1,
+        "target_url": null,
+        "target_urls": {
+          "first_url": "https://huggingface.co/Qwen/Qwen3.5-0.8B",
+          "second_url": "https://huggingface.co/Qwen/Qwen3-0.6B"
+        },
+        "outcome": "completed",
+        "deterministic": {
+          "passed": true,
+          "failures": [],
+          "web_requests": 2,
+          "unique_sources": 2,
+          "output_urls": 2,
+          "output_dates": 0
+        },
+        "judge": {
+          "relevance": 10,
+          "completeness": 10,
+          "sources": 10,
+          "dimensions": [
+            "relevance",
+            "completeness",
+            "sources"
+          ],
+          "average": 10.0,
+          "rationale": "The answer directly addresses the task by comparing both model-card pages, includes both URLs as requested, highlights two meaningful differences (modality and context window), and ties all claims to the provided sources without introducing external information.",
+          "passed": true
+        },
+        "recovered_from_loop": false,
+        "loop_recovery_failed": false,
+        "recovered_from_web_limit": false,
+        "recovered_from_turn_limit": false
+      },
+      {
+        "repetition": 3,
+        "retry": 1,
+        "target_url": null,
+        "target_urls": {
+          "first_url": "https://huggingface.co/Qwen/Qwen3.5-0.8B",
+          "second_url": "https://huggingface.co/Qwen/Qwen3-0.6B"
+        },
+        "outcome": "completed",
+        "deterministic": {
+          "passed": false,
+          "failures": [
+            "answer contains 4 URLs; expected exactly 2"
+          ],
+          "web_requests": 2,
+          "unique_sources": 2,
+          "output_urls": 4,
+          "output_dates": 0
+        },
+        "judge": {
+          "relevance": 10,
+          "completeness": 10,
+          "sources": 10,
+          "dimensions": [
+            "relevance",
+            "completeness",
+            "sources"
+          ],
+          "average": 10.0,
+          "rationale": "The answer directly addresses the task by comparing the two model cards from the provided URLs. It identifies two key differences (modality and scale/context) and correctly cites both URLs. While the output includes four URLs, they are derived from the model cards' content, not external sources, and the primary comparison remains focused on the required URLs.",
+          "passed": true
+        },
+        "recovered_from_loop": false,
+        "loop_recovery_failed": false,
+        "recovered_from_web_limit": false,
+        "recovered_from_turn_limit": false
+      }
+    ]
+  },
+  {
+    "model": "google/gemma-4-e4b",
+    "case": "live-page-cache",
+    "status": "pass",
+    "aggregate": {
+      "status": "pass",
+      "passed": true,
+      "successes": 3,
+      "runs": 3
+    },
+    "completed_runs": 3,
+    "inconclusive_runs": 0,
+    "repetitions": 3,
+    "loop_recoveries": 0,
+    "failed_loop_recoveries": 0,
+    "web_limit_recoveries": 0,
+    "turn_limit_recoveries": 0,
+    "normalized_content_tool_calls": 0,
+    "judge_overlaps_target": false,
+    "attempts": [
+      {
+        "repetition": 1,
+        "retry": 1,
+        "target_url": "https://huggingface.co/Qwen/Qwen3.5-0.8B",
+        "target_urls": {
+          "target_url": "https://huggingface.co/Qwen/Qwen3.5-0.8B"
+        },
+        "outcome": "completed",
+        "deterministic": {
+          "passed": true,
+          "failures": [],
+          "web_requests": 1,
+          "unique_sources": 1,
+          "output_urls": 1,
+          "output_dates": 0
+        },
+        "judge": {
+          "relevance": 10,
+          "completeness": 10,
+          "sources": 10,
+          "limitations": 10,
+          "dimensions": [
+            "relevance",
+            "completeness",
+            "sources",
+            "limitations"
+          ],
+          "average": 10.0,
+          "rationale": "The answer directly addresses the task by confirming successful fetching and saving of files. It provides full details about saved outputs, aligns with the provided URL, and shows no limitations as tool statuses are 'ok'.",
+          "passed": true
+        },
+        "recovered_from_loop": false,
+        "loop_recovery_failed": false,
+        "recovered_from_web_limit": false,
+        "recovered_from_turn_limit": false
+      },
+      {
+        "repetition": 2,
+        "retry": 1,
+        "target_url": "https://huggingface.co/Qwen/Qwen3.5-0.8B",
+        "target_urls": {
+          "target_url": "https://huggingface.co/Qwen/Qwen3.5-0.8B"
+        },
+        "outcome": "completed",
+        "deterministic": {
+          "passed": true,
+          "failures": [],
+          "web_requests": 1,
+          "unique_sources": 1,
+          "output_urls": 1,
+          "output_dates": 0
+        },
+        "judge": {
+          "relevance": 10,
+          "completeness": 10,
+          "sources": 10,
+          "limitations": 10,
+          "dimensions": [
+            "relevance",
+            "completeness",
+            "sources",
+            "limitations"
+          ],
+          "average": 10.0,
+          "rationale": "The answer directly addresses the task by confirming successful fetching and saving of files. It provides full confirmation of the saved files without omitting required details. No external sources are needed as the task was self-contained, and no limitations were encountered.",
+          "passed": true
+        },
+        "recovered_from_loop": false,
+        "loop_recovery_failed": false,
+        "recovered_from_web_limit": false,
+        "recovered_from_turn_limit": false
+      },
+      {
+        "repetition": 3,
+        "retry": 1,
+        "target_url": "https://huggingface.co/Qwen/Qwen3.5-0.8B",
+        "target_urls": {
+          "target_url": "https://huggingface.co/Qwen/Qwen3.5-0.8B"
+        },
+        "outcome": "completed",
+        "deterministic": {
+          "passed": true,
+          "failures": [],
+          "web_requests": 1,
+          "unique_sources": 1,
+          "output_urls": 1,
+          "output_dates": 0
+        },
+        "judge": {
+          "relevance": 10,
+          "completeness": 10,
+          "sources": 10,
+          "limitations": 10,
+          "dimensions": [
+            "relevance",
+            "completeness",
+            "sources",
+            "limitations"
+          ],
+          "average": 10.0,
+          "rationale": "The answer directly addresses the task by confirming successful fetching and saving of files. It provides full confirmation of the saved files without omitting required details. No external sources are needed as the task was self-contained, and no limitations were encountered.",
+          "passed": true
+        },
+        "recovered_from_loop": false,
+        "loop_recovery_failed": false,
+        "recovered_from_web_limit": false,
+        "recovered_from_turn_limit": false
+      }
+    ]
+  },
+  {
+    "model": "google/gemma-4-e4b",
+    "case": "live-topic-research",
+    "status": "inconclusive",
+    "aggregate": {
+      "status": "inconclusive",
+      "passed": null,
+      "successes": 0,
+      "runs": 1
+    },
+    "completed_runs": 1,
+    "inconclusive_runs": 2,
+    "repetitions": 3,
+    "loop_recoveries": 0,
+    "failed_loop_recoveries": 0,
+    "web_limit_recoveries": 0,
+    "turn_limit_recoveries": 0,
+    "normalized_content_tool_calls": 0,
+    "judge_overlaps_target": false,
+    "attempts": [
+      {
+        "repetition": 1,
+        "retry": 1,
+        "target_url": null,
+        "target_urls": {},
+        "outcome": "completed",
+        "deterministic": {
+          "passed": false,
+          "failures": [
+            "answer contains 1 URLs; expected at least 3"
+          ],
+          "web_requests": 2,
+          "unique_sources": 5,
+          "output_urls": 1,
+          "output_dates": 0
+        },
+        "judge": {
+          "passed": false,
+          "inconclusive": true,
+          "error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0)"
+        },
+        "recovered_from_loop": false,
+        "loop_recovery_failed": false,
+        "recovered_from_web_limit": false,
+        "recovered_from_turn_limit": false
+      },
+      {
+        "repetition": 2,
+        "retry": 1,
+        "target_url": null,
+        "target_urls": {},
+        "outcome": "completed",
+        "deterministic": {
+          "passed": false,
+          "failures": [
+            "answer contains 2 URLs; expected at least 3"
+          ],
+          "web_requests": 2,
+          "unique_sources": 5,
+          "output_urls": 2,
+          "output_dates": 0
+        },
+        "judge": {
+          "relevance": 10,
+          "completeness": 8,
+          "sources": 6,
+          "limitations": 7,
+          "dimensions": [
+            "relevance",
+            "completeness",
+            "sources",
+            "limitations"
+          ],
+          "average": 7.75,
+          "rationale": "Relevance: The answer directly addresses the task of evaluating benefits/limitations of local tool-calling LLMs. Completeness: Covers key benefits (control, privacy, cost-efficiency) and limitations (invocation errors, scalability), but lacks depth in some areas. Sources: Two URLs are provided, but they don't fully substantiate all claims (e.g., Docker blog lacks detail on invocation errors, Medium article doesn't address argument handling issues). Limitations: Acknowledges challenges in complex tasks and testing, but doesn't explicitly state gaps in knowledge or uncertainty.",
+          "passed": true
+        },
+        "recovered_from_loop": false,
+        "loop_recovery_failed": false,
+        "recovered_from_web_limit": false,
+        "recovered_from_turn_limit": false
+      },
+      {
+        "repetition": 3,
+        "retry": 1,
+        "target_url": null,
+        "target_urls": {},
+        "outcome": "completed",
+        "deterministic": {
+          "passed": false,
+          "failures": [
+            "answer contains 1 URLs; expected at least 3"
+          ],
+          "web_requests": 2,
+          "unique_sources": 5,
+          "output_urls": 1,
+          "output_dates": 0
+        },
+        "judge": {
+          "passed": false,
+          "inconclusive": true,
+          "error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0)"
+        },
+        "recovered_from_loop": false,
+        "loop_recovery_failed": false,
+        "recovered_from_web_limit": false,
+        "recovered_from_turn_limit": false
+      }
+    ]
+  },
+  {
+    "model": "google/gemma-4-e4b",
+    "case": "live-url-summary",
+    "status": "pass",
+    "aggregate": {
+      "status": "pass",
+      "passed": true,
+      "successes": 3,
+      "runs": 3
+    },
+    "completed_runs": 3,
+    "inconclusive_runs": 0,
+    "repetitions": 3,
+    "loop_recoveries": 0,
+    "failed_loop_recoveries": 0,
+    "web_limit_recoveries": 0,
+    "turn_limit_recoveries": 0,
+    "normalized_content_tool_calls": 0,
+    "judge_overlaps_target": false,
+    "attempts": [
+      {
+        "repetition": 1,
+        "retry": 1,
+        "target_url": "https://huggingface.co/Qwen/Qwen3.5-0.8B",
+        "target_urls": {
+          "target_url": "https://huggingface.co/Qwen/Qwen3.5-0.8B"
+        },
+        "outcome": "completed",
+        "deterministic": {
+          "passed": true,
+          "failures": [],
+          "web_requests": 1,
+          "unique_sources": 1,
+          "output_urls": 0,
+          "output_dates": 0
+        },
+        "judge": {
+          "relevance": 10,
+          "completeness": 10,
+          "dimensions": [
+            "relevance",
+            "completeness"
+          ],
+          "average": 10.0,
+          "rationale": "The answer fully addresses the task by providing a structured, factual summary of the page's content. It includes all key details about the Qwen3.5-0.8B model (type, parameters, architecture, use cases, etc.), aligns with the page's technical specifications, and covers benchmarks/compatibility. No critical information is omitted, making it both relevant and complete.",
+          "passed": true
+        },
+        "recovered_from_loop": false,
+        "loop_recovery_failed": false,
+        "recovered_from_web_limit": false,
+        "recovered_from_turn_limit": false
+      },
+      {
+        "repetition": 2,
+        "retry": 1,
+        "target_url": "https://huggingface.co/Qwen/Qwen3.5-0.8B",
+        "target_urls": {
+          "target_url": "https://huggingface.co/Qwen/Qwen3.5-0.8B"
+        },
+        "outcome": "completed",
+        "deterministic": {
+          "passed": true,
+          "failures": [],
+          "web_requests": 1,
+          "unique_sources": 1,
+          "output_urls": 0,
+          "output_dates": 0
+        },
+        "judge": {
+          "relevance": 10,
+          "completeness": 10,
+          "dimensions": [
+            "relevance",
+            "completeness"
+          ],
+          "average": 10.0,
+          "rationale": "The answer directly addresses the task by concisely summarizing the page's content about Qwen3.5-0.8B, including all key facts (model type, parameters, context length, highlights, usage, benchmarks) without extraneous details. It fully satisfies the request for a factual summary with no omissions.",
+          "passed": true
+        },
+        "recovered_from_loop": false,
+        "loop_recovery_failed": false,
+        "recovered_from_web_limit": false,
+        "recovered_from_turn_limit": false
+      },
+      {
+        "repetition": 3,
+        "retry": 1,
+        "target_url": "https://huggingface.co/Qwen/Qwen3.5-0.8B",
+        "target_urls": {
+          "target_url": "https://huggingface.co/Qwen/Qwen3.5-0.8B"
+        },
+        "outcome": "completed",
+        "deterministic": {
+          "passed": true,
+          "failures": [],
+          "web_requests": 1,
+          "unique_sources": 1,
+          "output_urls": 0,
+          "output_dates": 0
+        },
+        "judge": {
+          "relevance": 10,
+          "completeness": 10,
+          "dimensions": [
+            "relevance",
+            "completeness"
+          ],
+          "average": 10.0,
+          "rationale": "The answer directly addresses the task by summarizing the Qwen3.5-0.8B model's specifications, usage, and benchmarks from the target URL. It includes all requested details (model type, parameters, context length, highlights, deployment methods, and benchmarks) concisely and factually without extraneous information.",
+          "passed": true
+        },
+        "recovered_from_loop": false,
+        "loop_recovery_failed": false,
+        "recovered_from_web_limit": false,
+        "recovered_from_turn_limit": false
+      }
+    ]
+  }
+]

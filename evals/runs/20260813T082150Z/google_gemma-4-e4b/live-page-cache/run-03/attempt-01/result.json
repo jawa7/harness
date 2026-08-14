@@ -1,0 +1,156 @@
+{
+  "case": "live-page-cache",
+  "case_definition": {
+    "id": "live-page-cache",
+    "modes": [
+      "live"
+    ],
+    "target_key": "qwen_model_card",
+    "task": "Fetch {target_url}, save both the raw page and complete extracted text with basename model-card, then confirm what was saved. Do not search the web.",
+    "tools": [
+      "web_fetch",
+      "save_fetched_page"
+    ],
+    "checks": {
+      "required_tools": [
+        "web_fetch",
+        "save_fetched_page"
+      ],
+      "forbidden_tools": [
+        "web_search"
+      ],
+      "expected_files": [
+        "model-card.raw",
+        "model-card.txt"
+      ]
+    },
+    "_path": "/Users/ilyabondarenko/.claude/scripts/qwen-harness/evals/cases/live-page-cache.json"
+  },
+  "model": "google/gemma-4-e4b",
+  "mode": "live",
+  "target_url": "https://huggingface.co/Qwen/Qwen3.5-0.8B",
+  "target_urls": {
+    "target_url": "https://huggingface.co/Qwen/Qwen3.5-0.8B"
+  },
+  "run_at": "2026-08-13T08:42:30.674159+00:00",
+  "result": {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Fetch https://huggingface.co/Qwen/Qwen3.5-0.8B, save both the raw page and complete extracted text with basename model-card, then confirm what was saved. Do not search the web."
+      },
+      {
+        "role": "assistant",
+        "content": "",
+        "tool_calls": [
+          {
+            "type": "function",
+            "id": "104894077",
+            "function": {
+              "name": "web_fetch",
+              "arguments": "{\"url\":\"https://huggingface.co/Qwen/Qwen3.5-0.8B\"}"
+            }
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "104894077",
+        "content": "{\"status\": \"ok\", \"url\": \"https://huggingface.co/Qwen/Qwen3.5-0.8B\", \"text\": \"Qwen/Qwen3.5-0.8B \\u00b7 Hugging Face\\nHugging Face\\nModels\\nDatasets\\nSpaces\\nBuckets\\nnew\\nDocs\\nEnterprise\\nPricing\\nWebsite\\nTasks\\nHuggingChat\\nCollections\\nLanguages\\nOrganizations\\nCommunity\\nBlog\\nPosts\\nDaily Papers\\nHardware\\nLearn\\nDiscord\\nForum\\nGitHub\\nSolutions\\nTeam & Enterprise\\nHugging Face PRO\\nEnterprise Support\\nInference Providers\\nInference Endpoints\\nStorage Buckets\\nLog In\\nSign Up\\nQwen\\n/\\nQwen3.5-0.8B\\nlike\\n660\\nFollow\\nQwen\\n96.3k\\nImage-Text-to-Text\\nTransformers\\nSafetensors\\nqwen3_5\\nconversational\\nEval Results\\nLicense:\\napache-2.0\\nModel card\\nFiles\\nFiles and versions\\nxet\\nCommunity\\n21\\nDeploy\\nCopy to bucket\\nnew\\nUse this model\\nInstructions to use Qwen/Qwen3.5-0.8B with libraries, inference providers, notebooks, and local apps. Follow these links to get started.\\nLibraries\\nTransformers\\nHow to use Qwen/Qwen3.5-0.8B with Transformers:\\n# Use a pipeline as a high-level helper\\nfrom transformers import pipeline\\n\\npipe = pipeline(\\\"image-text-to-text\\\", model=\\\"Qwen/Qwen3.5-0.8B\\\")\\nmessages = [\\n    {\\n        \\\"role\\\": \\\"user\\\",\\n        \\\"content\\\": [\\n            {\\\"type\\\": \\\"image\\\", \\\"url\\\": \\\"https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/p-blog/candy.JPG\\\"},\\n            {\\\"type\\\": \\\"text\\\", \\\"text\\\": \\\"What animal is on the candy?\\\"}\\n        ]\\n    },\\n]\\npipe(text=messages)\\n# Load model directly\\nfrom transformers import AutoProcessor, AutoModelForMultimodalLM\\n\\nprocessor = AutoProcessor.from_pretrained(\\\"Qwen/Qwen3.5-0.8B\\\")\\nmodel = AutoModelForMultimodalLM.from_pretrained(\\\"Qwen/Qwen3.5-0.8B\\\", device_map=\\\"auto\\\")\\nmessages = [\\n    {\\n        \\\"role\\\": \\\"user\\\",\\n        \\\"content\\\": [\\n            {\\\"type\\\": \\\"image\\\", \\\"url\\\": \\\"https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/p-blog/candy.JPG\\\"},\\n            {\\\"type\\\": \\\"text\\\", \\\"text\\\": \\\"What animal is on the candy?\\\"}\\n        ]\\n    },\\n]\\ninputs = processor.apply_chat_template(\\n\\tmessages,\\n\\tadd_generation_prompt=True,\\n\\ttokenize=True,\\n\\treturn_dict=True,\\n\\treturn_tensors=\\\"pt\\\",\\n).to(model.device)\\n\\noutputs = model.generate(**inputs, max_new_tokens=40)\\nprint(processor.decode(outputs[0][inputs[\\\"input_ids\\\"].shape[-1]:]))\\nNotebooks\\nGoogle Colab\\nKaggle\\nAMD Developer Cloud\\nLocal Apps\\nSettings\\nvLLM\\nHow to use Qwen/Qwen3.5-0.8B with vLLM:\\nInstall from pip and serve model\\n# Install vLLM from pip:\\npip install vllm\\n# Start the vLLM server:\\nvllm serve \\\"Qwen/Qwen3.5-0.8B\\\"\\n# Call the server using curl (OpenAI-compatible API):\\ncurl -X POST \\\"http://localhost:8000/v1/chat/completions\\\" \\\\\\n\\t-H \\\"Content-Type: application/json\\\" \\\\\\n\\t--data '{\\n\\t\\t\\\"model\\\": \\\"Qwen/Qwen3.5-0.8B\\\",\\n\\t\\t\\\"messages\\\": [\\n\\t\\t\\t{\\n\\t\\t\\t\\t\\\"role\\\": \\\"user\\\",\\n\\t\\t\\t\\t\\\"content\\\": [\\n\\t\\t\\t\\t\\t{\\n\\t\\t\\t\\t\\t\\t\\\"type\\\": \\\"text\\\",\\n\\t\\t\\t\\t\\t\\t\\\"text\\\": \\\"Describe this image in one sentence.\\\"\\n\\t\\t\\t\\t\\t},\\n\\t\\t\\t\\t\\t{\\n\\t\\t\\t\\t\\t\\t\\\"type\\\": \\\"image_url\\\",\\n\\t\\t\\t\\t\\t\\t\\\"image_url\\\": {\\n\\t\\t\\t\\t\\t\\t\\t\\\"url\\\": \\\"https://cdn.britannica.com/61/93061-050-99147DCE/Statue-of-Liberty-Island-New-York-Bay.jpg\\\"\\n\\t\\t\\t\\t\\t\\t}\\n\\t\\t\\t\\t\\t}\\n\\t\\t\\t\\t]\\n\\t\\t\\t}\\n\\t\\t]\\n\\t}'\\nUse Docker\\ndocker model run hf.co/Qwen/Qwen3.5-0.8B\\nSGLang\\nHow to use Qwen/Qwen3.5-0.8B with SGLang:\\nInstall from pip and serve model\\n# Install SGLang from pip:\\npip install sglang\\n# Start the SGLang server:\\npython3 -m sglang.launch_server \\\\\\n    --model-path \\\"Qwen/Qwen3.5-0.8B\\\" \\\\\\n    --host 0.0.0.0 \\\\\\n    --port 30000\\n# Call the server using curl (OpenAI-compatible API):\\ncurl -X POST \\\"http://localhost:30000/v1/chat/completions\\\" \\\\\\n\\t-H \\\"Content-Type: application/json\\\" \\\\\\n\\t--data '{\\n\\t\\t\\\"model\\\": \\\"Qwen/Qwen3.5-0.8B\\\",\\n\\t\\t\\\"messages\\\": [\\n\\t\\t\\t{\\n\\t\\t\\t\\t\\\"role\\\": \\\"user\\\",\\n\\t\\t\\t\\t\\\"content\\\": [\\n\\t\\t\\t\\t\\t{\\n\\t\\t\\t\\t\\t\\t\\\"type\\\": \\\"text\\\",\\n\\t\\t\\t\\t\\t\\t\\\"text\\\": \\\"Describe this image in one sentence.\\\"\\n\\t\\t\\t\\t\\t},\\n\\t\\t\\t\\t\\t{\\n\\t\\t\\t\\t\\t\\t\\\"type\\\": \\\"image_url\\\",\\n\\t\\t\\t\\t\\t\\t\\\"image_url\\\": {\\n\\t\\t\\t\\t\\t\\t\\t\\\"url\\\": \\\"https://cdn.britannica.com/61/93061-050-99147DCE/Statue-of-Liberty-Island-New-York-Bay.jpg\\\"\\n\\t\\t\\t\\t\\t\\t}\\n\\t\\t\\t\\t\\t}\\n\\t\\t\\t\\t]\\n\\t\\t\\t}\\n\\t\\t]\\n\\t}'\\nUse Docker images\\ndocker run --gpus all \\\\\\n    --shm-size 32g \\\\\\n    -p 30000:30000 \\\\\\n    -v ~/.cache/huggingface:/root/.cache/huggingface \\\\\\n    --env \\\"HF_TOKEN=<secret>\\\" \\\\\\n    --ipc=host \\\\\\n    lmsysorg/sglang:latest \\\\\\n    python3 -m sglang.launch_server \\\\\\n        --model-path \\\"Qwen/Qwen3.5-0.8B\\\" \\\\\\n        --host 0.0.0.0 \\\\\\n        --port 30000\\n# Call the server using curl (OpenAI-compatible API):\\ncurl -X POST \\\"http://localhost:30000/v1/chat/completions\\\" \\\\\\n\\t-H \\\"Content-Type: application/json\\\" \\\\\\n\\t--data '{\\n\\t\\t\\\"model\\\": \\\"Qwen/Qwen3.5-0.8B\\\",\\n\\t\\t\\\"messages\\\": [\\n\\t\\t\\t{\\n\\t\\t\\t\\t\\\"role\\\": \\\"user\\\",\\n\\t\\t\\t\\t\\\"content\\\": [\\n\\t\\t\\t\\t\\t{\\n\\t\\t\\t\\t\\t\\t\\\"type\\\": \\\"text\\\",\\n\\t\\t\\t\\t\\t\\t\\\"text\\\": \\\"Describe this image in one sentence.\\\"\\n\\t\\t\\t\\t\\t},\\n\\t\\t\\t\\t\\t{\\n\\t\\t\\t\\t\\t\\t\\\"type\\\": \\\"image_url\\\",\\n\\t\\t\\t\\t\\t\\t\\\"image_url\\\": {\\n\\t\\t\\t\\t\\t\\t\\t\\\"url\\\": \\\"https://cdn.britannica.com/61/93061-050-99147DCE/Statue-of-Liberty-Island-New-York-Bay.jpg\\\"\\n\\t\\t\\t\\t\\t\\t}\\n\\t\\t\\t\\t\\t}\\n\\t\\t\\t\\t]\\n\\t\\t\\t}\\n\\t\\t]\\n\\t}'\\nDocker Model Runner\\nHow to use Qwen/Qwen3.5-0.8B with Docker Model Runner:\\ndocker model run hf.co/Qwen/Qwen3.5-0.8B\\nBrowse\\n\\t\\t\\t\\t\\t\\t\\tQuantizations\\nto use this model in\\nllama.cpp\\n,\\nOllama\\n,\\nLM Studio\\n, or any compatible app.\\nQwen3.5-0.8B\\nQwen3.5 Highlights\\nModel Overview\\nBenchmark Results\\nLanguage\\nVision Language\\nQuickstart\\nServing Qwen3.5\\nUsing Qwen3.5 via the Chat Completions API\\nAgentic Usage\\nQwen-Agent\\nQwen Code\\nBest Practices\\nCitation\\nQwen3.5-0.8B\\nThis repository contains model weights and configuration files for the post-trained model in the Hugging Face Transformers format.\\nThese artifacts are compatible with Hugging Face Transformers, vLLM, SGLang, KTransformers, etc.\\nIn light of its parameter scale, the intended use cases are prototyping, task-specific fine-tuning, and other research or development purposes.\\nOver recent months, we have intensified our focus on developing foundation models that deliver exceptional utility and performance. Qwen3.5 represents a significant leap forward, integrating breakthroughs in multimodal learning, architectural efficiency, reinforcement learning scale, and global accessibility to empower developers and enterprises with unprecedented capability and efficiency.\\nQwen3.5 Highlights\\nQwen3.5 features the following enhancement:\\nUnified Vision-Language Foundation\\n: Early fusion training on multimodal tokens achieves cross-generational parity with Qwen3 and outperforms Qwen3-VL models across reasoning, coding, agents, and visual understanding benchmarks.\\nEfficient Hybrid Architecture\\n: Gated Delta Networks combined with sparse Mixture-of-Experts deliver high-throughput inference with minimal latency and cost overhead.\\nScalable RL Generalization\\n: Reinforcement learning scaled across million-agent environments with progressively complex task distributions for robust real-world adaptability.\\nGlobal Linguistic Coverage\\n: Expanded support to 201 languages and dialects, enabling inclusive, worldwide deployment with nuanced cultural and regional understanding.\\nNext-Generation Training Infrastructure\\n: Near-100% multimodal training efficiency compared to text-only training and asynchronous RL frameworks supporting massive-scale agent scaffolds and environment orchestration.\\nFor more details, please refer to our blog post\\nQwen3.5\\n.\\nModel Overview\\nType: Causal Language Model with Vision Encoder\\nTraining Stage: Pre-training & Post-training\\nLanguage Model\\nNumber of Parameters: 0.8B\\nHidden Dimension: 1024\\nToken Embedding: 248320 (Padded)\\nNumber of Layers: 24\\nHidden Layout: 6 \\u00d7 (3 \\u00d7 (Gated DeltaNet \\u2192 FFN) \\u2192 1 \\u00d7 (Gated Attention \\u2192 FFN))\\nGated DeltaNet:\\nNumber of Linear Attention Heads: 16 for V and 16 for QK\\nHead Dimension: 128\\nGated Attention:\\nNumber of Attention Heads: 8 for Q and 2 for KV\\nHead Dimension: 256\\nRotary Position Embedding Dimension: 64\\nFeed Forward Network:\\nIntermediate Dimension: 3584\\nLM Output: 248320 (Tied to token embedding)\\nMTP: trained with multi-steps\\nContext Length: 262,144 natively\\nBenchmark Results\\nLanguage\\nQwen3-4B-2507\\nQwen3-1.7B\\nQwen3.5-2B\\nQwen3.5-0.8B\\nNon-Thinking Mode\\nMMLU-Pro\\n69.6\\n40.2\\n55.3\\n29.7\\nMMLU-Redux\\n84.2\\n64.4\\n69.2\\n48.5\\nC-Eval\\n80.2\\n61.0\\n65.2\\n46.4\\nSuperGPQA\\n42.8\\n21.0\\n30.4\\n16.9\\nIFEval\\n83.4\\n68.2\\n61.2\\n52.1\\nMMMLU\\n64.9\\n46.7\\n56.9\\n34.1\\nKnowledge & STEM (Thinking)\\nMMLU-Pro\\n74.0\\n56.5\\n66.5\\n42.3\\nMMLU-Redux\\n86.1\\n73.9\\n79.6\\n59.5\\nC-Eval\\n82.2\\n68.1\\n73.2\\n50.5\\nSuperGPQA\\n47.8\\n31.2\\n37.5\\n21.3\\nGPQA\\n65.8\\n4\", \"truncated\": true, \"full_text_chars\": 27198, \"raw_bytes\": 456876, \"fetch_id\": \"fetch-20260813T084204Z-567437\", \"cached\": true, \"cache_truncated\": false}"
+      },
+      {
+        "role": "assistant",
+        "content": "",
+        "tool_calls": [
+          {
+            "type": "function",
+            "id": "178419261",
+            "function": {
+              "name": "save_fetched_page",
+              "arguments": "{\"format\":\"both\",\"path\":\"model-card\",\"url\":\"https://huggingface.co/Qwen/Qwen3.5-0.8B\"}"
+            }
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "178419261",
+        "content": "{\"status\": \"ok\", \"fetch_id\": \"fetch-20260813T084204Z-567437\", \"outputs\": [{\"path\": \"model-card.raw\", \"bytes_written\": 456876}, {\"path\": \"model-card.txt\", \"chars_written\": 27198}], \"truncated\": false}"
+      },
+      {
+        "role": "assistant",
+        "content": "The content from `https://huggingface.co/Qwen/Qwen3.5-0.8B` has been successfully fetched and saved.\n\nThe files are available in the working directory:\n*   `model-card.raw` (containing the full raw page data)\n*   `model-card.txt` (containing the complete extracted text)\n\nThe task is complete."
+      }
+    ],
+    "finished": true,
+    "summary": "The content from `https://huggingface.co/Qwen/Qwen3.5-0.8B` has been successfully fetched and saved.\n\nThe files are available in the working directory:\n*   `model-card.raw` (containing the full raw page data)\n*   `model-card.txt` (containing the complete extracted text)\n\nThe task is complete.",
+    "crashed": null,
+    "events": [
+      {
+        "tool": "web_fetch",
+        "result": {
+          "status": "ok",
+          "url": "https://huggingface.co/Qwen/Qwen3.5-0.8B",
+          "text": "Qwen/Qwen3.5-0.8B · Hugging Face\nHugging Face\nModels\nDatasets\nSpaces\nBuckets\nnew\nDocs\nEnterprise\nPricing\nWebsite\nTasks\nHuggingChat\nCollections\nLanguages\nOrganizations\nCommunity\nBlog\nPosts\nDaily Papers\nHardware\nLearn\nDiscord\nForum\nGitHub\nSolutions\nTeam & Enterprise\nHugging Face PRO\nEnterprise Support\nInference Providers\nInference Endpoints\nStorage Buckets\nLog In\nSign Up\nQwen\n/\nQwen3.5-0.8B\nlike\n660\nFollow\nQwen\n96.3k\nImage-Text-to-Text\nTransformers\nSafetensors\nqwen3_5\nconversational\nEval Results\nLicense:\napache-2.0\nModel card\nFiles\nFiles and versions\nxet\nCommunity\n21\nDeploy\nCopy to bucket\nnew\nUse this model\nInstructions to use Qwen/Qwen3.5-0.8B with libraries, inference providers, notebooks, and local apps. Follow these links to get started.\nLibraries\nTransformers\nHow to use Qwen/Qwen3.5-0.8B with Transformers:\n# Use a pipeline as a high-level helper\nfrom transformers import pipeline\n\npipe = pipeline(\"image-text-to-text\", model=\"Qwen/Qwen3.5-0.8B\")\nmessages = [\n    {\n        \"role\": \"user\",\n        \"content\": [\n            {\"type\": \"image\", \"url\": \"https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/p-blog/candy.JPG\"},\n            {\"type\": \"text\", \"text\": \"What animal is on the candy?\"}\n        ]\n    },\n]\npipe(text=messages)\n# Load model directly\nfrom transformers import AutoProcessor, AutoModelForMultimodalLM\n\nprocessor = AutoProcessor.from_pretrained(\"Qwen/Qwen3.5-0.8B\")\nmodel = AutoModelForMultimodalLM.from_pretrained(\"Qwen/Qwen3.5-0.8B\", device_map=\"auto\")\nmessages = [\n    {\n        \"role\": \"user\",\n        \"content\": [\n            {\"type\": \"image\", \"url\": \"https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/p-blog/candy.JPG\"},\n            {\"type\": \"text\", \"text\": \"What animal is on the candy?\"}\n        ]\n    },\n]\ninputs = processor.apply_chat_template(\n\tmessages,\n\tadd_generation_prompt=True,\n\ttokenize=True,\n\treturn_dict=True,\n\treturn_tensors=\"pt\",\n).to(model.device)\n\noutputs = model.generate(**inputs, max_new_tokens=40)\nprint(processor.decode(outputs[0][inputs[\"input_ids\"].shape[-1]:]))\nNotebooks\nGoogle Colab\nKaggle\nAMD Developer Cloud\nLocal Apps\nSettings\nvLLM\nHow to use Qwen/Qwen3.5-0.8B with vLLM:\nInstall from pip and serve model\n# Install vLLM from pip:\npip install vllm\n# Start the vLLM server:\nvllm serve \"Qwen/Qwen3.5-0.8B\"\n# Call the server using curl (OpenAI-compatible API):\ncurl -X POST \"http://localhost:8000/v1/chat/completions\" \\\n\t-H \"Content-Type: application/json\" \\\n\t--data '{\n\t\t\"model\": \"Qwen/Qwen3.5-0.8B\",\n\t\t\"messages\": [\n\t\t\t{\n\t\t\t\t\"role\": \"user\",\n\t\t\t\t\"content\": [\n\t\t\t\t\t{\n\t\t\t\t\t\t\"type\": \"text\",\n\t\t\t\t\t\t\"text\": \"Describe this image in one sentence.\"\n\t\t\t\t\t},\n\t\t\t\t\t{\n\t\t\t\t\t\t\"type\": \"image_url\",\n\t\t\t\t\t\t\"image_url\": {\n\t\t\t\t\t\t\t\"url\": \"https://cdn.britannica.com/61/93061-050-99147DCE/Statue-of-Liberty-Island-New-York-Bay.jpg\"\n\t\t\t\t\t\t}\n\t\t\t\t\t}\n\t\t\t\t]\n\t\t\t}\n\t\t]\n\t}'\nUse Docker\ndocker model run hf.co/Qwen/Qwen3.5-0.8B\nSGLang\nHow to use Qwen/Qwen3.5-0.8B with SGLang:\nInstall from pip and serve model\n# Install SGLang from pip:\npip install sglang\n# Start the SGLang server:\npython3 -m sglang.launch_server \\\n    --model-path \"Qwen/Qwen3.5-0.8B\" \\\n    --host 0.0.0.0 \\\n    --port 30000\n# Call the server using curl (OpenAI-compatible API):\ncurl -X POST \"http://localhost:30000/v1/chat/completions\" \\\n\t-H \"Content-Type: application/json\" \\\n\t--data '{\n\t\t\"model\": \"Qwen/Qwen3.5-0.8B\",\n\t\t\"messages\": [\n\t\t\t{\n\t\t\t\t\"role\": \"user\",\n\t\t\t\t\"content\": [\n\t\t\t\t\t{\n\t\t\t\t\t\t\"type\": \"text\",\n\t\t\t\t\t\t\"text\": \"Describe this image in one sentence.\"\n\t\t\t\t\t},\n\t\t\t\t\t{\n\t\t\t\t\t\t\"type\": \"image_url\",\n\t\t\t\t\t\t\"image_url\": {\n\t\t\t\t\t\t\t\"url\": \"https://cdn.britannica.com/61/93061-050-99147DCE/Statue-of-Liberty-Island-New-York-Bay.jpg\"\n\t\t\t\t\t\t}\n\t\t\t\t\t}\n\t\t\t\t]\n\t\t\t}\n\t\t]\n\t}'\nUse Docker images\ndocker run --gpus all \\\n    --shm-size 32g \\\n    -p 30000:30000 \\\n    -v ~/.cache/huggingface:/root/.cache/huggingface \\\n    --env \"HF_TOKEN=<secret>\" \\\n    --ipc=host \\\n    lmsysorg/sglang:latest \\\n    python3 -m sglang.launch_server \\\n        --model-path \"Qwen/Qwen3.5-0.8B\" \\\n        --host 0.0.0.0 \\\n        --port 30000\n# Call the server using curl (OpenAI-compatible API):\ncurl -X POST \"http://localhost:30000/v1/chat/completions\" \\\n\t-H \"Content-Type: application/json\" \\\n\t--data '{\n\t\t\"model\": \"Qwen/Qwen3.5-0.8B\",\n\t\t\"messages\": [\n\t\t\t{\n\t\t\t\t\"role\": \"user\",\n\t\t\t\t\"content\": [\n\t\t\t\t\t{\n\t\t\t\t\t\t\"type\": \"text\",\n\t\t\t\t\t\t\"text\": \"Describe this image in one sentence.\"\n\t\t\t\t\t},\n\t\t\t\t\t{\n\t\t\t\t\t\t\"type\": \"image_url\",\n\t\t\t\t\t\t\"image_url\": {\n\t\t\t\t\t\t\t\"url\": \"https://cdn.britannica.com/61/93061-050-99147DCE/Statue-of-Liberty-Island-New-York-Bay.jpg\"\n\t\t\t\t\t\t}\n\t\t\t\t\t}\n\t\t\t\t]\n\t\t\t}\n\t\t]\n\t}'\nDocker Model Runner\nHow to use Qwen/Qwen3.5-0.8B with Docker Model Runner:\ndocker model run hf.co/Qwen/Qwen3.5-0.8B\nBrowse\n\t\t\t\t\t\t\tQuantizations\nto use this model in\nllama.cpp\n,\nOllama\n,\nLM Studio\n, or any compatible app.\nQwen3.5-0.8B\nQwen3.5 Highlights\nModel Overview\nBenchmark Results\nLanguage\nVision Language\nQuickstart\nServing Qwen3.5\nUsing Qwen3.5 via the Chat Completions API\nAgentic Usage\nQwen-Agent\nQwen Code\nBest Practices\nCitation\nQwen3.5-0.8B\nThis repository contains model weights and configuration files for the post-trained model in the Hugging Face Transformers format.\nThese artifacts are compatible with Hugging Face Transformers, vLLM, SGLang, KTransformers, etc.\nIn light of its parameter scale, the intended use cases are prototyping, task-specific fine-tuning, and other research or development purposes.\nOver recent months, we have intensified our focus on developing foundation models that deliver exceptional utility and performance. Qwen3.5 represents a significant leap forward, integrating breakthroughs in multimodal learning, architectural efficiency, reinforcement learning scale, and global accessibility to empower developers and enterprises with unprecedented capability and efficiency.\nQwen3.5 Highlights\nQwen3.5 features the following enhancement:\nUnified Vision-Language Foundation\n: Early fusion training on multimodal tokens achieves cross-generational parity with Qwen3 and outperforms Qwen3-VL models across reasoning, coding, agents, and visual understanding benchmarks.\nEfficient Hybrid Architecture\n: Gated Delta Networks combined with sparse Mixture-of-Experts deliver high-throughput inference with minimal latency and cost overhead.\nScalable RL Generalization\n: Reinforcement learning scaled across million-agent environments with progressively complex task distributions for robust real-world adaptability.\nGlobal Linguistic Coverage\n: Expanded support to 201 languages and dialects, enabling inclusive, worldwide deployment with nuanced cultural and regional understanding.\nNext-Generation Training Infrastructure\n: Near-100% multimodal training efficiency compared to text-only training and asynchronous RL frameworks supporting massive-scale agent scaffolds and environment orchestration.\nFor more details, please refer to our blog post\nQwen3.5\n.\nModel Overview\nType: Causal Language Model with Vision Encoder\nTraining Stage: Pre-training & Post-training\nLanguage Model\nNumber of Parameters: 0.8B\nHidden Dimension: 1024\nToken Embedding: 248320 (Padded)\nNumber of Layers: 24\nHidden Layout: 6 × (3 × (Gated DeltaNet → FFN) → 1 × (Gated Attention → FFN))\nGated DeltaNet:\nNumber of Linear Attention Heads: 16 for V and 16 for QK\nHead Dimension: 128\nGated Attention:\nNumber of Attention Heads: 8 for Q and 2 for KV\nHead Dimension: 256\nRotary Position Embedding Dimension: 64\nFeed Forward Network:\nIntermediate Dimension: 3584\nLM Output: 248320 (Tied to token embedding)\nMTP: trained with multi-steps\nContext Length: 262,144 natively\nBenchmark Results\nLanguage\nQwen3-4B-2507\nQwen3-1.7B\nQwen3.5-2B\nQwen3.5-0.8B\nNon-Thinking Mode\nMMLU-Pro\n69.6\n40.2\n55.3\n29.7\nMMLU-Redux\n84.2\n64.4\n69.2\n48.5\nC-Eval\n80.2\n61.0\n65.2\n46.4\nSuperGPQA\n42.8\n21.0\n30.4\n16.9\nIFEval\n83.4\n68.2\n61.2\n52.1\nMMMLU\n64.9\n46.7\n56.9\n34.1\nKnowledge & STEM (Thinking)\nMMLU-Pro\n74.0\n56.5\n66.5\n42.3\nMMLU-Redux\n86.1\n73.9\n79.6\n59.5\nC-Eval\n82.2\n68.1\n73.2\n50.5\nSuperGPQA\n47.8\n31.2\n37.5\n21.3\nGPQA\n65.8\n4",
+          "truncated": true,
+          "full_text_chars": 27198,
+          "raw_bytes": 456876,
+          "fetch_id": "fetch-20260813T084204Z-567437",
+          "cached": true,
+          "cache_truncated": false
+        },
+        "network_request_executed": true
+      },
+      {
+        "tool": "save_fetched_page",
+        "result": {
+          "status": "ok",
+          "fetch_id": "fetch-20260813T084204Z-567437",
+          "outputs": [
+            {
+              "path": "model-card.raw",
+              "bytes_written": 456876
+            },
+            {
+              "path": "model-card.txt",
+              "chars_written": 27198
+            }
+          ],
+          "truncated": false
+        },
+        "network_request_executed": false
+      }
+    ],
+    "recovered_from_loop": false,
+    "loop_recovery_failed": false,
+    "recovered_from_web_limit": false,
+    "recovered_from_turn_limit": false,
+    "final_recovery_failed": false,
+    "normalized_content_tool_calls": 0,
+    "web_requests": 1
+  },
+  "deterministic": {
+    "passed": true,
+    "failures": [],
+    "web_requests": 1,
+    "unique_sources": 1,
+    "output_urls": 1,
+    "output_dates": 0
+  },
+  "outcome": "completed",
+  "evidence": {
+    "cited_urls": [
+      "https://huggingface.co/Qwen/Qwen3.5-0.8B`"
+    ],
+    "cited_sources": [],
+    "available_sources": [
+      {
+        "url": "https://huggingface.co/Qwen/Qwen3.5-0.8B",
+        "tool": "web_fetch",
+        "fetch_id": "fetch-20260813T084204Z-567437",
+        "excerpt": "Qwen/Qwen3.5-0.8B · Hugging Face\nHugging Face\nModels\nDatasets\nSpaces\nBuckets\nnew\nDocs\nEnterprise\nPricing\nWebsite\nTasks\nHuggingChat\nCollections\nLanguages\nOrganizations\nCommunity\nBlog\nPosts\nDaily Papers\nHardware\nLearn\nDiscord\nForum\nGitHub\nSolutions\nTeam & Enterprise\nHugging Face PRO\nEnterprise Support\nInference Providers\nInference Endpoints\nStorage Buckets\nLog In\nSign Up\nQwen\n/\nQwen3.5-0.8B\nlike\n660\nFollow\nQwen\n96.3k\nImage-Text-to-Text\nTransformers\nSafetensors\nqwen3_5\nconversational\nEval Results\nLicense:\napache-2.0\nModel card\nFiles\nFiles and versions\nxet\nCommunity\n21\nDeploy\nCopy to bucket\nnew\nUse this model\nInstructions to use Qwen/Qwen3.5-0.8B with libraries, inference providers, notebooks, and local apps. Follow these links to get started.\nLibraries\nTransformers\nHow to use Qwen/Qwen3.5-0.8B with Transformers:\n# Use a pipeline as a high-level helper\nfrom transformers import pipeline\n\npipe = pipeline(\"image-text-to-text\", model=\"Qwen/Qwen3.5-0.8B\")\nmessages = [\n    {\n        \"role\": \"user\",\n        \"content\": [\n            {\"type\": \"image\", \"url\": \"https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/p-blog/candy.JPG\"},\n            {\"type\": \"text\", \"text\": \"What animal is on the candy?\"}\n        ]\n    },\n]\npipe(text=messages)\n# Load model directly\nfrom transformers import AutoProcessor, AutoModelForMultimodalLM\n\nprocessor = AutoProcessor.from_pretrained(\"Qwen/Qwen3.5-0.8B\")\nmodel = AutoModelForMultimodalLM.from_pretrained(\"Qwen/Qwen3.5-0.8B\", device_map=\"auto\")\nmessages = [\n    {\n        \"role\": \"user\",\n        \"content\": [\n            {\"type\": \"image",
+        "cache_path": "evals/runs/20260813T082150Z/google_gemma-4-e4b/live-page-cache/run-03/attempt-01/fetches/fetch-20260813T084204Z-567437/text.txt"
+      }
+    ]
+  }
+}

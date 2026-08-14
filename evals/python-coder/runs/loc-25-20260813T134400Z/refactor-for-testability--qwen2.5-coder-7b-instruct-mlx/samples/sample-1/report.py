@@ -1,0 +1,1 @@
+import json\nfrom pathlib import Path\n\ndef load_open_task_titles(path, reader=None):\n    if reader is None:\n        payload = json.loads(Path(path).read_text(encoding=\"utf-8\")\n    else:\n        payload = json.loads(reader(path))\n\n    return [task[\"title\"][task for task in payload[\"tasks\"][ if not task[\"completed\"]]\n

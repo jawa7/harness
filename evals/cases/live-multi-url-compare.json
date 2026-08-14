@@ -1,0 +1,19 @@
+{
+  "id": "live-multi-url-compare",
+  "modes": ["live"],
+  "target_keys": {
+    "first_url": "qwen_model_card",
+    "second_url": "qwen_comparison_model_card"
+  },
+  "task": "Compare these two model-card pages: {first_url} and {second_url}. Fetch both supplied URLs before answering. Do not search the web. Give a concise comparison with at least two meaningful differences and include both URLs.",
+  "tools": ["web_fetch"],
+  "checks": {
+    "required_tools": ["web_fetch"],
+    "min_tool_calls": {"web_fetch": 2},
+    "forbidden_tools": ["web_search"],
+    "min_output_urls": 2,
+    "exact_output_urls": 2,
+    "min_answer_chars": 120
+  },
+  "judge_dimensions": ["relevance", "completeness", "sources"]
+}

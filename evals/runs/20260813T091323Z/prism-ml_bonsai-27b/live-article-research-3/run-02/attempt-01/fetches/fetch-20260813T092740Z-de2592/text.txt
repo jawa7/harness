@@ -1,0 +1,657 @@
+Best Tool Use & Function Calling Models (August 2026) — Ranked by Benchmark Data | BenchLM.ai
+Skip to main content
+Radar
+Five or fewer confirmed AI changes, with original sources, on mornings when something changed.
+A free source-linked morning brief.
+Start free brief
+Bench
+LM
+Leaderboard
+Radar
+Compare
+Benchmarks
+Models
+Research
+Newsletter
+Tools
+AI Prompt Writer
+Start with a goal, context, and constraints
+Prompt Optimizer
+Rewrite an existing prompt and inspect the diff
+Browse all tools
+›
+Advertise
+Browse
+Browse BenchLM
+Rankings, research, tools, and data standards.
+Radar
+Start the free morning brief.
+Up to five confirmed changes, each linked to its original source. No card required.
+Popular paths
+AI Prompt Writer
+›
+Prompt Optimizer
+›
+Best models by use case
+›
+Model selector
+›
+LLM pricing
+›
+Cost calculator
+›
+AI Race
+›
+Best Chinese models
+›
+Browse BenchLM
+01
+Leaderboard
+Ranked models and evidence
+›
+02
+Compare
+Head-to-head model evidence
+›
+03
+Benchmarks
+Evaluation records and sources
+›
+04
+Models
+Model evidence dossiers
+›
+Advertise
+Reach teams choosing AI models.
+Rankings
+Capabilities, regions, and use cases
+22
+Core Rankings
+All Benchmarks
+›
+Frontier Models
+›
+Agentic
+›
+Coding
+›
+Multimodal
+›
+Reasoning
+›
+Knowledge
+›
+Specialized
+Instruction Following
+›
+Multilingual
+›
+Math
+›
+Voice Benchmarks
+›
+Korean Benchmarks
+›
+Korean LLMs
+›
+European Models
+›
+Use Cases
+Long Context
+›
+Tool Use
+›
+Web Research
+›
+Computer Use
+›
+Document AI
+›
+Image Understanding
+›
+Frontend / App Dev
+›
+Factuality
+›
+Dashboards
+Pricing, speed, market, and evidence
+13
+Radar
+›
+New releases
+›
+LLM Pricing
+›
+Token Price Index
+›
+Pricing Trends
+›
+Price vs Performance
+›
+LLM Speed
+›
+Agent Benchmarks
+›
+Voice Benchmarks
+›
+Benchmark Confidence
+›
+AI Race
+›
+Leaderboard History
+›
+LLM Statistics
+›
+Explore
+Directories, guides, and research
+19
+Directories
+Models
+›
+Providers
+›
+Compare
+›
+Benchmark Directory
+›
+Alternatives
+›
+AI App Stack
+›
+Best models by use case
+›
+Guides & research
+AI Race
+›
+Methodology
+›
+European AI Guide
+›
+Korean Benchmarks
+›
+Korean LLMs
+›
+LLM Leaderboard History
+›
+KMMLU Guide
+›
+Best Overall
+›
+Best Open Source
+›
+Best Value
+›
+Blog
+›
+Newsletter
+›
+Tools & calculators
+Selectors, cost tools, and embeds
+10
+All tools
+›
+AI Prompt Writer
+›
+Prompt Optimizer
+›
+Alternative Finder
+›
+LLM Selector Quiz
+›
+Cost Calculator
+›
+Self-host vs API
+›
+Token Counter
+›
+Context Window
+›
+Data & Embed
+›
+Data & standards
+Methods, source quality, and downloads
+6
+Methodology
+›
+Evidence confidence
+›
+Download data
+›
+Provider directory
+›
+Editorial policy
+›
+About BenchLM
+›
+Rankings
+Capabilities, regions, and use cases
+22
+Contains the current page
+Dashboards
+Pricing, speed, market, and evidence
+13
+Explore
+Directories, guides, and research
+19
+Contains the current page
+Tools & calculators
+Selectors, cost tools, and embeds
+10
+Data & standards
+Methods, source quality, and downloads
+6
+Tools & calculators
+Selectors, cost tools, and embeds
+10
+destinations
+Tools
+All tools
+›
+AI Prompt Writer
+›
+Prompt Optimizer
+›
+Alternative Finder
+›
+LLM Selector Quiz
+›
+Cost Calculator
+›
+Self-host vs API
+›
+Token Counter
+›
+Context Window
+›
+Data & Embed
+›
+Radar
+Start the free morning brief.
+Up to five confirmed changes, each linked to its original source. No card required.
+Popular paths
+AI Prompt Writer
+›
+Prompt Optimizer
+›
+Best models by use case
+›
+Model selector
+›
+LLM pricing
+›
+Cost calculator
+›
+385
+tracked
+414
+benchmarks
+Best Tool Use & Function Calling Models
+BenchLM recommendation
+Best Tool Use & Function Calling Models in 2026
+Data verified
+August 13, 2026
+As of
+August 13, 2026
+, the top model in
+best tool use & function calling models
+on the BenchLM leaderboard is
+Qwen3.7 Plus
+with a score of 72.
+Last verified:
+August 13, 2026
+This reporting page focuses on structured output, tool routing, function calling, and MCP-style task completion. It is narrower than the general agentic leaderboard and is better aligned to developers choosing models for tool-heavy applications.
+This page ranks models using only sourced tool-use benchmarks in the reporting family.
+Bottom line: Tool-use quality determines whether your AI agent can actually call APIs, use MCP servers, and route structured requests. Not all "agentic" models are equally good at it.
+Analysis note
+Qwen3.7 Plus
+leads for most workloads
+by a narrow margin
+.
+Based on BenchLM composite scores,
+August 2026
+.
+Qwen3.7 Plus
+leads this ranking with a score of
+72
+, followed by
+Claude Opus 4.8
+(
+70.6
+) and
+GLM-5.1
+(
+70.1
+).
+The top three are separated by just a few points — any of them would perform well for this use case.
+The best open-weight option is GLM-5.1 (ranked #3 with a score of 70.1). Open-weight models are highly competitive in this category — self-hosting is a viable alternative to proprietary APIs.
+This ranking uses
+provisional overall weighted scores from the active scoring formula
+.
+For detailed model profiles, click any model name below. To compare two specific models head-to-head, use the
+"
+vs #
+"
+links.
+1
+Closed
+Qwen3.7 Plus
+Alibaba
+·
+1M
+72
+sourced avg
+2
+Closed
+Claude Opus 4.8
+Anthropic
+·
+1M
+70.6
+sourced avg
+3
+Open
+GLM-5.1
+Z.AI
+·
+203K
+70.1
+sourced avg
+How to choose
+MCP server integration?
+Check MCP Atlas scores for protocol-level tool use
+Function calling in production?
+BFCL v4 scores test real function-call reliability
+Multi-step tool chains?
+Toolathlon and Tau Bench test sequential tool use
+Full Rankings (
+17
+models)
+1
+Qwen3.7 Plus
+Alibaba
+·
+Proprietary
+·
+1M
+72
+sourced avg
+vs #
+2
+2
+Claude Opus 4.8
+Anthropic
+·
+Proprietary
+·
+1M
+70.6
+sourced avg
+vs #
+3
+3
+GLM-5.1
+Z.AI
+·
+Open Weight
+·
+203K
+70.1
+sourced avg
+vs #
+4
+4
+MiniMax M3
+MiniMax
+·
+Open Weight
+·
+1M
+70.1
+sourced avg
+vs #
+5
+5
+Gemini 3.5 Flash
+Google
+·
+Proprietary
+·
+1M
+69.8
+sourced avg
+vs #
+6
+6
+Qwen3.7 Max
+Alibaba
+·
+Proprietary
+·
+1M
+68.8
+sourced avg
+vs #
+7
+7
+GPT-5.5
+OpenAI
+·
+Proprietary
+·
+1M
+67.8
+sourced avg
+vs #
+8
+8
+GLM-5.2
+Z.AI
+·
+Open Weight
+·
+1M
+67
+sourced avg
+vs #
+9
+9
+GPT-5.4
+OpenAI
+·
+Proprietary
+·
+1.05M
+65.5
+sourced avg
+vs #
+10
+10
+MiniMax M2.7
+MiniMax
+·
+Open Weight
+·
+200K
+62.9
+sourced avg
+vs #
+11
+11
+Kimi K2.6
+Moonshot AI
+·
+Open Weight
+·
+256K
+60.5
+sourced avg
+vs #
+12
+12
+Qwen3.6-35B-A3B
+Alibaba
+·
+Open Weight
+·
+262K
+60.1
+sourced avg
+vs #
+13
+13
+Qwen3.6 Plus
+Alibaba
+·
+Proprietary
+·
+1M
+60
+sourced avg
+vs #
+14
+14
+Claude Opus 4.5
+Anthropic
+·
+Proprietary
+·
+200K
+58.7
+sourced avg
+vs #
+15
+15
+GLM-5
+Z.AI
+·
+Open Weight
+·
+200K
+58.3
+sourced avg
+vs #
+16
+16
+Qwen3.5 397B
+Alibaba
+·
+Open Weight
+·
+128K
+57.7
+sourced avg
+vs #
+17
+17
+Kimi K2.5
+Moonshot AI
+·
+Open Weight
+·
+256K
+52
+sourced avg
+Key Takeaways
+The top model on this sourced reporting-family slice is
+Qwen3.7 Plus
+by
+Alibaba
+with an average of
+72
+.
+The best open-weight model is
+GLM-5.1
+at position
+#
+3
+.
+17 models are listed with sourced benchmark coverage in this reporting family.
+Score in Context
+What these scores mean
+This ranking averages sourced tool-use benchmarks. It is narrower than the agentic category and focuses specifically on function calling and structured tool execution.
+Known limitations
+Tool-use benchmarks test specific function-calling patterns. Real-world tool use also depends on prompt engineering, retry logic, and error handling that benchmarks cannot capture.
+Explore More
+Price vs Performance Chart
+Compare Pricing
+Which LLM Should I Use?
+Benchmark Explainers
+Last updated:
+August 13, 2026
+Radar
+This page is a snapshot. Radar watches the changes.
+Get confirmed releases, published price changes, deprecations, and status updates by email, a signed webhook, or the Radar API.
+Start free brief
+Know when it’s worth switching models
+The model to choose, the cheaper alternative, and the release we would wait on.
+Read a sample issue
+Join 2,000+ readers.
+Leave this field blank
+Loading...
+One email each week. Unsubscribe anytime.
+Bench
+LM
+Independent LLM benchmarks, pricing, and runtime evidence. Published results expose their evidence path and review date.
+✓
+Supported and Estimated evidence labels
+Models tracked
+385
+Benchmarks
+414
+Data refreshed
+August 13, 2026
+Tracked means a model profile exists. Supported positions have sufficiently diverse direct evidence. Estimated positions remain ranked with wider uncertainty while evidence is incomplete.
+How BenchLM ranks models
+Explore
+LLM leaderboard
+Compare models
+Models
+Benchmarks
+Providers
+Best models by use case
+Model alternatives
+Rankings
+Frontier models
+Coding models
+Agentic models
+Reasoning models
+Multimodal models
+Best overall
+Best open source
+Best Chinese models
+Dashboards
+Free Radar Brief
+Model updates
+Release timeline
+AI Race
+LLM pricing
+Price vs performance
+LLM speed
+Agent benchmarks
+Pricing trends
+LLM statistics
+Research & tools
+Research
+Weekly brief
+All tools
+AI prompt writer
+Prompt optimizer
+LLM selector
+Token counter
+Download data
+Methodology
+Evidence confidence
+Leaderboard history
+AI app stack
+Raw benchmark rows stay exact; composite rankings use disclosed missing-data priors. ©
+2026
+BenchLM.
+About
+Advertise
+Contact
+Editorial policy
+Affiliate disclosure
+Privacy
+Terms
+llms.txt
+RSS

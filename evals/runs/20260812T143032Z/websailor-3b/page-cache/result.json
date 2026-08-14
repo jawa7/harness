@@ -1,0 +1,107 @@
+{
+  "case": "page-cache",
+  "model": "websailor-3b",
+  "mode": "live",
+  "run_at": "2026-08-12T14:31:19.593282+00:00",
+  "result": {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Fetch https://docs.example.test/page, save both the raw page and the complete page text using basename page-copy, then finish."
+      },
+      {
+        "role": "assistant",
+        "content": "",
+        "tool_calls": [
+          {
+            "type": "function",
+            "id": "9lRDNc2oNPqAqTCRi9wpC5D3FAD1Ixyc",
+            "function": {
+              "name": "web_fetch",
+              "arguments": "{\"url\":\"https://docs.example.test/page\"}"
+            }
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "9lRDNc2oNPqAqTCRi9wpC5D3FAD1Ixyc",
+        "content": "{\"status\": \"error\", \"message\": \"fetch failed: URLError: <urlopen error [Errno 8] nodename nor servname provided, or not known>. No successful web source exists yet. You may make one alternative web request, then answer honestly if it also fails.\"}"
+      },
+      {
+        "role": "assistant",
+        "content": "",
+        "tool_calls": [
+          {
+            "type": "function",
+            "id": "JPgndT1uaKPzW0YZ32fK94IiHRP2FdzP",
+            "function": {
+              "name": "web_fetch",
+              "arguments": "{\"url\":\"https://docs.example.test/page\"}"
+            }
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "JPgndT1uaKPzW0YZ32fK94IiHRP2FdzP",
+        "content": "{\"status\": \"error\", \"message\": \"fetch failed: URLError: <urlopen error [Errno 8] nodename nor servname provided, or not known>. No successful web source was obtained. Stop browsing and call finish with a clear explanation that the material could not be retrieved.\"}"
+      },
+      {
+        "role": "assistant",
+        "content": "I’m encountering persistent connectivity issues when trying to access the specified URL, which means I can’t retrieve any content from it. Since none of my attempts have succeeded in fetching or caching the page, I don’t have any actual text or information about what’s on that page to use for a response. The best course of action now is to explain this limitation and move forward by summarizing what could not be retrieved rather than making more failed web requests. I need to call finish with an explanation of why I can’t provide the requested content.\n",
+        "tool_calls": [
+          {
+            "type": "function",
+            "id": "meBuACE6ssWWqsqGiCnD9N39Fgjl2tis",
+            "function": {
+              "name": "finish",
+              "arguments": "{\"summary\":\"I was unable to retrieve any text from the URL https://docs.example.test/page due to persistent connectivity issues, so there is no page content available for review or use.\"}"
+            }
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "meBuACE6ssWWqsqGiCnD9N39Fgjl2tis",
+        "content": "{\"status\": \"ok\"}"
+      }
+    ],
+    "finished": true,
+    "summary": "I was unable to retrieve any text from the URL https://docs.example.test/page due to persistent connectivity issues, so there is no page content available for review or use.",
+    "crashed": null,
+    "events": [
+      {
+        "tool": "web_fetch",
+        "result": {
+          "status": "error",
+          "message": "fetch failed: URLError: <urlopen error [Errno 8] nodename nor servname provided, or not known>. No successful web source exists yet. You may make one alternative web request, then answer honestly if it also fails."
+        }
+      },
+      {
+        "tool": "web_fetch",
+        "result": {
+          "status": "error",
+          "message": "fetch failed: URLError: <urlopen error [Errno 8] nodename nor servname provided, or not known>. No successful web source was obtained. Stop browsing and call finish with a clear explanation that the material could not be retrieved."
+        }
+      },
+      {
+        "tool": "finish",
+        "result": {
+          "status": "ok"
+        }
+      }
+    ]
+  },
+  "deterministic": {
+    "passed": false,
+    "failures": [
+      "missing required tool calls: save_fetched_page",
+      "expected file was not created: page-copy.raw",
+      "expected file was not created: page-copy.txt"
+    ],
+    "web_requests": 2,
+    "unique_sources": 0,
+    "output_urls": 1
+  }
+}

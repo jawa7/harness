@@ -1,0 +1,15 @@
+{
+  "relevance": 10,
+  "completeness": 5,
+  "sources": 0,
+  "limitations": 5,
+  "dimensions": [
+    "relevance",
+    "completeness",
+    "sources",
+    "limitations"
+  ],
+  "average": 5.0,
+  "rationale": "Relevance: The answer addresses the task of finding Czech sports articles. Completeness: Only 10 entries are provided, but URLs and multiple dates are missing. Sources: No URLs cited, violating the requirement to cite material from web tools. Limitations: The answer notes URL derivation but lacks explicit acknowledgment of missing data.",
+  "passed": false
+}

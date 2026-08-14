@@ -1,0 +1,295 @@
+5 Small Language Models for Agentic Tool Calling - KDnuggets
+Blog
+Top Posts
+About
+Topics
+AI
+Career Advice
+Computer Vision
+Data Engineering
+Data Science
+Language Models
+Machine Learning
+MLOps
+NLP
+Programming
+Python
+SQL
+Datasets
+Events
+Resources
+Cheat Sheets
+Recommendations
+Tech Briefs
+Advertise
+Join Newsletter
+5 Small Language Models for Agentic Tool Calling
+Here are 5 small language models that hare one important trait: they all support structured tool calling in a compact, open-weight package.
+By
+Matthew Mayo
+, KDnuggets Managing Editor on May 14, 2026 in
+Language Models
+#
+Introduction
+Agentic AI systems depend on a model's ability to reliably call tools, selecting the right function, formatting arguments correctly, and integrating results into multi-step workflows. Large frontier models such as ChatGPT, Claude, and Gemini handle this well, but they come with tradeoffs in cost, latency, and hardware requirements that make them impractical for many real-world deployments. Small language models have done well to close that gap, and several compact, open-weight options now offer first-class tool-calling support without the need for a data center to run them.
+And now, in no particular order, here are 5 small language models for agentic tool calling. Note that, for convenience and consistency, all model links point to Hugging Face-hosted models.
+#
+1. SmolLM3-3B
+Release Date:
+July 8, 2025
+Developer:
+Hugging Face
+Location:
+HuggingFaceTB/SmolLM3-3B
+Technical Aspect
+Details
+Parameters
+3B
+Architecture
+Decoder-only transformer (GQA + NoPE, 3:1 ratio)
+Context Length
+64K native; up to 128K with
+YaRN extrapolation
+Training Tokens
+11.2T
+Multilingual Support
+6 languages (EN, FR, ES, DE, IT, PT)
+Reasoning Mode
+Dual-mode (thinking / no-think toggle)
+Tool Calling
+Yes: JSON/XML (
+xml_tools
+) and Python (
+python_tools
+)
+License
+Apache 2.0
+SmolLM3
+is a 3B parameter language model designed to push the boundaries of small models, supporting dual-mode reasoning, 6 languages, and long context. It is a decoder-only transformer using Grouped Query Attention (GQA) and No Positional Embeddings (NoPE) (with a 3:1 ratio), pretrained on 11.2T tokens with a staged curriculum of web, code, math, and reasoning data. Post-training included a mid-training phase on 140 billion reasoning tokens, followed by supervised fine-tuning and alignment via Anchored Preference Optimization (APO), HuggingFace's off-policy
+approach to preference alignment
+. The model supports two distinct tool-calling interfaces, JSON/XML blobs via
+xml_tools
+and Python-style function calls via
+python_tools
+, making it highly flexible for agentic pipelines and RAG systems. As a fully open release, including weights, datasets, and training code, SmolLM3 is ideal for chatbots, RAG systems, and code assistants on constrained hardware such as edge devices or low-VRAM machines.
+#
+2. Qwen3-4B-Instruct-2507
+Release Date:
+August 6, 2025
+Developer:
+Alibaba (Qwen Team)
+Location:
+Qwen/Qwen3-4B-Instruct-2507
+Technical Aspect
+Details
+Parameters
+4.0B (3.6B non-embedding)
+Architecture
+Causal LM, 36 layers, GQA (32 Q heads / 8 KV heads)
+Context Length
+262,144 tokens (native)
+Reasoning Mode
+Non-thinking only (no
+<think>
+blocks)
+Multilingual
+100+ languages
+Tool Calling
+Yes: native, via Qwen-Agent / MCP
+License
+Apache 2.0
+Qwen3-4B-Instruct-2507
+is an updated version of the Qwen3-4B non-thinking mode, featuring significant improvements in general capabilities including: instruction following, logical reasoning, text comprehension, mathematics, science, coding, and tool usage. It also possesses substantial gains in long-tail knowledge coverage across multiple languages. Both the Instruct and Thinking variants share 4 billion total parameters (3.6B excluding embeddings) built across 36 transformer layers, using GQA with 32 query heads and 8 key/value heads, enabling efficient memory management for very long contexts. This specific non-thinking variant is optimized for direct, fast-response use cases, such as delivering concise answers without explicit chain-of-thought traces, making it well-suited for chatbots, customer support, and tool-calling agents where low latency matters. Qwen3 excels in tool-calling capabilities, and Alibaba recommends using the
+Qwen-Agent framework
+, which encapsulates tool-calling templates and parsers internally, reducing coding complexity, with support for MCP server configuration files.
+#
+3. Phi-3-mini-4k-instruct
+Release Date:
+April 2024
+Developer:
+Microsoft
+Location:
+microsoft/Phi-3-mini-4k-instruct
+Technical Aspect
+Details
+Parameters
+3.8B
+Architecture
+Decoder-only transformer
+Context Length
+4K tokens
+Vocabulary Size
+32,064 tokens
+Training Data
+Synthetic + filtered public web data
+Post-training
+SFT + DPO
+Tool Calling
+Yes: via
+chat template
+(requiring HF's transformers ≥ 4.41.2)
+License
+MIT
+Phi-3-Mini-4K-Instruct
+is a 3.8B parameter, lightweight, state-of-the-art open model trained with the Phi-3 datasets that include both synthetic data and filtered publicly available web data, with a focus on high-quality and reasoning-dense properties. The model underwent a post-training process incorporating both Supervised Fine-Tuning (SFT) and
+Direct Preference Optimization
+(DPO) for instruction following and safety. Microsoft's flagship "small but smart" model, Phi-3-mini was notable at launch for its ability to run on-device, including smartphones, while rivaling GPT-3.5 in capability benchmarks. The model is primarily intended for memory- and compute-constrained environments, latency-bound scenarios, and tasks requiring strong reasoning, especially math and logic. While older than the other models in this list and limited to a 4K context window, the MIT license makes it one of the most permissively licensed options available, and its strong general reasoning has made it a popular base for fine-tuning in commercial applications.
+#
+4. Gemma-4-E2B-it
+Release Date:
+April 2, 2026
+Developer:
+Google DeepMind
+Location:
+google/gemma-4-E2B-it
+Technical Aspect
+Details
+Effective Parameters
+2.3B (5.1B total with embeddings)
+Architecture
+Dense, hybrid attention (sliding window + global) + PLE
+Layers
+35
+Sliding Window
+512 tokens
+Context Length
+128K tokens
+Vocabulary Size
+262K
+Modalities
+Text, Image, Audio (≤30 sec), Video (as frames)
+Multilingual
+35+ native, trained on 140+ languages
+Tool Calling
+Yes: native function calling
+License
+Apache 2.0
+Gemma-4-E2B
+is part of Google DeepMind's Gemma 4 family, which features a hybrid attention mechanism, local sliding window attention with full global attention. This design delivers the processing speed and low memory footprint of a lightweight model without sacrificing the deep awareness required for complex, long-context tasks. The "E" in E2B stands for "effective" parameters, enabled by a key architectural innovation called
+Per-Layer Embeddings
+(PLE), which adds a dedicated conditioning vector at every decoder layer. This is the mechanism which allows the E2B to run in under 1.5 GB of memory with quantization and still produce valuable outputs. The model supports native function calling, enabling agentic workflows, and is optimized for on-device deployment on mobile and IoT devices, capable of handling text, image, audio, and video inputs. Released under Apache 2.0 (a change from earlier Gemma generations' more restrictive custom license), Gemma 4 E2B is an attractive option for developers building multimodal agentic applications running entirely at the edge.
+#
+5. Mistral-7B-Instruct-v0.3
+Release Date:
+May 27, 2024
+Developer:
+Mistral AI
+Location:
+Mistral-7B-Instruct-v0.3
+Technical Aspect
+Details
+Parameters
+7.25B
+Architecture
+Transformer, GQA + SWA
+Context Length
+32,768 tokens
+Vocabulary Size
+32,768 tokens (extended from v0.2)
+Tokenizer
+v3 Mistral tokenizer
+Function Calling
+Yes: via
+TOOL_CALLS
+/
+AVAILABLE_TOOLS
+/
+TOOL_RESULTS
+tokens (
+see here
+)
+License
+Apache 2.0
+Mistral-7B-Instruct-v0.3
+is an instruct fine-tuned version of Mistral-7B-v0.3, which introduced three key changes over v0.2: an extended vocabulary to 32,768 tokens, support for the v3 tokenizer, and support for function calling. The model employs grouped-query attention for faster inference and
+Sliding Window Attention
+(SWA) to handle long sequences efficiently, and function calling support is made possible through the extended vocabulary including
+dedicated tokens
+for
+TOOL_CALLS
+,
+AVAILABLE_TOOLS
+, and
+TOOL_RESULTS
+. As the largest model in this roundup at 7B parameters, Mistral-7B-Instruct-v0.3 offers the best general instruction-following performance of the group and has become an industry-standard workhorse, widely available through Ollama, vLLM, and most inference platforms.
+#
+Wrapping Up
+The five models covered here — SmolLM3-3B, Qwen3-4B-Instruct-2507, Phi-3-mini-4k-instruct, Gemma-4-E2B-it, and Mistral-7B-Instruct-v0.3 — span a range of architectures, parameter counts, context windows, and release dates, but share one important trait: they all support structured tool calling in a compact, open-weight package.
+From Hugging Face's fully transparent SmolLM3 to Google DeepMind's multimodal edge-optimized Gemma 4 E2B, the selection demonstrates that capable agentic models no longer require massive infrastructure and frontier models to deploy. Whether your priority is on-device inference, long-context handling, multilingual coverage, or the most permissive license possible, there is a model in this list worth exploring.
+Keep in mind that these aren't the only small language models with tool-calling capabilities. They do, however, do a good job representing those with which I have direct experience, and which I feel comfortable including based on my results.
+Matthew Mayo
+(
+@mattmayo13
+) holds a master's degree in computer science and a graduate diploma in data mining. As managing editor of
+KDnuggets
+&
+Statology
+, and contributing editor at
+Machine Learning Mastery
+, Matthew aims to make complex data science concepts accessible. His professional interests include natural language processing, language models, machine learning algorithms, and exploring emerging AI. He is driven by a mission to democratize knowledge in the data science community. Matthew has been coding since he was 6 years old.
+More On This Topic
+Easy Agentic Tool Calling with Gemma 4
+Qwen Code Leverages Qwen3 as a CLI Agentic Programming Tool
+Small Language Models with Hugging Face transformers Library + smolLM3
+5 Must-Read Resources for Mastering Small Language Models
+5 Ways Small Language Models Are Powering Next-Gen Agents
+Best Small Language Models on Hugging Face Right Now!
+Get the
+FREE ebook 'KDnuggets Artificial Intelligence Pocket Dictionary'
+along with the leading newsletter on Data Science, Machine Learning, AI & Analytics straight to your inbox.
+By subscribing you accept KDnuggets
+Privacy Policy
+Leave this field empty if you're human:
+<
+= Previous post
+Next post =>
+Latest Posts
+Building an End-to-End Data Science Portfolio Project
+5 Easy Ways to Install Python on Windows
+The Ultimate Guide to Contributing to Open Source Projects
+3 Visual Proofs of the Central Limit Theorem to Build Your Intuition
+New Free eBook: Understanding Agentic AI, an Executive Briefing
+Specification Engineering: The New Skill After Prompt Engineering
+Top Posts
+5 Free Courses to Learn Modern AI and LLMs
+Specification Engineering: The New Skill After Prompt Engineering
+The Minimal AI Engineer Toolkit for 2026
+I Replaced Pip, Virtualenv, and Poetry With uv: Here’s Why
+7 Best Web Crawling Tools and APIs in 2026
+Getting Started with GitHub Agentic Workflows
+Turn Any CSV into an Executive Report with Python and AI
+Small Language Models with Hugging Face transformers Library + smolLM3
+7 Approaches to Reduce Inference Latency in Your LLM Workflows
+The Ultimate Guide to Contributing to Open Source Projects
+Get the
+FREE ebook 'KDnuggets Artificial Intelligence Pocket Dictionary'
+along with the leading newsletter on Data Science, Machine Learning, AI & Analytics straight to your inbox.
+By subscribing you accept KDnuggets
+Privacy Policy
+Leave this field empty if you're human:
+© 2026
+Guiding Tech Media
+|
+About
+|
+Contact
+|
+Advertise
+|
+Privacy
+|
+Terms of Service
+Published on May 14, 2026 by
+Get the
+FREE ebook 'KDnuggets Artificial Intelligence Pocket Dictionary'
+along with the leading newsletter on Data Science, Machine Learning, AI & Analytics straight to your inbox.
+By subscribing you accept KDnuggets
+Privacy Policy
+Leave this field empty if you're human:
+Get the
+FREE ebook 'KDnuggets Artificial Intelligence Pocket Dictionary'
+along with the leading newsletter on Data Science, Machine Learning, AI & Analytics straight to your inbox.
+By subscribing you accept KDnuggets
+Privacy Policy
+Leave this field empty if you're human:
+No, thanks!

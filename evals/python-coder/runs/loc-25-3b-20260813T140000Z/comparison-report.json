@@ -1,0 +1,483 @@
+{
+  "manifest": {
+    "format": "python-coder-comparison-v1",
+    "models": [
+      "qwen2.5-coder-3b-instruct-mlx"
+    ],
+    "samples": {
+      "qwen2.5-coder-3b-instruct-mlx": {
+        "implement-lru-cache": 3,
+        "fix-off-by-one-bug": 3,
+        "add-cli-flag": 3,
+        "refactor-for-testability": 3,
+        "write-tests-for-untested-module": 3,
+        "follow-existing-pattern": 3,
+        "fix-bug-with-context": 3,
+        "extend-without-breaking-invariant": 3
+      }
+    },
+    "harness_flags": [
+      "--samples=3",
+      "--max-turns=16",
+      "--bootstrap-workspace-context",
+      "--bootstrap-include-verify-command",
+      "--recovery-turns=0"
+    ],
+    "fixture_revision": null,
+    "output_root": "/Users/ilyabondarenko/.claude/scripts/qwen-harness/evals/python-coder/runs/loc-25-3b-20260813T140000Z",
+    "collection_status": "failed",
+    "collection_kind": "single-model-evaluation",
+    "requested_comparison_models": [
+      "qwen2.5-coder-7b-instruct-mlx",
+      "qwen2.5-coder-3b-instruct-mlx"
+    ],
+    "exclusions": [
+      "7B collection intentionally not completed after the latest user direction requested a 3B-only evaluation; this result is not a completed 7B-vs-3B comparison."
+    ],
+    "started_at": "2026-08-13T16:03:42Z",
+    "ended_at": "2026-08-13T16:03:43Z",
+    "endpoint": {
+      "base_url": "http://127.0.0.1:1234/v1",
+      "protocol": "OpenAI-compatible",
+      "authentication": "not used",
+      "models_probe": "both pinned IDs returned a completion before collection"
+    },
+    "expected_samples": 24,
+    "collected_samples": 24,
+    "passed_samples": 0,
+    "failed_samples": 24,
+    "collection_failures": {
+      "HTTP 400 Bad Request": 22,
+      "model stopped without finish then verifier failure": 2
+    }
+  },
+  "models": [
+    {
+      "model": "qwen2.5-coder-3b-instruct-mlx",
+      "cases": [
+        {
+          "case": "implement-lru-cache",
+          "kind": "isolated",
+          "samples": 3,
+          "passed": 0,
+          "failure_categories": {
+            "prose-only": 3,
+            "no-edits": 0,
+            "repeated-command": 0,
+            "verifier-failure": 0,
+            "timeout": 0,
+            "tool-error": 0
+          },
+          "failure_artifacts": {
+            "prose-only": [
+              "implement-lru-cache--qwen2.5-coder-3b-instruct-mlx/samples/sample-1/harness-log.json",
+              "implement-lru-cache--qwen2.5-coder-3b-instruct-mlx/samples/sample-2/harness-log.json",
+              "implement-lru-cache--qwen2.5-coder-3b-instruct-mlx/samples/sample-3/harness-log.json"
+            ],
+            "no-edits": [],
+            "repeated-command": [],
+            "verifier-failure": [],
+            "timeout": [],
+            "tool-error": []
+          },
+          "artifact": "implement-lru-cache--qwen2.5-coder-3b-instruct-mlx/harness-log-samples.json",
+          "sample_artifacts": [
+            {
+              "sample": 1,
+              "passed": false,
+              "category": "prose-only",
+              "artifact": "implement-lru-cache--qwen2.5-coder-3b-instruct-mlx/samples/sample-1/harness-log.json"
+            },
+            {
+              "sample": 2,
+              "passed": false,
+              "category": "prose-only",
+              "artifact": "implement-lru-cache--qwen2.5-coder-3b-instruct-mlx/samples/sample-2/harness-log.json"
+            },
+            {
+              "sample": 3,
+              "passed": false,
+              "category": "prose-only",
+              "artifact": "implement-lru-cache--qwen2.5-coder-3b-instruct-mlx/samples/sample-3/harness-log.json"
+            }
+          ]
+        },
+        {
+          "case": "fix-off-by-one-bug",
+          "kind": "isolated",
+          "samples": 3,
+          "passed": 0,
+          "failure_categories": {
+            "prose-only": 3,
+            "no-edits": 0,
+            "repeated-command": 0,
+            "verifier-failure": 0,
+            "timeout": 0,
+            "tool-error": 0
+          },
+          "failure_artifacts": {
+            "prose-only": [
+              "fix-off-by-one-bug--qwen2.5-coder-3b-instruct-mlx/samples/sample-1/harness-log.json",
+              "fix-off-by-one-bug--qwen2.5-coder-3b-instruct-mlx/samples/sample-2/harness-log.json",
+              "fix-off-by-one-bug--qwen2.5-coder-3b-instruct-mlx/samples/sample-3/harness-log.json"
+            ],
+            "no-edits": [],
+            "repeated-command": [],
+            "verifier-failure": [],
+            "timeout": [],
+            "tool-error": []
+          },
+          "artifact": "fix-off-by-one-bug--qwen2.5-coder-3b-instruct-mlx/harness-log-samples.json",
+          "sample_artifacts": [
+            {
+              "sample": 1,
+              "passed": false,
+              "category": "prose-only",
+              "artifact": "fix-off-by-one-bug--qwen2.5-coder-3b-instruct-mlx/samples/sample-1/harness-log.json"
+            },
+            {
+              "sample": 2,
+              "passed": false,
+              "category": "prose-only",
+              "artifact": "fix-off-by-one-bug--qwen2.5-coder-3b-instruct-mlx/samples/sample-2/harness-log.json"
+            },
+            {
+              "sample": 3,
+              "passed": false,
+              "category": "prose-only",
+              "artifact": "fix-off-by-one-bug--qwen2.5-coder-3b-instruct-mlx/samples/sample-3/harness-log.json"
+            }
+          ]
+        },
+        {
+          "case": "add-cli-flag",
+          "kind": "isolated",
+          "samples": 3,
+          "passed": 0,
+          "failure_categories": {
+            "prose-only": 3,
+            "no-edits": 0,
+            "repeated-command": 0,
+            "verifier-failure": 0,
+            "timeout": 0,
+            "tool-error": 0
+          },
+          "failure_artifacts": {
+            "prose-only": [
+              "add-cli-flag--qwen2.5-coder-3b-instruct-mlx/samples/sample-1/harness-log.json",
+              "add-cli-flag--qwen2.5-coder-3b-instruct-mlx/samples/sample-2/harness-log.json",
+              "add-cli-flag--qwen2.5-coder-3b-instruct-mlx/samples/sample-3/harness-log.json"
+            ],
+            "no-edits": [],
+            "repeated-command": [],
+            "verifier-failure": [],
+            "timeout": [],
+            "tool-error": []
+          },
+          "artifact": "add-cli-flag--qwen2.5-coder-3b-instruct-mlx/harness-log-samples.json",
+          "sample_artifacts": [
+            {
+              "sample": 1,
+              "passed": false,
+              "category": "prose-only",
+              "artifact": "add-cli-flag--qwen2.5-coder-3b-instruct-mlx/samples/sample-1/harness-log.json"
+            },
+            {
+              "sample": 2,
+              "passed": false,
+              "category": "prose-only",
+              "artifact": "add-cli-flag--qwen2.5-coder-3b-instruct-mlx/samples/sample-2/harness-log.json"
+            },
+            {
+              "sample": 3,
+              "passed": false,
+              "category": "prose-only",
+              "artifact": "add-cli-flag--qwen2.5-coder-3b-instruct-mlx/samples/sample-3/harness-log.json"
+            }
+          ]
+        },
+        {
+          "case": "refactor-for-testability",
+          "kind": "isolated",
+          "samples": 3,
+          "passed": 0,
+          "failure_categories": {
+            "prose-only": 3,
+            "no-edits": 0,
+            "repeated-command": 0,
+            "verifier-failure": 0,
+            "timeout": 0,
+            "tool-error": 0
+          },
+          "failure_artifacts": {
+            "prose-only": [
+              "refactor-for-testability--qwen2.5-coder-3b-instruct-mlx/samples/sample-1/harness-log.json",
+              "refactor-for-testability--qwen2.5-coder-3b-instruct-mlx/samples/sample-2/harness-log.json",
+              "refactor-for-testability--qwen2.5-coder-3b-instruct-mlx/samples/sample-3/harness-log.json"
+            ],
+            "no-edits": [],
+            "repeated-command": [],
+            "verifier-failure": [],
+            "timeout": [],
+            "tool-error": []
+          },
+          "artifact": "refactor-for-testability--qwen2.5-coder-3b-instruct-mlx/harness-log-samples.json",
+          "sample_artifacts": [
+            {
+              "sample": 1,
+              "passed": false,
+              "category": "prose-only",
+              "artifact": "refactor-for-testability--qwen2.5-coder-3b-instruct-mlx/samples/sample-1/harness-log.json"
+            },
+            {
+              "sample": 2,
+              "passed": false,
+              "category": "prose-only",
+              "artifact": "refactor-for-testability--qwen2.5-coder-3b-instruct-mlx/samples/sample-2/harness-log.json"
+            },
+            {
+              "sample": 3,
+              "passed": false,
+              "category": "prose-only",
+              "artifact": "refactor-for-testability--qwen2.5-coder-3b-instruct-mlx/samples/sample-3/harness-log.json"
+            }
+          ]
+        },
+        {
+          "case": "write-tests-for-untested-module",
+          "kind": "isolated",
+          "samples": 3,
+          "passed": 0,
+          "failure_categories": {
+            "prose-only": 3,
+            "no-edits": 0,
+            "repeated-command": 0,
+            "verifier-failure": 0,
+            "timeout": 0,
+            "tool-error": 0
+          },
+          "failure_artifacts": {
+            "prose-only": [
+              "write-tests-for-untested-module--qwen2.5-coder-3b-instruct-mlx/samples/sample-1/harness-log.json",
+              "write-tests-for-untested-module--qwen2.5-coder-3b-instruct-mlx/samples/sample-2/harness-log.json",
+              "write-tests-for-untested-module--qwen2.5-coder-3b-instruct-mlx/samples/sample-3/harness-log.json"
+            ],
+            "no-edits": [],
+            "repeated-command": [],
+            "verifier-failure": [],
+            "timeout": [],
+            "tool-error": []
+          },
+          "artifact": "write-tests-for-untested-module--qwen2.5-coder-3b-instruct-mlx/harness-log-samples.json",
+          "sample_artifacts": [
+            {
+              "sample": 1,
+              "passed": false,
+              "category": "prose-only",
+              "artifact": "write-tests-for-untested-module--qwen2.5-coder-3b-instruct-mlx/samples/sample-1/harness-log.json"
+            },
+            {
+              "sample": 2,
+              "passed": false,
+              "category": "prose-only",
+              "artifact": "write-tests-for-untested-module--qwen2.5-coder-3b-instruct-mlx/samples/sample-2/harness-log.json"
+            },
+            {
+              "sample": 3,
+              "passed": false,
+              "category": "prose-only",
+              "artifact": "write-tests-for-untested-module--qwen2.5-coder-3b-instruct-mlx/samples/sample-3/harness-log.json"
+            }
+          ]
+        },
+        {
+          "case": "follow-existing-pattern",
+          "kind": "repo-context",
+          "samples": 3,
+          "passed": 0,
+          "failure_categories": {
+            "prose-only": 3,
+            "no-edits": 0,
+            "repeated-command": 0,
+            "verifier-failure": 0,
+            "timeout": 0,
+            "tool-error": 0
+          },
+          "failure_artifacts": {
+            "prose-only": [
+              "follow-existing-pattern--qwen2.5-coder-3b-instruct-mlx/samples/sample-1/harness-log.json",
+              "follow-existing-pattern--qwen2.5-coder-3b-instruct-mlx/samples/sample-2/harness-log.json",
+              "follow-existing-pattern--qwen2.5-coder-3b-instruct-mlx/samples/sample-3/harness-log.json"
+            ],
+            "no-edits": [],
+            "repeated-command": [],
+            "verifier-failure": [],
+            "timeout": [],
+            "tool-error": []
+          },
+          "artifact": "follow-existing-pattern--qwen2.5-coder-3b-instruct-mlx/harness-log-samples.json",
+          "sample_artifacts": [
+            {
+              "sample": 1,
+              "passed": false,
+              "category": "prose-only",
+              "artifact": "follow-existing-pattern--qwen2.5-coder-3b-instruct-mlx/samples/sample-1/harness-log.json"
+            },
+            {
+              "sample": 2,
+              "passed": false,
+              "category": "prose-only",
+              "artifact": "follow-existing-pattern--qwen2.5-coder-3b-instruct-mlx/samples/sample-2/harness-log.json"
+            },
+            {
+              "sample": 3,
+              "passed": false,
+              "category": "prose-only",
+              "artifact": "follow-existing-pattern--qwen2.5-coder-3b-instruct-mlx/samples/sample-3/harness-log.json"
+            }
+          ]
+        },
+        {
+          "case": "fix-bug-with-context",
+          "kind": "repo-context",
+          "samples": 3,
+          "passed": 0,
+          "failure_categories": {
+            "prose-only": 3,
+            "no-edits": 0,
+            "repeated-command": 0,
+            "verifier-failure": 0,
+            "timeout": 0,
+            "tool-error": 0
+          },
+          "failure_artifacts": {
+            "prose-only": [
+              "fix-bug-with-context--qwen2.5-coder-3b-instruct-mlx/samples/sample-1/harness-log.json",
+              "fix-bug-with-context--qwen2.5-coder-3b-instruct-mlx/samples/sample-2/harness-log.json",
+              "fix-bug-with-context--qwen2.5-coder-3b-instruct-mlx/samples/sample-3/harness-log.json"
+            ],
+            "no-edits": [],
+            "repeated-command": [],
+            "verifier-failure": [],
+            "timeout": [],
+            "tool-error": []
+          },
+          "artifact": "fix-bug-with-context--qwen2.5-coder-3b-instruct-mlx/harness-log-samples.json",
+          "sample_artifacts": [
+            {
+              "sample": 1,
+              "passed": false,
+              "category": "prose-only",
+              "artifact": "fix-bug-with-context--qwen2.5-coder-3b-instruct-mlx/samples/sample-1/harness-log.json"
+            },
+            {
+              "sample": 2,
+              "passed": false,
+              "category": "prose-only",
+              "artifact": "fix-bug-with-context--qwen2.5-coder-3b-instruct-mlx/samples/sample-2/harness-log.json"
+            },
+            {
+              "sample": 3,
+              "passed": false,
+              "category": "prose-only",
+              "artifact": "fix-bug-with-context--qwen2.5-coder-3b-instruct-mlx/samples/sample-3/harness-log.json"
+            }
+          ]
+        },
+        {
+          "case": "extend-without-breaking-invariant",
+          "kind": "repo-context",
+          "samples": 3,
+          "passed": 0,
+          "failure_categories": {
+            "prose-only": 3,
+            "no-edits": 0,
+            "repeated-command": 0,
+            "verifier-failure": 0,
+            "timeout": 0,
+            "tool-error": 0
+          },
+          "failure_artifacts": {
+            "prose-only": [
+              "extend-without-breaking-invariant--qwen2.5-coder-3b-instruct-mlx/samples/sample-1/harness-log.json",
+              "extend-without-breaking-invariant--qwen2.5-coder-3b-instruct-mlx/samples/sample-2/harness-log.json",
+              "extend-without-breaking-invariant--qwen2.5-coder-3b-instruct-mlx/samples/sample-3/harness-log.json"
+            ],
+            "no-edits": [],
+            "repeated-command": [],
+            "verifier-failure": [],
+            "timeout": [],
+            "tool-error": []
+          },
+          "artifact": "extend-without-breaking-invariant--qwen2.5-coder-3b-instruct-mlx/harness-log-samples.json",
+          "sample_artifacts": [
+            {
+              "sample": 1,
+              "passed": false,
+              "category": "prose-only",
+              "artifact": "extend-without-breaking-invariant--qwen2.5-coder-3b-instruct-mlx/samples/sample-1/harness-log.json"
+            },
+            {
+              "sample": 2,
+              "passed": false,
+              "category": "prose-only",
+              "artifact": "extend-without-breaking-invariant--qwen2.5-coder-3b-instruct-mlx/samples/sample-2/harness-log.json"
+            },
+            {
+              "sample": 3,
+              "passed": false,
+              "category": "prose-only",
+              "artifact": "extend-without-breaking-invariant--qwen2.5-coder-3b-instruct-mlx/samples/sample-3/harness-log.json"
+            }
+          ]
+        }
+      ],
+      "slices": {
+        "overall": {
+          "passed": 0,
+          "total": 24,
+          "pass_rate": 0.0,
+          "failure_categories": {
+            "prose-only": 24,
+            "no-edits": 0,
+            "repeated-command": 0,
+            "verifier-failure": 0,
+            "timeout": 0,
+            "tool-error": 0
+          }
+        },
+        "isolated": {
+          "passed": 0,
+          "total": 15,
+          "pass_rate": 0.0,
+          "failure_categories": {
+            "prose-only": 15,
+            "no-edits": 0,
+            "repeated-command": 0,
+            "verifier-failure": 0,
+            "timeout": 0,
+            "tool-error": 0
+          }
+        },
+        "repo-context": {
+          "passed": 0,
+          "total": 9,
+          "pass_rate": 0.0,
+          "failure_categories": {
+            "prose-only": 9,
+            "no-edits": 0,
+            "repeated-command": 0,
+            "verifier-failure": 0,
+            "timeout": 0,
+            "tool-error": 0
+          }
+        }
+      }
+    }
+  ],
+  "collection_status": "failed",
+  "execution_failure_summary": {
+    "HTTP 400 Bad Request": 22,
+    "model stopped without finish then verifier failure": 2
+  }
+}

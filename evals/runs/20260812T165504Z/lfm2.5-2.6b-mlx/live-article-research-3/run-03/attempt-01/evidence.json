@@ -1,0 +1,127 @@
+{
+  "cited_urls": [
+    "https://app.stationx.net/articles/best-local-llm"
+  ],
+  "cited_sources": [
+    {
+      "url": "https://app.stationx.net/articles/best-local-llm",
+      "title": "Best Local LLM in August 2026 (Updated Monthly Methodology)",
+      "excerpt": "Best Local LLM in August 2026 (Updated Monthly Methodology)\nTRAINING\nAI-Driven Security Engineering\nFREE Book: The New Way to Do Security\nOnline Courses\nARTICLES\nEXAM VOUCHERS\nRESOURCES\nAre You Cut Out for Cyber?\nStationX T-Shirts\nWill AI Replace You?\nCyber Security Roadmap\nCanary Tokens\nNewsletter\nBlog\nSIGN IN\nACCOUNT\nTraining\nAI-Driven Security Engineering\nFREE Book: The New Way to Do Security\nOnline Courses\nArticles\nExam Vouchers\nResources\nAre You Cut Out for Cyber?\nStationX T-Shirts\nWill AI Replace You?\nCyber Security Roadmap\nCanary Tokens\nNewsletter\nBlog\nSign In\nAccount\nMEMBERSHIP\n2340\nShares\nHome\n/\nArticles\n/\nBest Local LLM August 2026\nBest Local LLM in August 2026 (Updated Monthly Methodology)\nAugust 2026\n11 min read\nBy Nathan House\nIf you've gone looking for the\nbest local LLM\nand ended up reading three \"top 5 models for 2026\" articles that contradict each other, you're not alone. The honest answer is that no listicle can keep up. Open-weight models ship weekly, leaderboards re-rank monthly, and half the benchmarks you'll see quoted in vendor blog posts no longer measure what they claim to.\nSo this article doesn't name a single \"best\" model. Instead, it gives you something that won't go stale: a method for finding the right local LLM for\nyour\nuse case, today and every month after. We'll cover how to read benchmarks honestly, the four sources serious practitioners actually monitor, the licence trap that costs companies real money, a brief note for security professionals on uncensored models, and a ten-minute check you can run on the first of every month.\nI run Claude",
+      "tool": "web_search",
+      "fetch_id": "fetch-20260812T170632Z-2a8b50",
+      "cache_path": "evals/runs/20260812T165504Z/lfm2.5-2.6b-mlx/live-article-research-3/run-03/attempt-01/fetches/fetch-20260812T170632Z-2a8b50/text.txt"
+    }
+  ],
+  "available_sources": [
+    {
+      "url": "https://pinggy.io/blog/top_5_local_llm_tools_and_models",
+      "title": "Top 5 Local LLM Tools and Models in 2026 | Pinggy Blog",
+      "excerpt": "## Top local LLM tools in 2026\n\n### 1. LM Studio\n\nLM Studio is the one to install first if you are not sure what you want. It is a desktop app that hides the awkward parts of local inference (finding a model, picking a quant that fits, wiring up an API) behind a UI that does not assume you have read a llama.cpp changelog. [...] ## Summary\n\nTop local LLM tools:\n\n1. LM Studio - Best GUI, ships both llama.cpp and MLX engines | Download\n2. Unsloth - Dynamic GGUF quants plus a local run-and-train UI ",
+      "tool": "web_search"
+    },
+    {
+      "url": "https://www.jdhodges.com/blog/local-llms-on-tool-calling-2026-pt1-local-lm",
+      "title": "I Tested 13 Local LLMs on Tool Calling | 2026 Eval Results",
+      "excerpt": "I Tested 13 Local LLMs on Tool Calling | 2026 Eval Results\nSkip to content\nJ.D. Hodges\nEvery man has a story, this is my story.\nBlogging since 1999.\nHome\nAsk J.D.\nGadgets and Tech\nSolar System Monitor\nI Tested 13 Local LLMs on Tool Calling: March 2026\nThursday, 2026.03.19\nJ.D. H.\nLeave a comment\nI built a deterministic eval harness and tested 13 local LLMs on tool calling (function calling) to find out which models work decently well for agentic tasks. The result that surprised me most: a 3.4 GB model scored higher than everything else I tested, including models five times its size.\nIf you’re running a local AI stack with Open WebUI, LM Studio, or any OpenAI-compatible frontend, tool calling is one of the key features that enables agentic behavior. It lets models call functions like checking weather, sending emails, or setting reminders instead of just generating text. But not every model handles it well, and the popular benchmarks don’t always reflect what you’ll get when serving models through a local inference server like LM Studio.\nSo I ran 13 models through 40 test cases across five categories. No LLM-as-judge, no random vibes, just schema-aware pass/fail scoring with deterministic and reproducible results.\nThe Setup\nHardware:\nAMD AI Max+ 395 with 128 GB unified RAM (about 96 GB allocatable to GPU). All models served through LM Studio v0.4.6 using Q4_K_M quantization over the OpenAI-compatible API. One exception: Gemma 3 4B QAT used Google’s pre-quantized Q4_0, since the whole point of QAT is that the model was trained specifically for that quantization level.\nThe eval",
+      "tool": "web_search",
+      "fetch_id": "fetch-20260812T170616Z-c814f7",
+      "cache_path": "evals/runs/20260812T165504Z/lfm2.5-2.6b-mlx/live-article-research-3/run-03/attempt-01/fetches/fetch-20260812T170616Z-c814f7/text.txt"
+    },
+    {
+      "url": "https://www.promptquorum.com/power-local-llm/best-local-models-tool-calling-2026",
+      "title": "Best Local Models for Tool Calling in 2026: Benchmarks & ...",
+      "excerpt": "Best Local Tool-Calling Models 2026: Real MCP Benchmarks\nSkip to main content\nPromptQuorum\nCompare Tools\nFeatures\nHow It Works\nFAQ\nBlog\nPrompt Engineering\nLocal LLMs\nPower Local LLM\nPrompt Bites\nSmart Home\nBalcony Solar\nTry Beta\nSearch guides...\n⌘K\n🇺🇸\nEN\n🇺🇸\nEN\nCompare Tools\nFeatures\nHow It Works\nFAQ\nBlog\nPrompt Engineering\nLocal LLMs\nPower Local LLM\nPrompt Bites\nSmart Home\nBalcony Solar\nTry Beta\nHome\n/\nPower Local LLM\n/\nBest Local Models for Tool Calling in 2026: Benchmarks & Comparison\nLocal AI Agents & Tool Use\nBest Local Models for Tool Calling in 2026: Benchmarks & Comparison\nLast updated:\nJune 19, 2026\n·\n12 min read\n·\nBy\nHans Kuepper\n· Founder of PromptQuorum, multi-model AI dispatch tool · PromptQuorum\nRead in:\n🇺🇸\nen\n🇩🇪\nde\n🇫🇷\nfr\n🇯🇵\nja\n🇨🇳\nzh\n🇪🇸\nes\n🇧🇷\npt\n🇸🇦\nar\n🇰🇷\nko\nFive local models tool-call reliably in May 2026: Gemma 4 27B, GLM-4.7 32B, Qwen3 32B, Qwen3-Coder 30B, and Llama 3.3 70B. Llama 3.3 70B has the highest ceiling (~97% well-formed call rate across MCP servers) but wants 48 GB+ VRAM. Qwen3-Coder 30B is the best pick for code-shaped tool work. Gemma 4 27B is the best general-purpose pick for 24 GB VRAM rigs. GLM-4.7 32B wins on long-context agent tasks (128K context out of the box). Qwen3 32B is the well-rounded fallback. Models below 7B and most general-purpose models without explicit tool-call training emit malformed calls in the same workloads — the failure attributes to the model, not the harness. Quantisation harsher than Q4_K_M on the smaller end of this list degrades reliability noticeably; Q4_K_M is the production floor.\nTool-call reliability is the sin",
+      "tool": "web_search",
+      "fetch_id": "fetch-20260812T170548Z-af4ad1",
+      "cache_path": "evals/runs/20260812T165504Z/lfm2.5-2.6b-mlx/live-article-research-3/run-03/attempt-01/fetches/fetch-20260812T170548Z-af4ad1/text.txt"
+    },
+    {
+      "url": "https://www.kdnuggets.com/5-small-language-models-for-agentic-tool-calling",
+      "title": "5 Small Language Models for Agentic Tool Calling - KDnuggets",
+      "excerpt": "Here are 5 small language models that hare one important trait: they all support structured tool calling in a compact, open-weight package.\n\nBy Matthew Mayo, KDnuggets Managing Editor on May 14, 2026 in Language Models\n\n5 Small Language Models for Agentic Tool Calling\n\n## # Introduction [...] ## # 4. Gemma-4-E2B-it\n\n Release Date: April 2, 2026\n Developer: Google DeepMind\n Location: google/gemma-4-E2B-it [...] © 2026 Guiding Tech Media   |   About   |   Contact   |   Advertise |   Privacy   |   ",
+      "tool": "web_search"
+    },
+    {
+      "url": "https://arxiv.org/abs/2512.15943",
+      "title": "[2512.15943] Small Language Models for Efficient Agentic Tool Calling: Outperforming Large Models with Targeted Fine-tuning",
+      "excerpt": "|  |  |\n --- |\n| Comments: | Accepted at AAAI 2026 Workshop on Agentic AI Benchmarks and Applications for Enterprise Tasks |\n| Subjects: | Artificial Intelligence (cs.AI) |\n| Cite as: | arXiv:2512.15943 [cs.AI] |\n|  | (or  arXiv:2512.15943v2 [cs.AI] for this version) |\n|  |  Focus to learn more  arXiv-issued DOI via DataCite |\n\n## Submission history\n\n## Access Paper:\n\nlicense icon\n\n### Current browse context:\n\n### References & Citations\n\n## BibTeX formatted citation\n\n### Bookmark",
+      "tool": "web_search"
+    },
+    {
+      "url": "/goto?url=CAEScAHuR6pNVG5cPo2h6gX8DqWnwQL-rPe6D5CqoYZrbyXsC7TjPInhxlcHJ-L3mA4phMv8eFSdHdOlJnanSmFlP2Llu7HVn50-OlITKYRVbnqgO6WV6ZZiKJT7OADed6Pmzxhk7B0xA-pejloxFfx7Djk%3D",
+      "title": "Top 5 Local LLM Tools and Models in 2026",
+      "excerpt": "Aug 2, 2026 — Top local LLM tools in 2026 1. LM Studio 2. Unsloth 3. Ollama 4. text-generation-webui 5. GPT4All 6. LocalAI 7. BlueQubit Bonus tool: 1. Qwen3.",
+      "tool": "web_search"
+    },
+    {
+      "url": "/goto?url=CAESiQEB7keqTeANO61byAxU7bqIoPdSQKONiCXU6_Yz4RUGvLbPYHdeypsiFbYN41y70zlPGnQVRHXxG70ZYmtimrFAwve8ZGHLoEkFjzzwLFjZyPoGCONhpMY97dFNxDRNbZqohnnnv4YPH5ydn8kGUEkHgDvQp7VEHUzeU_pvpd5mpsQf5W9BRLgOwQ%3D%3D",
+      "title": "Best Local LLMs - August 2026 : r/LocalLLaMA",
+      "excerpt": "Best Local LLMs - August 2026. Models that rival the closed frontier, Opus level models on non-insane hardware and more. Includes practical",
+      "tool": "web_search"
+    },
+    {
+      "url": "/goto?url=CAESgwEB7keqTT6UkOuh0v8GwmQeZgJqLpe6QX86tXg_8OklEJDtBb2IvdjdSRUkTh_SBVfK_sMx-g--az5XPXa9OGbMAp1XiP9En4lvJf2qRZgMWtZ9bNcCmvkJzf0HMR6TrQF989YkxP_DtDPZOlg9dA-RhDcW7h-bwa0pz9rkaH8o9FPBrw%3D%3D",
+      "title": "I Tested 13 Local LLMs on Tool Calling | 2026 Eval Results",
+      "excerpt": "Mar 19, 2026 — I built a deterministic eval harness and tested 13 local LLMs on tool calling (function calling) to find out which models work decently well ...Read more",
+      "tool": "web_search"
+    },
+    {
+      "url": "/goto?url=CAESaAHuR6pNrfDW2mc3HdkZPa4ATM6rBdHE1CAWJTvxugrGNAmLx98RfHlbKu-5IZYTGUyGe-d7hFXVSyCdVqRi2cTZRfbnZGn_tHDerkpTN1IeI8lDm6YwivGvpQvhOz8uAqcM9iOs78x3",
+      "title": "Best Local LLM in August 2026 (Updated Monthly Methodology)",
+      "excerpt": "Discover the best local LLM for your use case with 4 verified sources — leaderboards, communities, and the 10-minute monthly check. Methodology, not picks.",
+      "tool": "web_search"
+    },
+    {
+      "url": "/goto?url=CAESiAEB7keqTdUKyvLSkKwOVCbrgVCjXlD1EORUSnItMJc63mwlr84s9Z22JC5GlUo0uFffoHL_XWtMIoPhnLSDAW3k1Dil3xptosQb9_iClvphtLknlq13GIZhMcA03ThaxTpWjr-WDQxRzGvkaoa0ryWbqF-lCUKL30jvVIJf3usni4ri0QrIcXqu",
+      "title": "Best Local Models for Tool Calling in 2026: Benchmarks & ...",
+      "excerpt": "Jun 18, 2026 — This guide benchmarks the five reliable tool-callers in May 2026 (Gemma 4 27B, GLM-4.7 32B, Qwen3 32B, Qwen3-Coder 30B, Llama 3.3 70B) on real ...Read more",
+      "tool": "web_search"
+    },
+    {
+      "url": "https://app.stationx.net/articles/best-local-llm",
+      "title": "Best Local LLM in August 2026 (Updated Monthly Methodology)",
+      "excerpt": "Best Local LLM in August 2026 (Updated Monthly Methodology)\nTRAINING\nAI-Driven Security Engineering\nFREE Book: The New Way to Do Security\nOnline Courses\nARTICLES\nEXAM VOUCHERS\nRESOURCES\nAre You Cut Out for Cyber?\nStationX T-Shirts\nWill AI Replace You?\nCyber Security Roadmap\nCanary Tokens\nNewsletter\nBlog\nSIGN IN\nACCOUNT\nTraining\nAI-Driven Security Engineering\nFREE Book: The New Way to Do Security\nOnline Courses\nArticles\nExam Vouchers\nResources\nAre You Cut Out for Cyber?\nStationX T-Shirts\nWill AI Replace You?\nCyber Security Roadmap\nCanary Tokens\nNewsletter\nBlog\nSign In\nAccount\nMEMBERSHIP\n2340\nShares\nHome\n/\nArticles\n/\nBest Local LLM August 2026\nBest Local LLM in August 2026 (Updated Monthly Methodology)\nAugust 2026\n11 min read\nBy Nathan House\nIf you've gone looking for the\nbest local LLM\nand ended up reading three \"top 5 models for 2026\" articles that contradict each other, you're not alone. The honest answer is that no listicle can keep up. Open-weight models ship weekly, leaderboards re-rank monthly, and half the benchmarks you'll see quoted in vendor blog posts no longer measure what they claim to.\nSo this article doesn't name a single \"best\" model. Instead, it gives you something that won't go stale: a method for finding the right local LLM for\nyour\nuse case, today and every month after. We'll cover how to read benchmarks honestly, the four sources serious practitioners actually monitor, the licence trap that costs companies real money, a brief note for security professionals on uncensored models, and a ten-minute check you can run on the first of every month.\nI run Claude",
+      "tool": "web_search",
+      "fetch_id": "fetch-20260812T170632Z-2a8b50",
+      "cache_path": "evals/runs/20260812T165504Z/lfm2.5-2.6b-mlx/live-article-research-3/run-03/attempt-01/fetches/fetch-20260812T170632Z-2a8b50/text.txt"
+    },
+    {
+      "url": "https://benchlm.ai/best/tool-use",
+      "title": "Best Tool Use & Function Calling Models in 2026",
+      "excerpt": "Radar\n\nFive or fewer confirmed AI changes, with original sources, on mornings when something changed.A free source-linked morning brief.\n\nStart free brief\n\nBenchLM\n\nAdvertise\n\nBest Tool Use & Function Calling Models\n\nBenchLM recommendation\n\n# Best Tool Use & Function Calling Models in 2026\n\nData verified\n\nAs of August 12, 2026, the top model in best tool use & function calling modelson the BenchLM leaderboard isQwen3.7 Plus with a score of 72.\n\nLast verified: August 12, 2026",
+      "tool": "web_search"
+    },
+    {
+      "url": "https://dev.classmethod.jp/en/articles/local-llm-guide-2026-summer",
+      "title": "I tried to organize the state of local LLMs in the summer of 2026",
+      "excerpt": "I tried to organize the state of local LLMs in the summer of 2026 | DevelopersIO\ndevelopersIO\nproduced by Classmethod\nOriginal\nEnglish\nContents\nちょっと話題の記事\nI tried to organize the state of local LLMs in the summer of 2026\nThe local LLM landscape has changed dramatically in six months, so here I will reorganize everything with actual benchmark data. MoE plus 4-bit quantization has become mainstream, and speculative decoding has reached practical usability. For general purposes, Qwen3.6-35B-A3B stands out, while machines with 128GB unified memory are rising in hardware selection. This is the summer 2026 edition guide to choosing models, hardware, and tools.\nNVIDIA\nLLM\n生成AI\n森茂洋 / Hiroshi Morishige\n2026.07.24\nThis page has been translated by machine translation.\nView original\nIntroduction\nHello, I'm Mori Shige from Classmethod's Manufacturing Business Technology Division.\nHalf a year ago, I published an article titled \"A Look at the State of Local LLMs in 2026.\" Thanks to everyone who read it — but the local LLM landscape has changed dramatically in these past six months. The generational shift from Qwen3.6 and Gemma 4, DeepSeek V4, and the major speed improvements in Ollama. Many of you are probably wondering, \"So what's the situation now, six months later?\"\nhttps://dev.classmethod.jp/articles/local-llm-guide-2026/\nAfter publishing the previous article, I ran hands-on tests using a DGX Spark with Qwen3.6, Gemma 4, Nemotron 3, and Laguna S 2.1. This time, I'm bringing that actual measurement data and rewriting the previous \"selection guide\" as a Summer 2026 edition.\nTo state the ",
+      "tool": "web_search",
+      "fetch_id": "fetch-20260812T170620Z-c3bdfe",
+      "cache_path": "evals/runs/20260812T165504Z/lfm2.5-2.6b-mlx/live-article-research-3/run-03/attempt-01/fetches/fetch-20260812T170620Z-c3bdfe/text.txt"
+    },
+    {
+      "url": "https://acecloud.ai/blog/best-open-source-llms",
+      "title": "Best Open-Source LLMs (Updated July 2026): Top Models",
+      "excerpt": "Qwen3-Coder-Next has 80 billion total parameters but activates only three billion per token. It supports a native 262,144-token context and tool calling, with official deployment instructions for vLLM and SGLang. Its model card also identifies compatibility with scaffolds including Claude Code, Cline and Qwen Code. [...] ## Conclusion\n\nThe best open-source LLM is the model that completes your workload reliably within your hardware, licence and cost constraints.\n\nFor 2026, start with GLM-5.2 for ",
+      "tool": "web_search"
+    },
+    {
+      "url": "https://www.ayautomate.com/blog/best-local-llm-tools-2026",
+      "title": "8 Best Local LLM Tools 2026: Free, Ranked by Use Case",
+      "excerpt": "Updated July 2026\n\n## 8 Best Local LLM Tools to Run LLMs Locally in 2026\n\nThe best local LLM stack in 2026 splits by job: Ollama for developers who want a model behind a local API in one command, LM Studio for the most polished desktop GUI, GPT4All for document chat on modest hardware, vLLM for high-throughput production serving, and llama.cpp as the engine layer with the deepest control. Jan, LocalAI, and Open WebUI cover offline privacy, OpenAI-compatible backends, and shared team chat. [...] ",
+      "tool": "web_search"
+    },
+    {
+      "url": "https://daily.dev/blog/best-local-llm-models-run",
+      "title": "The Best Local LLM Models to Run in 2026 | daily.dev",
+      "excerpt": "## 3. Qwen\n\nQwen is one of the strongest default picks for local use in 2026. It stands out for multilingual coding and its Apache 2.0 license, which makes commercial use much easier. If Mistral is the coding-first option, Qwen is the better fit when you need coding _and_ broad language support.\n\n### Hardware Fit [...] Mistral runs well on the main local inference stacks, and the coding-focused models fit neatly into local IDE workflows. One thing to watch: Codestral 22B uses a non-commercial li",
+      "tool": "web_search"
+    },
+    {
+      "url": "https://devtoollab.com/blog/top-5-local-llm-tools-models",
+      "title": "Top 5 Local LLM Tools & Models in 2026 (Offline AI Guide) | DevToolLab Blog",
+      "excerpt": "If you prefer a visual interface and detest terminal logs, LM Studio is unmatched. It acts as a beautifully designed command center for your models. Its killer feature is checking if your GPU has enough VRAM before you download a massive file. The core app is at v0.4.20 (July 22, 2026), and on July 16 the team shipped a companion app called Bionic that turns a local open model into an agent: it edits files with inline diffs, runs scripts, transcribes voice locally via Mistral's Voxtral, and [...",
+      "tool": "web_search"
+    }
+  ]
+}

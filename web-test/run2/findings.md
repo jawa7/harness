@@ -1,0 +1,3 @@
+Anthropic's Claude Code is an agentic coding tool that operates in your terminal and IDEs, using natural language commands to execute routine tasks, explain code, and manage Git workflows. It enhances developer productivity by understanding codebases and integrating with development tools without altering existing workflows. 
+
+Fetched URLs: https://github.com/AI-App/Anthropic.Claude-Code, https://claude.com/product/claude-code

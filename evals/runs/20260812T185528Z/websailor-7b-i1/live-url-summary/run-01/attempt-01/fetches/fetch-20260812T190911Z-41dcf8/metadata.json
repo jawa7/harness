@@ -1,0 +1,10 @@
+{
+  "fetch_id": "fetch-20260812T190911Z-41dcf8",
+  "url": "https://huggingface.co/Qwen/Qwen3.5-0.8B",
+  "fetched_at": "2026-08-12T19:09:11.851928+00:00",
+  "content_type": "text/html; charset=utf-8",
+  "charset": "utf-8",
+  "raw_bytes": 457001,
+  "text_chars": 27202,
+  "truncated": false
+}

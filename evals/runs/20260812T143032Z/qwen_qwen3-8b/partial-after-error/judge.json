@@ -1,0 +1,9 @@
+{
+  "relevance": 7,
+  "completeness": 5,
+  "sources": 0,
+  "limitations": 5,
+  "average": 4.25,
+  "rationale": "The answer acknowledges the missing research topic but fails to explicitly state limitations as required by the deterministic checks. While it partially addresses the task by requesting clarification, the absence of web requests and source URLs reduces completeness. The limitation about missing information is present but not explicitly labeled as per the system's check requirements.",
+  "passed": false
+}

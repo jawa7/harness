@@ -1,0 +1,15 @@
+{
+  "relevance": 8,
+  "completeness": 4,
+  "sources": 3,
+  "limitations": 5,
+  "dimensions": [
+    "relevance",
+    "completeness",
+    "sources",
+    "limitations"
+  ],
+  "average": 5.0,
+  "rationale": "The answer attempts to list 10 Czech sports articles but fails due to a single shared URL for all entries, no distinct dates, and lack of individual article citations. While it addresses the task structure, the sources are invalid (all same URL), and completeness is lacking. Limitations from tool errors (e.g., 13 web calls, 0 output dates) are acknowledged but not explicitly stated in the answer.",
+  "passed": false
+}

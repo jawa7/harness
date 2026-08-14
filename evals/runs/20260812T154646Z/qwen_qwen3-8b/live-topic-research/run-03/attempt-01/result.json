@@ -1,0 +1,152 @@
+{
+  "case": "live-topic-research",
+  "model": "qwen/qwen3-8b",
+  "mode": "live",
+  "target_url": null,
+  "run_at": "2026-08-12T16:10:18.609318+00:00",
+  "result": {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Research the benefits and limitations of local tool-calling language models. Provide a short conclusion, key findings, and source URLs for each claim."
+      },
+      {
+        "role": "assistant",
+        "content": "\n\n",
+        "tool_calls": [
+          {
+            "type": "function",
+            "id": "188786650",
+            "function": {
+              "name": "web_search",
+              "arguments": "{\"query\":\"benefits limitations local tool-calling language models\"}"
+            }
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "188786650",
+        "content": "{\"status\": \"ok\", \"results\": [{\"title\": \"To Call or Not to Call: A Framework to Assess and Optimize LLM Tool Calling\", \"url\": \"https://arxiv.org/html/2605.00737v1\", \"snippet\": \"However, our approach has limitations. The estimators are not perfect and may introduce errors. Future works may investigate why tool calls can lead to negative utility, how tool descriptions influence both perceived and latent utility, and develop more accurate predictors and more effective controllers for tool-calling decisions. [...] overall performance remains suboptimal, highlighting limitations in cost-aware decision-making. [...] al., 2024; Singh et al., 2025; Qian et al., 2025; Feng et a\"}, {\"title\": \"Tool Calling with Local LLMs: A Practical Evaluation - Docker\", \"url\": \"https://www.docker.com/blog/local-llm-tool-calling-a-practical-evaluation\", \"snippet\": \"We realized we had no definite answer forthat. Local LLM models offer control, cost-efficiency, and privacy, but when it comes to structured tool use, deciding when and how to act, they can behave very differently. We decided to dig deep and test this properly. We started with manual experimentation, then built a framework to scale our testing. This blog documents that journey and shares which models ranked highest on our tool-calling leaderboard. [...] Qwen models dominate: Even the 8B version \"}, {\"title\": \"Pros and Cons of Running a Large Language Model Locally -- Pure AI\", \"url\": \"https://pureai.com/articles/2025/09/02/pros-and-cons-of-running-a-large-language-model-locally.aspx\", \"snippet\": \"Briefly, advantages of running an LLM system locally include:\\n\\nThese three advantages of local LLM systems depend on specific usage scenario conditions.\\n\\nThe disadvantages of running a local LLM system include: [...] The demo program uses the client.chat.completions.create() function to send a question and fetch the response from the gpt-oss LLM. At the time this article was written, OpenAI had introduced an improved function client.responses.create(), however, Ollama did not yet support the new\"}, {\"title\": \"I Tested 13 Local LLMs on Tool Calling | 2026 Eval Results\", \"url\": \"https://www.jdhodges.com/blog/local-llms-on-tool-calling-2026-pt1-local-lm\", \"snippet\": \"If you\\u2019re running a local AI stack with Open WebUI, LM Studio, or any OpenAI-compatible frontend, tool calling is one of the key features that enables agentic behavior. It lets models call functions like checking weather, sending emails, or setting reminders instead of just generating text. But not every model handles it well, and the popular benchmarks don\\u2019t always reflect what you\\u2019ll get when serving models through a local inference server like LM Studio. [...] If you\\u2019ve run similar tests with\"}, {\"title\": \"Tool/Function calling abilities of LLM's that are used locally ...\", \"url\": \"https://discuss.huggingface.co/t/tool-function-calling-abilities-of-llms-that-are-used-locally-pulled-through-ollama/165277\", \"snippet\": \"Thanks in advance\\n\\nIf you are using Ollama directly without any Agent framework, the models that support tool calling are limited, and there seems to be an issue that is not a bug.\\n\\nAs a workaround, you could use Ollama through external Agent frameworks.\\n\\n### Related topics [...] i was trying to build a small AI agent that would query the DB and get the details of the customers, for which i tried many models that are available in the ollama model library, but every model keeps throwing an \\u201cinval\"}]}"
+      },
+      {
+        "role": "assistant",
+        "content": "\n\n**Conclusion:**  \nLocal tool-calling language models offer benefits like control, cost-efficiency, and privacy but face limitations in structured tool use, model variability, and evaluation challenges. Key findings include:  \n1. **Benefits:** Local LLMs enable private, cost-effective deployments (Docker blog, Pure AI).  \n2. **Limitations:** Tool-calling performance varies by model (Docker, 2026 blog); some models lack robust support (Hugging Face discussion).  \n3. **Evaluation Gaps:** Current benchmarks may not reflect local server performance (2026 blog).  \n\n**Key Findings with Sources:**  \n- **Control & Privacy:** Local setups avoid cloud dependency, enhancing data privacy (Docker blog: [https://www.docker.com/blog/local-llm-tool-calling-a-practical-evaluation](https://www.docker.com/blog/local-llm-tool-calling-a-practical-evaluation)).  \n- **Cost-Efficiency:** Lower costs compared to cloud alternatives (Pure AI: [https://pureai.com/articles/2025/09/02/pros-and-cons-of-running-a-large-language-model-locally.aspx](https://pureai.com/articles/2025/09/02/pros-and-cons-of-running-a-large-language-model-locally.aspx)).  \n- **Tool-Calling Limitations:** Imperfect estimators and suboptimal cost-aware decisions in frameworks (ARXIV: [https://arxiv.org/html/2605.00737v1](https://arxiv.org/html/2605.00737v1)).  \n- **Model Variability:** Qwen models outperform others in tool-calling tests (Docker blog: [https://www.docker.com/blog/local-llm-tool-calling-a-practical-evaluation](https://www.docker.com/blog/local-llm-tool-calling-a-practical-evaluation)).  \n- **Evaluation Challenges:** Benchmarks may not reflect local server performance (2026 blog: [https://www.jdhodges.com/blog/local-llms-on-tool-calling-2026-pt1-local-lm](https://www.jdhodges.com/blog/local-llms-on-tool-calling-2026-pt1-local-lm)).  \n\n**Limitations:** Some claims rely on specific models (e.g., Qwen) or frameworks (e.g., Ollama), which may not generalize to all local setups."
+      }
+    ],
+    "finished": true,
+    "summary": "\n\n**Conclusion:**  \nLocal tool-calling language models offer benefits like control, cost-efficiency, and privacy but face limitations in structured tool use, model variability, and evaluation challenges. Key findings include:  \n1. **Benefits:** Local LLMs enable private, cost-effective deployments (Docker blog, Pure AI).  \n2. **Limitations:** Tool-calling performance varies by model (Docker, 2026 blog); some models lack robust support (Hugging Face discussion).  \n3. **Evaluation Gaps:** Current benchmarks may not reflect local server performance (2026 blog).  \n\n**Key Findings with Sources:**  \n- **Control & Privacy:** Local setups avoid cloud dependency, enhancing data privacy (Docker blog: [https://www.docker.com/blog/local-llm-tool-calling-a-practical-evaluation](https://www.docker.com/blog/local-llm-tool-calling-a-practical-evaluation)).  \n- **Cost-Efficiency:** Lower costs compared to cloud alternatives (Pure AI: [https://pureai.com/articles/2025/09/02/pros-and-cons-of-running-a-large-language-model-locally.aspx](https://pureai.com/articles/2025/09/02/pros-and-cons-of-running-a-large-language-model-locally.aspx)).  \n- **Tool-Calling Limitations:** Imperfect estimators and suboptimal cost-aware decisions in frameworks (ARXIV: [https://arxiv.org/html/2605.00737v1](https://arxiv.org/html/2605.00737v1)).  \n- **Model Variability:** Qwen models outperform others in tool-calling tests (Docker blog: [https://www.docker.com/blog/local-llm-tool-calling-a-practical-evaluation](https://www.docker.com/blog/local-llm-tool-calling-a-practical-evaluation)).  \n- **Evaluation Challenges:** Benchmarks may not reflect local server performance (2026 blog: [https://www.jdhodges.com/blog/local-llms-on-tool-calling-2026-pt1-local-lm](https://www.jdhodges.com/blog/local-llms-on-tool-calling-2026-pt1-local-lm)).  \n\n**Limitations:** Some claims rely on specific models (e.g., Qwen) or frameworks (e.g., Ollama), which may not generalize to all local setups.",
+    "crashed": null,
+    "events": [
+      {
+        "tool": "web_search",
+        "result": {
+          "status": "ok",
+          "results": [
+            {
+              "title": "To Call or Not to Call: A Framework to Assess and Optimize LLM Tool Calling",
+              "url": "https://arxiv.org/html/2605.00737v1",
+              "snippet": "However, our approach has limitations. The estimators are not perfect and may introduce errors. Future works may investigate why tool calls can lead to negative utility, how tool descriptions influence both perceived and latent utility, and develop more accurate predictors and more effective controllers for tool-calling decisions. [...] overall performance remains suboptimal, highlighting limitations in cost-aware decision-making. [...] al., 2024; Singh et al., 2025; Qian et al., 2025; Feng et a"
+            },
+            {
+              "title": "Tool Calling with Local LLMs: A Practical Evaluation - Docker",
+              "url": "https://www.docker.com/blog/local-llm-tool-calling-a-practical-evaluation",
+              "snippet": "We realized we had no definite answer forthat. Local LLM models offer control, cost-efficiency, and privacy, but when it comes to structured tool use, deciding when and how to act, they can behave very differently. We decided to dig deep and test this properly. We started with manual experimentation, then built a framework to scale our testing. This blog documents that journey and shares which models ranked highest on our tool-calling leaderboard. [...] Qwen models dominate: Even the 8B version "
+            },
+            {
+              "title": "Pros and Cons of Running a Large Language Model Locally -- Pure AI",
+              "url": "https://pureai.com/articles/2025/09/02/pros-and-cons-of-running-a-large-language-model-locally.aspx",
+              "snippet": "Briefly, advantages of running an LLM system locally include:\n\nThese three advantages of local LLM systems depend on specific usage scenario conditions.\n\nThe disadvantages of running a local LLM system include: [...] The demo program uses the client.chat.completions.create() function to send a question and fetch the response from the gpt-oss LLM. At the time this article was written, OpenAI had introduced an improved function client.responses.create(), however, Ollama did not yet support the new"
+            },
+            {
+              "title": "I Tested 13 Local LLMs on Tool Calling | 2026 Eval Results",
+              "url": "https://www.jdhodges.com/blog/local-llms-on-tool-calling-2026-pt1-local-lm",
+              "snippet": "If you’re running a local AI stack with Open WebUI, LM Studio, or any OpenAI-compatible frontend, tool calling is one of the key features that enables agentic behavior. It lets models call functions like checking weather, sending emails, or setting reminders instead of just generating text. But not every model handles it well, and the popular benchmarks don’t always reflect what you’ll get when serving models through a local inference server like LM Studio. [...] If you’ve run similar tests with"
+            },
+            {
+              "title": "Tool/Function calling abilities of LLM's that are used locally ...",
+              "url": "https://discuss.huggingface.co/t/tool-function-calling-abilities-of-llms-that-are-used-locally-pulled-through-ollama/165277",
+              "snippet": "Thanks in advance\n\nIf you are using Ollama directly without any Agent framework, the models that support tool calling are limited, and there seems to be an issue that is not a bug.\n\nAs a workaround, you could use Ollama through external Agent frameworks.\n\n### Related topics [...] i was trying to build a small AI agent that would query the DB and get the details of the customers, for which i tried many models that are available in the ollama model library, but every model keeps throwing an “inval"
+            }
+          ]
+        }
+      }
+    ],
+    "recovered_from_loop": false
+  },
+  "deterministic": {
+    "passed": true,
+    "failures": [],
+    "web_requests": 1,
+    "unique_sources": 5,
+    "output_urls": 4,
+    "output_dates": 0
+  },
+  "outcome": "completed",
+  "evidence": {
+    "cited_urls": [
+      "https://arxiv.org/html/2605.00737v1",
+      "https://pureai.com/articles/2025/09/02/pros-and-cons-of-running-a-large-language-model-locally.aspx",
+      "https://www.docker.com/blog/local-llm-tool-calling-a-practical-evaluation",
+      "https://www.jdhodges.com/blog/local-llms-on-tool-calling-2026-pt1-local-lm"
+    ],
+    "cited_sources": [
+      {
+        "url": "https://arxiv.org/html/2605.00737v1",
+        "title": "To Call or Not to Call: A Framework to Assess and Optimize LLM Tool Calling",
+        "excerpt": "However, our approach has limitations. The estimators are not perfect and may introduce errors. Future works may investigate why tool calls can lead to negative utility, how tool descriptions influence both perceived and latent utility, and develop more accurate predictors and more effective controllers for tool-calling decisions. [...] overall performance remains suboptimal, highlighting limitations in cost-aware decision-making. [...] al., 2024; Singh et al., 2025; Qian et al., 2025; Feng et a",
+        "tool": "web_search"
+      },
+      {
+        "url": "https://www.docker.com/blog/local-llm-tool-calling-a-practical-evaluation",
+        "title": "Tool Calling with Local LLMs: A Practical Evaluation - Docker",
+        "excerpt": "We realized we had no definite answer forthat. Local LLM models offer control, cost-efficiency, and privacy, but when it comes to structured tool use, deciding when and how to act, they can behave very differently. We decided to dig deep and test this properly. We started with manual experimentation, then built a framework to scale our testing. This blog documents that journey and shares which models ranked highest on our tool-calling leaderboard. [...] Qwen models dominate: Even the 8B version ",
+        "tool": "web_search"
+      },
+      {
+        "url": "https://pureai.com/articles/2025/09/02/pros-and-cons-of-running-a-large-language-model-locally.aspx",
+        "title": "Pros and Cons of Running a Large Language Model Locally -- Pure AI",
+        "excerpt": "Briefly, advantages of running an LLM system locally include:\n\nThese three advantages of local LLM systems depend on specific usage scenario conditions.\n\nThe disadvantages of running a local LLM system include: [...] The demo program uses the client.chat.completions.create() function to send a question and fetch the response from the gpt-oss LLM. At the time this article was written, OpenAI had introduced an improved function client.responses.create(), however, Ollama did not yet support the new",
+        "tool": "web_search"
+      },
+      {
+        "url": "https://www.jdhodges.com/blog/local-llms-on-tool-calling-2026-pt1-local-lm",
+        "title": "I Tested 13 Local LLMs on Tool Calling | 2026 Eval Results",
+        "excerpt": "If you’re running a local AI stack with Open WebUI, LM Studio, or any OpenAI-compatible frontend, tool calling is one of the key features that enables agentic behavior. It lets models call functions like checking weather, sending emails, or setting reminders instead of just generating text. But not every model handles it well, and the popular benchmarks don’t always reflect what you’ll get when serving models through a local inference server like LM Studio. [...] If you’ve run similar tests with",
+        "tool": "web_search"
+      }
+    ],
+    "available_sources": [
+      {
+        "url": "https://arxiv.org/html/2605.00737v1",
+        "title": "To Call or Not to Call: A Framework to Assess and Optimize LLM Tool Calling",
+        "excerpt": "However, our approach has limitations. The estimators are not perfect and may introduce errors. Future works may investigate why tool calls can lead to negative utility, how tool descriptions influence both perceived and latent utility, and develop more accurate predictors and more effective controllers for tool-calling decisions. [...] overall performance remains suboptimal, highlighting limitations in cost-aware decision-making. [...] al., 2024; Singh et al., 2025; Qian et al., 2025; Feng et a",
+        "tool": "web_search"
+      },
+      {
+        "url": "https://www.docker.com/blog/local-llm-tool-calling-a-practical-evaluation",
+        "title": "Tool Calling with Local LLMs: A Practical Evaluation - Docker",
+        "excerpt": "We realized we had no definite answer forthat. Local LLM models offer control, cost-efficiency, and privacy, but when it comes to structured tool use, deciding when and how to act, they can behave very differently. We decided to dig deep and test this properly. We started with manual experimentation, then built a framework to scale our testing. This blog documents that journey and shares which models ranked highest on our tool-calling leaderboard. [...] Qwen models dominate: Even the 8B version ",
+        "tool": "web_search"
+      },
+      {
+        "url": "https://pureai.com/articles/2025/09/02/pros-and-cons-of-running-a-large-language-model-locally.aspx",
+        "title": "Pros and Cons of Running a Large Language Model Locally -- Pure AI",
+        "excerpt": "Briefly, advantages of running an LLM system locally include:\n\nThese three advantages of local LLM systems depend on specific usage scenario conditions.\n\nThe disadvantages of running a local LLM system include: [...] The demo program uses the client.chat.completions.create() function to send a question and fetch the response from the gpt-oss LLM. At the time this article was written, OpenAI had introduced an improved function client.responses.create(), however, Ollama did not yet support the new",
+        "tool": "web_search"
+      },
+      {
+        "url": "https://www.jdhodges.com/blog/local-llms-on-tool-calling-2026-pt1-local-lm",
+        "title": "I Tested 13 Local LLMs on Tool Calling | 2026 Eval Results",
+        "excerpt": "If you’re running a local AI stack with Open WebUI, LM Studio, or any OpenAI-compatible frontend, tool calling is one of the key features that enables agentic behavior. It lets models call functions like checking weather, sending emails, or setting reminders instead of just generating text. But not every model handles it well, and the popular benchmarks don’t always reflect what you’ll get when serving models through a local inference server like LM Studio. [...] If you’ve run similar tests with",
+        "tool": "web_search"
+      },
+      {
+        "url": "https://discuss.huggingface.co/t/tool-function-calling-abilities-of-llms-that-are-used-locally-pulled-through-ollama/165277",
+        "title": "Tool/Function calling abilities of LLM's that are used locally ...",
+        "excerpt": "Thanks in advance\n\nIf you are using Ollama directly without any Agent framework, the models that support tool calling are limited, and there seems to be an issue that is not a bug.\n\nAs a workaround, you could use Ollama through external Agent frameworks.\n\n### Related topics [...] i was trying to build a small AI agent that would query the DB and get the details of the customers, for which i tried many models that are available in the ollama model library, but every model keeps throwing an “inval",
+        "tool": "web_search"
+      }
+    ]
+  }
+}

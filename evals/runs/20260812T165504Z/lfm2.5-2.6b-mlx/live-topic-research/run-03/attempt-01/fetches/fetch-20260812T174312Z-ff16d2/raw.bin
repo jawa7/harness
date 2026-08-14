@@ -1,0 +1,2384 @@
+<!DOCTYPE html><!-- HTML 5 -->
+<html lang="en-US" prefix="og: https://ogp.me/ns#">
+
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>I Tested 13 Local LLMs on Tool Calling | 2026 Eval Results</title>
+<link rel="profile" href="http://gmpg.org/xfn/11" />
+<link rel="pingback" href="https://www.jdhodges.com/xmlrpc.php" />
+
+<!--[if lt IE 9]>
+<script src="https://www.jdhodges.com/wp-content/themes/zeeflow/js/html5.js" type="text/javascript"></script>
+<![endif]-->
+<link rel="preload" as="font" type="font/woff2" href="https://www.jdhodges.com/wp-content/themes/zeeflow/fonts/carme-v17-latin-regular.woff2" crossorigin />
+
+<!-- Search Engine Optimization by Rank Math - https://rankmath.com/ -->
+<meta name="description" content="Deterministic eval of 13 local LLMs on tool calling via LM Studio. Qwen3.5 4B (3.4 GB) scored 97.5%, beating models 5x its size. Full charts and analysis."/>
+<meta name="robots" content="index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large"/>
+<link rel="canonical" href="https://www.jdhodges.com/blog/local-llms-on-tool-calling-2026-pt1-local-lm/" />
+<meta property="og:locale" content="en_US" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="I Tested 13 Local LLMs on Tool Calling | 2026 Eval Results" />
+<meta property="og:description" content="Deterministic eval of 13 local LLMs on tool calling via LM Studio. Qwen3.5 4B (3.4 GB) scored 97.5%, beating models 5x its size. Full charts and analysis." />
+<meta property="og:url" content="https://www.jdhodges.com/blog/local-llms-on-tool-calling-2026-pt1-local-lm/" />
+<meta property="og:site_name" content="J.D. Hodges" />
+<meta property="article:tag" content="ai" />
+<meta property="article:tag" content="benchmarks" />
+<meta property="article:tag" content="lm studio" />
+<meta property="article:tag" content="local lm" />
+<meta property="article:tag" content="local lms" />
+<meta property="article:tag" content="open-webui" />
+<meta property="article:tag" content="qwen" />
+<meta property="article:tag" content="tool-calling" />
+<meta property="article:section" content="AI" />
+<meta property="og:updated_time" content="2026-03-20T11:30:47-06:00" />
+<meta property="og:image" content="https://www.jdhodges.com/wp-content/uploads/2026/03/tool-calling-eval-rankings.png" />
+<meta property="og:image:secure_url" content="https://www.jdhodges.com/wp-content/uploads/2026/03/tool-calling-eval-rankings.png" />
+<meta property="og:image:width" content="1485" />
+<meta property="og:image:height" content="1103" />
+<meta property="og:image:alt" content="local llm tool calling" />
+<meta property="og:image:type" content="image/png" />
+<meta property="article:published_time" content="2026-03-19T17:05:47-06:00" />
+<meta property="article:modified_time" content="2026-03-20T11:30:47-06:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="I Tested 13 Local LLMs on Tool Calling | 2026 Eval Results" />
+<meta name="twitter:description" content="Deterministic eval of 13 local LLMs on tool calling via LM Studio. Qwen3.5 4B (3.4 GB) scored 97.5%, beating models 5x its size. Full charts and analysis." />
+<meta name="twitter:image" content="https://www.jdhodges.com/wp-content/uploads/2026/03/tool-calling-eval-rankings.png" />
+<meta name="twitter:label1" content="Written by" />
+<meta name="twitter:data1" content="J.D. H." />
+<meta name="twitter:label2" content="Time to read" />
+<meta name="twitter:data2" content="11 minutes" />
+<script type="application/ld+json" class="rank-math-schema">{"@context":"https://schema.org","@graph":[{"@type":["Person","Organization"],"@id":"https://www.jdhodges.com/#person","name":"J.D. Hodges"},{"@type":"WebSite","@id":"https://www.jdhodges.com/#website","url":"https://www.jdhodges.com","name":"J.D. Hodges","publisher":{"@id":"https://www.jdhodges.com/#person"},"inLanguage":"en-US"},{"@type":"ImageObject","@id":"/wp-content/uploads/2026/03/tool-calling-eval-rankings.png","url":"/wp-content/uploads/2026/03/tool-calling-eval-rankings.png","width":"1485","height":"1103","inLanguage":"en-US"},{"@type":"WebPage","@id":"https://www.jdhodges.com/blog/local-llms-on-tool-calling-2026-pt1-local-lm/#webpage","url":"https://www.jdhodges.com/blog/local-llms-on-tool-calling-2026-pt1-local-lm/","name":"I Tested 13 Local LLMs on Tool Calling | 2026 Eval Results","datePublished":"2026-03-19T17:05:47-06:00","dateModified":"2026-03-20T11:30:47-06:00","isPartOf":{"@id":"https://www.jdhodges.com/#website"},"primaryImageOfPage":{"@id":"/wp-content/uploads/2026/03/tool-calling-eval-rankings.png"},"inLanguage":"en-US"},{"@type":"Person","@id":"https://www.jdhodges.com/author/admin/","name":"J.D. H.","url":"https://www.jdhodges.com/author/admin/","image":{"@type":"ImageObject","@id":"https://secure.gravatar.com/avatar/0f83e9225496205eb704c865957fbb2c67a00d2cff939ea8f8119f135e14977c?s=96&amp;d=mm&amp;r=g","url":"https://secure.gravatar.com/avatar/0f83e9225496205eb704c865957fbb2c67a00d2cff939ea8f8119f135e14977c?s=96&amp;d=mm&amp;r=g","caption":"J.D. H.","inLanguage":"en-US"},"sameAs":["http://www.jdhodges.com/"]},{"@type":"BlogPosting","headline":"I Tested 13 Local LLMs on Tool Calling | 2026 Eval Results","keywords":"local llm tool calling","datePublished":"2026-03-19T17:05:47-06:00","dateModified":"2026-03-20T11:30:47-06:00","articleSection":"AI, computer tips, Gadgets and Tech","author":{"@id":"https://www.jdhodges.com/author/admin/","name":"J.D. H."},"publisher":{"@id":"https://www.jdhodges.com/#person"},"description":"Deterministic eval of 13 local LLMs on tool calling via LM Studio. Qwen3.5 4B (3.4 GB) scored 97.5%, beating models 5x its size. Full charts and analysis.","name":"I Tested 13 Local LLMs on Tool Calling | 2026 Eval Results","@id":"https://www.jdhodges.com/blog/local-llms-on-tool-calling-2026-pt1-local-lm/#richSnippet","isPartOf":{"@id":"https://www.jdhodges.com/blog/local-llms-on-tool-calling-2026-pt1-local-lm/#webpage"},"image":{"@id":"/wp-content/uploads/2026/03/tool-calling-eval-rankings.png"},"inLanguage":"en-US","mainEntityOfPage":{"@id":"https://www.jdhodges.com/blog/local-llms-on-tool-calling-2026-pt1-local-lm/#webpage"}}]}</script>
+<!-- /Rank Math WordPress SEO plugin -->
+
+<link rel='dns-prefetch' href='//www.jdhodges.com' />
+<link rel="alternate" type="application/rss+xml" title="J.D. Hodges &raquo; Feed" href="https://www.jdhodges.com/feed/" />
+<link rel="alternate" type="application/rss+xml" title="J.D. Hodges &raquo; Comments Feed" href="https://www.jdhodges.com/comments/feed/" />
+<link rel="alternate" type="application/rss+xml" title="J.D. Hodges &raquo; I Tested 13 Local LLMs on Tool Calling: March 2026 Comments Feed" href="https://www.jdhodges.com/blog/local-llms-on-tool-calling-2026-pt1-local-lm/feed/" />
+<link rel="alternate" title="oEmbed (JSON)" type="application/json+oembed" href="https://www.jdhodges.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.jdhodges.com%2Fblog%2Flocal-llms-on-tool-calling-2026-pt1-local-lm%2F" />
+<link rel="alternate" title="oEmbed (XML)" type="text/xml+oembed" href="https://www.jdhodges.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.jdhodges.com%2Fblog%2Flocal-llms-on-tool-calling-2026-pt1-local-lm%2F&#038;format=xml" />
+<style id="jdh-cls-fixes">
+#solar-status-widget { min-height: 180px; }
+</style>
+<style id='wp-img-auto-sizes-contain-inline-css' type='text/css'>
+img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
+/*# sourceURL=wp-img-auto-sizes-contain-inline-css */
+</style>
+<style id='wp-block-library-inline-css' type='text/css'>
+:root{--wp-block-synced-color:#7a00df;--wp-block-synced-color--rgb:122,0,223;--wp-bound-block-color:var(--wp-block-synced-color);--wp-editor-canvas-background:#ddd;--wp-admin-theme-color:#007cba;--wp-admin-theme-color--rgb:0,124,186;--wp-admin-theme-color-darker-10:#006ba1;--wp-admin-theme-color-darker-10--rgb:0,107,160.5;--wp-admin-theme-color-darker-20:#005a87;--wp-admin-theme-color-darker-20--rgb:0,90,135;--wp-admin-border-width-focus:2px}@media (min-resolution:192dpi){:root{--wp-admin-border-width-focus:1.5px}}.wp-element-button{cursor:pointer}:root .has-very-light-gray-background-color{background-color:#eee}:root .has-very-dark-gray-background-color{background-color:#313131}:root .has-very-light-gray-color{color:#eee}:root .has-very-dark-gray-color{color:#313131}:root .has-vivid-green-cyan-to-vivid-cyan-blue-gradient-background{background:linear-gradient(135deg,#00d084,#0693e3)}:root .has-purple-crush-gradient-background{background:linear-gradient(135deg,#34e2e4,#4721fb 50%,#ab1dfe)}:root .has-hazy-dawn-gradient-background{background:linear-gradient(135deg,#faaca8,#dad0ec)}:root .has-subdued-olive-gradient-background{background:linear-gradient(135deg,#fafae1,#67a671)}:root .has-atomic-cream-gradient-background{background:linear-gradient(135deg,#fdd79a,#004a59)}:root .has-nightshade-gradient-background{background:linear-gradient(135deg,#330968,#31cdcf)}:root .has-midnight-gradient-background{background:linear-gradient(135deg,#020381,#2874fc)}:root{--wp--preset--font-size--normal:16px;--wp--preset--font-size--huge:42px}.has-regular-font-size{font-size:1em}.has-larger-font-size{font-size:2.625em}.has-normal-font-size{font-size:var(--wp--preset--font-size--normal)}.has-huge-font-size{font-size:var(--wp--preset--font-size--huge)}.has-text-align-center{text-align:center}.has-text-align-left{text-align:left}.has-text-align-right{text-align:right}.has-fit-text{white-space:nowrap!important}#end-resizable-editor-section{display:none}.aligncenter{clear:both}.items-justified-left{justify-content:flex-start}.items-justified-center{justify-content:center}.items-justified-right{justify-content:flex-end}.items-justified-space-between{justify-content:space-between}.screen-reader-text{border:0;clip-path:inset(50%);height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;width:1px;word-wrap:normal!important}.screen-reader-text:focus{background-color:#ddd;clip-path:none;color:#444;display:block;font-size:1em;height:auto;left:5px;line-height:normal;padding:15px 23px 14px;text-decoration:none;top:5px;width:auto;z-index:100000}html :where(.has-border-color){border-style:solid}html :where([style*=border-top-color]){border-top-style:solid}html :where([style*=border-right-color]){border-right-style:solid}html :where([style*=border-bottom-color]){border-bottom-style:solid}html :where([style*=border-left-color]){border-left-style:solid}html :where([style*=border-width]){border-style:solid}html :where([style*=border-top-width]){border-top-style:solid}html :where([style*=border-right-width]){border-right-style:solid}html :where([style*=border-bottom-width]){border-bottom-style:solid}html :where([style*=border-left-width]){border-left-style:solid}html :where(img[class*=wp-image-]){height:auto;max-width:100%}:where(figure){margin:0 0 1em}html :where(.is-position-sticky){--wp-admin--admin-bar--position-offset:var(--wp-admin--admin-bar--height,0px)}@media screen and (max-width:600px){html :where(.is-position-sticky){--wp-admin--admin-bar--position-offset:0px}}
+
+/*# sourceURL=wp-block-library-inline-css */
+</style>
+<style id='classic-theme-styles-inline-css' type='text/css'>
+/*! This file is auto-generated */
+.wp-block-button__link{color:#fff;background-color:#32373c;border-radius:9999px;box-shadow:none;text-decoration:none;padding:calc(.667em + 2px) calc(1.333em + 2px);font-size:1.125em}.wp-block-file__button{background:#32373c;color:#fff;text-decoration:none}
+/*# sourceURL=/wp-includes/css/classic-themes.min.css */
+</style>
+<style id='global-styles-inline-css' type='text/css'>
+:root{--wp--preset--aspect-ratio--square: 1;--wp--preset--aspect-ratio--4-3: 4/3;--wp--preset--aspect-ratio--3-4: 3/4;--wp--preset--aspect-ratio--3-2: 3/2;--wp--preset--aspect-ratio--2-3: 2/3;--wp--preset--aspect-ratio--16-9: 16/9;--wp--preset--aspect-ratio--9-16: 9/16;--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgb(6,147,227) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgb(252,185,0) 0%,rgb(255,105,0) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgb(255,105,0) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgb(255, 255, 255), 6px 6px rgb(0, 0, 0);--wp--preset--shadow--crisp: 6px 6px 0px rgb(0, 0, 0);}:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}body .is-layout-flex{display: flex;}.is-layout-flex{flex-wrap: wrap;align-items: center;}.is-layout-flex > :is(*, div){margin: 0;}body .is-layout-grid{display: grid;}.is-layout-grid > :is(*, div){margin: 0;}:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+/*# sourceURL=global-styles-inline-css */
+</style>
+
+<style id='jdh-reader-requests-inline-css' type='text/css'>
+/* ---- YARPP compact pill row (no borders, tight margins) ---- */
+.yarpp-jdh-compact {
+    font-size: 13px;
+    line-height: 1.6;
+    color: #4a5568;
+    margin: 1em 0 0.8em;
+    padding: 0;
+}
+.yarpp-jdh-compact .yarpp-jdh-label {
+    display: inline-block;
+    font: 600 11px/1 system-ui, -apple-system, sans-serif;
+    letter-spacing: .06em;
+    text-transform: uppercase;
+    color: #9ca3af;
+    margin-right: 0.6em;
+    vertical-align: baseline;
+}
+.yarpp-jdh-compact ol.yarpp-jdh-list {
+    display: inline;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+.yarpp-jdh-compact ol.yarpp-jdh-list li {
+    display: inline;
+    list-style: none;
+    margin: 0;
+}
+.yarpp-jdh-compact ol.yarpp-jdh-list li:not(:last-child)::after {
+    content: "  \00b7  ";
+    color: #d1d5db;
+    font-weight: 600;
+}
+.yarpp-jdh-compact ol.yarpp-jdh-list li a {
+    color: #2c5282;
+    text-decoration: none;
+    font-weight: 500;
+}
+.yarpp-jdh-compact ol.yarpp-jdh-list li a:hover {
+    color: #1a365d;
+    text-decoration: underline;
+}
+/* Outer YARPP container: zero its margins so our inner block owns spacing */
+.yarpp-related,
+.yarpp-related-website { margin: 0 !important; }
+@media (max-width: 600px) {
+    .yarpp-jdh-compact { font-size: 13px; line-height: 1.7; }
+    .yarpp-jdh-compact .yarpp-jdh-label { display: block; margin-bottom: 0.25em; }
+}
+
+/* ---- Reader-request form (flatter, tighter) ---- */
+.jdh-reader-request {
+    background: #fafafa;
+    border: 1px solid #e5e7eb;
+    border-left: 2px solid #a78bfa;
+    border-radius: 0 6px 6px 0;
+    padding: 1.2em 1.5em 1.1em;
+    margin: 1.5em 0 1em;
+}
+.jdh-reader-request h3#jdh-rr-heading {
+    margin: 0 0 0.4em;
+    font: 600 18px/1.25 system-ui, -apple-system, sans-serif;
+    color: #1f2937;
+    padding: 0;
+    border: 0;
+}
+.jdh-reader-request .jdh-rr-intro {
+    font-size: 15px;
+    line-height: 1.55;
+    color: #374151;
+    margin: 0 0 1em;
+}
+.jdh-reader-request .jdh-rr-field {
+    margin: 0 0 0.65em;
+}
+.jdh-reader-request .jdh-rr-field label {
+    display: block;
+    font: 500 13px/1.2 system-ui, -apple-system, sans-serif;
+    letter-spacing: 0;
+    text-transform: none;
+    color: #374151;
+    margin-bottom: 0.3em;
+}
+.jdh-reader-request .jdh-rr-field-name label {
+    color: #6b7280;
+    font-weight: 400;
+}
+.jdh-reader-request .jdh-rr-field input[type="text"],
+.jdh-reader-request .jdh-rr-field textarea {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0.55em 0.75em;
+    border: 1px solid #d1d5db;
+    border-radius: 4px;
+    font-size: 15px;
+    font-family: inherit;
+    background: #fff;
+    color: #111827;
+}
+.jdh-reader-request .jdh-rr-field input[type="text"]:focus,
+.jdh-reader-request .jdh-rr-field textarea:focus {
+    outline: 0;
+    border-color: #a78bfa;
+    box-shadow: 0 0 0 3px rgba(167, 139, 250, 0.18);
+}
+.jdh-reader-request .jdh-rr-field textarea {
+    resize: vertical;
+    min-height: 4em;
+    line-height: 1.5;
+}
+.jdh-reader-request .jdh-rr-field textarea::placeholder,
+.jdh-reader-request .jdh-rr-field input::placeholder {
+    color: #9ca3af;
+}
+.jdh-reader-request .jdh-rr-hp {
+    position: absolute !important;
+    left: -9999px !important;
+    top: -9999px !important;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+.jdh-reader-request .jdh-rr-submit {
+    margin: 0.7em 0 0;
+}
+.jdh-reader-request .jdh-rr-button {
+    background: #7c3aed;
+    color: #fff;
+    border: 0;
+    padding: 0.65em 1.75em;
+    font: 600 14px/1 system-ui, -apple-system, sans-serif;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.15s ease;
+}
+.jdh-reader-request .jdh-rr-button:hover {
+    background: #6d28d9;
+}
+.jdh-reader-request .jdh-rr-button:disabled {
+    opacity: 0.6;
+    cursor: wait;
+}
+.jdh-reader-request .jdh-rr-status {
+    margin: 0.6em 0 0;
+    font-size: 14px;
+}
+.jdh-reader-request .jdh-rr-status:empty {
+    margin: 0;
+}
+.jdh-reader-request .jdh-rr-status.ok {
+    color: #065f46;
+    font-weight: 500;
+}
+.jdh-reader-request .jdh-rr-status.err {
+    color: #991b1b;
+}
+.jdh-reader-request .jdh-rr-thanks {
+    padding: 0.2em 0;
+}
+.jdh-reader-request .jdh-rr-thanks-title {
+    margin: 0 0 0.3em;
+    font: 600 17px/1.3 system-ui, -apple-system, sans-serif;
+    color: #065f46;
+}
+.jdh-reader-request .jdh-rr-thanks-body {
+    margin: 0;
+    font-size: 14px;
+    color: #4b5563;
+    line-height: 1.55;
+}
+@media (max-width: 600px) {
+    .jdh-reader-request { padding: 1.2em 1.25em; margin: 1.8em 0 1.2em; }
+    .jdh-reader-request h3#jdh-rr-heading { font-size: 16px; }
+    .jdh-reader-request .jdh-rr-intro { font-size: 14px; }
+}
+
+/* ---- Promoted reader Q&A attribution block ---- */
+.jdh-reader-q {
+    border-left: 3px solid #a78bfa;
+    background: #faf5ff;
+    padding: 1.1em 1.35em;
+    margin: 1.6em 0;
+    border-radius: 0 6px 6px 0;
+}
+.jdh-reader-q .jdh-reader-q-who {
+    margin: 0 0 0.4em;
+    font: 600 12px/1 system-ui, -apple-system, sans-serif;
+    letter-spacing: .05em;
+    text-transform: uppercase;
+    color: #6d28d9;
+}
+.jdh-reader-q .jdh-reader-q-text {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-style: italic;
+    font-size: 16px;
+    line-height: 1.55;
+    color: #2d3748;
+}
+
+/* ---- Tightened update disclaimer ---- */
+.jdh-update-note {
+    margin: 0.6em 0 1em;
+    color: #6b7280;
+}
+.jdh-update-note small {
+    font-size: 12px;
+    line-height: 1.5;
+}
+.jdh-update-note small a {
+    color: #2c5282;
+}
+
+/* ---- Inline comment author + timestamp (sitewide, works with Zeeflow theme) ---- */
+/* Tighter inter-comment spacing (theme defaults to 2em top margin + 2em top padding) */
+.commentlist li.comment {
+    margin: 1.2em 0 0;
+    padding: 1.1em 0 0;
+}
+.commentlist li.comment:first-child {
+    margin-top: 0.4em;
+    padding-top: 0.5em;
+    border-top: 0;
+}
+
+/* Smaller avatar with rounded corners */
+.commentlist .comment-author img.avatar {
+    width: 40px;
+    height: 40px;
+    margin-right: 0.8em;
+    margin-top: 0.2em;
+    border-radius: 4px;
+}
+
+/* Collapse comment-author wrapper div so the name and timestamp share a line */
+.commentlist .comment-body .comment-author.vcard {
+    display: inline;
+}
+
+/* Inline the author name + meta timestamp */
+.commentlist .comment-author .fn {
+    font-family: system-ui, -apple-system, sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    font-style: normal;
+    padding: 0;
+    display: inline;
+    background: none;
+}
+.commentlist .comment-author .fn,
+.commentlist .comment-author .fn a,
+.commentlist .comment-author .fn a:link,
+.commentlist .comment-author .fn a:visited {
+    color: #1f2937;
+    text-decoration: none;
+}
+
+.commentlist .comment-meta {
+    display: inline;
+    margin-bottom: 0.5em;
+    margin-left: 0.4em;
+    font-size: 12px;
+    line-height: 1.4;
+}
+.commentlist .comment-meta::before {
+    content: "\00b7\00a0";
+    color: #d1d5db;
+    font-weight: 600;
+    margin-right: 0.15em;
+}
+.commentlist .comment-meta a,
+.commentlist .comment-meta a:link,
+.commentlist .comment-meta a:visited {
+    color: #9ca3af;
+    text-decoration: none;
+}
+.commentlist .comment-meta a:hover {
+    color: #4b5563;
+    text-decoration: underline;
+}
+
+/* Body paragraph tightening inside comments */
+.commentlist .comment-body > p {
+    margin: 0.5em 0 0.6em;
+}
+.commentlist .comment-body > p.comment-awaiting-moderation {
+    display: block;
+    margin: 0.3em 0 0.5em;
+    font-size: 12px;
+    color: #b45309;
+    font-style: italic;
+}
+.commentlist .reply {
+    margin-top: 0.2em;
+}
+
+/* Comments heading tighter + sans font to match our overall palette */
+#comments .comments-title {
+    font-family: system-ui, -apple-system, sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    color: #1f2937;
+    padding: 0.3em 0;
+    margin: 0 0 0.5em;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+/* ---- Sitewide spacing compression for single posts (theme default is generous) ---- */
+body.single-post .type-post {
+    margin-bottom: 1.2em;
+    padding-bottom: 1.2em;
+}
+body.single-post #comments {
+    margin: 0 0 1.5em 0;
+}
+body.single-post .commentlist {
+    margin: 0.8em 0 0.8em;
+}
+body.single-post .postinfo {
+    padding: 0.4em 0.5em;
+    margin-top: 0.3em;
+}
+body.single-post .postinfo .meta-category,
+body.single-post .postinfo .meta-tags {
+    padding: 0.3em 0;
+}
+
+/* .jdh-affiliate-box: tighter vertical margins (sitewide) */
+body.single-post .jdh-affiliate-box {
+    margin: 1em 0;
+}
+/*# sourceURL=jdh-reader-requests-inline-css */
+</style>
+<style id='jdh-prompt-copy-blocks-inline-css' type='text/css'>
+/* Default styling for plain code blocks (shell, config, etc) */
+pre.wp-block-code {
+    position: relative;
+    padding: 1rem 4.5rem 1rem 1rem; /* extra right pad for copy btn */
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    background: #f8fafc;
+    overflow: auto;
+    margin: 1.5em 0;
+}
+
+pre.wp-block-code code {
+    display: block;
+    white-space: pre-wrap;
+    word-break: break-word;
+    font: 500 14px/1.55 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    color: #14202b;
+}
+
+.prompt-copy-btn {
+    position: absolute;
+    top: .55rem;
+    right: .55rem;
+    border: 1px solid #cbd5e1;
+    border-radius: 999px;
+    background: #fff;
+    color: #475569;
+    padding: .35rem .7rem;
+    font: 600 12px/1 system-ui, -apple-system, sans-serif;
+    cursor: pointer;
+    transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+    line-height: 1;
+}
+
+.prompt-copy-btn:hover {
+    background: #f1f5f9;
+    color: #0f172a;
+}
+
+.prompt-copy-btn.is-copied {
+    background: #0f5ea8;
+    border-color: #0f5ea8;
+    color: #fff;
+}
+
+/* Branded prompt-template card style — opt-in via class on <pre> */
+pre.wp-block-code.is-prompt-template {
+    padding: 3rem 1rem 1rem;
+    border-color: #d9e2ec;
+    background: linear-gradient(180deg, #fbfdff 0%, #f5f7fa 100%);
+    box-shadow: 0 10px 28px rgba(15, 23, 42, 0.06);
+    border-radius: 14px;
+}
+
+pre.wp-block-code.is-prompt-template::before {
+    content: "Prompt template";
+    position: absolute;
+    top: .8rem;
+    left: 1rem;
+    font: 600 11px/1 system-ui, -apple-system, sans-serif;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    color: #66758a;
+}
+
+pre.wp-block-code.is-prompt-template code {
+    font-size: 15px;
+    line-height: 1.65;
+}
+
+pre.wp-block-code.is-prompt-template .prompt-copy-btn {
+    top: .7rem;
+    right: .75rem;
+    padding: .45rem .8rem;
+    font-size: 13px;
+    color: #0f5ea8;
+    border-color: #c7d2de;
+}
+/*# sourceURL=jdh-prompt-copy-blocks-inline-css */
+</style>
+<link rel='stylesheet' id='themezee_zeeFlow_stylesheet-css' href='https://www.jdhodges.com/wp-content/themes/zeeflow/style.min.css?ver=6.9.4' type='text/css' media='all' />
+<style id='themezee_zeeFlow_stylesheet-inline-css' type='text/css'>
+/* Self-hosted Google Fonts replacement -- 2026-03-26 */
+@font-face {
+  font-family: 'Carme';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('https://www.jdhodges.com/wp-content/themes/zeeflow/fonts/carme-v17-latin-regular.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Volkhov';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('https://www.jdhodges.com/wp-content/themes/zeeflow/fonts/volkhov-v18-latin-regular.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Volkhov';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url('https://www.jdhodges.com/wp-content/themes/zeeflow/fonts/volkhov-v18-latin-italic.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Volkhov';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('https://www.jdhodges.com/wp-content/themes/zeeflow/fonts/volkhov-v18-latin-700.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Volkhov';
+  font-style: italic;
+  font-weight: 700;
+  font-display: swap;
+  src: url('https://www.jdhodges.com/wp-content/themes/zeeflow/fonts/volkhov-v18-latin-700italic.woff2') format('woff2');
+}
+
+/* Genericons subset -- 5 icons only, 2026-03-26 */
+/* f300=comments f301=category f302=tags f304=author f307=date */
+@font-face {
+  font-family: 'Genericons';
+  src: url('data:font/woff2;base64,d09GRgABAAAAAAecAA8AAAAACmAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAABHREVGAAAHhAAAABYAAAAWABEABk9TLzIAAAHMAAAAQgAAAGBkX2aFY21hcAAAAiAAAAA2AAAARPMb5nVjdnQgAAAEPAAAAAYAAAAGAH8BCWZwZ20AAAJYAAABsQAAAmVTtC+nZ2FzcAAAB3wAAAAIAAAACP//AANnbHlmAAAEVAAAAfUAAALu2GZ9HGhlYWQAAAFYAAAANgAAADYbDCyOaGhlYQAAAZAAAAAaAAAAJBACCNtobXR4AAACEAAAABAAAAAQDHoDAGxvY2EAAAREAAAADgAAAA4CJQEKbWF4cAAAAawAAAAgAAAAIAEqAQBuYW1lAAAGTAAAARwAAAJUM9NKhHBvc3QAAAdoAAAAEwAAACD/0QAycHJlcAAABAwAAAAuAAAALrDyKxQAAQAAAAICTXVvD1tfDzz1AB8IAAAAAADN7bvOAAAAAOXrIbYBAADABwAHAAAAAAgAAgAAAAAAAHicY2BkYOBg+H8DRDICITsDkEAFTAA5PgH1AAAAAQAAAAYARAAMAAAAAAACAAEAAgAWAAABAAC4AAAAAHicY2Bmf884gYGVgYXVmOUMAwPDTAjNdIbBCMwHSmEHod7hfgwOnxk+s7Ol/UtjYOBgYNAACjMiKVFgYAQAiIoLpgAAAPoAAAgAAQABgAEAAgABAHicY2BgYGJgYGAGYhEgyQimWRgMgDQHEALlPjN9ZvnM/v8/kMUAYfEy8jLw/AOrBQMAGYoLZAAAeJxdUbtOW0EQ3Q0PA4HE2CA52hSzmZDGe6EFCcTVjWJkO4XlCGk3cpGLcQEfQIFEDdqvGaChpEibBiEXSHxCPiESM2uIojQ7O7NzzpkzS8qRqnfpa89T5ySQwt0GzTb9Tki1swD3pOvrjYy0gwdabGb0ynX7/gsGm9GUO2oA5T1vKQ8ZTTuBWrSn/tH8Cob7/B/zOxi0NNP01DoJ6SEE5ptxS4PvGc26yw/6gtXhYjAwpJim4i4/plL+tzTnasuwtZHRvIMzEfnJNEBTa20Emv7UIdXzcRRLkMumsTaYmLL+JBPBhcl0VVO1zPjawV2ys+hggyrNgQfYw1Z5DB4ODyYU0rckyiwNEfZiq8QIEZMcCjnl3Mn+pED5SBLGvElKO+OGtQbGkdfAoDZPs/88m01tbx3C+FkcwXe/GUs6+MiG2hgRYjtiKYAJREJGVfmGGs+9LAbkUvvPQJSA5fGPf50ItO7YRDyXtXUOMVYIen7b3PLLirtWuc6LQndvqmqo0inN+17OvscDnh4Lw0FjwZvP+/5Kgfo8LK40aA4EQ3o3ev+iteqIq7wXPrIn07+xWgAAALgB/4WwAY0AS7AIUFixAQGOWbFGBitYIbAQWUuwFFJYIbCAWR2wBitcWFmwFCsAAAAAAQkAfwAAAAAAAAAsAFgAggCyAXcAAHicdVLbctMwFNxjuw4hLrVzozMUWiclLaSg1Je0hTINtyf/ib9CX+HX/ILUF17zA3rr5D3fUZJw5NIZhgHPSHt2Ja3OrAUiYNGAD7TRgwqFClLlGVIdobs0xuScomyaxkm/F3X9YUzRcDAiVKWHsqrKzWwzk2XlSpI15Xkzo0UFIunAl+zbwhAKQjWN8oVyjXLYPRB6l911E1FbNa7sLfHzuBe76UXMR0myyVpKOXMXWzjwIOUWci3hEIi7ZV8PAfbBTorYcFeop0t2188emqY4InT7yTQbDQgue6xBsiiLonSZbph6uWUF4Di8xJ4S3A5e1d16RkVC7bJzW6jWUu0Z3fkrDmTTpN/1Bw5Wc8J8tUZ1V1V33D2T1XwLt+YVArL+smGzeIFDzuMEYwikuMBH3OArftR37hl1IPTxJE3VS6NfnyeJOhK3p9l1ykpsbt/knxLWzoS+nLHyzuirz8z3BUeqd5pccrqNhNQ3obBUgVFBqA9orJ0jXjs02htYDPUxa6dnXJ8Y/fa9xVBPWMsuuU6Nnn6wGOpr1vwZ1zdGP/liMbQpqJbR33+HEedprx4RdfucyzSPstEwHvi9Dqsuj0f8X21/qHQkp3aPIndlXhT5T57lPz6SO7B4z2fsPqfebR8KPbyQGu3Y/FE/6vgFtnzLPQAAAHicjZDBTgIxFEVPBTVuXPkBk+hCFwyiwcRxrS4whmjUxIUJmmEwAjNiBfxRl36EX+BtKdEwLMxL2/vuu+++tsA691Qw1Q3gS2uGDVvKZniFTb4DrpCYuabKjkkCXmVqHgJeE//JOW0uiBiTMuKNZ3KGyg+0cjERHeUfOvtC1qvK6omQpSfU9YwVSpnypL1QNtftSmMVBQl1xcRHTKbqu043MRPfV4frHWpGqlUXW4ityb/Dq5TOZyBmm7Mw8bQ0b0+vcx7urs4v935XyjNNc+8Z6Z0x+4pjTrihxR2XQsv6agudyzTRgua29Ku/09pci3HZX7YnpQ1+Y9UbvhbT5EjVgVxf5Ok0XbHunx5Df6yzwaH25n/u/wOq9154eJxjYGYAg//nGIwYsAAALwECAwAAAAAB//8AAgABAAAADAAAAAAAAAACAAEAAQAFAAEAAA==') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/*# sourceURL=themezee_zeeFlow_stylesheet-inline-css */
+</style>
+<link rel='stylesheet' id='zeeflow-jd-child-css' href='https://www.jdhodges.com/wp-content/themes/zeeflow-jd-child/style.css?ver=1.0.10' type='text/css' media='all' />
+<script type="text/javascript" src="https://www.jdhodges.com/wp-includes/js/jquery/jquery.min.js?ver=3.7.1" id="jquery-core-js"></script>
+<script type="text/javascript" src="https://www.jdhodges.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1" id="jquery-migrate-js"></script>
+<script type="text/javascript" id="themezee_jquery_navigation-js-extra">
+/* <![CDATA[ */
+var themezeeNavigationParams = {"menuTitle":"Menu"};
+//# sourceURL=themezee_jquery_navigation-js-extra
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://www.jdhodges.com/wp-content/themes/zeeflow/js/navigation.js?ver=6.9.7" id="themezee_jquery_navigation-js" defer="defer" data-wp-strategy="defer"></script>
+<link rel="https://api.w.org/" href="https://www.jdhodges.com/wp-json/" /><link rel="alternate" title="JSON" type="application/json" href="https://www.jdhodges.com/wp-json/wp/v2/posts/11715" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://www.jdhodges.com/xmlrpc.php?rsd" />
+<meta name="generator" content="WordPress 6.9.7" />
+<link rel='shortlink' href='https://www.jdhodges.com/?p=11715' />
+    <style id="guest-post-indicators-css">
+    /* Guest Post Banner */
+    .guest-post-banner {
+        background: #f0f7fb;
+        border: 1px solid #0073aa;
+        border-radius: 6px;
+        padding: 10px 16px;
+        margin-bottom: 20px;
+        font-size: 0.95em;
+        color: #1e3a4f;
+    }
+    .guest-post-banner a {
+        color: #0073aa;
+        text-decoration: none;
+        font-weight: 600;
+    }
+    .guest-post-banner a:hover {
+        text-decoration: underline;
+    }
+    .guest-post-badge {
+        display: inline-block;
+        background: #0073aa;
+        color: #fff;
+        padding: 2px 10px;
+        border-radius: 3px;
+        font-size: 0.8em;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        margin-right: 4px;
+        vertical-align: middle;
+    }
+
+    /* Guest Author Bio Box (single posts only) */
+    .guest-author-bio {
+        border: 1px solid #ddd;
+        border-radius: 6px;
+        padding: 20px;
+        margin-top: 30px;
+        background: #fafafa;
+        display: flex;
+        gap: 16px;
+        align-items: flex-start;
+    }
+    .guest-author-avatar img {
+        border-radius: 50%;
+        flex-shrink: 0;
+    }
+    .guest-author-info {
+        flex: 1;
+        min-width: 0;
+    }
+    .guest-author-name {
+        font-weight: 700;
+        font-size: 1.05em;
+        margin: 0 0 8px 0;
+        color: #1e3a4f;
+    }
+    .guest-author-description {
+        margin: 0 0 8px 0;
+        line-height: 1.5;
+        color: #333;
+    }
+    .guest-author-website {
+        color: #0073aa;
+        text-decoration: none;
+        font-size: 0.9em;
+    }
+    .guest-author-website:hover {
+        text-decoration: underline;
+    }
+
+    /* Mobile responsive */
+    @media screen and (max-width: 480px) {
+        .guest-author-bio {
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+    }
+    </style>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-9X30M5NRBE"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-9X30M5NRBE');
+</script><style type="text/css">
+			a, a:link, a:visited, .comment a:link, .comment a:visited,
+			.wp-pagenavi a:link, .wp-pagenavi a:visited, #image-nav .nav-previous a, #image-nav .nav-next a {
+				color: #007896;
+			}
+			input[type="submit"], .more-link, #commentform #submit {
+				background-color: #007896;
+			}
+			#footer-widgets-wrap, #footer {
+				background-color: #333333;
+			}
+			#mainnav-icon {
+				background-color: #007896;
+			}
+			#logo .site-title, .page-title, .post-title, .post-title a:link, .post-title a:visited {
+				color: #007896;
+			}
+			.post-title a:hover, .post-title a:active{
+				color: #333;
+			}
+			#sidebar .widgettitle, #sidebar .widget-tabnav li a, .frontpage-category-title {
+				color: #333333;
+			}
+			#sidebar .widget a:link, #sidebar .widget a:visited {
+				color: #007896;
+			}
+			#frontpage-slider {
+				background-color: #333333;
+			}		
+			@media only screen and (min-width: 60em) {
+				#mainnav-menu a:hover, #mainnav-menu ul, #mainnav-menu li.menu-item:hover a, 
+				#mainnav-menu li.current_page_item a, #mainnav-menu li.current-menu-item a {
+					background-color: #007896;
+				}
+			}
+		</style><style type="text/css">.author-box {
+background: #F3F3F3;
+margin: 0 0 30px 0;
+padding: 10px;
+border: 1px solid #DDDDDD;
+overflow: hidden;
+}
+
+ins {
+background: transparent;
+text-decoration: none;
+}
+#wnb-bar{
+z-index: 999999;
+}</style><link rel='stylesheet' id='yarppRelatedCss-css' href='https://www.jdhodges.com/wp-content/plugins/yet-another-related-posts-plugin/style/related.css?ver=5.30.11' type='text/css' media='all' />
+
+</head>
+
+<body class="wp-singular post-template-default single single-post postid-11715 single-format-standard wp-theme-zeeflow wp-child-theme-zeeflow-jd-child">
+<a class="skip-link" href="#content">Skip to content</a>
+
+<div id="wrapper" class="hfeed">
+
+		<header id="header" class="container clearfix" role="banner">
+
+		<div id="logo">
+
+			<a href="https://www.jdhodges.com/" title="J.D. Hodges" rel="home">
+						<span class="site-title">
+							J.D. Hodges						</span>
+			</a>
+
+					<p class="site-description">Every man has a story, this is my story.</p>
+			<p class="site-tagline-since">Blogging since 1999.</p>
+		
+		</div>
+
+	</header>
+	
+	<nav id="mainnav" class="container clearfix" role="navigation" aria-label="Primary menu">
+		<ul id="mainnav-menu" class="menu"><li id="menu-item-11699" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-11699"><a href="https://www.jdhodges.com/">Home</a></li>
+<li id="menu-item-11700" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor menu-item-11700"><a href="https://www.jdhodges.com/category/ask-jd/">Ask J.D.</a></li>
+<li id="menu-item-11701" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-11701"><a href="https://www.jdhodges.com/category/gadgets/">Gadgets and Tech</a></li>
+<li id="menu-item-11702" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-11702"><a href="https://www.jdhodges.com/solar-system-monitor/">Solar System Monitor</a></li>
+</ul>	</nav>
+
+	
+	<div id="wrap" class="container">
+		
+		<section id="content" class="primary" role="main">
+		
+		
+	<article id="post-11715" class="post-11715 post type-post status-publish format-standard has-post-thumbnail hentry category-ai category-computer-tips category-gadgets tag-ai tag-benchmarks tag-lm-studio tag-local-lm tag-local-lms tag-open-webui tag-qwen tag-tool-calling">
+
+		<h1 class="post-title">I Tested 13 Local LLMs on Tool Calling: March 2026</h1>
+
+		<div class="postmeta">		
+		<span class="meta-date">
+		<a href="https://www.jdhodges.com/blog/local-llms-on-tool-calling-2026-pt1-local-lm/" title="5:05 PM" rel="bookmark"><time datetime="2026-03-19T17:05:47-06:00">Thursday, 2026.03.19</time></a>		</span>
+		
+		<span class="meta-author sep">
+		<a href="https://www.jdhodges.com/author/admin/" title="View all posts by J.D. H." rel="author">J.D. H.</a>		</span>
+
+			<span class="meta-comments sep">
+			<a href="https://www.jdhodges.com/blog/local-llms-on-tool-calling-2026-pt1-local-lm/#respond">Leave a comment</a>		</span>
+		</div>
+
+		<div class="entry clearfix">
+			<p>I built a deterministic eval harness and tested 13 local LLMs on tool calling (function calling) to find out which models work decently well for agentic tasks. The result that surprised me most: a 3.4 GB model scored higher than everything else I tested, including models five times its size.</p>
+<p>If you&#8217;re running a local AI stack with Open WebUI, LM Studio, or any OpenAI-compatible frontend, tool calling is one of the key features that enables agentic behavior. It lets models call functions like checking weather, sending emails, or setting reminders instead of just generating text. But not every model handles it well, and the popular benchmarks don&#8217;t always reflect what you&#8217;ll get when serving models through a local inference server like LM Studio.</p>
+<p>So I ran 13 models through 40 test cases across five categories. No LLM-as-judge, no random vibes, just schema-aware pass/fail scoring with deterministic and reproducible results.</p>
+<h2>The Setup</h2>
+<p><strong>Hardware:</strong> AMD AI Max+ 395 with 128 GB unified RAM (about 96 GB allocatable to GPU). All models served through LM Studio v0.4.6 using Q4_K_M quantization over the OpenAI-compatible API. One exception: Gemma 3 4B QAT used Google&#8217;s pre-quantized Q4_0, since the whole point of QAT is that the model was trained specifically for that quantization level.</p>
+<p>The eval harness sends natural-language requests to each model along with eight tool schemas: weather lookups, currency conversion, reminders, email, calendar events, time zones, web search, and calendar reads. The scorer checks whether the model picked the right tool, passed the right arguments, and handled edge cases where no tool should be called.</p>
+<p><span style="text-decoration: underline;">Five categories, eight test cases each:</span></p>
+<ol>
+<li><strong>Tool Selection:</strong> Pick the correct tool from eight options</li>
+<li><strong>Argument Accuracy:</strong> Parse dates, emails, enums, and nested objects from natural language</li>
+<li><strong>Multi-Tool:</strong> Call multiple tools in parallel, or sequentially across turns</li>
+<li><strong>Edge Cases:</strong> Correctly refuse to call tools when they aren&#8217;t needed (jokes, math, vague prompts, emotional support)</li>
+<li><strong>Format Compliance:</strong> Arrays, optional parameters, enum values, complex schemas</li>
+</ol>
+<p>The test suite is split into dev (20 cases) and holdout (20 cases). I ran both splits on every model. No model showed significant divergence between the splits, which gives me reasonable confidence the harness isn&#8217;t overfitting to any particular model&#8217;s strengths.</p>
+<h2>The Results: 13 Models Ranked</h2>
+<p><a href="https://www.jdhodges.com/wp-content/uploads/2026/03/tool-calling-eval-rankings.png"><img decoding="async" src="https://www.jdhodges.com/wp-content/uploads/2026/03/tool-calling-eval-rankings.png" alt="Horizontal bar chart showing 13 local LLMs ranked by tool calling pass rate. Qwen3.5 4B leads at 97.5 percent, followed by GLM-4.7-Flash and Nemotron Nano 4B at 95 percent." /></a></p>
+<table>
+<thead>
+<tr>
+<th>Rank</th>
+<th>Model</th>
+<th>Size</th>
+<th>Pass Rate</th>
+<th>Selection</th>
+<th>Args</th>
+<th>Multi-Tool</th>
+<th>Edge</th>
+<th>Format</th>
+<th>tok/s</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>1</strong></td>
+<td><strong>Qwen3.5 4B</strong></td>
+<td><strong>3.4 GB</strong></td>
+<td><strong>97.5%</strong></td>
+<td>8/8</td>
+<td>8/8</td>
+<td>7/8</td>
+<td>8/8</td>
+<td>8/8</td>
+<td>48</td>
+</tr>
+<tr>
+<td>2</td>
+<td>GLM-4.7-Flash</td>
+<td>18 GB</td>
+<td>95.0%</td>
+<td>8/8</td>
+<td>8/8</td>
+<td>6/8</td>
+<td>8/8</td>
+<td>8/8</td>
+<td>52</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Nemotron Nano 4B</td>
+<td>4.2 GB</td>
+<td>95.0%</td>
+<td>8/8</td>
+<td>8/8</td>
+<td>6/8</td>
+<td>8/8</td>
+<td>8/8</td>
+<td>44</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Mistral Nemo 12B</td>
+<td>7.5 GB</td>
+<td>92.5%</td>
+<td>8/8</td>
+<td>7/8</td>
+<td>7/8</td>
+<td>7/8</td>
+<td>8/8</td>
+<td>26</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Qwen3 8B</td>
+<td>5 GB</td>
+<td>85.0%</td>
+<td>8/8</td>
+<td>8/8</td>
+<td>2/8</td>
+<td>8/8</td>
+<td>8/8</td>
+<td>42</td>
+</tr>
+<tr>
+<td>5</td>
+<td>GPT-OSS 20B</td>
+<td>12 GB</td>
+<td>85.0%</td>
+<td>8/8</td>
+<td>8/8</td>
+<td>2/8</td>
+<td>8/8</td>
+<td>8/8</td>
+<td>65</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Nemotron 3 Nano MoE</td>
+<td>25 GB</td>
+<td>85.0%</td>
+<td>8/8</td>
+<td>8/8</td>
+<td>4/8</td>
+<td>8/8</td>
+<td>6/8</td>
+<td>52</td>
+</tr>
+<tr>
+<td>8</td>
+<td>DeepSeek-R1-Distill 14B</td>
+<td>9 GB</td>
+<td>57.5%</td>
+<td>4/8</td>
+<td>5/8</td>
+<td>1/8</td>
+<td>7/8</td>
+<td>6/8</td>
+<td>23</td>
+</tr>
+<tr>
+<td>8</td>
+<td>Phi-4 Mini</td>
+<td>2.5 GB</td>
+<td>57.5%</td>
+<td>8/8</td>
+<td>5/8</td>
+<td>0/8</td>
+<td>4/8</td>
+<td>6/8</td>
+<td>57</td>
+</tr>
+<tr>
+<td>10</td>
+<td>Gemma 3 4B QAT</td>
+<td>3.2 GB</td>
+<td>55.0%</td>
+<td>8/8</td>
+<td>4/8</td>
+<td>1/8</td>
+<td>3/8</td>
+<td>6/8</td>
+<td>60</td>
+</tr>
+<tr>
+<td>11</td>
+<td>Mistral Small 3.2 24B</td>
+<td>15 GB</td>
+<td>42.5%</td>
+<td>3/8</td>
+<td>3/8</td>
+<td>0/8</td>
+<td>8/8</td>
+<td>3/8</td>
+<td>14</td>
+</tr>
+<tr>
+<td>12</td>
+<td>Hammer 2.1 7B</td>
+<td>4.2 GB</td>
+<td>20.0%</td>
+<td>0/8</td>
+<td>0/8</td>
+<td>0/8</td>
+<td>8/8</td>
+<td>0/8</td>
+<td>38</td>
+</tr>
+<tr>
+<td>13</td>
+<td>xLAM-2 8B FC-R</td>
+<td>4.9 GB</td>
+<td>15.0%</td>
+<td>0/8</td>
+<td>0/8</td>
+<td>0/8</td>
+<td>6/8</td>
+<td>0/8</td>
+<td>34</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Qwen3.5 4B leads at 97.5%</strong> with just a single failure across 40 test cases. It&#8217;s followed by a tight pack at 95%: GLM-4.7-Flash and Nemotron Nano 4B. All three handle basic tool selection, argument parsing, edge cases, and format compliance near-perfectly. The differences only show up in the hardest category: multi-tool calling.</p>
+<p>The bottom three models (Mistral Small, Hammer, xLAM-2) all scored below 43%. Before you write them off, there&#8217;s an important caveat: their low scores appear to be LM Studio compatibility issues rather than model quality problems. More on that below.</p>
+<h2>Where the Top Models Actually Differ</h2>
+<p><a href="https://www.jdhodges.com/wp-content/uploads/2026/03/tool-calling-eval-categories.png"><img decoding="async" src="https://www.jdhodges.com/wp-content/uploads/2026/03/tool-calling-eval-categories.png" alt="Grouped bar chart comparing the top 4 models across 5 categories. Multi-Tool is highlighted as the key differentiator where scores diverge." /></a></p>
+<p>Most models that scored above 85% were nearly perfect on four of the five categories. The one category that separated them was <strong>Multi-Tool</strong>: calling two or more tools in a single response (parallel) or across multiple turns (sequential).</p>
+<p>This matters because real agentic workflows depend on it. &#8220;Check the weather in Miami and Chicago&#8221; should produce two parallel weather calls, not one. &#8220;Search the web for the exchange rate, then convert 500 dollars to euros&#8221; requires calling search first, waiting for results, then calling the converter. These are the patterns that distinguish a capable tool-calling model from one that only handles simple one-tool requests.</p>
+<h2>The Parallel-Sequential Paradox</h2>
+<p>This was the most interesting finding in the entire eval. The models that were best at parallel tool calling turned out to be the worst at knowing when to wait.</p>
+<p>One test case asks: &#8220;Search the web for the current exchange rate of USD to EUR, then convert 500 dollars to euros.&#8221; The expected behavior is two turns. First, call <code>web_search</code> and see the results. Then call <code>convert_currency</code> with the actual rate. The word &#8220;then&#8221; signals a sequential dependency.</p>
+<p>Here&#8217;s what the top models did:</p>
+<table>
+<thead>
+<tr>
+<th>Model</th>
+<th>Turn 1 Behavior</th>
+<th>Result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Qwen3.5 4B</td>
+<td>Called web_search + convert_currency simultaneously</td>
+<td>FAIL</td>
+</tr>
+<tr>
+<td>GLM-4.7-Flash</td>
+<td>Called web_search + convert_currency simultaneously</td>
+<td>FAIL</td>
+</tr>
+<tr>
+<td>Nemotron Nano 4B</td>
+<td>Called web_search only, waited for results</td>
+<td>PASS</td>
+</tr>
+<tr>
+<td>Mistral Nemo 12B</td>
+<td>Called web_search only, waited for results</td>
+<td>PASS</td>
+</tr>
+</tbody>
+</table>
+<p>Both Qwen3.5 and GLM are strong parallel callers (7/8 and 6/8 on multi-tool). But that strength becomes a liability when the task requires patience. They&#8217;re so eager to parallelize that they ignore &#8220;then&#8221; and fire both tools at once. The model calls <code>convert_currency</code> before seeing the search results, making the conversion meaningless.</p>
+<p>Meanwhile, Nemotron and Mistral Nemo, which are generally weaker at parallel calling, correctly recognized the sequential dependency and waited.</p>
+<p>In other words: the best parallel callers were the worst at sequential multi-turn, and vice versa. This looks like a genuine architectural tradeoff rather than something any single model could easily fix.</p>
+<h2>Every Model Has a Personality</h2>
+<p>What struck me most about the top four models is that they don&#8217;t just score differently. They fail in completely different ways. Each has a distinct &#8220;personality&#8221; that maps to real-world tradeoffs.</p>
+<h3>Qwen3.5 4B: &#8220;The Eager Optimizer&#8221;</h3>
+<p>97.5% overall. Only one failure across 40 cases. It&#8217;s so good at firing multiple tool calls in parallel that it sometimes parallelizes things that need to happen in sequence. If your use case is mostly parallel calls (check weather in two cities, send an email and set a reminder), this model is near-perfect. If you need strict multi-turn sequential reasoning, you might occasionally see it jump ahead.</p>
+<h3>GLM-4.7-Flash: &#8220;The Parallel Powerhouse&#8221;</h3>
+<p>95% overall. Fast (52 tok/s) and accurate. Its weakness: it sometimes skips optional parameters. When asked to &#8220;look up the weather in Paris, then convert the temperature from Celsius to Fahrenheit,&#8221; it called <code>get_weather</code> without specifying <code>units="celsius"</code>. The parameter was optional in the schema, and the model assumed the default would be fine. Technically reasonable, but not what the prompt implied.</p>
+<h3>Nemotron Nano 4B: &#8220;The Minimalist&#8221;</h3>
+<p>95% overall at just 4.2 GB. Excellent at sequential multi-turn reasoning. Its weakness is parallel same-tool calls: ask for weather in two cities at once and it sometimes only calls once. If your workflow is mostly single-tool calls with occasional multi-turn chains, Nemotron is a strong choice and remarkably small.</p>
+<h3>Mistral Nemo 12B: &#8220;The Helpful Rewriter&#8221;</h3>
+<p>92.5% overall, with the interesting distinction of tying for the best multi-tool score (7/8, same as Qwen3.5). Its failures are the most human-like: it paraphrases. &#8220;Set a reminder to call the dentist&#8221; becomes &#8220;Dentist appointment.&#8221; It also searched the web for &#8220;how photosynthesis works&#8221; instead of answering from training data. These are mistakes a helpful but over-eager assistant would make.</p>
+<h2>Model Size Didn&#8217;t Predict Quality</h2>
+<p><a href="https://www.jdhodges.com/wp-content/uploads/2026/03/tool-calling-eval-size-vs-quality.png"><img decoding="async" src="https://www.jdhodges.com/wp-content/uploads/2026/03/tool-calling-eval-size-vs-quality.png" alt="Scatter plot showing model size in GB vs pass rate percentage, with bubble size representing inference speed. No correlation between size and quality is visible. The 3.4 GB Qwen3.5 4B is at the top." /></a></p>
+<p>In this eval, there was no meaningful correlation between model size and tool calling quality. The 3.4 GB Qwen3.5 4B outperformed the 18 GB GLM-4.7-Flash, the 25 GB Nemotron 3 Nano MoE, and the 15 GB Mistral Small 3.2.</p>
+<p>The 25 GB Nemotron 3 Nano MoE scored 85%, the same as the 5 GB Qwen3 8B. Mistral Small at 15 GB scored 42.5%. Meanwhile, three of the top four models are under 8 GB.</p>
+<p>This won&#8217;t be true for all LLM tasks. But for structured output like tool calling, training methodology and architecture seem to matter more than raw parameter count, at least at Q4 quantization levels.</p>
+<h2>When Benchmark Scores Don&#8217;t Transfer</h2>
+<p>Three models in this eval are specifically marketed as tool-calling specialists: xLAM-2 8B (Salesforce), Hammer 2.1 7B (MadeAgents), and Mistral Small 3.2 (Mistral AI). They scored 15%, 20%, and 42.5% respectively.</p>
+<p>This deserves context. xLAM-2 is currently ranked #1 on the Berkeley Function Calling Leaderboard (BFCL), where it outperforms GPT-4o and Claude 3.5 Sonnet. Hammer 2.1 claims best-in-class at its size on BFCL v3. So what happened?</p>
+<p>In all three cases, the issue appears to be <strong>chat template compatibility</strong> rather than model quality. These models use custom tool-calling output formats that LM Studio&#8217;s OpenAI-compatible API doesn&#8217;t properly translate. The models literally could not emit structured tool calls through this particular inference server. Hammer scored 8/8 on edge cases (correctly declining to call tools when it shouldn&#8217;t) but 0/8 on every category that required actually producing a tool call. It understood the task. It just couldn&#8217;t produce the output format.</p>
+<p>The takeaway isn&#8217;t that these models are bad.<strong> It&#8217;s that benchmark scores measured under ideal conditions with native APIs don&#8217;t always transfer to what you&#8217;ll see through a third-party inference server. If you&#8217;re picking a model for a local stack, test it with your actual server and endpoint. Don&#8217;t rely on the leaderboard alone.</strong></p>
+<h2>I Found a Bug in My Own Eval</h2>
+<p>While analyzing why three models tied at exactly 95%, I found a bug in my test cases. One case asked the model to set a reminder for &#8220;tomorrow at 8 AM,&#8221; but the expected answer used today&#8217;s date instead of tomorrow&#8217;s. Models that correctly understood &#8220;tomorrow&#8221; were being penalized.</p>
+<p>I also discovered that three test cases defined email body content checks that the scorer never actually validated (dead code), and that the system date used <code>datetime.now()</code> instead of a fixed date, making results non-reproducible across different days.</p>
+<p>After fixing all three issues, I re-ran the top four models. Three scores stayed the same. Qwen3.5 4B picked up the point it deserved and pulled ahead from 95% to 97.5%, breaking the three-way tie.</p>
+<p>I&#8217;m including this because I think it matters. If you&#8217;re evaluating models, check your eval too. The harness had been scoring correctly for 39 of 40 cases, but that one bug masked the true winner.</p>
+<h2>My Recommendations</h2>
+<p>Based on 40 test cases across 13 models, all served through LM Studio on the AMD AI Max+ 395:</p>
+<ul>
+<li><strong>🏆 Best overall: Qwen3.5 4B.</strong> 97.5% pass rate at 3.4 GB. Fast (48 tok/s), accurate, and the best multi-tool score of any model tested. If you can only pick one model for tool calling, this is where I&#8217;d start.</li>
+<li><strong>Best for sequential workflows: Mistral Nemo 12B.</strong> 92.5% overall, but strong at multi-turn tasks where the model needs to wait for results before making the next call. If your application chains tool calls across turns, Nemo handles that better than the higher-ranked models in my testing.</li>
+<li><strong>Best value: Nemotron Nano 4B.</strong> 95% at 4.2 GB and 44 tok/s. Nearly as good as Qwen3.5, with a proven track record across multiple runs. If Qwen3.5 doesn&#8217;t work well with your inference setup, this is a reliable fallback.</li>
+<li><strong>Best speed/quality balance: GLM-4.7-Flash.</strong> 95% at 52 tok/s with 3-second median latency. Uses a MoE architecture (30B total parameters, ~3B active per token), so it&#8217;s fast despite the larger download.</li>
+<li><strong>Honorable mention: GPT-OSS 20B.</strong> The fastest model tested at 65 tok/s with a solid 85% accuracy. If raw speed matters more than the last 10% of reliability, it&#8217;s worth considering.</li>
+<li><strong>📛 Not recommended for tool calling: DeepSeek-R1-Distill 14B.</strong> It&#8217;s a reasoning-focused model that tends to spend tokens thinking about whether to call a tool instead of calling one. The architecture is designed for chain-of-thought, not structured output.</li>
+</ul>
+<h2>The Eval Harness</h2>
+<p>The eval script is Python and requires only the <code>openai</code>, <code>pyyaml</code>, and <code>requests</code> packages. It works with any OpenAI-compatible API endpoint. Features include 40 test cases, eight tool schemas, deterministic scoring with fuzzy matching for locations and dates, automatic model loading/unloading via LM Studio&#8217;s management API, and per-model JSON results with comparison reports.</p>
+<p>To run it yourself:</p>
+<pre><code>python eval_tool_calling.py --model "qwen3.5 4b"             # Full 40 cases
+python eval_tool_calling.py --model "qwen3.5 4b" --dev       # Dev split only (20 cases)
+python eval_tool_calling.py --all --max-size 27               # All models under 27 GB
+python eval_tool_calling.py --compare                         # Generate comparison report</code></pre>
+<p>You can download the eval script here: <a href="https://www.jdhodges.com/wp-content/uploads/2026/03/eval_tool_calling.zip">eval_tool_calling.py (zip)</a>. The archive includes the Python script and companion YAML files (tool_definitions.yaml and test_cases.yaml). Point <code>LMSTUDIO_BASE</code> at your LM Studio instance and you&#8217;re ready to go.</p>
+<h2>A Note on Speed and Methodology</h2>
+<p>The tok/s numbers in the results table are approximate, measured during a single eval run per model on the AMD AI Max+ 395. Relative rankings are reliable, but absolute values may vary by 5-10% depending on system load and LM Studio&#8217;s state. Treat them as ballpark figures.</p>
+<p>All models used <code>temperature=0</code>, <code>top_p=1</code>, and <code>seed=42</code> for reproducibility. The eval date is pinned to March 20, 2026, so relative date references (&#8220;tomorrow&#8221;) resolve consistently across runs.</p>
+<p>I want to be upfront about what this eval measures and what it doesn&#8217;t. Forty test cases is enough to reveal clear patterns in how models handle structured output through a local inference server, but it&#8217;s not a comprehensive benchmark on the scale of BFCL. A model&#8217;s performance here reflects the intersection of three things: the model&#8217;s capabilities, the Q4_K_M quantization, and LM Studio&#8217;s chat template handling. Different inference servers, different quantizations, or different tool schemas could produce different rankings.</p>
+<h2>What&#8217;s Next</h2>
+<p>I plan to cross-validate the top three models against the Berkeley Function Calling Leaderboard to see how this eval correlates with industry benchmarks under more controlled conditions. I&#8217;m also curious how these results translate to Open WebUI&#8217;s native function calling mode, which adds its own template handling layer.</p>
+<p>If you&#8217;ve run similar tests with other models or inference servers, I&#8217;d genuinely like to hear about your results in the comments. Especially if you&#8217;ve gotten xLAM-2 or Hammer working through a different API endpoint. I suspect both models would do much better with proper chat template support.</p>
+<p>The bottom line: if you&#8217;re building a local AI stack in 2026, don&#8217;t assume bigger models are better at tool calling. In my testing, a 3.4 GB model beat everything else I threw at it.</p>
+<p>PS if there are any models you would like tested, please mention them in the comments!</p>
+<div class='yarpp yarpp-related yarpp-related-website yarpp-template-list'>
+<!-- YARPP List -->
+<div class="yarpp-jdh-compact"><span class="yarpp-jdh-label">Related</span><ol class="yarpp-jdh-list">
+<li><a href="https://www.jdhodges.com/blog/chase-freedom-signature-benefits/" rel="bookmark" title="Chase Freedom Signature VISA Upgrade Rewards">Chase Freedom Signature VISA Upgrade Rewards</a></li>
+<li><a href="https://www.jdhodges.com/blog/unraid-preclear-disk-commands/" rel="bookmark" title="UnRAID preclear disk commands and notes (WD 2TB Green EARS drive)">UnRAID preclear disk commands and notes (WD 2TB Green EARS drive)</a></li>
+<li><a href="https://www.jdhodges.com/blog/paypal-extras-mastercard-review/" rel="bookmark" title="PayPal Extras Mastercard Review">PayPal Extras Mastercard Review</a></li>
+<li><a href="https://www.jdhodges.com/blog/the-ultimate-claude-code-workstation/" rel="bookmark" title="Best Computer for Claude Code in 2026">Best Computer for Claude Code in 2026</a></li>
+</ol></div>
+</div>
+			<!-- <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+			xmlns:dc="http://purl.org/dc/elements/1.1/"
+			xmlns:trackback="http://madskills.com/public/xml/rss/module/trackback/">
+		<rdf:Description rdf:about="https://www.jdhodges.com/blog/local-llms-on-tool-calling-2026-pt1-local-lm/"
+    dc:identifier="https://www.jdhodges.com/blog/local-llms-on-tool-calling-2026-pt1-local-lm/"
+    dc:title="I Tested 13 Local LLMs on Tool Calling: March 2026"
+    trackback:ping="https://www.jdhodges.com/blog/local-llms-on-tool-calling-2026-pt1-local-lm/trackback/" />
+</rdf:RDF> -->
+			<div class="page-links"></div>
+		</div>
+
+		<div class="postinfo clearfix">		
+		<span class="meta-category">
+			<a href="https://www.jdhodges.com/category/ask-jd/ai/" rel="category tag">AI</a>, <a href="https://www.jdhodges.com/category/ask-jd/computer-tips/" rel="category tag">computer tips</a>, <a href="https://www.jdhodges.com/category/gadgets/" rel="category tag">Gadgets and Tech</a>		</span>
+		
+				<span class="meta-tags">
+				<a href="https://www.jdhodges.com/tag/ai/" rel="tag">ai</a>, <a href="https://www.jdhodges.com/tag/benchmarks/" rel="tag">benchmarks</a>, <a href="https://www.jdhodges.com/tag/lm-studio/" rel="tag">lm studio</a>, <a href="https://www.jdhodges.com/tag/local-lm/" rel="tag">local lm</a>, <a href="https://www.jdhodges.com/tag/local-lms/" rel="tag">local lms</a>, <a href="https://www.jdhodges.com/tag/open-webui/" rel="tag">open-webui</a>, <a href="https://www.jdhodges.com/tag/qwen/" rel="tag">qwen</a>, <a href="https://www.jdhodges.com/tag/tool-calling/" rel="tag">tool-calling</a>			</span>
+	</div>
+
+	</article>
+			
+		
+
+
+	<div id="comments">
+	
+		
+						<div id="respond" class="comment-respond">
+		<h3 id="reply-title" class="comment-reply-title">Leave a Reply <small><a rel="nofollow" id="cancel-comment-reply-link" href="/blog/local-llms-on-tool-calling-2026-pt1-local-lm/#respond" style="display:none;">Cancel reply</a></small></h3><form action="https://www.jdhodges.com/wp-comments-post.php" method="post" id="commentform" class="comment-form"><p class="comment-notes"><span id="email-notes">Your email address will not be published.</span> <span class="required-field-message">Required fields are marked <span class="required">*</span></span></p><p class="comment-form-comment"><label for="comment">Comment <span class="required">*</span></label> <textarea autocomplete="new-password"  id="fbbc598b93"  name="fbbc598b93"   cols="45" rows="8" maxlength="65525" required="required"></textarea><textarea id="comment" aria-label="hp-comment" aria-hidden="true" name="comment" autocomplete="new-password" style="padding:0 !important;clip:rect(1px, 1px, 1px, 1px) !important;position:absolute !important;white-space:nowrap !important;height:1px !important;width:1px !important;overflow:hidden !important;" tabindex="-1"></textarea><script data-noptimize>document.getElementById("comment").setAttribute( "id", "ab36811d66172f686d712ab875b66b72" );document.getElementById("fbbc598b93").setAttribute( "id", "comment" );</script></p><p class="comment-form-author"><label for="author">Name</label> <input id="author" name="author" type="text" value="" size="30" maxlength="245" autocomplete="name" /></p>
+<p class="comment-form-email"><label for="email">Email</label> <input id="email" name="email" type="text" value="" size="30" maxlength="100" aria-describedby="email-notes" autocomplete="email" /></p>
+<p class="comment-form-url"><label for="url">Website</label> <input id="url" name="url" type="text" value="" size="30" maxlength="200" autocomplete="url" /></p>
+<p class="comment-form-cookies-consent"><input id="wp-comment-cookies-consent" name="wp-comment-cookies-consent" type="checkbox" value="yes" /> <label for="wp-comment-cookies-consent">Save my name, email, and website in this browser for the next time I comment.</label></p>
+<p class="form-submit"><input name="submit" type="submit" id="submit" class="submit" value="Post Comment" /> <input type='hidden' name='comment_post_ID' value='11715' id='comment_post_ID' />
+<input type='hidden' name='comment_parent' id='comment_parent' value='0' />
+</p></form>	</div><!-- #respond -->
+			
+	</div>
+
+		
+		</section>
+		
+		
+<section id="sidebar" class="secondary clearfix" role="complementary">
+	
+	<aside id="search-3" class="widget widget_search">
+	<form role="search" method="get" id="searchform" action="https://www.jdhodges.com/">
+		<input type="text" value="" name="s" id="s" placeholder="Search..." />
+		<input type="submit" id="searchsubmit" value="" />
+	</form>
+</aside><aside id="custom_html-1" class="widget_text widget widget_custom_html"><h3 class="widgettitle">Featured Posts</h3><div class="textwidget custom-html-widget"><a href="/blog/displayport-mst-lcd-list/" class="featured-card-link"><strong>DisplayPort MST Monitor List (2026)</strong><br><span style="font-size:0.9em;color:#555">Daisy-chainable monitors, Mac limitations, and dock compatibility</span></a>
+<a href="/blog/macbook-neo-benchmarks-analysis/" class="featured-card-link"><strong>MacBook Neo Deep Dive</strong><br><span style="font-size:0.9em;color:#555">Benchmarks, wafer economics, and the 8GB gamble</span></a>
+<a href="/blog/temu-1000-reward-claimed-screen-is-it-legit/" class="featured-card-link"><strong>Temu $1,000 Reward Claimed</strong><br><span style="font-size:0.9em;color:#555">Is it legit? What you need to know</span></a>
+<a href="/blog/claude-ai-custom-instructions-a-real-example-that-actually-works/" class="featured-card-link"><strong>Claude AI Custom Instructions</strong><br><span style="font-size:0.9em;color:#555">A real example that actually works</span></a></div></aside><aside id="text-7" class="widget widget_text">			<div class="textwidget"><div class="author-box"><strong>About <a href="https://plus.google.com/106282983883202575997?rel=author" rel="author">J.D. Hodges</a></strong><br /><p><img class="alignleft size-thumbnail wp-image-7046" alt="J.D. Hodges Google+ profile photo" src="https://www.jdhodges.com/wp-content/uploads/2014/03/n26401995_31040552_1268-200x200.jpg" width="100" height="100" />J.D. is an attorney and IT professional living off the grid. He has been a tech enthusiast ever since his dad let him play with computers in the early 80s. Now jdhodges.com is where he shares tech tips. Thanks for visiting & feel free to join in the discussion by commenting :-)
+</a></p>
+</div></div>
+		</aside><aside id="text-11" class="widget widget_text"><h3 class="widgettitle">Solar System</h3>			<div class="textwidget">    <style>
+    #solar-status-widget .jsw-rows { display: grid; grid-template-columns: auto 1fr; gap: 1px 10px; padding: 0 2px; align-items: baseline; font-variant-numeric: tabular-nums; }
+    #solar-status-widget .jsw-lab { white-space: nowrap; font-weight: 700; }
+    #solar-status-widget .jsw-val { white-space: nowrap; text-align: right; }
+    #solar-status-widget .jsw-sub { grid-column: 2; text-align: right; color: #666; font-size: 12px; margin-top: -3px; }
+    #solar-status-widget .jsw-up { color: #1e8449; }
+    #solar-status-widget .jsw-dn { color: #c0392b; }
+    #solar-status-widget .jsw-flat { color: #555; }
+    #solar-status-widget .jsw-w { font-weight: 800; }
+    #solar-status-widget .jsw-word { font-weight: 600; font-size: 12px; }
+    #solar-status-widget .jsw-mut { color: #666; }
+    #solar-status-widget .jsw-title a { color: inherit; text-decoration: none; }
+    #solar-status-widget .jsw-title a:hover, #solar-status-widget .jsw-title a:focus-visible { text-decoration: underline; }
+    #solar-status-widget .jsw-status { font-weight: 600; font-size: 11.5px; margin-left: 4px; vertical-align: middle; }
+    #solar-status-widget .jsw-q { position: absolute; right: 0; top: -2px; width: 26px; height: 26px; border-radius: 50%; border: 1px solid #c8d1d9; background: #f4f6f8; color: #444; font-weight: 700; font-size: 13px; cursor: pointer; line-height: 1; padding: 0; }
+    #solar-status-widget .jsw-q:hover { background: #e9edf1; }
+    #solar-status-widget .jsw-q:focus-visible, #solar-status-widget .solar-explain-close:focus-visible { outline: 2px solid #2471a3; outline-offset: 2px; }
+    #solar-status-widget .jsw-explain { margin: 8px 0 4px; border: 1px solid #d5dbe1; border-radius: 6px; background: #f7f9fa; padding: 10px 12px; font-size: 12px; line-height: 1.5; color: #333; text-align: left; }
+    #solar-status-widget .jsw-explain dt { font-weight: 700; margin-top: 6px; }
+    #solar-status-widget .jsw-explain dt:first-of-type { margin-top: 0; }
+    #solar-status-widget .jsw-explain dd { margin: 0 0 2px; color: #4a5560; }
+    #solar-status-widget .solar-explain-close { float: right; border: 0; background: none; cursor: pointer; font-size: 13px; color: #666; padding: 2px 4px; }
+    #solar-status-widget .jsw-age a { color: #2471a3; text-decoration: none; font-weight: 600; }
+    #solar-status-widget .jsw-age a:hover, #solar-status-widget .jsw-age a:focus-visible { text-decoration: underline; }
+    </style>
+    <div id="solar-status-widget" style="font-family: system-ui, -apple-system, sans-serif; font-size: 13px; line-height: 1.65;">
+        <div class="jsw-title" style="text-align: center; padding: 4px 0 8px; position: relative;">
+            <span id="solar-status-dot" style="display: inline-block; width: 10px; height: 10px; border-radius: 50%; background: #888; vertical-align: middle;"></span>
+            <strong style="vertical-align: middle; margin-left: 4px;"><a href="/solar-system-monitor/">Off-Grid Solar</a></strong>
+            <span id="solar-status-word" class="jsw-status"></span>
+            <button type="button" class="jsw-q" id="solar-widget-q" aria-expanded="false" aria-label="About these numbers">?</button>
+        </div>
+        <div id="solar-soc-headline" style="text-align: center; padding: 0 0 6px; display: none;">
+            <span id="solar-soc-value" style="font-size: 28px; font-weight: bold; color: #27ae60;">--%</span>
+            <div style="font-size: 11px; color: #666; margin-top: -2px;">Battery SOC</div>
+        </div>
+        <div class="jsw-explain" id="solar-widget-explain" hidden><button type="button" class="solar-explain-close" aria-label="Close">&#10005;</button><dl style="margin:0;"><dt>Battery SOC</dt><dd>the battery&#039;s fuel gauge (min = today&#039;s lowest).</dd><dt>Battery (net)</dt><dd>what the battery is doing right now: + charging, − draining.</dd><dt>Solar</dt><dd>what the solar panels are producing right now.</dd><dt>Inverter 1 out</dt><dd>power going to the circuits on the main inverter.</dd><dt>Other (net)</dt><dd>everything else combined: the second inverter&#039;s circuits and any external chargers. Inputs and loads can cancel, so this isn&#039;t total usage.</dd><dt>AC / DC</dt><dd>the battery side runs on DC power; house circuits run on AC. The tag on each line says which side you&#039;re looking at.</dd><dt>Solar Chargers</dt><dd>the solar charge controllers&#039; mode. &quot;Silent&quot; just means they&#039;re resting (normal at night).</dd><dt>Last full</dt><dd>how long since the battery was last completely charged.</dd><dt>Green dot / Online</dt><dd>the monitor itself is healthy; &quot;Updated Xs ago&quot; is the reading&#039;s age.</dd></dl></div>
+        <div id="solar-status-data" style="padding: 0 4px;">Loading...</div>
+        <div id="solar-status-age" class="jsw-age" style="font-size: 11px; color: #666; text-align: center; padding: 5px 0 0;"></div>
+    </div>
+    <script>
+    (function() {
+        function esc(s) {
+            var d = document.createElement('div');
+            d.appendChild(document.createTextNode(String(s)));
+            return d.innerHTML;
+        }
+        function fmt(n) { return n != null ? esc(Math.round(n).toLocaleString()) : '--'; }
+        // Derive freshness from the reading timestamp (UTC) instead of trusting
+        // the served age_seconds — responses are HTTP-cacheable for up to 30s.
+        function deriveAge(d) {
+            var t = Date.parse(String(d.timestamp).replace(' ', 'T') + 'Z');
+            if (isNaN(t)) return d.age_seconds;
+            return Math.max(0, Math.round((Date.now() - t) / 1000));
+        }
+        var updating = false;
+        function update() {
+            // Hidden tabs generate zero traffic; visibilitychange refreshes on return
+            if (document.hidden || updating) return;
+            updating = true;
+            fetch('/wp-json/solar-monitor/v1/latest')
+                .then(function(r) {
+                    if (!r.ok) throw new Error('HTTP ' + r.status);
+                    return r.json();
+                })
+                .then(function(d) {
+                    if (d.status === 'no_data') {
+                        document.getElementById('solar-status-data').textContent = 'Awaiting first reading...';
+                        return;
+                    }
+                    var ageSec = deriveAge(d);
+                    var liveStatus = ageSec < 180 ? 'online' : ageSec < 600 ? 'stale' : 'offline';
+                    var colors = {online: '#2ecc40', stale: '#ff851b', offline: '#ff4136'};
+                    document.getElementById('solar-status-dot').style.background = colors[liveStatus] || '#888';
+                    // Textual status beside the dot (color-blind safe)
+                    var words = {online: ['Online', '#1e8449'], stale: ['Stale', '#a05c00'], offline: ['Offline', '#c0392b']};
+                    var wordEl = document.getElementById('solar-status-word');
+                    if (words[liveStatus]) {
+                        wordEl.textContent = words[liveStatus][0];
+                        wordEl.style.color = words[liveStatus][1];
+                    } else {
+                        wordEl.textContent = '';
+                    }
+
+                    // SOC headline
+                    var socEl = document.getElementById('solar-soc-headline');
+                    var socVal = document.getElementById('solar-soc-value');
+                    if (d.battery_soc != null) {
+                        socEl.style.display = 'block';
+                        var soc = Math.round(d.battery_soc);
+                        socVal.textContent = soc + '%';
+                        // Color: green > 50, orange 20-50, red < 20
+                        socVal.style.color = soc > 50 ? '#27ae60' : soc > 20 ? '#f39c12' : '#e74c3c';
+                    } else {
+                        socEl.style.display = 'none';
+                    }
+
+                    // Coarse W from A x V, rounded to 10W: the rounding IS the
+                    // uncertainty disclosure (no tildes by design; tooltips and
+                    // the [?] panel carry the estimate language).
+                    function approxW(amps) {
+                        return Math.round(amps * d.battery_voltage / 10) * 10;
+                    }
+                    // Round BEFORE choosing the sign: (-0).toLocaleString() is "-0"
+                    // and (-0.04).toFixed(1) is "-0.0" — normalize both to plain 0.
+                    function signedW(w) {
+                        var r = Math.round(w);
+                        if (r === 0) r = 0;
+                        return (r > 0 ? '+' : '') + r.toLocaleString() + 'W';
+                    }
+                    function signedA(a) {
+                        var v = a.toFixed(1);
+                        if (v === '-0.0') v = '0.0';
+                        return (parseFloat(v) > 0 ? '+' : '') + v + 'A';
+                    }
+
+                    var rows = '';
+                    function row(emoji, label, tip, valueHtml) {
+                        rows += '<span class="jsw-lab"' + (tip ? ' title="' + tip + '"' : '') + '><span aria-hidden="true">' + emoji + '</span> ' + label + '</span><span class="jsw-val">' + valueHtml + '</span>';
+                    }
+
+                    // Battery (net): bold signed W + word; balanced band |W| < 50
+                    var vTxt = esc(d.battery_voltage) + 'V DC';
+                    if (d.battery_current != null && d.battery_voltage > 0) {
+                        var bw = approxW(d.battery_current);
+                        var cls = bw >= 50 ? 'jsw-up' : bw <= -50 ? 'jsw-dn' : 'jsw-flat';
+                        var word = bw >= 50 ? 'charging' : bw <= -50 ? 'draining' : 'balanced';
+                        row('\u26a1', 'Battery (net)', 'Net battery power: every charging and draining path combined',
+                            '<span class="jsw-w ' + cls + '">' + esc(signedW(bw)) + '</span> <span class="jsw-word ' + cls + '">' + word + '</span>');
+                        rows += '<span class="jsw-sub">' + vTxt + ' \u00b7 ' + esc(signedA(d.battery_current)) + '</span>';
+                    } else {
+                        row('\u26a1', 'Battery (net)', 'Net battery power: every charging and draining path combined', vTxt);
+                    }
+                    row('\u2600\ufe0f', 'Solar', 'Solar panel production right now', fmt(d.solar_watts) + 'W');
+                    var invVal = fmt(d.house_load_watts) + 'W';
+                    if (d.ac_output_voltage != null) {
+                        invVal += ' \u00b7 ' + esc(Math.round(d.ac_output_voltage)) + 'V AC';
+                    }
+                    row('\ud83c\udfe0', 'Inverter 1 out', 'Main inverter AC output only; its amp telemetry is whole-number, so watts are approximate. Other circuits appear under Other (net).', invVal);
+                    if (d.aux_net_amps != null && d.battery_voltage > 0) {
+                        var aw = approxW(d.aux_net_amps);
+                        row('\ud83d\udd0c', 'Other (net)', 'Net of all other chargers and loads (estimate): positive = outside power coming in, negative = extra loads drawing',
+                            esc(signedW(aw)) + ' <span class="jsw-mut">\u00b7 ' + esc(signedA(d.aux_net_amps)) + ' DC</span>');
+                    }
+                    row('\ud83d\udcca', 'Solar today', 'Solar energy produced so far today', esc(d.solar_daily_kwh) + ' kWh');
+                    row('\ud83d\udd06', 'Solar Chargers', 'Solar charge controller mode; external chargers are not reflected here', esc(d.charge_state));
+                    if (d.days_since_full != null) {
+                        rows += '<span class="jsw-sub">last full ' + esc(d.days_since_full.toFixed(1)) + 'd ago</span>';
+                    }
+
+                    document.getElementById('solar-status-data').innerHTML = '<div class="jsw-rows">' + rows + '</div>';
+
+                    var ageText = ageSec < 60 ? ageSec + 's ago' :
+                                  ageSec < 3600 ? Math.floor(ageSec/60) + 'm ago' :
+                                  Math.floor(ageSec/3600) + 'h ago';
+                    document.getElementById('solar-status-age').innerHTML = 'Updated ' + esc(ageText) + ' \u00b7 <a href="/solar-system-monitor/">View charts \u2192</a>';
+                })
+                .catch(function() {
+                    document.getElementById('solar-status-dot').style.background = '#ff4136';
+                    document.getElementById('solar-status-word').textContent = '';
+                    document.getElementById('solar-status-age').textContent = 'Connection error';
+                })
+                .then(function() { updating = false; });
+        }
+        // [?] explainer: real button (hover titles don't exist on phones)
+        var qBtn = document.getElementById('solar-widget-q');
+        var qPanel = document.getElementById('solar-widget-explain');
+        if (qBtn && qPanel) {
+            var qToggle = function(open) {
+                qPanel.hidden = !open;
+                qBtn.setAttribute('aria-expanded', String(open));
+            };
+            qBtn.addEventListener('click', function() { qToggle(qPanel.hidden); });
+            qPanel.querySelector('.solar-explain-close').addEventListener('click', function() { qToggle(false); qBtn.focus(); });
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape' && !qPanel.hidden) { qToggle(false); qBtn.focus(); }
+            });
+        }
+
+        update();
+        // 300s cadence: this widget renders sitewide, and 60s polling from every
+        // open tab was 141k req/day (60% of server load, 2026-08-05 incident).
+        setInterval(update, 300000);
+        document.addEventListener('visibilitychange', function() {
+            if (!document.hidden) update();
+        });
+    })();
+    </script>
+    </div>
+		</aside><aside id="text-12" class="widget widget_text"><h3 class="widgettitle">Indoor Temps</h3>			<div class="textwidget">    <div id="temp-status-widget" style="font-family: system-ui, -apple-system, sans-serif; font-size: 13px; line-height: 1.7;">
+        <div style="text-align: center; padding: 4px 0 8px;">
+            <span id="temp-status-dot" style="display: inline-block; width: 10px; height: 10px; border-radius: 50%; background: #888; vertical-align: middle;"></span>
+            <strong style="vertical-align: middle; margin-left: 4px;">Indoor Temps</strong>
+        </div>
+        <div id="temp-status-data" style="padding: 0 4px;">Loading...</div>
+        <div id="temp-status-age" style="font-size: 11px; color: #888; text-align: center; padding: 4px 0;"></div>
+    </div>
+    <script>
+    (function() {
+        function esc(s) {
+            var d = document.createElement('div');
+            d.appendChild(document.createTextNode(String(s)));
+            return d.innerHTML;
+        }
+        var updating = false;
+        function update() {
+            // Hidden tabs generate zero traffic (2026-08-05 incident: sitewide
+            // widget polling was 60% of server load with solar-monitor)
+            if (document.hidden || updating) return;
+            updating = true;
+            fetch('/wp-json/temp-monitor/v1/latest')
+                .then(function(r) { return r.json(); })
+                .then(function(d) {
+                    if (d.status === 'no_data') {
+                        document.getElementById('temp-status-data').textContent = 'Awaiting first reading...';
+                        return;
+                    }
+                    var colors = {online: '#2ecc40', stale: '#ff851b', offline: '#ff4136'};
+                    document.getElementById('temp-status-dot').style.background = colors[d.status] || '#888';
+
+                    var html = '';
+                    var lastSite = '';
+                    d.sensors.forEach(function(s) {
+                        if (s.site !== lastSite) {
+                            if (lastSite !== '') html += '<div style="height: 4px;"></div>';
+                            lastSite = s.site;
+                        }
+                        var temp = s.temperature != null ? esc(s.temperature.toFixed(1)) + '&deg;F' : '--';
+                        var hum = s.humidity != null ? esc(s.humidity.toFixed(0)) + '%' : '--';
+
+                        // Color code temperature
+                        var tempColor = '#333';
+                        if (s.temperature != null) {
+                            if (s.temperature > 85) tempColor = '#e74c3c';
+                            else if (s.temperature > 75) tempColor = '#f39c12';
+                            else if (s.temperature < 50) tempColor = '#3498db';
+                            else tempColor = '#27ae60';
+                        }
+
+                        html += '<div style="display: flex; justify-content: space-between; align-items: baseline;">';
+                        html += '<span>' + esc(s.name) + '</span>';
+                        html += '<span><b style="color:' + tempColor + ';">' + temp + '</b>';
+                        html += ' <span style="font-size:11px;color:#888;">' + hum + ' RH</span></span>';
+                        html += '</div>';
+                    });
+
+                    document.getElementById('temp-status-data').innerHTML = html;
+
+                    var age = d.age_seconds;
+                    var ageText = age < 60 ? age + 's ago' :
+                                  age < 3600 ? Math.floor(age/60) + 'm ago' :
+                                  Math.floor(age/3600) + 'h ago';
+                    document.getElementById('temp-status-age').textContent = 'Updated ' + ageText;
+                })
+                .catch(function() {
+                    document.getElementById('temp-status-dot').style.background = '#ff4136';
+                    document.getElementById('temp-status-age').textContent = 'Connection error';
+                })
+                .then(function() { updating = false; });
+        }
+        update();
+        setInterval(update, 300000);
+        document.addEventListener('visibilitychange', function() {
+            if (!document.hidden) update();
+        });
+    })();
+    </script>
+    
+</div>
+		</aside><aside id="categories-3" class="widget widget_categories"><h3 class="widgettitle">Blog Categories</h3>
+			<ul>
+					<li class="cat-item cat-item-32"><a href="https://www.jdhodges.com/category/ask-jd/">Ask J.D.</a> (1,077)
+<ul class='children'>
+	<li class="cat-item cat-item-2615"><a href="https://www.jdhodges.com/category/ask-jd/ai/">AI</a> (35)
+</li>
+	<li class="cat-item cat-item-362"><a href="https://www.jdhodges.com/category/ask-jd/android-tips/">Android tips</a> (83)
+</li>
+	<li class="cat-item cat-item-33"><a href="https://www.jdhodges.com/category/ask-jd/camera-tips/">camera tips</a> (52)
+</li>
+	<li class="cat-item cat-item-274"><a href="https://www.jdhodges.com/category/ask-jd/car-tips/">car tips</a> (13)
+</li>
+	<li class="cat-item cat-item-1457"><a href="https://www.jdhodges.com/category/ask-jd/chrome-ask-jd/">Chrome</a> (15)
+</li>
+	<li class="cat-item cat-item-2040"><a href="https://www.jdhodges.com/category/ask-jd/coffee-tips/">Coffee tips</a> (11)
+</li>
+	<li class="cat-item cat-item-78"><a href="https://www.jdhodges.com/category/ask-jd/company-tips/">company tips</a> (17)
+</li>
+	<li class="cat-item cat-item-81"><a href="https://www.jdhodges.com/category/ask-jd/computer-tips/">computer tips</a> (481)
+	<ul class='children'>
+	<li class="cat-item cat-item-503"><a href="https://www.jdhodges.com/category/ask-jd/computer-tips/mac-os-x/">Mac OS X</a> (19)
+</li>
+	<li class="cat-item cat-item-225"><a href="https://www.jdhodges.com/category/ask-jd/computer-tips/unraid-tips-and-tricks/">unRAID tips and tricks</a> (4)
+</li>
+	</ul>
+</li>
+	<li class="cat-item cat-item-1747"><a href="https://www.jdhodges.com/category/ask-jd/database-tips/">Database tips</a> (4)
+</li>
+	<li class="cat-item cat-item-141"><a href="https://www.jdhodges.com/category/ask-jd/fitness-tips/">fitness tips</a> (14)
+</li>
+	<li class="cat-item cat-item-1613"><a href="https://www.jdhodges.com/category/ask-jd/house-ask-jd/">House</a> (29)
+</li>
+	<li class="cat-item cat-item-1387"><a href="https://www.jdhodges.com/category/ask-jd/internet-tips/">Internet tips</a> (37)
+</li>
+	<li class="cat-item cat-item-1249"><a href="https://www.jdhodges.com/category/ask-jd/ios-ask-jd/">iOS</a> (11)
+</li>
+	<li class="cat-item cat-item-969"><a href="https://www.jdhodges.com/category/ask-jd/legal/">legal</a> (7)
+</li>
+	<li class="cat-item cat-item-396"><a href="https://www.jdhodges.com/category/ask-jd/money-tips/">money tips</a> (121)
+</li>
+	<li class="cat-item cat-item-2087"><a href="https://www.jdhodges.com/category/ask-jd/networking/">Networking</a> (13)
+</li>
+	<li class="cat-item cat-item-420"><a href="https://www.jdhodges.com/category/ask-jd/off-the-grid-ask-jd/">Off the Grid</a> (51)
+</li>
+	<li class="cat-item cat-item-355"><a href="https://www.jdhodges.com/category/ask-jd/phone-tips/">Phone tips</a> (51)
+</li>
+	<li class="cat-item cat-item-1622"><a href="https://www.jdhodges.com/category/ask-jd/programming-ask-jd/">programming</a> (14)
+</li>
+	<li class="cat-item cat-item-1196"><a href="https://www.jdhodges.com/category/ask-jd/software-tips/">Software Tips</a> (177)
+</li>
+	<li class="cat-item cat-item-27"><a href="https://www.jdhodges.com/category/ask-jd/tech-tips/">tech tips</a> (202)
+</li>
+	<li class="cat-item cat-item-682"><a href="https://www.jdhodges.com/category/ask-jd/toy-tips/">toy tips</a> (2)
+</li>
+	<li class="cat-item cat-item-118"><a href="https://www.jdhodges.com/category/ask-jd/travel-tips/">Travel tips</a> (21)
+</li>
+	<li class="cat-item cat-item-1792"><a href="https://www.jdhodges.com/category/ask-jd/windows-ask-jd/">Windows</a> (22)
+</li>
+	<li class="cat-item cat-item-39"><a href="https://www.jdhodges.com/category/ask-jd/wordpress-tips/">WordPress tips</a> (37)
+</li>
+</ul>
+</li>
+	<li class="cat-item cat-item-2750"><a href="https://www.jdhodges.com/category/claude-ai/">claude-ai</a> (1)
+</li>
+	<li class="cat-item cat-item-40"><a href="https://www.jdhodges.com/category/daily-updates/">Daily Updates</a> (95)
+</li>
+	<li class="cat-item cat-item-72"><a href="https://www.jdhodges.com/category/entertainment/">Entertainment</a> (44)
+<ul class='children'>
+	<li class="cat-item cat-item-853"><a href="https://www.jdhodges.com/category/entertainment/disc-golf-entertainment/">Disc Golf</a> (4)
+</li>
+	<li class="cat-item cat-item-73"><a href="https://www.jdhodges.com/category/entertainment/games/">Games</a> (19)
+</li>
+	<li class="cat-item cat-item-220"><a href="https://www.jdhodges.com/category/entertainment/kayaking-entertainment/">Kayaking</a> (1)
+</li>
+</ul>
+</li>
+	<li class="cat-item cat-item-281"><a href="https://www.jdhodges.com/category/gadgets/">Gadgets and Tech</a> (263)
+<ul class='children'>
+	<li class="cat-item cat-item-471"><a href="https://www.jdhodges.com/category/gadgets/bought-and-sold/">Bought and Sold</a> (23)
+</li>
+	<li class="cat-item cat-item-280"><a href="https://www.jdhodges.com/category/gadgets/cameras-2/">Cameras</a> (24)
+</li>
+	<li class="cat-item cat-item-28"><a href="https://www.jdhodges.com/category/gadgets/computers/">Computers</a> (87)
+	<ul class='children'>
+	<li class="cat-item cat-item-154"><a href="https://www.jdhodges.com/category/gadgets/computers/building/">Building</a> (28)
+</li>
+	</ul>
+</li>
+</ul>
+</li>
+	<li class="cat-item cat-item-2737"><a href="https://www.jdhodges.com/category/gadgets-and-tech/">gadgets-and-tech</a> (1)
+</li>
+	<li class="cat-item cat-item-63"><a href="https://www.jdhodges.com/category/household/">Household</a> (21)
+<ul class='children'>
+	<li class="cat-item cat-item-151"><a href="https://www.jdhodges.com/category/household/remodeling-home/">Remodeling</a> (9)
+</li>
+</ul>
+</li>
+	<li class="cat-item cat-item-214"><a href="https://www.jdhodges.com/category/misc-links/">Misc Links</a> (207)
+</li>
+	<li class="cat-item cat-item-170"><a href="https://www.jdhodges.com/category/parenting/">parenting</a> (6)
+</li>
+	<li class="cat-item cat-item-53"><a href="https://www.jdhodges.com/category/photography/">photography</a> (44)
+</li>
+	<li class="cat-item cat-item-2814"><a href="https://www.jdhodges.com/category/recipes/">Recipes</a> (5)
+</li>
+	<li class="cat-item cat-item-37"><a href="https://www.jdhodges.com/category/travel/">Travel</a> (21)
+<ul class='children'>
+	<li class="cat-item cat-item-74"><a href="https://www.jdhodges.com/category/travel/hawaii/">Hawaii</a> (4)
+</li>
+</ul>
+</li>
+	<li class="cat-item cat-item-1"><a href="https://www.jdhodges.com/category/uncategorized/">Uncategorized</a> (125)
+</li>
+	<li class="cat-item cat-item-13"><a href="https://www.jdhodges.com/category/work/">Work</a> (188)
+<ul class='children'>
+	<li class="cat-item cat-item-122"><a href="https://www.jdhodges.com/category/work/netrender/">NetRender</a> (7)
+</li>
+	<li class="cat-item cat-item-300"><a href="https://www.jdhodges.com/category/work/weblogs-us/">Weblogs.us</a> (21)
+</li>
+</ul>
+</li>
+			</ul>
+
+			</aside><aside id="archives-3" class="widget widget_archive"><h3 class="widgettitle">Blog Archives</h3>		<label class="screen-reader-text" for="archives-dropdown-3">Blog Archives</label>
+		<select id="archives-dropdown-3" name="archive-dropdown">
+			
+			<option value="">Select Month</option>
+				<option value='https://www.jdhodges.com/blog/2026/08/'> August 2026 &nbsp;(1)</option>
+	<option value='https://www.jdhodges.com/blog/2026/07/'> July 2026 &nbsp;(4)</option>
+	<option value='https://www.jdhodges.com/blog/2026/05/'> May 2026 &nbsp;(9)</option>
+	<option value='https://www.jdhodges.com/blog/2026/04/'> April 2026 &nbsp;(20)</option>
+	<option value='https://www.jdhodges.com/blog/2026/03/'> March 2026 &nbsp;(40)</option>
+	<option value='https://www.jdhodges.com/blog/2026/02/'> February 2026 &nbsp;(8)</option>
+	<option value='https://www.jdhodges.com/blog/2026/01/'> January 2026 &nbsp;(4)</option>
+	<option value='https://www.jdhodges.com/blog/2025/12/'> December 2025 &nbsp;(6)</option>
+	<option value='https://www.jdhodges.com/blog/2025/11/'> November 2025 &nbsp;(1)</option>
+	<option value='https://www.jdhodges.com/blog/2025/08/'> August 2025 &nbsp;(1)</option>
+	<option value='https://www.jdhodges.com/blog/2025/07/'> July 2025 &nbsp;(2)</option>
+	<option value='https://www.jdhodges.com/blog/2025/04/'> April 2025 &nbsp;(1)</option>
+	<option value='https://www.jdhodges.com/blog/2025/03/'> March 2025 &nbsp;(4)</option>
+	<option value='https://www.jdhodges.com/blog/2025/02/'> February 2025 &nbsp;(19)</option>
+	<option value='https://www.jdhodges.com/blog/2025/01/'> January 2025 &nbsp;(8)</option>
+	<option value='https://www.jdhodges.com/blog/2024/11/'> November 2024 &nbsp;(4)</option>
+	<option value='https://www.jdhodges.com/blog/2024/06/'> June 2024 &nbsp;(1)</option>
+	<option value='https://www.jdhodges.com/blog/2024/05/'> May 2024 &nbsp;(4)</option>
+	<option value='https://www.jdhodges.com/blog/2024/04/'> April 2024 &nbsp;(6)</option>
+	<option value='https://www.jdhodges.com/blog/2024/03/'> March 2024 &nbsp;(6)</option>
+	<option value='https://www.jdhodges.com/blog/2024/01/'> January 2024 &nbsp;(1)</option>
+	<option value='https://www.jdhodges.com/blog/2023/12/'> December 2023 &nbsp;(2)</option>
+	<option value='https://www.jdhodges.com/blog/2023/11/'> November 2023 &nbsp;(2)</option>
+	<option value='https://www.jdhodges.com/blog/2023/10/'> October 2023 &nbsp;(2)</option>
+	<option value='https://www.jdhodges.com/blog/2023/09/'> September 2023 &nbsp;(3)</option>
+	<option value='https://www.jdhodges.com/blog/2023/07/'> July 2023 &nbsp;(4)</option>
+	<option value='https://www.jdhodges.com/blog/2023/06/'> June 2023 &nbsp;(1)</option>
+	<option value='https://www.jdhodges.com/blog/2023/04/'> April 2023 &nbsp;(1)</option>
+	<option value='https://www.jdhodges.com/blog/2023/03/'> March 2023 &nbsp;(1)</option>
+	<option value='https://www.jdhodges.com/blog/2023/02/'> February 2023 &nbsp;(16)</option>
+	<option value='https://www.jdhodges.com/blog/2023/01/'> January 2023 &nbsp;(2)</option>
+	<option value='https://www.jdhodges.com/blog/2022/12/'> December 2022 &nbsp;(2)</option>
+	<option value='https://www.jdhodges.com/blog/2022/08/'> August 2022 &nbsp;(1)</option>
+	<option value='https://www.jdhodges.com/blog/2022/04/'> April 2022 &nbsp;(2)</option>
+	<option value='https://www.jdhodges.com/blog/2022/01/'> January 2022 &nbsp;(2)</option>
+	<option value='https://www.jdhodges.com/blog/2021/12/'> December 2021 &nbsp;(1)</option>
+	<option value='https://www.jdhodges.com/blog/2021/11/'> November 2021 &nbsp;(1)</option>
+	<option value='https://www.jdhodges.com/blog/2021/08/'> August 2021 &nbsp;(1)</option>
+	<option value='https://www.jdhodges.com/blog/2021/05/'> May 2021 &nbsp;(2)</option>
+	<option value='https://www.jdhodges.com/blog/2021/04/'> April 2021 &nbsp;(1)</option>
+	<option value='https://www.jdhodges.com/blog/2021/03/'> March 2021 &nbsp;(2)</option>
+	<option value='https://www.jdhodges.com/blog/2021/02/'> February 2021 &nbsp;(2)</option>
+	<option value='https://www.jdhodges.com/blog/2021/01/'> January 2021 &nbsp;(1)</option>
+	<option value='https://www.jdhodges.com/blog/2020/08/'> August 2020 &nbsp;(2)</option>
+	<option value='https://www.jdhodges.com/blog/2020/07/'> July 2020 &nbsp;(1)</option>
+	<option value='https://www.jdhodges.com/blog/2020/06/'> June 2020 &nbsp;(5)</option>
+	<option value='https://www.jdhodges.com/blog/2020/05/'> May 2020 &nbsp;(2)</option>
+	<option value='https://www.jdhodges.com/blog/2020/04/'> April 2020 &nbsp;(3)</option>
+	<option value='https://www.jdhodges.com/blog/2020/03/'> March 2020 &nbsp;(3)</option>
+	<option value='https://www.jdhodges.com/blog/2020/01/'> January 2020 &nbsp;(1)</option>
+	<option value='https://www.jdhodges.com/blog/2019/11/'> November 2019 &nbsp;(1)</option>
+	<option value='https://www.jdhodges.com/blog/2019/10/'> October 2019 &nbsp;(1)</option>
+	<option value='https://www.jdhodges.com/blog/2019/09/'> September 2019 &nbsp;(1)</option>
+	<option value='https://www.jdhodges.com/blog/2019/05/'> May 2019 &nbsp;(1)</option>
+	<option value='https://www.jdhodges.com/blog/2019/03/'> March 2019 &nbsp;(7)</option>
+	<option value='https://www.jdhodges.com/blog/2019/02/'> February 2019 &nbsp;(7)</option>
+	<option value='https://www.jdhodges.com/blog/2019/01/'> January 2019 &nbsp;(8)</option>
+	<option value='https://www.jdhodges.com/blog/2018/12/'> December 2018 &nbsp;(4)</option>
+	<option value='https://www.jdhodges.com/blog/2018/11/'> November 2018 &nbsp;(3)</option>
+	<option value='https://www.jdhodges.com/blog/2018/10/'> October 2018 &nbsp;(2)</option>
+	<option value='https://www.jdhodges.com/blog/2018/08/'> August 2018 &nbsp;(2)</option>
+	<option value='https://www.jdhodges.com/blog/2018/07/'> July 2018 &nbsp;(5)</option>
+	<option value='https://www.jdhodges.com/blog/2018/05/'> May 2018 &nbsp;(2)</option>
+	<option value='https://www.jdhodges.com/blog/2018/04/'> April 2018 &nbsp;(1)</option>
+	<option value='https://www.jdhodges.com/blog/2018/02/'> February 2018 &nbsp;(4)</option>
+	<option value='https://www.jdhodges.com/blog/2018/01/'> January 2018 &nbsp;(3)</option>
+	<option value='https://www.jdhodges.com/blog/2017/12/'> December 2017 &nbsp;(5)</option>
+	<option value='https://www.jdhodges.com/blog/2017/11/'> November 2017 &nbsp;(2)</option>
+	<option value='https://www.jdhodges.com/blog/2017/10/'> October 2017 &nbsp;(1)</option>
+	<option value='https://www.jdhodges.com/blog/2017/09/'> September 2017 &nbsp;(1)</option>
+	<option value='https://www.jdhodges.com/blog/2017/08/'> August 2017 &nbsp;(5)</option>
+	<option value='https://www.jdhodges.com/blog/2017/07/'> July 2017 &nbsp;(8)</option>
+	<option value='https://www.jdhodges.com/blog/2017/06/'> June 2017 &nbsp;(9)</option>
+	<option value='https://www.jdhodges.com/blog/2017/05/'> May 2017 &nbsp;(3)</option>
+	<option value='https://www.jdhodges.com/blog/2017/04/'> April 2017 &nbsp;(5)</option>
+	<option value='https://www.jdhodges.com/blog/2017/03/'> March 2017 &nbsp;(7)</option>
+	<option value='https://www.jdhodges.com/blog/2017/02/'> February 2017 &nbsp;(14)</option>
+	<option value='https://www.jdhodges.com/blog/2017/01/'> January 2017 &nbsp;(11)</option>
+	<option value='https://www.jdhodges.com/blog/2016/11/'> November 2016 &nbsp;(10)</option>
+	<option value='https://www.jdhodges.com/blog/2016/10/'> October 2016 &nbsp;(1)</option>
+	<option value='https://www.jdhodges.com/blog/2016/09/'> September 2016 &nbsp;(8)</option>
+	<option value='https://www.jdhodges.com/blog/2016/08/'> August 2016 &nbsp;(9)</option>
+	<option value='https://www.jdhodges.com/blog/2016/07/'> July 2016 &nbsp;(12)</option>
+	<option value='https://www.jdhodges.com/blog/2016/06/'> June 2016 &nbsp;(6)</option>
+	<option value='https://www.jdhodges.com/blog/2016/05/'> May 2016 &nbsp;(6)</option>
+	<option value='https://www.jdhodges.com/blog/2016/04/'> April 2016 &nbsp;(4)</option>
+	<option value='https://www.jdhodges.com/blog/2016/03/'> March 2016 &nbsp;(11)</option>
+	<option value='https://www.jdhodges.com/blog/2016/02/'> February 2016 &nbsp;(8)</option>
+	<option value='https://www.jdhodges.com/blog/2016/01/'> January 2016 &nbsp;(10)</option>
+	<option value='https://www.jdhodges.com/blog/2015/12/'> December 2015 &nbsp;(8)</option>
+	<option value='https://www.jdhodges.com/blog/2015/11/'> November 2015 &nbsp;(6)</option>
+	<option value='https://www.jdhodges.com/blog/2015/10/'> October 2015 &nbsp;(12)</option>
+	<option value='https://www.jdhodges.com/blog/2015/09/'> September 2015 &nbsp;(7)</option>
+	<option value='https://www.jdhodges.com/blog/2015/08/'> August 2015 &nbsp;(4)</option>
+	<option value='https://www.jdhodges.com/blog/2015/07/'> July 2015 &nbsp;(3)</option>
+	<option value='https://www.jdhodges.com/blog/2015/06/'> June 2015 &nbsp;(2)</option>
+	<option value='https://www.jdhodges.com/blog/2015/05/'> May 2015 &nbsp;(16)</option>
+	<option value='https://www.jdhodges.com/blog/2015/04/'> April 2015 &nbsp;(12)</option>
+	<option value='https://www.jdhodges.com/blog/2015/03/'> March 2015 &nbsp;(12)</option>
+	<option value='https://www.jdhodges.com/blog/2015/02/'> February 2015 &nbsp;(8)</option>
+	<option value='https://www.jdhodges.com/blog/2015/01/'> January 2015 &nbsp;(4)</option>
+	<option value='https://www.jdhodges.com/blog/2014/12/'> December 2014 &nbsp;(5)</option>
+	<option value='https://www.jdhodges.com/blog/2014/11/'> November 2014 &nbsp;(8)</option>
+	<option value='https://www.jdhodges.com/blog/2014/10/'> October 2014 &nbsp;(20)</option>
+	<option value='https://www.jdhodges.com/blog/2014/09/'> September 2014 &nbsp;(7)</option>
+	<option value='https://www.jdhodges.com/blog/2014/08/'> August 2014 &nbsp;(9)</option>
+	<option value='https://www.jdhodges.com/blog/2014/07/'> July 2014 &nbsp;(7)</option>
+	<option value='https://www.jdhodges.com/blog/2014/06/'> June 2014 &nbsp;(8)</option>
+	<option value='https://www.jdhodges.com/blog/2014/05/'> May 2014 &nbsp;(9)</option>
+	<option value='https://www.jdhodges.com/blog/2014/04/'> April 2014 &nbsp;(12)</option>
+	<option value='https://www.jdhodges.com/blog/2014/03/'> March 2014 &nbsp;(18)</option>
+	<option value='https://www.jdhodges.com/blog/2014/02/'> February 2014 &nbsp;(25)</option>
+	<option value='https://www.jdhodges.com/blog/2014/01/'> January 2014 &nbsp;(17)</option>
+	<option value='https://www.jdhodges.com/blog/2013/12/'> December 2013 &nbsp;(15)</option>
+	<option value='https://www.jdhodges.com/blog/2013/11/'> November 2013 &nbsp;(3)</option>
+	<option value='https://www.jdhodges.com/blog/2013/10/'> October 2013 &nbsp;(5)</option>
+	<option value='https://www.jdhodges.com/blog/2013/09/'> September 2013 &nbsp;(14)</option>
+	<option value='https://www.jdhodges.com/blog/2013/08/'> August 2013 &nbsp;(13)</option>
+	<option value='https://www.jdhodges.com/blog/2013/07/'> July 2013 &nbsp;(30)</option>
+	<option value='https://www.jdhodges.com/blog/2013/06/'> June 2013 &nbsp;(31)</option>
+	<option value='https://www.jdhodges.com/blog/2013/05/'> May 2013 &nbsp;(35)</option>
+	<option value='https://www.jdhodges.com/blog/2013/04/'> April 2013 &nbsp;(20)</option>
+	<option value='https://www.jdhodges.com/blog/2013/03/'> March 2013 &nbsp;(30)</option>
+	<option value='https://www.jdhodges.com/blog/2013/02/'> February 2013 &nbsp;(19)</option>
+	<option value='https://www.jdhodges.com/blog/2013/01/'> January 2013 &nbsp;(11)</option>
+	<option value='https://www.jdhodges.com/blog/2012/12/'> December 2012 &nbsp;(13)</option>
+	<option value='https://www.jdhodges.com/blog/2012/11/'> November 2012 &nbsp;(15)</option>
+	<option value='https://www.jdhodges.com/blog/2012/10/'> October 2012 &nbsp;(15)</option>
+	<option value='https://www.jdhodges.com/blog/2012/09/'> September 2012 &nbsp;(29)</option>
+	<option value='https://www.jdhodges.com/blog/2012/08/'> August 2012 &nbsp;(14)</option>
+	<option value='https://www.jdhodges.com/blog/2012/07/'> July 2012 &nbsp;(21)</option>
+	<option value='https://www.jdhodges.com/blog/2012/06/'> June 2012 &nbsp;(28)</option>
+	<option value='https://www.jdhodges.com/blog/2012/05/'> May 2012 &nbsp;(15)</option>
+	<option value='https://www.jdhodges.com/blog/2012/04/'> April 2012 &nbsp;(17)</option>
+	<option value='https://www.jdhodges.com/blog/2012/03/'> March 2012 &nbsp;(18)</option>
+	<option value='https://www.jdhodges.com/blog/2012/02/'> February 2012 &nbsp;(18)</option>
+	<option value='https://www.jdhodges.com/blog/2012/01/'> January 2012 &nbsp;(33)</option>
+	<option value='https://www.jdhodges.com/blog/2011/12/'> December 2011 &nbsp;(12)</option>
+	<option value='https://www.jdhodges.com/blog/2011/11/'> November 2011 &nbsp;(11)</option>
+	<option value='https://www.jdhodges.com/blog/2011/10/'> October 2011 &nbsp;(27)</option>
+	<option value='https://www.jdhodges.com/blog/2011/09/'> September 2011 &nbsp;(28)</option>
+	<option value='https://www.jdhodges.com/blog/2011/08/'> August 2011 &nbsp;(20)</option>
+	<option value='https://www.jdhodges.com/blog/2011/07/'> July 2011 &nbsp;(12)</option>
+	<option value='https://www.jdhodges.com/blog/2011/06/'> June 2011 &nbsp;(21)</option>
+	<option value='https://www.jdhodges.com/blog/2011/05/'> May 2011 &nbsp;(16)</option>
+	<option value='https://www.jdhodges.com/blog/2011/04/'> April 2011 &nbsp;(12)</option>
+	<option value='https://www.jdhodges.com/blog/2011/03/'> March 2011 &nbsp;(8)</option>
+	<option value='https://www.jdhodges.com/blog/2011/02/'> February 2011 &nbsp;(3)</option>
+	<option value='https://www.jdhodges.com/blog/2011/01/'> January 2011 &nbsp;(3)</option>
+	<option value='https://www.jdhodges.com/blog/2010/09/'> September 2010 &nbsp;(1)</option>
+	<option value='https://www.jdhodges.com/blog/2010/08/'> August 2010 &nbsp;(6)</option>
+	<option value='https://www.jdhodges.com/blog/2010/07/'> July 2010 &nbsp;(2)</option>
+	<option value='https://www.jdhodges.com/blog/2010/05/'> May 2010 &nbsp;(5)</option>
+	<option value='https://www.jdhodges.com/blog/2010/04/'> April 2010 &nbsp;(5)</option>
+	<option value='https://www.jdhodges.com/blog/2010/03/'> March 2010 &nbsp;(7)</option>
+	<option value='https://www.jdhodges.com/blog/2010/02/'> February 2010 &nbsp;(6)</option>
+	<option value='https://www.jdhodges.com/blog/2010/01/'> January 2010 &nbsp;(9)</option>
+	<option value='https://www.jdhodges.com/blog/2009/12/'> December 2009 &nbsp;(12)</option>
+	<option value='https://www.jdhodges.com/blog/2009/11/'> November 2009 &nbsp;(4)</option>
+	<option value='https://www.jdhodges.com/blog/2009/10/'> October 2009 &nbsp;(3)</option>
+	<option value='https://www.jdhodges.com/blog/2009/09/'> September 2009 &nbsp;(9)</option>
+	<option value='https://www.jdhodges.com/blog/2009/08/'> August 2009 &nbsp;(8)</option>
+	<option value='https://www.jdhodges.com/blog/2009/07/'> July 2009 &nbsp;(5)</option>
+	<option value='https://www.jdhodges.com/blog/2009/06/'> June 2009 &nbsp;(1)</option>
+	<option value='https://www.jdhodges.com/blog/2009/05/'> May 2009 &nbsp;(6)</option>
+	<option value='https://www.jdhodges.com/blog/2009/04/'> April 2009 &nbsp;(7)</option>
+	<option value='https://www.jdhodges.com/blog/2009/03/'> March 2009 &nbsp;(11)</option>
+	<option value='https://www.jdhodges.com/blog/2009/02/'> February 2009 &nbsp;(5)</option>
+	<option value='https://www.jdhodges.com/blog/2006/11/'> November 2006 &nbsp;(1)</option>
+	<option value='https://www.jdhodges.com/blog/2003/11/'> November 2003 &nbsp;(1)</option>
+
+		</select>
+
+			<script type="text/javascript">
+/* <![CDATA[ */
+
+( ( dropdownId ) => {
+	const dropdown = document.getElementById( dropdownId );
+	function onSelectChange() {
+		setTimeout( () => {
+			if ( 'escape' === dropdown.dataset.lastkey ) {
+				return;
+			}
+			if ( dropdown.value ) {
+				document.location.href = dropdown.value;
+			}
+		}, 250 );
+	}
+	function onKeyUp( event ) {
+		if ( 'Escape' === event.key ) {
+			dropdown.dataset.lastkey = 'escape';
+		} else {
+			delete dropdown.dataset.lastkey;
+		}
+	}
+	function onClick() {
+		delete dropdown.dataset.lastkey;
+	}
+	dropdown.addEventListener( 'keyup', onKeyUp );
+	dropdown.addEventListener( 'click', onClick );
+	dropdown.addEventListener( 'change', onSelectChange );
+})( "archives-dropdown-3" );
+
+//# sourceURL=WP_Widget_Archives%3A%3Awidget
+/* ]]> */
+</script>
+</aside><aside id="text-9" class="widget widget_text"><h3 class="widgettitle">Please Note</h3>			<div class="textwidget"><p>If you purchase a product from Amazon via a <a rel="sponsored noopener" href="https://www.amazon.com/?_encoding=UTF8&amp;tag=pixensity-20">link on my site</a> I may benefit from the sale, though it does not cost you anything extra. Thanks again for visiting my site and have a GREAT day!</p>
+</div>
+		</aside><aside id="search-3" class="widget widget_search">
+	<form role="search" method="get" id="searchform" action="https://www.jdhodges.com/">
+		<input type="text" value="" name="s" id="s" placeholder="Search..." />
+		<input type="submit" id="searchsubmit" value="" />
+	</form>
+</aside><aside id="custom_html-1" class="widget_text widget widget_custom_html"><h3 class="widgettitle">Featured Posts</h3><div class="textwidget custom-html-widget"><a href="/blog/displayport-mst-lcd-list/" class="featured-card-link"><strong>DisplayPort MST Monitor List (2026)</strong><br><span style="font-size:0.9em;color:#555">Daisy-chainable monitors, Mac limitations, and dock compatibility</span></a>
+<a href="/blog/macbook-neo-benchmarks-analysis/" class="featured-card-link"><strong>MacBook Neo Deep Dive</strong><br><span style="font-size:0.9em;color:#555">Benchmarks, wafer economics, and the 8GB gamble</span></a>
+<a href="/blog/temu-1000-reward-claimed-screen-is-it-legit/" class="featured-card-link"><strong>Temu $1,000 Reward Claimed</strong><br><span style="font-size:0.9em;color:#555">Is it legit? What you need to know</span></a>
+<a href="/blog/claude-ai-custom-instructions-a-real-example-that-actually-works/" class="featured-card-link"><strong>Claude AI Custom Instructions</strong><br><span style="font-size:0.9em;color:#555">A real example that actually works</span></a></div></aside><aside id="text-7" class="widget widget_text">			<div class="textwidget"><div class="author-box"><strong>About <a href="https://plus.google.com/106282983883202575997?rel=author" rel="author">J.D. Hodges</a></strong><br /><p><img class="alignleft size-thumbnail wp-image-7046" alt="J.D. Hodges Google+ profile photo" src="https://www.jdhodges.com/wp-content/uploads/2014/03/n26401995_31040552_1268-200x200.jpg" width="100" height="100" />J.D. is an attorney and IT professional living off the grid. He has been a tech enthusiast ever since his dad let him play with computers in the early 80s. Now jdhodges.com is where he shares tech tips. Thanks for visiting & feel free to join in the discussion by commenting :-)
+</a></p>
+</div></div>
+		</aside><aside id="text-11" class="widget widget_text"><h3 class="widgettitle">Solar System</h3>			<div class="textwidget">    <style>
+    #solar-status-widget .jsw-rows { display: grid; grid-template-columns: auto 1fr; gap: 1px 10px; padding: 0 2px; align-items: baseline; font-variant-numeric: tabular-nums; }
+    #solar-status-widget .jsw-lab { white-space: nowrap; font-weight: 700; }
+    #solar-status-widget .jsw-val { white-space: nowrap; text-align: right; }
+    #solar-status-widget .jsw-sub { grid-column: 2; text-align: right; color: #666; font-size: 12px; margin-top: -3px; }
+    #solar-status-widget .jsw-up { color: #1e8449; }
+    #solar-status-widget .jsw-dn { color: #c0392b; }
+    #solar-status-widget .jsw-flat { color: #555; }
+    #solar-status-widget .jsw-w { font-weight: 800; }
+    #solar-status-widget .jsw-word { font-weight: 600; font-size: 12px; }
+    #solar-status-widget .jsw-mut { color: #666; }
+    #solar-status-widget .jsw-title a { color: inherit; text-decoration: none; }
+    #solar-status-widget .jsw-title a:hover, #solar-status-widget .jsw-title a:focus-visible { text-decoration: underline; }
+    #solar-status-widget .jsw-status { font-weight: 600; font-size: 11.5px; margin-left: 4px; vertical-align: middle; }
+    #solar-status-widget .jsw-q { position: absolute; right: 0; top: -2px; width: 26px; height: 26px; border-radius: 50%; border: 1px solid #c8d1d9; background: #f4f6f8; color: #444; font-weight: 700; font-size: 13px; cursor: pointer; line-height: 1; padding: 0; }
+    #solar-status-widget .jsw-q:hover { background: #e9edf1; }
+    #solar-status-widget .jsw-q:focus-visible, #solar-status-widget .solar-explain-close:focus-visible { outline: 2px solid #2471a3; outline-offset: 2px; }
+    #solar-status-widget .jsw-explain { margin: 8px 0 4px; border: 1px solid #d5dbe1; border-radius: 6px; background: #f7f9fa; padding: 10px 12px; font-size: 12px; line-height: 1.5; color: #333; text-align: left; }
+    #solar-status-widget .jsw-explain dt { font-weight: 700; margin-top: 6px; }
+    #solar-status-widget .jsw-explain dt:first-of-type { margin-top: 0; }
+    #solar-status-widget .jsw-explain dd { margin: 0 0 2px; color: #4a5560; }
+    #solar-status-widget .solar-explain-close { float: right; border: 0; background: none; cursor: pointer; font-size: 13px; color: #666; padding: 2px 4px; }
+    #solar-status-widget .jsw-age a { color: #2471a3; text-decoration: none; font-weight: 600; }
+    #solar-status-widget .jsw-age a:hover, #solar-status-widget .jsw-age a:focus-visible { text-decoration: underline; }
+    </style>
+    <div id="solar-status-widget" style="font-family: system-ui, -apple-system, sans-serif; font-size: 13px; line-height: 1.65;">
+        <div class="jsw-title" style="text-align: center; padding: 4px 0 8px; position: relative;">
+            <span id="solar-status-dot" style="display: inline-block; width: 10px; height: 10px; border-radius: 50%; background: #888; vertical-align: middle;"></span>
+            <strong style="vertical-align: middle; margin-left: 4px;"><a href="/solar-system-monitor/">Off-Grid Solar</a></strong>
+            <span id="solar-status-word" class="jsw-status"></span>
+            <button type="button" class="jsw-q" id="solar-widget-q" aria-expanded="false" aria-label="About these numbers">?</button>
+        </div>
+        <div id="solar-soc-headline" style="text-align: center; padding: 0 0 6px; display: none;">
+            <span id="solar-soc-value" style="font-size: 28px; font-weight: bold; color: #27ae60;">--%</span>
+            <div style="font-size: 11px; color: #666; margin-top: -2px;">Battery SOC</div>
+        </div>
+        <div class="jsw-explain" id="solar-widget-explain" hidden><button type="button" class="solar-explain-close" aria-label="Close">&#10005;</button><dl style="margin:0;"><dt>Battery SOC</dt><dd>the battery&#039;s fuel gauge (min = today&#039;s lowest).</dd><dt>Battery (net)</dt><dd>what the battery is doing right now: + charging, − draining.</dd><dt>Solar</dt><dd>what the solar panels are producing right now.</dd><dt>Inverter 1 out</dt><dd>power going to the circuits on the main inverter.</dd><dt>Other (net)</dt><dd>everything else combined: the second inverter&#039;s circuits and any external chargers. Inputs and loads can cancel, so this isn&#039;t total usage.</dd><dt>AC / DC</dt><dd>the battery side runs on DC power; house circuits run on AC. The tag on each line says which side you&#039;re looking at.</dd><dt>Solar Chargers</dt><dd>the solar charge controllers&#039; mode. &quot;Silent&quot; just means they&#039;re resting (normal at night).</dd><dt>Last full</dt><dd>how long since the battery was last completely charged.</dd><dt>Green dot / Online</dt><dd>the monitor itself is healthy; &quot;Updated Xs ago&quot; is the reading&#039;s age.</dd></dl></div>
+        <div id="solar-status-data" style="padding: 0 4px;">Loading...</div>
+        <div id="solar-status-age" class="jsw-age" style="font-size: 11px; color: #666; text-align: center; padding: 5px 0 0;"></div>
+    </div>
+    <script>
+    (function() {
+        function esc(s) {
+            var d = document.createElement('div');
+            d.appendChild(document.createTextNode(String(s)));
+            return d.innerHTML;
+        }
+        function fmt(n) { return n != null ? esc(Math.round(n).toLocaleString()) : '--'; }
+        // Derive freshness from the reading timestamp (UTC) instead of trusting
+        // the served age_seconds — responses are HTTP-cacheable for up to 30s.
+        function deriveAge(d) {
+            var t = Date.parse(String(d.timestamp).replace(' ', 'T') + 'Z');
+            if (isNaN(t)) return d.age_seconds;
+            return Math.max(0, Math.round((Date.now() - t) / 1000));
+        }
+        var updating = false;
+        function update() {
+            // Hidden tabs generate zero traffic; visibilitychange refreshes on return
+            if (document.hidden || updating) return;
+            updating = true;
+            fetch('/wp-json/solar-monitor/v1/latest')
+                .then(function(r) {
+                    if (!r.ok) throw new Error('HTTP ' + r.status);
+                    return r.json();
+                })
+                .then(function(d) {
+                    if (d.status === 'no_data') {
+                        document.getElementById('solar-status-data').textContent = 'Awaiting first reading...';
+                        return;
+                    }
+                    var ageSec = deriveAge(d);
+                    var liveStatus = ageSec < 180 ? 'online' : ageSec < 600 ? 'stale' : 'offline';
+                    var colors = {online: '#2ecc40', stale: '#ff851b', offline: '#ff4136'};
+                    document.getElementById('solar-status-dot').style.background = colors[liveStatus] || '#888';
+                    // Textual status beside the dot (color-blind safe)
+                    var words = {online: ['Online', '#1e8449'], stale: ['Stale', '#a05c00'], offline: ['Offline', '#c0392b']};
+                    var wordEl = document.getElementById('solar-status-word');
+                    if (words[liveStatus]) {
+                        wordEl.textContent = words[liveStatus][0];
+                        wordEl.style.color = words[liveStatus][1];
+                    } else {
+                        wordEl.textContent = '';
+                    }
+
+                    // SOC headline
+                    var socEl = document.getElementById('solar-soc-headline');
+                    var socVal = document.getElementById('solar-soc-value');
+                    if (d.battery_soc != null) {
+                        socEl.style.display = 'block';
+                        var soc = Math.round(d.battery_soc);
+                        socVal.textContent = soc + '%';
+                        // Color: green > 50, orange 20-50, red < 20
+                        socVal.style.color = soc > 50 ? '#27ae60' : soc > 20 ? '#f39c12' : '#e74c3c';
+                    } else {
+                        socEl.style.display = 'none';
+                    }
+
+                    // Coarse W from A x V, rounded to 10W: the rounding IS the
+                    // uncertainty disclosure (no tildes by design; tooltips and
+                    // the [?] panel carry the estimate language).
+                    function approxW(amps) {
+                        return Math.round(amps * d.battery_voltage / 10) * 10;
+                    }
+                    // Round BEFORE choosing the sign: (-0).toLocaleString() is "-0"
+                    // and (-0.04).toFixed(1) is "-0.0" — normalize both to plain 0.
+                    function signedW(w) {
+                        var r = Math.round(w);
+                        if (r === 0) r = 0;
+                        return (r > 0 ? '+' : '') + r.toLocaleString() + 'W';
+                    }
+                    function signedA(a) {
+                        var v = a.toFixed(1);
+                        if (v === '-0.0') v = '0.0';
+                        return (parseFloat(v) > 0 ? '+' : '') + v + 'A';
+                    }
+
+                    var rows = '';
+                    function row(emoji, label, tip, valueHtml) {
+                        rows += '<span class="jsw-lab"' + (tip ? ' title="' + tip + '"' : '') + '><span aria-hidden="true">' + emoji + '</span> ' + label + '</span><span class="jsw-val">' + valueHtml + '</span>';
+                    }
+
+                    // Battery (net): bold signed W + word; balanced band |W| < 50
+                    var vTxt = esc(d.battery_voltage) + 'V DC';
+                    if (d.battery_current != null && d.battery_voltage > 0) {
+                        var bw = approxW(d.battery_current);
+                        var cls = bw >= 50 ? 'jsw-up' : bw <= -50 ? 'jsw-dn' : 'jsw-flat';
+                        var word = bw >= 50 ? 'charging' : bw <= -50 ? 'draining' : 'balanced';
+                        row('\u26a1', 'Battery (net)', 'Net battery power: every charging and draining path combined',
+                            '<span class="jsw-w ' + cls + '">' + esc(signedW(bw)) + '</span> <span class="jsw-word ' + cls + '">' + word + '</span>');
+                        rows += '<span class="jsw-sub">' + vTxt + ' \u00b7 ' + esc(signedA(d.battery_current)) + '</span>';
+                    } else {
+                        row('\u26a1', 'Battery (net)', 'Net battery power: every charging and draining path combined', vTxt);
+                    }
+                    row('\u2600\ufe0f', 'Solar', 'Solar panel production right now', fmt(d.solar_watts) + 'W');
+                    var invVal = fmt(d.house_load_watts) + 'W';
+                    if (d.ac_output_voltage != null) {
+                        invVal += ' \u00b7 ' + esc(Math.round(d.ac_output_voltage)) + 'V AC';
+                    }
+                    row('\ud83c\udfe0', 'Inverter 1 out', 'Main inverter AC output only; its amp telemetry is whole-number, so watts are approximate. Other circuits appear under Other (net).', invVal);
+                    if (d.aux_net_amps != null && d.battery_voltage > 0) {
+                        var aw = approxW(d.aux_net_amps);
+                        row('\ud83d\udd0c', 'Other (net)', 'Net of all other chargers and loads (estimate): positive = outside power coming in, negative = extra loads drawing',
+                            esc(signedW(aw)) + ' <span class="jsw-mut">\u00b7 ' + esc(signedA(d.aux_net_amps)) + ' DC</span>');
+                    }
+                    row('\ud83d\udcca', 'Solar today', 'Solar energy produced so far today', esc(d.solar_daily_kwh) + ' kWh');
+                    row('\ud83d\udd06', 'Solar Chargers', 'Solar charge controller mode; external chargers are not reflected here', esc(d.charge_state));
+                    if (d.days_since_full != null) {
+                        rows += '<span class="jsw-sub">last full ' + esc(d.days_since_full.toFixed(1)) + 'd ago</span>';
+                    }
+
+                    document.getElementById('solar-status-data').innerHTML = '<div class="jsw-rows">' + rows + '</div>';
+
+                    var ageText = ageSec < 60 ? ageSec + 's ago' :
+                                  ageSec < 3600 ? Math.floor(ageSec/60) + 'm ago' :
+                                  Math.floor(ageSec/3600) + 'h ago';
+                    document.getElementById('solar-status-age').innerHTML = 'Updated ' + esc(ageText) + ' \u00b7 <a href="/solar-system-monitor/">View charts \u2192</a>';
+                })
+                .catch(function() {
+                    document.getElementById('solar-status-dot').style.background = '#ff4136';
+                    document.getElementById('solar-status-word').textContent = '';
+                    document.getElementById('solar-status-age').textContent = 'Connection error';
+                })
+                .then(function() { updating = false; });
+        }
+        // [?] explainer: real button (hover titles don't exist on phones)
+        var qBtn = document.getElementById('solar-widget-q');
+        var qPanel = document.getElementById('solar-widget-explain');
+        if (qBtn && qPanel) {
+            var qToggle = function(open) {
+                qPanel.hidden = !open;
+                qBtn.setAttribute('aria-expanded', String(open));
+            };
+            qBtn.addEventListener('click', function() { qToggle(qPanel.hidden); });
+            qPanel.querySelector('.solar-explain-close').addEventListener('click', function() { qToggle(false); qBtn.focus(); });
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape' && !qPanel.hidden) { qToggle(false); qBtn.focus(); }
+            });
+        }
+
+        update();
+        // 300s cadence: this widget renders sitewide, and 60s polling from every
+        // open tab was 141k req/day (60% of server load, 2026-08-05 incident).
+        setInterval(update, 300000);
+        document.addEventListener('visibilitychange', function() {
+            if (!document.hidden) update();
+        });
+    })();
+    </script>
+    </div>
+		</aside><aside id="text-12" class="widget widget_text"><h3 class="widgettitle">Indoor Temps</h3>			<div class="textwidget">    <div id="temp-status-widget" style="font-family: system-ui, -apple-system, sans-serif; font-size: 13px; line-height: 1.7;">
+        <div style="text-align: center; padding: 4px 0 8px;">
+            <span id="temp-status-dot" style="display: inline-block; width: 10px; height: 10px; border-radius: 50%; background: #888; vertical-align: middle;"></span>
+            <strong style="vertical-align: middle; margin-left: 4px;">Indoor Temps</strong>
+        </div>
+        <div id="temp-status-data" style="padding: 0 4px;">Loading...</div>
+        <div id="temp-status-age" style="font-size: 11px; color: #888; text-align: center; padding: 4px 0;"></div>
+    </div>
+    <script>
+    (function() {
+        function esc(s) {
+            var d = document.createElement('div');
+            d.appendChild(document.createTextNode(String(s)));
+            return d.innerHTML;
+        }
+        var updating = false;
+        function update() {
+            // Hidden tabs generate zero traffic (2026-08-05 incident: sitewide
+            // widget polling was 60% of server load with solar-monitor)
+            if (document.hidden || updating) return;
+            updating = true;
+            fetch('/wp-json/temp-monitor/v1/latest')
+                .then(function(r) { return r.json(); })
+                .then(function(d) {
+                    if (d.status === 'no_data') {
+                        document.getElementById('temp-status-data').textContent = 'Awaiting first reading...';
+                        return;
+                    }
+                    var colors = {online: '#2ecc40', stale: '#ff851b', offline: '#ff4136'};
+                    document.getElementById('temp-status-dot').style.background = colors[d.status] || '#888';
+
+                    var html = '';
+                    var lastSite = '';
+                    d.sensors.forEach(function(s) {
+                        if (s.site !== lastSite) {
+                            if (lastSite !== '') html += '<div style="height: 4px;"></div>';
+                            lastSite = s.site;
+                        }
+                        var temp = s.temperature != null ? esc(s.temperature.toFixed(1)) + '&deg;F' : '--';
+                        var hum = s.humidity != null ? esc(s.humidity.toFixed(0)) + '%' : '--';
+
+                        // Color code temperature
+                        var tempColor = '#333';
+                        if (s.temperature != null) {
+                            if (s.temperature > 85) tempColor = '#e74c3c';
+                            else if (s.temperature > 75) tempColor = '#f39c12';
+                            else if (s.temperature < 50) tempColor = '#3498db';
+                            else tempColor = '#27ae60';
+                        }
+
+                        html += '<div style="display: flex; justify-content: space-between; align-items: baseline;">';
+                        html += '<span>' + esc(s.name) + '</span>';
+                        html += '<span><b style="color:' + tempColor + ';">' + temp + '</b>';
+                        html += ' <span style="font-size:11px;color:#888;">' + hum + ' RH</span></span>';
+                        html += '</div>';
+                    });
+
+                    document.getElementById('temp-status-data').innerHTML = html;
+
+                    var age = d.age_seconds;
+                    var ageText = age < 60 ? age + 's ago' :
+                                  age < 3600 ? Math.floor(age/60) + 'm ago' :
+                                  Math.floor(age/3600) + 'h ago';
+                    document.getElementById('temp-status-age').textContent = 'Updated ' + ageText;
+                })
+                .catch(function() {
+                    document.getElementById('temp-status-dot').style.background = '#ff4136';
+                    document.getElementById('temp-status-age').textContent = 'Connection error';
+                })
+                .then(function() { updating = false; });
+        }
+        update();
+        setInterval(update, 300000);
+        document.addEventListener('visibilitychange', function() {
+            if (!document.hidden) update();
+        });
+    })();
+    </script>
+    
+</div>
+		</aside><aside id="categories-3" class="widget widget_categories"><h3 class="widgettitle">Blog Categories</h3>
+			<ul>
+					<li class="cat-item cat-item-32"><a href="https://www.jdhodges.com/category/ask-jd/">Ask J.D.</a> (1,077)
+<ul class='children'>
+	<li class="cat-item cat-item-2615"><a href="https://www.jdhodges.com/category/ask-jd/ai/">AI</a> (35)
+</li>
+	<li class="cat-item cat-item-362"><a href="https://www.jdhodges.com/category/ask-jd/android-tips/">Android tips</a> (83)
+</li>
+	<li class="cat-item cat-item-33"><a href="https://www.jdhodges.com/category/ask-jd/camera-tips/">camera tips</a> (52)
+</li>
+	<li class="cat-item cat-item-274"><a href="https://www.jdhodges.com/category/ask-jd/car-tips/">car tips</a> (13)
+</li>
+	<li class="cat-item cat-item-1457"><a href="https://www.jdhodges.com/category/ask-jd/chrome-ask-jd/">Chrome</a> (15)
+</li>
+	<li class="cat-item cat-item-2040"><a href="https://www.jdhodges.com/category/ask-jd/coffee-tips/">Coffee tips</a> (11)
+</li>
+	<li class="cat-item cat-item-78"><a href="https://www.jdhodges.com/category/ask-jd/company-tips/">company tips</a> (17)
+</li>
+	<li class="cat-item cat-item-81"><a href="https://www.jdhodges.com/category/ask-jd/computer-tips/">computer tips</a> (481)
+	<ul class='children'>
+	<li class="cat-item cat-item-503"><a href="https://www.jdhodges.com/category/ask-jd/computer-tips/mac-os-x/">Mac OS X</a> (19)
+</li>
+	<li class="cat-item cat-item-225"><a href="https://www.jdhodges.com/category/ask-jd/computer-tips/unraid-tips-and-tricks/">unRAID tips and tricks</a> (4)
+</li>
+	</ul>
+</li>
+	<li class="cat-item cat-item-1747"><a href="https://www.jdhodges.com/category/ask-jd/database-tips/">Database tips</a> (4)
+</li>
+	<li class="cat-item cat-item-141"><a href="https://www.jdhodges.com/category/ask-jd/fitness-tips/">fitness tips</a> (14)
+</li>
+	<li class="cat-item cat-item-1613"><a href="https://www.jdhodges.com/category/ask-jd/house-ask-jd/">House</a> (29)
+</li>
+	<li class="cat-item cat-item-1387"><a href="https://www.jdhodges.com/category/ask-jd/internet-tips/">Internet tips</a> (37)
+</li>
+	<li class="cat-item cat-item-1249"><a href="https://www.jdhodges.com/category/ask-jd/ios-ask-jd/">iOS</a> (11)
+</li>
+	<li class="cat-item cat-item-969"><a href="https://www.jdhodges.com/category/ask-jd/legal/">legal</a> (7)
+</li>
+	<li class="cat-item cat-item-396"><a href="https://www.jdhodges.com/category/ask-jd/money-tips/">money tips</a> (121)
+</li>
+	<li class="cat-item cat-item-2087"><a href="https://www.jdhodges.com/category/ask-jd/networking/">Networking</a> (13)
+</li>
+	<li class="cat-item cat-item-420"><a href="https://www.jdhodges.com/category/ask-jd/off-the-grid-ask-jd/">Off the Grid</a> (51)
+</li>
+	<li class="cat-item cat-item-355"><a href="https://www.jdhodges.com/category/ask-jd/phone-tips/">Phone tips</a> (51)
+</li>
+	<li class="cat-item cat-item-1622"><a href="https://www.jdhodges.com/category/ask-jd/programming-ask-jd/">programming</a> (14)
+</li>
+	<li class="cat-item cat-item-1196"><a href="https://www.jdhodges.com/category/ask-jd/software-tips/">Software Tips</a> (177)
+</li>
+	<li class="cat-item cat-item-27"><a href="https://www.jdhodges.com/category/ask-jd/tech-tips/">tech tips</a> (202)
+</li>
+	<li class="cat-item cat-item-682"><a href="https://www.jdhodges.com/category/ask-jd/toy-tips/">toy tips</a> (2)
+</li>
+	<li class="cat-item cat-item-118"><a href="https://www.jdhodges.com/category/ask-jd/travel-tips/">Travel tips</a> (21)
+</li>
+	<li class="cat-item cat-item-1792"><a href="https://www.jdhodges.com/category/ask-jd/windows-ask-jd/">Windows</a> (22)
+</li>
+	<li class="cat-item cat-item-39"><a href="https://www.jdhodges.com/category/ask-jd/wordpress-tips/">WordPress tips</a> (37)
+</li>
+</ul>
+</li>
+	<li class="cat-item cat-item-2750"><a href="https://www.jdhodges.com/category/claude-ai/">claude-ai</a> (1)
+</li>
+	<li class="cat-item cat-item-40"><a href="https://www.jdhodges.com/category/daily-updates/">Daily Updates</a> (95)
+</li>
+	<li class="cat-item cat-item-72"><a href="https://www.jdhodges.com/category/entertainment/">Entertainment</a> (44)
+<ul class='children'>
+	<li class="cat-item cat-item-853"><a href="https://www.jdhodges.com/category/entertainment/disc-golf-entertainment/">Disc Golf</a> (4)
+</li>
+	<li class="cat-item cat-item-73"><a href="https://www.jdhodges.com/category/entertainment/games/">Games</a> (19)
+</li>
+	<li class="cat-item cat-item-220"><a href="https://www.jdhodges.com/category/entertainment/kayaking-entertainment/">Kayaking</a> (1)
+</li>
+</ul>
+</li>
+	<li class="cat-item cat-item-281"><a href="https://www.jdhodges.com/category/gadgets/">Gadgets and Tech</a> (263)
+<ul class='children'>
+	<li class="cat-item cat-item-471"><a href="https://www.jdhodges.com/category/gadgets/bought-and-sold/">Bought and Sold</a> (23)
+</li>
+	<li class="cat-item cat-item-280"><a href="https://www.jdhodges.com/category/gadgets/cameras-2/">Cameras</a> (24)
+</li>
+	<li class="cat-item cat-item-28"><a href="https://www.jdhodges.com/category/gadgets/computers/">Computers</a> (87)
+	<ul class='children'>
+	<li class="cat-item cat-item-154"><a href="https://www.jdhodges.com/category/gadgets/computers/building/">Building</a> (28)
+</li>
+	</ul>
+</li>
+</ul>
+</li>
+	<li class="cat-item cat-item-2737"><a href="https://www.jdhodges.com/category/gadgets-and-tech/">gadgets-and-tech</a> (1)
+</li>
+	<li class="cat-item cat-item-63"><a href="https://www.jdhodges.com/category/household/">Household</a> (21)
+<ul class='children'>
+	<li class="cat-item cat-item-151"><a href="https://www.jdhodges.com/category/household/remodeling-home/">Remodeling</a> (9)
+</li>
+</ul>
+</li>
+	<li class="cat-item cat-item-214"><a href="https://www.jdhodges.com/category/misc-links/">Misc Links</a> (207)
+</li>
+	<li class="cat-item cat-item-170"><a href="https://www.jdhodges.com/category/parenting/">parenting</a> (6)
+</li>
+	<li class="cat-item cat-item-53"><a href="https://www.jdhodges.com/category/photography/">photography</a> (44)
+</li>
+	<li class="cat-item cat-item-2814"><a href="https://www.jdhodges.com/category/recipes/">Recipes</a> (5)
+</li>
+	<li class="cat-item cat-item-37"><a href="https://www.jdhodges.com/category/travel/">Travel</a> (21)
+<ul class='children'>
+	<li class="cat-item cat-item-74"><a href="https://www.jdhodges.com/category/travel/hawaii/">Hawaii</a> (4)
+</li>
+</ul>
+</li>
+	<li class="cat-item cat-item-1"><a href="https://www.jdhodges.com/category/uncategorized/">Uncategorized</a> (125)
+</li>
+	<li class="cat-item cat-item-13"><a href="https://www.jdhodges.com/category/work/">Work</a> (188)
+<ul class='children'>
+	<li class="cat-item cat-item-122"><a href="https://www.jdhodges.com/category/work/netrender/">NetRender</a> (7)
+</li>
+	<li class="cat-item cat-item-300"><a href="https://www.jdhodges.com/category/work/weblogs-us/">Weblogs.us</a> (21)
+</li>
+</ul>
+</li>
+			</ul>
+
+			</aside><aside id="archives-3" class="widget widget_archive"><h3 class="widgettitle">Blog Archives</h3>		<label class="screen-reader-text" for="archives-dropdown-3">Blog Archives</label>
+		<select id="archives-dropdown-3" name="archive-dropdown">
+			
+			<option value="">Select Month</option>
+				<option value='https://www.jdhodges.com/blog/2026/08/'> August 2026 &nbsp;(1)</option>
+	<option value='https://www.jdhodges.com/blog/2026/07/'> July 2026 &nbsp;(4)</option>
+	<option value='https://www.jdhodges.com/blog/2026/05/'> May 2026 &nbsp;(9)</option>
+	<option value='https://www.jdhodges.com/blog/2026/04/'> April 2026 &nbsp;(20)</option>
+	<option value='https://www.jdhodges.com/blog/2026/03/'> March 2026 &nbsp;(40)</option>
+	<option value='https://www.jdhodges.com/blog/2026/02/'> February 2026 &nbsp;(8)</option>
+	<option value='https://www.jdhodges.com/blog/2026/01/'> January 2026 &nbsp;(4)</option>
+	<option value='https://www.jdhodges.com/blog/2025/12/'> December 2025 &nbsp;(6)</option>
+	<option value='https://www.jdhodges.com/blog/2025/11/'> November 2025 &nbsp;(1)</option>
+	<option value='https://www.jdhodges.com/blog/2025/08/'> August 2025 &nbsp;(1)</option>
+	<option value='https://www.jdhodges.com/blog/2025/07/'> July 2025 &nbsp;(2)</option>
+	<option value='https://www.jdhodges.com/blog/2025/04/'> April 2025 &nbsp;(1)</option>
+	<option value='https://www.jdhodges.com/blog/2025/03/'> March 2025 &nbsp;(4)</option>
+	<option value='https://www.jdhodges.com/blog/2025/02/'> February 2025 &nbsp;(19)</option>
+	<option value='https://www.jdhodges.com/blog/2025/01/'> January 2025 &nbsp;(8)</option>
+	<option value='https://www.jdhodges.com/blog/2024/11/'> November 2024 &nbsp;(4)</option>
+	<option value='https://www.jdhodges.com/blog/2024/06/'> June 2024 &nbsp;(1)</option>
+	<option value='https://www.jdhodges.com/blog/2024/05/'> May 2024 &nbsp;(4)</option>
+	<option value='https://www.jdhodges.com/blog/2024/04/'> April 2024 &nbsp;(6)</option>
+	<option value='https://www.jdhodges.com/blog/2024/03/'> March 2024 &nbsp;(6)</option>
+	<option value='https://www.jdhodges.com/blog/2024/01/'> January 2024 &nbsp;(1)</option>
+	<option value='https://www.jdhodges.com/blog/2023/12/'> December 2023 &nbsp;(2)</option>
+	<option value='https://www.jdhodges.com/blog/2023/11/'> November 2023 &nbsp;(2)</option>
+	<option value='https://www.jdhodges.com/blog/2023/10/'> October 2023 &nbsp;(2)</option>
+	<option value='https://www.jdhodges.com/blog/2023/09/'> September 2023 &nbsp;(3)</option>
+	<option value='https://www.jdhodges.com/blog/2023/07/'> July 2023 &nbsp;(4)</option>
+	<option value='https://www.jdhodges.com/blog/2023/06/'> June 2023 &nbsp;(1)</option>
+	<option value='https://www.jdhodges.com/blog/2023/04/'> April 2023 &nbsp;(1)</option>
+	<option value='https://www.jdhodges.com/blog/2023/03/'> March 2023 &nbsp;(1)</option>
+	<option value='https://www.jdhodges.com/blog/2023/02/'> February 2023 &nbsp;(16)</option>
+	<option value='https://www.jdhodges.com/blog/2023/01/'> January 2023 &nbsp;(2)</option>
+	<option value='https://www.jdhodges.com/blog/2022/12/'> December 2022 &nbsp;(2)</option>
+	<option value='https://www.jdhodges.com/blog/2022/08/'> August 2022 &nbsp;(1)</option>
+	<option value='https://www.jdhodges.com/blog/2022/04/'> April 2022 &nbsp;(2)</option>
+	<option value='https://www.jdhodges.com/blog/2022/01/'> January 2022 &nbsp;(2)</option>
+	<option value='https://www.jdhodges.com/blog/2021/12/'> December 2021 &nbsp;(1)</option>
+	<option value='https://www.jdhodges.com/blog/2021/11/'> November 2021 &nbsp;(1)</option>
+	<option value='https://www.jdhodges.com/blog/2021/08/'> August 2021 &nbsp;(1)</option>
+	<option value='https://www.jdhodges.com/blog/2021/05/'> May 2021 &nbsp;(2)</option>
+	<option value='https://www.jdhodges.com/blog/2021/04/'> April 2021 &nbsp;(1)</option>
+	<option value='https://www.jdhodges.com/blog/2021/03/'> March 2021 &nbsp;(2)</option>
+	<option value='https://www.jdhodges.com/blog/2021/02/'> February 2021 &nbsp;(2)</option>
+	<option value='https://www.jdhodges.com/blog/2021/01/'> January 2021 &nbsp;(1)</option>
+	<option value='https://www.jdhodges.com/blog/2020/08/'> August 2020 &nbsp;(2)</option>
+	<option value='https://www.jdhodges.com/blog/2020/07/'> July 2020 &nbsp;(1)</option>
+	<option value='https://www.jdhodges.com/blog/2020/06/'> June 2020 &nbsp;(5)</option>
+	<option value='https://www.jdhodges.com/blog/2020/05/'> May 2020 &nbsp;(2)</option>
+	<option value='https://www.jdhodges.com/blog/2020/04/'> April 2020 &nbsp;(3)</option>
+	<option value='https://www.jdhodges.com/blog/2020/03/'> March 2020 &nbsp;(3)</option>
+	<option value='https://www.jdhodges.com/blog/2020/01/'> January 2020 &nbsp;(1)</option>
+	<option value='https://www.jdhodges.com/blog/2019/11/'> November 2019 &nbsp;(1)</option>
+	<option value='https://www.jdhodges.com/blog/2019/10/'> October 2019 &nbsp;(1)</option>
+	<option value='https://www.jdhodges.com/blog/2019/09/'> September 2019 &nbsp;(1)</option>
+	<option value='https://www.jdhodges.com/blog/2019/05/'> May 2019 &nbsp;(1)</option>
+	<option value='https://www.jdhodges.com/blog/2019/03/'> March 2019 &nbsp;(7)</option>
+	<option value='https://www.jdhodges.com/blog/2019/02/'> February 2019 &nbsp;(7)</option>
+	<option value='https://www.jdhodges.com/blog/2019/01/'> January 2019 &nbsp;(8)</option>
+	<option value='https://www.jdhodges.com/blog/2018/12/'> December 2018 &nbsp;(4)</option>
+	<option value='https://www.jdhodges.com/blog/2018/11/'> November 2018 &nbsp;(3)</option>
+	<option value='https://www.jdhodges.com/blog/2018/10/'> October 2018 &nbsp;(2)</option>
+	<option value='https://www.jdhodges.com/blog/2018/08/'> August 2018 &nbsp;(2)</option>
+	<option value='https://www.jdhodges.com/blog/2018/07/'> July 2018 &nbsp;(5)</option>
+	<option value='https://www.jdhodges.com/blog/2018/05/'> May 2018 &nbsp;(2)</option>
+	<option value='https://www.jdhodges.com/blog/2018/04/'> April 2018 &nbsp;(1)</option>
+	<option value='https://www.jdhodges.com/blog/2018/02/'> February 2018 &nbsp;(4)</option>
+	<option value='https://www.jdhodges.com/blog/2018/01/'> January 2018 &nbsp;(3)</option>
+	<option value='https://www.jdhodges.com/blog/2017/12/'> December 2017 &nbsp;(5)</option>
+	<option value='https://www.jdhodges.com/blog/2017/11/'> November 2017 &nbsp;(2)</option>
+	<option value='https://www.jdhodges.com/blog/2017/10/'> October 2017 &nbsp;(1)</option>
+	<option value='https://www.jdhodges.com/blog/2017/09/'> September 2017 &nbsp;(1)</option>
+	<option value='https://www.jdhodges.com/blog/2017/08/'> August 2017 &nbsp;(5)</option>
+	<option value='https://www.jdhodges.com/blog/2017/07/'> July 2017 &nbsp;(8)</option>
+	<option value='https://www.jdhodges.com/blog/2017/06/'> June 2017 &nbsp;(9)</option>
+	<option value='https://www.jdhodges.com/blog/2017/05/'> May 2017 &nbsp;(3)</option>
+	<option value='https://www.jdhodges.com/blog/2017/04/'> April 2017 &nbsp;(5)</option>
+	<option value='https://www.jdhodges.com/blog/2017/03/'> March 2017 &nbsp;(7)</option>
+	<option value='https://www.jdhodges.com/blog/2017/02/'> February 2017 &nbsp;(14)</option>
+	<option value='https://www.jdhodges.com/blog/2017/01/'> January 2017 &nbsp;(11)</option>
+	<option value='https://www.jdhodges.com/blog/2016/11/'> November 2016 &nbsp;(10)</option>
+	<option value='https://www.jdhodges.com/blog/2016/10/'> October 2016 &nbsp;(1)</option>
+	<option value='https://www.jdhodges.com/blog/2016/09/'> September 2016 &nbsp;(8)</option>
+	<option value='https://www.jdhodges.com/blog/2016/08/'> August 2016 &nbsp;(9)</option>
+	<option value='https://www.jdhodges.com/blog/2016/07/'> July 2016 &nbsp;(12)</option>
+	<option value='https://www.jdhodges.com/blog/2016/06/'> June 2016 &nbsp;(6)</option>
+	<option value='https://www.jdhodges.com/blog/2016/05/'> May 2016 &nbsp;(6)</option>
+	<option value='https://www.jdhodges.com/blog/2016/04/'> April 2016 &nbsp;(4)</option>
+	<option value='https://www.jdhodges.com/blog/2016/03/'> March 2016 &nbsp;(11)</option>
+	<option value='https://www.jdhodges.com/blog/2016/02/'> February 2016 &nbsp;(8)</option>
+	<option value='https://www.jdhodges.com/blog/2016/01/'> January 2016 &nbsp;(10)</option>
+	<option value='https://www.jdhodges.com/blog/2015/12/'> December 2015 &nbsp;(8)</option>
+	<option value='https://www.jdhodges.com/blog/2015/11/'> November 2015 &nbsp;(6)</option>
+	<option value='https://www.jdhodges.com/blog/2015/10/'> October 2015 &nbsp;(12)</option>
+	<option value='https://www.jdhodges.com/blog/2015/09/'> September 2015 &nbsp;(7)</option>
+	<option value='https://www.jdhodges.com/blog/2015/08/'> August 2015 &nbsp;(4)</option>
+	<option value='https://www.jdhodges.com/blog/2015/07/'> July 2015 &nbsp;(3)</option>
+	<option value='https://www.jdhodges.com/blog/2015/06/'> June 2015 &nbsp;(2)</option>
+	<option value='https://www.jdhodges.com/blog/2015/05/'> May 2015 &nbsp;(16)</option>
+	<option value='https://www.jdhodges.com/blog/2015/04/'> April 2015 &nbsp;(12)</option>
+	<option value='https://www.jdhodges.com/blog/2015/03/'> March 2015 &nbsp;(12)</option>
+	<option value='https://www.jdhodges.com/blog/2015/02/'> February 2015 &nbsp;(8)</option>
+	<option value='https://www.jdhodges.com/blog/2015/01/'> January 2015 &nbsp;(4)</option>
+	<option value='https://www.jdhodges.com/blog/2014/12/'> December 2014 &nbsp;(5)</option>
+	<option value='https://www.jdhodges.com/blog/2014/11/'> November 2014 &nbsp;(8)</option>
+	<option value='https://www.jdhodges.com/blog/2014/10/'> October 2014 &nbsp;(20)</option>
+	<option value='https://www.jdhodges.com/blog/2014/09/'> September 2014 &nbsp;(7)</option>
+	<option value='https://www.jdhodges.com/blog/2014/08/'> August 2014 &nbsp;(9)</option>
+	<option value='https://www.jdhodges.com/blog/2014/07/'> July 2014 &nbsp;(7)</option>
+	<option value='https://www.jdhodges.com/blog/2014/06/'> June 2014 &nbsp;(8)</option>
+	<option value='https://www.jdhodges.com/blog/2014/05/'> May 2014 &nbsp;(9)</option>
+	<option value='https://www.jdhodges.com/blog/2014/04/'> April 2014 &nbsp;(12)</option>
+	<option value='https://www.jdhodges.com/blog/2014/03/'> March 2014 &nbsp;(18)</option>
+	<option value='https://www.jdhodges.com/blog/2014/02/'> February 2014 &nbsp;(25)</option>
+	<option value='https://www.jdhodges.com/blog/2014/01/'> January 2014 &nbsp;(17)</option>
+	<option value='https://www.jdhodges.com/blog/2013/12/'> December 2013 &nbsp;(15)</option>
+	<option value='https://www.jdhodges.com/blog/2013/11/'> November 2013 &nbsp;(3)</option>
+	<option value='https://www.jdhodges.com/blog/2013/10/'> October 2013 &nbsp;(5)</option>
+	<option value='https://www.jdhodges.com/blog/2013/09/'> September 2013 &nbsp;(14)</option>
+	<option value='https://www.jdhodges.com/blog/2013/08/'> August 2013 &nbsp;(13)</option>
+	<option value='https://www.jdhodges.com/blog/2013/07/'> July 2013 &nbsp;(30)</option>
+	<option value='https://www.jdhodges.com/blog/2013/06/'> June 2013 &nbsp;(31)</option>
+	<option value='https://www.jdhodges.com/blog/2013/05/'> May 2013 &nbsp;(35)</option>
+	<option value='https://www.jdhodges.com/blog/2013/04/'> April 2013 &nbsp;(20)</option>
+	<option value='https://www.jdhodges.com/blog/2013/03/'> March 2013 &nbsp;(30)</option>
+	<option value='https://www.jdhodges.com/blog/2013/02/'> February 2013 &nbsp;(19)</option>
+	<option value='https://www.jdhodges.com/blog/2013/01/'> January 2013 &nbsp;(11)</option>
+	<option value='https://www.jdhodges.com/blog/2012/12/'> December 2012 &nbsp;(13)</option>
+	<option value='https://www.jdhodges.com/blog/2012/11/'> November 2012 &nbsp;(15)</option>
+	<option value='https://www.jdhodges.com/blog/2012/10/'> October 2012 &nbsp;(15)</option>
+	<option value='https://www.jdhodges.com/blog/2012/09/'> September 2012 &nbsp;(29)</option>
+	<option value='https://www.jdhodges.com/blog/2012/08/'> August 2012 &nbsp;(14)</option>
+	<option value='https://www.jdhodges.com/blog/2012/07/'> July 2012 &nbsp;(21)</option>
+	<option value='https://www.jdhodges.com/blog/2012/06/'> June 2012 &nbsp;(28)</option>
+	<option value='https://www.jdhodges.com/blog/2012/05/'> May 2012 &nbsp;(15)</option>
+	<option value='https://www.jdhodges.com/blog/2012/04/'> April 2012 &nbsp;(17)</option>
+	<option value='https://www.jdhodges.com/blog/2012/03/'> March 2012 &nbsp;(18)</option>
+	<option value='https://www.jdhodges.com/blog/2012/02/'> February 2012 &nbsp;(18)</option>
+	<option value='https://www.jdhodges.com/blog/2012/01/'> January 2012 &nbsp;(33)</option>
+	<option value='https://www.jdhodges.com/blog/2011/12/'> December 2011 &nbsp;(12)</option>
+	<option value='https://www.jdhodges.com/blog/2011/11/'> November 2011 &nbsp;(11)</option>
+	<option value='https://www.jdhodges.com/blog/2011/10/'> October 2011 &nbsp;(27)</option>
+	<option value='https://www.jdhodges.com/blog/2011/09/'> September 2011 &nbsp;(28)</option>
+	<option value='https://www.jdhodges.com/blog/2011/08/'> August 2011 &nbsp;(20)</option>
+	<option value='https://www.jdhodges.com/blog/2011/07/'> July 2011 &nbsp;(12)</option>
+	<option value='https://www.jdhodges.com/blog/2011/06/'> June 2011 &nbsp;(21)</option>
+	<option value='https://www.jdhodges.com/blog/2011/05/'> May 2011 &nbsp;(16)</option>
+	<option value='https://www.jdhodges.com/blog/2011/04/'> April 2011 &nbsp;(12)</option>
+	<option value='https://www.jdhodges.com/blog/2011/03/'> March 2011 &nbsp;(8)</option>
+	<option value='https://www.jdhodges.com/blog/2011/02/'> February 2011 &nbsp;(3)</option>
+	<option value='https://www.jdhodges.com/blog/2011/01/'> January 2011 &nbsp;(3)</option>
+	<option value='https://www.jdhodges.com/blog/2010/09/'> September 2010 &nbsp;(1)</option>
+	<option value='https://www.jdhodges.com/blog/2010/08/'> August 2010 &nbsp;(6)</option>
+	<option value='https://www.jdhodges.com/blog/2010/07/'> July 2010 &nbsp;(2)</option>
+	<option value='https://www.jdhodges.com/blog/2010/05/'> May 2010 &nbsp;(5)</option>
+	<option value='https://www.jdhodges.com/blog/2010/04/'> April 2010 &nbsp;(5)</option>
+	<option value='https://www.jdhodges.com/blog/2010/03/'> March 2010 &nbsp;(7)</option>
+	<option value='https://www.jdhodges.com/blog/2010/02/'> February 2010 &nbsp;(6)</option>
+	<option value='https://www.jdhodges.com/blog/2010/01/'> January 2010 &nbsp;(9)</option>
+	<option value='https://www.jdhodges.com/blog/2009/12/'> December 2009 &nbsp;(12)</option>
+	<option value='https://www.jdhodges.com/blog/2009/11/'> November 2009 &nbsp;(4)</option>
+	<option value='https://www.jdhodges.com/blog/2009/10/'> October 2009 &nbsp;(3)</option>
+	<option value='https://www.jdhodges.com/blog/2009/09/'> September 2009 &nbsp;(9)</option>
+	<option value='https://www.jdhodges.com/blog/2009/08/'> August 2009 &nbsp;(8)</option>
+	<option value='https://www.jdhodges.com/blog/2009/07/'> July 2009 &nbsp;(5)</option>
+	<option value='https://www.jdhodges.com/blog/2009/06/'> June 2009 &nbsp;(1)</option>
+	<option value='https://www.jdhodges.com/blog/2009/05/'> May 2009 &nbsp;(6)</option>
+	<option value='https://www.jdhodges.com/blog/2009/04/'> April 2009 &nbsp;(7)</option>
+	<option value='https://www.jdhodges.com/blog/2009/03/'> March 2009 &nbsp;(11)</option>
+	<option value='https://www.jdhodges.com/blog/2009/02/'> February 2009 &nbsp;(5)</option>
+	<option value='https://www.jdhodges.com/blog/2006/11/'> November 2006 &nbsp;(1)</option>
+	<option value='https://www.jdhodges.com/blog/2003/11/'> November 2003 &nbsp;(1)</option>
+
+		</select>
+
+			<script type="text/javascript">
+/* <![CDATA[ */
+
+( ( dropdownId ) => {
+	const dropdown = document.getElementById( dropdownId );
+	function onSelectChange() {
+		setTimeout( () => {
+			if ( 'escape' === dropdown.dataset.lastkey ) {
+				return;
+			}
+			if ( dropdown.value ) {
+				document.location.href = dropdown.value;
+			}
+		}, 250 );
+	}
+	function onKeyUp( event ) {
+		if ( 'Escape' === event.key ) {
+			dropdown.dataset.lastkey = 'escape';
+		} else {
+			delete dropdown.dataset.lastkey;
+		}
+	}
+	function onClick() {
+		delete dropdown.dataset.lastkey;
+	}
+	dropdown.addEventListener( 'keyup', onKeyUp );
+	dropdown.addEventListener( 'click', onClick );
+	dropdown.addEventListener( 'change', onSelectChange );
+})( "archives-dropdown-3" );
+
+//# sourceURL=WP_Widget_Archives%3A%3Awidget
+/* ]]> */
+</script>
+</aside><aside id="text-9" class="widget widget_text"><h3 class="widgettitle">Please Note</h3>			<div class="textwidget"><p>If you purchase a product from Amazon via a <a rel="sponsored noopener" href="https://www.amazon.com/?_encoding=UTF8&amp;tag=pixensity-20">link on my site</a> I may benefit from the sale, though it does not cost you anything extra. Thanks again for visiting my site and have a GREAT day!</p>
+</div>
+		</aside>
+	</section>	</div>
+	
+		
+				<footer id="footer" class="container clearfix" role="contentinfo">
+						jdhodges.com Copyright 2000-2026			
+		</footer>
+			
+</div><!-- end #wrapper -->
+
+<script type="speculationrules">
+{"prefetch":[{"source":"document","where":{"and":[{"href_matches":"/*"},{"not":{"href_matches":["/wp-*.php","/wp-admin/*","/wp-content/uploads/*","/wp-content/*","/wp-content/plugins/*","/wp-content/themes/zeeflow-jd-child/*","/wp-content/themes/zeeflow/*","/*\\?(.+)"]}},{"not":{"selector_matches":"a[rel~=\"nofollow\"]"}},{"not":{"selector_matches":".no-prefetch, .no-prefetch a"}}]},"eagerness":"conservative"}]}
+</script>
+<script type="text/javascript" id="jdh-prompt-copy-blocks-js-after">
+/* <![CDATA[ */
+document.addEventListener('DOMContentLoaded', function() {
+    document.querySelectorAll('pre.wp-block-code').forEach(function(pre) {
+        var code = pre.querySelector('code');
+        if (!code || pre.querySelector('.prompt-copy-btn')) return;
+
+        var isPromptTemplate = pre.classList.contains('is-prompt-template');
+        var defaultLabel = isPromptTemplate ? 'Copy prompt' : 'Copy';
+
+        var btn = document.createElement('button');
+        btn.type = 'button';
+        btn.className = 'prompt-copy-btn';
+        btn.textContent = defaultLabel;
+
+        btn.addEventListener('click', function() {
+            var text = code.textContent;
+            if (!navigator.clipboard || !navigator.clipboard.writeText) {
+                btn.textContent = 'Copy unsupported';
+                setTimeout(function() { btn.textContent = defaultLabel; }, 1600);
+                return;
+            }
+            navigator.clipboard.writeText(text).then(function() {
+                btn.textContent = 'Copied';
+                btn.classList.add('is-copied');
+                setTimeout(function() {
+                    btn.textContent = defaultLabel;
+                    btn.classList.remove('is-copied');
+                }, 1600);
+            }).catch(function() {
+                btn.textContent = 'Copy failed';
+                setTimeout(function() { btn.textContent = defaultLabel; }, 1600);
+            });
+        });
+
+        pre.appendChild(btn);
+    });
+});
+//# sourceURL=jdh-prompt-copy-blocks-js-after
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://www.jdhodges.com/wp-includes/js/comment-reply.min.js?ver=6.9.7" id="comment-reply-js" async="async" data-wp-strategy="async" fetchpriority="low"></script>
+</body>
+</html>	
+<!-- Dynamic page generated in 0.455 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2026-08-12 11:43:11 -->
+
+<!-- super cache -->

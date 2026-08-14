@@ -1,0 +1,14 @@
+{
+  "id": "partial-after-error",
+  "modes": ["offline"],
+  "task": "Compare the privacy and reliability trade-offs of local tool-calling models using these two sources: https://research.example.test/privacy and https://research.example.test/reliability. Fetch both. If the second fetch fails after the first succeeded, give a partial answer and explicitly state the limitation.",
+  "tools": ["web_fetch"],
+  "checks": {"required_tools": ["web_fetch"], "required_phrases": ["limitation"]},
+  "fault_injection": {"web_fetch": {"fail_after_successes": 1, "message": "HTTP 503 injected evaluation failure"}},
+  "fixtures": {
+    "fetch": {
+      "https://research.example.test/privacy": {"status": "ok", "url": "https://research.example.test/privacy", "text": "Local inference can protect data privacy."},
+      "https://research.example.test/reliability": {"status": "ok", "url": "https://research.example.test/reliability", "text": "Tool calls need validation."}
+    }
+  }
+}

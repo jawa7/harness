@@ -1,0 +1,7 @@
+{
+  "id": "live-czech-sports-10",
+  "modes": ["live"],
+  "task": "Find exactly 10 Czech-language sports articles published within the last 30 days as of {today}. Give title, date, publication, URL, and one-line description for each. Cite only material returned by your web tools.",
+  "tools": ["web_search", "web_fetch"],
+  "checks": {"required_tools": ["web_search"], "min_output_urls": 10, "exact_output_urls": 10, "min_output_dates": 10}
+}

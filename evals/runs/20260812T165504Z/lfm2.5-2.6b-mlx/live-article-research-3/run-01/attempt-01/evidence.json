@@ -1,0 +1,98 @@
+{
+  "cited_urls": [],
+  "cited_sources": [],
+  "available_sources": [
+    {
+      "url": "https://pinggy.io/blog/top_5_local_llm_tools_and_models",
+      "title": "Top 5 Local LLM Tools and Models in 2026 | Pinggy Blog",
+      "excerpt": "# Top 5 Local LLM Tools and Models in 2026\n\nUpdated August 2, 2026   19 min read   Pinggy Blog\n\n Llm\n AI Models\n Local AI\n Self-Hosted AI\n Ollama\n LM Studio\n Unsloth\n Gpt4all\n Llama.cpp\n Local Inference\n Jan\n\nIn this article\ntop 5 local llm tools and models 2026 banner [...] Running powerful AI language models locally has become increasingly accessible in 2026, offering privacy, cost savings, and full control over your data. With releases like Qwen3.6 and Qwen3.5, Google’s Gemma 4, OpenAI’s gpt-",
+      "tool": "web_search"
+    },
+    {
+      "url": "https://www.jdhodges.com/blog/local-llms-on-tool-calling-2026-pt1-local-lm",
+      "title": "I Tested 13 Local LLMs on Tool Calling | 2026 Eval Results",
+      "excerpt": "🏆 Best overall: Qwen3.5 4B. 97.5% pass rate at 3.4 GB. Fast (48 tok/s), accurate, and the best multi-tool score of any model tested. If you can only pick one model for tool calling, this is where I’d start.\n Best for sequential workflows: Mistral Nemo 12B. 92.5% overall, but strong at multi-turn tasks where the model needs to wait for results before making the next call. If your application chains tool calls across turns, Nemo handles that better than the higher-ranked models in my testing. [...",
+      "tool": "web_search"
+    },
+    {
+      "url": "https://www.promptquorum.com/power-local-llm/best-local-models-tool-calling-2026",
+      "title": "Best Local Models for Tool Calling in 2026: Benchmarks & ...",
+      "excerpt": "PromptQuorum\n\nCompare ToolsFeaturesHow It WorksFAQBlogPrompt EngineeringLocal LLMsPower Local LLMPrompt BitesSmart HomeBalcony SolarTry Beta\n\nAccueil/LLM locaux avancés/Meilleurs modèles locaux pour Tool Calling en 2026 : Benchmarks et comparaison\n\nLocal AI Agents & Tool Use\n\n# Meilleurs modèles locaux pour Tool Calling en 2026 : Benchmarks et comparaison\n\n·12 min de lecture·Par Hans Kuepper · Fondateur de PromptQuorum, outil de dispatch multi-modèle · PromptQuorum\n\nLire en: [...] Continue.dev v",
+      "tool": "web_search"
+    },
+    {
+      "url": "https://www.kdnuggets.com/5-small-language-models-for-agentic-tool-calling",
+      "title": "5 Small Language Models for Agentic Tool Calling - KDnuggets",
+      "excerpt": "5 Small Language Models for Agentic Tool Calling - KDnuggets\nBlog\nTop Posts\nAbout\nTopics\nAI\nCareer Advice\nComputer Vision\nData Engineering\nData Science\nLanguage Models\nMachine Learning\nMLOps\nNLP\nProgramming\nPython\nSQL\nDatasets\nEvents\nResources\nCheat Sheets\nRecommendations\nTech Briefs\nAdvertise\nJoin Newsletter\n5 Small Language Models for Agentic Tool Calling\nHere are 5 small language models that hare one important trait: they all support structured tool calling in a compact, open-weight package.\nBy\nMatthew Mayo\n, KDnuggets Managing Editor on May 14, 2026 in\nLanguage Models\n#\nIntroduction\nAgentic AI systems depend on a model's ability to reliably call tools, selecting the right function, formatting arguments correctly, and integrating results into multi-step workflows. Large frontier models such as ChatGPT, Claude, and Gemini handle this well, but they come with tradeoffs in cost, latency, and hardware requirements that make them impractical for many real-world deployments. Small language models have done well to close that gap, and several compact, open-weight options now offer first-class tool-calling support without the need for a data center to run them.\nAnd now, in no particular order, here are 5 small language models for agentic tool calling. Note that, for convenience and consistency, all model links point to Hugging Face-hosted models.\n#\n1. SmolLM3-3B\nRelease Date:\nJuly 8, 2025\nDeveloper:\nHugging Face\nLocation:\nHuggingFaceTB/SmolLM3-3B\nTechnical Aspect\nDetails\nParameters\n3B\nArchitecture\nDecoder-only transformer (GQA + NoPE, 3:1 ratio)\nContext Length\n64K native; up to ",
+      "tool": "web_search",
+      "fetch_id": "fetch-20260812T165553Z-bc8627",
+      "cache_path": "evals/runs/20260812T165504Z/lfm2.5-2.6b-mlx/live-article-research-3/run-01/attempt-01/fetches/fetch-20260812T165553Z-bc8627/text.txt"
+    },
+    {
+      "url": "https://arxiv.org/abs/2512.15943",
+      "title": "[2512.15943] Small Language Models for Efficient Agentic Tool Calling: Outperforming Large Models with Targeted Fine-tuning",
+      "excerpt": "|  |  |\n --- |\n| Comments: | Accepted at AAAI 2026 Workshop on Agentic AI Benchmarks and Applications for Enterprise Tasks |\n| Subjects: | Artificial Intelligence (cs.AI) |\n| Cite as: | arXiv:2512.15943 [cs.AI] |\n|  | (or  arXiv:2512.15943v2 [cs.AI] for this version) |\n|  |  Focus to learn more  arXiv-issued DOI via DataCite |\n\n## Submission history\n\n## Access Paper:\n\nlicense icon\n\n### Current browse context:\n\n### References & Citations\n\n## BibTeX formatted citation\n\n### Bookmark",
+      "tool": "web_search"
+    },
+    {
+      "url": "/goto?url=CAEScAHuR6pNVG5cPo2h6gX8DqWnwQL-rPe6D5CqoYZrbyXsC7TjPInhxlcHJ-L3mA4phMv8eFSdHdOlJnanSmFlP2Llu7HVn50-OlITKYRVbnqgO6WV6ZZiKJT7OADed6Pmzxhk7B0xA-pejloxFfx7Djk%3D",
+      "title": "Top 5 Local LLM Tools and Models in 2026",
+      "excerpt": "Aug 2, 2026 — Top local LLM tools in 2026 1. LM Studio 2. Unsloth 3. Ollama 4. text-generation-webui 5. GPT4All 6. LocalAI 7. BlueQubit Bonus tool: 1. Qwen3.",
+      "tool": "web_search"
+    },
+    {
+      "url": "/goto?url=CAESiQEB7keqTeANO61byAxU7bqIoPdSQKONiCXU6_Yz4RUGvLbPYHdeypsiFbYN41y70zlPGnQVRHXxG70ZYmtimrFAwve8ZGHLoEkFjzzwLFjZyPoGCONhpMY97dFNxDRNbZqohnnnv4YPH5ydn8kGUEkHgDvQp7VEHUzeU_pvpd5mpsQf5W9BRLgOwQ%3D%3D",
+      "title": "Best Local LLMs - August 2026 : r/LocalLLaMA",
+      "excerpt": "Best Local LLMs - August 2026. Models that rival the closed frontier, Opus level models on non-insane hardware and more. Includes practical",
+      "tool": "web_search"
+    },
+    {
+      "url": "/goto?url=CAESgwEB7keqTT6UkOuh0v8GwmQeZgJqLpe6QX86tXg_8OklEJDtBb2IvdjdSRUkTh_SBVfK_sMx-g--az5XPXa9OGbMAp1XiP9En4lvJf2qRZgMWtZ9bNcCmvkJzf0HMR6TrQF989YkxP_DtDPZOlg9dA-RhDcW7h-bwa0pz9rkaH8o9FPBrw%3D%3D",
+      "title": "I Tested 13 Local LLMs on Tool Calling | 2026 Eval Results",
+      "excerpt": "Mar 19, 2026 — I built a deterministic eval harness and tested 13 local LLMs on tool calling (function calling) to find out which models work decently well ...Read more",
+      "tool": "web_search"
+    },
+    {
+      "url": "/goto?url=CAESaAHuR6pNrfDW2mc3HdkZPa4ATM6rBdHE1CAWJTvxugrGNAmLx98RfHlbKu-5IZYTGUyGe-d7hFXVSyCdVqRi2cTZRfbnZGn_tHDerkpTN1IeI8lDm6YwivGvpQvhOz8uAqcM9iOs78x3",
+      "title": "Best Local LLM in August 2026 (Updated Monthly Methodology)",
+      "excerpt": "Discover the best local LLM for your use case with 4 verified sources — leaderboards, communities, and the 10-minute monthly check. Methodology, not picks.",
+      "tool": "web_search"
+    },
+    {
+      "url": "/goto?url=CAESiAEB7keqTdUKyvLSkKwOVCbrgVCjXlD1EORUSnItMJc63mwlr84s9Z22JC5GlUo0uFffoHL_XWtMIoPhnLSDAW3k1Dil3xptosQb9_iClvphtLknlq13GIZhMcA03ThaxTpWjr-WDQxRzGvkaoa0ryWbqF-lCUKL30jvVIJf3usni4ri0QrIcXqu",
+      "title": "Best Local Models for Tool Calling in 2026: Benchmarks & ...",
+      "excerpt": "Jun 18, 2026 — This guide benchmarks the five reliable tool-callers in May 2026 (Gemma 4 27B, GLM-4.7 32B, Qwen3 32B, Qwen3-Coder 30B, Llama 3.3 70B) on real ...Read more",
+      "tool": "web_search"
+    },
+    {
+      "url": "https://app.stationx.net/articles/best-local-llm",
+      "title": "Best Local LLM in August 2026 (Updated Monthly Methodology)",
+      "excerpt": "If you found this useful, you might also like our Claude Code with Ollama guide — covers the hardware and setup so you can actually run whichever model the framework above points you at.\n\nLast verified: 18 May 2026. The methodology here is built to outlast specific model picks — the leaderboards and communities above are the source of truth, not this article.\n\n### About the Author\n\nNathan House\n\nNathan House, Founder & CEO of StationX [...] MiniMax models ship with restrictions on competitive us",
+      "tool": "web_search"
+    },
+    {
+      "url": "https://benchlm.ai/best/tool-use",
+      "title": "Best Tool Use & Function Calling Models in 2026",
+      "excerpt": "Radar\n\nFive or fewer confirmed AI changes, with original sources, on mornings when something changed.A free source-linked morning brief.\n\nStart free brief\n\nBenchLM\n\nAdvertise\n\nBest Tool Use & Function Calling Models\n\nBenchLM recommendation\n\n# Best Tool Use & Function Calling Models in 2026\n\nData verified\n\nAs of August 12, 2026, the top model in best tool use & function calling modelson the BenchLM leaderboard isQwen3.7 Plus with a score of 72.\n\nLast verified: August 12, 2026",
+      "tool": "web_search"
+    },
+    {
+      "url": "https://buttondown.com/agent-k/archive/llm-daily-august-09-2026",
+      "title": "LLM Daily: August 09, 2026",
+      "excerpt": "## Notable Research\n\n### The Bitter Lesson of Tool Calling\n\nAuthors: Ishan Patel, Sahil Sen, Elias Lumer, Vamse Kumar Subbiah\nPublished: 2026-08-06\n\nA systematic empirical comparison of programmatic tool calling (PTC) — using scripts to chain and parallelize tool calls — versus native JSON tool calling across current and prior model generations, revealing that more general, code-based approaches consistently outperform rigid structured formats, echoing Sutton's \"bitter lesson\" in a new domain. [",
+      "tool": "web_search"
+    },
+    {
+      "url": "https://www.docker.com/blog/local-llm-tool-calling-a-practical-evaluation",
+      "title": "Tool Calling with Local LLMs: A Practical Evaluation - Docker",
+      "excerpt": "Jul 30, 2026\n\n  #### The Future of Agentic AI Depends on Openness and Trust. That’s Why Docker Is Joining Nvidia’s Open Secure AI Alliance.\n\n  Docker joins NVIDIA’s Open Secure AI Alliance to help build the security, governance, and trust frameworks that agentic AI systems demand.\n\n  \n\n  Tushar Jain\n\n  Read now\n Aug 4, 2026\n\n  #### The Software Supply Chain Is Under Siege. Devs Are Still the First Line of Defense [...] 77% of organizations experienced a software supply chain incident in the past",
+      "tool": "web_search"
+    },
+    {
+      "url": "https://www.thundercompute.com/blog/best-open-source-llms",
+      "title": "Best Open Source LLMs (August 2026)",
+      "excerpt": "Carl Peterson August 6, 2026 15 min read\n\nA guide to the best open source LLMs of 2026. It covers evaluation metrics, best models (Kimi K3, Kimi K2, GLM-5.2, DeepSeek, Llama 4, and Nemotron), and the top platforms.\n\nOpen source large language models have closed the gap with proprietary systems faster than most researchers expected. Models that required billion-dollar training runs are now downloadable, modifiable, and deployable by any team with the right hardware. [...] Kimi K2 Thinking is the ",
+      "tool": "web_search"
+    }
+  ]
+}

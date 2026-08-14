@@ -1,0 +1,1 @@
+Extend `TaskService.create_task()` to accept an optional `tags: list[str]` argument. New tasks must retain their tags through storage round-trips; if tags are omitted, they must default to an independent empty list. Preserve all existing behaviour. Do not modify tests.

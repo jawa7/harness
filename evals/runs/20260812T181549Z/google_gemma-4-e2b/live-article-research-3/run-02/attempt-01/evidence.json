@@ -1,0 +1,45 @@
+{
+  "cited_urls": [
+    "https://www.docker.com/blog/local-llm-tool-calling-a-practical-evaluation`",
+    "https://www.promptquorum.com/power-local-llm/best-local-models-tool-calling-2026`"
+  ],
+  "cited_sources": [],
+  "available_sources": [
+    {
+      "url": "https://www.docker.com/blog/local-llm-tool-calling-a-practical-evaluation",
+      "title": "Tool Calling with Local LLMs: A Practical Evaluation - Docker",
+      "excerpt": "Local LLM Tool Calling: Which LLM Should You Use? | DockerTool Calling with Local LLMs: A Practical Evaluation | Docker\nSkip to content\nProducts\nAI and Agents\nDocker Sandboxes\nNew\nIsolated environments for coding agents\nAI Governance\nNew\nGovern agents and Claws across every team\nGordon\nNew\nYour AI Agent across Docker\nDocker Model Runner\nLocal-first LLM inference made easy\nDocker MCP Catalog and Toolkit\nConnect and manage MCP tools\nApplication Security\nDocker Hardened Images\nShip with secure, enterprise-ready images\nDocker Scout\nSimplify the software supply chain\nApplication Development\nDocker Desktop\nContainerize your applications\nDocker Hub\nDiscover and share container images\nDocker Offload\nBreak free of local constraints\nSupport\nDevelopers\nDocumentation\nFind guides for Docker products\nGetting Started\nLearn the Docker basics\nResources\nSearch a library of helpful materials\nTraining\nSkill up your Docker knowledge\nExtensions SDK\nCreate and share your own extensions\nCommunity\nConnect with other Docker developers\nOpen Source\nExplore open source projects\nPreview Program\nHelp shape the future of Docker\nCustomer Stories\nGet inspired with customer stories\nGet the latest Docker news\nPricing\nYearly\nMonthly\nDocker Personal\n$0\n$0\nFor individual developers who need the essential tools to build and deploy containers.\nGet started\nGet started\nDocker Pro\n$11\n$9\nper user/month\nFor individual professionals who require more advanced features and additional resources.\nBuy now\nBuy now\nMOST POPULAR\nDocker Team\n$16\n$15\nper user/month\nFor small teams that need collaborative tools to make working to",
+      "tool": "web_search",
+      "fetch_id": "fetch-20260812T181830Z-e433d1",
+      "cache_path": "evals/runs/20260812T181549Z/google_gemma-4-e2b/live-article-research-3/run-02/attempt-01/fetches/fetch-20260812T181830Z-e433d1/text.txt"
+    },
+    {
+      "url": "https://www.promptquorum.com/power-local-llm/best-local-models-tool-calling-2026",
+      "title": "Best Local Models for Tool Calling in 2026: Benchmarks & ...",
+      "excerpt": "Best Local Tool-Calling Models 2026: Real MCP Benchmarks\nSkip to main content\nPromptQuorum\nCompare Tools\nFeatures\nHow It Works\nFAQ\nBlog\nPrompt Engineering\nLocal LLMs\nPower Local LLM\nPrompt Bites\nSmart Home\nBalcony Solar\nTry Beta\nSearch guides...\n⌘K\n🇺🇸\nEN\n🇺🇸\nEN\nCompare Tools\nFeatures\nHow It Works\nFAQ\nBlog\nPrompt Engineering\nLocal LLMs\nPower Local LLM\nPrompt Bites\nSmart Home\nBalcony Solar\nTry Beta\nHome\n/\nPower Local LLM\n/\nBest Local Models for Tool Calling in 2026: Benchmarks & Comparison\nLocal AI Agents & Tool Use\nBest Local Models for Tool Calling in 2026: Benchmarks & Comparison\nLast updated:\nJune 19, 2026\n·\n12 min read\n·\nBy\nHans Kuepper\n· Founder of PromptQuorum, multi-model AI dispatch tool · PromptQuorum\nRead in:\n🇺🇸\nen\n🇩🇪\nde\n🇫🇷\nfr\n🇯🇵\nja\n🇨🇳\nzh\n🇪🇸\nes\n🇧🇷\npt\n🇸🇦\nar\n🇰🇷\nko\nFive local models tool-call reliably in May 2026: Gemma 4 27B, GLM-4.7 32B, Qwen3 32B, Qwen3-Coder 30B, and Llama 3.3 70B. Llama 3.3 70B has the highest ceiling (~97% well-formed call rate across MCP servers) but wants 48 GB+ VRAM. Qwen3-Coder 30B is the best pick for code-shaped tool work. Gemma 4 27B is the best general-purpose pick for 24 GB VRAM rigs. GLM-4.7 32B wins on long-context agent tasks (128K context out of the box). Qwen3 32B is the well-rounded fallback. Models below 7B and most general-purpose models without explicit tool-call training emit malformed calls in the same workloads — the failure attributes to the model, not the harness. Quantisation harsher than Q4_K_M on the smaller end of this list degrades reliability noticeably; Q4_K_M is the production floor.\nTool-call reliability is the sin",
+      "tool": "web_search",
+      "fetch_id": "fetch-20260812T181836Z-bf51ff",
+      "cache_path": "evals/runs/20260812T181549Z/google_gemma-4-e2b/live-article-research-3/run-02/attempt-01/fetches/fetch-20260812T181836Z-bf51ff/text.txt"
+    },
+    {
+      "url": "https://www.reddit.com/r/LocalLLaMA/comments/1r4ie8z/i_tested_21_small_llms_on_toolcalling_judgment",
+      "title": "I tested 21 small LLMs on tool-calling judgment — Round 2 with every model you asked for : r/LocalLLaMA",
+      "excerpt": "Reddit",
+      "tool": "web_search",
+      "fetch_id": "fetch-20260812T181848Z-ac26b0",
+      "cache_path": "evals/runs/20260812T181549Z/google_gemma-4-e2b/live-article-research-3/run-02/attempt-01/fetches/fetch-20260812T181848Z-ac26b0/text.txt"
+    },
+    {
+      "url": "https://magazine.sebastianraschka.com/p/state-of-llms-2025",
+      "title": "The State Of LLMs 2025: Progress, Problems, and Predictions",
+      "excerpt": "In a similar fashion, as a thank you to all the kind supporters, below, I prepared a list of all the interesting research articles I bookmarked and categorized from July to December 2025. I skimmed over the abstracts of these papers but only read a very small fraction. However, I still like to keep collecting these organized lists as I often go back to sets of them when working on a given project. [...] To wrap things up, I think if there is one meta-lesson from 2025, it is that progress in LLMs",
+      "tool": "web_search"
+    },
+    {
+      "url": "https://news.ycombinator.com/item?id=47704729",
+      "title": "The M×N problem of tool calling and open-source models | Hacker News",
+      "excerpt": "\\ I hate talking about myself, but hate it less than being verbose and free-associating without some justification of relevant knowledge: quit Google in late 2022 to build a Flutter all-platform LLM client, based on llama.cpp / any 3rd party provider you can think of. Had to write Harmony parsing twice, as well as any other important local model format you can think of. [...] \\ I hate talking about myself, but hate it less than being verbose and free-associating without some justification of rel",
+      "tool": "web_search"
+    }
+  ]
+}

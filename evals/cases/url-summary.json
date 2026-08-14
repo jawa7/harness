@@ -1,0 +1,17 @@
+{
+  "id": "url-summary",
+  "modes": ["offline"],
+  "task": "Make a concise summary of this page: https://docs.example.test/model-card",
+  "tools": ["web_fetch"],
+  "checks": {"required_tools": ["web_fetch"], "forbidden_tools": ["web_search"]},
+  "fixtures": {
+    "fetch": {
+      "https://docs.example.test/model-card": {
+        "status": "ok", "url": "https://docs.example.test/model-card",
+        "text": "Example Model is a compact multilingual model. It supports tool calling and local deployment.",
+        "full_text": "Example Model is a compact multilingual model. It supports tool calling and local deployment.",
+        "content_type": "text/plain; charset=utf-8"
+      }
+    }
+  }
+}

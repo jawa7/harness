@@ -1,0 +1,11 @@
+{
+  "relevance": 10,
+  "completeness": 10,
+  "dimensions": [
+    "relevance",
+    "completeness"
+  ],
+  "average": 10.0,
+  "rationale": "The answer directly addresses the task by summarizing the page's content about Qwen/Qwen3.5-0.8B, including technical specifications, architecture, compatibility, and use cases. It is concise, factual, and covers all requested details without omission.",
+  "passed": true
+}
